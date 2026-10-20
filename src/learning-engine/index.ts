@@ -28,6 +28,7 @@ export type SkillStats = {
   independent: number;
 };
 export type LearningState = SkillStats & {
+  placementDone?: boolean;
   level: number;
   streak: number;
   recent: boolean[];

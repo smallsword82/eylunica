@@ -36,6 +36,8 @@ import {
 } from "./storage";
 import { characters, worlds } from "./game";
 import { ContinueCard } from "./ui/ContinueCard";
+import { CardCollection, CardReward } from "./ui/CollectibleCards";
+import { awardCard } from "./storage/cards";
 import { Avatar } from "./ui/Avatar";
 import { MusicLounge } from "./ui/MusicLounge";
 import { ManifestAudioControls } from "./ui/ManifestAudioControls";
@@ -46,6 +48,7 @@ type Screen =
   | "welcome"
   | "league"
   | "music"
+  | "collection"
   | "home"
   | "characters"
   | "play"
@@ -228,8 +231,8 @@ export default function App() {
     wellbeing.transition(
       () => {
         if (count >= (calibration ? 11 : 4)) {
-          if (calibration) persist({ ...progress, calibrationDone: true, assessmentPending: false });
-          else persist({ ...progress, mathSections: { ...progress.mathSections, [mode]: section } });
+          if (calibration) persist(awardCard({ ...progress, calibrationDone: true, assessmentPending: false }, "placement:math", "Matematik başlangıç keşfi"));
+          else persist(awardCard({ ...progress, mathSections: { ...progress.mathSections, [mode]: section } }, `math:${mode}:${section}`, `${currentWorld.title} · Bölüm ${section}`));
           setScreen("summary");
           return;
         }
@@ -279,6 +282,7 @@ export default function App() {
           </select>
         </div>
         <div className="profile-actions">
+          <button className="collection-button" aria-label="Kart koleksiyonum" title="Kart koleksiyonum" onClick={() => setScreen("collection")}><span aria-hidden="true">▣</span></button>
           <span className="star-pill" aria-label={`${progress.stars} yıldız`}>
             ✦ {progress.stars}
           </span>
@@ -315,6 +319,7 @@ export default function App() {
       ) : (
         <>
           {screen === "league" && <StarLeague onBack={() => setScreen("home")} />}
+          {screen === "collection" && <CardCollection progress={progress} onBack={() => setScreen("home")} />}
           {screen === "music" && <MusicLounge learnerName={progress.learnerName || "Eylül"} paused={!!wellbeing.notice} onBack={() => setScreen("home")} onEnableMusic={() => audio.changeMode("music")} />}
           {screen === "home" && (
             <main>
@@ -335,7 +340,7 @@ export default function App() {
                 </button>
                 <button
                   className="academy-tile reading-tile"
-                  onClick={() => setScreen("reading")}
+                  onClick={() => wellbeing.transition(() => setScreen("reading"), !progress.academies.reading.placementDone)}
                 >
                   <span className="academy-symbol" aria-hidden="true">
                     Aa
@@ -345,7 +350,7 @@ export default function App() {
                 </button>
                 <button
                   className="academy-tile focus-tile"
-                  onClick={() => setScreen("attention")}
+                  onClick={() => wellbeing.transition(() => setScreen("attention"), !progress.academies.attention.placementDone)}
                 >
                   <span className="academy-symbol" aria-hidden="true">
                     ◎
@@ -364,6 +369,7 @@ export default function App() {
                   <p>Oku, düşün, ritmi yakala. Manifest eğitmenlerinle her gün yeni bir keşif.</p>
                   <button className="primary" onClick={() => start("add")}>İlk keşfe başla →</button>
                   <button className="secondary" onClick={() => setScreen("music")}>Manifest müzik odası →</button>
+                  <button className="secondary" onClick={() => setScreen("collection")}>Kazandığın kartları gör →</button>
                 </div>
               </section>
               <section className="hero">
@@ -781,6 +787,7 @@ export default function App() {
                 BUGÜN SAHNE BİRAZ DAHA AYDINLIK
               </div>
               <h1>Her keşif bir adım.</h1>
+              <CardReward progress={progress} />
               {calibration && <section className="section-progress" aria-label="Başlangıç seviyelerin"><h2>Seviye tespitin tamamlandı!</h2>{ops.map(operation => <p key={operation}>{worlds.find(world => world.operation === operation)?.title}: Seviye {progress.skills[operation].level} / 5</p>)}<p>Bu kısa keşif matematik içindir. Okuma ve dikkat dersleri kendi yanıtlarına göre ilerler.</p></section>}
               {!calibration && <section className="section-progress" aria-label="Tamamlanan bölüm">
                 <h2>{currentWorld.title} · Bölüm {section} tamamlandı!</h2>

@@ -6,7 +6,7 @@ import {
   type LearningState,
   type LearningResult,
 } from "../learning-engine";
-import { normalizeCharacter } from "../game";
+import { characters, normalizeCharacter } from "../game";
 import { freshArena, decodeArena, observe, observation, specFor, finishSession, type ArenaState, type LaneSpec, type Observation } from "../arena-engine";
 import { Capacitor } from "@capacitor/core";
 import { Preferences } from "@capacitor/preferences";
@@ -46,6 +46,7 @@ export type Progress = {
   arena: ArenaState;
   mathSections?: Record<string, number>;
   assessmentPending?: boolean;
+  cards?: { counts: Record<string, number>; grants: string[]; last: { character: string; source: string } };
 };
 export const KEY = "ritma-progress-v1";
 const skill = (): Skill => ({
@@ -113,6 +114,7 @@ export function decode(raw: string | null): Progress {
       : typeof p.customCharacter?.name === "string" && p.customCharacter.name.trim()
         ? p.customCharacter.name.trim().slice(0, 24) : "Eylül";
     p.arena = decodeArena(p.arena);
+    if (p.cards && (!p.cards.counts || !Object.entries(p.cards.counts).every(([name, count]) => characters.some(character => character.name === name) && Number.isSafeInteger(count) && (count as number) >= 0) || !Array.isArray(p.cards.grants) || !p.cards.grants.every((key: unknown) => typeof key === "string") || !p.cards.last || !characters.some(character => character.name === p.cards.last.character) || typeof p.cards.last.source !== "string")) delete p.cards;
     if (p.mathSections) p.mathSections = Object.fromEntries(Object.entries(p.mathSections).filter(([key, value]) => ["add", "subtract", "multiply", "divide", "mixed", "strategy"].includes(key) && Number.isSafeInteger(value) && (value as number) >= 0));
     if (p.customCharacter) {
       const custom = p.customCharacter;

@@ -1,5 +1,6 @@
 import { test, expect, type Page } from "./local-test";
 import { stories } from "../../src/reading-engine";
+import { decode } from "../../src/storage";
 const key = "ritma-progress-v1";
 const readingButton = (page: Page) =>
   page.getByRole("button", { name: /^Okuduğunu Anlama Akademisi/ });
@@ -46,6 +47,9 @@ test("okuma: eski kayıt korunur, altı beceri tamamlanır ve çevrimdışı ger
   });
   await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await page.evaluate(() => navigator.serviceWorker.ready);
+  const migrated = decode(await page.evaluate(() => localStorage.getItem("ritma-progress-v1")));
+  migrated.academies.reading.placementDone = true;
+  await page.evaluate(value => localStorage.setItem("ritma-progress-v1", JSON.stringify(value)), migrated);
   await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await context.setOffline(true);
   await readingButton(page).click();
@@ -79,6 +83,7 @@ test("okuma: eski kayıt korunur, altı beceri tamamlanır ve çevrimdışı ger
   await expect(
     page.getByRole("heading", { name: "Birlikte yeni yollar keşfettik!" }),
   ).toBeVisible();
+  await expect(page.getByRole("region", { name: "Bölüm ödülün" })).toBeVisible();
   await expect.poll(() => page.evaluate(() => (window as any).sectionClips.filter((source: string) => source.includes("ajda-manifest")).length)).toBe(1);
   await page.screenshot({ path: "test-results/section-complete-sound.png", fullPage: true });
   await expect
@@ -103,7 +108,7 @@ test("okuma: eski kayıt korunur, altı beceri tamamlanır ve çevrimdışı ger
   expect(Object.keys(p.academies.reading.bySkill)).toHaveLength(6);
   await readingButton(page).click();
   await expect(
-    page.getByRole("button", { name: /DÜZEY 1 · SANA ÖNERİLEN/ }),
+    page.getByRole("button", { name: /DÜZEY 2 · SANA ÖNERİLEN/ }),
   ).toBeVisible();
 });
 
@@ -215,6 +220,7 @@ test("konser: metin kanıtı, işaret sırası ve matematik aynı görevde; çif
   await page.getByRole("button", { name: "15", exact: true }).click();
   await check(page);
   await page.getByRole("button", { name: "Görevi tamamla →" }).click();
+  await expect(page.getByRole("region", { name: "Bölüm ödülün" })).toBeVisible();
   const p = await page.evaluate(
     (k) => JSON.parse(localStorage.getItem(k)!),
     key,

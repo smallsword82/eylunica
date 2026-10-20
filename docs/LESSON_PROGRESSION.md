@@ -10,7 +10,17 @@
 
 Eski yıldızlar, düzeyler, ipuçları ve yerel kayıt anahtarı değiştirilmez. Hesaplar arası çevrimiçi puanlar ayrı; cihazdaki öğrenme geçmişi hâlâ cihaz bazlıdır. Soru çeşitliliği bu cihazın sınırlı geçmişini kullanır, cihazlar arası eksiksiz içerik takibi değildir.
 
-## Görünür matematik bölümleri
+## Okuma ve dikkat başlangıç değerlendirmeleri
+
+Her akademinin ilk açılışında altı soruluk ayrı bir değerlendirme yapılır. Okuma altı anlama becerisini, dikkat altı görev türünü yoklar. Art arda iki ipucusuz doğru yanıt düzeyi artırır; yanlış veya destekli yanıt bir düzey kolaylaştırır (1–3). Sorular mevcut düzeyden seçilir. Bunlar kısa öğretim yerleştirmeleridir, standartlaştırılmış test veya tıbbi değerlendirme değildir.
+
+`placementDone` her akademinin cihaz kaydında ayrı tutulur. Bitince önerilen düzeyden yeni derse geçilir; sonraki açılışta değerlendirme tekrarlanmaz. Yarım bırakılan değerlendirme mevcut kaydedilmiş düzey ve görülmemiş sorularla yeniden başlar. Eski yıldızlar, beceri istatistikleri ve geçmiş silinmez; ilk değerlendirme yanıtları normal tek-deneme kuralıyla kaydedilir. Okumada eski kayıt tüm soru havuzunu bitirmişse tekrar soru sormadan mevcut düzeyle kütüphaneye dönülür. Sonlu içerik havuzu nedeniyle daha önce çözülmüş soru değerlendirmede tekrar kullanılmaz.
+
+## Manifest kart koleksiyonu
+
+Matematik bölümü, okuma hikâyesi, dört soruluk dikkat turu, konser hazırlığı ve ilk başlangıç değerlendirmesi tamamlandığında bir eğitmen kartı verilir. Kartlar ilk altıda altı farklı eğitmeni sırayla açar; sonraki bölümlerde kopya sayıları artar. Rastgele nadirlik, satın alma, zaman baskısı veya kusursuzluk şartı yoktur. İpucuyla tamamlamak da kart kazandırır. Kartlar cihazda saklanır; çevrimiçi yıldız puanını değiştirmez. Tamamlama anahtarları aynı bölüm olayının çift ödüllendirilmesini engeller; son 1000 anahtar saklanır. Önceki tamamlamalar geriye dönük kart üretmez.
+
+## Matematik bölümlerinin işleyişi
 
 Yeni cihaz kaydıyla başlayan öğrenci ilk girişte dört işlemden toplam 12 soruluk matematik seviye tespitine yönlendirilir. Her işlem üç kez yoklanır; ipucusuz doğru sonraki yoklamayı iki düzey artırır, hata bir düzey kolaylaştırır. Son yoklamada başarılı olunan düzey başlangıç düzeyidir (1–5). Bu kısa yerleştirme klinik/standartlaştırılmış bir ölçüm değildir. Mevcut cihaz kayıtları zorunlu sıfırlanmaz; haritadaki tanışma düğmesiyle isteğe bağlı yeniden keşif yapılabilir. Başlatılmış fakat bitirilmemiş yoklama sonraki girişte yeniden başlatılır; kaydedilmiş yanıtlar korunur. Okuma ve dikkat kendi uyarlamalı ilerleme sistemini kullanır.
 

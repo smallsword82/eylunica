@@ -4,6 +4,7 @@ import { narrateFeedback, stopNarration } from "../audio/narration";
 import type { UsageDomain } from "../time-engine";
 import { readingSkills, type Story } from "../reading-engine";
 import { freshAttention, nextStory, readingStep } from "../lesson-engine";
+import { placementStep, placementTask } from "../lesson-engine/placement";
 import {
   attentionKinds,
   attentionLabels,
@@ -20,6 +21,8 @@ import { recordAcademy, record, trackConcert, type Progress } from "../storage";
 import { ActivityPanel } from "./ActivityPanel";
 import { Avatar } from "./Avatar";
 import { ContinueCard } from "./ContinueCard";
+import { CardReward } from "./CollectibleCards";
+import { awardCard } from "../storage/cards";
 const names: Record<Academy, string> = {
   reading: "Okuduğunu Anlama Akademisi",
   attention: "Dikkat ve Odaklanma Akademisi",
@@ -72,10 +75,12 @@ function LessonProgress({ index, total }: { index: number; total: number }) {
   );
 }
 function Completion({
+  progress,
   onBack,
   onAgain,
   nextTitle,
 }: {
+  progress: Progress;
   onBack: () => void;
   onAgain: () => void;
   nextTitle: string;
@@ -92,6 +97,7 @@ function Completion({
     <section className="lesson-complete">
       <div className="summary-star">✦</div>
       <h2>Birlikte yeni yollar keşfettik!</h2>
+      <CardReward progress={progress} />
       <ContinueCard title={nextTitle} onContinue={onAgain} />
       <p>
         İlerlemen bu cihazda saklanır. Yeniden denemek ve ipucu almak öğrenmenin
@@ -102,6 +108,47 @@ function Completion({
       </button>
     </section>
   );
+}
+function AcademyPlacement({ academy, progress, onSave, onBack, onFinished, onActivity, onTransition = action => action() }: Props & { academy: "reading" | "attention"; onFinished: () => void }) {
+  const [index, setIndex] = useState(0);
+  const [level, setLevel] = useState(progress.academies[academy].level);
+  const [task, setTask] = useState(() => placementTask(academy, 0, level, progress.academies[academy]));
+  const [done, setDone] = useState(false);
+  const streak = useRef(0);
+  const nextLevel = useRef(level);
+  useEffect(() => { if (done) { stopNarration(); void playCompletionEffect(); narrateFeedback("complete", completionSoundSeconds * 1000 + 100); } }, [done]);
+  useEffect(() => { onActivity?.(done ? "other" : academy, !done && !!task); }, [onActivity, academy, done, !!task]);
+  function recordPlacement(result: LearningResult) {
+    const step = placementStep(level, streak.current, result);
+    streak.current = step.streak;
+    nextLevel.current = step.level;
+    const updated = recordAcademy(progress, academy, result);
+    updated.academies[academy].level = step.level;
+    updated.academies[academy].streak = 0;
+    updated.academies[academy].recent = [];
+    onSave(updated);
+  }
+  function next() {
+    onTransition(() => {
+      if (index === 5) {
+        const updated = awardCard(structuredClone(progress), `placement:${academy}`, `${names[academy]} başlangıç keşfi`);
+        updated.academies[academy].placementDone = true;
+        onSave(updated);
+        setDone(true);
+        return;
+      }
+      const nextTask = placementTask(academy, index + 1, nextLevel.current, progress.academies[academy]);
+      setIndex(index + 1);
+      setLevel(nextLevel.current);
+      setTask(nextTask);
+    }, index < 5);
+  }
+  return <main className="subpage academy-page">
+    <Header academy={academy} onBack={onBack} character={academy === "reading" ? "Zeynep" : "Hilal"} />
+    {done ? <section className="lesson-complete"><h2>Seviye tespitin tamamlandı!</h2><CardReward progress={progress} /><p>Başlangıç düzeyin: {progress.academies[academy].level} / 3. Yanıtlarına göre ilerlemeye devam edeceğiz.</p><ContinueCard title={`Sana uygun ${academy === "reading" ? "okuma" : "dikkat"} dersi`} onContinue={onFinished} /></section>
+      : task ? <><section className="section-progress" aria-label="Seviye tespiti"><h2>Önce seviyeni keşfedelim</h2><p>6 kısa keşif · Şu anki düzey: {level} / 3. Süre sınırı yok; ipucu alabilirsin. Bu bir tanı veya sınav değildir.</p></section><LessonProgress index={index} total={6} /><ActivityPanel key={task.id} task={task} onRecord={recordPlacement} last={index === 5} onNext={next} /></>
+      : <section><h2>Yeni değerlendirme sorusu kalmadı</h2><p>Mevcut düzeyin ve geçmişin korunarak devam edebilirsin.</p><button className="primary" onClick={() => { const updated = structuredClone(progress); updated.academies[academy].placementDone = true; onSave(updated); onFinished(); }}>Derslere devam et →</button></section>}
+  </main>;
 }
 export function ReadingAcademy({
   progress,
@@ -117,11 +164,12 @@ export function ReadingAcademy({
     } | null>(null),
     [done, setDone] = useState(false);
   const state = progress.academies.reading;
-  const nextLevel = readingStep(state.seen);
+  const [placing, setPlacing] = useState(!state.placementDone);
+  const nextLevel = state.placementDone ? state.level : readingStep(state.seen);
   const [libraryDone, setLibraryDone] = useState(false);
   useEffect(() => {
-    onActivity?.(session && !done ? "reading" : "other", !!session && !done);
-  }, [onActivity, !!session, done]);
+    if (!placing) onActivity?.(session && !done ? "reading" : "other", !!session && !done);
+  }, [onActivity, !!session, done, placing]);
   function start(level: number) {
     onTransition(() => {
       const story = nextStory(level, state.seen);
@@ -130,11 +178,13 @@ export function ReadingAcademy({
       setDone(false);
     });
   }
+  if (placing) return <AcademyPlacement academy="reading" progress={progress} onSave={onSave} onBack={onBack} onActivity={onActivity} onTransition={onTransition} onFinished={() => { setPlacing(false); start(state.level); }} />;
   return (
     <main className="subpage academy-page">
       <Header academy="reading" onBack={onBack} character="Zeynep" />
       {libraryDone ? <section className="lesson-complete"><h2>Tüm hikâyeleri keşfettin!</h2><p>Şimdilik yeni okuma sorusu kalmadı. Aynı soruları yeniden sormak yerine diğer akademilerde devam edelim.</p><button className="primary" onClick={onBack}>Diğer akademilere geç →</button></section> : done ? (
         <Completion
+          progress={progress}
           onBack={onBack}
           nextTitle="Yeni bir okuma keşfi"
           onAgain={() => start(nextLevel)}
@@ -153,7 +203,7 @@ export function ReadingAcademy({
               onTransition(
                 () =>
                   session.index === session.story.questions.length - 1
-                    ? setDone(true)
+                    ? (onSave(awardCard(progress, `reading:${session.story.id}`, session.story.title)), setDone(true))
                     : setSession({ ...session, index: session.index + 1 }),
                 session.index < session.story.questions.length - 1,
               )
@@ -164,10 +214,10 @@ export function ReadingAcademy({
         <>
           <p className="intro">
             eylunica ile altı özgün hikâyedeki ipuçlarını keşfet. Önce düşün, sonra
-            metindeki kanıtı göster. Yeni hikâyeler kısadan uzuna sıralanır.
+            metindeki kanıtı göster. Yeni hikâyeler başlangıç düzeyine göre önerilir.
           </p>
           <button className="primary" onClick={() => start(nextLevel)}>Sıradaki yeni hikâye · Düzey {nextLevel} →</button>
-          <p className="small">Önce kısa ve kolay metinler, sonra daha uzun hikâyeler. Yanıtladığın sorular yeniden açılmaz; yarım bırakırsan sıradaki yeni sorudan devam edersin.</p>
+          <p className="small">Başlangıç düzeyin ve yeni yanıtların öneriyi belirler. Yanıtladığın sorular yeniden açılmaz; yarım bırakırsan sıradaki yeni sorudan devam edersin.</p>
           <div className="level-cards">
             {[
               "Kısa metinler · 7–9 yaş",
@@ -216,16 +266,19 @@ export function AttentionAcademy({
   onTransition = (action) => action(),
   onActivity,
 }: Props) {
+  const [placing, setPlacing] = useState(!progress.academies.attention.placementDone);
+  const rewardKey = useRef("");
   const [kind, setKind] = useState<AttentionKind | null>(null),
     [tasks, setTasks] = useState<Activity[]>([]),
     [index, setIndex] = useState(0),
     [done, setDone] = useState(false);
   useEffect(() => {
-    onActivity?.(kind && !done ? "attention" : "other", !!kind && !done);
-  }, [onActivity, kind, done]);
+    if (!placing) onActivity?.(kind && !done ? "attention" : "other", !!kind && !done);
+  }, [onActivity, kind, done, placing]);
   function start(k: AttentionKind) {
     onTransition(() => {
       setKind(k);
+      rewardKey.current = crypto.randomUUID();
       const state = progress.academies.attention;
       setTasks([freshAttention(k, state.level, state.seen, state.history.map(result => result.id))]);
       setIndex(0);
@@ -234,6 +287,7 @@ export function AttentionAcademy({
   }
   function next() {
     if (index === 3) {
+      onSave(awardCard(progress, `attention:${rewardKey.current}`, names.attention));
       setDone(true);
       return;
     }
@@ -243,6 +297,7 @@ export function AttentionAcademy({
     ]);
     setIndex((i) => i + 1);
   }
+  if (placing) return <AcademyPlacement academy="attention" progress={progress} onSave={onSave} onBack={onBack} onActivity={onActivity} onTransition={onTransition} onFinished={() => { setPlacing(false); start(attentionKinds[0]); }} />;
   return (
     <main className="subpage academy-page">
       <Header academy="attention" onBack={onBack} character="Hilal" />
@@ -252,6 +307,7 @@ export function AttentionAcademy({
       </p>
       {done ? (
         <Completion
+          progress={progress}
           onBack={onBack}
           nextTitle={attentionLabels[attentionKinds[(attentionKinds.indexOf(kind!) + 1) % attentionKinds.length]]}
           onAgain={() => start(attentionKinds[(attentionKinds.indexOf(kind!) + 1) % attentionKinds.length])}
@@ -353,6 +409,7 @@ export function ConcertAcademy({
       <Header academy="concert" onBack={onBack} character="Sueda" />
       {allDone ? <section className="lesson-complete"><h2>Konser hazırlıklarının hepsini keşfettin!</h2><button className="primary" onClick={onBack}>Diğer akademilere geç →</button></section> : done ? (
         <Completion
+          progress={progress}
           onBack={onBack}
           nextTitle="Yeni konser hazırlığı"
           onAgain={start}
@@ -375,7 +432,7 @@ export function ConcertAcademy({
             last={index === mission.tasks.length - 1}
             onNext={() =>
               onTransition(
-                () => (index === mission.tasks.length - 1 ? setDone(true) : setIndex((i) => i + 1)),
+                () => (index === mission.tasks.length - 1 ? (onSave(awardCard(progress, `concert:${mission.tasks[0].id.replace(/-(read|focus|math)$/, "")}`, names.concert)), setDone(true)) : setIndex((i) => i + 1)),
                 index < mission.tasks.length - 1,
               )
             }

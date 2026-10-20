@@ -57,6 +57,7 @@ test("kayıt ekranı 320px dikeyde taşmaz ve çevrimdışı eski ilerleme korun
 test("normal matematik ve okumadan puan; kanıt eksikse kayıt yok; ayrı lig görevi yok", async ({ page }, testInfo) => {
   await signedIn(page);
   const previous = { ...fresh(), stars: 10, learnerName: "Eski Ad" };
+  previous.academies.reading.placementDone = true;
   await page.addInitScript(value => localStorage.setItem("ritma-progress-v1", JSON.stringify(value)), previous);
   let stars = 0, submitted = 0, started = 0, visible = true;
   const tickets = new Map<string, string>();

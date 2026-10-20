@@ -1,3 +1,5 @@
+import { Capacitor } from "@capacitor/core";
+import { Preferences } from "@capacitor/preferences";
 import { it, expect, vi } from "vitest";
 import {
   fresh,
@@ -55,4 +57,25 @@ it("depolama hatasını çağırana bildirir", async () => {
   await expect(saveProgress(fresh())).rejects.toThrow("quota");
   mock.mockRestore();
   localStorage.removeItem(KEY);
+});
+
+vi.mock("@capacitor/preferences", () => ({
+  Preferences: { get: vi.fn(), set: vi.fn() },
+}));
+it("Android adaptörü aynı sürümlü kaydı Preferences üzerinden saklar", async () => {
+  const native = vi.spyOn(Capacitor, "isNativePlatform").mockReturnValue(true);
+  try {
+    const p = fresh();
+    p.stars = 8;
+    vi.mocked(Preferences.set).mockResolvedValue();
+    vi.mocked(Preferences.get).mockResolvedValue({ value: JSON.stringify(p) });
+    await saveProgress(p);
+    expect(Preferences.set).toHaveBeenCalledWith({
+      key: KEY,
+      value: JSON.stringify(p),
+    });
+    expect(await loadProgress()).toEqual(p);
+  } finally {
+    native.mockRestore();
+  }
 });

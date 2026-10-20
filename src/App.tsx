@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Capacitor } from "@capacitor/core";
 import {
   generate,
   strategy,
@@ -33,7 +34,9 @@ export default function App() {
     [error, setError] = useState(""),
     [calibration, setCalibration] = useState(false),
     [confirmReset, setConfirmReset] = useState(false),
-    [offlineReady, setOfflineReady] = useState(false);
+    [offlineReady, setOfflineReady] = useState(() =>
+      Capacitor.isNativePlatform(),
+    );
   const started = useRef(0),
     sessionStart = useRef(0),
     attempted = useRef(false),
@@ -53,6 +56,9 @@ export default function App() {
         .then(() => setOfflineReady(true))
         .catch(() => {});
   }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [screen]);
   function persist(next: Progress) {
     setProgress(next);
     writes.current = writes.current
@@ -113,6 +119,7 @@ export default function App() {
     if (!question || solved || pending.current) return;
     pending.current = true;
     const correct = value === question.answer;
+    if (!correct) usedHint.current = true;
     // One learning record and at most one star per question; retries remain encouraging.
     if (!attempted.current) {
       const next = record(
@@ -384,7 +391,14 @@ export default function App() {
                   {count + 1}/{calibration ? 4 : 5}
                 </span>
               </div>
-              <div className="mission-progress" role="progressbar" aria-valuenow={count+1} aria-valuemin={0} aria-valuemax={calibration?4:5} aria-label="Görev ilerlemesi">
+              <div
+                className="mission-progress"
+                role="progressbar"
+                aria-valuenow={count + 1}
+                aria-valuemin={0}
+                aria-valuemax={calibration ? 4 : 5}
+                aria-label="Görev ilerlemesi"
+              >
                 {Array.from({ length: calibration ? 4 : 5 }, (_, i) => (
                   <span key={i} className={i <= count ? "active" : ""} />
                 ))}
@@ -501,7 +515,11 @@ export default function App() {
                   {hint && (
                     <div className="strategy">
                       <h3>{strategy(question).title}</h3>
-                      <div className="ten-frame" role="img" aria-label={`Onluk çerçeve: ${Math.min(strategy(question).dots,10)} dolu, ${10-Math.min(strategy(question).dots,10)} boş yer`}>
+                      <div
+                        className="ten-frame"
+                        role="img"
+                        aria-label={`Onluk çerçeve: ${Math.min(strategy(question).dots, 10)} dolu, ${10 - Math.min(strategy(question).dots, 10)} boş yer`}
+                      >
                         {Array.from({ length: 10 }, (_, i) => (
                           <span
                             key={i}

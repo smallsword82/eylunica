@@ -79,11 +79,53 @@ test("masaüstü: dört işlem, gelişim görünümü ve sıfırlama onayı", as
   await page.getByRole("button", { name: "Vazgeç" }).click();
 });
 
-test('erişilebilirlik: ana ekran ve görev WCAG A/AA kontrolleri', async ({ page }) => {
-  const { default: AxeBuilder } = await import('@axe-core/playwright');
-  await page.goto('/');
-  await expect(page.getByText('Bugün nerede buluşalım?')).toBeVisible();
-  expect((await new AxeBuilder({ page }).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze()).violations).toEqual([]);
-  await page.getByRole('button', { name: /Zihin Atölyesi/ }).click();
-  expect((await new AxeBuilder({ page }).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze()).violations).toEqual([]);
+test("erişilebilirlik: ana ekran ve görev WCAG A/AA kontrolleri", async ({
+  page,
+}) => {
+  const { default: AxeBuilder } = await import("@axe-core/playwright");
+  await page.goto("/");
+  await expect(page.getByText("Bugün nerede buluşalım?")).toBeVisible();
+  expect(
+    (
+      await new AxeBuilder({ page })
+        .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
+        .analyze()
+    ).violations,
+  ).toEqual([]);
+  await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
+  expect(
+    (
+      await new AxeBuilder({ page })
+        .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
+        .analyze()
+    ).violations,
+  ).toEqual([]);
+});
+
+test("beş soruluk görev tamamlanır, yıldız ve sahne dekoru kalıcıdır", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
+  for (const [i, value] of [15, 15, 12, 14, 17].entries()) {
+    await page
+      .getByRole("button", { name: String(value), exact: true })
+      .click();
+    await expect(page.getByRole("status")).toContainText("Harika");
+    await page
+      .getByRole("button", {
+        name: i === 4 ? "Sahnedeki ışıklarını gör →" : "Sıradaki keşif →",
+        exact: true,
+      })
+      .click();
+  }
+  await expect(
+    page.getByRole("heading", { name: "Her keşif bir adım." }),
+  ).toBeVisible();
+  await expect(
+    page.getByText("✦ Sahnenin renkli ışıkları açıldı!"),
+  ).toBeVisible();
+  await page.reload();
+  await expect(page.getByLabel("5 yıldız", { exact: true })).toBeVisible();
+  await expect(page.locator(".stage")).toHaveClass(/lit/);
 });

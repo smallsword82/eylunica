@@ -61,3 +61,9 @@ Webde localStorage, Android'de Capacitor Preferences kullanılır; depolama eri�
 Eksik sayıyı bulma, etkileşimli sayı doğrusu, gerçek aralıklı tekrar planlayıcısı, strateji ustalığı modeli, süreli modun isteğe bağlı açılması, daha çeşitli görevler ve dekor/kostüm sistemi henüz tamamlanmadı. Gerçek Android cihazında erişilebilirlik ve uçak modu testi ayrıca yapılmalı. Prototip telefon ve masaüstü Chromium testleri bu gerçek cihaz kontrolünün yerine geçmez.
 
 RİTMA / Matematik Sahnesi adları ve karakter isimleri geçicidir; yayımdan önce marka ve hak incelemesi gerekir. Gerçek müzik gruplarının görselleri veya müzikleri kullanılmaz. Kullanıcı onayı olmadan herkese açık dağıtım yapılmaz.
+
+## Bu bulut ortamı
+
+Hazırlanmış makinede `source scripts/cloud-env.sh` Android SDK/JDK yollarını ve Java'nın desteklediği proxy/CA ayarlarını etkinleştirir. Yeni Linux x86_64 makinesinde `bash scripts/setup-cloud.sh` bağımlılıkları ve Android araçlarını kurar; indirmeler resmi kaynak ve yayımlanmış checksum ile doğrulanır. Proje dosyaları/lockfile kurulumda değiştirilmez. SDK lisans kabul girdisi bu kurulum betiğinin parçasıdır.
+
+Ortam zaten yalıtılmıştır; mevcut `/workspace/manifestakademi` checkout'unda çalışın, kullanıcı istemedikçe Git worktree oluşturmayın. Geliştirme sunucusu: `npm run dev -- --port 5173 --strictPort`. Üretim servis çalışanı geliştirme modunda etkin değildir; çevrimdışı doğrulamada `npm run build` ve `npm run preview` kullanılır. Süreçler yeni görevde yeniden başlatılmalıdır.

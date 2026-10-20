@@ -2051,6 +2051,10 @@ footer button,
 .league-delete { border: 2px solid #efb9c8; padding: 16px; border-radius: 16px; }
 .league-page [role="alert"] { color: #ffc5ce; overflow-wrap: anywhere; }
 @media (max-width: 760px) { .league-layout { grid-template-columns: 1fr; } .league-account, .league-board, .league-rules { padding: 18px; } }
+.account-entry { max-width: 560px; margin-inline: auto; }
+.account-entry h1 { font-size: clamp(28px, 6vw, 38px); overflow-wrap: anywhere; }
+.account-entry input { font-size: 16px; min-width: 0; max-width: 100%; }
+.reading-steps { padding: 12px; border-radius: 12px; background: #eee8fb; color: #30204b; font-weight: 700; }
 @media (max-width: 900px) {
   .topbar { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; padding: 14px 0; }
   .brand { grid-column: 1; grid-row: 1; min-width: 0; }
@@ -2059,9 +2063,11 @@ footer button,
   .top-actions { grid-column: 1 / -1; grid-row: 2; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .7fr) minmax(0, 1.6fr); gap: 8px; width: 100%; }
   .top-actions > button, .top-actions > select { min-width: 0; max-width: 100%; width: 100%; min-height: 44px; padding: 8px; margin: 0; font-size: 12px; }
   .top-actions > .sound-button { max-width: none; }
+  .top-actions > button { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 }
 @media (max-width: 600px) {
   .app-shell { padding-inline: max(16px, env(safe-area-inset-left)) max(16px, env(safe-area-inset-right)); }
+  .brand .brand-bottom { font-size: 10px; line-height: 1.2; }
   .manifest-audio-bar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 12px 0; padding: 12px; }
   .manifest-audio-heading, .manifest-audio-details, .manifest-now-playing, .manifest-audio-bar > p { grid-column: 1 / -1; }
   .manifest-audio-heading { gap: 8px; }

@@ -1,6 +1,6 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./local-test";
 
-test("RİTMA karakter seçimi, kayıt koruma ve erişilebilir giriş", async ({ page }) => {
+test("eylunica karakter seçimi, kayıt koruma ve erişilebilir giriş", async ({ page }) => {
   const { fresh } = await import("../../src/storage");
   const saved = fresh();
   saved.stars = 23;
@@ -20,7 +20,7 @@ test("RİTMA karakter seçimi, kayıt koruma ve erişilebilir giriş", async ({ 
   await page.screenshot({ path: "test-results/ritma-welcome-mobile.png", fullPage: true });
   await page.getByRole("button", { name: /Lidya Adım adım ilerle/ }).click();
   await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("ritma-progress-v1")!))).toEqual({ ...saved, character: "Lidya" });
-  await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await expect(page.getByText("Bugün nerede buluşalım?")).toBeVisible();
   await page.reload();
   await expect(page.getByRole("button", { name: /Lidya Adım adım ilerle/ })).toHaveAttribute("aria-pressed", "true");

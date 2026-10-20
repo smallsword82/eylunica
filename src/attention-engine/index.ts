@@ -36,8 +36,9 @@ function reorder(task: Activity, rng: () => number): Activity {
 export function generateAttention(
   kind: AttentionKind,
   level = 1,
-  rng: () => number = Math.random,
+  rng?: () => number,
 ): Activity {
+  if (!rng) return attentionVariant(kind, level, Math.floor(Math.random() * 64));
   level = Math.max(1, Math.min(3, Math.floor(level) || 1));
   const shift = Math.floor(rng() * 4),
     rot = [...shapes.slice(shift), ...shapes.slice(0, shift)];
@@ -178,6 +179,14 @@ export function generateAttention(
     },
     rng,
   );
+}
+export function attentionVariant(kind: AttentionKind, level: number, variant: number): Activity {
+  let state = variant + 1;
+  const rng = () => {
+    state = (Math.imul(1664525, state) + 1013904223) >>> 0;
+    return state / 4294967296;
+  };
+  return { ...generateAttention(kind, level, rng), id: `attention-${kind}-${level}-v${variant}` };
 }
 export function checkSequence(task: Activity, selected: number[]): boolean {
   return (

@@ -1,4 +1,4 @@
-import { test, expect, type Page } from "@playwright/test";
+import { test, expect, type Page } from "./local-test";
 const minute = 60_000,
   key = "ritma-wellbeing-v1";
 async function installClock(page: Page, time: Date) {
@@ -38,7 +38,7 @@ test("serbest kullanım: 15 dakika geçişte bilgi, 25/45 dakikada mola; pause p
   page,
 }) => {
   await installClock(page, new Date(2026, 9, 20, 12));
-  await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await math(page);
   await page.clock.fastForward(15 * minute);
   await expect(page.getByRole("dialog")).toHaveCount(0);
@@ -88,9 +88,9 @@ test("ebeveyn sınırı açık soruyu bitirtir, yenisini durdurur; ayarlar çevr
   context,
 }) => {
   await installClock(page, new Date(2026, 9, 20, 12));
-  await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await page.evaluate(() => navigator.serviceWorker.ready);
-  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await context.setOffline(true);
   await settings(page);
   await page
@@ -109,7 +109,7 @@ test("ebeveyn sınırı açık soruyu bitirtir, yenisini durdurur; ayarlar çevr
   await expect(
     page.getByRole("heading", { name: "Bugünkü oyun süresi tamamlandı" }),
   ).toBeVisible();
-  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await math(page);
   await expect(
     page.getByRole("heading", { name: "Bugünkü oyun süresi tamamlandı" }),
@@ -159,7 +159,7 @@ test("ön plan, bölümler ve ebeveyn raporu; arka plan sinyali ve ebeveyn süre
   page,
 }) => {
   await installClock(page, new Date(2026, 9, 20, 12));
-  await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await math(page);
   await page.clock.fastForward(5 * minute);
   const before = await total(page);
@@ -168,7 +168,7 @@ test("ön plan, bölümler ve ebeveyn raporu; arka plan sinyali ve ebeveyn süre
   expect(await total(page)).toBe(before);
   await page.evaluate(() => window.dispatchEvent(new Event("focus")));
   await page
-    .getByRole("button", { name: "RİTMA ana sayfa" })
+    .getByRole("button", { name: "eylunica ana sayfa" })
     .click();
   await page
     .getByRole("button", { name: /^Okuduğunu Anlama Akademisi/ })
@@ -176,7 +176,7 @@ test("ön plan, bölümler ve ebeveyn raporu; arka plan sinyali ve ebeveyn süre
   await page.getByRole("button", { name: /Kısa metinler/ }).click();
   await page.clock.fastForward(6 * minute);
   await page
-    .getByRole("button", { name: "RİTMA ana sayfa" })
+    .getByRole("button", { name: "eylunica ana sayfa" })
     .click();
   await page
     .getByRole("button", { name: /^Dikkat ve Odaklanma Akademisi/ })
@@ -213,7 +213,7 @@ test("sınır ekranı erişilebilir, yeni yerel gün sayacı sıfırlar ve göre
   page,
 }) => {
   await installClock(page, new Date(2026, 9, 20, 23, 58));
-  await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await settings(page);
   await page
     .getByRole("radio", { name: "Günlük süre sınırı", exact: true })

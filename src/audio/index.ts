@@ -46,9 +46,9 @@ export async function playEffect(effect: Effect): Promise<void> {
   if (mode === "silent" || document.visibilityState === "hidden") return;
   await playManifestEffect(effect);
 }
-export async function playAnswerEffect(): Promise<void> {
+export async function playAnswerEffect(correct = true): Promise<void> {
   if (mode === "silent" || document.visibilityState === "hidden") return;
-  await playManifestAnswer();
+  await playManifestAnswer(correct);
 }
 export async function playCompletionEffect(): Promise<void> {
   if (mode === "silent" || document.visibilityState === "hidden") return;

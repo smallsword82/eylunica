@@ -7,6 +7,7 @@ import { playAnswerEffect, answerSoundSeconds, playCompletionEffect, completionS
 import { narrateFeedback, stopNarration } from "../audio/narration";
 import type { UsageDomain } from "../time-engine";
 import { ContinueCard } from "./ContinueCard";
+import { useLessonScore } from "../online/useLessonScore";
 
 type Session = { id: string; spec: LaneSpec; questions: Question[]; index: number; race: boolean };
 export function Arena({ progress, onSave, onBack, onPractice, onTransition, onActivity, paused }: {
@@ -17,6 +18,7 @@ export function Arena({ progress, onSave, onBack, onPractice, onTransition, onAc
   const [operation, setOperation] = useState<Operation>("add");
   const [level, setLevel] = useState(1);
   const [session, setSession] = useState<Session | null>(null);
+  const scoreAnswer = useLessonScore(session?.questions[session.index] ?? null);
   const [solved, setSolved] = useState(false), [hint, setHint] = useState(false), [feedback, setFeedback] = useState("");
   const [summary, setSummary] = useState<{ correct: number; race: boolean; bonus: string | null; comparison: Comparison | null; previousBestMs: number | null } | null>(null);
   const answers = useRef<Observation[]>([]), attempted = useRef(false), usedHint = useRef(false), lock = useRef(false), finished = useRef(false), latest = useRef(progress);
@@ -41,13 +43,14 @@ export function Arena({ progress, onSave, onBack, onPractice, onTransition, onAc
     lock.current = true;
     const q = session.questions[session.index], correct = value === q.answer;
     if (!attempted.current) {
+      scoreAnswer({ answer: value });
       const time = clock.read();
       const o = observation(q, correct, usedHint.current, time.elapsedMs, time.timingValid, session.race ? "arena" : "practice", `${session.id}:${session.index}`);
       answers.current.push(o);
       save(recordArena(latest.current, session.spec, o));
       attempted.current = true;
     }
-    stopNarration(); void playAnswerEffect(); narrateFeedback(correct ? "correct" : "retry", answerSoundSeconds * 1000 + 100);
+    stopNarration(); void playAnswerEffect(correct); narrateFeedback(correct ? "correct" : "retry", answerSoundSeconds * 1000 + 100);
     setSolved(correct);
     setFeedback(correct ? "Yanıtını düşündün, bir adım daha attın." : "Henüz olmadı. İpucuna bakıp yeniden deneyebilirsin. Acelemiz yok.");
     if (!correct) { usedHint.current = true; setHint(true); lock.current = false; }
@@ -75,7 +78,7 @@ export function Arena({ progress, onSave, onBack, onPractice, onTransition, onAc
   return <main className="subpage arena-page">
     <button className="text-button" onClick={() => onTransition(onBack, false)}>← Arenadan ayrıl</button>
     <div className="eyebrow muted">KENDİ RİTMİNDE, KENDİ GELİŞİMİN</div>
-    <h1>RİTMA Hız Arenası</h1>
+    <h1>eylunica Hız Arenası</h1>
     <p>Katılmak tamamen isteğe bağlı. Geri sayım ve süre sınırı yok. Önce doğru düşün; kendini yalnızca önceki sonuçlarınla karşılaştır.</p>
     {session ? <section className="arena-task" aria-label="Arena sorusu">
       <p>{operationNames[session.spec.operation]} · {session.spec.skill} · Düzey {session.spec.level}</p>

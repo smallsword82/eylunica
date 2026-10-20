@@ -1,4 +1,4 @@
-import { test, expect, type Page } from "@playwright/test";
+import { test, expect, type Page } from "./local-test";
 import { stories } from "../../src/reading-engine";
 import { narrationManifest } from "../../src/audio/narration-manifest";
 
@@ -19,12 +19,12 @@ const isPlaying = (page: Page) => page.evaluate(() => {
 
 test("gömülü Türkçe hikâyeler çevrimdışı çalar; dinleme oturumu destek sayılır ve durdurulur", async ({ page, context }) => {
   await observeAudio(page);
-  await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("effects");
   await page.evaluate(() => navigator.serviceWorker.ready);
-  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await context.setOffline(true);
-  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   // Decode every bundled recording while offline, including the longest stories.
   const durations = await page.evaluate(async entries => {
     return Promise.all(entries.map(entry => new Promise<number>((resolve, reject) => {
@@ -68,7 +68,7 @@ test("gömülü Türkçe hikâyeler çevrimdışı çalar; dinleme oturumu deste
 
 test("otomatik konuşma tercihi kalıcıdır; görev sesi ve ekran geçişi çevrimdışı çalışır", async ({ page, context }) => {
   await observeAudio(page);
-  await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("effects");
   await page.getByRole("button", { name: "Ebeveyn köşesi →" }).click();
   const setting = page.getByRole("checkbox", { name: "Otomatik konuşmalı geri bildirim" });
@@ -76,9 +76,9 @@ test("otomatik konuşma tercihi kalıcıdır; görev sesi ve ekran geçişi çev
   await setting.check();
   await expect.poll(() => page.evaluate(() => localStorage.getItem("ritma-narration-v1"))).toBe("on");
   await page.evaluate(() => navigator.serviceWorker.ready);
-  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await context.setOffline(true);
-  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await page.getByRole("button", { name: "Ebeveyn köşesi →" }).click();
   await expect(setting).toBeChecked();
   await page.getByRole("button", { name: "← Haritaya dön" }).click();
@@ -96,7 +96,7 @@ test("otomatik konuşma tercihi kalıcıdır; görev sesi ve ekran geçişi çev
   await expect.poll(() => isPlaying(page)).toBe(false);
   await page.getByRole("button", { name: "Ebeveyn köşesi →" }).click();
   await setting.uncheck();
-  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
   await page.getByRole("button", { name: "15", exact: true }).click();
   expect(await page.evaluate(() => (window as unknown as { narrator: HTMLMediaElement[] }).narrator.length)).toBe(0);

@@ -5,7 +5,9 @@ import { useNarration } from "./audio/useNarration";
 import { narrateFeedback, stopNarration } from "./audio/narration";
 import { narrationTexts } from "./audio/narration-texts";
 import { ListenButton, NarrationPlayback } from "./ui/ListenButton";
-import { CharacterName } from "./ui/CharacterName";
+import { AccountForm, StarLeague } from "./ui/StarLeague";
+import { useAccount } from "./online/useAccount";
+import { useLessonScore } from "./online/useLessonScore";
 import { useAudio } from "./audio/useAudio";
 import { playAnswerEffect, answerSoundSeconds, playCompletionEffect, completionSoundSeconds, stopEffects, stopActivitySound } from "./audio";
 import { createPortal } from "react-dom";
@@ -17,7 +19,7 @@ import {
   ConcertAcademy,
   AcademyProgress,
 } from "./ui/Academies";
-import { lazy, Suspense, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Capacitor } from "@capacitor/core";
 import {
   generate,
@@ -39,7 +41,6 @@ import { Avatar } from "./ui/Avatar";
 import { MusicLounge } from "./ui/MusicLounge";
 import { ManifestAudioControls } from "./ui/ManifestAudioControls";
 import { getManifestPlayback, startManifestShuffle } from "./audio/manifest";
-const StarLeague = lazy(() => import("./ui/StarLeague").then(module => ({ default: module.StarLeague })));
 const ops: Operation[] = ["add", "subtract", "multiply", "divide"];
 type Screen =
   | "welcome"
@@ -55,9 +56,13 @@ type Screen =
   | "concert"
   | "arena";
 export default function App() {
-  const [progress, setProgress] = useState<Progress>(fresh),
+  const account = useAccount();
+  const [guest, setGuest] = useState(() => sessionStorage.getItem("eylunica-local-session") === "yes");
+  const [savedProgress, setProgress] = useState<Progress>(fresh),
     [ready, setReady] = useState(false),
     [screen, setScreen] = useState<Screen>(() => new URLSearchParams(location.search).has("league") ? "league" : "welcome");
+  const progress = account.username ? { ...savedProgress, learnerName: account.username } : savedProgress;
+  const needsAccount = !account.session && !guest;
   const [question, setQuestion] = useState<Question | null>(null),
     [mode, setMode] = useState("add"),
     [hint, setHint] = useState(false),
@@ -65,6 +70,13 @@ export default function App() {
     [solved, setSolved] = useState(false),
     [entry, setEntry] = useState(""),
     [inputMode, setInputMode] = useState<"choices" | "keypad">("choices");
+  const scoreAnswer = useLessonScore(screen === "play" ? question : null);
+  const [scoreNotice, setScoreNotice] = useState("");
+  useEffect(() => {
+    const report = (event: Event) => setScoreNotice((event as CustomEvent<string>).detail);
+    window.addEventListener("eylunica-score", report);
+    return () => window.removeEventListener("eylunica-score", report);
+  }, []);
   const [count, setCount] = useState(0),
     [earned, setEarned] = useState(0),
     [error, setError] = useState(""),
@@ -118,9 +130,10 @@ export default function App() {
       wellbeing.setContext("other", false);
   }, [screen, wellbeing.setContext]);
   function persist(next: Progress) {
-    setProgress(next);
+    const stored = account.username ? { ...next, learnerName: savedProgress.learnerName } : next;
+    setProgress(stored);
     writes.current = writes.current
-      .then(() => saveProgress(next))
+      .then(() => saveProgress(stored))
       .catch(() =>
         setError(
           "İlerleme kaydedilemedi. Cihazının depolama iznini kontrol et.",
@@ -181,11 +194,12 @@ export default function App() {
     pending.current = true;
     const correct = value === question.answer;
     stopNarration();
-    void playAnswerEffect();
+    void playAnswerEffect(correct);
     narrateFeedback(correct ? "correct" : "retry", answerSoundSeconds * 1000 + 100);
     if (!correct) usedHint.current = true;
     // One learning record and at most one star per question; retries remain encouraging.
     if (!attempted.current) {
+      scoreAnswer({ answer: value });
       const timing = responseClock.read();
       const next = record(
         progress,
@@ -241,18 +255,18 @@ export default function App() {
         <button
           className="brand"
           onClick={() => setScreen(screen === "welcome" ? "welcome" : "home")}
-          aria-label="RİTMA ana sayfa"
+          aria-label="eylunica ana sayfa"
         >
           <span className="brand-icon">✦</span>
           <span>
-            RİTMA
+            eylunica
             <span className="brand-bottom">
               Her zihin kendi ritminde<span className="brand-dot">.</span>
             </span>
           </span>
         </button>
         <div className="top-actions">
-          <button className="secondary" onClick={() => setScreen("league")}>Yıldız ligi · Giriş</button>
+          <button className="secondary" onClick={() => setScreen("league")}>Yıldız tablosu{account.username ? ` · ${account.username}` : " · Giriş"}</button>
           {ready && screen !== "parent" && (
             <button className="pause-button" onClick={() => wellbeing.pause()}>
               Mola ver
@@ -284,19 +298,22 @@ export default function App() {
           {error}
         </div>
       )}
+      {scoreNotice && <p className="storage-error" role="status">{scoreNotice} <button className="text-button" onClick={() => setScoreNotice("")}>Kapat</button></p>}
       {audio.error && <div className="storage-error" role="alert">{audio.error}</div>}
       {wellbeing.error && (
         <div className="storage-error" role="alert">
           {wellbeing.error}
         </div>
       )}
-      {!ready ? (
+      {!ready || !account.ready ? (
         <main>
           <p>Perdeler açılıyor…</p>
         </main>
+      ) : needsAccount ? (
+        <main className="subpage account-entry"><AccountForm /><p className="small">Cihazındaki mevcut ilerleme korunur.</p><button className="text-button" onClick={() => { sessionStorage.setItem("eylunica-local-session", "yes"); setGuest(true); }}>Şimdilik bu cihazda çevrimdışı devam et</button></main>
       ) : (
         <>
-          {screen === "league" && <Suspense fallback={<main><p role="status">Yıldız ligi açılıyor…</p></main>}><StarLeague onBack={() => setScreen("home")} onActivity={wellbeing.setContext} onTransition={wellbeing.transition} paused={!!wellbeing.notice} /></Suspense>}
+          {screen === "league" && <StarLeague onBack={() => setScreen("home")} />}
           {screen === "music" && <MusicLounge learnerName={progress.learnerName || "Eylül"} paused={!!wellbeing.notice} onBack={() => setScreen("home")} onEnableMusic={() => audio.changeMode("music")} />}
           {screen === "home" && (
             <main>
@@ -337,11 +354,11 @@ export default function App() {
                 </button>
               </nav>
               <button className="arena-entry" onClick={() => setScreen("arena")}>
-                <strong>RİTMA Hız Arenası</strong><span>İsteğe bağlı · önce doğruluk, sonra kendi gelişimin →</span>
+                <strong>eylunica Hız Arenası</strong><span>İsteğe bağlı · önce doğruluk, sonra kendi gelişimin →</span>
               </button>
               <section className="manifest-banner">
                 <img src="./manifest/group.webp" alt="Manifest grubu" />
-                <div><span className="eyebrow">RİTMA × MANIFEST</span>
+                <div><span className="eyebrow">eylunica × MANIFEST</span>
                   <h1>Sahne senin, {progress.learnerName || "Eylül"}!</h1>
                   <p>Oku, düşün, ritmi yakala. Manifest eğitmenlerinle her gün yeni bir keşif.</p>
                   <button className="primary" onClick={() => start("add")}>İlk keşfe başla →</button>
@@ -351,7 +368,7 @@ export default function App() {
               <section className="hero">
                 <div className="hero-copy">
                   <div className="eyebrow">
-                    <span /> RİTMA İLE ZİHİNDEN MATEMATİK
+                    <span /> eylunica İLE ZİHİNDEN MATEMATİK
                   </div>
                   <h2>
                     Küçük adımlar.
@@ -372,7 +389,7 @@ export default function App() {
                 </div>
                 <div
                   className={`stage ${progress.rewards.includes("arena-lights") ? "arena-lit" : ""} ${progress.rewards.includes("lights") ? "lit" : ""} ${progress.rewards.includes("confetti") ? "confetti" : ""}`}
-                  aria-label="RİTMA konser sahnesi"
+                  aria-label="eylunica konser sahnesi"
                 >
                   <div className="stage-orbit" />
                   <div className="beam beam-one" />
@@ -381,7 +398,7 @@ export default function App() {
                   <span className="floating-star s2">✧</span>
                   <span className="floating-star s3">+</span>
                   <div className="stage-label">
-                    RİTMA<span>SAHNE SENİN!</span>
+                    eylunica<span>SAHNE SENİN!</span>
                   </div>
                   <div className="stage-team">
                     <Avatar name="Lidya" large />
@@ -539,12 +556,11 @@ export default function App() {
               {screen !== "welcome" && <button className="text-button" onClick={() => setScreen("home")}>
                 ← Macera haritana dön
               </button>}
-              <div className="eyebrow muted">{screen === "welcome" ? "RİTMA’YA HOŞ GELDİN" : "BİRLİKTE DAHA GÜZEL"}</div>
+              <div className="eyebrow muted">{screen === "welcome" ? "eylunica’YA HOŞ GELDİN" : "BİRLİKTE DAHA GÜZEL"}</div>
               <h1>{screen === "welcome" ? `${progress.learnerName || "Eylül"}, sahne senin.` : "Manifest eğitmenini seç."}</h1>
               <p className="intro">
                 Başrol sensin. Manifest üyeleri de öğrenme yolculuğunda eğitmenlerin. İlk adımda sana kim eşlik etsin?
               </p>
-              <CharacterName progress={progress} onSave={persist} />
               {screen === "welcome" && <p className="welcome-progress" role="status">
                 {progress.stars > 0 || total > 0 || progress.history.length > 0
                   ? `${progress.stars} yıldızın ve mevcut ilerlemen burada. Kaldığın yerden devam edebilirsin.`
@@ -571,7 +587,7 @@ export default function App() {
               </div>
               <p className="welcome-companion">{progress.learnerName || "Eylül"}, eğitmenin {progress.character}. Hazırsan sahne senin!</p>
               <button className="primary" disabled={!audio.ready} onClick={() => setScreen("home")}>
-                {screen === "welcome" ? "RİTMA’ya devam et →" : "Maceraya dön →"}
+                {screen === "welcome" ? "eylunica’ya devam et →" : "Maceraya dön →"}
               </button>
             </main>
           )}
@@ -895,7 +911,7 @@ export default function App() {
           )}
           <footer>
             <span>
-              RİTMA <span className="footer-dot">✦</span> Her zihin kendi
+              eylunica <span className="footer-dot">✦</span> Her zihin kendi
               ritminde.
             </span>
             <div>

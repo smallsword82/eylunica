@@ -159,7 +159,7 @@ export function ReadingAcademy({
       ) : (
         <>
           <p className="intro">
-            RİTMA ile altı özgün hikâyedeki ipuçlarını keşfet. Önce düşün, sonra
+            eylunica ile altı özgün hikâyedeki ipuçlarını keşfet. Önce düşün, sonra
             metindeki kanıtı göster. Önerilen düzey başarılarına göre değişir.
           </p>
           <div className="level-cards">
@@ -274,7 +274,7 @@ export function AttentionAcademy({
                 key={k}
                 onClick={() => start(k)}
               >
-                <span>0{i + 1} · RİTMA İLE KEŞFET</span>
+                <span>0{i + 1} · eylunica İLE KEŞFET</span>
                 <h2>{attentionLabels[k]}</h2>
                 <p>
                   {

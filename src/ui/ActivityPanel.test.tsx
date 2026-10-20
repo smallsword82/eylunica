@@ -13,8 +13,14 @@ it("doğru seçenek tek başına yetmez; kanıt ve yanıt kontrol edilir, tekrar
   render(<ActivityPanel task={q} onRecord={record} onNext={next} />);
   expect(
     screen.getByRole("button", { name: "Yanıtımı kontrol et →" }),
-  ).toBeDisabled();
+  ).toBeEnabled();
+  await user.click(screen.getByRole("button", { name: "Yanıtımı kontrol et →" }));
+  expect(record).not.toHaveBeenCalled();
+  expect(screen.getByRole("status")).toHaveTextContent("Önce aşağıdaki seçeneklerden");
   await user.click(screen.getByRole("button", { name: q.choices[q.answer] }));
+  await user.click(screen.getByRole("button", { name: "Yanıtımı kontrol et →" }));
+  expect(record).not.toHaveBeenCalled();
+  expect(screen.getByRole("button", { name: /Kanıt cümlesi 1:/ })).toHaveFocus();
   await user.click(screen.getByRole("button", { name: /Kanıt cümlesi 1:/ }));
   await user.click(
     screen.getByRole("button", { name: "Yanıtımı kontrol et →" }),

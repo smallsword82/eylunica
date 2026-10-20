@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./local-test";
 import { manifestTracks } from "../../src/audio/manifest-catalog";
 
 test("varsayılan müzik açık, tek tıkla dinleme ve tüm katalog çevrimdışı sesli; rastgele sıra ilerler", async ({ page, context }) => {
@@ -25,7 +25,7 @@ test("varsayılan müzik açık, tek tıkla dinleme ve tüm katalog çevrimdış
   await page.reload();
   await context.setOffline(true);
   await page.reload();
-  await expect(page.getByLabel("Öğrenci adı")).toHaveValue("Eylül");
+  await expect(page.getByRole("heading", { name: "Eylül, sahne senin." })).toBeVisible();
   const decoded = await page.evaluate(async tracks => {
     const audioContext = new AudioContext();
     const results = [];
@@ -48,7 +48,7 @@ test("varsayılan müzik açık, tek tıkla dinleme ve tüm katalog çevrimdış
     expect(track.duration).toBeLessThan(12.1);
     expect(track.rms).toBeGreaterThan(0.01);
   }
-  await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await expect(page.getByRole("button", { name: "Rastgele çal" })).toHaveAttribute("aria-pressed", "true");
   await page.getByRole("button", { name: "Rastgele çal" }).click();
   const first = await page.evaluate(() => (window as any).clips.at(-1).src as string);

@@ -10,6 +10,7 @@ it("bütün yönerge ve hikâyeler güncel metinle, sağlam gömülü ses dosyas
   expect(Object.keys(narrationManifest).sort()).toEqual([...texts].sort());
   for (const text of texts) {
     const asset = narrationManifest[text];
+    expect(asset.file).toBe(`tr-${createHash("sha256").update(text).digest("hex").slice(0, 16)}.mp3`);
     const bytes = readFileSync(`public/narration/${asset.file}`);
     expect(createHash("sha256").update(bytes).digest("hex")).toBe(asset.sha256);
     expect(asset.duration).toBeGreaterThan(1);

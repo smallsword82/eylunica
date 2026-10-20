@@ -216,14 +216,14 @@ export const stories: Story[] = [
     "Sessiz Provanın Sırrı",
     2,
     [
-      "RİTMA, okul kütüphanesinin yanındaki salonda konser hazırlığı yapıyordu.",
+      "eylunica, okul kütüphanesinin yanındaki salonda konser hazırlığı yapıyordu.",
       "Mina ritim tutmak için masaya vurunca yan odadaki okurların başlarını kaldırdığını fark etti.",
       "Defne, prova yapmakla başkalarının sessizlik ihtiyacını birlikte düşünmeleri gerektiğini söyledi.",
       "Alara, ritimleri ses çıkarmadan renkli kartlarla göstermeyi önerdi.",
       "Önce mavi kart kaldırılacak, ardından sarı, en son yeşil kart gösterilecekti.",
       "İlk denemede herkes aynı anda kart kaldırdı ve sıra karıştı.",
       "Eylül, her karttan önce birbirlerine bakmalarını önerince grup uyum sağladı.",
-      "Kütüphanede okuyanlar çalışmalarına devam ederken RİTMA da provasını tamamladı.",
+      "Kütüphanede okuyanlar çalışmalarına devam ederken eylunica da provasını tamamladı.",
       "Defne, iyi bir çözümün yalnız kendi işimizi değil, çevremizdeki insanların ihtiyacını da gözettiğini günlüğüne yazdı.",
     ],
     [
@@ -250,7 +250,7 @@ export const stories: Story[] = [
         "Beşinci cümlede renkler “önce, ardından, en son” sözleriyle sıralanıyor.",
       ],
       [
-        "RİTMA neden ses çıkarmayan bir yöntem aradı?",
+        "eylunica neden ses çıkarmayan bir yöntem aradı?",
         [
           "Kütüphanedeki okurları rahatsız etmemek için",
           "Kartları kaybettiği için",
@@ -384,7 +384,7 @@ export const stories: Story[] = [
     "Yağmur İçin İki Plan",
     3,
     [
-      "RİTMA okul bahçesindeki konser için iki haftadır hazırlanıyordu.",
+      "eylunica okul bahçesindeki konser için iki haftadır hazırlanıyordu.",
       "Hava raporunda yağmur olasılığı görünce Defne hazırlık toplantısında yedek bir plan önerdi.",
       "Bazıları planın gereksiz olduğunu, çünkü o anda gökyüzünün açık göründüğünü söyledi.",
       "Eylül, o anki hava ile akşamki olasılığın aynı şey olmadığını hatırlattı.",

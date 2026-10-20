@@ -1,23 +1,22 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./local-test";
 
 test("Eylül başrolde; gerçek eğitmen fotoğrafları ve kısa müzikler videosuz, çevrimdışı çalışır", async ({ page, context }) => {
   await page.goto("/");
-  await expect(page.getByLabel("Öğrenci adı")).toHaveValue("Eylül");
+  await expect(page.getByRole("heading", { name: "Eylül, sahne senin." })).toBeVisible();
+  await expect(page.getByLabel("Öğrenci adı")).toHaveCount(0);
   for (const name of ["Mina", "Lidya", "Hilal", "Esin", "Zeynep", "Sueda"])
     await expect(page.getByRole("img", { name: `${name}, Manifest eğitmeni`, exact: true }).first()).toBeVisible();
   expect(await page.locator(".character-card img").evaluateAll(images => images.every(image => (image as HTMLImageElement).complete && (image as HTMLImageElement).naturalWidth > 0))).toBe(true);
   await expect(page.locator("video, iframe")).toHaveCount(0);
-  await page.getByLabel("Öğrenci adı").fill("Deniz");
-  await page.getByRole("button", { name: "Adımı kaydet" }).click();
   await page.getByRole("button", { name: /Sueda Sahneyi birleştir/ }).click();
-  await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
-  await expect(page.getByRole("heading", { name: "Sahne senin, Deniz!" })).toBeVisible();
+  await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
+  await expect(page.getByRole("heading", { name: "Sahne senin, Eylül!" })).toBeVisible();
   await page.evaluate(() => navigator.serviceWorker.ready);
   await page.reload();
-  await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await context.setOffline(true);
   await page.reload();
-  await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("music");
   await page.getByText("Müzik ayarları", { exact: true }).click();
   await page.getByRole("combobox", { name: "Kısa şarkı seç" }).selectOption("ariyo");
@@ -47,7 +46,7 @@ test("Eylül başrolde; gerçek eğitmen fotoğrafları ve kısa müzikler video
   await page.getByRole("button", { name: "Manifest müzik odası →" }).click();
   await page.getByLabel("Ritim sorusunun yanıtı").fill("8");
   await page.getByRole("button", { name: "Birlikte kontrol edelim →" }).click();
-  await expect(page.getByRole("status")).toContainText("Harika, Deniz!");
+  await expect(page.getByRole("status")).toContainText("Harika, Eylül!");
   await expect(page.locator("video, iframe")).toHaveCount(0);
   await page.getByRole("button", { name: "← Haritaya dön" }).click();
   await page.screenshot({ path: "test-results/manifest-home-mobile.png", fullPage: true });

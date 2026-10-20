@@ -24,7 +24,7 @@ Sesler derleme öncesinde yerel CPU üzerinde `sherpa-onnx 1.12.35`, Piper Türk
 - Model, veri kümesi, espeak-ng veya Python çalışma ortamı APK/web paketine eklenmez. Yalnızca proje için üretilen statik sesler dağıtılır.
 - `ffmpeg` ile mono, 24 kHz, 56 kbit/s MP3; ses yüksekliği hedefi -20 LUFS, tepe -2 dBTP.
 
-Yeniden üretmek için Python sanal ortamında `pip install -r scripts/narration-requirements.txt`, FFmpeg/ffprobe ve Node 22+ gerekir. Arşivin SHA256 değerini kontrol edip çalışma alanında açtıktan sonra:
+Yeniden üretmek için Python sanal ortamında `pip install -r scripts/narration-requirements.txt`, FFmpeg ve Node 22+ gerekir. Süreler PyAV ile okunur; FFmpeg yolu `--ffmpeg` ile belirtilebilir. Arşivin SHA256 değerini kontrol edip çalışma alanında açtıktan sonra:
 
 ```sh
 python scripts/generate-narration.py --model-dir /path/to/vits-piper-tr_TR-fahrettin-medium

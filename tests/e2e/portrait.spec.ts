@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./local-test";
 
 for (const width of [320, 360, 390, 430, 768]) {
   test(`${width}px dikey ekranda temel sayfalar yatay taşmaz`, async ({ page }, testInfo) => {
@@ -28,17 +28,17 @@ for (const width of [320, 360, 390, 430, 768]) {
     }
     await fits("welcome");
     await page.screenshot({ path: testInfo.outputPath("phone-viewport.png") });
-    await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+    await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
     await fits("home");
     await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
     await fits("lesson");
-    await page.getByRole("button", { name: "Yıldız ligi · Giriş" }).click();
-    await expect(page.getByRole("heading", { name: "RİTMA Yıldız Ligi" })).toBeVisible();
+    await page.getByRole("button", { name: "Yıldız tablosu · Giriş" }).click();
+    await expect(page.getByRole("heading", { name: "eylunica Yıldız Tablosu" })).toBeVisible();
     await fits("league");
     await page.getByRole("button", { name: "Ebeveyn köşesi →" }).click();
     await fits("parent");
     if (width === 390) {
-      await page.getByRole("button", { name: "RİTMA ana sayfa" }).click();
+      await page.getByRole("button", { name: "eylunica ana sayfa" }).click();
       await page.setViewportSize({ width: 844, height: 390 });
       await expect(page.getByRole("combobox", { name: "Kısa şarkı seç" })).toBeVisible();
       await fits("landscape");

@@ -10,8 +10,8 @@ export default defineConfig({
       injectRegister: false,
       includeAssets: ["icon.svg", "icon-192.png", "icon-512.png"],
       manifest: {
-        name: "Matematik Sahnesi",
-        short_name: "RİTMA",
+        name: "eylunica",
+        short_name: "eylunica",
         lang: "tr",
         description: "Zihinden dört işlem macerası",
         theme_color: "#1b1238",

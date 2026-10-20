@@ -19,7 +19,7 @@ export function concert(
     level,
   };
   const sentences = [
-    "RİTMA, okurlar rahatsız olmasın diye kütüphanenin yanındaki salonda sessiz prova yapmaya karar verdi.",
+    "eylunica, okurlar rahatsız olmasın diye kütüphanenin yanındaki salonda sessiz prova yapmaya karar verdi.",
     level === 1
       ? `Mina ${a} ışık, Beren ${b} ışık getirdi; hepsi birlikte asılacak.`
       : level === 2

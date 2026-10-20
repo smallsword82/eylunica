@@ -9,12 +9,14 @@ import json
 import pathlib
 import subprocess
 import tempfile
+import av
 
 import sherpa_onnx
 import soundfile
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--model-dir", required=True, type=pathlib.Path)
+parser.add_argument("--ffmpeg", default="ffmpeg")
 args = parser.parse_args()
 root = pathlib.Path(__file__).resolve().parent.parent
 model = args.model_dir
@@ -48,13 +50,12 @@ with tempfile.TemporaryDirectory() as temp:
             audio = tts.generate(text, sid=0, speed=0.94)
             soundfile.write(wav, audio.samples, audio.sample_rate)
             subprocess.run([
-                "ffmpeg", "-v", "error", "-y", "-i", str(wav),
+                args.ffmpeg, "-v", "error", "-y", "-i", str(wav),
                 "-af", "loudnorm=I=-20:TP=-2:LRA=7", "-ar", "24000",
                 "-ac", "1", "-c:a", "libmp3lame", "-b:a", "56k", str(output),
             ], check=True)
-        duration = float(subprocess.check_output([
-            "ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(output),
-        ], text=True).strip())
+        with av.open(str(output)) as container:
+            duration = container.duration / av.time_base
         manifest[text] = {"file": filename, "duration": duration, "sha256": hashlib.sha256(output.read_bytes()).hexdigest()}
         print(f"{i+1}/{len(texts)} {filename}: {duration:.1f}s", flush=True)
 (root / "src" / "audio" / "narration-manifest.ts").write_text(

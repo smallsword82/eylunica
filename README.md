@@ -1,16 +1,16 @@
-# Matematik Sahnesi · RİTMA
+# eylunica
 
 ## Güncel: eylunica hesapları ve yıldız ligi
 
-Sitedeki **Yıldız ligi · Giriş** düğmesi kullanıcı adı/şifreyle açılır; telefon, gerçek e-posta ve Google girişi gerekmez. Herkese açık tabloda yalnız takma ad ve sunucuda doğrulanan lig yıldızları gösterilir. E-posta alınmadığı için otomatik şifre sıfırlama yoktur. Yerel ders ilerlemesi ve eski yıldızlar korunur, lige aktarılmaz. Normal ders geçmişi henüz cihazlar arasında eşitlenmez. Ayrıntılar ve SQL kurulum adımları: `docs/STAR_LEAGUE.md`.
+İlk açılışta sade kullanıcı adı/şifre kaydı veya mevcut hesaba giriş sunulur; telefon, gerçek e-posta ve Google gerekmez. Kullanıcı adı sitedeki öğrenci adı olarak kullanılır; ayrı ad seçimi yoktur. **Yıldız tablosu** mevcut eğitimlerin doğru ilk yanıtlarından beslenir; ayrı lig soruları yoktur. Herkese yalnız takma ad ve çevrimiçi yıldızlar gösterilir. Otomatik şifre sıfırlama yoktur. Yerel ilerleme ve eski yıldızlar korunur fakat doğrulanamadıkları için tabloya aktarılmaz. Normal ders geçmişi cihazlar arasında eşitlenmez. İstenirse o sekmede çevrimdışı devam edilebilir. Ayrıntılar: `docs/STAR_LEAGUE.md`.
 
 Android uygulamasının görünen adı **eylunica** olarak ayarlanmıştır; mevcut verileri korumak için paket kimliği değiştirilmez. Aşağıdaki sürüm notlarındaki eski “hesap/bulut yok” ifadeleri yalnız önceki yerel sürümleri anlatır.
 
-**Sesler:** her yanıtta yalnız 0,18 saniyelik sözsüz bir zil efekti çalar. Ajda Pekkan’ın “Manifest” kaydı (2,7 saniye) yalnız bölüm/tur tamamlanınca çalar. Rastgele arka plan kataloğu korunur. İsteğe bağlı konuşmalı geri bildirim ilgili sesin bitmesini bekler.
+**Sesler:** doğru yanıtta yükselen, yanlış yanıtta daha alçak ve yumuşak iki ayrı 0,18 saniyelik sözsüz efekt çalar. Ajda Pekkan’ın “Manifest” kaydı (2,7 saniye) yalnız bölüm/tur tamamlanınca çalar. Rastgele arka plan kataloğu korunur. Hikâyelerdeki eski uygulama adı da yeni metinle yerelde yeniden seslendirilmiştir.
 
 Güncel geliştirme deposu: `smallsword82/eylunica` (özel). `smallsword82/manifestakademi` kaynağının main dalı, 10 commitlik tüm ata geçmişi ve özgün commit kimlikleriyle korunarak aktarılmıştır. Kaynak depo değiştirilmemiştir.
 
-Uygulama öğrenci profili ve Manifest eğitmen seçimiyle açılır. Öğrencinin varsayılan adı **Eylül**; değiştirilebilir ve eğitmenden bağımsızdır. Mina, Lidya, Hilal, Esin, Zeynep ve Sueda gerçek fotoğraflarıyla eğitmen rolündedir. Öğrenci adı/eğitmen değişikliği yıldızları, becerileri, akademileri, Arena geçmişini ve ödülleri sıfırlamaz. `ritma-progress-v1` ve Android Preferences kayıt alanı korunur. Web kayıtları tarayıcı kökenine bağlıdır; site adresi değişirse kendiliğinden taşınmaz.
+Kayıt/giriş sonrası Manifest eğitmeni seçilir. Mina, Lidya, Hilal, Esin, Zeynep ve Sueda gerçek fotoğraflarıyla eğitmen rolündedir. Eğitmen değişikliği yıldızları, becerileri, akademileri, Arena geçmişini ve ödülleri sıfırlamaz. `ritma-progress-v1` ve Android Preferences kayıt alanı korunur. Eski öğrenci adı yerel kayıtta saklanır; hesap açıkken kayıt kullanıcı adı gösterilir. Web kayıtları tarayıcı kökenine bağlıdır; site adresi değişirse kendiliğinden taşınmaz.
 
 Resmî Manifest kanalında 20.10.2026 tarihinde doğrulanan **27 şarkı ve remiksten** hazırlanan yerel ses kesitleri kullanılır. Efektler 1,1–3,5 saniye; müzik bölümleri 12 saniyedir. Varsayılan **Müzik ve Efektler**; kayıtlı sessiz/efekt tercihi korunur. İlk Devam et dokunuşuyla rastgele müzik başlar. Karışık sıra bir turdaki parçaları tüketir; kesitler arasında 2,5 saniye sessizlik olur. “Dinle” kapalı bir ses modunu tek tıkla açabilir, ses düzeyi ayarlanabilir. Video, YouTube iframe’i veya uzun şarkı yoktur. Sessiz mod, mola, konuşmalı yönerge ve görünürlük/odak kaybı sesleri durdurur; karışık müzik dersler arasında kesintisiz ilerler, ebeveyn ekranında durur. Fotoğraf ve sesler PWA önbelleğine dahildir. Kaynaklar: [Manifest medya notu](docs/MANIFEST_MEDIA.md).
 
@@ -18,7 +18,7 @@ Resmî Manifest kanalında 20.10.2026 tarihinde doğrulanan **27 şarkı ve remi
 
 ## Yerelde geliştirme
 
-Node.js 22+ ve npm gerekir. Sunucu, API anahtarı veya kullanıcı hesabı yoktur.
+Node.js 22+ ve npm gerekir. Yerel eğitimler çevrimdışı çalışır; hesap ve puan tablosu için Supabase bağlantısı gerekir.
 
 ```sh
 npm ci

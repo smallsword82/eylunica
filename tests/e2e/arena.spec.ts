@@ -1,4 +1,4 @@
-import { test, expect, type Page } from "@playwright/test";
+import { test, expect, type Page } from "./local-test";
 import { fresh, completeArena, recordArena } from "../../src/storage";
 import { freshArena, makeDeck, observation, specs } from "../../src/arena-engine";
 import { dateKey, freshDay, freshWellbeing } from "../../src/time-engine";
@@ -23,7 +23,7 @@ async function clock(page: Page) {
   await page.clock.pauseAt(new Date(startTime.getTime() + 1000));
 }
 async function open(page: Page) {
-  await page.getByRole("button", { name: /RİTMA Hız Arenası/ }).click();
+  await page.getByRole("button", { name: /eylunica Hız Arenası/ }).click();
   await page.getByRole("combobox", { name: "İşlem", exact: true }).selectOption("multiply");
 }
 async function value(page: Page) {
@@ -49,7 +49,7 @@ async function complete(page: Page) {
 }
 
 test("isteğe bağlı hazırlık: ilk cevap ve ipucu korunur, %90 doğruluk olmadan yarış açılmaz", async ({ page }) => {
-  await clock(page); await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click(); await open(page);
+  await clock(page); await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click(); await open(page);
   await expect(page.getByRole("button", { name: "İsteğe bağlı tura katıl" })).toHaveCount(0);
   await page.getByRole("button", { name: "Doğruluk hazırlığı yap" }).click();
   for (let i = 0; i < 10; i++) {
@@ -82,7 +82,7 @@ test("isteğe bağlı hazırlık: ilk cevap ve ipucu korunur, %90 doğruluk olma
 test("kişisel rekor, sınırlı ödül, ebeveyn grafikleri, Manifest sesleri ve çevrimdışı kayıt", async ({ page, context }) => {
   await clock(page);
   await page.addInitScript(p => { if (!localStorage.getItem("ritma-progress-v1")) localStorage.setItem("ritma-progress-v1", JSON.stringify(p)); }, prepared());
-  await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   // Seed only once; subsequent offline reload must use the actual saved result.
   await page.evaluate(() => localStorage.setItem("arena-seed-used", "yes"));
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("music");
@@ -110,9 +110,9 @@ test("kişisel rekor, sınırlı ödül, ebeveyn grafikleri, Manifest sesleri ve
   const { default: AxeBuilder } = await import("@axe-core/playwright");
   expect((await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa"]).analyze()).violations).toEqual([]);
   await page.evaluate(() => navigator.serviceWorker.ready);
-  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await context.setOffline(true);
-  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await expect(page.getByLabel("10 yıldız", { exact: true })).toBeVisible();
   await expect(page.getByRole("combobox", { name: "Ses modu" })).toHaveValue("music");
 });
@@ -120,7 +120,7 @@ test("kişisel rekor, sınırlı ödül, ebeveyn grafikleri, Manifest sesleri ve
 test("mola ve günlük sınır Arena’da işler; kesintili yanıt rekor sayılmaz", async ({ page }) => {
   await clock(page);
   await page.addInitScript(p => { if (!localStorage.getItem("ritma-progress-v1")) localStorage.setItem("ritma-progress-v1", JSON.stringify(p)); }, prepared());
-  await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click(); await open(page);
+  await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click(); await open(page);
   await page.getByRole("button", { name: "İsteğe bağlı tura katıl" }).click();
   await page.clock.fastForward(1000);
   await page.getByRole("button", { name: "Mola ver", exact: true }).click();
@@ -134,7 +134,7 @@ test("mola ve günlük sınır Arena’da işler; kesintili yanıt rekor sayılm
   const settings = freshWellbeing(); settings.settings.dailyLimitMinutes = 1;
   settings.days[dateKey(startTime.getTime())] = { ...freshDay(), math: 59_000 };
   await page.evaluate(s => localStorage.setItem("ritma-wellbeing-v1", JSON.stringify(s)), settings);
-  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click(); await open(page);
+  await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click(); await open(page);
   await page.getByRole("button", { name: "İsteğe bağlı tura katıl" }).click();
   await page.clock.fastForward(2000);
   await solve(page);

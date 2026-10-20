@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import App from "./App";
 import { fresh, KEY } from "./storage";
 async function enter() {
-  await userEvent.click(await screen.findByRole("button", { name: "RİTMA’ya devam et →" }));
+  await userEvent.click(await screen.findByRole("button", { name: "eylunica’ya devam et →" }));
 }
 it("karakter seçer ve yeniden açılışta korur", async () => {
   const user = userEvent.setup();
@@ -53,21 +53,16 @@ it("doğru yanıtta yıldız verir ve aynı soruda tekrar ödüllendirmez", asyn
   expect(screen.getByText(/Zihin Atölyesi · 2\/5/)).toBeVisible();
 });
 
-it("öğrenci adı eğitmenden bağımsızdır ve varsayılan Eylül değiştirilebilir", async () => {
+it("ayrı öğrenci adı seçilmez; eğitmen değişimi eski adı korur", async () => {
   const view = render(<App />);
-  const input = await screen.findByLabelText("Öğrenci adı");
-  expect(input).toHaveValue("Eylül");
-  await userEvent.clear(input);
-  await userEvent.type(input, "Deniz");
-  await userEvent.click(screen.getByRole("button", { name: "Adımı kaydet" }));
+  await screen.findByRole("heading", { name: "Eylül, sahne senin." });
+  expect(screen.queryByLabelText("Öğrenci adı")).not.toBeInTheDocument();
   await userEvent.click(screen.getByRole("button", { name: /Esin Birlikte paylaş/ }));
-  await waitFor(() => expect(JSON.parse(localStorage.getItem(KEY)!)).toMatchObject({ learnerName: "Deniz", character: "Esin" }));
+  await waitFor(() => expect(JSON.parse(localStorage.getItem(KEY)!)).toMatchObject({ learnerName: "Eylül", character: "Esin" }));
   expect(screen.getByRole("button", { name: /Mina Merakla keşfet/ })).toBeVisible();
-  expect(screen.getByLabelText("Öğrenci adı")).toHaveValue("Deniz");
   view.unmount();
   render(<App />);
-  expect(await screen.findByLabelText("Öğrenci adı")).toHaveValue("Deniz");
-  expect(screen.getByRole("heading", { name: "Deniz, sahne senin." })).toBeVisible();
+  expect(await screen.findByRole("heading", { name: "Eylül, sahne senin." })).toBeVisible();
 });
 
 it("eğitmen seçimi bütün mevcut ilerlemeyi korur", async () => {
@@ -94,6 +89,6 @@ it("eski özel öğrenci adı ve ilerleme kaybolmaz", async () => {
   delete previous.learnerName;
   localStorage.setItem(KEY, JSON.stringify(previous));
   render(<App />);
-  expect(await screen.findByLabelText("Öğrenci adı")).toHaveValue("Ada");
+  expect(await screen.findByRole("heading", { name: "Ada, sahne senin." })).toBeVisible();
   expect(screen.getByRole("button", { name: /Esin Birlikte paylaş/ })).toHaveAttribute("aria-pressed", "true");
 });

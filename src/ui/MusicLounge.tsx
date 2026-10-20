@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { manifestTracks, playManifestTrack, startManifestShuffle, stopManifestAudio } from "../audio/manifest";
-import { getSoundMode } from "../audio";
+import { getSoundMode, playAnswerEffect } from "../audio";
+import { stopNarration } from "../audio/narration";
+import { useLessonScore } from "../online/useLessonScore";
+import type { Question } from "../math-engine";
 
 const songs = manifestTracks.map((track, index) => ({
   title: track.title, track: track.id,
@@ -14,6 +17,10 @@ export function MusicLounge({ onBack, paused, learnerName, onEnableMusic }: { on
   const [answer, setAnswer] = useState("");
   const [feedback, setFeedback] = useState("");
   const song = songs[selected];
+  const question = useMemo<Question>(() => ({ a: selected % 2 === 0 ? 4 : 6, b: 2, operation: "multiply", answer: selected % 2 === 0 ? 8 : 12, options: [], level: 1 }), [selected]);
+  const scoreAnswer = useLessonScore(question);
+  const attempted = useRef(false);
+  useEffect(() => { attempted.current = false; }, [selected]);
   return <main className="subpage music-lounge">
     <button className="text-button" onClick={onBack}>← Haritaya dön</button>
     <div className="eyebrow muted">MANIFEST MÜZİK ODASI</div>
@@ -30,7 +37,11 @@ export function MusicLounge({ onBack, paused, learnerName, onEnableMusic }: { on
     <p className="music-note">Sadece müzik. Video yok, uzun şarkı yok. Sesler cihazında; çevrimdışı da dinleyebilirsin.</p>
     <form className="rhythm-challenge" onSubmit={event => {
       event.preventDefault(); stopManifestAudio();
-      setFeedback(Number(answer) === song.answer ? `Harika, ${learnerName}! Ritmi matematikle yakaladın.` : "Birlikte gruplayıp yeniden sayalım. Acelemiz yok.");
+      stopNarration();
+      const correct = Number(answer) === song.answer;
+      void playAnswerEffect(correct);
+      if (!attempted.current) { scoreAnswer({ answer: Number(answer) }); attempted.current = true; }
+      setFeedback(correct ? `Harika, ${learnerName}! Ritmi matematikle yakaladın.` : "Birlikte gruplayıp yeniden sayalım. Acelemiz yok.");
     }}>
       <div className="eyebrow muted">RİTMİ SAYILARA DÖNÜŞTÜR</div>
       <h2>{song.prompt}</h2>

@@ -7,6 +7,7 @@ import { useRef, useState } from "react";
 import type { Activity, LearningResult } from "../learning-engine";
 import { checkReading } from "../reading-engine";
 import { checkSequence } from "../attention-engine";
+import { useLessonScore } from "../online/useLessonScore";
 export function ActivityPanel({
   task,
   onRecord,
@@ -20,6 +21,7 @@ export function ActivityPanel({
   last?: boolean;
   onListen?: () => void;
 }) {
+  const scoreAnswer = useLessonScore(task);
   const [selected, setSelected] = useState<number | null>(null),
     [evidence, setEvidence] = useState<number | null>(null),
     [sequence, setSequence] = useState<number[]>([]),
@@ -28,6 +30,8 @@ export function ActivityPanel({
     [feedback, setFeedback] = useState(""),
     [hidden, setHidden] = useState(false);
   const attempted = useRef(false),
+    evidenceStart = useRef<HTMLButtonElement>(null),
+    answerStart = useRef<HTMLButtonElement>(null),
     usedHint = useRef(false),
     start = useRef(performance.now()),
     lock = useRef(false);
@@ -37,6 +41,16 @@ export function ActivityPanel({
   }, [task.id]);
   function check() {
     if (solved || lock.current) return;
+    if (selected === null && !task.sequence) {
+      setFeedback("Önce aşağıdaki seçeneklerden yanıtını seç.");
+      answerStart.current?.focus();
+      return;
+    }
+    if (task.evidence && evidence === null) {
+      setFeedback("Yanıtını seçtin! Şimdi metinde yanıtını destekleyen bir cümleye dokun, sonra tekrar kontrol et.");
+      evidenceStart.current?.focus();
+      return;
+    }
     lock.current = true;
     const correct = task.sequence
       ? checkSequence(task, sequence)
@@ -46,13 +60,14 @@ export function ActivityPanel({
           checkReading(task, selected, evidence)
         : selected === task.answer;
     stopNarration();
-    void playAnswerEffect();
+    void playAnswerEffect(correct);
     narrateFeedback(correct ? "correct" : "retry", answerSoundSeconds * 1000 + 100);
     if (!correct) {
       usedHint.current = true;
       setHint(true);
     }
     if (!attempted.current) {
+      scoreAnswer(task.sequence ? { sequence } : { answer: selected, evidence });
       onRecord({
         id: task.id,
         skill: task.skill,
@@ -95,6 +110,7 @@ export function ActivityPanel({
             task.evidence ? (
               <button
                 key={i}
+                ref={i === 0 ? evidenceStart : undefined}
                 className={`evidence-sentence ${hint && task.evidence?.includes(i) ? "evidence-hint" : ""}`}
                 aria-pressed={evidence === i}
                 aria-label={`Kanıt cümlesi ${i + 1}: ${sentence}`}
@@ -169,6 +185,7 @@ export function ActivityPanel({
             {task.choices.map((choice, i) => (
               <button
                 key={i}
+                ref={i === 0 ? answerStart : undefined}
                 aria-label={
                   task.skill === "Farklı olanı bul"
                     ? `Kart ${i + 1}: ${choice}`
@@ -191,7 +208,8 @@ export function ActivityPanel({
               Sırayı yeniden seç
             </button>
           )}
-          <button className="primary" disabled={!canCheck} onClick={check}>
+          {task.evidence && <p className="reading-steps">{selected !== null ? "✓ Yanıt seçildi" : "1. Yanıtını seç"} · {evidence !== null ? `✓ Kanıt: ${evidence + 1}. cümle` : "2. Metinden kanıt cümlesine dokun"}</p>}
+          <button className="primary" disabled={!task.evidence && !canCheck} onClick={check}>
             Yanıtımı kontrol et →
           </button>
         </>

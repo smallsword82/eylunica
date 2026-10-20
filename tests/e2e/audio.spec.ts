@@ -1,4 +1,23 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./local-test";
+
+test("yanlış ve doğru cevap ayrı kısa seslerle hemen duyulur", async ({ page }) => {
+  await page.addInitScript(() => {
+    (window as any).answerClips = [];
+    const original = HTMLMediaElement.prototype.play;
+    HTMLMediaElement.prototype.play = function () {
+      if (/answer-(tick|retry)\.wav$/.test(this.src)) (window as any).answerClips.push(this);
+      return original.call(this);
+    };
+  });
+  await page.goto("/");
+  await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
+  await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
+  await page.getByRole("button", { name: "14", exact: true }).click();
+  await expect.poll(() => page.evaluate(() => (window as any).answerClips.at(-1)?.src)).toContain("answer-retry.wav");
+  await page.getByRole("button", { name: "15", exact: true }).click();
+  await expect.poll(() => page.evaluate(() => (window as any).answerClips.at(-1)?.src)).toContain("answer-tick.wav");
+  expect(await page.evaluate(() => (window as any).answerClips.every((clip: HTMLAudioElement) => clip.duration < .2))).toBe(true);
+});
 
 test("kısa cevap efekti önceden hazırdır ve hemen başlar", async ({ page }) => {
   await page.addInitScript(() => {
@@ -25,7 +44,7 @@ test("kısa cevap efekti önceden hazırdır ve hemen başlar", async ({ page })
   });
   await page.goto("/");
   await expect.poll(() => page.evaluate(() => (window as any).answerTiming.answer?.readyState)).toBe(4);
-  await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
   await page.getByRole("button", { name: "15", exact: true }).click();
   await expect.poll(() => page.evaluate(() => (window as any).answerTiming.started)).toBeGreaterThan(0);
@@ -46,7 +65,7 @@ test("kısa cevap efekti önceden hazırdır ve hemen başlar", async ({ page })
   expect(await page.evaluate(() => (window as any).answerTiming.answer.paused)).toBe(true);
 });
 test("ses tercihi çevrimdışı korunur, efekt üretilir ve karakter adları günceldir", async ({ page, context }) => {
-  await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   const sound = page.getByRole("combobox", { name: "Ses modu" });
   await expect(sound).toHaveValue("music");
   await sound.selectOption("silent");
@@ -69,23 +88,22 @@ test("ses tercihi çevrimdışı korunur, efekt üretilir ve karakter adları g�
   for (const name of ["Lidya", "Hilal", "Esin", "Mina", "Zeynep", "Sueda"])
     await expect(page.getByRole("button", { name: new RegExp(`${name} `) }).first()).toBeVisible();
   await page.getByRole("button", { name: /Zeynep Kısa yolları keşfet/ }).click();
-  await page.getByLabel("Öğrenci adı").fill("Deniz");
-  await page.getByRole("button", { name: "Adımı kaydet" }).click();
+  await expect(page.getByLabel("Öğrenci adı")).toHaveCount(0);
   await expect(page.getByRole("button", { name: /Zeynep Kısa yolları keşfet/ })).toBeVisible();
   await page.evaluate(() => navigator.serviceWorker.ready);
-  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await context.setOffline(true);
-  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await expect(sound).toHaveValue("effects");
-  await expect(page.getByRole("heading", { name: "Sahne senin, Deniz!" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Sahne senin, Eylül!" })).toBeVisible();
   await sound.selectOption("silent");
-  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await expect(sound).toHaveValue("silent");
   await expect(page.getByLabel("1 yıldız", { exact: true })).toBeVisible();
 });
 
 test("müzik kesiti ekran geçişinde yeniden başlamaz; Sessiz modu konuşmayı da kapatır", async ({ page }) => {
-  await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await expect(page.getByRole("combobox", { name: "Ses modu" })).toHaveValue("music");
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("silent");
   await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
@@ -98,10 +116,10 @@ test("müzik kesiti ekran geçişinde yeniden başlamaz; Sessiz modu konuşmayı
   });
   await page.getByRole("button", { name: "Yönergeyi dinle" }).waitFor({ state: "visible" });
   expect(await page.getByRole("button", { name: "Yönergeyi dinle" }).isEnabled()).toBe(true);
-  await page.getByRole("button", { name: "RİTMA ana sayfa" }).click();
+  await page.getByRole("button", { name: "eylunica ana sayfa" }).click();
   await page.getByRole("button", { name: /^Okuduğunu Anlama Akademisi/ }).click();
   await page.getByRole("button", { name: /Kısa metinler/ }).click();
-  await page.getByRole("button", { name: "RİTMA ana sayfa" }).click();
+  await page.getByRole("button", { name: "eylunica ana sayfa" }).click();
   await page.getByRole("button", { name: /^Dikkat ve Odaklanma Akademisi/ }).click();
   await page.getByRole("button", { name: /Farklı olanı bul/ }).click();
   await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 1000)));

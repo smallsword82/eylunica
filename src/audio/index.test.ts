@@ -86,6 +86,13 @@ it("sesleri önceden yükler ve cevap tıklamasında hazır oynatıcıyı beklem
   await playManifestTrack("ariyo");
   expect(clips).toHaveLength(count);
 });
+it("doğru ve yanlış yanıtta farklı sözsüz efekt kullanır", async () => {
+  setSoundMode("effects");
+  await playAnswerEffect(false);
+  expect(clips.at(-1)!.src).toBe("/manifest/audio/answer-retry.wav");
+  await playAnswerEffect(true);
+  expect(clips.at(-1)!.src).toBe("/manifest/audio/answer-tick.wav");
+});
 it("hızlı bölüm geçişi bitiş sesini kesmez; sessiz ve mola keser", async () => {
   setSoundMode("music");
   await playCompletionEffect();

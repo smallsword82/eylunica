@@ -1,3 +1,4 @@
+import { enableEffects } from ".";
 import { beforeEach, afterEach, it, expect, vi } from "vitest";
 import { Capacitor } from "@capacitor/core";
 import { Preferences } from "@capacitor/preferences";
@@ -17,8 +18,9 @@ beforeEach(() => {
   MockAudio.instances = [];
   vi.stubGlobal("Audio", MockAudio);
   setAutomaticNarration(false);
+  enableEffects(true);
 });
-afterEach(() => { stopNarration(); vi.restoreAllMocks(); vi.unstubAllGlobals(); });
+afterEach(() => { enableEffects(false); stopNarration(); vi.restoreAllMocks(); vi.unstubAllGlobals(); });
 it("yalnızca gömülü metni oynatır; yeni ses önceki sesi durdurur", async () => {
   expect(await playNarration("Bilinmeyen veya çocuğun özel adı")).toBe(false);
   expect(await playNarration("toString")).toBe(false);
@@ -40,6 +42,7 @@ it("otomatik ses kapalıdır, etkinleştirilince çalar ve kapatılınca kesilir
   await Promise.resolve();
   expect(getNarration().playing).toBe(true);
   setAutomaticNarration(false);
+  enableEffects(true);
   expect(MockAudio.instances[0].pause).toHaveBeenCalledOnce();
 });
 it("geciken oynatma durdurulduğunda tekrar başlamaz", async () => {
@@ -76,4 +79,13 @@ it("konuşma tercihi webde ve Androidde ayrı cihaz kaydında saklanır", async 
   await saveNarrationPreference(true);
   expect(Preferences.set).toHaveBeenCalledWith({ key: NARRATION_KEY, value: "on" });
   expect(await loadNarrationPreference()).toBe(true);
+});
+
+it("Sessiz modu manuel konuşmayı ve otomatik konuşmayı susturur", async () => {
+  enableEffects(false);
+  expect(await playNarration(narrationTexts.math)).toBe(false);
+  setAutomaticNarration(true);
+  narrateFeedback("correct");
+  await Promise.resolve();
+  expect(MockAudio.instances).toHaveLength(0);
 });

@@ -330,7 +330,7 @@ export function ConcertAcademy({
     if (!mission) return;
     let next =
       index === 2
-        ? record(progress, mission.math, r.correct, r.hint, r.elapsedMs)
+        ? record(progress, mission.math, r.correct, r.hint, r.elapsedMs, false, "concert")
         : recordAcademy(progress, index === 0 ? "reading" : "attention", r);
     next = trackConcert(next, r);
     onSave(next);

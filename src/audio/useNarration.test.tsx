@@ -1,3 +1,4 @@
+import { enableEffects } from ".";
 import { act, renderHook } from "@testing-library/react";
 import { expect, it, vi } from "vitest";
 import { Capacitor } from "@capacitor/core";
@@ -9,6 +10,7 @@ import { narrationTexts } from "./narration-texts";
 vi.mock("@capacitor/app", () => ({ App: { addListener: vi.fn() } }));
 vi.mock("@capacitor/preferences", () => ({ Preferences: { get: vi.fn(), set: vi.fn() } }));
 it("Android arka plan sinyali konuşmayı keser ve yaşam döngüsü dinleyicisini temizler", async () => {
+  enableEffects(true);
   const pause = vi.fn(), remove = vi.fn();
   let callback!: (state: { isActive: boolean }) => void;
   vi.spyOn(Capacitor, "isNativePlatform").mockReturnValue(true);
@@ -29,6 +31,7 @@ it("Android arka plan sinyali konuşmayı keser ve yaşam döngüsü dinleyicisi
     expect(remove).toHaveBeenCalledOnce();
   } finally {
     hook.unmount();
+    enableEffects(false);
     vi.restoreAllMocks();
     vi.unstubAllGlobals();
   }

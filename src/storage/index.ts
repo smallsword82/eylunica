@@ -7,6 +7,7 @@ import {
   type LearningResult,
 } from "../learning-engine";
 import { normalizeCharacter } from "../game";
+import { freshArena, decodeArena, observe, observation, specFor, finishSession, type ArenaState, type LaneSpec, type Observation } from "../arena-engine";
 import { Capacitor } from "@capacitor/core";
 import { Preferences } from "@capacitor/preferences";
 import type { Operation, Question } from "../math-engine";
@@ -27,6 +28,9 @@ export type Attempt = {
   at: number;
   a: number;
   b: number;
+  level?: number;
+  skill?: string;
+  timingValid?: boolean;
 };
 export type Progress = {
   version: 2;
@@ -38,6 +42,7 @@ export type Progress = {
   history: Attempt[];
   calibrationDone: boolean;
   rewards: string[];
+  arena: ArenaState;
 };
 export const KEY = "ritma-progress-v1";
 const skill = (): Skill => ({
@@ -67,6 +72,7 @@ export const fresh = (): Progress => ({
   history: [],
   calibrationDone: false,
   rewards: [],
+  arena: freshArena(),
 });
 export function decode(raw: string | null): Progress {
   if (!raw) return fresh();
@@ -98,6 +104,7 @@ export function decode(raw: string | null): Progress {
         return fresh();
     }
     p.character = normalizeCharacter(p.character);
+    p.arena = decodeArena(p.arena);
     if (p.customCharacter) {
       const custom = p.customCharacter;
       if (typeof custom.character === "string" && typeof custom.name === "string" && custom.name.trim())
@@ -143,6 +150,8 @@ export function record(
   correct: boolean,
   hint: boolean,
   elapsedMs: number,
+  timingValid = false,
+  source: "practice" | "concert" = "practice",
 ): Progress {
   const next = structuredClone(p),
     s = next.skills[q.operation];
@@ -171,13 +180,30 @@ export function record(
       operation: q.operation,
       correct,
       hint,
-      elapsedMs: Math.max(0, elapsedMs),
+      elapsedMs: Number.isFinite(elapsedMs) ? Math.max(0, elapsedMs) : 0,
       at: Date.now(),
       a: q.a,
       b: q.b,
+      level: q.level,
+      skill: specFor(q).skill,
+      timingValid,
     },
   ].slice(-200);
+  if (source === "practice") next.arena = observe(next.arena, specFor(q), observation(q, correct, hint, elapsedMs, timingValid, "practice", crypto.randomUUID()));
   return next;
+}
+
+export function recordArena(p: Progress, spec: LaneSpec, answer: Observation): Progress {
+  return { ...p, arena: observe(p.arena, spec, answer) };
+}
+export function completeArena(p: Progress, spec: LaneSpec, sessionId: string, answers: Observation[], now = Date.now()) {
+  const result = finishSession(p.arena, spec, sessionId, answers, now);
+  const next = { ...p, arena: result.state, rewards: [...p.rewards] };
+  if (result.bonus && !next.rewards.includes(result.bonus)) {
+    next.rewards.push(result.bonus);
+    next.stars += 3;
+  }
+  return { progress: unlockRewards(next), bonus: result.bonus, comparison: result.comparison };
 }
 
 export function recordAcademy(

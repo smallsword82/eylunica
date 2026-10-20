@@ -20,6 +20,7 @@ const isPlaying = (page: Page) => page.evaluate(() => {
 test("gömülü Türkçe hikâyeler çevrimdışı çalar; dinleme oturumu destek sayılır ve durdurulur", async ({ page, context }) => {
   await observeAudio(page);
   await page.goto("/");
+  await page.getByRole("combobox", { name: "Ses modu" }).selectOption("effects");
   await page.evaluate(() => navigator.serviceWorker.ready);
   await page.reload();
   await context.setOffline(true);
@@ -68,6 +69,7 @@ test("gömülü Türkçe hikâyeler çevrimdışı çalar; dinleme oturumu deste
 test("otomatik konuşma tercihi kalıcıdır; görev sesi ve ekran geçişi çevrimdışı çalışır", async ({ page, context }) => {
   await observeAudio(page);
   await page.goto("/");
+  await page.getByRole("combobox", { name: "Ses modu" }).selectOption("effects");
   await page.getByRole("button", { name: "Ebeveyn köşesi →" }).click();
   const setting = page.getByRole("checkbox", { name: "Otomatik konuşmalı geri bildirim" });
   await expect(setting).not.toBeChecked();

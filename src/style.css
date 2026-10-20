@@ -1905,3 +1905,22 @@ footer button,
 .listen-button[aria-pressed="true"] { background: #39264f; color: white; }
 .narration-playback { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1rem; padding: .6rem; background: #ede4f7; color: #39264f; }
 .narration-playback .text-button { color: #39264f; }
+
+/* Optional fluency practice has no running clock or countdown animation. */
+.arena-entry { display: flex; flex-wrap: wrap; gap: .5rem 2rem; align-items: center; width: 100%; padding: 1.2rem 1.5rem; margin: 1rem 0; border: 1px solid #b29acb; border-radius: 18px; background: #f0e9f8; color: #39264f; font: inherit; text-align: left; cursor: pointer; }
+.arena-selectors { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.5rem 0; }
+.arena-selectors label { display: flex; flex-direction: column; gap: .5rem; }
+.arena-selectors select { padding: .65rem; min-height: 44px; max-width: 100%; font: inherit; border: 1px solid #8a719c; border-radius: 8px; color: #39264f; background: white; }
+.arena-lanes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 1rem; }
+.arena-lane, .arena-task, .arena-summary, .arena-parent, .arena-collection { border: 1px solid #d8cce5; border-radius: 18px; padding: 1.3rem; margin: 1.2rem 0; }
+.arena-page p, .arena-parent p { line-height: 1.65; }
+.arena-equation { font-size: clamp(1.8rem, 6vw, 3rem); }
+.arena-task .answer-options { max-width: 550px; }
+.arena-charts { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,280px),1fr)); gap: 1rem; }
+.arena-chart { width: 100%; max-width: 550px; border-radius: 12px; background: #f5f0fa; }
+.arena-chart text { font-family: inherit; font-size: 11px; fill: #39264f; }
+.arena-parent .table-wrap { overflow-x: auto; }
+.arena-award { font-weight: bold; color: #563471; }
+.stage.arena-lit { outline: 4px solid #f0c47e; box-shadow: 0 0 0 8px #f0c47e33; }
+@media(max-width: 580px) { .topbar, .top-actions { flex-wrap: wrap; } .top-actions { max-width: 100%; } .sound-button { max-width: 145px; } }
+.listen-button:disabled { cursor: default; opacity: .65; }

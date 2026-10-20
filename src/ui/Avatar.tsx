@@ -3,10 +3,12 @@ export function Avatar({
   name,
   large = false,
   label,
+  costume = false,
 }: {
   name: string;
   large?: boolean;
   label?: string;
+  costume?: boolean;
 }) {
   const c = characters.find((x) => x.name === name) || characters[0];
   return (
@@ -71,6 +73,7 @@ export function Avatar({
         fill="#fff"
         opacity=".75"
       />
+      {costume && <g aria-label="Yıldızlı sahne ceketi"><path d="M36 77L49 84L43 116L29 115ZM84 77L71 84L77 116L91 115Z" fill="#743a91" stroke="#f0c47e" strokeWidth="2" /><path d="M81 88l2 4 5 1-4 3 1 5-4-2-4 2 1-5-4-3 5-1Z" fill="#f0c47e" /></g>}
       {c.style === 2 && (
         <path
           d="M32 41H55V53H32ZM65 41H88V53H65ZM55 45H65"

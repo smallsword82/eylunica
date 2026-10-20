@@ -4,6 +4,8 @@ Yönergeler ve geri bildirimler için sekiz, mevcut altı özgün hikâye için 
 
 ## Kullanım
 
+0.5.0 ve sonrasında üstteki **Ses modu** Sessiz ise tüm konuşma susturulur; Dinle düğmeleri için Sadece Efektler veya Müzik ve Efektler seçilmelidir. Otomatik konuşma tercihi ayrıca ebeveyn köşesindedir.
+
 - Matematik ve etkinlik ekranlarında **Yönergeyi dinle**.
 - Okuma etkinliklerinde **Hikâyeyi dinle**. Otomatik başlamaz. Dinleme isteği aynı hikâye oturumundaki sonraki sorularda da destek sayılır; yıldız eksiltmez. Önceki yanıtların kayıtlarını değiştirmez. Metindeki kanıt seçimi hâlâ gereklidir.
 - Ebeveyn köşesinde **Otomatik konuşmalı geri bildirim**. Varsayılan kapalı; açılınca doğru yanıt, yeniden deneme ve tamamlama mesajı çalar. Tercih `ritma-narration-v1` anahtarında cihazda saklanır. Manuel Dinle düğmeleri bundan bağımsızdır.

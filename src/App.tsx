@@ -1,3 +1,6 @@
+import { Arena } from "./ui/Arena";
+import { ArenaProgress } from "./ui/ArenaProgress";
+import { useResponseClock } from "./arena/useResponseClock";
 import { useNarration } from "./audio/useNarration";
 import { narrateFeedback, stopNarration } from "./audio/narration";
 import { narrationTexts } from "./audio/narration-texts";
@@ -41,7 +44,8 @@ type Screen =
   | "parent"
   | "reading"
   | "attention"
-  | "concert";
+  | "concert"
+  | "arena";
 export default function App() {
   const [progress, setProgress] = useState<Progress>(fresh),
     [ready, setReady] = useState(false),
@@ -61,8 +65,7 @@ export default function App() {
     [offlineReady, setOfflineReady] = useState(() =>
       Capacitor.isNativePlatform(),
     );
-  const started = useRef(0),
-    attempted = useRef(false),
+  const attempted = useRef(false),
     usedHint = useRef(false),
     writes = useRef(Promise.resolve()),
     pending = useRef(false),
@@ -86,14 +89,16 @@ export default function App() {
   const audio = useAudio();
   useEffect(() => {
     stopNarration();
-    if (screen === "summary") narrateFeedback("complete");
+    stopEffects();
+    if (screen === "summary") { void playEffect("complete"); narrateFeedback("complete"); }
   }, [screen]);
   const wellbeing = useWellbeing(ready);
+  const responseClock = useResponseClock(`${screen}:${mode}:${count}:${calibration}:${question?.a}:${question?.b}`, screen !== "play" || !!wellbeing.notice);
   useEffect(() => { if (wellbeing.notice) { stopEffects(); stopNarration(); } }, [wellbeing.notice]);
   useEffect(() => {
     if (screen === "play") wellbeing.setContext("math", true);
     else if (screen === "parent") wellbeing.setContext(null, false);
-    else if (!["reading", "attention", "concert"].includes(screen))
+    else if (!["reading", "attention", "concert", "arena"].includes(screen))
       wellbeing.setContext("other", false);
   }, [screen, wellbeing.setContext]);
   function persist(next: Progress) {
@@ -108,6 +113,7 @@ export default function App() {
   }
   function pickQuestion(m: string, p: Progress, index: number, cal = false) {
     stopNarration();
+    stopEffects();
     const op: Operation = cal
       ? ops[index % 4]
       : m === "mixed"
@@ -142,7 +148,7 @@ export default function App() {
     setEntry("");
     attempted.current = false;
     pending.current = false;
-    started.current = performance.now();
+
   }
   function start(m: string, cal = false) {
     wellbeing.transition(() => {
@@ -164,12 +170,14 @@ export default function App() {
     if (!correct) usedHint.current = true;
     // One learning record and at most one star per question; retries remain encouraging.
     if (!attempted.current) {
+      const timing = responseClock.read();
       const next = record(
         progress,
         question,
         correct,
         usedHint.current,
-        performance.now() - started.current,
+        timing.elapsedMs,
+        timing.timingValid,
       );
       persist(next);
       attempted.current = true;
@@ -191,7 +199,6 @@ export default function App() {
       () => {
         if (count >= 4 || (calibration && count >= 3)) {
           if (calibration) persist({ ...progress, calibrationDone: true });
-          void playEffect("complete");
           setScreen("summary");
           return;
         }
@@ -233,10 +240,10 @@ export default function App() {
               Mola ver
             </button>
           )}
-          <button className="sound-button" aria-label="Ses efektleri" aria-pressed={audio.enabled}
-            disabled={!audio.ready} onClick={audio.toggle}>
-            Ses {audio.enabled ? "açık" : "kapalı"}
-          </button>
+          <select className="sound-button" aria-label="Ses modu" value={audio.mode} disabled={!audio.ready}
+            onChange={event => audio.changeMode(event.target.value as "silent" | "effects" | "music")}>
+            <option value="silent">Sessiz</option><option value="effects">Sadece Efektler</option><option value="music">Müzik ve Efektler</option>
+          </select>
           <span className="star-pill" aria-label={`${progress.stars} yıldız`}>
             ✦ {progress.stars}
           </span>
@@ -245,7 +252,7 @@ export default function App() {
             onClick={() => setScreen("characters")}
             aria-label="Karakter seç"
           >
-            <Avatar name={progress.character} label={displayName(progress.character)} />
+            <Avatar name={progress.character} label={displayName(progress.character)} costume={progress.rewards.includes("arena-costume")} />
           </button>
         </div>
       </header>
@@ -306,6 +313,9 @@ export default function App() {
                   <span>Ayrıntıları fark et, sırayı hatırla →</span>
                 </button>
               </nav>
+              <button className="arena-entry" onClick={() => setScreen("arena")}>
+                <strong>RİTMA Hız Arenası</strong><span>İsteğe bağlı · önce doğruluk, sonra kendi gelişimin →</span>
+              </button>
               <section className="hero">
                 <div className="hero-copy">
                   <div className="eyebrow">
@@ -329,7 +339,7 @@ export default function App() {
                   </div>
                 </div>
                 <div
-                  className={`stage ${progress.rewards.includes("lights") ? "lit" : ""} ${progress.rewards.includes("confetti") ? "confetti" : ""}`}
+                  className={`stage ${progress.rewards.includes("arena-lights") ? "arena-lit" : ""} ${progress.rewards.includes("lights") ? "lit" : ""} ${progress.rewards.includes("confetti") ? "confetti" : ""}`}
                   aria-label="RİTMA konser sahnesi"
                 >
                   <div className="stage-orbit" />
@@ -435,7 +445,7 @@ export default function App() {
                 </button>
               </section>
               <section className="companion">
-                <Avatar name={progress.character} label={displayName(progress.character)} />
+                <Avatar name={progress.character} label={displayName(progress.character)} costume={progress.rewards.includes("arena-costume")} />
                 <div>
                   <div className="eyebrow muted">SAHNE ARKADAŞIN</div>
                   <h3>{displayName(progress.character)} yanında.</h3>
@@ -458,6 +468,7 @@ export default function App() {
               </section>
             </main>
           )}
+          {screen === "arena" && <Arena progress={progress} onSave={persist} onBack={() => setScreen("home")} onPractice={op => start(op)} onTransition={wellbeing.transition} onActivity={wellbeing.setContext} paused={!!wellbeing.notice} />}
           {screen === "reading" && (
             <ReadingAcademy
               progress={progress}
@@ -793,11 +804,13 @@ export default function App() {
                 <h2 id="narration-title">Konuşmalı seslendirme</h2>
                 <label><input type="checkbox" checked={narration.enabled} disabled={!narration.ready}
                   onChange={event => narration.change(event.target.checked)} /> Otomatik konuşmalı geri bildirim</label>
+                <p>Sessiz mod tüm konuşma ve efektleri kapatır. Dinlemek için üstteki ses modunu açabilirsin. Müzik ve Efektler modunda yalnız ödül ve geçiş anlarında kısa müzikal ekler çalar; öğrenme, okuma ve dikkat sırasında arka plan müziği yoktur.</p>
                 <p>Doğru yanıt, yeniden deneme ve tamamlama mesajlarını seslendirir. Varsayılan kapalıdır. Yönergeler ve altı hikâye, Dinle düğmesiyle her zaman isteğe bağlı dinlenebilir. Konuşmayı ekrandaki durdurma düğmesiyle kesebilirsin.</p>
                 <p>Sesler Türkçe sentetik bir anlatıcıyla hazırlanmıştır; karakterlerin gerçek sesi değildir. İnternet veya cihazda Türkçe ses paketi gerekmez. Hikâyeyi dinleme isteği okuma oturumunda destek sayılır; yıldız kaybettirmez.</p>
                 <ListenButton text={narrationTexts.correct} label="Anlatıcı sesini dene" />
               </section>
               <ParentTimePanel wellbeing={wellbeing} />
+              <ArenaProgress progress={progress} />
               <AcademyProgress progress={progress} />
               <h2>Gizlilik ve çevrimdışı kullanım</h2>
               <p>

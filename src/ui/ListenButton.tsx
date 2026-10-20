@@ -1,17 +1,19 @@
 import { useEffect, useSyncExternalStore } from "react";
 import { getNarration, hasNarration, playNarration, stopNarration, subscribeNarration } from "../audio/narration";
+import { getSoundMode, subscribeSoundMode } from "../audio";
 
 export function ListenButton({ text, label = "Yönergeyi dinle", onRequest }: {
   text: string; label?: string; onRequest?: () => void;
 }) {
   const playback = useSyncExternalStore(subscribeNarration, getNarration, getNarration);
+  const mode = useSyncExternalStore(subscribeSoundMode, getSoundMode, getSoundMode);
   const playing = playback.text === text && playback.playing;
   useEffect(() => () => {
     if (getNarration().text === text) stopNarration();
   }, [text]);
   if (!hasNarration(text)) return null;
   return <div className="listen-control">
-    <button type="button" className="listen-button" aria-pressed={playing} onClick={() => {
+    <button type="button" className="listen-button" disabled={mode === "silent"} title={mode === "silent" ? "Dinlemek için üstteki ses modunu aç" : undefined} aria-pressed={playing} onClick={() => {
       if (playing) stopNarration();
       else { onRequest?.(); void playNarration(text); }
     }}>{playing ? "Dinlemeyi durdur" : label}</button>

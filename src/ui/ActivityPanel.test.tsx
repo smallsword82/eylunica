@@ -1,3 +1,4 @@
+import { enableEffects } from "../audio";
 import { it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
@@ -76,6 +77,7 @@ it("sıralı yönerge eksik adımda kabul edilmez; sıfırlayıp doğru sırayla
 });
 
 it("hikâyeyi dinleme isteği öğrenme kaydında destek sayılır", async () => {
+  enableEffects(true);
   const play = vi.spyOn(HTMLMediaElement.prototype, "play").mockResolvedValue();
   const pause = vi.spyOn(HTMLMediaElement.prototype, "pause").mockImplementation(() => {});
   try {
@@ -91,5 +93,5 @@ it("hikâyeyi dinleme isteği öğrenme kaydında destek sayılır", async () =>
     expect(record).toHaveBeenCalledWith(expect.objectContaining({ correct: true, hint: true }));
     view.unmount();
     expect(pause).toHaveBeenCalled();
-  } finally { play.mockRestore(); pause.mockRestore(); }
+  } finally { enableEffects(false); play.mockRestore(); pause.mockRestore(); }
 });

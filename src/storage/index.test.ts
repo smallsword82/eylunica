@@ -10,10 +10,45 @@ import {
   KEY,
 } from "./index";
 import { generate } from "../math-engine";
+import { completeArena } from "./index";
+import { getLane, makeDeck, observation, observe, specs, finishSession, freshArena } from "../arena-engine";
 it("yerel kayıt tekrar okunur", async () => {
   const p = fresh();
   p.character = "Beren";
   p.stars = 12;
+  await saveProgress(p);
+  expect(await loadProgress()).toEqual(p);
+});
+
+it("Arena eklenmemiş veya bozulmuş olsa da eski öğrenme ve ödüller korunur", () => {
+  const old = { ...fresh(), stars: 19, rewards: ["lights"], arena: undefined };
+  expect(decode(JSON.stringify(old))).toEqual({ ...old, arena: freshArena() });
+  expect(decode(JSON.stringify({ ...old, arena: { version: 99 } }))).toEqual({ ...old, arena: freshArena() });
+});
+it("normal ilk yanıt doğru düzey ve beceriyle saklanır; konser hazırlık kapısını değiştirmez", () => {
+  const q = generate("add", 3);
+  const p = record(fresh(), q, true, false, 3000, true);
+  expect(p.history[0]).toMatchObject({ level: 3, timingValid: true });
+  expect(getLane(p.arena, { operation: "add", level: 3, skill: p.history[0].skill! }).recent).toHaveLength(1);
+  expect(record(fresh(), q, true, false, 3000, true, "concert").arena).toEqual(freshArena());
+});
+it("rekor ödülü ve üç yıldız tek cihaz kaydında atomik ve tekrarsızdır", async () => {
+  const s = specs("multiply", 1)[0];
+  let p = fresh(); p.stars = 7; p.rewards = ["lights"];
+  const skillsBefore = structuredClone(p.skills);
+  for (let i = 0; i < 4; i++) {
+    const id = `s${i}`;
+    const answers = makeDeck(s).map((q, j) => observation(q, true, false, i < 2 ? 5000 : 4000, true, "arena", `${id}:${j}`));
+    for (const o of answers) p.arena = observe(p.arena, s, o);
+    const result = completeArena(p, s, id, answers);
+    p = result.progress;
+    if (i === 3) {
+      expect(p.stars).toBe(10);
+      expect(p.rewards).toContain("arena-lights");
+      expect(completeArena(p, s, id, answers).progress.stars).toBe(10);
+    }
+  }
+  expect(p.skills).toEqual(skillsBefore);
   await saveProgress(p);
   expect(await loadProgress()).toEqual(p);
 });

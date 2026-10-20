@@ -113,3 +113,9 @@ RİTMA kadrosu Mina, Eylül, Alara, Beren, Öykü ve Defne. Önceki karakter se�
 ### 0.4.0: Türkçe konuşmalı seslendirme
 
 Matematik ve etkinliklerde **Yönergeyi dinle**, altı özgün okuma hikâyesinde **Hikâyeyi dinle** düğmesi var. Ebeveyn köşesinde isteğe bağlı **Otomatik konuşmalı geri bildirim** açılabilir. Varsayılan kapalıdır; manuel dinleme her zaman çocuğun isteğiyle başlar. Türkçe sentetik anlatıcı kayıtları (~2 MB) web önbelleğine ve APK'ya gömülüdür; internet, hesap, API veya cihazda Türkçe ses paketi gerekmez. Hikâyeyi dinleme isteği aynı okuma oturumunda destek sayılır, yıldız eksiltmez. [Kapsam, kaynak, yeniden üretim ve test sınırları](docs/SESLENDIRME.md).
+
+### 0.5.0: RİTMA Hız Arenası ve üç ses modu
+
+Ana menüde isteğe bağlı Arena: önce aynı beceri/düzeyde 20 ilk yanıtta en az %90 ipucusuz doğruluk; sonra 10 soruluk karşılaştırma turları. Rekorlar iki tamamlanmış turun 20/20 bağımsız, kesintisiz doğru yanıtına ve önceki rekora göre en az %5 ortalama iyileşmesine dayanır. Geri sayım, süre aşımı, diğer çocuklarla karşılaştırma veya ödül kaybı yoktur. Günlük ve toplam sınırları olan konser koleksiyonu; ebeveyn panelinde doğruluk/süre grafikleri bulunur. Eski ilerleme ve mola kuralları korunur.
+
+Sesler **Sessiz / Sadece Efektler / Müzik ve Efektler** olarak seçilir; varsayılan sessizdir. Dört ayrı özgün Web Audio motifi, ödül/geçişlerde bir saniyeden kısa müzikal ekler; ders sırasında arka plan müziği yoktur. Yeni ses kütüphanesi veya dış ses dosyası eklenmedi. [Ayrıntılı kurallar, kayıt ve ses tasarımı](docs/ARENA-VE-SES.md).

@@ -2,7 +2,7 @@ import { Capacitor } from "@capacitor/core";
 import { Preferences } from "@capacitor/preferences";
 import { narrationManifest } from "./narration-manifest";
 import { narrationTexts, type NarrationId } from "./narration-texts";
-import { stopEffects } from ".";
+import { getSoundMode, stopEffects } from ".";
 
 export const NARRATION_KEY = "ritma-narration-v1";
 type Playback = { text: string; playing: boolean; error: string };
@@ -36,7 +36,7 @@ export function stopNarration() {
 }
 export async function playNarration(text: string): Promise<boolean> {
   stopNarration();
-  if (!hasNarration(text) || document.hidden) return false;
+  if (!hasNarration(text) || document.hidden || getSoundMode() === "silent") return false;
   stopEffects();
   const ticket = generation;
   try {

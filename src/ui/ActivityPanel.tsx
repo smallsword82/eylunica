@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { hasNarration, narrateFeedback, stopNarration } from "../audio/narration";
 import { narrationTexts, storyNarrationText } from "../audio/narration-texts";
 import { ListenButton } from "./ListenButton";
-import { playEffect } from "../audio";
+import { playEffect, stopEffects } from "../audio";
 import { useRef, useState } from "react";
 import type { Activity, LearningResult } from "../learning-engine";
 import { checkReading } from "../reading-engine";
@@ -31,7 +31,10 @@ export function ActivityPanel({
     usedHint = useRef(false),
     start = useRef(performance.now()),
     lock = useRef(false);
-  useEffect(() => () => stopNarration(), [task.id]);
+  useEffect(() => {
+    stopEffects();
+    return () => { stopNarration(); stopEffects(); };
+  }, [task.id]);
   function check() {
     if (solved || lock.current) return;
     lock.current = true;

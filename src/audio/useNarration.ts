@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Capacitor, type PluginListenerHandle } from "@capacitor/core";
 import { App as NativeApp } from "@capacitor/app";
 import { loadNarrationPreference, saveNarrationPreference, setAutomaticNarration, stopNarration } from "./narration";
+import { getSoundMode, subscribeSoundMode } from ".";
 
 export function useNarration() {
   const [enabled, setEnabled] = useState(false);
@@ -12,6 +13,7 @@ export function useNarration() {
     let mounted = true;
     let native: PluginListenerHandle | undefined;
     setAutomaticNarration(false);
+    const unsubscribe = subscribeSoundMode(() => { if (getSoundMode() === "silent") stopNarration(); });
     loadNarrationPreference().then(value => {
       if (mounted) { setEnabled(value); setAutomaticNarration(value); }
     }).catch(() => { if (mounted) setError("Konuşma ayarı okunamadı; yeniden seçebilirsin."); })
@@ -30,6 +32,7 @@ export function useNarration() {
     return () => {
       mounted = false;
       setAutomaticNarration(false);
+      unsubscribe();
       document.removeEventListener("visibilitychange", stop);
       window.removeEventListener("blur", stop);
       void native?.remove();

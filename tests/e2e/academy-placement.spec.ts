@@ -35,6 +35,7 @@ for (const academy of ["reading", "attention"] as const) for (const support of [
       await page.getByRole("button", { name: index === 5 ? "Görevi tamamla →" : "Sonraki keşif →" }).click();
     }
     await expect(page.getByRole("heading", { name: "Seviye tespitin tamamlandı!" })).toBeVisible();
+    await page.getByRole("button", { name: "Kart paketini aç" }).click();
     await expect(page.getByRole("region", { name: "Bölüm ödülün" })).toContainText("Mina kartı kazandın");
     const saved: Progress = await page.evaluate(() => JSON.parse(localStorage.getItem("ritma-progress-v1")!));
     expect(saved.academies[academy].placementDone).toBe(true);

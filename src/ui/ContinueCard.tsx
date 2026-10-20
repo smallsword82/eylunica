@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
 
-export function ContinueCard({ title, onContinue }: { title: string; onContinue: () => void }) {
+export function ContinueCard({ title, onContinue, focusOnMount = true }: { title: string; onContinue: () => void; focusOnMount?: boolean }) {
   const button = useRef<HTMLButtonElement>(null);
-  useEffect(() => { button.current?.focus(); }, []);
+  useEffect(() => { if (focusOnMount) button.current?.focus(); }, [focusOnMount]);
   return <section className="continue-card" aria-label="Sıradaki adım">
     <span className="continue-check" aria-hidden="true">✓</span>
     <div>

@@ -2,6 +2,8 @@
 
 Her eğitmenin dört farklı görseli vardır: İlk Buluşma, Anı Albümü, Hileli ve Sahne Işıkları. Görseller sadece renk değiştirilmiş kopyalar değildir; yeni portreler ve fotoğraf kolajları içerir. Kart kimlikleri ve sırası `src/game/cards.ts` içinde sabittir.
 
+Bölüm sonunda kart paketi odağa gelir. Dokunma veya Enter ile 850 ms süren açılışta paket mührü kalkar, kart büyüyerek açılır ve kısa bir yıldız animasyonu görünür. Kartın büyük görseli ekranda kalır. Azaltılmış hareket tercihinde bekleme ve animasyon olmadan gösterilir. Kart, paket açılmadan önce zaten kaydedilmiştir; sonraki bölüme geçmek veya ekranı kapatmak ödülü kaybettirmez. Animasyonun ek bir ses kaydı veya yıldız harcaması yoktur.
+
 Ödül önce eksik kartı seçer; 24 kart tamamlanınca yeni kopya üretmez, koleksiyon tamamlandı mesajı gösterir. Öğrenme ve yıldızlar devam eder. Mevcut bölüm ödül anahtarları tekrar kart verilmesini engellemeye devam eder.
 
 Eski karakter başına kart sayıları korunur. Tekrar eden kartlar aynı kişinin dört görseline dağıtılır; dört adetten fazlası eski kopya olarak saklanır. Toplam kart, yıldız, öğrenme geçmişi ve bölüm anahtarları silinmez. Yeni kayıtlar ayrıca görsel kimliği başına sayıyı saklar.

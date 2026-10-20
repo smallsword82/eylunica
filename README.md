@@ -80,3 +80,9 @@ RİTMA / Matematik Sahnesi adları ve karakter isimleri geçicidir; yayımdan ö
 Hazırlanmış makinede `source scripts/cloud-env.sh` Android SDK/JDK yollarını ve Java'nın desteklediği proxy/CA ayarlarını etkinleştirir. Yeni Linux x86_64 makinesinde `bash scripts/setup-cloud.sh` bağımlılıkları ve Android araçlarını kurar; indirmeler resmi kaynak ve yayımlanmış checksum ile doğrulanır. Proje dosyaları/lockfile kurulumda değiştirilmez. SDK lisans kabul girdisi bu kurulum betiğinin parçasıdır.
 
 Ortam zaten yalıtılmıştır; mevcut `/workspace/manifestakademi` checkout'unda çalışın, kullanıcı istemedikçe Git worktree oluşturmayın. Geliştirme sunucusu: `npm run dev -- --port 5173 --strictPort`. Üretim servis çalışanı geliştirme modunda etkin değildir; çevrimdışı doğrulamada `npm run build` ve `npm run preview` kullanılır. Süreçler yeni görevde yeniden başlatılmalıdır.
+
+## Herkese açık web test sitesi
+
+Web test sitesinin yayımlanması kullanıcı tarafından onaylandı. Kaynak depoyu özel tutun. GitHub'da **Settings → Pages → Build and deployment → Source: GitHub Actions** ayarının açık olması gerekir; bu ayarı açmak mevcut bulut bağlantısının Pages API yetkisini aştığı için depo sahibi tarafından yapılabilir.
+
+**Actions → Publish web test site → Run workflow → main** iş akışı web testlerini ve üretim derlemesini çalıştırır, yalnızca `dist/` dizinini Pages'e yayımlar. Gerçek site adresi başarılı `deploy` işinin `github-pages` ortam bağlantısında bulunur. İş akışı elle tetiklenir; sonraki Git push'ları kendiliğinden siteyi yayımlamaz. Kaynak depo, test raporları ve APK dosyaları bu siteye yüklenmez. PWA'nın göreli varlık yolları proje alt dizini ile uyumludur. Site ilk açılışta internet gerektirir; önbellek hazır olduktan sonra çevrimdışı oyun kullanılabilir.

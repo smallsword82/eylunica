@@ -1,0 +1,49 @@
+name: Publish web test site
+
+# Public publishing is deliberate and manual; the APK/test workflow remains separate.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # Enable Settings > Pages > Source: GitHub Actions before running this workflow.
+      # configure-pages documents that auto-enabling requires a separate admin token.
+      - uses: actions/configure-pages@v5
+      - name: Deploy public test site
+        id: deployment
+        uses: actions/deploy-pages@v4

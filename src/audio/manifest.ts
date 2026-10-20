@@ -3,6 +3,8 @@ export { manifestTracks, type ManifestTrack } from "./manifest-catalog";
 export const effectSeconds = { correct: 1.6, retry: 1.1, star: 2.2, record: 3, complete: 3.5 };
 export const answerSoundSeconds = 2.7;
 let active: HTMLAudioElement | null = null;
+const prepared = new Map<string, HTMLAudioElement>();
+let answering = false;
 let timer: ReturnType<typeof setTimeout> | undefined;
 let error = "";
 let playing = "";
@@ -13,7 +15,23 @@ let volume = 0.35;
 let lastTrack: ManifestTrack | undefined;
 let bag: ManifestTrack[] = [];
 const listeners = new Set<() => void>();
-export const getManifestPlayback = () => ({ playing, error, shuffling, volume });
+export const getManifestPlayback = () => ({ playing, error, shuffling, volume, answering });
+function prepareClip(file: string) {
+  let audio = prepared.get(file);
+  if (!audio) {
+    audio = new Audio(`${import.meta.env.BASE_URL}manifest/audio/${file}.mp3`);
+    audio.preload = "auto";
+    prepared.set(file, audio);
+    audio.load();
+  }
+  return audio;
+}
+export function prepareManifestAudio() {
+  try {
+    prepareClip("ajda-manifest");
+    for (const track of manifestTracks) prepareClip(track.id);
+  } catch { prepared.clear(); }
+}
 export function subscribeManifestPlayback(listener: () => void) {
   listeners.add(listener);
   return () => { listeners.delete(listener); };
@@ -29,6 +47,7 @@ function clearCurrent() {
     active = null;
   }
   playing = "";
+  answering = false;
 }
 export function stopManifestAudio() {
   shuffling = false;
@@ -38,6 +57,7 @@ export function stopManifestAudio() {
 export function setManifestMode(value: string) {
   mode = value;
   stopManifestAudio();
+  if (value === "silent") prepared.clear();
 }
 export function setManifestVolume(value: number) {
   if (!Number.isFinite(value)) return;
@@ -74,8 +94,10 @@ async function playClip(file: string, seconds: number, level: number, label: str
   if (mode === "silent" || document.hidden) { shuffling = false; notify(); return; }
   const ticket = generation;
   try {
-    const audio = new Audio(`${import.meta.env.BASE_URL}manifest/audio/${file}.mp3`);
+    const audio = prepareClip(file);
     active = audio;
+    answering = file === "ajda-manifest";
+    audio.currentTime = 0;
     audio.volume = level;
     audio.loop = false;
     const fail = () => {
@@ -111,6 +133,7 @@ export async function startManifestShuffle() {
   await playNext();
 }
 export async function playManifestEffect(effect: keyof typeof effectSeconds) {
+  if (answering) return;
   await playClip(takeRandomTrack(), effectSeconds[effect], Math.min(0.5, volume), "Kısa Manifest efekti");
 }
 export async function playManifestAnswer() {

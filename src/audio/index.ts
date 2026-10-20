@@ -32,7 +32,10 @@ export async function saveAudio(value: boolean): Promise<void> {
   else localStorage.setItem(AUDIO_KEY, value ? "on" : "off");
 }
 export function stopEffects() { stopManifestAudio(); }
-export function stopActivitySound() { if (!getManifestPlayback().shuffling) stopManifestAudio(); }
+export function stopActivitySound() {
+  const playback = getManifestPlayback();
+  if (!playback.shuffling && !playback.answering) stopManifestAudio();
+}
 export function enableEffects(value: boolean) { setSoundMode(value ? "effects" : "silent"); }
 export function setSoundMode(value: SoundMode) {
   mode = value;

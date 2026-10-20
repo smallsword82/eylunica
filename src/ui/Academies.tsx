@@ -17,6 +17,7 @@ import {
 import { recordAcademy, record, trackConcert, type Progress } from "../storage";
 import { ActivityPanel } from "./ActivityPanel";
 import { Avatar } from "./Avatar";
+import { ContinueCard } from "./ContinueCard";
 const names: Record<Academy, string> = {
   reading: "Okuduğunu Anlama Akademisi",
   attention: "Dikkat ve Odaklanma Akademisi",
@@ -71,21 +72,21 @@ function LessonProgress({ index, total }: { index: number; total: number }) {
 function Completion({
   onBack,
   onAgain,
+  nextTitle,
 }: {
   onBack: () => void;
   onAgain: () => void;
+  nextTitle: string;
 }) {
   return (
     <section className="lesson-complete">
       <div className="summary-star">✦</div>
       <h2>Birlikte yeni yollar keşfettik!</h2>
+      <ContinueCard title={nextTitle} onContinue={onAgain} />
       <p>
         İlerlemen bu cihazda saklanır. Yeniden denemek ve ipucu almak öğrenmenin
         bir parçası.
       </p>
-      <button className="primary" onClick={onAgain}>
-        Yeni görev seç →
-      </button>{" "}
       <button className="secondary" onClick={onBack}>
         Akademilere dön
       </button>
@@ -121,10 +122,8 @@ export function ReadingAcademy({
       {done ? (
         <Completion
           onBack={onBack}
-          onAgain={() => {
-            setSession(null);
-            setDone(false);
-          }}
+          nextTitle="Yeni bir okuma keşfi"
+          onAgain={() => start(state.level)}
         />
       ) : session ? (
         <>
@@ -237,10 +236,8 @@ export function AttentionAcademy({
       {done ? (
         <Completion
           onBack={onBack}
-          onAgain={() => {
-            setKind(null);
-            setDone(false);
-          }}
+          nextTitle={attentionLabels[attentionKinds[(attentionKinds.indexOf(kind!) + 1) % attentionKinds.length]]}
+          onAgain={() => start(attentionKinds[(attentionKinds.indexOf(kind!) + 1) % attentionKinds.length])}
         />
       ) : kind ? (
         <>
@@ -341,10 +338,8 @@ export function ConcertAcademy({
       {done ? (
         <Completion
           onBack={onBack}
-          onAgain={() => {
-            setMission(null);
-            setDone(false);
-          }}
+          nextTitle="Yeni konser hazırlığı"
+          onAgain={start}
         />
       ) : mission ? (
         <>

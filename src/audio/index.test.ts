@@ -1,8 +1,8 @@
 import { afterEach, beforeEach, expect, it, vi } from "vitest";
 import { Capacitor } from "@capacitor/core";
 import { Preferences } from "@capacitor/preferences";
-import { AUDIO_KEY, enableEffects, loadAudio, saveAudio, playEffect, playAnswerEffect, answerSoundSeconds, stopEffects, setSoundMode } from ".";
-import { effectSeconds, playManifestTrack, getManifestPlayback, manifestTracks, startManifestShuffle, takeRandomTrack } from "./manifest";
+import { AUDIO_KEY, enableEffects, loadAudio, saveAudio, playEffect, playAnswerEffect, answerSoundSeconds, stopEffects, stopActivitySound, setSoundMode } from ".";
+import { effectSeconds, playManifestTrack, getManifestPlayback, manifestTracks, startManifestShuffle, takeRandomTrack, prepareManifestAudio } from "./manifest";
 vi.mock("@capacitor/preferences", () => ({ Preferences: { get: vi.fn(), set: vi.fn() } }));
 const clips: FakeAudio[] = [];
 class FakeAudio {
@@ -11,6 +11,7 @@ class FakeAudio {
   onended: (() => void) | null = null;
   onerror: (() => void) | null = null;
   pause = vi.fn();
+  load = vi.fn();
   play = vi.fn().mockResolvedValue(undefined);
   constructor(public src: string) { clips.push(this); }
 }
@@ -70,6 +71,32 @@ it("cevap sesi Ajda Manifest kesitidir; sessiz modda çalmaz ve kısa sürede du
   setSoundMode("silent");
   await playAnswerEffect();
   expect(clips).toHaveLength(count);
+});
+it("sesleri önceden yükler ve cevap tıklamasında hazır oynatıcıyı beklemeden başlatır", async () => {
+  setSoundMode("music");
+  prepareManifestAudio();
+  const answer = clips.find(clip => clip.src.endsWith("/ajda-manifest.mp3"))!;
+  expect(answer.load).toHaveBeenCalledOnce();
+  expect(answer.play).not.toHaveBeenCalled();
+  const count = clips.length;
+  const playback = playAnswerEffect();
+  expect(answer.play).toHaveBeenCalledOnce();
+  await playback;
+  expect(clips).toHaveLength(count);
+  await playManifestTrack("ariyo");
+  expect(clips).toHaveLength(count);
+});
+it("hızlı soru geçişi ve bitiş efekti cevap sesini kesmez; sessiz ve mola keser", async () => {
+  setSoundMode("music");
+  await playAnswerEffect();
+  const answer = clips.at(-1)!;
+  stopActivitySound();
+  await playEffect("complete");
+  expect(answer.pause).not.toHaveBeenCalled();
+  expect(getManifestPlayback().answering).toBe(true);
+  stopEffects();
+  expect(answer.pause).toHaveBeenCalledOnce();
+  expect(getManifestPlayback().answering).toBe(false);
 });
 it("beş efekt gerçek yerel kesitleri çalar ve süre sınırında durur", async () => {
   vi.useFakeTimers();

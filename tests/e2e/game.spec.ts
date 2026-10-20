@@ -104,7 +104,7 @@ test("erişilebilirlik: ana ekran ve görev WCAG A/AA kontrolleri", async ({
 
 test("beş soruluk görev tamamlanır, yıldız ve sahne dekoru kalıcıdır", async ({
   page,
-}) => {
+}, testInfo) => {
   await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
   for (const [i, value] of [15, 15, 12, 14, 17].entries()) {
@@ -125,6 +125,13 @@ test("beş soruluk görev tamamlanır, yıldız ve sahne dekoru kalıcıdır", a
   await expect(
     page.getByText("✦ Sahnenin renkli ışıkları açıldı!"),
   ).toBeVisible();
+  await expect(page.getByRole("region", { name: "Sıradaki adım" })).toContainText("Konser Görevleri");
+  await expect(page.getByRole("button", { name: "Devam et", exact: true })).toBeFocused();
+  const { default: AxeBuilder } = await import("@axe-core/playwright");
+  expect((await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa"]).analyze()).violations).toEqual([]);
+  await page.screenshot({ path: testInfo.outputPath("continue-screen.png") });
+  await page.getByRole("button", { name: "Devam et", exact: true }).click();
+  await expect(page.getByRole("progressbar", { name: "Görev ilerlemesi" })).toHaveAttribute("aria-valuenow", "1");
   await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await expect(page.getByLabel("5 yıldız", { exact: true })).toBeVisible();
   await expect(page.locator(".stage")).toHaveClass(/lit/);

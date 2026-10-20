@@ -6,6 +6,7 @@ import { strategy, symbols, type Operation, type Question } from "../math-engine
 import { playAnswerEffect, answerSoundSeconds, playEffect, stopActivitySound } from "../audio";
 import { narrateFeedback, stopNarration } from "../audio/narration";
 import type { UsageDomain } from "../time-engine";
+import { ContinueCard } from "./ContinueCard";
 
 type Session = { id: string; spec: LaneSpec; questions: Question[]; index: number; race: boolean };
 export function Arena({ progress, onSave, onBack, onPractice, onTransition, onActivity, paused }: {
@@ -90,6 +91,7 @@ export function Arena({ progress, onSave, onBack, onPractice, onTransition, onAc
       <p className="small">İstediğinde mola verebilirsin. Kesintili sorular hız rekoruna katılmaz. Yıldızların ve kazanılmış ödüllerin korunur.</p>
     </section> : summary ? <section className="arena-summary" aria-label="Arena tur sonucu">
       <h2>Bu tur tamamlandı.</h2><p>İlk yanıtlarda {summary.correct} / {SESSION} doğru. Yeniden denemeler cezalandırılmaz.</p>
+      <ContinueCard title="Matematik maceran" onContinue={() => onPractice(operation)} />
       {!summary.race ? <p>Bu bir doğruluk çalışmasıydı. Hız hedefi yok; öğrenmek için normal matematiğe de dönebilirsin.</p> : summary.comparison ? <>
         {summary.comparison.record ? <p>Yeni kişisel rekor! Aynı beceri ve düzeyde, 20 bağımsız doğru yanıtta ortalaman önceki rekorundan en az %5 daha iyi.</p> : summary.comparison.qualified ? <p>20 bağımsız doğru yanıt tamamlandı. Sonuçların yalnızca kendi önceki sonuçlarınla karşılaştırılır. Daha yavaş olmak hiçbir ödülünü azaltmaz.</p> : <p>Bu grup rekor koşullarını karşılamadı. Bu bir ceza değil; öğrenmeye ve ipucu almaya devam edebilirsin.</p>}
         {summary.comparison.qualified && summary.comparison.meanMs !== null && <p>Bu 20 yanıtta ortalama etkin süren: {(summary.comparison.meanMs / 1000).toFixed(1)} saniye.{summary.previousBestMs !== null ? ` Önceki kişisel ölçümün: ${(summary.previousBestMs / 1000).toFixed(1)} saniye.` : " Bu, sonraki karşılaştırmalar için ilk ölçümün."}</p>}

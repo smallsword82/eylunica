@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { setSoundMode, loadSoundMode, saveSoundMode, playEffect, stopEffects, type SoundMode } from ".";
 import { Capacitor, type PluginListenerHandle } from "@capacitor/core";
 import { App as NativeApp } from "@capacitor/app";
+import { prepareManifestAudio } from "./manifest";
 
 export function useAudio() {
   const [mode, setMode] = useState<SoundMode>("silent");
@@ -13,7 +14,10 @@ export function useAudio() {
     let native: PluginListenerHandle | undefined;
     setSoundMode("silent");
     loadSoundMode().then(value => {
-      if (mounted) { setMode(value); setSoundMode(value); }
+      if (mounted) {
+        setMode(value); setSoundMode(value);
+        if (value !== "silent") prepareManifestAudio();
+      }
     }).catch(() => {
       if (mounted) setError("Ses ayarı okunamadı; sesi yeniden açabilirsin.");
     }).finally(() => { if (mounted) setReady(true); });
@@ -34,6 +38,7 @@ export function useAudio() {
   function changeMode(value: SoundMode) {
     setMode(value);
     setSoundMode(value);
+    if (value !== "silent") prepareManifestAudio();
     setError("");
     if (value !== "silent") void playEffect("correct");
     writes.current = writes.current.then(() => saveSoundMode(value)).catch(() => {

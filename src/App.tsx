@@ -34,6 +34,7 @@ import {
   type Progress,
 } from "./storage";
 import { characters, worlds } from "./game";
+import { ContinueCard } from "./ui/ContinueCard";
 import { Avatar } from "./ui/Avatar";
 import { MusicLounge } from "./ui/MusicLounge";
 import { ManifestAudioControls } from "./ui/ManifestAudioControls";
@@ -88,19 +89,23 @@ export default function App() {
         .catch(() => {});
   }, []);
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (screen !== "summary") window.scrollTo(0, 0);
   }, [screen]);
   const narration = useNarration();
   const audio = useAudio();
   const firstMusic = useRef(false);
   useEffect(() => {
     stopNarration();
-    if (!getManifestPlayback().shuffling || screen === "parent") stopEffects();
+    if (screen === "parent") stopEffects();
+    else stopActivitySound();
     if (screen === "home" && audio.mode === "music" && !firstMusic.current) {
       firstMusic.current = true;
       void startManifestShuffle();
     }
-    if (screen === "summary") { void playEffect("complete"); narrateFeedback("complete"); }
+    if (screen === "summary") {
+      const delay = getManifestPlayback().answering ? answerSoundSeconds * 1000 + 100 : 0;
+      void playEffect("complete"); narrateFeedback("complete", delay);
+    }
   }, [screen]);
   const wellbeing = useWellbeing(ready);
   const responseClock = useResponseClock(`${screen}:${mode}:${count}:${calibration}:${question?.a}:${question?.b}`, screen !== "play" || !!wellbeing.notice);
@@ -226,6 +231,7 @@ export default function App() {
     ),
     correct = Object.values(progress.skills).reduce((n, s) => n + s.correct, 0);
   const currentWorld = worlds.find((w) => w.operation === mode) || worlds[0];
+  const nextWorld = calibration ? worlds[0] : worlds[(worlds.indexOf(currentWorld) + 1) % worlds.length];
   const displayName = (name: string) => name;
   const guide = calibration ? "Zeynep" : currentWorld.character;
   return (
@@ -740,6 +746,7 @@ export default function App() {
                 BUGÜN SAHNE BİRAZ DAHA AYDINLIK
               </div>
               <h1>Her keşif bir adım.</h1>
+              <ContinueCard title={nextWorld.title} onContinue={() => start(nextWorld.operation)} />
               <p>
                 Birlikte düşündük, yeni yollar keşfettik.
                 <br />
@@ -758,7 +765,7 @@ export default function App() {
                     ? "✦ Sahnenin renkli ışıkları açıldı!"
                     : `İlk sahne dekoruna ${Math.max(0, 5 - progress.stars)} yıldız kaldı.`}
               </div>
-              <button className="primary" onClick={() => setScreen("home")}>
+              <button className="secondary" onClick={() => setScreen("home")}>
                 Macera haritana dön →
               </button>
               <p className="small">

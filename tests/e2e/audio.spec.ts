@@ -1,4 +1,50 @@
 import { test, expect } from "@playwright/test";
+
+test("cevap sesi önceden hazırdır, hemen başlar ve sonraki soruda kesilmez", async ({ page }) => {
+  await page.addInitScript(() => {
+    const OriginalAudio = window.Audio;
+    const state = { answer: null as HTMLAudioElement | null, clicked: 0, requested: 0, started: 0 };
+    (window as any).answerTiming = state;
+    const originalPlay = HTMLMediaElement.prototype.play;
+    HTMLMediaElement.prototype.play = function () {
+      if (this.src.endsWith("/ajda-manifest.mp3")) state.requested = performance.now();
+      return originalPlay.call(this);
+    };
+    window.Audio = class extends OriginalAudio {
+      constructor(source?: string) {
+        super(source);
+        if (source?.endsWith("/ajda-manifest.mp3")) {
+          state.answer = this;
+          this.addEventListener("playing", () => { state.started = performance.now(); });
+        }
+      }
+    };
+    document.addEventListener("click", event => {
+      if ((event.target as HTMLElement).closest("button")?.textContent === "15") state.clicked = performance.now();
+    }, true);
+  });
+  await page.goto("/");
+  await expect.poll(() => page.evaluate(() => (window as any).answerTiming.answer?.readyState)).toBe(4);
+  await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
+  await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
+  await page.getByRole("button", { name: "15", exact: true }).click();
+  await expect.poll(() => page.evaluate(() => (window as any).answerTiming.started)).toBeGreaterThan(0);
+  const delay = await page.evaluate(() => {
+    const timing = (window as any).answerTiming;
+    return timing.started - timing.clicked;
+  });
+  const requestDelay = await page.evaluate(() => {
+    const timing = (window as any).answerTiming;
+    return timing.requested - timing.clicked;
+  });
+  expect(requestDelay).toBeLessThan(100);
+  expect(delay).toBeLessThan(750);
+  console.info(`Cevap sesi: play çağrısı ${requestDelay.toFixed(1)} ms, tarayıcı başlangıcı ${delay.toFixed(1)} ms`);
+  await page.getByRole("button", { name: "Sıradaki keşif →" }).click();
+  expect(await page.evaluate(() => (window as any).answerTiming.answer.paused)).toBe(false);
+  await page.getByRole("combobox", { name: "Ses modu" }).selectOption("silent");
+  expect(await page.evaluate(() => (window as any).answerTiming.answer.paused)).toBe(true);
+});
 test("ses tercihi çevrimdışı korunur, efekt üretilir ve karakter adları günceldir", async ({ page, context }) => {
   await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   const sound = page.getByRole("combobox", { name: "Ses modu" });

@@ -95,7 +95,6 @@ test("kişisel rekor, sınırlı ödül, ebeveyn grafikleri, Manifest sesleri ve
   await page.getByRole("button", { name: "İsteğe bağlı tura katıl" }).click();
   for (let i = 0; i < 10; i++) {
     await solve(page);
-    if (i === 9) await page.evaluate(() => { (window as any).arenaVoices = 0; });
     await page.getByRole("button", { name: i === 9 ? "Turu bitir" : "Sonraki arena sorusu", exact: true }).click();
   }
   await expect(page.getByText(/^Yeni kişisel rekor!/)).toBeVisible();

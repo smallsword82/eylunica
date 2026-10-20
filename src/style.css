@@ -802,12 +802,33 @@ footer button {
 .collection-button { width: 36px; min-height: 44px; padding: 4px; flex-shrink: 0; border: 1px solid #d5b2ed; border-radius: 10px; background: #332347; color: #fff; font-size: 24px; }
 @media (max-width: 600px) { .profile-actions { gap: 8px; } }
 .card-reward { display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; margin: 1.5rem 0; border: 2px solid #d5b2ed; border-radius: 24px; background: #332347; text-align: left; }
-.card-reward .avatar { flex-shrink: 0; }
+.card-reward .collectible-photo { width: min(240px, 100%); flex-shrink: 0; }
+.card-reward { border-color: var(--card-color, #d5b2ed); }
+.collectible-photo { width: 100%; aspect-ratio: 4 / 5; border-radius: 16px; overflow: hidden; background: #171126; display: grid; place-items: center; }
+.collectible-photo.landscape { aspect-ratio: 16 / 9; }
+.collectible-photo img { width: 100%; height: 100%; object-fit: contain; }
+.card-locked { border: 1px dashed #84728f; color: #d5b2ed; background: radial-gradient(circle, #493355, #21182e); font-size: 48px; }
+.card-number { display: block; text-align: left; color: var(--card-color); margin-bottom: 8px; font-weight: 700; }
+.card-series-name { color: var(--card-color); font-weight: 700; }
+.collection-series { margin-block: 32px; }
+.collection-series h2 { color: var(--card-color); display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.collection-series h2 span { font-size: 16px; white-space: nowrap; }
+.collection-progress { width: 100%; accent-color: #d5b2ed; height: 16px; margin-bottom: 16px; }
+.collection-next { border: 1px solid #695178; border-radius: 16px; padding: 16px; background: #302147; }
+.collectible-card h3 { margin: 16px 0 8px; }
+.collectible-card p { margin-bottom: 0; }
 .collectible-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1rem; }
 .collectible-card { padding: 1.5rem; border: 2px dashed #84728f; border-radius: 24px; text-align: center; background: #21182e; }
 .collectible-card .avatar { margin: auto; }
-.collectible-card.collected { border: 2px solid #d5b2ed; background: #332347; }
+.collectible-card.collected { border: 2px solid var(--card-color, #d5b2ed); background: #332347; }
 @media (max-width: 520px) { .card-reward { flex-direction: column; text-align: center; padding: 1rem; } }
+@media (max-width: 600px) {
+  .collection-page .collectible-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .collection-page .collectible-card { min-width: 0; padding: 10px; border-radius: 18px; }
+  .collection-page .collectible-card h3 { font-size: 18px; }
+  .collection-page .collectible-card p { font-size: 12px; }
+  .collection-series h2 { font-size: 22px; }
+}
 .section-progress { display: grid; grid-column: 1 / -1; gap: .5rem; padding: 1rem; margin: 1rem 0; border: 2px solid #b9e7d1; border-radius: 18px; background: #203c3a; color: #fff; overflow-wrap: anywhere; }
 .section-progress p { margin: 0; font-size: .95rem; }
 .question-panel .next:focus-visible { outline: 3px solid #b9e7d1; outline-offset: 5px; }

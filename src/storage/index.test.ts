@@ -79,3 +79,41 @@ it("Android adaptörü aynı sürümlü kaydı Preferences üzerinden saklar", a
     native.mockRestore();
   }
 });
+
+it("v1 kaydını matematik, karakter, yıldız ve ödülleri koruyarak v2ye taşır", async () => {
+  const p = record(fresh(), generate("add"), true, false, 1200);
+  p.character = "Elya";
+  p.stars = 18;
+  p.rewards = ["lights", "confetti"];
+  p.calibrationDone = true;
+  const { academies, ...old } = p;
+  localStorage.setItem(KEY, JSON.stringify({ ...old, version: 1 }));
+  const migrated = await loadProgress();
+  expect(migrated.version).toBe(2);
+  expect(migrated.skills).toEqual(p.skills);
+  expect(migrated.character).toBe("Elya");
+  expect(migrated.stars).toBe(18);
+  expect(migrated.rewards).toEqual(p.rewards);
+  expect(migrated.history).toEqual(p.history);
+  expect(migrated.academies.reading.attempts).toBe(0);
+  await saveProgress(migrated);
+  expect(await loadProgress()).toEqual(migrated);
+});
+it("yeni akademi puanları matematik becerilerini değiştirmez", async () => {
+  const { recordAcademy } = await import("./index");
+  let p = fresh();
+  for (let i = 0; i < 5; i++)
+    p = recordAcademy(p, "reading", {
+      id: `r${i}`,
+      skill: "Ana fikir",
+      correct: true,
+      hint: false,
+      elapsedMs: 1000,
+    });
+  expect(p.stars).toBe(5);
+  expect(p.rewards).toContain("lights");
+  expect(p.skills.add.attempts).toBe(0);
+  expect(p.academies.attention.attempts).toBe(0);
+  await saveProgress(p);
+  expect(await loadProgress()).toEqual(p);
+});

@@ -1,3 +1,11 @@
+import {
+  newLearning,
+  advanceLearning,
+  validLearning,
+  type Academy,
+  type LearningState,
+  type LearningResult,
+} from "../learning-engine";
 import { Capacitor } from "@capacitor/core";
 import { Preferences } from "@capacitor/preferences";
 import type { Operation, Question } from "../math-engine";
@@ -20,7 +28,8 @@ export type Attempt = {
   b: number;
 };
 export type Progress = {
-  version: 1;
+  version: 2;
+  academies: Record<Academy, LearningState>;
   character: string;
   stars: number;
   skills: Record<Operation, Skill>;
@@ -39,7 +48,12 @@ const skill = (): Skill => ({
   lastPlayed: 0,
 });
 export const fresh = (): Progress => ({
-  version: 1,
+  version: 2,
+  academies: {
+    reading: newLearning(),
+    attention: newLearning(),
+    concert: newLearning(),
+  },
   character: "Mina",
   stars: 0,
   skills: {
@@ -57,7 +71,7 @@ export function decode(raw: string | null): Progress {
   try {
     const p = JSON.parse(raw);
     if (
-      p.version !== 1 ||
+      (p.version !== 1 && p.version !== 2) ||
       !Number.isInteger(p.stars) ||
       p.stars < 0 ||
       typeof p.character !== "string" ||
@@ -81,6 +95,23 @@ export function decode(raw: string | null): Progress {
       )
         return fresh();
     }
+    if (p.version === 1)
+      return {
+        ...p,
+        version: 2,
+        academies: {
+          reading: newLearning(),
+          attention: newLearning(),
+          concert: newLearning(),
+        },
+      };
+    if (
+      !p.academies ||
+      !["reading", "attention", "concert"].every((k) =>
+        validLearning(p.academies[k]),
+      )
+    )
+      return fresh();
     return p;
   } catch {
     return fresh();
@@ -138,4 +169,26 @@ export function record(
     },
   ].slice(-200);
   return next;
+}
+
+export function recordAcademy(
+  p: Progress,
+  academy: Academy,
+  result: LearningResult,
+): Progress {
+  const next = structuredClone(p);
+  next.academies[academy] = advanceLearning(next.academies[academy], result);
+  if (result.correct) next.stars++;
+  return unlockRewards(next);
+}
+export function trackConcert(p: Progress, result: LearningResult): Progress {
+  const next = structuredClone(p);
+  next.academies.concert = advanceLearning(next.academies.concert, result);
+  return next;
+}
+function unlockRewards(p: Progress): Progress {
+  if (p.stars >= 5 && !p.rewards.includes("lights")) p.rewards.push("lights");
+  if (p.stars >= 15 && !p.rewards.includes("confetti"))
+    p.rewards.push("confetti");
+  return p;
 }

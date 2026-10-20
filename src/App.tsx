@@ -1,3 +1,9 @@
+import {
+  ReadingAcademy,
+  AttentionAcademy,
+  ConcertAcademy,
+  AcademyProgress,
+} from "./ui/Academies";
 import { useEffect, useRef, useState } from "react";
 import { Capacitor } from "@capacitor/core";
 import {
@@ -17,7 +23,15 @@ import {
 import { characters, worlds } from "./game";
 import { Avatar } from "./ui/Avatar";
 const ops: Operation[] = ["add", "subtract", "multiply", "divide"];
-type Screen = "home" | "characters" | "play" | "summary" | "parent";
+type Screen =
+  | "home"
+  | "characters"
+  | "play"
+  | "summary"
+  | "parent"
+  | "reading"
+  | "attention"
+  | "concert";
 export default function App() {
   const [progress, setProgress] = useState<Progress>(fresh),
     [ready, setReady] = useState(false),
@@ -207,6 +221,42 @@ export default function App() {
         <>
           {screen === "home" && (
             <main>
+              <nav className="academy-hub" aria-label="Üç akademi">
+                <button
+                  className="academy-tile math-tile"
+                  onClick={() =>
+                    document
+                      .querySelector("#math-map")
+                      ?.scrollIntoView({ behavior: "instant" })
+                  }
+                >
+                  <span className="academy-symbol" aria-hidden="true">
+                    +
+                  </span>
+                  <strong>Matematik Akademisi</strong>
+                  <span>Sayılarla düşün, stratejini keşfet →</span>
+                </button>
+                <button
+                  className="academy-tile reading-tile"
+                  onClick={() => setScreen("reading")}
+                >
+                  <span className="academy-symbol" aria-hidden="true">
+                    Aa
+                  </span>
+                  <strong>Okuduğunu Anlama Akademisi</strong>
+                  <span>Hikâyeleri oku, kanıtları birleştir →</span>
+                </button>
+                <button
+                  className="academy-tile focus-tile"
+                  onClick={() => setScreen("attention")}
+                >
+                  <span className="academy-symbol" aria-hidden="true">
+                    ◎
+                  </span>
+                  <strong>Dikkat ve Odaklanma Akademisi</strong>
+                  <span>Ayrıntıları fark et, sırayı hatırla →</span>
+                </button>
+              </nav>
               <section className="hero">
                 <div className="hero-copy">
                   <div className="eyebrow">
@@ -269,7 +319,7 @@ export default function App() {
                   </button>
                 </section>
               )}
-              <section className="world-section">
+              <section className="world-section" id="math-map">
                 <div className="section-heading">
                   <div>
                     <div className="eyebrow muted">MACERA HARİTAN</div>
@@ -319,6 +369,22 @@ export default function App() {
                   ))}
                 </div>
               </section>
+              <section className="concert-banner">
+                <div>
+                  <div className="eyebrow muted">OKU · FARK ET · HESAPLA</div>
+                  <h2>Üç keşif, tek konser.</h2>
+                  <p>
+                    Bir hikâyenin içindeki ipuçlarıyla sahneyi birlikte
+                    hazırlayalım.
+                  </p>
+                </div>
+                <button
+                  className="primary"
+                  onClick={() => setScreen("concert")}
+                >
+                  Büyük Konser Görevi →
+                </button>
+              </section>
               <section className="companion">
                 <Avatar name={progress.character} />
                 <div>
@@ -342,6 +408,27 @@ export default function App() {
                 <span>◷ Günde yaklaşık 10 dakika</span>
               </section>
             </main>
+          )}
+          {screen === "reading" && (
+            <ReadingAcademy
+              progress={progress}
+              onSave={persist}
+              onBack={() => setScreen("home")}
+            />
+          )}
+          {screen === "attention" && (
+            <AttentionAcademy
+              progress={progress}
+              onSave={persist}
+              onBack={() => setScreen("home")}
+            />
+          )}
+          {screen === "concert" && (
+            <ConcertAcademy
+              progress={progress}
+              onSave={persist}
+              onBack={() => setScreen("home")}
+            />
           )}
           {screen === "characters" && (
             <main className="subpage">
@@ -644,6 +731,7 @@ export default function App() {
                 baskısı uygulanmaz. Bir yanlış yanıttan düşünme süreci hakkında
                 kesin çıkarım yapılmaz.
               </p>
+              <AcademyProgress progress={progress} />
               <h2>Gizlilik ve çevrimdışı kullanım</h2>
               <p>
                 Web sürümünü ilk kez açmak internet gerektirir. Dosyalar

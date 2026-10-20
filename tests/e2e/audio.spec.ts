@@ -1,19 +1,19 @@
 import { test, expect } from "@playwright/test";
 
-test("cevap sesi önceden hazırdır, hemen başlar ve sonraki soruda kesilmez", async ({ page }) => {
+test("kısa cevap efekti önceden hazırdır ve hemen başlar", async ({ page }) => {
   await page.addInitScript(() => {
     const OriginalAudio = window.Audio;
     const state = { answer: null as HTMLAudioElement | null, clicked: 0, requested: 0, started: 0 };
     (window as any).answerTiming = state;
     const originalPlay = HTMLMediaElement.prototype.play;
     HTMLMediaElement.prototype.play = function () {
-      if (this.src.endsWith("/ajda-manifest.mp3")) state.requested = performance.now();
+      if (this.src.endsWith("/answer-tick.wav")) state.requested = performance.now();
       return originalPlay.call(this);
     };
     window.Audio = class extends OriginalAudio {
       constructor(source?: string) {
         super(source);
-        if (source?.endsWith("/ajda-manifest.mp3")) {
+        if (source?.endsWith("/answer-tick.wav")) {
           state.answer = this;
           this.addEventListener("playing", () => { state.started = performance.now(); });
         }
@@ -41,7 +41,7 @@ test("cevap sesi önceden hazırdır, hemen başlar ve sonraki soruda kesilmez",
   expect(delay).toBeLessThan(750);
   console.info(`Cevap sesi: play çağrısı ${requestDelay.toFixed(1)} ms, tarayıcı başlangıcı ${delay.toFixed(1)} ms`);
   await page.getByRole("button", { name: "Sıradaki keşif →" }).click();
-  expect(await page.evaluate(() => (window as any).answerTiming.answer.paused)).toBe(false);
+  expect(await page.evaluate(() => (window as any).answerTiming.answer.duration)).toBeLessThan(0.2);
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("silent");
   expect(await page.evaluate(() => (window as any).answerTiming.answer.paused)).toBe(true);
 });

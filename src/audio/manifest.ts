@@ -1,7 +1,8 @@
 import { manifestTracks, type ManifestTrack } from "./manifest-catalog";
 export { manifestTracks, type ManifestTrack } from "./manifest-catalog";
 export const effectSeconds = { correct: 1.6, retry: 1.1, star: 2.2, record: 3, complete: 3.5 };
-export const answerSoundSeconds = 2.7;
+export const answerSoundSeconds = 0.18;
+export const completionSoundSeconds = 2.7;
 let active: HTMLAudioElement | null = null;
 const prepared = new Map<string, HTMLAudioElement>();
 let answering = false;
@@ -19,7 +20,7 @@ export const getManifestPlayback = () => ({ playing, error, shuffling, volume, a
 function prepareClip(file: string) {
   let audio = prepared.get(file);
   if (!audio) {
-    audio = new Audio(`${import.meta.env.BASE_URL}manifest/audio/${file}.mp3`);
+    audio = new Audio(`${import.meta.env.BASE_URL}manifest/audio/${file}.${file === "answer-tick" ? "wav" : "mp3"}`);
     audio.preload = "auto";
     prepared.set(file, audio);
     audio.load();
@@ -28,6 +29,7 @@ function prepareClip(file: string) {
 }
 export function prepareManifestAudio() {
   try {
+    prepareClip("answer-tick");
     prepareClip("ajda-manifest");
     for (const track of manifestTracks) prepareClip(track.id);
   } catch { prepared.clear(); }
@@ -137,7 +139,11 @@ export async function playManifestEffect(effect: keyof typeof effectSeconds) {
   await playClip(takeRandomTrack(), effectSeconds[effect], Math.min(0.5, volume), "Kısa Manifest efekti");
 }
 export async function playManifestAnswer() {
-  await playClip("ajda-manifest", answerSoundSeconds, Math.min(0.65, volume + 0.1), "Ajda Pekkan · Manifest");
+  if (answering) return;
+  await playClip("answer-tick", answerSoundSeconds, Math.min(0.5, volume), "Kısa cevap efekti");
+}
+export async function playManifestCompletion() {
+  await playClip("ajda-manifest", completionSoundSeconds, Math.min(0.65, volume + 0.1), "Ajda Pekkan · Manifest");
 }
 export async function playManifestTrack(track: ManifestTrack, level = volume) {
   if (mode !== "music") return;

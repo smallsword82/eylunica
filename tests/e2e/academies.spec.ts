@@ -17,6 +17,9 @@ test("okuma: eski kayıt korunur, altı beceri tamamlanır ve çevrimdışı ger
   context,
 }) => {
   await page.addInitScript(() => {
+    (window as any).sectionClips = [];
+    const originalPlay = HTMLMediaElement.prototype.play;
+    HTMLMediaElement.prototype.play = function() { (window as any).sectionClips.push(this.src); return originalPlay.call(this); };
     const k = "ritma-progress-v1";
     if (localStorage.getItem(k)) return;
     const s = {
@@ -57,6 +60,7 @@ test("okuma: eski kayıt korunur, altı beceri tamamlanır ve çevrimdışı ger
       })
       .click();
     await check(page);
+    expect(await page.evaluate(() => (window as any).sectionClips.filter((source: string) => source.includes("ajda-manifest")).length)).toBe(0);
     await expect(
       page.getByText("Harika! Yanıtını dikkatle düşündün."),
     ).toBeVisible();
@@ -75,6 +79,8 @@ test("okuma: eski kayıt korunur, altı beceri tamamlanır ve çevrimdışı ger
   await expect(
     page.getByRole("heading", { name: "Birlikte yeni yollar keşfettik!" }),
   ).toBeVisible();
+  await expect.poll(() => page.evaluate(() => (window as any).sectionClips.filter((source: string) => source.includes("ajda-manifest")).length)).toBe(1);
+  await page.screenshot({ path: "test-results/section-complete-sound.png", fullPage: true });
   await expect
     .poll(() =>
       page.evaluate(

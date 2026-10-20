@@ -3,7 +3,7 @@ import { OPERATIONS, SESSION, eligibility, getLane, makeDeck, observation, opera
 import { useResponseClock } from "../arena/useResponseClock";
 import { completeArena, recordArena, type Progress } from "../storage";
 import { strategy, symbols, type Operation, type Question } from "../math-engine";
-import { playAnswerEffect, answerSoundSeconds, playEffect, stopActivitySound } from "../audio";
+import { playAnswerEffect, answerSoundSeconds, playCompletionEffect, completionSoundSeconds, stopActivitySound } from "../audio";
 import { narrateFeedback, stopNarration } from "../audio/narration";
 import type { UsageDomain } from "../time-engine";
 import { ContinueCard } from "./ContinueCard";
@@ -64,7 +64,7 @@ export function Arena({ progress, onSave, onBack, onPractice, onTransition, onAc
         if (result) save(result.progress);
         setSummary({ correct: answers.current.filter(a => a.correct).length, race: session.race, bonus: result?.bonus ?? null, comparison: result?.comparison ?? null, previousBestMs });
         setSession(null);
-        stopNarration(); void playEffect(result?.comparison?.record ? "record" : "complete");
+        stopNarration(); void playCompletionEffect(); narrateFeedback("complete", completionSoundSeconds * 1000 + 100);
       } else {
         stopNarration(); stopActivitySound(); setSession({ ...session, index: session.index + 1 });
         setSolved(false); setHint(false); setFeedback("");

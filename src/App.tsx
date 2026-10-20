@@ -7,7 +7,7 @@ import { narrationTexts } from "./audio/narration-texts";
 import { ListenButton, NarrationPlayback } from "./ui/ListenButton";
 import { CharacterName } from "./ui/CharacterName";
 import { useAudio } from "./audio/useAudio";
-import { playAnswerEffect, answerSoundSeconds, playEffect, stopEffects, stopActivitySound } from "./audio";
+import { playAnswerEffect, answerSoundSeconds, playCompletionEffect, completionSoundSeconds, stopEffects, stopActivitySound } from "./audio";
 import { createPortal } from "react-dom";
 import { useWellbeing } from "./wellbeing/useWellbeing";
 import { ParentTimePanel, TimeNotice } from "./ui/Wellbeing";
@@ -105,8 +105,7 @@ export default function App() {
       void startManifestShuffle();
     }
     if (screen === "summary") {
-      const delay = getManifestPlayback().answering ? answerSoundSeconds * 1000 + 100 : 0;
-      void playEffect("complete"); narrateFeedback("complete", delay);
+      void playCompletionEffect(); narrateFeedback("complete", completionSoundSeconds * 1000 + 100);
     }
   }, [screen]);
   const wellbeing = useWellbeing(ready);

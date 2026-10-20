@@ -47,7 +47,7 @@ export function ActivityPanel({
         : selected === task.answer;
     stopNarration();
     void playAnswerEffect();
-    narrateFeedback(correct ? (last ? "complete" : "correct") : "retry", answerSoundSeconds * 1000 + 100);
+    narrateFeedback(correct ? "correct" : "retry", answerSoundSeconds * 1000 + 100);
     if (!correct) {
       usedHint.current = true;
       setHint(true);

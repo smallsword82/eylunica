@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, expect, it, vi } from "vitest";
 import { Capacitor } from "@capacitor/core";
 import { Preferences } from "@capacitor/preferences";
-import { AUDIO_KEY, enableEffects, loadAudio, saveAudio, playEffect, playAnswerEffect, answerSoundSeconds, stopEffects, stopActivitySound, setSoundMode } from ".";
+import { AUDIO_KEY, enableEffects, loadAudio, saveAudio, playEffect, playAnswerEffect, playCompletionEffect, answerSoundSeconds, stopEffects, stopActivitySound, setSoundMode } from ".";
 import { effectSeconds, playManifestTrack, getManifestPlayback, manifestTracks, startManifestShuffle, takeRandomTrack, prepareManifestAudio } from "./manifest";
 vi.mock("@capacitor/preferences", () => ({ Preferences: { get: vi.fn(), set: vi.fn() } }));
 const clips: FakeAudio[] = [];
@@ -59,11 +59,11 @@ it("sessizken ve arka plandayken ses oluşturmaz", async () => {
   await playEffect("correct");
   expect(clips).toHaveLength(0);
 });
-it("cevap sesi Ajda Manifest kesitidir; sessiz modda çalmaz ve kısa sürede durur", async () => {
+it("cevap yalnız kısa sözsüz efekttir; sessiz modda çalmaz ve kısa sürede durur", async () => {
   vi.useFakeTimers();
   setSoundMode("effects");
   await playAnswerEffect();
-  expect(clips.at(-1)!.src).toBe("/manifest/audio/ajda-manifest.mp3");
+  expect(clips.at(-1)!.src).toBe("/manifest/audio/answer-tick.wav");
   const audio = clips.at(-1)!;
   await vi.advanceTimersByTimeAsync(answerSoundSeconds * 1000);
   expect(audio.pause).toHaveBeenCalled();
@@ -79,16 +79,16 @@ it("sesleri önceden yükler ve cevap tıklamasında hazır oynatıcıyı beklem
   expect(answer.load).toHaveBeenCalledOnce();
   expect(answer.play).not.toHaveBeenCalled();
   const count = clips.length;
-  const playback = playAnswerEffect();
+  const playback = playCompletionEffect();
   expect(answer.play).toHaveBeenCalledOnce();
   await playback;
   expect(clips).toHaveLength(count);
   await playManifestTrack("ariyo");
   expect(clips).toHaveLength(count);
 });
-it("hızlı soru geçişi ve bitiş efekti cevap sesini kesmez; sessiz ve mola keser", async () => {
+it("hızlı bölüm geçişi bitiş sesini kesmez; sessiz ve mola keser", async () => {
   setSoundMode("music");
-  await playAnswerEffect();
+  await playCompletionEffect();
   const answer = clips.at(-1)!;
   stopActivitySound();
   await playEffect("complete");

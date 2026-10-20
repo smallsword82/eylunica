@@ -6,7 +6,7 @@ Sitedeki **Yıldız ligi · Giriş** düğmesi kullanıcı adı/şifreyle açıl
 
 Android uygulamasının görünen adı **eylunica** olarak ayarlanmıştır; mevcut verileri korumak için paket kimliği değiştirilmez. Aşağıdaki sürüm notlarındaki eski “hesap/bulut yok” ifadeleri yalnız önceki yerel sürümleri anlatır.
 
-**Cevap sesi:** matematik, akademiler ve Arena’da doğru/yanlış yanıt sonrası Hileli girişinden Ajda Pekkan’ın “Manifest” bölümü çalar (2,7 saniye). Rastgele arka plan kataloğu korunur. İsteğe bağlı konuşmalı geri bildirim kesitin bitmesini bekler.
+**Sesler:** her yanıtta yalnız 0,18 saniyelik sözsüz bir zil efekti çalar. Ajda Pekkan’ın “Manifest” kaydı (2,7 saniye) yalnız bölüm/tur tamamlanınca çalar. Rastgele arka plan kataloğu korunur. İsteğe bağlı konuşmalı geri bildirim ilgili sesin bitmesini bekler.
 
 Güncel geliştirme deposu: `smallsword82/eylunica` (özel). `smallsword82/manifestakademi` kaynağının main dalı, 10 commitlik tüm ata geçmişi ve özgün commit kimlikleriyle korunarak aktarılmıştır. Kaynak depo değiştirilmemiştir.
 

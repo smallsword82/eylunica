@@ -1,5 +1,5 @@
-import { getManifestPlayback, playManifestAnswer, playManifestEffect, setManifestMode, stopManifestAudio } from "./manifest";
-export { answerSoundSeconds } from "./manifest";
+import { getManifestPlayback, playManifestAnswer, playManifestCompletion, playManifestEffect, setManifestMode, stopManifestAudio } from "./manifest";
+export { answerSoundSeconds, completionSoundSeconds } from "./manifest";
 import { Capacitor } from "@capacitor/core";
 import { Preferences } from "@capacitor/preferences";
 
@@ -49,4 +49,8 @@ export async function playEffect(effect: Effect): Promise<void> {
 export async function playAnswerEffect(): Promise<void> {
   if (mode === "silent" || document.visibilityState === "hidden") return;
   await playManifestAnswer();
+}
+export async function playCompletionEffect(): Promise<void> {
+  if (mode === "silent" || document.visibilityState === "hidden") return;
+  await playManifestCompletion();
 }

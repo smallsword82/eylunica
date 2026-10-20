@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { playCompletionEffect, completionSoundSeconds } from "../audio";
+import { narrateFeedback, stopNarration } from "../audio/narration";
 import type { UsageDomain } from "../time-engine";
 import { chooseStory, readingSkills, type Story } from "../reading-engine";
 import {
@@ -78,6 +80,14 @@ function Completion({
   onAgain: () => void;
   nextTitle: string;
 }) {
+  const celebrated = useRef(false);
+  useEffect(() => {
+    if (celebrated.current) return;
+    celebrated.current = true;
+    stopNarration();
+    void playCompletionEffect();
+    narrateFeedback("complete", completionSoundSeconds * 1000 + 100);
+  }, []);
   return (
     <section className="lesson-complete">
       <div className="summary-star">✦</div>

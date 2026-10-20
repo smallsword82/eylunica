@@ -1,5 +1,9 @@
 # eylunica eğitim yıldızları
 
+## Geçici yerel isim modu
+
+Hesap girişi ve çevrimiçi sıralama şimdilik kapalıdır. Açılışta yalnız isim sorulur (varsayılan Eylül); isim, ilerleme ve kartlar cihazda saklanır. Yerel yıldız ekranı başka kullanıcılarla sıralama yapmaz. Supabase hesapları, sunucu puanları ve mevcut tarayıcı oturum kayıtları silinmez; bu modda oturum okunmaz, yenilenmez veya ders puanı gönderilmez. Yeniden açmak için bilinçli olarak `VITE_ONLINE_ENABLED=true` ile yeni derleme gerekir. Eski çevrimiçi tarayıcı senaryoları bu modda atlanır; isim modu ayrıca test edilir. Aşağıdaki hesap ve puanlama bilgileri devre dışı bırakılan altyapının belgesidir.
+
 ## Hesaplar
 
 Telefon, gerçek e-posta ve Google hesabı istenmez. Kullanıcı adı 3–20 ASCII karakterden oluşur ve harfle başlar. Supabase Auth e-posta tabanlı arayüzüne uyum için yalnız teknik bir hesap kimliği üretilir: `<kullanıcı_adı>@accounts.eylunica.netlify.app`. Bu adres bir posta kutusu değildir ve e-posta gönderilmez. Parola en az 10 karakterdir. Parola ve oturumları Supabase Auth yönetir; uygulama kendi parola tablosunu tutmaz. Kayıt sırasında takma adın açık tabloda görünmesi ve otomatik parola sıfırlaması bulunmadığı açıkça belirtilir.

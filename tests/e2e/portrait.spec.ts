@@ -32,7 +32,7 @@ for (const width of [320, 360, 390, 430, 768]) {
     await fits("home");
     await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
     await fits("lesson");
-    await page.getByRole("button", { name: "Yıldız tablosu · Giriş" }).click();
+    await page.getByRole("button", { name: "Yıldız tablosu", exact: true }).click();
     await expect(page.getByRole("heading", { name: "eylunica Yıldız Tablosu" })).toBeVisible();
     await fits("league");
     await page.getByRole("button", { name: "Ebeveyn köşesi →" }).click();

@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import type { Session } from "@supabase/supabase-js";
 import { onlineClient } from "./client";
+import { onlineEnabled } from "./config";
 
 export function useAccount() {
   const [session, setSession] = useState<Session | null>(null), [ready, setReady] = useState(false);
   useEffect(() => {
+    if (!onlineEnabled) { setReady(true); return; }
     let mounted = true;
     onlineClient.auth.getSession().then(({ data }) => { if (mounted) { setSession(data.session); setReady(true); } })
       .catch(() => { if (mounted) setReady(true); });

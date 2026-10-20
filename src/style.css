@@ -767,6 +767,9 @@ footer button {
   justify-content: center;
 }
 .question-count { font-weight: 800; color: #e3ceee; }
+.name-entry { display: grid; gap: .6rem; margin: 1.5rem auto; max-width: 440px; text-align: left; }
+.name-entry label { font-weight: 800; }
+.name-entry input { width: 100%; min-width: 0; min-height: 48px; border: 2px solid #d5b2ed; border-radius: 12px; padding: .8rem; font: inherit; background: #21182e; color: #fff; }
 .collection-button { width: 36px; min-height: 44px; padding: 4px; flex-shrink: 0; border: 1px solid #d5b2ed; border-radius: 10px; background: #332347; color: #fff; font-size: 24px; }
 @media (max-width: 600px) { .profile-actions { gap: 8px; } }
 .card-reward { display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; margin: 1.5rem 0; border: 2px solid #d5b2ed; border-radius: 24px; background: #332347; text-align: left; }

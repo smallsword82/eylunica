@@ -2,6 +2,7 @@ import { test, expect, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { stories } from "../../src/reading-engine";
 import { fresh } from "../../src/storage";
+test.skip(process.env.VITE_ONLINE_ENABLED !== "true", "Hesap girişi ve çevrimiçi sıralama şimdilik kapalı.");
 const api = "https://shtryogkcorfhoeslnco.supabase.co";
 function session() {
   const expires = Math.floor(Date.now() / 1000) + 3600;

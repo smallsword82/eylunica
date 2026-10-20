@@ -7,6 +7,7 @@ import { narrationTexts } from "./audio/narration-texts";
 import { ListenButton, NarrationPlayback } from "./ui/ListenButton";
 import { AccountForm, StarLeague } from "./ui/StarLeague";
 import { useAccount } from "./online/useAccount";
+import { onlineEnabled } from "./online/config";
 import { useLessonScore } from "./online/useLessonScore";
 import { useAudio } from "./audio/useAudio";
 import { playAnswerEffect, answerSoundSeconds, playCompletionEffect, completionSoundSeconds, stopEffects, stopActivitySound } from "./audio";
@@ -64,8 +65,9 @@ export default function App() {
   const [savedProgress, setProgress] = useState<Progress>(fresh),
     [ready, setReady] = useState(false),
     [screen, setScreen] = useState<Screen>(() => new URLSearchParams(location.search).has("league") ? "league" : "welcome");
-  const progress = account.username ? { ...savedProgress, learnerName: account.username } : savedProgress;
-  const needsAccount = !account.session && !guest;
+  const progress = onlineEnabled && account.username ? { ...savedProgress, learnerName: account.username } : savedProgress;
+  const needsAccount = onlineEnabled && !account.session && !guest;
+  const [learnerDraft, setLearnerDraft] = useState("Eylül");
   const [question, setQuestion] = useState<Question | null>(null),
     [mode, setMode] = useState("add"),
     [hint, setHint] = useState(false),
@@ -99,7 +101,7 @@ export default function App() {
     questionHeading = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
     loadProgress()
-      .then(setProgress)
+      .then(value => { setProgress(value); setLearnerDraft(value.learnerName || "Eylül"); })
       .catch(() =>
         setError("Cihaz kaydına ulaşılamadı. Bu oturumda oynayabilirsin."),
       )
@@ -142,7 +144,7 @@ export default function App() {
       wellbeing.setContext("other", false);
   }, [screen, wellbeing.setContext]);
   function persist(next: Progress) {
-    const stored = account.username ? { ...next, learnerName: savedProgress.learnerName } : next;
+    const stored = onlineEnabled && account.username ? { ...next, learnerName: savedProgress.learnerName } : next;
     setProgress(stored);
     writes.current = writes.current
       .then(() => saveProgress(stored))
@@ -176,18 +178,24 @@ export default function App() {
     pending.current = false;
 
   }
-  function start(m: string, cal = false) {
+  function start(m: string, cal = false, source = progress) {
     wellbeing.transition(() => {
-      if (cal) persist({ ...progress, assessmentPending: true, calibrationDone: false });
+      if (cal) persist({ ...source, assessmentPending: true, calibrationDone: false });
       setMode(m);
       setCalibration(cal);
       setCount(0);
       setEarned(0);
-      setSection((progress.mathSections?.[m] ?? 0) + 1);
-      setStartingLevel(progress.skills[ops.includes(m as Operation) ? m as Operation : "add"].level);
-      pickQuestion(m, progress, 0, cal);
+      setSection((source.mathSections?.[m] ?? 0) + 1);
+      setStartingLevel(source.skills[ops.includes(m as Operation) ? m as Operation : "add"].level);
+      pickQuestion(m, source, 0, cal);
       setScreen("play");
     });
+  }
+  function enterAdventure() {
+    const named = onlineEnabled ? progress : { ...progress, learnerName: learnerDraft.trim() || "Eylül" };
+    persist(named);
+    if (screen === "welcome" && named.assessmentPending && !named.calibrationDone) start("mixed", true, named);
+    else setScreen("home");
   }
   function answer(value: number) {
     if (!question || solved || pending.current) return;
@@ -270,7 +278,7 @@ export default function App() {
           </span>
         </button>
         {!needsAccount && <><div className="top-actions">
-          <button className="secondary" onClick={() => setScreen("league")}>Yıldız tablosu{account.username ? ` · ${account.username}` : " · Giriş"}</button>
+          <button className="secondary" onClick={() => setScreen("league")}>Yıldız tablosu{onlineEnabled ? account.username ? ` · ${account.username}` : " · Giriş" : ""}</button>
           {ready && screen !== "parent" && (
             <button className="pause-button" onClick={() => wellbeing.pause()}>
               Mola ver
@@ -318,7 +326,7 @@ export default function App() {
         <main className="subpage account-entry league-page"><AccountForm /><p className="small">Cihazındaki mevcut ilerleme korunur.</p><button className="text-button" onClick={() => { sessionStorage.setItem("eylunica-local-session", "yes"); setGuest(true); }}>Şimdilik bu cihazda çevrimdışı devam et</button></main>
       ) : (
         <>
-          {screen === "league" && <StarLeague onBack={() => setScreen("home")} />}
+          {screen === "league" && (onlineEnabled ? <StarLeague onBack={() => setScreen("home")} /> : <main className="subpage"><button className="text-button" onClick={() => setScreen("home")}>← Haritaya dön</button><h1>eylunica Yıldız Tablosu</h1><h2>{progress.learnerName || "Eylül"} · {progress.stars} yıldız</h2><p>Bu cihazdaki yıldızların ve kartların korunuyor. Şimdilik hesap girişi ve kişiler arası çevrimiçi sıralama kapalı.</p><button className="primary" onClick={() => setScreen("collection")}>Kart koleksiyonunu gör →</button></main>)}
           {screen === "collection" && <CardCollection progress={progress} onBack={() => setScreen("home")} />}
           {screen === "music" && <MusicLounge learnerName={progress.learnerName || "Eylül"} paused={!!wellbeing.notice} onBack={() => setScreen("home")} onEnableMusic={() => audio.changeMode("music")} />}
           {screen === "home" && (
@@ -567,6 +575,7 @@ export default function App() {
               </button>}
               <div className="eyebrow muted">{screen === "welcome" ? "eylunica’YA HOŞ GELDİN" : "BİRLİKTE DAHA GÜZEL"}</div>
               <h1>{screen === "welcome" ? `${progress.learnerName || "Eylül"}, sahne senin.` : "Manifest eğitmenini seç."}</h1>
+              {!onlineEnabled && screen === "welcome" && <div className="name-entry"><label htmlFor="learner-name">Adın</label><input id="learner-name" name="nickname" autoComplete="nickname" maxLength={24} value={learnerDraft} onChange={event => setLearnerDraft(event.target.value)} onKeyDown={event => { if (event.key === "Enter") { event.preventDefault(); enterAdventure(); } }} /><p className="small">Sadece ismini yazıp başlayabilirsin. Şifre veya hesap gerekmez; ilerlemen bu cihazda saklanır.</p></div>}
               <p className="intro">
                 Başrol sensin. Manifest üyeleri de öğrenme yolculuğunda eğitmenlerin. İlk adımda sana kim eşlik etsin?
               </p>
@@ -596,7 +605,7 @@ export default function App() {
               </div>
               <p className="welcome-companion">{progress.learnerName || "Eylül"}, eğitmenin {progress.character}. Hazırsan sahne senin!</p>
               {screen === "welcome" && progress.assessmentPending && !progress.calibrationDone && <p>Önce seviyeni keşfedelim: dört işlemden 12 soru. Yanıtlarına göre sorular kolaylaşır veya zorlaşır; süre sınırı yok.</p>}
-              <button className="primary" disabled={!audio.ready} onClick={() => screen === "welcome" && progress.assessmentPending && !progress.calibrationDone ? start("mixed", true) : setScreen("home")}>
+              <button className="primary" disabled={!audio.ready} onClick={enterAdventure}>
                 {screen === "welcome" ? "eylunica’ya devam et →" : "Maceraya dön →"}
               </button>
             </main>

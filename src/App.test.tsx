@@ -7,6 +7,18 @@ beforeEach(() => { localStorage.setItem(KEY, JSON.stringify(fresh())); });
 async function enter() {
   await userEvent.click(await screen.findByRole("button", { name: "eylunica’ya devam et →" }));
 }
+it("yalnız isimle giriş yapılır; isim değiştirmek mevcut yıldızları korur", async () => {
+  const previous = { ...fresh(), stars: 12 };
+  localStorage.setItem(KEY, JSON.stringify(previous));
+  render(<App />);
+  const input = await screen.findByLabelText("Adın");
+  expect(input).toHaveValue("Eylül");
+  await userEvent.clear(input);
+  await userEvent.type(input, "Ada");
+  await enter();
+  await waitFor(() => expect(JSON.parse(localStorage.getItem(KEY)!)).toEqual({ ...previous, learnerName: "Ada" }));
+  expect(screen.queryByLabelText(/Şifre/)).not.toBeInTheDocument();
+});
 it("karakter seçer ve yeniden açılışta korur", async () => {
   const user = userEvent.setup();
   const view = render(<App />);

@@ -28,7 +28,7 @@ GitHub'a gönderilen commit ayrıca mevcut Web tests and Android APK Actions iş
 - Etkin monoton süre, mola/arka plan dışlama, yeni soruda ölçümün yeniden başlaması ve geciken Android durum sorgusunun yeni olayı ezmemesi.
 - Tarayıcıda hazırlık turları, açılma, kişisel rekor, ödül, ebeveyn grafikleri ve tablo, çevrimdışı yeniden açılış, mola ve günlük sınır entegrasyonu.
 - Grafik/tablo ve mevcut ekranlarda WCAG A/AA otomatik kontrolleri; klavyeyle kaydırılabilir tablo ve mobil genişlik.
-- Sessiz/Sadece Efektler/Müzik ve Efektler tercihlerinin yerel ve Android depolaması; eski on/off tercihinin korunması.
+- İlk açılışta Sadece Efektler seçilmesi; Sessiz/Sadece Efektler/Müzik ve Efektler tercihlerinin yerel ve Android depolaması; eski on/off tercihinin korunması.
 - Dört farklı motif; müzikal ekin yalnız rekor/tamamlamaya ait olması ve bir saniyeden kısa bitmesi. Sessiz modun konuşmayı da susturması.
 - Tarayıcıda Müzik ve Efektler açıkken matematik, okuma ve dikkat görevlerine geçişin arka plan müziği başlatmaması. Rekor ödülünde Web Audio osilatörlerinin gerçekten oluşturulması.
 - Mevcut matematik, okuma, dikkat, konser, karakter/özel ad, konuşma, çevrimdışı kayıt ve mola testleri.

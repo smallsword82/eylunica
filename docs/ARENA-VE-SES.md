@@ -36,7 +36,7 @@ Arena'nın görev süreleri matematik kullanımına dahil olur. Mevcut 15 dakika
 
 ## Üç ses modu ve özgün elektronik pop efektleri
 
-Üstteki ses seçimi: **Sessiz** (varsayılan), **Sadece Efektler**, **Müzik ve Efektler**. `ritma-audio-v1` anahtarında saklanır; eski `on` tercihi Efektler, `off` tercihi Sessiz olarak okunur. Konuşmalı geri bildirim tercihi korunur; Sessiz modu manuel/otomatik konuşmayı da susturur. Dinleme için diğer iki moddan biri seçilebilir.
+Üstteki ses seçimi: **Sessiz**, **Sadece Efektler** (varsayılan açık), **Müzik ve Efektler**. İlk açılışta yalnız kısa efektler açıktır; önceki Sessiz tercihi korunur. `ritma-audio-v1` anahtarında saklanır; eski `on` tercihi Efektler, `off` tercihi Sessiz olarak okunur. Konuşmalı geri bildirim tercihi korunur; Sessiz modu manuel/otomatik konuşmayı da susturur. Dinleme için diğer iki moddan biri seçilebilir.
 
 Doğru yanıt, yıldız, kişisel rekor ve bölüm tamamlama için birbirinden farklı nota dizileri, yumuşak sinüs/üçgen osilatörler ve kısa ses zarfları kullanılır. Müzik ve Efektler modunda yalnız rekor/tamamlama ödül ve geçiş durumlarına kısa bas/akor yanıtı eklenir. Bütün efektler bir saniyeden kısadır. Yanlış yanıt yumuşak tek ton olarak kalır.
 

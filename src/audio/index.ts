@@ -23,7 +23,7 @@ export async function loadSoundMode(): Promise<SoundMode> {
   const raw = Capacitor.isNativePlatform()
     ? (await Preferences.get({ key: AUDIO_KEY })).value
     : localStorage.getItem(AUDIO_KEY);
-  return raw === "on" || raw === "effects" ? "effects" : raw === "music" ? "music" : "silent";
+  return raw === null || raw === "on" || raw === "effects" ? "effects" : raw === "music" ? "music" : "silent";
 }
 export async function saveSoundMode(value: SoundMode): Promise<void> {
   if (Capacitor.isNativePlatform()) await Preferences.set({ key: AUDIO_KEY, value });

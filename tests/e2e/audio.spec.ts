@@ -2,7 +2,8 @@ import { test, expect } from "@playwright/test";
 test("ses tercihi çevrimdışı korunur, efekt üretilir ve karakter adları günceldir", async ({ page, context }) => {
   await page.goto("/");
   const sound = page.getByRole("combobox", { name: "Ses modu" });
-  await expect(sound).toHaveValue("silent");
+  await expect(sound).toHaveValue("effects");
+  await sound.selectOption("silent");
   await page.evaluate(() => {
     const original = AudioContext.prototype.createOscillator;
     (window as unknown as { soundCount: number }).soundCount = 0;
@@ -39,7 +40,8 @@ test("ses tercihi çevrimdışı korunur, efekt üretilir ve karakter adları g�
 
 test("Müzik ve Efektler ders ekranlarında müzik başlatmaz; Sessiz modu konuşmayı da kapatır", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByRole("combobox", { name: "Ses modu" })).toHaveValue("silent");
+  await expect(page.getByRole("combobox", { name: "Ses modu" })).toHaveValue("effects");
+  await page.getByRole("combobox", { name: "Ses modu" }).selectOption("silent");
   await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
   await expect(page.getByRole("button", { name: "Yönergeyi dinle" })).toBeDisabled();
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("music");

@@ -4,8 +4,8 @@ import { Preferences } from "@capacitor/preferences";
 import { AUDIO_KEY, enableEffects, loadAudio, saveAudio, playEffect, stopEffects } from ".";
 vi.mock("@capacitor/preferences", () => ({ Preferences: { get: vi.fn(), set: vi.fn() } }));
 afterEach(() => { enableEffects(false); vi.restoreAllMocks(); vi.unstubAllGlobals(); });
-it("ilk açılışta sessizdir, web seçimi kalıcıdır ve bozuk kayıt kapalı kalır", async () => {
-  expect(await loadAudio()).toBe(false);
+it("ilk açılışta efektler açıktır, web seçimi kalıcıdır ve bozuk kayıt kapalı kalır", async () => {
+  expect(await loadAudio()).toBe(true);
   await saveAudio(true);
   expect(await loadAudio()).toBe(true);
   await saveAudio(false);
@@ -57,6 +57,9 @@ it("kapalıyken ses oluşturmaz; açıkken kısa ses çalar, kapatınca durdurur
 
 it("üç ses modu eski on/off ayarlarını koruyarak cihazda saklanır", async () => {
   const { loadSoundMode, saveSoundMode } = await import(".");
+  expect(await loadSoundMode()).toBe("effects");
+  await saveSoundMode("silent");
+  expect(await loadSoundMode()).toBe("silent");
   localStorage.setItem(AUDIO_KEY, "on");
   expect(await loadSoundMode()).toBe("effects");
   localStorage.setItem(AUDIO_KEY, "off");

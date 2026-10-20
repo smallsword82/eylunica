@@ -116,7 +116,7 @@ export function ReadingAcademy({
   }
   return (
     <main className="subpage academy-page">
-      <Header academy="reading" onBack={onBack} character="Zeyna" />
+      <Header academy="reading" onBack={onBack} character="Öykü" />
       {done ? (
         <Completion
           onBack={onBack}
@@ -227,7 +227,7 @@ export function AttentionAcademy({
   }
   return (
     <main className="subpage academy-page">
-      <Header academy="attention" onBack={onBack} character="Derin" />
+      <Header academy="attention" onBack={onBack} character="Alara" />
       <p className="health-note">
         Bu oyunlar öğrenme alıştırmasıdır; tıbbi teşhis veya tedavi aracı
         değildir.
@@ -335,7 +335,7 @@ export function ConcertAcademy({
   }
   return (
     <main className="subpage academy-page">
-      <Header academy="concert" onBack={onBack} character="Elya" />
+      <Header academy="concert" onBack={onBack} character="Defne" />
       {done ? (
         <Completion
           onBack={onBack}

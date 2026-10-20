@@ -102,3 +102,10 @@ Ortam zaten yalıtılmıştır; mevcut `/workspace/manifestakademi` checkout'und
 Web test sitesinin yayımlanması kullanıcı tarafından onaylandı. Kaynak depoyu özel tutun. GitHub'da **Settings → Pages → Build and deployment → Source: GitHub Actions** ayarının açık olması gerekir; bu ayarı açmak mevcut bulut bağlantısının Pages API yetkisini aştığı için depo sahibi tarafından yapılabilir.
 
 **Actions → Publish web test site → Run workflow → main** iş akışı web testlerini ve üretim derlemesini çalıştırır, yalnızca `dist/` dizinini Pages'e yayımlar. Gerçek site adresi başarılı `deploy` işinin `github-pages` ortam bağlantısında bulunur. İş akışı elle tetiklenir; sonraki Git push'ları kendiliğinden siteyi yayımlamaz. Kaynak depo, test raporları ve APK dosyaları bu siteye yüklenmez. PWA'nın göreli varlık yolları proje alt dizini ile uyumludur. Site ilk açılışta internet gerektirir; önbellek hazır olduktan sonra çevrimdışı oyun kullanılabilir.
+
+
+### 0.3.1: karakter adları ve kısa sesler
+
+RİTMA kadrosu Mina, Eylül, Alara, Beren, Öykü ve Defne. Önceki karakter seçimleri aynı görünümün yeni adına taşınır; yıldızlar ve öğrenme kayıtları korunur. Karakter ekranında hazır bir ad seçilebilir veya seçilen görünüme en fazla 24 karakterlik bir ilk ad verilebilir. Tek bir özel ad tutulur; başka görünüme atanınca önceki görünümün hazır adı geri gelir. Bu bilgi yalnızca cihazdaki mevcut ilerleme kaydında tutulur ve istenildiğinde kaldırılabilir; hikâyeler özgün kurgu adlarını kullanır.
+
+Üstteki **Ses efektleri** düğmesi kısa doğru cevap, yeniden deneme, yıldız ve tamamlama seslerini açar/kapatır. Varsayılan kapalıdır; tercih webde localStorage, Androidde Preferences içinde `ritma-audio-v1` anahtarında saklanır. Efektler Web Audio ile özgün olarak üretilir; ses dosyası indirme, internet, mikrofon, sürekli müzik veya konuşma API'si yoktur. Ses desteği olmasa da öğrenme akışı sürer. Sekme gizlenince, odak kaybolunca, mola penceresi açılınca veya ses kapatılınca çalmakta olan efektler kesilir. Ses düzeyi cihazın medya sesine de bağlıdır. Türkçe konuşmalı seslendirme bu sürüme dahil değildir.

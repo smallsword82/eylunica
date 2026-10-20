@@ -1,3 +1,6 @@
+import { CharacterName } from "./ui/CharacterName";
+import { useAudio } from "./audio/useAudio";
+import { playEffect, stopEffects } from "./audio";
 import { createPortal } from "react-dom";
 import { useWellbeing } from "./wellbeing/useWellbeing";
 import { ParentTimePanel, TimeNotice } from "./ui/Wellbeing";
@@ -75,7 +78,9 @@ export default function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [screen]);
+  const audio = useAudio();
   const wellbeing = useWellbeing(ready);
+  useEffect(() => { if (wellbeing.notice) stopEffects(); }, [wellbeing.notice]);
   useEffect(() => {
     if (screen === "play") wellbeing.setContext("math", true);
     else if (screen === "parent") wellbeing.setContext(null, false);
@@ -143,6 +148,7 @@ export default function App() {
     if (!question || solved || pending.current) return;
     pending.current = true;
     const correct = value === question.answer;
+    void playEffect(correct ? (!attempted.current ? "star" : "correct") : "retry");
     if (!correct) usedHint.current = true;
     // One learning record and at most one star per question; retries remain encouraging.
     if (!attempted.current) {
@@ -173,6 +179,7 @@ export default function App() {
       () => {
         if (count >= 4 || (calibration && count >= 3)) {
           if (calibration) persist({ ...progress, calibrationDone: true });
+          void playEffect("complete");
           setScreen("summary");
           return;
         }
@@ -190,7 +197,8 @@ export default function App() {
     ),
     correct = Object.values(progress.skills).reduce((n, s) => n + s.correct, 0);
   const currentWorld = worlds.find((w) => w.operation === mode) || worlds[0];
-  const guide = calibration ? "Zeyna" : currentWorld.character;
+  const displayName = (name: string) => progress.customCharacter?.character === name ? progress.customCharacter.name : name;
+  const guide = calibration ? "Öykü" : currentWorld.character;
   return (
     <div className="app-shell" inert={!!wellbeing.notice}>
       <header className="topbar">
@@ -213,9 +221,10 @@ export default function App() {
               Mola ver
             </button>
           )}
-          <span className="quiet">
-            <span aria-hidden="true">◉</span> Sessiz bir macera
-          </span>
+          <button className="sound-button" aria-label="Ses efektleri" aria-pressed={audio.enabled}
+            disabled={!audio.ready} onClick={audio.toggle}>
+            Ses {audio.enabled ? "açık" : "kapalı"}
+          </button>
           <span className="star-pill" aria-label={`${progress.stars} yıldız`}>
             ✦ {progress.stars}
           </span>
@@ -224,7 +233,7 @@ export default function App() {
             onClick={() => setScreen("characters")}
             aria-label="Karakter seç"
           >
-            <Avatar name={progress.character} />
+            <Avatar name={progress.character} label={displayName(progress.character)} />
           </button>
         </div>
       </header>
@@ -233,6 +242,7 @@ export default function App() {
           {error}
         </div>
       )}
+      {audio.error && <div className="storage-error" role="alert">{audio.error}</div>}
       {wellbeing.error && (
         <div className="storage-error" role="alert">
           {wellbeing.error}
@@ -318,9 +328,9 @@ export default function App() {
                     RİTMA<span>SAHNE SENİN!</span>
                   </div>
                   <div className="stage-team">
-                    <Avatar name="Lidya" large />
+                    <Avatar name="Eylül" large />
                     <Avatar name="Mina" large />
-                    <Avatar name="Derin" large />
+                    <Avatar name="Alara" large />
                   </div>
                   <div className="stage-floor" />
                   <div className="stage-badge">✦ Her fikir bir ışık yakar</div>
@@ -411,10 +421,10 @@ export default function App() {
                 </button>
               </section>
               <section className="companion">
-                <Avatar name={progress.character} />
+                <Avatar name={progress.character} label={displayName(progress.character)} />
                 <div>
                   <div className="eyebrow muted">SAHNE ARKADAŞIN</div>
-                  <h3>{progress.character} yanında.</h3>
+                  <h3>{displayName(progress.character)} yanında.</h3>
                   <p>
                     Her sorunun birden fazla yolu var. Kendi yolunu
                     bulabilirsin.
@@ -485,8 +495,8 @@ export default function App() {
                     onClick={() => persist({ ...progress, character: c.name })}
                     aria-pressed={progress.character === c.name}
                   >
-                    <Avatar name={c.name} large />
-                    <h2>{c.name}</h2>
+                    <Avatar name={c.name} label={displayName(c.name)} large />
+                    <h2>{displayName(c.name)}</h2>
                     <p>{c.role}</p>
                     <span>
                       {progress.character === c.name
@@ -496,6 +506,7 @@ export default function App() {
                   </button>
                 ))}
               </div>
+              <CharacterName key={progress.character} progress={progress} onSave={persist} />
               <button className="primary" onClick={() => setScreen("home")}>
                 Maceraya dön →
               </button>

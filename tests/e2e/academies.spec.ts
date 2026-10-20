@@ -84,7 +84,7 @@ test("okuma: eski kayıt korunur, altı beceri tamamlanır ve çevrimdışı ger
     )
     .toBe(6);
   await page.reload();
-  await expect(page.getByText("Elya yanında.")).toBeVisible();
+  await expect(page.getByText("Defne yanında.")).toBeVisible();
   await expect(page.getByLabel("16 yıldız", { exact: true })).toBeVisible();
   const p = await page.evaluate(
     (k) => JSON.parse(localStorage.getItem(k)!),

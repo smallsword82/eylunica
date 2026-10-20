@@ -67,7 +67,7 @@ export const stories: Story[] = [
     [
       "Mina, okul konseri için kâğıttan bir fener yaptı.",
       "Rüzgâr çıkınca fenerin ince sapı koptu.",
-      "Lidya, sapı daha kalın bir iple bağlamayı önerdi.",
+      "Eylül, sapı daha kalın bir iple bağlamayı önerdi.",
       "İkisi birlikte çalışınca fener yeniden sahneye asıldı.",
       "Mina, dayanıklı bir şeyin kolayca bozulmadığını o gün öğrendi.",
     ],
@@ -84,7 +84,7 @@ export const stories: Story[] = [
         "İki arkadaş birlikte çalışınca feneri yeniden astı. Metnin bütünü yardımlaşarak sorun çözmeyi anlatıyor.",
       ],
       [
-        "Lidya hangi malzemeyi önerdi?",
+        "Eylül hangi malzemeyi önerdi?",
         ["Kalın ip", "Cam bardak", "İnce kâğıt", "Tahta kutu"],
         [2],
         "Üçüncü cümlede önerinin kalın ip olduğu açıkça söyleniyor.",
@@ -101,7 +101,7 @@ export const stories: Story[] = [
         "İkinci cümle rüzgâr ile ince sapın kopması arasındaki bağlantıyı kuruyor.",
       ],
       [
-        "Mina ve Lidya için hangisini söyleyebiliriz?",
+        "Mina ve Eylül için hangisini söyleyebiliriz?",
         [
           "Sorunu görünce çözüm aradılar.",
           "Feneri hemen çöpe attılar.",
@@ -140,12 +140,12 @@ export const stories: Story[] = [
     "Kayıp Tohum Kutusu",
     1,
     [
-      "Arya ile Derin, okul bahçesine çiçek ekmek için bir kutu tohum getirdi.",
+      "Beren ile Alara, okul bahçesine çiçek ekmek için bir kutu tohum getirdi.",
       "Kutuyu bankta bulamayınca önce çevreyi dikkatle incelediler.",
       "Toprağın üzerindeki küçük izler kulübeye kadar gidiyordu.",
       "Kutuyu, yağmurdan korumak için kulübeye taşıyan görevli onlara seslendi.",
       "Çocuklar izleri takip ederek kutuya ulaştı ve görevliye teşekkür etti.",
-      "Arya, dikkatle bakmanın aramakta çok işe yaradığını söyledi.",
+      "Beren, dikkatle bakmanın aramakta çok işe yaradığını söyledi.",
     ],
     [
       [
@@ -218,13 +218,13 @@ export const stories: Story[] = [
     [
       "RİTMA, okul kütüphanesinin yanındaki salonda konser hazırlığı yapıyordu.",
       "Mina ritim tutmak için masaya vurunca yan odadaki okurların başlarını kaldırdığını fark etti.",
-      "Elya, prova yapmakla başkalarının sessizlik ihtiyacını birlikte düşünmeleri gerektiğini söyledi.",
-      "Derin, ritimleri ses çıkarmadan renkli kartlarla göstermeyi önerdi.",
+      "Defne, prova yapmakla başkalarının sessizlik ihtiyacını birlikte düşünmeleri gerektiğini söyledi.",
+      "Alara, ritimleri ses çıkarmadan renkli kartlarla göstermeyi önerdi.",
       "Önce mavi kart kaldırılacak, ardından sarı, en son yeşil kart gösterilecekti.",
       "İlk denemede herkes aynı anda kart kaldırdı ve sıra karıştı.",
-      "Lidya, her karttan önce birbirlerine bakmalarını önerince grup uyum sağladı.",
+      "Eylül, her karttan önce birbirlerine bakmalarını önerince grup uyum sağladı.",
       "Kütüphanede okuyanlar çalışmalarına devam ederken RİTMA da provasını tamamladı.",
-      "Elya, iyi bir çözümün yalnız kendi işimizi değil, çevremizdeki insanların ihtiyacını da gözettiğini günlüğüne yazdı.",
+      "Defne, iyi bir çözümün yalnız kendi işimizi değil, çevremizdeki insanların ihtiyacını da gözettiğini günlüğüne yazdı.",
     ],
     [
       [
@@ -258,10 +258,10 @@ export const stories: Story[] = [
           "Konserden vazgeçtiği için",
         ],
         [1, 2],
-        "Okurların başlarını kaldırması Mina’ya sesi fark ettirdi; Elya da sessizlik ihtiyacını hatırlattı.",
+        "Okurların başlarını kaldırması Mina’ya sesi fark ettirdi; Defne de sessizlik ihtiyacını hatırlattı.",
       ],
       [
-        "Lidya’nın önerisinden ne çıkarılabilir?",
+        "Eylül’ün önerisinden ne çıkarılabilir?",
         [
           "Birbirini izlemek birlikte çalışmayı kolaylaştırabilir.",
           "Kartların rengi önemli değildir.",
@@ -277,7 +277,7 @@ export const stories: Story[] = [
           "İlk denemede kartların sırası karıştı.",
           "Mina masaya vurdu.",
           "Okurlar başlarını kaldırdı.",
-          "Elya günlüğüne sonuç yazdı.",
+          "Defne günlüğüne sonuç yazdı.",
         ],
         [5],
         "Altıncı cümledeki karışıklık, öneri ile başarılı düzenleme arasındaki olaydır.",
@@ -291,7 +291,7 @@ export const stories: Story[] = [
           "Bir işi ertelemek",
         ],
         [8],
-        "Elya insanların ihtiyaçlarını dikkate almaktan söz ediyor; gizlice izlemekten değil.",
+        "Defne insanların ihtiyaçlarını dikkate almaktan söz ediyor; gizlice izlemekten değil.",
       ],
     ],
   ),
@@ -300,13 +300,13 @@ export const stories: Story[] = [
     "Kitabın İçindeki İz",
     2,
     [
-      "Zeyna, konser afişi için okulun eski fotoğraflarını araştırıyordu.",
+      "Öykü, konser afişi için okulun eski fotoğraflarını araştırıyordu.",
       "Bir kitapta yarısı görünen bir fotoğraf ve üzerinde “bahar” yazan küçük bir not buldu.",
       "Fotoğraftaki ağaç yapraksızdı; buna bakıp görüntünün kışın çekildiğini düşündü.",
-      "Arya, tek bir ayrıntının kesin karar vermek için yetmeyebileceğini hatırlattı.",
+      "Beren, tek bir ayrıntının kesin karar vermek için yetmeyebileceğini hatırlattı.",
       "İkisi fotoğrafın arkasını dikkatle çevirince mart ayına ait bir tarih gördü.",
       "Bahçıvan, bahçedeki bazı ağaçların mart sonunda yapraklandığını anlattı.",
-      "Zeyna ilk tahminini değiştirdi ve fotoğrafın erken ilkbaharda çekilmiş olabileceğini yazdı.",
+      "Öykü ilk tahminini değiştirdi ve fotoğrafın erken ilkbaharda çekilmiş olabileceğini yazdı.",
       "Tarihi, notu ve bahçıvanın açıklamasını birlikte değerlendirince daha güçlü bir sonuca ulaştılar.",
       "Afişin altına kesin bilmedikleri ayrıntıları eklemek yerine, yalnızca kanıtı olan bilgileri yazdılar.",
     ],
@@ -334,7 +334,7 @@ export const stories: Story[] = [
         "Beşinci cümlede arka yüzdeki bilgi açıkça belirtilir.",
       ],
       [
-        "Zeyna ilk başta neden kış mevsimini düşündü?",
+        "Öykü ilk başta neden kış mevsimini düşündü?",
         [
           "Ağaç yapraksız göründüğü için",
           "Notta kış yazdığı için",
@@ -345,7 +345,7 @@ export const stories: Story[] = [
         "İlk tahminin dayanağı üçüncü cümledeki yapraksız ağaçtır.",
       ],
       [
-        "Arya için hangisi söylenebilir?",
+        "Beren için hangisi söylenebilir?",
         [
           "Kesin karar vermeden önce başka bilgi aramayı önemsiyor.",
           "Bütün notların yanlış olduğunu düşünüyor.",
@@ -356,7 +356,7 @@ export const stories: Story[] = [
         "Tek ayrıntının yetmeyebileceğini söylemesi, daha fazla kanıt aradığını gösterir.",
       ],
       [
-        "Zeyna’nın tahminini değiştirmesinden hemen önce hangi bilgi edinildi?",
+        "Öykü’nün tahminini değiştirmesinden hemen önce hangi bilgi edinildi?",
         [
           "Bazı ağaçların mart sonunda yapraklandığı",
           "Afişin nerede asılacağı",
@@ -385,17 +385,17 @@ export const stories: Story[] = [
     3,
     [
       "RİTMA okul bahçesindeki konser için iki haftadır hazırlanıyordu.",
-      "Hava raporunda yağmur olasılığı görünce Elya hazırlık toplantısında yedek bir plan önerdi.",
+      "Hava raporunda yağmur olasılığı görünce Defne hazırlık toplantısında yedek bir plan önerdi.",
       "Bazıları planın gereksiz olduğunu, çünkü o anda gökyüzünün açık göründüğünü söyledi.",
-      "Lidya, o anki hava ile akşamki olasılığın aynı şey olmadığını hatırlattı.",
+      "Eylül, o anki hava ile akşamki olasılığın aynı şey olmadığını hatırlattı.",
       "Grup, bahçe için hazırlanan hafif süsleri salona kolay taşınacak biçimde kutulara ayırdı.",
-      "Salon daha küçük olduğundan Derin geçiş yolunu boş bırakacak bir yerleşim çizdi.",
+      "Salon daha küçük olduğundan Alara geçiş yolunu boş bırakacak bir yerleşim çizdi.",
       "Mina, davetlilere yer değişikliğini duyurmak için iki ayrı afiş hazırladı; yalnızca kullanılacak afiş asılacaktı.",
       "Öğleden sonra yağmur başladı ve ekip hazırladığı sırayla kutuları salona taşıdı.",
-      "Geçiş yolunu kapatan büyük bir kutu fark edilince Arya onu ayrılan depoya götürdü.",
+      "Geçiş yolunu kapatan büyük bir kutu fark edilince Beren onu ayrılan depoya götürdü.",
       "Davetliler doğru afişi izleyerek salona ulaştı, girişte bir karışıklık yaşanmadı.",
       "Yağmurun başlayıp başlamayacağını yönetememişlerdi, ama olasılığı düşünmek hazırlıklarını yönetmelerini sağlamıştı.",
-      "Konser sonunda Elya, yedek planın kötü bir şey beklemek değil, değişiklik olduğunda seçenek sahibi olmak anlamına geldiğini yazdı.",
+      "Konser sonunda Defne, yedek planın kötü bir şey beklemek değil, değişiklik olduğunda seçenek sahibi olmak anlamına geldiğini yazdı.",
     ],
     [
       [
@@ -445,13 +445,13 @@ export const stories: Story[] = [
       [
         "Hangisi yağmur başladıktan sonra gerçekleşti?",
         [
-          "Arya geçişteki kutuyu depoya taşıdı.",
-          "Elya ilk yedek plan önerisini yaptı.",
+          "Beren geçişteki kutuyu depoya taşıdı.",
+          "Defne ilk yedek plan önerisini yaptı.",
           "Mina iki afiş hazırladı.",
-          "Derin ilk yerleşim çizimini yaptı.",
+          "Alara ilk yerleşim çizimini yaptı.",
         ],
         [7, 8],
-        "Sekizinci cümlede yağmur başlar, dokuzuncuda Arya kutuyu taşır.",
+        "Sekizinci cümlede yağmur başlar, dokuzuncuda Beren kutuyu taşır.",
       ],
       [
         "“Olasılık” metinde hangi anlamdadır?",
@@ -462,7 +462,7 @@ export const stories: Story[] = [
           "Değiştirilemeyen bir kural",
         ],
         [1, 3],
-        "Rapor bir ihtimal bildirir; Lidya da şu anki durumun akşamı kesinleştirmediğini belirtir.",
+        "Rapor bir ihtimal bildirir; Eylül de şu anki durumun akşamı kesinleştirmediğini belirtir.",
       ],
     ],
   ),
@@ -471,17 +471,17 @@ export const stories: Story[] = [
     "Saatin Gösterdiği Sır",
     3,
     [
-      "Konserden önce Elya, eski prova defterindeki bir notun hangi güne ait olduğunu anlamaya çalışıyordu.",
+      "Konserden önce Defne, eski prova defterindeki bir notun hangi güne ait olduğunu anlamaya çalışıyordu.",
       "Notta “Gölge bahçe duvarına ulaştığında prova bitti” yazıyordu; tarih kısmı silinmişti.",
       "Mina, uzun gölgenin her zaman akşamı gösterdiğini düşünerek provanın geç bittiğini söyledi.",
-      "Zeyna aynı yerde sabah da uzun gölge olabileceğini, bu yüzden başka bir ipucuna ihtiyaç duyduklarını belirtti.",
+      "Öykü aynı yerde sabah da uzun gölge olabileceğini, bu yüzden başka bir ipucuna ihtiyaç duyduklarını belirtti.",
       "Defterin arasından çıkan davetiyede o günkü provanın öğleden sonra başlayacağı yazılıydı.",
-      "Lidya bu bilginin sabah olasılığını zayıflattığını, fakat bitiş saatini tek başına vermediğini açıkladı.",
-      "Derin bir sonraki sayfada, provadan sonra okulun saat kulesinin dört kez çaldığına ilişkin bir cümle buldu.",
-      "Arya, kule saatinin düzgün çalışıp çalışmadığının da bilinmesi gerektiğini söyledi.",
+      "Eylül bu bilginin sabah olasılığını zayıflattığını, fakat bitiş saatini tek başına vermediğini açıkladı.",
+      "Alara bir sonraki sayfada, provadan sonra okulun saat kulesinin dört kez çaldığına ilişkin bir cümle buldu.",
+      "Beren, kule saatinin düzgün çalışıp çalışmadığının da bilinmesi gerektiğini söyledi.",
       "Görevli o gün saatin kontrol edildiğini ve doğru çalıştığını hatırladı.",
       "Grup bütün bilgileri birleştirerek provanın öğleden sonra dörde yakın bitmiş olabileceği sonucuna ulaştı.",
-      "Elya deftere “kesin olarak” yerine “eldeki bilgilere göre” yazarak sonucun dayanağını görünür tuttu.",
+      "Defne deftere “kesin olarak” yerine “eldeki bilgilere göre” yazarak sonucun dayanağını görünür tuttu.",
       "Eksik bir kaydı tamamlamaya çalışırken tek bir belirtiyi kesin kanıt saymamayı da öğrenmişlerdi.",
     ],
     [
@@ -508,7 +508,7 @@ export const stories: Story[] = [
         "Prova öğleden sonra başlayacaksa sabah bitmiş olması beklenmez; yine de bitiş saati buradan çıkmaz.",
       ],
       [
-        "Arya neden saatin düzgün çalışmasını sordu?",
+        "Beren neden saatin düzgün çalışmasını sordu?",
         [
           "Dört vuruşun zaman için güvenilir bir ipucu olup olmadığını anlamak için",
           "Saatin rengini öğrenmek için",
@@ -519,7 +519,7 @@ export const stories: Story[] = [
         "Saat vuruşuna dayanan çıkarım, saatin doğru çalışması koşuluna bağlıdır.",
       ],
       [
-        "Elya’nın “eldeki bilgilere göre” sözü neyi gösterir?",
+        "Defne’nin “eldeki bilgilere göre” sözü neyi gösterir?",
         [
           "Yeni bir kanıt gelirse sonucun gözden geçirilebileceğini",
           "Hiçbir bilgiye güvenilemeyeceğini",
@@ -532,13 +532,13 @@ export const stories: Story[] = [
       [
         "Saatin kontrol edildiği öğrenilmeden önce ne oldu?",
         [
-          "Derin dört vuruşla ilgili cümleyi buldu.",
-          "Elya sonucu deftere yazdı.",
+          "Alara dört vuruşla ilgili cümleyi buldu.",
+          "Defne sonucu deftere yazdı.",
           "Grup sonuca ulaştı.",
           "Defter tamamlandı.",
         ],
         [6, 8],
-        "Derin’in bulgusu yedinci, görevlinin doğrulaması dokuzuncu cümlededir.",
+        "Alara’nın bulgusu yedinci, görevlinin doğrulaması dokuzuncu cümlededir.",
       ],
       [
         "“Dayanak” sözcüğü burada ne demektir?",

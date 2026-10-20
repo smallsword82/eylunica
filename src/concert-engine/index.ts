@@ -21,11 +21,11 @@ export function concert(
   const sentences = [
     "RİTMA, okurlar rahatsız olmasın diye kütüphanenin yanındaki salonda sessiz prova yapmaya karar verdi.",
     level === 1
-      ? `Mina ${a} ışık, Arya ${b} ışık getirdi; hepsi birlikte asılacak.`
+      ? `Mina ${a} ışık, Beren ${b} ışık getirdi; hepsi birlikte asılacak.`
       : level === 2
-        ? `Derin ${a} sıra hazırladı; her sıraya ${b} sandalye koydu.`
-        : `Arya ${a} bileti ${b} arkadaşına eşit paylaştıracak.`,
-    "Elya sahne işaretlerinin sırasını belirledi: önce yıldız, sonra daire, en son üçgen.",
+        ? `Alara ${a} sıra hazırladı; her sıraya ${b} sandalye koydu.`
+        : `Beren ${a} bileti ${b} arkadaşına eşit paylaştıracak.`,
+    "Defne sahne işaretlerinin sırasını belirledi: önce yıldız, sonra daire, en son üçgen.",
     "Ekip planı birlikte okuyup her görevin tamamlandığını kontrol etti.",
   ];
   const id = `concert-${level}-${round}`;

@@ -2,9 +2,11 @@ import { characters } from "../game";
 export function Avatar({
   name,
   large = false,
+  label,
 }: {
   name: string;
   large?: boolean;
+  label?: string;
 }) {
   const c = characters.find((x) => x.name === name) || characters[0];
   return (
@@ -12,7 +14,7 @@ export function Avatar({
       className={large ? "avatar large" : "avatar"}
       viewBox="0 0 120 150"
       role="img"
-      aria-label={`${c.name}, özgün RİTMA karakteri`}
+      aria-label={`${label ?? c.name}, özgün RİTMA karakteri`}
     >
       <ellipse cx="60" cy="141" rx="36" ry="6" fill="#000" opacity=".12" />
       <path

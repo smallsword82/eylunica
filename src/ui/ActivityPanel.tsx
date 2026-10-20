@@ -1,3 +1,4 @@
+import { playEffect } from "../audio";
 import { useRef, useState } from "react";
 import type { Activity, LearningResult } from "../learning-engine";
 import { checkReading } from "../reading-engine";
@@ -34,6 +35,7 @@ export function ActivityPanel({
           evidence !== null &&
           checkReading(task, selected, evidence)
         : selected === task.answer;
+    void playEffect(correct ? (last ? "complete" : !attempted.current ? "star" : "correct") : "retry");
     if (!correct) {
       usedHint.current = true;
       setHint(true);

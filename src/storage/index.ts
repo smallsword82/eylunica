@@ -6,6 +6,7 @@ import {
   type LearningState,
   type LearningResult,
 } from "../learning-engine";
+import { normalizeCharacter } from "../game";
 import { Capacitor } from "@capacitor/core";
 import { Preferences } from "@capacitor/preferences";
 import type { Operation, Question } from "../math-engine";
@@ -31,6 +32,7 @@ export type Progress = {
   version: 2;
   academies: Record<Academy, LearningState>;
   character: string;
+  customCharacter?: { character: string; name: string };
   stars: number;
   skills: Record<Operation, Skill>;
   history: Attempt[];
@@ -94,6 +96,13 @@ export function decode(raw: string | null): Progress {
         !s.recent.every((x: unknown) => typeof x === "boolean")
       )
         return fresh();
+    }
+    p.character = normalizeCharacter(p.character);
+    if (p.customCharacter) {
+      const custom = p.customCharacter;
+      if (typeof custom.character === "string" && typeof custom.name === "string" && custom.name.trim())
+        p.customCharacter = { character: normalizeCharacter(custom.character), name: custom.name.trim().slice(0, 24) };
+      else delete p.customCharacter;
     }
     if (p.version === 1)
       return {

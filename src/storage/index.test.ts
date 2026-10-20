@@ -12,7 +12,7 @@ import {
 import { generate } from "../math-engine";
 it("yerel kayıt tekrar okunur", async () => {
   const p = fresh();
-  p.character = "Arya";
+  p.character = "Beren";
   p.stars = 12;
   await saveProgress(p);
   expect(await loadProgress()).toEqual(p);
@@ -91,7 +91,7 @@ it("v1 kaydını matematik, karakter, yıldız ve ödülleri koruyarak v2ye taş
   const migrated = await loadProgress();
   expect(migrated.version).toBe(2);
   expect(migrated.skills).toEqual(p.skills);
-  expect(migrated.character).toBe("Elya");
+  expect(migrated.character).toBe("Defne");
   expect(migrated.stars).toBe(18);
   expect(migrated.rewards).toEqual(p.rewards);
   expect(migrated.history).toEqual(p.history);
@@ -116,4 +116,13 @@ it("yeni akademi puanları matematik becerilerini değiştirmez", async () => {
   expect(p.academies.attention.attempts).toBe(0);
   await saveProgress(p);
   expect(await loadProgress()).toEqual(p);
+});
+
+it("eski altı karakter adını aynı arkadaşın yeni adına taşır, öğrenmeyi korur", () => {
+  for (const [oldName, newName] of [["Mina", "Mina"], ["Lidya", "Eylül"], ["Derin", "Alara"], ["Arya", "Beren"], ["Zeyna", "Öykü"], ["Elya", "Defne"]]) {
+    const previous = record(fresh(), generate("add"), true, false, 1500);
+    previous.character = oldName;
+    const next = decode(JSON.stringify(previous));
+    expect(next).toEqual({ ...previous, character: newName });
+  }
 });

@@ -152,13 +152,13 @@ export function generateAttention(
     {
       ...base,
       sentences: [
-        `Elya sahneye ${count} mavi kurdele ve ${count + 2} sarı kurdele getirdi.`,
+        `Defne sahneye ${count} mavi kurdele ve ${count + 2} sarı kurdele getirdi.`,
         `Mavi kurdeleleri küçük kutuya, sarı kurdeleleri büyük kutuya koydu.`,
         ...(level > 1
-          ? ["Zeyna boş yeşil kutuyu masanın altına bıraktı."]
+          ? ["Öykü boş yeşil kutuyu masanın altına bıraktı."]
           : []),
         ...(level > 2
-          ? ["Elya büyük kutunun kapağını kapattı, küçük kutu açık kaldı."]
+          ? ["Defne büyük kutunun kapağını kapattı, küçük kutu açık kaldı."]
           : []),
       ],
       prompt:

@@ -17,7 +17,7 @@ import {
   ConcertAcademy,
   AcademyProgress,
 } from "./ui/Academies";
-import { useEffect, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { Capacitor } from "@capacitor/core";
 import {
   generate,
@@ -39,9 +39,11 @@ import { Avatar } from "./ui/Avatar";
 import { MusicLounge } from "./ui/MusicLounge";
 import { ManifestAudioControls } from "./ui/ManifestAudioControls";
 import { getManifestPlayback, startManifestShuffle } from "./audio/manifest";
+const StarLeague = lazy(() => import("./ui/StarLeague").then(module => ({ default: module.StarLeague })));
 const ops: Operation[] = ["add", "subtract", "multiply", "divide"];
 type Screen =
   | "welcome"
+  | "league"
   | "music"
   | "home"
   | "characters"
@@ -55,7 +57,7 @@ type Screen =
 export default function App() {
   const [progress, setProgress] = useState<Progress>(fresh),
     [ready, setReady] = useState(false),
-    [screen, setScreen] = useState<Screen>("welcome");
+    [screen, setScreen] = useState<Screen>(() => new URLSearchParams(location.search).has("league") ? "league" : "welcome");
   const [question, setQuestion] = useState<Question | null>(null),
     [mode, setMode] = useState("add"),
     [hint, setHint] = useState(false),
@@ -113,7 +115,7 @@ export default function App() {
   useEffect(() => {
     if (screen === "play") wellbeing.setContext("math", true);
     else if (screen === "parent") wellbeing.setContext(null, false);
-    else if (!["reading", "attention", "concert", "arena"].includes(screen))
+    else if (!["reading", "attention", "concert", "arena", "league"].includes(screen))
       wellbeing.setContext("other", false);
   }, [screen, wellbeing.setContext]);
   function persist(next: Progress) {
@@ -251,6 +253,7 @@ export default function App() {
           </span>
         </button>
         <div className="top-actions">
+          <button className="secondary" onClick={() => setScreen("league")}>Yıldız ligi · Giriş</button>
           {ready && screen !== "parent" && (
             <button className="pause-button" onClick={() => wellbeing.pause()}>
               Mola ver
@@ -292,6 +295,7 @@ export default function App() {
         </main>
       ) : (
         <>
+          {screen === "league" && <Suspense fallback={<main><p role="status">Yıldız ligi açılıyor…</p></main>}><StarLeague onBack={() => setScreen("home")} onActivity={wellbeing.setContext} onTransition={wellbeing.transition} paused={!!wellbeing.notice} /></Suspense>}
           {screen === "music" && <MusicLounge learnerName={progress.learnerName || "Eylül"} paused={!!wellbeing.notice} onBack={() => setScreen("home")} onEnableMusic={() => audio.changeMode("music")} />}
           {screen === "home" && (
             <main>
@@ -780,8 +784,7 @@ export default function App() {
               </button>
               <h1>Küçük keşiflerin günlüğü</h1>
               <p>
-                Bu cihazdaki ilerleme. Hesap, reklam, analiz veya bulut kaydı
-                yok.
+                Bu rapor cihazdaki yerel öğrenme ilerlemesidir. İsteğe bağlı Yıldız Ligi hesabı ve çevrimiçi lig yıldızları ayrı tutulur; bu öğrenme geçmişi buluta gönderilmez.
               </p>
               <div className="stats">
                 <div>

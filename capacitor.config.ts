@@ -1,7 +1,7 @@
 import type { CapacitorConfig } from "@capacitor/cli";
 const config: CapacitorConfig = {
   appId: "com.ritma.matematiksahnesi",
-  appName: "Matematik Sahnesi",
+  appName: "eylunica",
   webDir: "dist",
   android: { allowMixedContent: false },
 };

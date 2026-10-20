@@ -2023,3 +2023,21 @@ footer button,
 }
 .continue-card .continue-button:focus-visible { outline: 3px solid #b9efd2; outline-offset: 5px; }
 .continue-card .small { margin-bottom: 0; }
+.league-layout { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 24px 0; }
+.league-account, .league-board, .league-rules { padding: 24px; border: 1px solid #69577c; border-radius: 24px; background: #251c36; min-width: 0; }
+.league-page form { display: grid; gap: 16px; }
+.league-page label:not(.league-consent) { display: grid; gap: 8px; }
+.league-page input:not([type="checkbox"]) { width: 100%; min-height: 48px; padding: 12px; box-sizing: border-box; font: inherit; border-radius: 12px; border: 2px solid #bda2d1; background: #fff; color: #21172f; }
+.league-consent { display: flex; align-items: flex-start; gap: 12px; line-height: 1.6; margin: 20px 0; }
+.league-consent input { flex: 0 0 22px; width: 22px; height: 22px; margin-top: 4px; }
+.league-actions, .league-player { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin: 24px 0; }
+.league-player { font-size: 24px; justify-content: space-between; overflow-wrap: anywhere; }
+.league-board table { width: 100%; margin-top: 20px; border-collapse: collapse; }
+.league-board td, .league-board th { text-align: left; padding: 12px 6px; border-bottom: 1px solid #69577c; overflow-wrap: anywhere; }
+.league-board th[scope="row"] { max-width: 160px; }
+.league-board caption { text-align: left; padding: 12px 0; }
+.league-question { margin: 24px 0; }
+.league-question h2 { font-size: 36px; }
+.league-delete { border: 2px solid #efb9c8; padding: 16px; border-radius: 16px; }
+.league-page [role="alert"] { color: #ffc5ce; overflow-wrap: anywhere; }
+@media (max-width: 760px) { .league-layout { grid-template-columns: 1fr; } .league-account, .league-board, .league-rules { padding: 18px; } }

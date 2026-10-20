@@ -1,5 +1,11 @@
 # Matematik Sahnesi · RİTMA
 
+## Güncel: eylunica hesapları ve yıldız ligi
+
+Sitedeki **Yıldız ligi · Giriş** düğmesi kullanıcı adı/şifreyle açılır; telefon, gerçek e-posta ve Google girişi gerekmez. Herkese açık tabloda yalnız takma ad ve sunucuda doğrulanan lig yıldızları gösterilir. E-posta alınmadığı için otomatik şifre sıfırlama yoktur. Yerel ders ilerlemesi ve eski yıldızlar korunur, lige aktarılmaz. Normal ders geçmişi henüz cihazlar arasında eşitlenmez. Ayrıntılar ve SQL kurulum adımları: `docs/STAR_LEAGUE.md`.
+
+Android uygulamasının görünen adı **eylunica** olarak ayarlanmıştır; mevcut verileri korumak için paket kimliği değiştirilmez. Aşağıdaki sürüm notlarındaki eski “hesap/bulut yok” ifadeleri yalnız önceki yerel sürümleri anlatır.
+
 **Cevap sesi:** matematik, akademiler ve Arena’da doğru/yanlış yanıt sonrası Hileli girişinden Ajda Pekkan’ın “Manifest” bölümü çalar (2,7 saniye). Rastgele arka plan kataloğu korunur. İsteğe bağlı konuşmalı geri bildirim kesitin bitmesini bekler.
 
 Güncel geliştirme deposu: `smallsword82/eylunica` (özel). `smallsword82/manifestakademi` kaynağının main dalı, 10 commitlik tüm ata geçmişi ve özgün commit kimlikleriyle korunarak aktarılmıştır. Kaynak depo değiştirilmemiştir.

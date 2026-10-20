@@ -17,12 +17,14 @@
     "@capacitor/app": "^7.1.2",
     "@capacitor/core": "^7.4.3",
     "@capacitor/preferences": "^7.0.2",
+    "@supabase/supabase-js": "^2.118.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.14.0",
     "@capacitor/cli": "^7.4.3",
+    "@electric-sql/pglite": "^0.5.10",
     "@playwright/test": "^1.56.0",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",

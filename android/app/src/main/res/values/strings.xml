@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">Matematik Sahnesi</string>
-    <string name="title_activity_main">Matematik Sahnesi</string>
+    <string name="app_name">eylunica</string>
+    <string name="title_activity_main">eylunica</string>
     <string name="package_name">com.ritma.matematiksahnesi</string>
     <string name="custom_url_scheme">com.ritma.matematiksahnesi</string>
 </resources>

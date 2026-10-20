@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import type { UsageDomain } from "../time-engine";
 import { chooseStory, readingSkills, type Story } from "../reading-engine";
 import {
   generateAttention,
@@ -25,6 +26,8 @@ type Props = {
   progress: Progress;
   onSave: (p: Progress) => void;
   onBack: () => void;
+  onTransition?: (action: () => void, startsTask?: boolean) => void;
+  onActivity?: (domain: UsageDomain | null, playing?: boolean) => void;
 };
 function Header({
   academy,
@@ -89,16 +92,27 @@ function Completion({
     </section>
   );
 }
-export function ReadingAcademy({ progress, onSave, onBack }: Props) {
+export function ReadingAcademy({
+  progress,
+  onSave,
+  onBack,
+  onTransition = (action) => action(),
+  onActivity,
+}: Props) {
   const [session, setSession] = useState<{
       story: Story;
       index: number;
     } | null>(null),
     [done, setDone] = useState(false);
   const state = progress.academies.reading;
+  useEffect(() => {
+    onActivity?.(session && !done ? "reading" : "other", !!session && !done);
+  }, [onActivity, !!session, done]);
   function start(level: number) {
-    setSession({ story: chooseStory(level, state.seen), index: 0 });
-    setDone(false);
+    onTransition(() => {
+      setSession({ story: chooseStory(level, state.seen), index: 0 });
+      setDone(false);
+    });
   }
   return (
     <main className="subpage academy-page">
@@ -121,9 +135,13 @@ export function ReadingAcademy({ progress, onSave, onBack }: Props) {
             onRecord={(r) => onSave(recordAcademy(progress, "reading", r))}
             last={session.index === 5}
             onNext={() =>
-              session.index === 5
-                ? setDone(true)
-                : setSession({ ...session, index: session.index + 1 })
+              onTransition(
+                () =>
+                  session.index === 5
+                    ? setDone(true)
+                    : setSession({ ...session, index: session.index + 1 }),
+                session.index < 5,
+              )
             }
           />
         </>
@@ -174,16 +192,27 @@ export function ReadingAcademy({ progress, onSave, onBack }: Props) {
     </main>
   );
 }
-export function AttentionAcademy({ progress, onSave, onBack }: Props) {
+export function AttentionAcademy({
+  progress,
+  onSave,
+  onBack,
+  onTransition = (action) => action(),
+  onActivity,
+}: Props) {
   const [kind, setKind] = useState<AttentionKind | null>(null),
     [tasks, setTasks] = useState<Activity[]>([]),
     [index, setIndex] = useState(0),
     [done, setDone] = useState(false);
+  useEffect(() => {
+    onActivity?.(kind && !done ? "attention" : "other", !!kind && !done);
+  }, [onActivity, kind, done]);
   function start(k: AttentionKind) {
-    setKind(k);
-    setTasks([generateAttention(k, progress.academies.attention.level)]);
-    setIndex(0);
-    setDone(false);
+    onTransition(() => {
+      setKind(k);
+      setTasks([generateAttention(k, progress.academies.attention.level)]);
+      setIndex(0);
+      setDone(false);
+    });
   }
   function next() {
     if (index === 3) {
@@ -219,7 +248,7 @@ export function AttentionAcademy({ progress, onSave, onBack }: Props) {
             task={tasks[index]}
             onRecord={(r) => onSave(recordAcademy(progress, "attention", r))}
             last={index === 3}
-            onNext={next}
+            onNext={() => onTransition(next, index < 3)}
           />
         </>
       ) : (
@@ -259,21 +288,41 @@ export function AttentionAcademy({ progress, onSave, onBack }: Props) {
     </main>
   );
 }
-export function ConcertAcademy({ progress, onSave, onBack }: Props) {
+export function ConcertAcademy({
+  progress,
+  onSave,
+  onBack,
+  onTransition = (action) => action(),
+  onActivity,
+}: Props) {
   const [mission, setMission] = useState<ReturnType<typeof concert> | null>(
       null,
     ),
     [index, setIndex] = useState(0),
     [done, setDone] = useState(false);
-  function start() {
-    setMission(
-      concert(
-        progress.academies.concert.level,
-        Math.floor(progress.academies.concert.attempts / 3) % 5,
-      ),
+  useEffect(() => {
+    onActivity?.(
+      mission && !done
+        ? index === 0
+          ? "reading"
+          : index === 1
+            ? "attention"
+            : "math"
+        : "other",
+      !!mission && !done,
     );
-    setIndex(0);
-    setDone(false);
+  }, [onActivity, !!mission, done, index]);
+  function start() {
+    onTransition(() => {
+      setMission(
+        concert(
+          progress.academies.concert.level,
+          Math.floor(progress.academies.concert.attempts / 3) % 5,
+        ),
+      );
+      setIndex(0);
+      setDone(false);
+    });
   }
   function save(r: LearningResult) {
     if (!mission) return;
@@ -312,7 +361,10 @@ export function ConcertAcademy({ progress, onSave, onBack }: Props) {
             onRecord={save}
             last={index === 2}
             onNext={() =>
-              index === 2 ? setDone(true) : setIndex((i) => i + 1)
+              onTransition(
+                () => (index === 2 ? setDone(true) : setIndex((i) => i + 1)),
+                index < 2,
+              )
             }
           />
         </>

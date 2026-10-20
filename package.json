@@ -1,7 +1,7 @@
 {
   "name": "matematik-sahnesi",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@capacitor/android": "^7.4.3",
+    "@capacitor/app": "^7.1.2",
     "@capacitor/core": "^7.4.3",
     "@capacitor/preferences": "^7.0.2",
     "react": "^19.2.0",

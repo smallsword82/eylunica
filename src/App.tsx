@@ -1,3 +1,6 @@
+import { createPortal } from "react-dom";
+import { useWellbeing } from "./wellbeing/useWellbeing";
+import { ParentTimePanel, TimeNotice } from "./ui/Wellbeing";
 import {
   ReadingAcademy,
   AttentionAcademy,
@@ -52,7 +55,6 @@ export default function App() {
       Capacitor.isNativePlatform(),
     );
   const started = useRef(0),
-    sessionStart = useRef(0),
     attempted = useRef(false),
     usedHint = useRef(false),
     writes = useRef(Promise.resolve()),
@@ -73,6 +75,13 @@ export default function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [screen]);
+  const wellbeing = useWellbeing(ready);
+  useEffect(() => {
+    if (screen === "play") wellbeing.setContext("math", true);
+    else if (screen === "parent") wellbeing.setContext(null, false);
+    else if (!["reading", "attention", "concert"].includes(screen))
+      wellbeing.setContext("other", false);
+  }, [screen, wellbeing.setContext]);
   function persist(next: Progress) {
     setProgress(next);
     writes.current = writes.current
@@ -121,13 +130,14 @@ export default function App() {
     started.current = performance.now();
   }
   function start(m: string, cal = false) {
-    setMode(m);
-    setCalibration(cal);
-    setCount(0);
-    setEarned(0);
-    sessionStart.current = Date.now();
-    pickQuestion(m, progress, 0, cal);
-    setScreen("play");
+    wellbeing.transition(() => {
+      setMode(m);
+      setCalibration(cal);
+      setCount(0);
+      setEarned(0);
+      pickQuestion(m, progress, 0, cal);
+      setScreen("play");
+    });
   }
   function answer(value: number) {
     if (!question || solved || pending.current) return;
@@ -159,15 +169,20 @@ export default function App() {
     }
   }
   function next() {
-    if (count >= 4 || (calibration && count >= 3)) {
-      if (calibration) persist({ ...progress, calibrationDone: true });
-      setScreen("summary");
-      return;
-    }
-    const n = count + 1;
-    setCount(n);
-    pickQuestion(mode, progress, n, calibration);
-    firstEntry.current?.focus();
+    wellbeing.transition(
+      () => {
+        if (count >= 4 || (calibration && count >= 3)) {
+          if (calibration) persist({ ...progress, calibrationDone: true });
+          setScreen("summary");
+          return;
+        }
+        const n = count + 1;
+        setCount(n);
+        pickQuestion(mode, progress, n, calibration);
+        firstEntry.current?.focus();
+      },
+      count < (calibration ? 3 : 4),
+    );
   }
   const total = Object.values(progress.skills).reduce(
       (n, s) => n + s.attempts,
@@ -177,7 +192,7 @@ export default function App() {
   const currentWorld = worlds.find((w) => w.operation === mode) || worlds[0];
   const guide = calibration ? "Zeyna" : currentWorld.character;
   return (
-    <div className="app-shell">
+    <div className="app-shell" inert={!!wellbeing.notice}>
       <header className="topbar">
         <button
           className="brand"
@@ -193,6 +208,11 @@ export default function App() {
           </span>
         </button>
         <div className="top-actions">
+          {ready && screen !== "parent" && (
+            <button className="pause-button" onClick={() => wellbeing.pause()}>
+              Mola ver
+            </button>
+          )}
           <span className="quiet">
             <span aria-hidden="true">◉</span> Sessiz bir macera
           </span>
@@ -211,6 +231,11 @@ export default function App() {
       {error && (
         <div className="storage-error" role="alert">
           {error}
+        </div>
+      )}
+      {wellbeing.error && (
+        <div className="storage-error" role="alert">
+          {wellbeing.error}
         </div>
       )}
       {!ready ? (
@@ -405,7 +430,7 @@ export default function App() {
               <section className="bottom-strip">
                 <span>♡ Reklamsız ve güvenli</span>
                 <span>☁ Cihazında saklanır</span>
-                <span>◷ Günde yaklaşık 10 dakika</span>
+                <span>◷ Önerilen öğrenme süresi 15 dakika</span>
               </section>
             </main>
           )}
@@ -413,21 +438,33 @@ export default function App() {
             <ReadingAcademy
               progress={progress}
               onSave={persist}
-              onBack={() => setScreen("home")}
+              onBack={() =>
+                wellbeing.transition(() => setScreen("home"), false)
+              }
+              onTransition={wellbeing.transition}
+              onActivity={wellbeing.setContext}
             />
           )}
           {screen === "attention" && (
             <AttentionAcademy
               progress={progress}
               onSave={persist}
-              onBack={() => setScreen("home")}
+              onBack={() =>
+                wellbeing.transition(() => setScreen("home"), false)
+              }
+              onTransition={wellbeing.transition}
+              onActivity={wellbeing.setContext}
             />
           )}
           {screen === "concert" && (
             <ConcertAcademy
               progress={progress}
               onSave={persist}
-              onBack={() => setScreen("home")}
+              onBack={() =>
+                wellbeing.transition(() => setScreen("home"), false)
+              }
+              onTransition={wellbeing.transition}
+              onActivity={wellbeing.setContext}
             />
           )}
           {screen === "characters" && (
@@ -630,11 +667,6 @@ export default function App() {
                   )}
                 </section>
               </div>
-              {Date.now() - sessionStart.current > 600000 && (
-                <p className="break-note">
-                  Biraz mola vermek iyi gelebilir. Maceran burada seni bekliyor.
-                </p>
-              )}
             </main>
           )}
           {screen === "summary" && (
@@ -731,6 +763,7 @@ export default function App() {
                 baskısı uygulanmaz. Bir yanlış yanıttan düşünme süreci hakkında
                 kesin çıkarım yapılmaz.
               </p>
+              <ParentTimePanel wellbeing={wellbeing} />
               <AcademyProgress progress={progress} />
               <h2>Gizlilik ve çevrimdışı kullanım</h2>
               <p>
@@ -753,7 +786,10 @@ export default function App() {
                 </button>
               ) : (
                 <div role="alert">
-                  <p>Tüm yerel yıldızlar ve beceri kayıtları silinecek.</p>
+                  <p>
+                    Tüm yerel yıldızlar ve beceri kayıtları silinecek. Süre
+                    ayarları ve kullanım sayacı korunacak.
+                  </p>
                   <button
                     className="secondary"
                     onClick={() => {
@@ -790,6 +826,14 @@ export default function App() {
             </div>
           </footer>
         </>
+      )}
+      {createPortal(
+        <TimeNotice
+          wellbeing={wellbeing}
+          onParent={() => setScreen("parent")}
+          onHome={() => setScreen("home")}
+        />,
+        document.body,
       )}
     </div>
   );

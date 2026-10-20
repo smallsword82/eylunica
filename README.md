@@ -34,6 +34,22 @@ npm run android:apk
 
 GitHub → **Actions → Web tests and Android APK** → başarılı çalıştırma → **Artifacts → matematik-sahnesi-debug-apk**. ZIP dosyasını indirip içindeki APK'yı Android cihazına aktar. Workflow yalnızca derler, test eder ve artifact saklar; site yayımlamaz ve Play Store'a yüklemez. İmzalı mağaza dağıtımı ayrı bir iştir.
 
+## 0.3.0 · Ebeveyn ayarları ve akıllı molalar
+
+Varsayılan kullanım serbesttir. Önerilen günlük öğrenme süresi **15 dakika**; buna ulaşmak otomatik kapanma veya ek yıldız üretmez. İlk güvenli geçişte hedef bilgisi, 25. dakikadan sonraki güvenli geçişte mola önerisi gösterilir. Sonraki öneri, gösterilen öneriden sonra yaklaşık **20 etkin dakika** sonradır. Uzun bir soru yüzünden ikisi birden gecikmişse tek mesajda birleştirilir. Çocuk mola verebilir veya devam edebilir; görev durumu, yıldızlar ve öğrenme kaydı korunur.
+
+Ebeveyn köşesinde:
+
+- Serbest kullanım veya 1–1440 dakika arasında isteğe bağlı günlük sınır.
+- Mola önerilerini açma/kapatma (15 dakika hedef bilgisi ayrı kalır).
+- Bugün ve bugün dahil son yedi takvim günü için toplam ve matematik/okuma/dikkat/menü süreleri.
+
+Sınır seçilirse **açık soru bitirilebilir, yeni soru/görev engellenir**. Uygulama kapanmaz. Ebeveyn paneli açık kalır; sınır kaldırılabilir veya değiştirilebilir. Yeni cihaz-yerel takvim gününde sayaç yeni günün kaydından başlar. Panel PIN ile kilitli değildir; bu bir uygulama içi sınırdır, işletim sistemi ebeveyn kilidi değildir.
+
+Yalnız görünür ve ön plandaki kullanım sayılır. Ebeveyn paneli, mola ekranları ve arka plan hariçtir. Menü/lobi süreleri ayrıca sayılır; birleşik konserin her adımı ilgili akademiye yazılır. Webde görünürlük/odak olayları; Android'de ayrıca Capacitor App `appStateChange` kullanılır. Süre monotonic saatten hesaplanır, yerel gece yarısında günlere bölünür. Duvar saati değişikliği/kapanıp yeniden açılma aralığı oyun süresi yaratmaz. Yaklaşık beş saniyede bir ve geçiş/arka plan olayında kaydedilir; ani süreç sonlandırmasında son birkaç saniye kaybolabilir.
+
+Yeni süre kaydı `ritma-wellbeing-v1` anahtarında sürümlüdür; mevcut `ritma-progress-v1` öğrenme kaydı ve yıldızlar değiştirilmez. Son 90 günün süre özeti cihazda tutulur; ağ, hesap veya API yoktur. Öğrenme ilerlemesini sıfırlama süre ayarlarını/sayacını silmez. Ayrıntılı test kapsamı `docs/SURE-VE-MOLA-TEST-RAPORU.md` içindedir.
+
 ## 0.2.0 · Üç akademi
 
 - **Matematik Akademisi:** önceki dört işlem dünyaları, ipuçları, karakterler ve ödüller korunur.

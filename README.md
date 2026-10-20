@@ -2,7 +2,9 @@
 
 Güncel geliştirme deposu: `smallsword82/eylunica` (özel). `smallsword82/manifestakademi` kaynağının main dalı, 10 commitlik tüm ata geçmişi ve özgün commit kimlikleriyle korunarak aktarılmıştır. Kaynak depo değiştirilmemiştir.
 
-Uygulama RİTMA karakter seçimiyle açılır. Önceki karakter seçili gelir; arkadaş veya özel ad değişikliği yıldızları, becerileri, akademileri, Arena geçmişini ve ödülleri sıfırlamaz. Devam düğmesi mevcut macera haritasını açar. `ritma-progress-v1` kayıt anahtarı ve Android Preferences alanı korunur. Web kayıtları tarayıcı kökenine bağlıdır; site adresi değişirse eski adresteki kayıtlar kendiliğinden yeni adrese taşınmaz.
+Uygulama öğrenci profili ve Manifest eğitmen seçimiyle açılır. Öğrencinin varsayılan adı **Eylül**; değiştirilebilir ve eğitmenden bağımsızdır. Mina, Lidya, Hilal, Esin, Zeynep ve Sueda gerçek fotoğraflarıyla eğitmen rolündedir. Öğrenci adı/eğitmen değişikliği yıldızları, becerileri, akademileri, Arena geçmişini ve ödülleri sıfırlamaz. `ritma-progress-v1` ve Android Preferences kayıt alanı korunur. Web kayıtları tarayıcı kökenine bağlıdır; site adresi değişirse kendiliğinden taşınmaz.
+
+Manifest’in **Zamansızdık** ve **Arıyo** kayıtlarından hazırlanan yerel ses kesitleri kullanılır. Efektler 1,1–3,5 saniye; düşük sesli müzik bölümleri 12 saniyedir. Video, YouTube iframe’i, uzun şarkı veya otomatik döngü yoktur. Sessiz mod, mola, konuşmalı yönerge ve ekran geçişi sesleri durdurur. Fotoğraflar ve kısa sesler PWA önbelleğine dahil edilir. Kaynaklar ve süreler: [Manifest medya notu](docs/MANIFEST_MEDIA.md).
 
 7–12 yaş için Türkçe, sessiz, reklamsız matematik, okuduğunu anlama ve dikkat macerası. Tek React / TypeScript kod tabanından PWA ve paket içi varlıklarla çalışan Capacitor Android uygulaması.
 
@@ -69,7 +71,7 @@ Yeni süre kaydı `ritma-wellbeing-v1` anahtarında sürümlüdür; mevcut `ritm
 
 ## Korunan matematik temeli
 
-- Altı özgün SVG karakter, altı dünya ve konser sahnesi.
+- Altı Manifest eğitmen fotoğrafı, bağımsız öğrenci profili, altı dünya ve konser sahnesi.
 - Dört işlem, işlem başına 5 seviye, tam sonuçlu / sıfıra bölmesiz bölme.
 - İsteğe bağlı dört soruluk başlangıç yoklaması; baskısız beş soruluk görevler.
 - Seçenek veya sayı girişi; yanlış yanıtta strateji, tekrar deneme; onluk tamamlama.
@@ -87,7 +89,7 @@ Webde localStorage, Android'de Capacitor Preferences kullanılır; depolama eri�
 
 ## Mimari
 
-`src/math-engine`: üretim ve strateji; `src/reading-engine`: özgün metinler/kanıt kontrolü; `src/attention-engine`: dikkat görevi üretimi; `src/concert-engine`: birleşik hikâye görevleri; `src/learning-engine`: ortak uyarlama/ölçüm; `src/storage`: sürümlü kayıt ve uyarlama; `src/game`: dünyalar ve karakter tanımları; `src/ui`: özgün çizimler; `src/App.tsx`: ekran ve görev akışı. `capacitor.config.ts` ve `android/` paketleme; `vite.config.ts` PWA önbelleği.
+`src/math-engine`: üretim ve strateji; `src/reading-engine`: özgün metinler/kanıt kontrolü; `src/attention-engine`: dikkat görevi üretimi; `src/concert-engine`: birleşik hikâye görevleri; `src/learning-engine`: ortak uyarlama/ölçüm; `src/storage`: sürümlü kayıt ve uyarlama; `src/game`: dünyalar ve eğitmen tanımları; `src/audio/manifest.ts`: kısa gerçek şarkı kesitleri; `src/ui`: arayüz; `src/App.tsx`: ekran ve görev akışı. `capacitor.config.ts` ve `android/` paketleme; `vite.config.ts` PWA önbelleği.
 
 ## Sonraki aşamalar
 
@@ -109,6 +111,8 @@ Web test sitesinin yayımlanması kullanıcı tarafından onaylandı. Kaynak dep
 
 
 ### 0.3.1: karakter adları ve kısa sesler
+
+Bu bölüm önceki sürümün tarihçesidir. Güncel öğrenci/eğitmen ayrımı ve Manifest sesleri yukarıda açıklanır; önceki SVG ve sentetik müzik uygulaması artık kullanılmaz.
 
 RİTMA kadrosu Mina, Eylül, Alara, Beren, Öykü ve Defne. Önceki karakter seçimleri aynı görünümün yeni adına taşınır; yıldızlar ve öğrenme kayıtları korunur. Karakter ekranında hazır bir ad seçilebilir veya seçilen görünüme en fazla 24 karakterlik bir ilk ad verilebilir. Tek bir özel ad tutulur; başka görünüme atanınca önceki görünümün hazır adı geri gelir. Bu bilgi yalnızca cihazdaki mevcut ilerleme kaydında tutulur ve istenildiğinde kaldırılabilir; hikâyeler özgün kurgu adlarını kullanır.
 

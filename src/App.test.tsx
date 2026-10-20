@@ -13,15 +13,15 @@ it("karakter seçer ve yeniden açılışta korur", async () => {
   await screen.findByText("Bugün nerede buluşalım?");
   await user.click(screen.getByRole("button", { name: "Arkadaşını seç →" }));
   await user.click(
-    screen.getByRole("button", { name: /Beren Birlikte paylaş/ }),
+    screen.getByRole("button", { name: /Esin Birlikte paylaş/ }),
   );
   await waitFor(() =>
-    expect(JSON.parse(localStorage.getItem(KEY)!).character).toBe("Beren"),
+    expect(JSON.parse(localStorage.getItem(KEY)!).character).toBe("Esin"),
   );
   view.unmount();
   render(<App />);
   await enter();
-  await screen.findByText("Beren yanında.");
+  await screen.findByText("Esin yanında.");
 });
 it("yanlış cevapta ipucu, tekrar deneme ve tek soru kaydı çalışır", async () => {
   const user = userEvent.setup();
@@ -53,47 +53,47 @@ it("doğru yanıtta yıldız verir ve aynı soruda tekrar ödüllendirmez", asyn
   expect(screen.getByText(/Zihin Atölyesi · 2\/5/)).toBeVisible();
 });
 
-it("yalnızca bir karaktere özel ad verir ve cihazda korur", async () => {
-  const user = userEvent.setup();
+it("öğrenci adı eğitmenden bağımsızdır ve varsayılan Eylül değiştirilebilir", async () => {
   const view = render(<App />);
-  await enter();
-  await screen.findByText("Bugün nerede buluşalım?");
-  await user.click(screen.getByRole("button", { name: "Arkadaşını seç →" }));
-  await user.type(screen.getByLabelText("Karaktere vereceğin ad"), "Deniz");
-  await user.click(screen.getByRole("button", { name: "Bu adı seçtiğim karaktere ver" }));
-  await waitFor(() => expect(JSON.parse(localStorage.getItem(KEY)!).customCharacter).toEqual({ character: "Mina", name: "Deniz" }));
-  await user.click(screen.getByRole("button", { name: /Beren Birlikte paylaş/ }));
-  await user.type(screen.getByLabelText("Karaktere vereceğin ad"), "Ada");
-  await user.click(screen.getByRole("button", { name: "Bu adı seçtiğim karaktere ver" }));
+  const input = await screen.findByLabelText("Öğrenci adı");
+  expect(input).toHaveValue("Eylül");
+  await userEvent.clear(input);
+  await userEvent.type(input, "Deniz");
+  await userEvent.click(screen.getByRole("button", { name: "Adımı kaydet" }));
+  await userEvent.click(screen.getByRole("button", { name: /Esin Birlikte paylaş/ }));
+  await waitFor(() => expect(JSON.parse(localStorage.getItem(KEY)!)).toMatchObject({ learnerName: "Deniz", character: "Esin" }));
   expect(screen.getByRole("button", { name: /Mina Merakla keşfet/ })).toBeVisible();
-  expect(screen.getByRole("button", { name: /Ada Birlikte paylaş/ })).toBeVisible();
+  expect(screen.getByLabelText("Öğrenci adı")).toHaveValue("Deniz");
   view.unmount();
   render(<App />);
-  await enter();
-  await screen.findByText("Ada yanında.");
-  await user.click(screen.getByRole("button", { name: "Arkadaşını seç →" }));
-  await user.click(screen.getByRole("button", { name: "Özel adı kaldır" }));
-  expect(screen.getByRole("button", { name: /Beren Birlikte paylaş/ })).toBeVisible();
+  expect(await screen.findByLabelText("Öğrenci adı")).toHaveValue("Deniz");
+  expect(screen.getByRole("heading", { name: "Deniz, sahne senin." })).toBeVisible();
 });
 
-it("RİTMA girişinde karakter değiştirirken bütün mevcut ilerlemeyi korur", async () => {
+it("eğitmen seçimi bütün mevcut ilerlemeyi korur", async () => {
   const saved = fresh();
   saved.stars = 18;
   saved.skills.add.attempts = 7;
   saved.rewards = ["lights", "confetti"];
   saved.calibrationDone = true;
-  saved.customCharacter = { character: "Mina", name: "Deniz" };
   localStorage.setItem(KEY, JSON.stringify(saved));
   const view = render(<App />);
-  expect(await screen.findByRole("heading", { name: "Her macera bir arkadaşla başlar." })).toBeVisible();
+  expect(await screen.findByRole("heading", { name: "Eylül, sahne senin." })).toBeVisible();
   expect(screen.queryByText("Bugün nerede buluşalım?")).not.toBeInTheDocument();
-  expect(screen.getByRole("button", { name: /Deniz Merakla keşfet/ })).toHaveAttribute("aria-pressed", "true");
-  await userEvent.click(screen.getByRole("button", { name: /Eylül Adım adım ilerle/ }));
-  await waitFor(() => expect(JSON.parse(localStorage.getItem(KEY)!)).toEqual({ ...saved, character: "Eylül" }));
+  await userEvent.click(screen.getByRole("button", { name: /Lidya Adım adım ilerle/ }));
+  await waitFor(() => expect(JSON.parse(localStorage.getItem(KEY)!)).toEqual({ ...saved, character: "Lidya" }));
   await enter();
-  expect(screen.getByText("Bugün nerede buluşalım?")).toBeVisible();
   view.unmount();
   render(<App />);
-  expect(await screen.findByRole("button", { name: /Eylül Adım adım ilerle/ })).toHaveAttribute("aria-pressed", "true");
+  expect(await screen.findByRole("button", { name: /Lidya Adım adım ilerle/ })).toHaveAttribute("aria-pressed", "true");
   expect(screen.getByRole("status")).toHaveTextContent("18 yıldızın");
+});
+
+it("eski özel öğrenci adı ve ilerleme kaybolmaz", async () => {
+  const previous = { ...fresh(), character: "Beren", customCharacter: { character: "Beren", name: "Ada" } };
+  delete previous.learnerName;
+  localStorage.setItem(KEY, JSON.stringify(previous));
+  render(<App />);
+  expect(await screen.findByLabelText("Öğrenci adı")).toHaveValue("Ada");
+  expect(screen.getByRole("button", { name: /Esin Birlikte paylaş/ })).toHaveAttribute("aria-pressed", "true");
 });

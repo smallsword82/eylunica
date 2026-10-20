@@ -36,6 +36,7 @@ export type Progress = {
   version: 2;
   academies: Record<Academy, LearningState>;
   character: string;
+  learnerName?: string;
   customCharacter?: { character: string; name: string };
   stars: number;
   skills: Record<Operation, Skill>;
@@ -62,6 +63,7 @@ export const fresh = (): Progress => ({
     concert: newLearning(),
   },
   character: "Mina",
+  learnerName: "Eylül",
   stars: 0,
   skills: {
     add: skill(),
@@ -104,6 +106,10 @@ export function decode(raw: string | null): Progress {
         return fresh();
     }
     p.character = normalizeCharacter(p.character);
+    p.learnerName = typeof p.learnerName === "string" && p.learnerName.trim()
+      ? p.learnerName.trim().slice(0, 24)
+      : typeof p.customCharacter?.name === "string" && p.customCharacter.name.trim()
+        ? p.customCharacter.name.trim().slice(0, 24) : "Eylül";
     p.arena = decodeArena(p.arena);
     if (p.customCharacter) {
       const custom = p.customCharacter;

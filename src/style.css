@@ -74,6 +74,49 @@ button:hover {
   margin-top: 24px;
   color: #e3d6f7;
 }
+.mentor-avatar {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: linear-gradient(160deg, var(--mentor-color), #251934);
+  flex-shrink: 0;
+}
+.mentor-avatar img { width: 100%; height: 100%; object-fit: contain; object-position: center bottom; }
+.mentor-initial { display: grid; place-items: center; height: 100%; font-size: 42px; color: white; }
+.mentor-award { position: absolute; right: 8px; bottom: 6px; color: #ffe49f; font-size: 24px; }
+.manifest-banner {
+  margin: 32px 0;
+  position: relative;
+  min-height: 350px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #251b35;
+}
+.manifest-banner > img { position: absolute; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+.manifest-banner > div { position: relative; padding: 40px; background: linear-gradient(90deg, #171126f5, #171126b8 55%, #17112644); min-height: 350px; }
+.manifest-banner h1 { font-size: clamp(30px, 4vw, 50px); max-width: 650px; line-height: 1.15; margin-top: 20px; }
+.manifest-banner p { max-width: 480px; }
+.manifest-banner .secondary { margin: 12px; background: #171126d9; }
+.learner-profile { background: linear-gradient(120deg, #302147, #20162e); border-color: #cdb0e655; }
+.learner-symbol { float: right; font-size: 42px; color: #f0c47e; }
+.song-list { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
+.song-list [aria-pressed="true"] { background: #68428e; border-color: #e3ceee; }
+.music-poster { width: 100%; height: 100%; position: relative; display: grid; place-items: center; }
+.music-poster img { position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: .5; }
+.music-poster button { position: relative; }
+.music-note { max-width: 750px; color: #c7b6d5; margin-top: 18px; }
+.music-lounge a { color: #e3ceee; }
+.rhythm-challenge { margin-top: 32px; padding: 24px; border-radius: 18px; border: 1px solid #cdb0e655; max-width: 800px; }
+.rhythm-challenge input { width: 100px; margin: 12px; padding: 10px; }
+.manifest-audio-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding: 14px 18px; margin: 18px 0; border: 1px solid #cdb0e633; border-radius: 16px; background: #251b35; }
+.manifest-audio-bar > span { font-size: 30px; color: #e69abc; }
+.manifest-audio-bar small { display: block; color: #c7b6d5; font-size: 11px; }
+.manifest-audio-bar select { border-radius: 8px; padding: 8px; max-width: 100%; }
+.audio-poster { max-width: 800px; height: 260px; overflow: hidden; border-radius: 20px; }
+@media (max-width: 600px) {
+  .manifest-banner > div { padding: 24px; background: #171126bb; }
+  .manifest-banner .secondary { margin-left: 0; }
+}
 .brand .brand-bottom {
   font-size: 11px;
   letter-spacing: 0;

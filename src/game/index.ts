@@ -8,35 +8,35 @@ export const characters = [
     style: 0,
   },
   {
-    name: "Eylül",
+    name: "Lidya",
     role: "Adım adım ilerle",
     color: "#b1a2e8",
     hair: "#39334c",
     style: 1,
   },
   {
-    name: "Alara",
+    name: "Hilal",
     role: "Örüntüleri yakala",
     color: "#76d5d0",
     hair: "#77452f",
     style: 2,
   },
   {
-    name: "Beren",
+    name: "Esin",
     role: "Birlikte paylaş",
     color: "#f0c47e",
     hair: "#302c39",
     style: 3,
   },
   {
-    name: "Öykü",
+    name: "Zeynep",
     role: "Kısa yolları keşfet",
     color: "#a7c889",
     hair: "#8d5635",
     style: 4,
   },
   {
-    name: "Defne",
+    name: "Sueda",
     role: "Sahneyi birleştir",
     color: "#db9de3",
     hair: "#473359",
@@ -64,7 +64,7 @@ export const worlds: {
     sub: "Işıklara giden yolu keşfet",
     symbol: "−",
     operation: "subtract",
-    character: "Eylül",
+    character: "Lidya",
     color: "#d1b9ee",
   },
   {
@@ -72,7 +72,7 @@ export const worlds: {
     sub: "Ritmi eş gruplarla yakala",
     symbol: "×",
     operation: "multiply",
-    character: "Alara",
+    character: "Hilal",
     color: "#97dcd6",
   },
   {
@@ -80,7 +80,7 @@ export const worlds: {
     sub: "Sahnenin ışığını paylaş",
     symbol: "÷",
     operation: "divide",
-    character: "Beren",
+    character: "Esin",
     color: "#eed19c",
   },
   {
@@ -88,7 +88,7 @@ export const worlds: {
     sub: "Küçük adımlar, büyük fikirler",
     symbol: "✧",
     operation: "strategy",
-    character: "Öykü",
+    character: "Zeynep",
     color: "#cadca3",
   },
   {
@@ -96,16 +96,19 @@ export const worlds: {
     sub: "Dört işlemi bir araya getir",
     symbol: "♫",
     operation: "mixed",
-    character: "Defne",
+    character: "Sueda",
     color: "#e9b8d6",
   },
 ];
 
-// Preserve each existing companion's appearance and selection when names change.
 export function normalizeCharacter(name: string): string {
   const legacy: Record<string, string> = {
-    Lidya: "Eylül", Derin: "Alara", Arya: "Beren", Zeyna: "Öykü", Elya: "Defne",
+    Eylül: "Lidya", Alara: "Hilal", Beren: "Esin", Öykü: "Zeynep", Defne: "Sueda",
+    Derin: "Hilal", Arya: "Esin", Zeyna: "Zeynep", Elya: "Sueda",
   };
   const current = legacy[name] ?? name;
-  return characters.some(c => c.name === current) ? current : "Mina";
+  return characters.some(character => character.name === current) ? current : "Mina";
 }
+export const mentorPhotos: Record<string, string> = {
+  Mina: "mina", Lidya: "lidya", Hilal: "hilal", Esin: "esin", Zeynep: "zeynep", Sueda: "sueda",
+};

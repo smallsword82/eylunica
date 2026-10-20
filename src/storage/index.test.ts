@@ -14,7 +14,7 @@ import { completeArena } from "./index";
 import { getLane, makeDeck, observation, observe, specs, finishSession, freshArena } from "../arena-engine";
 it("yerel kayıt tekrar okunur", async () => {
   const p = fresh();
-  p.character = "Beren";
+  p.character = "Esin";
   p.stars = 12;
   await saveProgress(p);
   expect(await loadProgress()).toEqual(p);
@@ -126,7 +126,7 @@ it("v1 kaydını matematik, karakter, yıldız ve ödülleri koruyarak v2ye taş
   const migrated = await loadProgress();
   expect(migrated.version).toBe(2);
   expect(migrated.skills).toEqual(p.skills);
-  expect(migrated.character).toBe("Defne");
+  expect(migrated.character).toBe("Sueda");
   expect(migrated.stars).toBe(18);
   expect(migrated.rewards).toEqual(p.rewards);
   expect(migrated.history).toEqual(p.history);
@@ -154,7 +154,7 @@ it("yeni akademi puanları matematik becerilerini değiştirmez", async () => {
 });
 
 it("eski altı karakter adını aynı arkadaşın yeni adına taşır, öğrenmeyi korur", () => {
-  for (const [oldName, newName] of [["Mina", "Mina"], ["Lidya", "Eylül"], ["Derin", "Alara"], ["Arya", "Beren"], ["Zeyna", "Öykü"], ["Elya", "Defne"]]) {
+  for (const [oldName, newName] of [["Mina", "Mina"], ["Lidya", "Lidya"], ["Eylül", "Lidya"], ["Alara", "Hilal"], ["Beren", "Esin"], ["Öykü", "Zeynep"], ["Defne", "Sueda"], ["Derin", "Hilal"], ["Arya", "Esin"], ["Zeyna", "Zeynep"], ["Elya", "Sueda"]]) {
     const previous = record(fresh(), generate("add"), true, false, 1500);
     previous.character = oldName;
     const next = decode(JSON.stringify(previous));

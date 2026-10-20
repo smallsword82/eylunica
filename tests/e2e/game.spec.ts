@@ -15,7 +15,7 @@ test("telefon: görev, kayıt, yeniden açılış ve çevrimdışı oyun", async
   await expect(page.getByRole("status")).toContainText("Harika");
   await page.getByRole("button", { name: "← Haritaya dön" }).click();
   await page.getByRole("button", { name: "Arkadaşını seç →" }).click();
-  await page.getByRole("button", { name: /Beren Birlikte paylaş/ }).click();
+  await page.getByRole("button", { name: /Esin Birlikte paylaş/ }).click();
   await page.getByRole("button", { name: "Maceraya dön →" }).click();
   await page.screenshot({
     path: "test-results/mobile-home.png",
@@ -28,7 +28,7 @@ test("telefon: görev, kayıt, yeniden açılış ve çevrimdışı oyun", async
   ).toBe(true);
   await context.setOffline(true);
   await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
-  await expect(page.getByText("Beren yanında.")).toBeVisible();
+  await expect(page.getByText("Esin yanında.")).toBeVisible();
   await page.getByRole("button", { name: /Toplama Ormanı/ }).click();
   await page.getByRole("button", { name: "Kendim yazayım" }).click();
   const equation = await page.getByRole("heading", { level: 1 }).innerText();

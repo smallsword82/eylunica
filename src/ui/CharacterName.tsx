@@ -1,27 +1,23 @@
 import { useState } from "react";
 import type { Progress } from "../storage";
 
-export function CharacterName({ progress, onSave }: { progress: Progress; onSave: (p: Progress) => void }) {
-  const [name, setName] = useState(progress.customCharacter?.character === progress.character ? progress.customCharacter.name : "");
+export function CharacterName({ progress, onSave }: { progress: Progress; onSave: (progress: Progress) => void }) {
+  const [name, setName] = useState(progress.learnerName || "Eylül");
   const [message, setMessage] = useState("");
-  return <form className="custom-character" onSubmit={event => {
+  return <form className="custom-character learner-profile" onSubmit={event => {
     event.preventDefault();
-    if (!name.trim()) return;
-    onSave({ ...progress, customCharacter: { character: progress.character, name: name.trim().slice(0, 24) } });
-    setMessage("Adın seçtiğin karaktere verildi. Yalnızca bu cihazda saklanır.");
+    const learnerName = name.trim().slice(0, 24);
+    if (!learnerName) return;
+    onSave({ ...progress, learnerName });
+    setMessage(`Sahne senin, ${learnerName}! Adın bu cihazda kaydedildi.`);
   }}>
-    <h2>İstersen bir karakter senin adını taşısın</h2>
-    <p>Önce görünümünü seç, sonra yalnızca ilk adını yaz. Hazır isimlerle de oynayabilirsin. Özel ad aynı anda yalnızca bir karaktere uygulanır.</p>
-    <label htmlFor="character-name">Karaktere vereceğin ad</label>
-    <input id="character-name" value={name} maxLength={24} autoComplete="off" onChange={event => { setName(event.target.value); setMessage(""); }} />
-    <button className="secondary" type="submit" disabled={!name.trim()}>Bu adı seçtiğim karaktere ver</button>
-    {progress.customCharacter && <button className="text-button" type="button" onClick={() => {
-      const next = { ...progress };
-      delete next.customCharacter;
-      onSave(next);
-      setName("");
-      setMessage("Hazır karakter adı geri getirildi.");
-    }}>Özel adı kaldır</button>}
+    <div className="learner-symbol" aria-hidden="true">✦</div>
+    <h2>Bu hikâyenin başrolü sensin.</h2>
+    <p>Eylül olarak başlayabilirsin. İstersen kendi adını yaz; eğitmenin kim olursa olsun bu senin maceran.</p>
+    <label htmlFor="learner-name">Öğrenci adı</label>
+    <input id="learner-name" value={name} maxLength={24} autoComplete="off"
+      onChange={event => { setName(event.target.value); setMessage(""); }} />
+    <button className="secondary" type="submit" disabled={!name.trim()}>Adımı kaydet</button>
     <p aria-live="polite">{message}</p>
   </form>;
 }

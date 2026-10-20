@@ -35,9 +35,12 @@ import {
 } from "./storage";
 import { characters, worlds } from "./game";
 import { Avatar } from "./ui/Avatar";
+import { MusicLounge } from "./ui/MusicLounge";
+import { ManifestAudioControls } from "./ui/ManifestAudioControls";
 const ops: Operation[] = ["add", "subtract", "multiply", "divide"];
 type Screen =
   | "welcome"
+  | "music"
   | "home"
   | "characters"
   | "play"
@@ -217,8 +220,8 @@ export default function App() {
     ),
     correct = Object.values(progress.skills).reduce((n, s) => n + s.correct, 0);
   const currentWorld = worlds.find((w) => w.operation === mode) || worlds[0];
-  const displayName = (name: string) => progress.customCharacter?.character === name ? progress.customCharacter.name : name;
-  const guide = calibration ? "Öykü" : currentWorld.character;
+  const displayName = (name: string) => name;
+  const guide = calibration ? "Zeynep" : currentWorld.character;
   return (
     <div className="app-shell" inert={!!wellbeing.notice}>
       <header className="topbar">
@@ -258,6 +261,7 @@ export default function App() {
         </div>
       </header>
       <NarrationPlayback />
+      {ready && screen !== "parent" && <ManifestAudioControls paused={!!wellbeing.notice} />}
       {narration.error && <div className="storage-error" role="alert">{narration.error}</div>}
       {error && (
         <div className="storage-error" role="alert">
@@ -276,6 +280,7 @@ export default function App() {
         </main>
       ) : (
         <>
+          {screen === "music" && <MusicLounge learnerName={progress.learnerName || "Eylül"} paused={!!wellbeing.notice} onBack={() => setScreen("home")} />}
           {screen === "home" && (
             <main>
               <nav className="academy-hub" aria-label="Üç akademi">
@@ -317,16 +322,25 @@ export default function App() {
               <button className="arena-entry" onClick={() => setScreen("arena")}>
                 <strong>RİTMA Hız Arenası</strong><span>İsteğe bağlı · önce doğruluk, sonra kendi gelişimin →</span>
               </button>
+              <section className="manifest-banner">
+                <img src="./manifest/group.webp" alt="Manifest grubu" />
+                <div><span className="eyebrow">RİTMA × MANIFEST</span>
+                  <h1>Sahne senin, {progress.learnerName || "Eylül"}!</h1>
+                  <p>Oku, düşün, ritmi yakala. Manifest eğitmenlerinle her gün yeni bir keşif.</p>
+                  <button className="primary" onClick={() => start("add")}>İlk keşfe başla →</button>
+                  <button className="secondary" onClick={() => setScreen("music")}>Manifest müzik odası →</button>
+                </div>
+              </section>
               <section className="hero">
                 <div className="hero-copy">
                   <div className="eyebrow">
                     <span /> RİTMA İLE ZİHİNDEN MATEMATİK
                   </div>
-                  <h1>
+                  <h2>
                     Küçük adımlar.
                     <br />
                     Kocaman bir <em>sahne.</em>
-                  </h1>
+                  </h2>
                   <p>
                     Biraz merak, biraz matematik…
                     <br />
@@ -353,9 +367,9 @@ export default function App() {
                     RİTMA<span>SAHNE SENİN!</span>
                   </div>
                   <div className="stage-team">
-                    <Avatar name="Eylül" large />
+                    <Avatar name="Lidya" large />
                     <Avatar name="Mina" large />
-                    <Avatar name="Alara" large />
+                    <Avatar name="Hilal" large />
                   </div>
                   <div className="stage-floor" />
                   <div className="stage-badge">✦ Her fikir bir ışık yakar</div>
@@ -448,7 +462,7 @@ export default function App() {
               <section className="companion">
                 <Avatar name={progress.character} label={displayName(progress.character)} costume={progress.rewards.includes("arena-costume")} />
                 <div>
-                  <div className="eyebrow muted">SAHNE ARKADAŞIN</div>
+                  <div className="eyebrow muted">MANIFEST EĞİTMENİN</div>
                   <h3>{displayName(progress.character)} yanında.</h3>
                   <p>
                     Her sorunun birden fazla yolu var. Kendi yolunu
@@ -463,7 +477,7 @@ export default function App() {
                 </button>
               </section>
               <section className="bottom-strip">
-                <span>♡ Reklamsız ve güvenli</span>
+                <span>♡ Kendi ritminde öğren</span>
                 <span>☁ Cihazında saklanır</span>
                 <span>◷ Önerilen öğrenme süresi 15 dakika</span>
               </section>
@@ -509,10 +523,11 @@ export default function App() {
                 ← Macera haritana dön
               </button>}
               <div className="eyebrow muted">{screen === "welcome" ? "RİTMA’YA HOŞ GELDİN" : "BİRLİKTE DAHA GÜZEL"}</div>
-              <h1>{screen === "welcome" ? "Her macera bir arkadaşla başlar." : "Sahne arkadaşını seç."}</h1>
+              <h1>{screen === "welcome" ? `${progress.learnerName || "Eylül"}, sahne senin.` : "Manifest eğitmenini seç."}</h1>
               <p className="intro">
-                Sahne arkadaşını seç. Birlikte oku, keşfet ve kendi ritminde öğren.
+                Başrol sensin. Manifest üyeleri de öğrenme yolculuğunda eğitmenlerin. İlk adımda sana kim eşlik etsin?
               </p>
+              <CharacterName progress={progress} onSave={persist} />
               {screen === "welcome" && <p className="welcome-progress" role="status">
                 {progress.stars > 0 || total > 0 || progress.history.length > 0
                   ? `${progress.stars} yıldızın ve mevcut ilerlemen burada. Kaldığın yerden devam edebilirsin.`
@@ -531,14 +546,13 @@ export default function App() {
                     <p>{c.role}</p>
                     <span>
                       {progress.character === c.name
-                        ? "✓ Sahne arkadaşın"
+                        ? "✓ Eğitmenin"
                         : "Seç"}
                     </span>
                   </button>
                 ))}
               </div>
-              <CharacterName key={progress.character} progress={progress} onSave={persist} />
-              <p className="welcome-companion">{displayName(progress.character)} yanında. Hazırsan sahne senin!</p>
+              <p className="welcome-companion">{progress.learnerName || "Eylül"}, eğitmenin {progress.character}. Hazırsan sahne senin!</p>
               <button className="primary" onClick={() => setScreen("home")}>
                 {screen === "welcome" ? "RİTMA’ya devam et →" : "Maceraya dön →"}
               </button>
@@ -811,7 +825,7 @@ export default function App() {
                 <h2 id="narration-title">Konuşmalı seslendirme</h2>
                 <label><input type="checkbox" checked={narration.enabled} disabled={!narration.ready}
                   onChange={event => narration.change(event.target.checked)} /> Otomatik konuşmalı geri bildirim</label>
-                <p>Sessiz mod tüm konuşma ve efektleri kapatır. Dinlemek için üstteki ses modunu açabilirsin. Müzik ve Efektler modunda yalnız ödül ve geçiş anlarında kısa müzikal ekler çalar; öğrenme, okuma ve dikkat sırasında arka plan müziği yoktur.</p>
+                <p>Sessiz mod tüm konuşma, müzik ve efektleri kapatır. Efektler kısa Manifest şarkı kesitleridir. Müzik ve Efektler modunda 12 saniyelik düşük sesli arka plan bölümünü isteğinle açabilirsin. Konuşma, ekran değişikliği ve mola müziği durdurur; otomatik tekrar yoktur.</p>
                 <p>Doğru yanıt, yeniden deneme ve tamamlama mesajlarını seslendirir. Varsayılan kapalıdır. Yönergeler ve altı hikâye, Dinle düğmesiyle her zaman isteğe bağlı dinlenebilir. Konuşmayı ekrandaki durdurma düğmesiyle kesebilirsin.</p>
                 <p>Sesler Türkçe sentetik bir anlatıcıyla hazırlanmıştır; karakterlerin gerçek sesi değildir. İnternet veya cihazda Türkçe ses paketi gerekmez. Hikâyeyi dinleme isteği okuma oturumunda destek sayılır; yıldız kaybettirmez.</p>
                 <ListenButton text={narrationTexts.correct} label="Anlatıcı sesini dene" />
@@ -827,9 +841,8 @@ export default function App() {
                 verilerini silmek ilerlemeyi de siler.
               </p>
               <p>
-                Karakterler ve çizimler bu proje için oluşturulmuştur. RİTMA ve
-                Matematik Sahnesi adları geçicidir; yayımdan önce marka
-                incelemesi gerekir.
+                Manifest üyelerinin fotoğraflarıyla hazırlanmış kişisel bir öğrenme alanıdır.
+                Eğitmenlerin sözleri ve sorular uygulamanın kurgusudur; grubun gerçek ders anlatımı değildir.
               </p>
               {!confirmReset ? (
                 <button

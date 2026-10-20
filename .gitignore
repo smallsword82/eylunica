@@ -1,4 +1,8 @@
 node_modules/
+.tools/
+*.tmp.html
+*.tmp.js
+media-source/
 dist/
 coverage/
 test-results/

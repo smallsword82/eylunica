@@ -7,7 +7,7 @@ async function observeAudio(page: Page) {
     const original = HTMLMediaElement.prototype.play;
     (window as unknown as { narrator: HTMLMediaElement[] }).narrator = [];
     HTMLMediaElement.prototype.play = function () {
-      (window as unknown as { narrator: HTMLMediaElement[] }).narrator.push(this);
+      if (this.src.includes("/narration/")) (window as unknown as { narrator: HTMLMediaElement[] }).narrator.push(this);
       return original.call(this);
     };
   });

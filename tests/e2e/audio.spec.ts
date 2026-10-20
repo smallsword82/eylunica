@@ -5,9 +5,9 @@ test("ses tercihi çevrimdışı korunur, efekt üretilir ve karakter adları g�
   await expect(sound).toHaveValue("effects");
   await sound.selectOption("silent");
   await page.evaluate(() => {
-    const original = AudioContext.prototype.createOscillator;
+    const original = HTMLMediaElement.prototype.play;
     (window as unknown as { soundCount: number }).soundCount = 0;
-    AudioContext.prototype.createOscillator = function() {
+    HTMLMediaElement.prototype.play = function() {
       (window as unknown as { soundCount: number }).soundCount++;
       return original.call(this);
     };
@@ -17,21 +17,21 @@ test("ses tercihi çevrimdışı korunur, efekt üretilir ve karakter adları g�
   await expect.poll(() => page.evaluate(() => (window as unknown as { soundCount: number }).soundCount)).toBeGreaterThan(0);
   await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
   await page.getByRole("button", { name: "15", exact: true }).click();
-  await expect.poll(() => page.evaluate(() => (window as unknown as { soundCount: number }).soundCount)).toBeGreaterThan(2);
+  await expect.poll(() => page.evaluate(() => (window as unknown as { soundCount: number }).soundCount)).toBeGreaterThan(1);
   await page.getByRole("button", { name: "← Haritaya dön" }).click();
   await page.getByRole("button", { name: "Arkadaşını seç →" }).click();
-  for (const name of ["Eylül", "Alara", "Beren", "Mina", "Öykü", "Defne"])
+  for (const name of ["Lidya", "Hilal", "Esin", "Mina", "Zeynep", "Sueda"])
     await expect(page.getByRole("button", { name: new RegExp(`${name} `) }).first()).toBeVisible();
-  await page.getByRole("button", { name: /Öykü Kısa yolları keşfet/ }).click();
-  await page.getByLabel("Karaktere vereceğin ad").fill("Deniz");
-  await page.getByRole("button", { name: "Bu adı seçtiğim karaktere ver" }).click();
-  await expect(page.getByRole("button", { name: /Deniz Kısa yolları keşfet/ })).toBeVisible();
+  await page.getByRole("button", { name: /Zeynep Kısa yolları keşfet/ }).click();
+  await page.getByLabel("Öğrenci adı").fill("Deniz");
+  await page.getByRole("button", { name: "Adımı kaydet" }).click();
+  await expect(page.getByRole("button", { name: /Zeynep Kısa yolları keşfet/ })).toBeVisible();
   await page.evaluate(() => navigator.serviceWorker.ready);
   await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await context.setOffline(true);
   await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await expect(sound).toHaveValue("effects");
-  await expect(page.getByText("Deniz yanında.")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Sahne senin, Deniz!" })).toBeVisible();
   await sound.selectOption("silent");
   await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await expect(sound).toHaveValue("silent");
@@ -47,8 +47,8 @@ test("Müzik ve Efektler ders ekranlarında müzik başlatmaz; Sessiz modu konu�
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("music");
   await page.evaluate(() => {
     (window as any).idleSynthCalls = 0;
-    const original = AudioContext.prototype.createOscillator;
-    AudioContext.prototype.createOscillator = function () { (window as any).idleSynthCalls++; return original.call(this); };
+    const original = HTMLMediaElement.prototype.play;
+    HTMLMediaElement.prototype.play = function () { (window as any).idleSynthCalls++; return original.call(this); };
   });
   await page.getByRole("button", { name: "Yönergeyi dinle" }).waitFor({ state: "visible" });
   expect(await page.getByRole("button", { name: "Yönergeyi dinle" }).isEnabled()).toBe(true);

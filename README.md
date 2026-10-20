@@ -1,5 +1,7 @@
 # Matematik Sahnesi · RİTMA
 
+**Cevap sesi:** matematik, akademiler ve Arena’da doğru/yanlış yanıt sonrası Hileli girişinden Ajda Pekkan’ın “Manifest” bölümü çalar (2,7 saniye). Rastgele arka plan kataloğu korunur. İsteğe bağlı konuşmalı geri bildirim kesitin bitmesini bekler.
+
 Güncel geliştirme deposu: `smallsword82/eylunica` (özel). `smallsword82/manifestakademi` kaynağının main dalı, 10 commitlik tüm ata geçmişi ve özgün commit kimlikleriyle korunarak aktarılmıştır. Kaynak depo değiştirilmemiştir.
 
 Uygulama öğrenci profili ve Manifest eğitmen seçimiyle açılır. Öğrencinin varsayılan adı **Eylül**; değiştirilebilir ve eğitmenden bağımsızdır. Mina, Lidya, Hilal, Esin, Zeynep ve Sueda gerçek fotoğraflarıyla eğitmen rolündedir. Öğrenci adı/eğitmen değişikliği yıldızları, becerileri, akademileri, Arena geçmişini ve ödülleri sıfırlamaz. `ritma-progress-v1` ve Android Preferences kayıt alanı korunur. Web kayıtları tarayıcı kökenine bağlıdır; site adresi değişirse kendiliğinden taşınmaz.

@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, expect, it, vi } from "vitest";
 import { Capacitor } from "@capacitor/core";
 import { Preferences } from "@capacitor/preferences";
-import { AUDIO_KEY, enableEffects, loadAudio, saveAudio, playEffect, stopEffects, setSoundMode } from ".";
+import { AUDIO_KEY, enableEffects, loadAudio, saveAudio, playEffect, playAnswerEffect, answerSoundSeconds, stopEffects, setSoundMode } from ".";
 import { effectSeconds, playManifestTrack, getManifestPlayback, manifestTracks, startManifestShuffle, takeRandomTrack } from "./manifest";
 vi.mock("@capacitor/preferences", () => ({ Preferences: { get: vi.fn(), set: vi.fn() } }));
 const clips: FakeAudio[] = [];
@@ -57,6 +57,19 @@ it("sessizken ve arka plandayken ses oluşturmaz", async () => {
   vi.spyOn(document, "visibilityState", "get").mockReturnValue("hidden");
   await playEffect("correct");
   expect(clips).toHaveLength(0);
+});
+it("cevap sesi Ajda Manifest kesitidir; sessiz modda çalmaz ve kısa sürede durur", async () => {
+  vi.useFakeTimers();
+  setSoundMode("effects");
+  await playAnswerEffect();
+  expect(clips.at(-1)!.src).toBe("/manifest/audio/ajda-manifest.mp3");
+  const audio = clips.at(-1)!;
+  await vi.advanceTimersByTimeAsync(answerSoundSeconds * 1000);
+  expect(audio.pause).toHaveBeenCalled();
+  const count = clips.length;
+  setSoundMode("silent");
+  await playAnswerEffect();
+  expect(clips).toHaveLength(count);
 });
 it("beş efekt gerçek yerel kesitleri çalar ve süre sınırında durur", async () => {
   vi.useFakeTimers();

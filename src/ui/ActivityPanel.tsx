@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { hasNarration, narrateFeedback, stopNarration } from "../audio/narration";
 import { narrationTexts, storyNarrationText } from "../audio/narration-texts";
 import { ListenButton } from "./ListenButton";
-import { playEffect, stopActivitySound } from "../audio";
+import { playAnswerEffect, answerSoundSeconds, stopActivitySound } from "../audio";
 import { useRef, useState } from "react";
 import type { Activity, LearningResult } from "../learning-engine";
 import { checkReading } from "../reading-engine";
@@ -46,8 +46,8 @@ export function ActivityPanel({
           checkReading(task, selected, evidence)
         : selected === task.answer;
     stopNarration();
-    void playEffect(correct ? (last ? "complete" : !attempted.current ? "star" : "correct") : "retry");
-    narrateFeedback(correct ? (last ? "complete" : "correct") : "retry");
+    void playAnswerEffect();
+    narrateFeedback(correct ? (last ? "complete" : "correct") : "retry", answerSoundSeconds * 1000 + 100);
     if (!correct) {
       usedHint.current = true;
       setHint(true);

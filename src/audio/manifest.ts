@@ -1,6 +1,7 @@
 import { manifestTracks, type ManifestTrack } from "./manifest-catalog";
 export { manifestTracks, type ManifestTrack } from "./manifest-catalog";
 export const effectSeconds = { correct: 1.6, retry: 1.1, star: 2.2, record: 3, complete: 3.5 };
+export const answerSoundSeconds = 2.7;
 let active: HTMLAudioElement | null = null;
 let timer: ReturnType<typeof setTimeout> | undefined;
 let error = "";
@@ -111,6 +112,9 @@ export async function startManifestShuffle() {
 }
 export async function playManifestEffect(effect: keyof typeof effectSeconds) {
   await playClip(takeRandomTrack(), effectSeconds[effect], Math.min(0.5, volume), "Kısa Manifest efekti");
+}
+export async function playManifestAnswer() {
+  await playClip("ajda-manifest", answerSoundSeconds, Math.min(0.65, volume + 0.1), "Ajda Pekkan · Manifest");
 }
 export async function playManifestTrack(track: ManifestTrack, level = volume) {
   if (mode !== "music") return;

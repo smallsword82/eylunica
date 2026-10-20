@@ -1,5 +1,15 @@
 # Kişisel Manifest öğrenme alanı
 
+## Sabit cevap sesi — 20.10.2026
+
+Kullanıcı Hileli klibindeki Ajda Pekkan bölümünü doğruladı. `ajda-manifest.mp3`, mevcut resmî `kXKhNI4DLHM` kaydının 10,70–13,40 saniyelik giriş konuşmasından alınmıştır; süre 2,7 saniye. Stereo 44,1 kHz/128 kbps, -16 LUFS / -1,5 dBTP hedefli dengeleme ve kısa giriş/çıkış uygulanmıştır. Ses taklidi veya yapay ses üretimi yoktur.
+
+Doğru/yanlış soru yanıtlarında bu sabit ses kullanılır; genel rekor/tamamlama efektleri ve 27 parçalık rastgele arka plan listesi ayrı kalır. Sessiz mod, mola ve odak/görünürlük kuralları korunur. Açık otomatik anlatıcı 2,8 saniye bekler; ekran değişimi bekleyen konuşmayı iptal eder.
+
+Bu bilgisayarda yeni testler: 18 dosyada 140 birim testi, TypeScript kontrolü, üretim/PWA derlemesi ve 23 tarayıcı testi geçti (son tam tur 42,9 sn). Chromium doğru ve yanlış cevaplarda gerçek ajda-manifest.mp3 oynatımını, 2,6–2,8 sn süresini ve molada durmasını doğruladı. Dosya FFmpeg hata kontrolüyle çözüldü; SHA256 `3E0B9A70D4ADFC83174B5A602CF6CA1A0FED3F57217696D1B23387D987BDFCD3`. PWA 66 girdiye/8417,49 KiB’ye güncellendi.
+
+Resmî elle hazırlanmış altyazı bu giriş konuşmasını içermiyor. Yerel küçük ses tanıma modelleri konuşma zamanını yaklaşık 10,84–13,12 sn buldu, kelimeyi güvenilir yazamadı; bu işlem insan tarafından işitsel onay verilmiş gibi sunulmaz. Kullanıcıya hazırlanan kesit dinlenebilir örnek olarak gösterildi. Kaynak, kullanıcının onayladığı Hileli klibidir.
+
 ## Güncel katalog ve oynatma — 20.10.2026 ikinci geliştirme
 
 Önceki iki şarkılık sürüm aşağıda tarihçe olarak kalır. Güncel katalog resmî `@m6nifestgirls/videos` kanalında doğrulanan 27 ayrı şarkı/remiks kaydını içerir. Aynı şarkının dans, klip, karaoke ve canlı kopyaları ayrıca çoğaltılmaz. Aynı isimli başka sanatçıların kanalın releases sekmesine karışmış Morning View, Still Breathing ve Crystal kayıtları dahil edilmez.

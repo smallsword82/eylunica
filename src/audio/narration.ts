@@ -11,6 +11,7 @@ let playback = idle;
 let current: HTMLAudioElement | null = null;
 let generation = 0;
 let automatic = false;
+let pendingFeedback: ReturnType<typeof setTimeout> | undefined;
 const listeners = new Set<() => void>();
 export const getNarration = () => playback;
 export function subscribeNarration(listener: () => void) {
@@ -25,6 +26,7 @@ export function hasNarration(text: string): boolean {
   return Object.hasOwn(narrationManifest, text);
 }
 export function stopNarration() {
+  clearTimeout(pendingFeedback);
   generation++;
   if (current) {
     current.onended = null;
@@ -66,8 +68,15 @@ export function setAutomaticNarration(value: boolean) {
   automatic = value;
   if (!value) stopNarration();
 }
-export function narrateFeedback(id: NarrationId) {
-  if (automatic) void playNarration(narrationTexts[id]);
+export function narrateFeedback(id: NarrationId, delayMs = 0) {
+  clearTimeout(pendingFeedback);
+  if (!automatic) return;
+  if (delayMs > 0) {
+    const ticket = generation;
+    pendingFeedback = setTimeout(() => {
+      if (automatic && ticket === generation) void playNarration(narrationTexts[id]);
+    }, delayMs);
+  } else void playNarration(narrationTexts[id]);
 }
 export async function loadNarrationPreference(): Promise<boolean> {
   const value = Capacitor.isNativePlatform()

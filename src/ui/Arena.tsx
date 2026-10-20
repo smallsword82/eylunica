@@ -3,7 +3,7 @@ import { OPERATIONS, SESSION, eligibility, getLane, makeDeck, observation, opera
 import { useResponseClock } from "../arena/useResponseClock";
 import { completeArena, recordArena, type Progress } from "../storage";
 import { strategy, symbols, type Operation, type Question } from "../math-engine";
-import { playEffect, stopActivitySound } from "../audio";
+import { playAnswerEffect, answerSoundSeconds, playEffect, stopActivitySound } from "../audio";
 import { narrateFeedback, stopNarration } from "../audio/narration";
 import type { UsageDomain } from "../time-engine";
 
@@ -46,7 +46,7 @@ export function Arena({ progress, onSave, onBack, onPractice, onTransition, onAc
       save(recordArena(latest.current, session.spec, o));
       attempted.current = true;
     }
-    stopNarration(); void playEffect(correct ? "correct" : "retry"); narrateFeedback(correct ? "correct" : "retry");
+    stopNarration(); void playAnswerEffect(); narrateFeedback(correct ? "correct" : "retry", answerSoundSeconds * 1000 + 100);
     setSolved(correct);
     setFeedback(correct ? "Yanıtını düşündün, bir adım daha attın." : "Henüz olmadı. İpucuna bakıp yeniden deneyebilirsin. Acelemiz yok.");
     if (!correct) { usedHint.current = true; setHint(true); lock.current = false; }

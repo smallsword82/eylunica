@@ -21,6 +21,22 @@ beforeEach(() => {
   enableEffects(true);
 });
 afterEach(() => { enableEffects(false); stopNarration(); vi.restoreAllMocks(); vi.unstubAllGlobals(); });
+it("cevap kesitini konuşmayla kesmez; bekleyen konuşma ekran değişince iptal edilir", async () => {
+  vi.useFakeTimers();
+  try {
+    setAutomaticNarration(true);
+    narrateFeedback("correct", 1900);
+    await vi.advanceTimersByTimeAsync(1800);
+    expect(MockAudio.instances).toHaveLength(0);
+    await vi.advanceTimersByTimeAsync(100);
+    expect(MockAudio.instances).toHaveLength(1);
+    stopNarration();
+    narrateFeedback("retry", 1900);
+    stopNarration();
+    await vi.advanceTimersByTimeAsync(2000);
+    expect(MockAudio.instances).toHaveLength(1);
+  } finally { vi.useRealTimers(); }
+});
 it("yalnızca gömülü metni oynatır; yeni ses önceki sesi durdurur", async () => {
   expect(await playNarration("Bilinmeyen veya çocuğun özel adı")).toBe(false);
   expect(await playNarration("toString")).toBe(false);

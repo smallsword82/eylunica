@@ -1,4 +1,5 @@
-import { getManifestPlayback, playManifestEffect, setManifestMode, stopManifestAudio } from "./manifest";
+import { getManifestPlayback, playManifestAnswer, playManifestEffect, setManifestMode, stopManifestAudio } from "./manifest";
+export { answerSoundSeconds } from "./manifest";
 import { Capacitor } from "@capacitor/core";
 import { Preferences } from "@capacitor/preferences";
 
@@ -41,4 +42,8 @@ export function setSoundMode(value: SoundMode) {
 export async function playEffect(effect: Effect): Promise<void> {
   if (mode === "silent" || document.visibilityState === "hidden") return;
   await playManifestEffect(effect);
+}
+export async function playAnswerEffect(): Promise<void> {
+  if (mode === "silent" || document.visibilityState === "hidden") return;
+  await playManifestAnswer();
 }

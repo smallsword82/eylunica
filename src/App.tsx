@@ -7,7 +7,7 @@ import { narrationTexts } from "./audio/narration-texts";
 import { ListenButton, NarrationPlayback } from "./ui/ListenButton";
 import { CharacterName } from "./ui/CharacterName";
 import { useAudio } from "./audio/useAudio";
-import { playEffect, stopEffects, stopActivitySound } from "./audio";
+import { playAnswerEffect, answerSoundSeconds, playEffect, stopEffects, stopActivitySound } from "./audio";
 import { createPortal } from "react-dom";
 import { useWellbeing } from "./wellbeing/useWellbeing";
 import { ParentTimePanel, TimeNotice } from "./ui/Wellbeing";
@@ -175,8 +175,8 @@ export default function App() {
     pending.current = true;
     const correct = value === question.answer;
     stopNarration();
-    void playEffect(correct ? (!attempted.current ? "star" : "correct") : "retry");
-    narrateFeedback(correct ? "correct" : "retry");
+    void playAnswerEffect();
+    narrateFeedback(correct ? "correct" : "retry", answerSoundSeconds * 1000 + 100);
     if (!correct) usedHint.current = true;
     // One learning record and at most one star per question; retries remain encouraging.
     if (!attempted.current) {

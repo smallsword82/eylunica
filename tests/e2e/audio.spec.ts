@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 test("ses tercihi çevrimdışı korunur, efekt üretilir ve karakter adları günceldir", async ({ page, context }) => {
-  await page.goto("/");
+  await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   const sound = page.getByRole("combobox", { name: "Ses modu" });
   await expect(sound).toHaveValue("effects");
   await sound.selectOption("silent");
@@ -27,19 +27,19 @@ test("ses tercihi çevrimdışı korunur, efekt üretilir ve karakter adları g�
   await page.getByRole("button", { name: "Bu adı seçtiğim karaktere ver" }).click();
   await expect(page.getByRole("button", { name: /Deniz Kısa yolları keşfet/ })).toBeVisible();
   await page.evaluate(() => navigator.serviceWorker.ready);
-  await page.reload();
+  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await context.setOffline(true);
-  await page.reload();
+  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await expect(sound).toHaveValue("effects");
   await expect(page.getByText("Deniz yanında.")).toBeVisible();
   await sound.selectOption("silent");
-  await page.reload();
+  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await expect(sound).toHaveValue("silent");
   await expect(page.getByLabel("1 yıldız", { exact: true })).toBeVisible();
 });
 
 test("Müzik ve Efektler ders ekranlarında müzik başlatmaz; Sessiz modu konuşmayı da kapatır", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await expect(page.getByRole("combobox", { name: "Ses modu" })).toHaveValue("effects");
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("silent");
   await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
@@ -52,10 +52,10 @@ test("Müzik ve Efektler ders ekranlarında müzik başlatmaz; Sessiz modu konu�
   });
   await page.getByRole("button", { name: "Yönergeyi dinle" }).waitFor({ state: "visible" });
   expect(await page.getByRole("button", { name: "Yönergeyi dinle" }).isEnabled()).toBe(true);
-  await page.getByRole("button", { name: "Matematik Sahnesi ana sayfa" }).click();
+  await page.getByRole("button", { name: "RİTMA ana sayfa" }).click();
   await page.getByRole("button", { name: /^Okuduğunu Anlama Akademisi/ }).click();
   await page.getByRole("button", { name: /Kısa metinler/ }).click();
-  await page.getByRole("button", { name: "Matematik Sahnesi ana sayfa" }).click();
+  await page.getByRole("button", { name: "RİTMA ana sayfa" }).click();
   await page.getByRole("button", { name: /^Dikkat ve Odaklanma Akademisi/ }).click();
   await page.getByRole("button", { name: /Farklı olanı bul/ }).click();
   await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 1000)));

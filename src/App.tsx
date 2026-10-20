@@ -37,6 +37,7 @@ import { characters, worlds } from "./game";
 import { Avatar } from "./ui/Avatar";
 const ops: Operation[] = ["add", "subtract", "multiply", "divide"];
 type Screen =
+  | "welcome"
   | "home"
   | "characters"
   | "play"
@@ -49,7 +50,7 @@ type Screen =
 export default function App() {
   const [progress, setProgress] = useState<Progress>(fresh),
     [ready, setReady] = useState(false),
-    [screen, setScreen] = useState<Screen>("home");
+    [screen, setScreen] = useState<Screen>("welcome");
   const [question, setQuestion] = useState<Question | null>(null),
     [mode, setMode] = useState("add"),
     [hint, setHint] = useState(false),
@@ -223,14 +224,14 @@ export default function App() {
       <header className="topbar">
         <button
           className="brand"
-          onClick={() => setScreen("home")}
-          aria-label="Matematik Sahnesi ana sayfa"
+          onClick={() => setScreen(screen === "welcome" ? "welcome" : "home")}
+          aria-label="RİTMA ana sayfa"
         >
           <span className="brand-icon">✦</span>
           <span>
-            matematik
+            RİTMA
             <span className="brand-bottom">
-              sahnesi<span className="brand-dot">.</span>
+              Her zihin kendi ritminde<span className="brand-dot">.</span>
             </span>
           </span>
         </button>
@@ -502,16 +503,21 @@ export default function App() {
               onActivity={wellbeing.setContext}
             />
           )}
-          {screen === "characters" && (
-            <main className="subpage">
-              <button className="text-button" onClick={() => setScreen("home")}>
+          {(screen === "characters" || screen === "welcome") && (
+            <main className={`subpage ${screen === "welcome" ? "welcome-page" : ""}`}>
+              {screen !== "welcome" && <button className="text-button" onClick={() => setScreen("home")}>
                 ← Macera haritana dön
-              </button>
-              <div className="eyebrow muted">BİRLİKTE DAHA GÜZEL</div>
-              <h1>Sahne arkadaşını seç.</h1>
+              </button>}
+              <div className="eyebrow muted">{screen === "welcome" ? "RİTMA’YA HOŞ GELDİN" : "BİRLİKTE DAHA GÜZEL"}</div>
+              <h1>{screen === "welcome" ? "Her macera bir arkadaşla başlar." : "Sahne arkadaşını seç."}</h1>
               <p className="intro">
-                Hepsi farklı düşünür. Hepsi senin yanında.
+                Sahne arkadaşını seç. Birlikte oku, keşfet ve kendi ritminde öğren.
               </p>
+              {screen === "welcome" && <p className="welcome-progress" role="status">
+                {progress.stars > 0 || total > 0 || progress.history.length > 0
+                  ? `${progress.stars} yıldızın ve mevcut ilerlemen burada. Kaldığın yerden devam edebilirsin.`
+                  : "Acele yok. Altı arkadaş, yepyeni keşifler."}
+              </p>}
               <div className="character-grid">
                 {characters.map((c) => (
                   <button
@@ -532,8 +538,9 @@ export default function App() {
                 ))}
               </div>
               <CharacterName key={progress.character} progress={progress} onSave={persist} />
+              <p className="welcome-companion">{displayName(progress.character)} yanında. Hazırsan sahne senin!</p>
               <button className="primary" onClick={() => setScreen("home")}>
-                Maceraya dön →
+                {screen === "welcome" ? "RİTMA’ya devam et →" : "Maceraya dön →"}
               </button>
             </main>
           )}

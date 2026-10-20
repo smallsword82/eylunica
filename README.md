@@ -1,5 +1,9 @@
 # Matematik Sahnesi · RİTMA
 
+Güncel geliştirme deposu: `smallsword82/eylunica` (özel). `smallsword82/manifestakademi` kaynağının main dalı, 10 commitlik tüm ata geçmişi ve özgün commit kimlikleriyle korunarak aktarılmıştır. Kaynak depo değiştirilmemiştir.
+
+Uygulama RİTMA karakter seçimiyle açılır. Önceki karakter seçili gelir; arkadaş veya özel ad değişikliği yıldızları, becerileri, akademileri, Arena geçmişini ve ödülleri sıfırlamaz. Devam düğmesi mevcut macera haritasını açar. `ritma-progress-v1` kayıt anahtarı ve Android Preferences alanı korunur. Web kayıtları tarayıcı kökenine bağlıdır; site adresi değişirse eski adresteki kayıtlar kendiliğinden yeni adrese taşınmaz.
+
 7–12 yaş için Türkçe, sessiz, reklamsız matematik, okuduğunu anlama ve dikkat macerası. Tek React / TypeScript kod tabanından PWA ve paket içi varlıklarla çalışan Capacitor Android uygulaması.
 
 ## Yerelde geliştirme

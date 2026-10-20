@@ -41,9 +41,9 @@ test("okuma: eski kayıt korunur, altı beceri tamamlanır ve çevrimdışı ger
       }),
     );
   });
-  await page.goto("/");
+  await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await page.evaluate(() => navigator.serviceWorker.ready);
-  await page.reload();
+  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await context.setOffline(true);
   await readingButton(page).click();
   await page.getByRole("button", { name: /Kısa metinler/ }).click();
@@ -83,7 +83,7 @@ test("okuma: eski kayıt korunur, altı beceri tamamlanır ve çevrimdışı ger
       ),
     )
     .toBe(6);
-  await page.reload();
+  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await expect(page.getByText("Defne yanında.")).toBeVisible();
   await expect(page.getByLabel("16 yıldız", { exact: true })).toBeVisible();
   const p = await page.evaluate(
@@ -105,9 +105,9 @@ test("dikkat: altı görev türü çevrimdışı oynanır, ekran küçükken ta�
   page,
   context,
 }) => {
-  await page.goto("/");
+  await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await page.evaluate(() => navigator.serviceWorker.ready);
-  await page.reload();
+  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await context.setOffline(true);
   const kinds = [
     "Farklı olanı bul",
@@ -181,14 +181,14 @@ test("dikkat: altı görev türü çevrimdışı oynanır, ekran küçükken ta�
       ),
     )
     .toBe(6);
-  await page.reload();
+  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await expect(page.getByLabel("6 yıldız", { exact: true })).toBeVisible();
 });
 
 test("konser: metin kanıtı, işaret sırası ve matematik aynı görevde; çift yıldız yok", async ({
   page,
 }) => {
-  await page.goto("/");
+  await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await page.getByRole("button", { name: "Büyük Konser Görevi →" }).click();
   await page
     .getByRole("button", { name: "Konser hazırlığına başla →" })
@@ -222,7 +222,7 @@ test("yeni akademiler: tablet düzeni ve erişilebilirlik kontrolleri", async ({
 }) => {
   const { default: AxeBuilder } = await import("@axe-core/playwright");
   await page.setViewportSize({ width: 768, height: 1024 });
-  await page.goto("/");
+  await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await readingButton(page).click();
   for (const title of ["Paragraf keşfi", "Derin okuma"]) {
     await page.getByRole("button", { name: new RegExp(title) }).click();

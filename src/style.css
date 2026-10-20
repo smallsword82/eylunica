@@ -55,6 +55,30 @@ button:hover {
   margin: auto;
   padding: 0 48px;
 }
+.welcome-page {
+  padding-top: 48px;
+  background: radial-gradient(ellipse at top right, #58417a44, transparent 65%);
+}
+.welcome-page h1 {
+  max-width: 700px;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.15;
+}
+.welcome-progress {
+  padding: 14px 18px;
+  border: 1px solid #b1a2e866;
+  border-radius: 16px;
+  background: #b1a2e811;
+}
+.welcome-companion {
+  margin-top: 24px;
+  color: #e3d6f7;
+}
+.brand .brand-bottom {
+  font-size: 11px;
+  letter-spacing: 0;
+  margin-top: 6px;
+}
 .topbar {
   display: flex;
   justify-content: space-between;

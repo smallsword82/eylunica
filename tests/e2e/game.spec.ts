@@ -3,10 +3,10 @@ test("telefon: görev, kayıt, yeniden açılış ve çevrimdışı oyun", async
   page,
   context,
 }) => {
-  await page.goto("/");
+  await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await expect(page.getByText("Bugün nerede buluşalım?")).toBeVisible();
   await page.evaluate(() => navigator.serviceWorker.ready);
-  await page.reload();
+  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
   await page.getByRole("button", { name: "14", exact: true }).click();
   await expect(page.getByRole("status")).toContainText("Henüz olmadı");
@@ -27,7 +27,7 @@ test("telefon: görev, kayıt, yeniden açılış ve çevrimdışı oyun", async
     ),
   ).toBe(true);
   await context.setOffline(true);
-  await page.reload();
+  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await expect(page.getByText("Beren yanında.")).toBeVisible();
   await page.getByRole("button", { name: /Toplama Ormanı/ }).click();
   await page.getByRole("button", { name: "Kendim yazayım" }).click();
@@ -46,14 +46,14 @@ test("telefon: görev, kayıt, yeniden açılış ve çevrimdışı oyun", async
       ),
     )
     .toBe(1);
-  await page.reload();
+  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await expect(page.getByLabel("1 yıldız", { exact: true })).toBeVisible();
 });
 test("masaüstü: dört işlem, gelişim görünümü ve sıfırlama onayı", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
-  await page.goto("/");
+  await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   for (const title of [
     "Toplama Ormanı",
     "Çıkarma Vadisi",
@@ -83,7 +83,7 @@ test("erişilebilirlik: ana ekran ve görev WCAG A/AA kontrolleri", async ({
   page,
 }) => {
   const { default: AxeBuilder } = await import("@axe-core/playwright");
-  await page.goto("/");
+  await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await expect(page.getByText("Bugün nerede buluşalım?")).toBeVisible();
   expect(
     (
@@ -105,7 +105,7 @@ test("erişilebilirlik: ana ekran ve görev WCAG A/AA kontrolleri", async ({
 test("beş soruluk görev tamamlanır, yıldız ve sahne dekoru kalıcıdır", async ({
   page,
 }) => {
-  await page.goto("/");
+  await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
   for (const [i, value] of [15, 15, 12, 14, 17].entries()) {
     await page
@@ -125,7 +125,7 @@ test("beş soruluk görev tamamlanır, yıldız ve sahne dekoru kalıcıdır", a
   await expect(
     page.getByText("✦ Sahnenin renkli ışıkları açıldı!"),
   ).toBeVisible();
-  await page.reload();
+  await page.reload(); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await expect(page.getByLabel("5 yıldız", { exact: true })).toBeVisible();
   await expect(page.locator(".stage")).toHaveClass(/lit/);
 });

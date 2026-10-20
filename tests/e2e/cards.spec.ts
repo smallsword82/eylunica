@@ -1,9 +1,9 @@
-import { test, expect } from "./local-test";
+import { test, expect, openMathWorld } from "./local-test";
 
 test("bölüm kartları sırayla kazanılır, koleksiyon ve bölüm numarası yeniden açılışta korunur", async ({ page }, testInfo) => {
   await page.goto("/");
   await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
-  await page.getByRole("button", { name: /Toplama Ormanı/ }).click();
+  await openMathWorld(page, /Toplama Ormanı/);
   for (const character of ["Mina", "Lidya"]) {
     for (let index = 0; index < 5; index++) {
       const [first, second] = (await page.locator(".equation").innerText()).match(/\d+/g)!.map(Number);

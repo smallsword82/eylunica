@@ -1,4 +1,4 @@
-import { test, expect, type Page } from "./local-test";
+import { test, expect, type Page, openSoundSettings } from "./local-test";
 import { fresh, completeArena, recordArena } from "../../src/storage";
 import { freshArena, makeDeck, observation, specs } from "../../src/arena-engine";
 import { dateKey, freshDay, freshWellbeing } from "../../src/time-engine";
@@ -85,6 +85,7 @@ test("kişisel rekor, sınırlı ödül, ebeveyn grafikleri, Manifest sesleri ve
   await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   // Seed only once; subsequent offline reload must use the actual saved result.
   await page.evaluate(() => localStorage.setItem("arena-seed-used", "yes"));
+  await openSoundSettings(page);
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("music");
   await page.evaluate(() => {
     const original = HTMLMediaElement.prototype.play;
@@ -114,6 +115,7 @@ test("kişisel rekor, sınırlı ödül, ebeveyn grafikleri, Manifest sesleri ve
   await context.setOffline(true);
   await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await expect(page.getByLabel("10 yıldız", { exact: true })).toBeVisible();
+  await openSoundSettings(page);
   await expect(page.getByRole("combobox", { name: "Ses modu" })).toHaveValue("music");
 });
 

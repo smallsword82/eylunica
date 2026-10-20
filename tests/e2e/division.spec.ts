@@ -1,4 +1,4 @@
-import { test, expect } from "./local-test";
+import { test, expect, openMathWorld } from "./local-test";
 import { fresh } from "../../src/storage";
 
 for (const level of [1, 3, 5]) for (const keyboard of [false, true]) {
@@ -10,7 +10,7 @@ for (const level of [1, 3, 5]) for (const keyboard of [false, true]) {
     await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
     await page.evaluate(() => navigator.serviceWorker.ready);
     await context.setOffline(true);
-    await page.getByRole("button", { name: /Bölme Adası/ }).click();
+    await openMathWorld(page, /Bölme Adası/);
     if (keyboard) await page.getByRole("button", { name: "Kendim yazayım" }).click();
     for (let index = 0; index < 5; index++) {
       await expect(page.getByRole("progressbar", { name: "Görev ilerlemesi" })).toHaveAttribute("aria-valuenow", String(index + 1));
@@ -55,7 +55,7 @@ for (const level of [1, 3, 5]) for (const keyboard of [false, true]) {
     await expect(page.getByRole("region", { name: "Bölüm durumun" })).toContainText("Bölüm 2");
     await page.reload();
     await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
-    await page.getByRole("button", { name: /Bölme Adası/ }).click();
+    await openMathWorld(page, /Bölme Adası/);
     await expect(page.getByRole("region", { name: "Bölüm durumun" })).toContainText("Bölüm 2");
   });
 }

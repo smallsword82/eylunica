@@ -51,6 +51,7 @@ type Screen =
   | "music"
   | "collection"
   | "home"
+  | "math"
   | "characters"
   | "play"
   | "summary"
@@ -68,6 +69,8 @@ export default function App() {
   const progress = onlineEnabled && account.username ? { ...savedProgress, learnerName: account.username } : savedProgress;
   const needsAccount = onlineEnabled && !account.session && !guest;
   const [learnerDraft, setLearnerDraft] = useState("Eylül");
+  const [musicOpen, setMusicOpen] = useState(false);
+  const musicToggle = useRef<HTMLButtonElement>(null);
   const [question, setQuestion] = useState<Question | null>(null),
     [mode, setMode] = useState("add"),
     [hint, setHint] = useState(false),
@@ -196,8 +199,7 @@ export default function App() {
   function enterAdventure() {
     const named = onlineEnabled ? progress : { ...progress, learnerName: learnerDraft.trim() || "Eylül" };
     persist(named);
-    if (screen === "welcome" && named.assessmentPending && !named.calibrationDone) start("mixed", true, named);
-    else setScreen("home");
+    setScreen("home");
     if (screen === "welcome" && !welcomed.current) { welcomed.current = true; void playManifestWelcome(); }
   }
   function answer(value: number) {
@@ -287,10 +289,7 @@ export default function App() {
               Mola ver
             </button>
           )}
-          <select className="sound-button" aria-label="Ses modu" value={audio.mode} disabled={!audio.ready}
-            onChange={event => audio.changeMode(event.target.value as "silent" | "effects" | "music")}>
-            <option value="silent">Sessiz</option><option value="effects">Efektler</option><option value="music">Müzik + efekt</option>
-          </select>
+<button ref={musicToggle} className="sound-button music-menu-toggle" aria-label="Ses ve müzik ayarları" title="Ses ve müzik ayarları" aria-expanded={musicOpen} aria-controls="music-settings" onKeyDown={event => { if (event.key === "Escape") setMusicOpen(false); }} onClick={() => setMusicOpen(!musicOpen)}>♫</button>
         </div>
         <div className="profile-actions">
           <button className="collection-button" aria-label="Kart koleksiyonum" title="Kart koleksiyonum" onClick={() => setScreen("collection")}><span aria-hidden="true">▣</span></button>
@@ -307,7 +306,13 @@ export default function App() {
         </div></>}
       </header>
       <NarrationPlayback />
-      {ready && !needsAccount && screen !== "parent" && <ManifestAudioControls paused={!!wellbeing.notice} onEnableMusic={() => audio.changeMode("music")} />}
+      {ready && !needsAccount && <section id="music-settings" className="music-settings-menu" aria-label="Ses ve müzik ayarları" hidden={!musicOpen} onKeyDown={event => { if (event.key === "Escape") { setMusicOpen(false); musicToggle.current?.focus(); } }}>
+        <button className="text-button" onClick={() => { setMusicOpen(false); musicToggle.current?.focus(); }}>Müzik ayarlarını kapat ×</button>
+        <label>Ses modu <select aria-label="Ses modu" value={audio.mode} disabled={!audio.ready} onChange={event => audio.changeMode(event.target.value as "silent" | "effects" | "music")}>
+          <option value="silent">Sessiz</option><option value="effects">Efektler</option><option value="music">Müzik + efekt</option>
+        </select></label>
+        <ManifestAudioControls paused={!!wellbeing.notice} onEnableMusic={() => audio.changeMode("music")} />
+      </section>}
       {narration.error && <div className="storage-error" role="alert">{narration.error}</div>}
       {error && (
         <div className="storage-error" role="alert">
@@ -332,211 +337,26 @@ export default function App() {
           {screen === "league" && (onlineEnabled ? <StarLeague onBack={() => setScreen("home")} /> : <main className="subpage"><button className="text-button" onClick={() => setScreen("home")}>← Haritaya dön</button><h1>eylunica Yıldız Tablosu</h1><h2>{progress.learnerName || "Eylül"} · {progress.stars} yıldız</h2><p>Bu cihazdaki yıldızların ve kartların korunuyor. Şimdilik hesap girişi ve kişiler arası çevrimiçi sıralama kapalı.</p><button className="primary" onClick={() => setScreen("collection")}>Kart koleksiyonunu gör →</button></main>)}
           {screen === "collection" && <CardCollection progress={progress} onBack={() => setScreen("home")} />}
           {screen === "music" && <MusicLounge learnerName={progress.learnerName || "Eylül"} paused={!!wellbeing.notice} onBack={() => setScreen("home")} onEnableMusic={() => audio.changeMode("music")} />}
-          {screen === "home" && (
-            <main>
-              <nav className="academy-hub" aria-label="Üç akademi">
-                <button
-                  className="academy-tile math-tile"
-                  onClick={() =>
-                    document
-                      .querySelector("#math-map")
-                      ?.scrollIntoView({ behavior: "instant" })
-                  }
-                >
-                  <span className="academy-symbol" aria-hidden="true">
-                    +
-                  </span>
-                  <strong>Matematik Akademisi</strong>
-                  <span>Sayılarla düşün, stratejini keşfet →</span>
-                </button>
-                <button
-                  className="academy-tile reading-tile"
-                  onClick={() => wellbeing.transition(() => setScreen("reading"), !progress.academies.reading.placementDone)}
-                >
-                  <span className="academy-symbol" aria-hidden="true">
-                    Aa
-                  </span>
-                  <strong>Okuduğunu Anlama Akademisi</strong>
-                  <span>Hikâyeleri oku, kanıtları birleştir →</span>
-                </button>
-                <button
-                  className="academy-tile focus-tile"
-                  onClick={() => wellbeing.transition(() => setScreen("attention"), !progress.academies.attention.placementDone)}
-                >
-                  <span className="academy-symbol" aria-hidden="true">
-                    ◎
-                  </span>
-                  <strong>Dikkat ve Odaklanma Akademisi</strong>
-                  <span>Ayrıntıları fark et, sırayı hatırla →</span>
-                </button>
-              </nav>
-              <button className="arena-entry" onClick={() => setScreen("arena")}>
-                <strong>eylunica Hız Arenası</strong><span>İsteğe bağlı · önce doğruluk, sonra kendi gelişimin →</span>
-              </button>
-              <section className="manifest-banner">
-                <img src="./manifest/group.webp" alt="Manifest grubu" />
-                <div><span className="eyebrow">eylunica × MANIFEST</span>
-                  <h1>Sahne senin, {progress.learnerName || "Eylül"}!</h1>
-                  <p>Oku, düşün, ritmi yakala. Manifest eğitmenlerinle her gün yeni bir keşif.</p>
-                  <button className="primary" onClick={() => start("add")}>İlk keşfe başla →</button>
-                  <button className="secondary" onClick={() => setScreen("music")}>Manifest müzik odası →</button>
-                  <button className="secondary" onClick={() => setScreen("collection")}>Kazandığın kartları gör →</button>
-                </div>
-              </section>
-              <section className="hero">
-                <div className="hero-copy">
-                  <div className="eyebrow">
-                    <span /> eylunica İLE ZİHİNDEN MATEMATİK
-                  </div>
-                  <h2>
-                    Küçük adımlar.
-                    <br />
-                    Kocaman bir <em>sahne.</em>
-                  </h2>
-                  <p>
-                    Biraz merak, biraz matematik…
-                    <br />
-                    Konserin ışıklarını birlikte yakalım.
-                  </p>
-                  <button className="primary" onClick={() => start("add")}>
-                    Maceraya devam et <span>→</span>
-                  </button>
-                  <div className="hero-note">
-                    Süre yok. Baskı yok. Keşfetmek var.
-                  </div>
-                </div>
-                <div
-                  className={`stage ${progress.rewards.includes("arena-lights") ? "arena-lit" : ""} ${progress.rewards.includes("lights") ? "lit" : ""} ${progress.rewards.includes("confetti") ? "confetti" : ""}`}
-                  aria-label="eylunica konser sahnesi"
-                >
-                  <div className="stage-orbit" />
-                  <div className="beam beam-one" />
-                  <div className="beam beam-two" />
-                  <span className="floating-star s1">✦</span>
-                  <span className="floating-star s2">✧</span>
-                  <span className="floating-star s3">+</span>
-                  <div className="stage-label">
-                    eylunica<span>SAHNE SENİN!</span>
-                  </div>
-                  <div className="stage-team">
-                    <Avatar name="Lidya" large />
-                    <Avatar name="Mina" large />
-                    <Avatar name="Hilal" large />
-                  </div>
-                  <div className="stage-floor" />
-                  <div className="stage-badge">✦ Her fikir bir ışık yakar</div>
-                </div>
-              </section>
-              {(
-                <section className="checkin">
-                  <div className="checkin-icon">✧</div>
-                  <div>
-                    <strong>{progress.calibrationDone ? "Seviyeni yeniden keşfedelim mi?" : "Önce seni tanıyalım mı?"}</strong>
-                    <p>
-                      Dört işlemden toplam 12 küçük soru, sana uygun bir başlangıç. Süre
-                      tutmuyoruz.
-                      Yıldızların ve tamamladığın bölümler korunur.
-                    </p>
-                  </div>
-                  <button
-                    className="text-button"
-                    onClick={() => start("mixed", true)}
-                  >
-                    Birlikte keşfedelim →
-                  </button>
-                </section>
-              )}
-              <section className="world-section" id="math-map">
-                <div className="section-heading">
-                  <div>
-                    <div className="eyebrow muted">MACERA HARİTAN</div>
-                    <h2>Bugün nerede buluşalım?</h2>
-                  </div>
-                  <span className="map-note">6 dünya · sayısız keşif</span>
-                </div>
-                <div className="world-grid">
-                  {worlds.map((w, i) => (
-                    <button
-                      key={w.title}
-                      className="world-card"
-                      onClick={() => start(w.operation)}
-                      style={{ "--world": w.color } as React.CSSProperties}
-                    >
-                      <div className="card-top">
-                        <span className="world-number">0{i + 1}</span>
-                        <span className="world-tag">{w.character} ile</span>
-                        <span className="card-arrow">→</span>
-                      </div>
-                      <div className={`landscape landscape-${i}`}>
-                        <span className="planet" />
-                        <span className="hill hill-one" />
-                        <span className="hill hill-two" />
-                        <span className="world-symbol">{w.symbol}</span>
-                        <span className="land-star">✦</span>
-                      </div>
-                      <div className="world-info">
-                        <h3>{w.title}</h3>
-                        <p>Bölüm {(progress.mathSections?.[w.operation] ?? 0) + 1} · {(progress.mathSections?.[w.operation] ?? 0)} bölüm tamamlandı</p>
-                        <p>{w.sub}</p>
-                        <div className="card-progress">
-                          <span>
-                            {i < 4
-                              ? `Seviye ${progress.skills[w.operation as Operation].level}`
-                              : i === 4
-                                ? "Birlikte düşünelim"
-                                : "Sahneye hazırlan"}
-                          </span>
-                          <span>
-                            {i < 4
-                              ? `${progress.skills[w.operation as Operation].correct} keşif`
-                              : "Keşfet →"}
-                          </span>
-                        </div>
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              </section>
-              <section className="concert-banner">
-                <div>
-                  <div className="eyebrow muted">OKU · FARK ET · HESAPLA</div>
-                  <h2>Üç keşif, tek konser.</h2>
-                  <p>
-                    Bir hikâyenin içindeki ipuçlarıyla sahneyi birlikte
-                    hazırlayalım.
-                  </p>
-                </div>
-                <button
-                  className="primary"
-                  onClick={() => setScreen("concert")}
-                >
-                  Büyük Konser Görevi →
-                </button>
-              </section>
-              <section className="companion">
-                <Avatar name={progress.character} label={displayName(progress.character)} costume={progress.rewards.includes("arena-costume")} />
-                <div>
-                  <div className="eyebrow muted">MANIFEST EĞİTMENİN</div>
-                  <h3>{displayName(progress.character)} yanında.</h3>
-                  <p>
-                    Her sorunun birden fazla yolu var. Kendi yolunu
-                    bulabilirsin.
-                  </p>
-                </div>
-                <button
-                  className="secondary"
-                  onClick={() => setScreen("characters")}
-                >
-                  Arkadaşını seç →
-                </button>
-              </section>
-              <section className="bottom-strip">
-                <span>♡ Kendi ritminde öğren</span>
-                <span>☁ Cihazında saklanır</span>
-                <span>◷ Önerilen öğrenme süresi 15 dakika</span>
-              </section>
-            </main>
-          )}
+          {screen === "home" && <main className="subpage academy-selection">
+            <div className="eyebrow muted">2 · BÖLÜMÜNÜ SEÇ</div>
+            <h1>Bugün nerede buluşalım?</h1>
+            <p>{progress.learnerName || "Eylül"}, {progress.character} sana eşlik ediyor. Bir akademi seç; ilk ziyaretinde önce o alandaki seviyeni keşfedeceğiz.</p>
+            <nav className="academy-hub" aria-label="Üç akademi">
+              <button className="academy-tile math-tile" onClick={() => !progress.calibrationDone ? start("mixed", true) : setScreen("math")}><span className="academy-symbol" aria-hidden="true">+</span><strong>Matematik Akademisi</strong><span>{progress.calibrationDone ? "Kayıtlı seviyenle devam et →" : "Önce 12 soruluk seviye tespiti →"}</span></button>
+              <button className="academy-tile reading-tile" onClick={() => wellbeing.transition(() => setScreen("reading"), !progress.academies.reading.placementDone)}><span className="academy-symbol" aria-hidden="true">Aa</span><strong>Okuduğunu Anlama Akademisi</strong><span>{progress.academies.reading.placementDone ? `Düzey ${progress.academies.reading.level} ile devam et →` : "Önce 6 soruluk seviye tespiti →"}</span></button>
+              <button className="academy-tile focus-tile" onClick={() => wellbeing.transition(() => setScreen("attention"), !progress.academies.attention.placementDone)}><span className="academy-symbol" aria-hidden="true">◎</span><strong>Dikkat ve Odaklanma Akademisi</strong><span>{progress.academies.attention.placementDone ? `Düzey ${progress.academies.attention.level} ile devam et →` : "Önce 6 soruluk seviye tespiti →"}</span></button>
+            </nav>
+            <section className="selection-extras" aria-label="Diğer keşifler"><h2>Diğer keşiflerin</h2><button className="secondary" onClick={() => setScreen("concert")}>Büyük Konser Görevi →</button><button className="secondary" onClick={() => setScreen("arena")}>eylunica Hız Arenası →</button><button className="secondary" onClick={() => setScreen("music")}>Manifest müzik odası →</button><button className="secondary" onClick={() => setScreen("collection")}>Kazandığın kartları gör →</button></section>
+            <section className="companion"><Avatar name={progress.character} costume={progress.rewards.includes("arena-costume")} /><div><h2>{progress.character} yanında.</h2><p>{progress.stars} yıldızın ve kart koleksiyonun bu cihazda korunuyor.</p></div><button className="secondary" onClick={() => setScreen("characters")}>Arkadaşını seç →</button></section>
+            <div className={`stage compact-stage ${progress.rewards.includes("arena-lights") ? "arena-lit" : ""} ${progress.rewards.includes("lights") ? "lit" : ""} ${progress.rewards.includes("confetti") ? "confetti" : ""}`}>✦ Her keşif sahneni aydınlatır.</div>
+          </main>}
+          {screen === "math" && <main className="subpage math-selection">
+            <button className="text-button" onClick={() => setScreen("home")}>← Akademilere dön</button>
+            <div className="eyebrow muted">MATEMATİK · SEVİYENE UYGUN ALIŞTIRMALAR</div><h1>Matematik Akademisi</h1>
+            <p>Başlangıç düzeyin seviye tespitinden gelir. Yeni yanıtlarınla zorluk sana göre ayarlanır; geçmişin silinmez.</p>
+            <div className="world-grid">{worlds.map((world, index) => <button key={world.operation} className="world-card" style={{ "--world": world.color } as React.CSSProperties} onClick={() => start(world.operation)}><div className="card-top"><span className="world-number">0{index + 1}</span><span className="world-tag">{world.character} ile</span><span aria-hidden="true">{world.symbol}</span></div><div className="world-info"><h2>{world.title}</h2><p>{world.sub}</p><p>Bölüm {(progress.mathSections?.[world.operation] ?? 0) + 1} · {index < 4 ? `Seviye ${progress.skills[world.operation as Operation].level}` : "Birlikte düşünelim"}</p><strong>Başla →</strong></div></button>)}</div>
+            <section className="checkin"><div><h2>Seviyeni yeniden keşfet</h2><p>İstersen 12 soruluk değerlendirmeyi yeniden yapabilirsin. Yıldızların ve tamamlanan bölümlerin korunur.</p></div><button className="secondary" onClick={() => start("mixed", true)}>Birlikte keşfedelim →</button></section>
+          </main>}
           {screen === "arena" && <Arena progress={progress} onSave={persist} onBack={() => setScreen("home")} onPractice={op => start(op)} onTransition={wellbeing.transition} onActivity={wellbeing.setContext} paused={!!wellbeing.notice} />}
           {screen === "reading" && (
             <ReadingAcademy
@@ -607,7 +427,7 @@ export default function App() {
                 ))}
               </div>
               <p className="welcome-companion">{progress.learnerName || "Eylül"}, eğitmenin {progress.character}. Hazırsan sahne senin!</p>
-              {screen === "welcome" && progress.assessmentPending && !progress.calibrationDone && <p>Önce seviyeni keşfedelim: dört işlemden 12 soru. Yanıtlarına göre sorular kolaylaşır veya zorlaşır; süre sınırı yok.</p>}
+              {screen === "welcome" && <p>1 · İsmini ve eğitmenini seç. Devam edince akademi seçme sayfası açılır. Her akademinin ilk ziyaretinde kendi seviye tespiti yapılır.</p>}
               <button className="primary" disabled={!audio.ready} onClick={enterAdventure}>
                 {screen === "welcome" ? "eylunica’ya devam et →" : "Maceraya dön →"}
               </button>

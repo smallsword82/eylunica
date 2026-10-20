@@ -1,4 +1,4 @@
-import { test, expect, type Page } from "./local-test";
+import { test, expect, openMathWorld, type Page, openSoundSettings } from "./local-test";
 import { stories } from "../../src/reading-engine";
 import { narrationManifest } from "../../src/audio/narration-manifest";
 
@@ -20,6 +20,7 @@ const isPlaying = (page: Page) => page.evaluate(() => {
 test("gömülü Türkçe hikâyeler çevrimdışı çalar; dinleme oturumu destek sayılır ve durdurulur", async ({ page, context }) => {
   await observeAudio(page);
   await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
+  await openSoundSettings(page);
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("effects");
   await page.evaluate(() => navigator.serviceWorker.ready);
   await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
@@ -69,6 +70,7 @@ test("gömülü Türkçe hikâyeler çevrimdışı çalar; dinleme oturumu deste
 test("otomatik konuşma tercihi kalıcıdır; görev sesi ve ekran geçişi çevrimdışı çalışır", async ({ page, context }) => {
   await observeAudio(page);
   await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
+  await openSoundSettings(page);
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("effects");
   await page.getByRole("button", { name: "Ebeveyn köşesi →" }).click();
   const setting = page.getByRole("checkbox", { name: "Otomatik konuşmalı geri bildirim" });
@@ -82,7 +84,7 @@ test("otomatik konuşma tercihi kalıcıdır; görev sesi ve ekran geçişi çev
   await page.getByRole("button", { name: "Ebeveyn köşesi →" }).click();
   await expect(setting).toBeChecked();
   await page.getByRole("button", { name: "← Haritaya dön" }).click();
-  await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
+  await openMathWorld(page, /Zihin Atölyesi/);
   await page.getByRole("button", { name: "Yönergeyi dinle" }).click();
   await expect.poll(() => isPlaying(page)).toBe(true);
   await page.getByRole("button", { name: "15", exact: true }).click();
@@ -97,7 +99,7 @@ test("otomatik konuşma tercihi kalıcıdır; görev sesi ve ekran geçişi çev
   await page.getByRole("button", { name: "Ebeveyn köşesi →" }).click();
   await setting.uncheck();
   await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
-  await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
+  await openMathWorld(page, /Zihin Atölyesi/);
   await page.getByRole("button", { name: "15", exact: true }).click();
   expect(await page.evaluate(() => (window as unknown as { narrator: HTMLMediaElement[] }).narrator.length)).toBe(0);
 });

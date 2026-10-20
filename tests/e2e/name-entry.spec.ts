@@ -11,6 +11,8 @@ test("ilk giriş yalnız isim ister; varsayılan Eylül, yeni isimle seviye tesp
   await expect(page.getByRole("button", { name: /Kayıt ol|Giriş yap/ })).toHaveCount(0);
   await page.getByLabel("Adın", { exact: true }).fill("İpek Eylül");
   await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
+  await expect(page.getByRole("heading", { name: "Bugün nerede buluşalım?" })).toBeVisible();
+  await page.getByRole("button", { name: /^Matematik Akademisi/ }).click();
   await expect(page.getByText("Soru 1 / 12", { exact: true })).toBeVisible();
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem("ritma-progress-v1")!).learnerName)).toBe("İpek Eylül");
   expect(requests).toEqual([]);

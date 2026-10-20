@@ -767,6 +767,11 @@ footer button {
   justify-content: center;
 }
 .question-count { font-weight: 800; color: #e3ceee; }
+.academy-selection .academy-hub { margin: 2rem 0; }
+.selection-extras { margin-block: 2rem; padding: 1rem; border: 1px solid #695178; border-radius: 18px; }
+.selection-extras button { margin: .4rem; max-width: 100%; }
+.stage.compact-stage { height: auto; min-height: 0; padding: 1.5rem; margin-block: 1rem; text-align: center; }
+.math-selection .world-card { min-height: 170px; }
 .name-entry { display: grid; gap: .6rem; margin: 1.5rem auto; max-width: 440px; text-align: left; }
 .name-entry label { font-weight: 800; }
 .name-entry input { width: 100%; min-width: 0; min-height: 48px; border: 2px solid #d5b2ed; border-radius: 12px; padding: .8rem; font: inherit; background: #21182e; color: #fff; }
@@ -2115,3 +2120,8 @@ footer button,
   .league-actions > button { min-height: 44px; }
   .league-page input { font-size: 16px; }
 }
+.music-settings-menu { margin: 0 16px 16px auto; padding: 16px; width: min(480px, calc(100% - 32px)); box-sizing: border-box; border: 1px solid #695178; border-radius: 18px; background: #20172f; }
+.music-settings-menu[hidden] { display: none; }
+.music-settings-menu > label { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.music-settings-menu .manifest-audio-bar { margin: 12px 0 0; }
+.top-actions .music-menu-toggle { width: 44px; min-width: 44px; justify-self: end; padding: 8px; font-size: 20px; color: #d8c7e7; background: transparent; border: 1px solid #695178; border-radius: 12px; }

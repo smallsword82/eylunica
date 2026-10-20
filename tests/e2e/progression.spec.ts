@@ -1,11 +1,11 @@
-import { test, expect } from "./local-test";
+import { test, expect, openMathWorld } from "./local-test";
 import { fresh } from "../../src/storage";
 import { stories } from "../../src/reading-engine";
 test("matematik kolay başlar, beş doğruyla zorlaşır; yeniden giriş aynı soruyu sormaz", async ({ page }) => {
   const seen = new Set<string>();
   await page.goto("/");
   await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
-  await page.getByRole("button", { name: /Toplama Ormanı/ }).click();
+  await openMathWorld(page, /Toplama Ormanı/);
   for (let index = 0; index < 5; index++) {
     const operands = (await page.locator(".equation").innerText()).match(/\d+/g)!.map(Number);
     const key = operands.sort((first, second) => first - second).join(":");
@@ -22,12 +22,12 @@ test("matematik kolay başlar, beş doğruyla zorlaşır; yeniden giriş aynı s
   await expect(page.getByRole("region", { name: "Bölüm durumun" })).toContainText("Zorluk: 2 / 5");
   expect(seen.has(operands.sort((first, second) => first - second).join(":"))).toBe(false);
   await page.getByRole("button", { name: "← Haritaya dön" }).click();
-  await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
+  await openMathWorld(page, /Zihin Atölyesi/);
   const first = await page.locator(".equation").innerText();
   const numbers = first.match(/\d+/g)!.map(Number);
   await page.getByRole("button", { name: String(numbers[0] + numbers[1]), exact: true }).click();
   await page.getByRole("button", { name: "← Haritaya dön" }).click();
-  await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
+  await openMathWorld(page, /Zihin Atölyesi/);
   expect(await page.locator(".equation").innerText()).not.toBe(first);
 });
 test("yarım okuma oturumu yeni sorudan sürer; tamamlanan kütüphane başa sarmaz", async ({ page }) => {

@@ -1,4 +1,4 @@
-import { test, expect } from "./local-test";
+import { test, expect, openMathWorld } from "./local-test";
 
 test("girişte bir Manifest sözü, sorularda sözsüz ses, bölüm bitiminde rastgele müzik çalar", async ({ page }) => {
   await page.addInitScript(() => {
@@ -12,7 +12,7 @@ test("girişte bir Manifest sözü, sorularda sözsüz ses, bölüm bitiminde ra
   await page.goto("/");
   await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await expect.poll(() => page.evaluate(() => (window as any).answerClips.filter((audio: HTMLAudioElement) => audio.src.includes("ajda-manifest")).length)).toBe(1);
-  await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
+  await openMathWorld(page, /Zihin Atölyesi/);
   for (const value of ["14", "15"]) {
     await page.getByRole("button", { name: value, exact: true }).click();
     await expect.poll(() => page.evaluate(() => (window as any).answerClips.filter((clip: HTMLAudioElement) => /answer-(tick|retry)\.wav$/.test(clip.src)).at(-1)?.src)).toContain(value === "14" ? "answer-retry.wav" : "answer-tick.wav");
@@ -31,7 +31,7 @@ test("girişte bir Manifest sözü, sorularda sözsüz ses, bölüm bitiminde ra
   expect(await celebration.evaluate(audio => !!audio && !audio.paused)).toBe(true);
   await page.getByRole("button", { name: "Devam et", exact: true }).click();
   expect(await celebration.evaluate(audio => audio.paused)).toBe(true);
-  expect(await page.evaluate(() => (window as any).answerClips.at(-1).paused)).toBe(false);
+  expect(await page.evaluate(() => (window as any).answerClips.filter((audio: HTMLAudioElement) => audio.src.endsWith(".mp3") && !audio.paused).length)).toBe(0);
   await page.getByRole("button", { name: "Mola ver" }).click();
   expect(await page.evaluate(() => (window as any).answerClips.at(-1).paused)).toBe(true);
   await expect(page.locator("iframe, video")).toHaveCount(0);

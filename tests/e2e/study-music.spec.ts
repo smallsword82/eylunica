@@ -1,6 +1,6 @@
-import { test, expect } from "./local-test";
+import { test, expect, openMathWorld, openSoundSettings } from "./local-test";
 
-test("tüm soru alanlarında sözlü şarkı engellenir; sözsüz fon çevrimdışı ve sessiz modla uyumludur", async ({ page, context }) => {
+test("tüm soru alanlarında fon kapalıdır; cevap efektleri ve sessiz mod çevrimdışı çalışır", async ({ page, context }) => {
   await page.addInitScript(() => {
     (window as any).studyClips = [];
     const original = HTMLMediaElement.prototype.play;
@@ -13,17 +13,22 @@ test("tüm soru alanlarında sözlü şarkı engellenir; sözsüz fon çevrimdı
   await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await context.setOffline(true);
   for (const name of [/Zihin Atölyesi/, /^Okuduğunu Anlama Akademisi/, /^Dikkat ve Odaklanma Akademisi/, /Büyük Konser Görevi/, /eylunica Hız Arenası/]) {
-    await page.getByRole("button", { name }).click();
-    await expect(page.getByText("Sözsüz odak müziği", { exact: true })).toBeVisible();
-    await expect.poll(() => page.evaluate(() => (window as any).studyClips.some((audio: HTMLAudioElement) => !audio.paused && audio.loop && audio.currentTime > .05))).toBe(true);
+    if (name.source === "Zihin Atölyesi") await openMathWorld(page, name);
+    else await page.getByRole("button", { name }).click();
+    await openSoundSettings(page);
+    await expect(page.getByText("Odak zamanı", { exact: true })).toBeVisible();
+    expect(await page.evaluate(() => (window as any).studyClips.some((audio: HTMLAudioElement) => !audio.paused && audio.loop))).toBe(false);
     expect(await page.evaluate(() => (window as any).studyClips.filter((audio: HTMLAudioElement) => audio.src.includes("/manifest/audio/") && audio.src.endsWith(".mp3") && !audio.paused).length)).toBe(0);
+    await openSoundSettings(page);
     if (!await page.getByRole("button", { name: "12 saniye dinle", exact: true }).isVisible()) await page.getByText("Müzik ayarları", { exact: true }).click();
     await expect(page.getByRole("button", { name: "12 saniye dinle", exact: true })).toBeDisabled();
     await page.getByRole("button", { name: "eylunica ana sayfa" }).click();
   }
-  await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
+  await openMathWorld(page, /Zihin Atölyesi/);
+  await openSoundSettings(page);
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("effects");
   expect(await page.evaluate(() => (window as any).studyClips.filter((audio: HTMLAudioElement) => audio.loop && !audio.paused).length)).toBe(0);
+  await openSoundSettings(page);
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("silent");
   expect(await page.evaluate(() => (window as any).studyClips.filter((audio: HTMLAudioElement) => !audio.paused).length)).toBe(0);
   const info = await page.evaluate(async () => {

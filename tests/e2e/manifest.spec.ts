@@ -1,4 +1,4 @@
-import { test, expect } from "./local-test";
+import { test, expect, openSoundSettings } from "./local-test";
 
 test("Eylül başrolde; gerçek eğitmen fotoğrafları ve kısa müzikler videosuz, çevrimdışı çalışır", async ({ page, context }) => {
   await page.goto("/");
@@ -10,14 +10,16 @@ test("Eylül başrolde; gerçek eğitmen fotoğrafları ve kısa müzikler video
   await expect(page.locator("video, iframe")).toHaveCount(0);
   await page.getByRole("button", { name: /Sueda Sahneyi birleştir/ }).click();
   await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
-  await expect(page.getByRole("heading", { name: "Sahne senin, Eylül!" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Bugün nerede buluşalım?" })).toBeVisible();
   await page.evaluate(() => navigator.serviceWorker.ready);
   await page.reload();
   await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await context.setOffline(true);
   await page.reload();
   await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
+  await openSoundSettings(page);
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("music");
+  await openSoundSettings(page);
   await page.getByText("Müzik ayarları", { exact: true }).click();
   await page.getByRole("combobox", { name: "Kısa şarkı seç" }).selectOption("ariyo");
   await page.evaluate(() => {
@@ -41,6 +43,7 @@ test("Eylül başrolde; gerçek eğitmen fotoğrafları ve kısa müzikler video
   expect(clip.duration).toBeLessThan(12.1);
   expect(clip.volume).toBe(0.35);
   expect(clip.loop).toBe(false);
+  await openSoundSettings(page);
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("silent");
   expect(await page.evaluate(() => (window as any).manifestPlayed.at(-1).paused)).toBe(true);
   await page.getByRole("button", { name: "Manifest müzik odası →" }).click();

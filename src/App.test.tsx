@@ -3,7 +3,7 @@ import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "./App";
 import { fresh, KEY } from "./storage";
-beforeEach(() => { localStorage.setItem(KEY, JSON.stringify(fresh())); });
+beforeEach(() => { localStorage.setItem(KEY, JSON.stringify({ ...fresh(), calibrationDone: true })); });
 async function enter() {
   await userEvent.click(await screen.findByRole("button", { name: "eylunica’ya devam et →" }));
 }
@@ -41,6 +41,7 @@ it("yanlış cevapta ipucu, tekrar deneme ve tek soru kaydı çalışır", async
   render(<App />);
   await enter();
   await screen.findByText("Bugün nerede buluşalım?");
+  await user.click(screen.getByRole("button", { name: /^Matematik Akademisi/ }));
   await user.click(screen.getByRole("button", { name: /Zihin Atölyesi/ }));
   await user.click(screen.getByRole("button", { name: "14" }));
   expect(screen.getByRole("status")).toHaveTextContent("Henüz olmadı");
@@ -57,6 +58,7 @@ it("doğru yanıtta yıldız verir ve aynı soruda tekrar ödüllendirmez", asyn
   render(<App />);
   await enter();
   await screen.findByText("Bugün nerede buluşalım?");
+  await user.click(screen.getByRole("button", { name: /^Matematik Akademisi/ }));
   await user.click(screen.getByRole("button", { name: /Zihin Atölyesi/ }));
   await user.click(screen.getByRole("button", { name: "15" }));
   await waitFor(() =>

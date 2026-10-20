@@ -93,7 +93,7 @@ it("doğru ve yanlış yanıtta farklı sözsüz efekt kullanır", async () => {
   await playAnswerEffect(true);
   expect(clips.at(-1)!.src).toBe("/manifest/audio/answer-tick.wav");
 });
-it("giriş sözü ayrıdır; soruda yalnız sözsüz fon, sonuçta rastgele şarkı çalar", async () => {
+it("giriş sözü ayrıdır; soru fonu kapalıdır, sonuçta rastgele şarkı çalar", async () => {
   setSoundMode("music");
   prepareManifestAudio();
   const welcome = clips.find(clip => clip.src.endsWith("/ajda-manifest.mp3"))!;
@@ -103,8 +103,7 @@ it("giriş sözü ayrıdır; soruda yalnız sözsüz fon, sonuçta rastgele şar
   await playStudyMusic();
   await Promise.resolve();
   const study = clips.find(clip => clip.src.endsWith("/study-ambient.wav"))!;
-  expect(study.loop).toBe(true);
-  expect(study.volume).toBeLessThan(.2);
+  expect(study).toBeUndefined();
   expect(welcome.pause).toHaveBeenCalled();
   await playManifestTrack("ariyo");
   await startManifestShuffle();

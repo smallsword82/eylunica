@@ -4,6 +4,9 @@ for (const needsSupport of [false, true]) test(`yeni öğrenci uyarlanan seviye 
   await page.addInitScript(() => sessionStorage.setItem("eylunica-local-session", "yes"));
   await page.goto("/");
   await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
+  await expect(page.getByRole("heading", { name: "Bugün nerede buluşalım?" })).toBeVisible();
+  await expect(page.locator(".equation")).toHaveCount(0);
+  await page.getByRole("button", { name: /^Matematik Akademisi/ }).click();
   for (let index = 0; index < 12; index++) {
     await expect(page.getByText(`Soru ${index + 1} / 12`, { exact: true })).toBeVisible();
     const equation = await page.locator(".equation").innerText();

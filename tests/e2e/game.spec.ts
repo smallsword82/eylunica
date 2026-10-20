@@ -1,4 +1,4 @@
-import { test, expect } from "./local-test";
+import { test, expect, openMathWorld } from "./local-test";
 test("telefon: görev, kayıt, yeniden açılış ve çevrimdışı oyun", async ({
   page,
   context,
@@ -7,7 +7,7 @@ test("telefon: görev, kayıt, yeniden açılış ve çevrimdışı oyun", async
   await expect(page.getByText("Bugün nerede buluşalım?")).toBeVisible();
   await page.evaluate(() => navigator.serviceWorker.ready);
   await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
-  await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
+  await openMathWorld(page, /Zihin Atölyesi/);
   await page.getByRole("button", { name: "14", exact: true }).click();
   await expect(page.getByRole("status")).toContainText("Henüz olmadı");
   await expect(page.getByText("Onluğa tamamla")).toBeVisible();
@@ -29,7 +29,7 @@ test("telefon: görev, kayıt, yeniden açılış ve çevrimdışı oyun", async
   await context.setOffline(true);
   await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await expect(page.getByText("Esin yanında.")).toBeVisible();
-  await page.getByRole("button", { name: /Toplama Ormanı/ }).click();
+  await openMathWorld(page, /Toplama Ormanı/);
   await page.getByRole("button", { name: "Kendim yazayım" }).click();
   const equation = await page.getByRole("heading", { level: 1 }).innerText();
   const numbers = equation.match(/\d+/g)!.map(Number);
@@ -60,7 +60,7 @@ test("masaüstü: dört işlem, gelişim görünümü ve sıfırlama onayı", as
     "Çarpma Şehri",
     "Bölme Adası",
   ]) {
-    await page.getByRole("button", { name: new RegExp(title) }).click();
+    await openMathWorld(page, new RegExp(title));
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
     await page.getByRole("button", { name: "← Haritaya dön" }).click();
   }
@@ -92,7 +92,7 @@ test("erişilebilirlik: ana ekran ve görev WCAG A/AA kontrolleri", async ({
         .analyze()
     ).violations,
   ).toEqual([]);
-  await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
+  await openMathWorld(page, /Zihin Atölyesi/);
   expect(
     (
       await new AxeBuilder({ page })
@@ -106,7 +106,7 @@ test("beş soruluk görev tamamlanır, yıldız ve sahne dekoru kalıcıdır", a
   page,
 }, testInfo) => {
   await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
-  await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
+  await openMathWorld(page, /Zihin Atölyesi/);
   for (const [i, value] of [15, 15, 12, 14, 17].entries()) {
     await page
       .getByRole("button", { name: String(value), exact: true })

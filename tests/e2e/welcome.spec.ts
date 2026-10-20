@@ -3,6 +3,7 @@ import { test, expect } from "./local-test";
 test("eylunica karakter seçimi, kayıt koruma ve erişilebilir giriş", async ({ page }) => {
   const { fresh } = await import("../../src/storage");
   const saved = fresh();
+  saved.calibrationDone = true;
   saved.academies.reading.placementDone = true;
   saved.academies.attention.placementDone = true;
   saved.stars = 23;

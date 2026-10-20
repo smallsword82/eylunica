@@ -1,4 +1,4 @@
-import { test, expect } from "./local-test";
+import { test, expect, openMathWorld, openSoundSettings } from "./local-test";
 
 test("yanlış ve doğru cevap ayrı kısa seslerle hemen duyulur", async ({ page }) => {
   await page.addInitScript(() => {
@@ -11,7 +11,7 @@ test("yanlış ve doğru cevap ayrı kısa seslerle hemen duyulur", async ({ pag
   });
   await page.goto("/");
   await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
-  await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
+  await openMathWorld(page, /Zihin Atölyesi/);
   await page.getByRole("button", { name: "14", exact: true }).click();
   await expect.poll(() => page.evaluate(() => (window as any).answerClips.at(-1)?.src)).toContain("answer-retry.wav");
   await page.getByRole("button", { name: "15", exact: true }).click();
@@ -45,7 +45,7 @@ test("kısa cevap efekti önceden hazırdır ve hemen başlar", async ({ page })
   await page.goto("/");
   await expect.poll(() => page.evaluate(() => (window as any).answerTiming.answer?.readyState)).toBe(4);
   await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
-  await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
+  await openMathWorld(page, /Zihin Atölyesi/);
   await page.getByRole("button", { name: "15", exact: true }).click();
   await expect.poll(() => page.evaluate(() => (window as any).answerTiming.started)).toBeGreaterThan(0);
   const delay = await page.evaluate(() => {
@@ -61,11 +61,13 @@ test("kısa cevap efekti önceden hazırdır ve hemen başlar", async ({ page })
   console.info(`Cevap sesi: play çağrısı ${requestDelay.toFixed(1)} ms, tarayıcı başlangıcı ${delay.toFixed(1)} ms`);
   await page.getByRole("button", { name: "Sıradaki keşif →" }).click();
   expect(await page.evaluate(() => (window as any).answerTiming.answer.duration)).toBeLessThan(0.2);
+  await openSoundSettings(page);
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("silent");
   expect(await page.evaluate(() => (window as any).answerTiming.answer.paused)).toBe(true);
 });
 test("ses tercihi çevrimdışı korunur, efekt üretilir ve karakter adları günceldir", async ({ page, context }) => {
   await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
+  await openSoundSettings(page);
   const sound = page.getByRole("combobox", { name: "Ses modu" });
   await expect(sound).toHaveValue("music");
   await sound.selectOption("silent");
@@ -80,7 +82,7 @@ test("ses tercihi çevrimdışı korunur, efekt üretilir ve karakter adları g�
   await sound.selectOption("effects");
   await expect(sound).toHaveValue("effects");
   await expect.poll(() => page.evaluate(() => (window as unknown as { soundCount: number }).soundCount)).toBeGreaterThan(0);
-  await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
+  await openMathWorld(page, /Zihin Atölyesi/);
   await page.getByRole("button", { name: "15", exact: true }).click();
   await expect.poll(() => page.evaluate(() => (window as unknown as { soundCount: number }).soundCount)).toBeGreaterThan(1);
   await page.getByRole("button", { name: "← Haritaya dön" }).click();
@@ -94,20 +96,25 @@ test("ses tercihi çevrimdışı korunur, efekt üretilir ve karakter adları g�
   await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await context.setOffline(true);
   await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
+  await openSoundSettings(page);
   await expect(sound).toHaveValue("effects");
-  await expect(page.getByRole("heading", { name: "Sahne senin, Eylül!" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Bugün nerede buluşalım?" })).toBeVisible();
   await sound.selectOption("silent");
   await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
+  await openSoundSettings(page);
   await expect(sound).toHaveValue("silent");
   await expect(page.getByLabel("1 yıldız", { exact: true })).toBeVisible();
 });
 
 test("soru geçişlerinde sözlü fon başlamaz; Sessiz modu konuşmayı da kapatır", async ({ page }) => {
   await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
+  await openSoundSettings(page);
   await expect(page.getByRole("combobox", { name: "Ses modu" })).toHaveValue("music");
+  await openSoundSettings(page);
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("silent");
-  await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
+  await openMathWorld(page, /Zihin Atölyesi/);
   await expect(page.getByRole("button", { name: "Yönergeyi dinle" })).toBeDisabled();
+  await openSoundSettings(page);
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("music");
   await page.evaluate(() => {
     (window as any).idleSynthCalls = 0;
@@ -125,6 +132,7 @@ test("soru geçişlerinde sözlü fon başlamaz; Sessiz modu konuşmayı da kapa
   await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 1000)));
   expect(await page.evaluate(() => (window as any).idleSynthCalls)).toBe(0);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await openSoundSettings(page);
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("silent");
   await expect(page.getByRole("button", { name: "Yönergeyi dinle" })).toBeDisabled();
 });

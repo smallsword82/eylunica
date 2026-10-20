@@ -1,4 +1,4 @@
-import { test, expect, type Page } from "./local-test";
+import { test, expect, openMathWorld, type Page } from "./local-test";
 const minute = 60_000,
   key = "ritma-wellbeing-v1";
 async function installClock(page: Page, time: Date) {
@@ -19,7 +19,7 @@ async function total(page: Page) {
   );
 }
 async function math(page: Page) {
-  await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
+  await openMathWorld(page, /Zihin Atölyesi/);
 }
 async function answer(page: Page, value: number) {
   await page.getByRole("button", { name: String(value), exact: true }).click();

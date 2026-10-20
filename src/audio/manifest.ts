@@ -3,6 +3,7 @@ export { manifestTracks, type ManifestTrack } from "./manifest-catalog";
 export const effectSeconds = { correct: 1.6, retry: 1.1, star: 2.2, record: 3, complete: 3.5 };
 export const answerSoundSeconds = 0.18;
 export const completionSoundSeconds = 4;
+export const studyMusicEnabled = false;
 let active: HTMLAudioElement | null = null;
 const prepared = new Map<string, HTMLAudioElement>();
 let answering = false;
@@ -24,7 +25,7 @@ const listeners = new Set<() => void>();
 export const getManifestPlayback = () => ({ playing, error, shuffling, volume, answering, studying, studyPlaying });
 function stopStudyMusic() { studyGeneration++; studyAudio?.pause(); studyPlaying = false; studyStarting = false; }
 export async function playStudyMusic() {
-  if (!studying || mode !== "music" || document.hidden || studyPlaying || studyStarting) return;
+  if (!studyMusicEnabled || !studying || mode !== "music" || document.hidden || studyPlaying || studyStarting) return;
   studyStarting = true;
   const ticket = studyGeneration;
   try {

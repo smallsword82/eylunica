@@ -1,4 +1,4 @@
-import { test, expect } from "./local-test";
+import { test, expect, openMathWorld, openSoundSettings } from "./local-test";
 
 for (const width of [320, 360, 390, 430, 768]) {
   test(`${width}px dikey ekranda temel sayfalar yatay taşmaz`, async ({ page }, testInfo) => {
@@ -20,17 +20,21 @@ for (const width of [320, 360, 390, 430, 768]) {
     expect((await page.locator(".topbar").boundingBox())!.height).toBeLessThan(150);
     if (width <= 600) {
       await expect(page.getByRole("combobox", { name: "Kısa şarkı seç" })).toBeHidden();
+      await openSoundSettings(page);
       expect((await page.locator(".manifest-audio-bar").boundingBox())!.height).toBeLessThan(210);
+      await openSoundSettings(page);
       await page.getByText("Müzik ayarları", { exact: true }).click();
+      await openSoundSettings(page);
       await expect(page.getByRole("combobox", { name: "Kısa şarkı seç" })).toBeVisible();
       await fits("music-settings");
+      await openSoundSettings(page);
       await page.getByText("Müzik ayarları", { exact: true }).click();
     }
     await fits("welcome");
     await page.screenshot({ path: testInfo.outputPath("phone-viewport.png") });
     await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
     await fits("home");
-    await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
+    await openMathWorld(page, /Zihin Atölyesi/);
     await fits("lesson");
     await page.getByRole("button", { name: "Yıldız tablosu", exact: true }).click();
     await expect(page.getByRole("heading", { name: "eylunica Yıldız Tablosu" })).toBeVisible();
@@ -40,6 +44,7 @@ for (const width of [320, 360, 390, 430, 768]) {
     if (width === 390) {
       await page.getByRole("button", { name: "eylunica ana sayfa" }).click();
       await page.setViewportSize({ width: 844, height: 390 });
+      await openSoundSettings(page);
       await expect(page.getByRole("combobox", { name: "Kısa şarkı seç" })).toBeVisible();
       await fits("landscape");
       await page.setViewportSize({ width: 390, height: 844 });

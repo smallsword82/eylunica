@@ -261,8 +261,10 @@ export default function App() {
           )}
           <select className="sound-button" aria-label="Ses modu" value={audio.mode} disabled={!audio.ready}
             onChange={event => audio.changeMode(event.target.value as "silent" | "effects" | "music")}>
-            <option value="silent">Sessiz</option><option value="effects">Sadece Efektler</option><option value="music">Müzik ve Efektler</option>
+            <option value="silent">Sessiz</option><option value="effects">Efektler</option><option value="music">Müzik + efekt</option>
           </select>
+        </div>
+        <div className="profile-actions">
           <span className="star-pill" aria-label={`${progress.stars} yıldız`}>
             ✦ {progress.stars}
           </span>

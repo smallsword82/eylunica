@@ -19,6 +19,7 @@ test("Eylül başrolde; gerçek eğitmen fotoğrafları ve kısa müzikler video
   await page.reload();
   await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("music");
+  await page.getByText("Müzik ayarları", { exact: true }).click();
   await page.getByRole("combobox", { name: "Kısa şarkı seç" }).selectOption("ariyo");
   await page.evaluate(() => {
     (window as any).manifestPlayed = [];

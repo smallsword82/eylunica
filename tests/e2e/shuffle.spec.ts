@@ -9,6 +9,7 @@ test("varsayılan müzik açık, tek tıkla dinleme ve tüm katalog çevrimdış
     HTMLMediaElement.prototype.play = function() { (window as any).clips.push(this); return original.call(this); };
   });
   await page.goto("/");
+  await page.getByText("Müzik ayarları", { exact: true }).click();
   await expect(page.getByRole("combobox", { name: "Ses modu" })).toHaveValue("music");
   await expect(page.getByRole("button", { name: "12 saniye dinle" })).toBeEnabled();
   await expect(page.getByRole("combobox", { name: "Kısa şarkı seç" }).locator("option")).toHaveCount(manifestTracks.length);

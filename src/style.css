@@ -109,7 +109,17 @@ button:hover {
 .rhythm-challenge { margin-top: 32px; padding: 24px; border-radius: 18px; border: 1px solid #cdb0e655; max-width: 800px; }
 .rhythm-challenge input { width: 100px; margin: 12px; padding: 10px; }
 .manifest-audio-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding: 14px 18px; margin: 18px 0; border: 1px solid #cdb0e633; border-radius: 16px; background: #251b35; }
-.manifest-audio-bar > span { font-size: 30px; color: #e69abc; }
+.manifest-audio-heading { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.manifest-audio-heading > span { font-size: 30px; color: #e69abc; }
+.manifest-audio-details { flex: 1 0 100%; min-width: 0; }
+.manifest-audio-details summary { cursor: pointer; padding: 8px 0; min-height: 44px; }
+.manifest-audio-options { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding-top: 8px; }
+.manifest-audio-options > small, .manifest-now-playing { flex-basis: 100%; overflow-wrap: anywhere; }
+.profile-actions { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+@media (min-width: 601px) {
+  .manifest-audio-details[open], .manifest-audio-details[open] > .manifest-audio-options { display: contents; }
+  .manifest-audio-details[open] > summary { display: none; }
+}
 .manifest-audio-bar small { display: block; color: #c7b6d5; font-size: 11px; }
 .manifest-audio-bar select { border-radius: 8px; padding: 8px; max-width: 100%; }
 .manifest-volume { display: flex; align-items: center; gap: 8px; font-size: 12px; }
@@ -2041,3 +2051,37 @@ footer button,
 .league-delete { border: 2px solid #efb9c8; padding: 16px; border-radius: 16px; }
 .league-page [role="alert"] { color: #ffc5ce; overflow-wrap: anywhere; }
 @media (max-width: 760px) { .league-layout { grid-template-columns: 1fr; } .league-account, .league-board, .league-rules { padding: 18px; } }
+@media (max-width: 900px) {
+  .topbar { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; padding: 14px 0; }
+  .brand { grid-column: 1; grid-row: 1; min-width: 0; }
+  .profile-actions { grid-column: 2; grid-row: 1; }
+  .profile-actions .avatar-button { width: 44px; height: 44px; }
+  .top-actions { grid-column: 1 / -1; grid-row: 2; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .7fr) minmax(0, 1.6fr); gap: 8px; width: 100%; }
+  .top-actions > button, .top-actions > select { min-width: 0; max-width: 100%; width: 100%; min-height: 44px; padding: 8px; margin: 0; font-size: 12px; }
+  .top-actions > .sound-button { max-width: none; }
+}
+@media (max-width: 600px) {
+  .app-shell { padding-inline: max(16px, env(safe-area-inset-left)) max(16px, env(safe-area-inset-right)); }
+  .manifest-audio-bar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 12px 0; padding: 12px; }
+  .manifest-audio-heading, .manifest-audio-details, .manifest-now-playing, .manifest-audio-bar > p { grid-column: 1 / -1; }
+  .manifest-audio-heading { gap: 8px; }
+  .manifest-audio-heading strong { font-size: 15px; }
+  .manifest-audio-heading small { font-size: 10px; }
+  .manifest-audio-bar > button { min-height: 44px; padding: 8px; width: 100%; }
+  .manifest-audio-details summary { font-size: 13px; }
+  .manifest-audio-options { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .manifest-audio-options select { min-width: 0; width: 100%; min-height: 44px; font: inherit; font-size: 16px; }
+  .top-actions > .sound-button { font-size: 16px; padding-inline: 6px; }
+  .manifest-volume { display: grid; grid-template-columns: auto minmax(0, 1fr); min-height: 44px; }
+  .manifest-volume input { width: 100%; min-width: 0; }
+  .welcome-page { padding-top: 24px; }
+  .character-grid, .world-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .character-card, .world-card { min-width: 0; }
+  .character-card .avatar { width: min(110px, 100%); height: auto; aspect-ratio: 4 / 5; }
+  .learner-profile { padding: 16px; }
+  .learner-profile h2 { font-size: 22px; line-height: 1.3; }
+  .learner-symbol { font-size: 28px; }
+  .continue-card { padding: 18px; gap: 10px; }
+  .league-actions > button { min-height: 44px; }
+  .league-page input { font-size: 16px; }
+}

@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 test("ses tercihi çevrimdışı korunur, efekt üretilir ve karakter adları günceldir", async ({ page, context }) => {
   await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
   const sound = page.getByRole("combobox", { name: "Ses modu" });
-  await expect(sound).toHaveValue("effects");
+  await expect(sound).toHaveValue("music");
   await sound.selectOption("silent");
   await page.evaluate(() => {
     const original = HTMLMediaElement.prototype.play;
@@ -38,9 +38,9 @@ test("ses tercihi çevrimdışı korunur, efekt üretilir ve karakter adları g�
   await expect(page.getByLabel("1 yıldız", { exact: true })).toBeVisible();
 });
 
-test("Müzik ve Efektler ders ekranlarında müzik başlatmaz; Sessiz modu konuşmayı da kapatır", async ({ page }) => {
+test("müzik kesiti ekran geçişinde yeniden başlamaz; Sessiz modu konuşmayı da kapatır", async ({ page }) => {
   await page.goto("/"); await page.getByRole("button", { name: "RİTMA’ya devam et →" }).click();
-  await expect(page.getByRole("combobox", { name: "Ses modu" })).toHaveValue("effects");
+  await expect(page.getByRole("combobox", { name: "Ses modu" })).toHaveValue("music");
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("silent");
   await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
   await expect(page.getByRole("button", { name: "Yönergeyi dinle" })).toBeDisabled();

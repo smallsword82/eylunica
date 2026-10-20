@@ -1,13 +1,15 @@
 import { useState } from "react";
-import { playManifestTrack, stopManifestAudio, type ManifestTrack } from "../audio/manifest";
+import { manifestTracks, playManifestTrack, startManifestShuffle, stopManifestAudio } from "../audio/manifest";
 import { getSoundMode } from "../audio";
 
-const songs = [
-  { title: "Zamansızdık", track: "zamansizdik" as ManifestTrack, prompt: "Birlikte ritim tut: dört vuruşluk iki grup kaç vuruş eder?", answer: 8 },
-  { title: "Arıyo", track: "ariyo" as ManifestTrack, prompt: "Altı kişilik grubun her üyesi iki adım atarsa toplam kaç adım olur?", answer: 12 },
-];
+const songs = manifestTracks.map((track, index) => ({
+  title: track.title, track: track.id,
+  prompt: index % 2 === 0 ? "Birlikte ritim tut: dört vuruşluk iki grup kaç vuruş eder?" : "Altı kişilik grubun her üyesi iki adım atarsa toplam kaç adım olur?",
+  answer: index % 2 === 0 ? 8 : 12,
+}));
 
-export function MusicLounge({ onBack, paused, learnerName }: { onBack: () => void; paused: boolean; learnerName: string }) {
+
+export function MusicLounge({ onBack, paused, learnerName, onEnableMusic }: { onBack: () => void; paused: boolean; learnerName: string; onEnableMusic: () => void }) {
   const [selected, setSelected] = useState(0);
   const [answer, setAnswer] = useState("");
   const [feedback, setFeedback] = useState("");
@@ -22,8 +24,9 @@ export function MusicLounge({ onBack, paused, learnerName }: { onBack: () => voi
         onClick={() => { setSelected(index); stopManifestAudio(); setAnswer(""); setFeedback(""); }}>{song.title}</button>)}
     </div>
     <div className="music-poster audio-poster"><img src="./manifest/group.webp" alt="Manifest grubu" />
-      <button className="primary" disabled={paused || getSoundMode() !== "music"} onClick={() => void playManifestTrack(song.track)}>Kısa bölümü dinle · 12 sn</button>
+      <button className="primary" disabled={paused} onClick={() => { if (getSoundMode() !== "music") onEnableMusic(); void playManifestTrack(song.track); }}>Kısa bölümü dinle · 12 sn</button>
     </div>
+    <button className="secondary" disabled={paused} onClick={() => { if (getSoundMode() !== "music") onEnableMusic(); void startManifestShuffle(); }}>Şarkıları karışık dinle →</button>
     <p className="music-note">Sadece müzik. Video yok, uzun şarkı yok. Sesler cihazında; çevrimdışı da dinleyebilirsin.</p>
     <form className="rhythm-challenge" onSubmit={event => {
       event.preventDefault(); stopManifestAudio();

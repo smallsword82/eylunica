@@ -112,6 +112,9 @@ button:hover {
 .manifest-audio-bar > span { font-size: 30px; color: #e69abc; }
 .manifest-audio-bar small { display: block; color: #c7b6d5; font-size: 11px; }
 .manifest-audio-bar select { border-radius: 8px; padding: 8px; max-width: 100%; }
+.manifest-volume { display: flex; align-items: center; gap: 8px; font-size: 12px; }
+.manifest-volume input { width: 100px; }
+.shuffle-button { font-size: 12px; padding: 10px 16px; min-height: 44px; }
 .audio-poster { max-width: 800px; height: 260px; overflow: hidden; border-radius: 20px; }
 @media (max-width: 600px) {
   .manifest-banner > div { padding: 24px; background: #171126bb; }

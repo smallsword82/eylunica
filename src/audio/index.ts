@@ -1,4 +1,4 @@
-import { playManifestEffect, setManifestMode, stopManifestAudio } from "./manifest";
+import { getManifestPlayback, playManifestEffect, setManifestMode, stopManifestAudio } from "./manifest";
 import { Capacitor } from "@capacitor/core";
 import { Preferences } from "@capacitor/preferences";
 
@@ -19,7 +19,7 @@ export async function loadSoundMode(): Promise<SoundMode> {
   const raw = Capacitor.isNativePlatform()
     ? (await Preferences.get({ key: AUDIO_KEY })).value
     : localStorage.getItem(AUDIO_KEY);
-  return raw === null || raw === "on" || raw === "effects" ? "effects" : raw === "music" ? "music" : "silent";
+  return raw === null || raw === "music" ? "music" : raw === "on" || raw === "effects" ? "effects" : "silent";
 }
 export async function saveSoundMode(value: SoundMode): Promise<void> {
   if (Capacitor.isNativePlatform()) await Preferences.set({ key: AUDIO_KEY, value });
@@ -31,6 +31,7 @@ export async function saveAudio(value: boolean): Promise<void> {
   else localStorage.setItem(AUDIO_KEY, value ? "on" : "off");
 }
 export function stopEffects() { stopManifestAudio(); }
+export function stopActivitySound() { if (!getManifestPlayback().shuffling) stopManifestAudio(); }
 export function enableEffects(value: boolean) { setSoundMode(value ? "effects" : "silent"); }
 export function setSoundMode(value: SoundMode) {
   mode = value;

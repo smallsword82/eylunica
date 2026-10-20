@@ -2,7 +2,7 @@ import { afterEach, beforeEach, expect, it, vi } from "vitest";
 import { Capacitor } from "@capacitor/core";
 import { Preferences } from "@capacitor/preferences";
 import { AUDIO_KEY, enableEffects, loadAudio, saveAudio, playEffect, stopEffects, setSoundMode } from ".";
-import { effectSeconds, playManifestTrack, getManifestPlayback } from "./manifest";
+import { effectSeconds, playManifestTrack, getManifestPlayback, manifestTracks, startManifestShuffle, takeRandomTrack } from "./manifest";
 vi.mock("@capacitor/preferences", () => ({ Preferences: { get: vi.fn(), set: vi.fn() } }));
 const clips: FakeAudio[] = [];
 class FakeAudio {
@@ -34,7 +34,7 @@ it("Android ses tercihini cihaz Preferences kaydına yazar", async () => {
 });
 it("üç ses modu eski on/off ayarlarını koruyarak cihazda saklanır", async () => {
   const { loadSoundMode, saveSoundMode } = await import(".");
-  expect(await loadSoundMode()).toBe("effects");
+  expect(await loadSoundMode()).toBe("music");
   await saveSoundMode("silent");
   expect(await loadSoundMode()).toBe("silent");
   localStorage.setItem(AUDIO_KEY, "on");
@@ -64,9 +64,9 @@ it("beş efekt gerçek yerel kesitleri çalar ve süre sınırında durur", asyn
   for (const effect of ["correct", "retry", "star", "record", "complete"] as const) {
     await playEffect(effect);
     const audio = clips.at(-1)!;
-    expect(audio.src).toBe(`/manifest/audio/${effect}.mp3`);
+    expect(manifestTracks.some(track => audio.src === `/manifest/audio/${track.id}.mp3`)).toBe(true);
     expect(audio.loop).toBe(false);
-    expect(audio.volume).toBe(0.3);
+    expect(audio.volume).toBe(0.35);
     await vi.advanceTimersByTimeAsync(effectSeconds[effect] * 1000);
     expect(audio.pause).toHaveBeenCalled();
     expect(getManifestPlayback().playing).toBe("");
@@ -81,7 +81,7 @@ it("arka plan kesiti yalnız müzik modunda 12 saniye düşük sesle çalar; ses
   await playManifestTrack("ariyo");
   const audio = clips.at(-1)!;
   expect(audio.src).toBe("/manifest/audio/ariyo.mp3");
-  expect(audio.volume).toBe(0.12);
+  expect(audio.volume).toBe(0.35);
   await vi.advanceTimersByTimeAsync(12000);
   expect(audio.pause).toHaveBeenCalled();
   await playManifestTrack("zamansizdik");
@@ -96,4 +96,29 @@ it("konuşma ve ekran geçişinde kullanılan durdurma tüm kesitleri keser; ses
   vi.stubGlobal("Audio", class { constructor() { throw new Error("Unavailable"); } });
   await expect(playEffect("retry")).resolves.toBeUndefined();
   expect(getManifestPlayback().error).toContain("Ses başlatılamadı");
+});
+
+it("rastgele sıra her şarkıyı tüketmeden yeniden torba kurmaz ve hemen tekrar etmez", async () => {
+  const { takeRandomTrack, manifestTracks } = await import("./manifest");
+  const history = Array.from({ length: manifestTracks.length * 3 }, () => takeRandomTrack());
+  expect(new Set(history).size).toBe(manifestTracks.length);
+  history.slice(1).forEach((track, index) => expect(track).not.toBe(history[index]));
+  let foundCycle = false;
+  for (let offset = 0; offset < manifestTracks.length; offset++)
+    if (new Set(history.slice(offset, offset + manifestTracks.length)).size === manifestTracks.length) foundCycle = true;
+  expect(foundCycle).toBe(true);
+});
+it("karışık oynatma 12 saniye ve kısa arayla sonraki şarkıya geçer; durdurma sırayı iptal eder", async () => {
+  vi.useFakeTimers();
+  setSoundMode("music");
+  await startManifestShuffle();
+  const first = clips.at(-1)!;
+  expect(getManifestPlayback().shuffling).toBe(true);
+  await vi.advanceTimersByTimeAsync(14500);
+  expect(clips.at(-1)!.src).not.toBe(first.src);
+  const count = clips.length;
+  stopEffects();
+  await vi.advanceTimersByTimeAsync(30000);
+  expect(clips).toHaveLength(count);
+  expect(getManifestPlayback().shuffling).toBe(false);
 });

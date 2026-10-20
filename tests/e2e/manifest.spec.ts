@@ -39,7 +39,7 @@ test("Eylül başrolde; gerçek eğitmen fotoğrafları ve kısa müzikler video
   });
   expect(clip.src).toContain("/manifest/audio/ariyo.mp3");
   expect(clip.duration).toBeLessThan(12.1);
-  expect(clip.volume).toBe(0.12);
+  expect(clip.volume).toBe(0.35);
   expect(clip.loop).toBe(false);
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("silent");
   expect(await page.evaluate(() => (window as any).manifestPlayed.at(-1).paused)).toBe(true);

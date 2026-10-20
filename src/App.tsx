@@ -7,7 +7,7 @@ import { narrationTexts } from "./audio/narration-texts";
 import { ListenButton, NarrationPlayback } from "./ui/ListenButton";
 import { CharacterName } from "./ui/CharacterName";
 import { useAudio } from "./audio/useAudio";
-import { playEffect, stopEffects } from "./audio";
+import { playEffect, stopEffects, stopActivitySound } from "./audio";
 import { createPortal } from "react-dom";
 import { useWellbeing } from "./wellbeing/useWellbeing";
 import { ParentTimePanel, TimeNotice } from "./ui/Wellbeing";
@@ -37,6 +37,7 @@ import { characters, worlds } from "./game";
 import { Avatar } from "./ui/Avatar";
 import { MusicLounge } from "./ui/MusicLounge";
 import { ManifestAudioControls } from "./ui/ManifestAudioControls";
+import { getManifestPlayback, startManifestShuffle } from "./audio/manifest";
 const ops: Operation[] = ["add", "subtract", "multiply", "divide"];
 type Screen =
   | "welcome"
@@ -91,9 +92,14 @@ export default function App() {
   }, [screen]);
   const narration = useNarration();
   const audio = useAudio();
+  const firstMusic = useRef(false);
   useEffect(() => {
     stopNarration();
-    stopEffects();
+    if (!getManifestPlayback().shuffling || screen === "parent") stopEffects();
+    if (screen === "home" && audio.mode === "music" && !firstMusic.current) {
+      firstMusic.current = true;
+      void startManifestShuffle();
+    }
     if (screen === "summary") { void playEffect("complete"); narrateFeedback("complete"); }
   }, [screen]);
   const wellbeing = useWellbeing(ready);
@@ -117,7 +123,7 @@ export default function App() {
   }
   function pickQuestion(m: string, p: Progress, index: number, cal = false) {
     stopNarration();
-    stopEffects();
+    stopActivitySound();
     const op: Operation = cal
       ? ops[index % 4]
       : m === "mixed"
@@ -261,7 +267,7 @@ export default function App() {
         </div>
       </header>
       <NarrationPlayback />
-      {ready && screen !== "parent" && <ManifestAudioControls paused={!!wellbeing.notice} />}
+      {ready && screen !== "parent" && <ManifestAudioControls paused={!!wellbeing.notice} onEnableMusic={() => audio.changeMode("music")} />}
       {narration.error && <div className="storage-error" role="alert">{narration.error}</div>}
       {error && (
         <div className="storage-error" role="alert">
@@ -280,7 +286,7 @@ export default function App() {
         </main>
       ) : (
         <>
-          {screen === "music" && <MusicLounge learnerName={progress.learnerName || "Eylül"} paused={!!wellbeing.notice} onBack={() => setScreen("home")} />}
+          {screen === "music" && <MusicLounge learnerName={progress.learnerName || "Eylül"} paused={!!wellbeing.notice} onBack={() => setScreen("home")} onEnableMusic={() => audio.changeMode("music")} />}
           {screen === "home" && (
             <main>
               <nav className="academy-hub" aria-label="Üç akademi">
@@ -553,7 +559,7 @@ export default function App() {
                 ))}
               </div>
               <p className="welcome-companion">{progress.learnerName || "Eylül"}, eğitmenin {progress.character}. Hazırsan sahne senin!</p>
-              <button className="primary" onClick={() => setScreen("home")}>
+              <button className="primary" disabled={!audio.ready} onClick={() => setScreen("home")}>
                 {screen === "welcome" ? "RİTMA’ya devam et →" : "Maceraya dön →"}
               </button>
             </main>
@@ -825,7 +831,7 @@ export default function App() {
                 <h2 id="narration-title">Konuşmalı seslendirme</h2>
                 <label><input type="checkbox" checked={narration.enabled} disabled={!narration.ready}
                   onChange={event => narration.change(event.target.checked)} /> Otomatik konuşmalı geri bildirim</label>
-                <p>Sessiz mod tüm konuşma, müzik ve efektleri kapatır. Efektler kısa Manifest şarkı kesitleridir. Müzik ve Efektler modunda 12 saniyelik düşük sesli arka plan bölümünü isteğinle açabilirsin. Konuşma, ekran değişikliği ve mola müziği durdurur; otomatik tekrar yoktur.</p>
+                <p>Sessiz mod tüm konuşma, müzik ve efektleri kapatır. Varsayılan Müzik ve Efektler modudur; kayıtlı tercihin korunur. Manifest şarkıları 12 saniyelik kesitlerle, aralarda kısa sessizlikle rastgele çalar. Ses düzeyini ayarlayabilir veya durdurabilirsin. Konuşma, mola ve ebeveyn ekranı müziği durdurur.</p>
                 <p>Doğru yanıt, yeniden deneme ve tamamlama mesajlarını seslendirir. Varsayılan kapalıdır. Yönergeler ve altı hikâye, Dinle düğmesiyle her zaman isteğe bağlı dinlenebilir. Konuşmayı ekrandaki durdurma düğmesiyle kesebilirsin.</p>
                 <p>Sesler Türkçe sentetik bir anlatıcıyla hazırlanmıştır; karakterlerin gerçek sesi değildir. İnternet veya cihazda Türkçe ses paketi gerekmez. Hikâyeyi dinleme isteği okuma oturumunda destek sayılır; yıldız kaybettirmez.</p>
                 <ListenButton text={narrationTexts.correct} label="Anlatıcı sesini dene" />

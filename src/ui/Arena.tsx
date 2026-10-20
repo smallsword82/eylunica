@@ -3,7 +3,7 @@ import { OPERATIONS, SESSION, eligibility, getLane, makeDeck, observation, opera
 import { useResponseClock } from "../arena/useResponseClock";
 import { completeArena, recordArena, type Progress } from "../storage";
 import { strategy, symbols, type Operation, type Question } from "../math-engine";
-import { playEffect, stopEffects } from "../audio";
+import { playEffect, stopActivitySound } from "../audio";
 import { narrateFeedback, stopNarration } from "../audio/narration";
 import type { UsageDomain } from "../time-engine";
 
@@ -24,11 +24,11 @@ export function Arena({ progress, onSave, onBack, onPractice, onTransition, onAc
   useEffect(() => {
     onActivity(session ? "math" : "other", !!session);
   }, [!!session, onActivity]);
-  useEffect(() => () => { onActivity("other", false); stopNarration(); stopEffects(); }, [onActivity]);
+  useEffect(() => () => { onActivity("other", false); stopNarration(); stopActivitySound(); }, [onActivity]);
   const save = (p: Progress) => { latest.current = p; onSave(p); };
   function start(spec: LaneSpec) {
     onTransition(() => {
-      stopEffects();
+      stopActivitySound();
       const race = eligibility(getLane(latest.current.arena, spec)).open;
       answers.current = []; attempted.current = false; usedHint.current = false; lock.current = false; finished.current = false;
       setSession({ id: crypto.randomUUID(), spec, questions: makeDeck(spec), index: 0, race });
@@ -65,7 +65,7 @@ export function Arena({ progress, onSave, onBack, onPractice, onTransition, onAc
         setSession(null);
         stopNarration(); void playEffect(result?.comparison?.record ? "record" : "complete");
       } else {
-        stopNarration(); stopEffects(); setSession({ ...session, index: session.index + 1 });
+        stopNarration(); stopActivitySound(); setSession({ ...session, index: session.index + 1 });
         setSolved(false); setHint(false); setFeedback("");
         attempted.current = false; usedHint.current = false; lock.current = false;
       }

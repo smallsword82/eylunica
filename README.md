@@ -1,0 +1,63 @@
+# Matematik Sahnesi · RİTMA
+
+7–12 yaş için Türkçe, sessiz, reklamsız zihinden dört işlem macerası. Tek React / TypeScript kod tabanından PWA ve paket içi varlıklarla çalışan Capacitor Android uygulaması.
+
+## Yerelde geliştirme
+
+Node.js 22+ ve npm gerekir. Sunucu, API anahtarı veya kullanıcı hesabı yoktur.
+
+```sh
+npm ci
+npm run dev
+```
+
+```sh
+npm test
+npm run build
+npm run preview
+npx playwright install chromium
+npm run test:e2e
+```
+
+Bulut makinesindeki Chromium için `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e` kullanılabilir. Uçtan uca testler **üretim derlemesi** üzerinde çalışır; önce `npm run build` gerekir.
+
+## Android debug APK
+
+Java 21, Android SDK Platform 35 ve Build Tools 35.0.0 kurulu olmalı. `ANDROID_HOME` SDK dizinine işaret etmeli veya yalnızca yerelde `android/local.properties` içinde `sdk.dir` belirtilmeli.
+
+```sh
+npm ci
+npm run android:apk
+```
+
+Çıktı: `android/app/build/outputs/apk/debug/app-debug.apk`. Debug anahtarı yalnızca geliştirme içindir, mağaza sürümü değildir. Gradle wrapper projede bulunur. İlk derleme bağımlılıkları internetten indirir; uygulama çalışırken sunucuya ihtiyaç duymaz.
+
+GitHub → **Actions → Web tests and Android APK** → başarılı çalıştırma → **Artifacts → matematik-sahnesi-debug-apk**. ZIP dosyasını indirip içindeki APK'yı Android cihazına aktar. Workflow yalnızca derler, test eder ve artifact saklar; site yayımlamaz ve Play Store'a yüklemez. İmzalı mağaza dağıtımı ayrı bir iştir.
+
+## İlk prototip
+
+- Altı özgün SVG karakter, altı dünya ve konser sahnesi.
+- Dört işlem, işlem başına 5 seviye, tam sonuçlu / sıfıra bölmesiz bölme.
+- İsteğe bağlı dört soruluk başlangıç yoklaması; baskısız beş soruluk görevler.
+- Seçenek veya sayı girişi; yanlış yanıtta strateji, tekrar deneme; onluk tamamlama.
+- İşlem başına doğruluk, ipucu, ilk yanıt süresi ve yakın geçmiş. Beş ipucusuz doğruyla yükselme, zorlanınca kolaylaştırma.
+- Cihazda sürümlü kayıt; karakter ve yıldızlar; 5 yıldızda sahne ışıkları.
+- Ebeveyn köşesi ve onaylı veri sıfırlama.
+
+Yıldızlar hızdan bağımsızdır. Soru başına ilk yanıt kaydedilir; yanlış sonrası tekrar deneme kayıt veya yıldızları çoğaltmaz. Bu basit ilk sürümün uyarlama kuralları pedagojik/klinik ölçüm değildir.
+
+## Çevrimdışı ve gizlilik
+
+Web ilk ziyarette internet ister. Üretim derlemesinin servis çalışanı oyun varlıklarını önbelleğe alır; hazır olduktan sonra yeniden açma ve oyun çevrimdışı çalışır. Kurulabilir PWA için HTTPS (yerelde localhost) gerekir. Tarayıcı önbelleğini/verilerini temizlemek çevrimdışı dosyaları ve ilerlemeyi silebilir. Android oyun dosyalarını APK içinde taşır; PWA servis çalışanı Android içinde kaydedilmez.
+
+Webde localStorage, Android'de Capacitor Preferences kullanılır; depolama erişim hataları kullanıcıya bildirilir. Kayıt yalnızca cihazdadır. Hesap, bulut senkronizasyonu, reklam, üçüncü taraf analitik, AI API veya harici font/görsel isteği yoktur. Çocuklardan kişisel bilgi istenmez.
+
+## Mimari
+
+`src/math-engine`: üretim ve strateji; `src/storage`: sürümlü kayıt ve uyarlama; `src/game`: dünyalar ve karakter tanımları; `src/ui`: özgün çizimler; `src/App.tsx`: ekran ve görev akışı. `capacitor.config.ts` ve `android/` paketleme; `vite.config.ts` PWA önbelleği.
+
+## Sonraki aşamalar
+
+Eksik sayıyı bulma, etkileşimli sayı doğrusu, gerçek aralıklı tekrar planlayıcısı, strateji ustalığı modeli, süreli modun isteğe bağlı açılması, daha çeşitli görevler ve dekor/kostüm sistemi henüz tamamlanmadı. Gerçek Android cihazında erişilebilirlik ve uçak modu testi ayrıca yapılmalı. Prototip telefon ve masaüstü Chromium testleri bu gerçek cihaz kontrolünün yerine geçmez.
+
+RİTMA / Matematik Sahnesi adları ve karakter isimleri geçicidir; yayımdan önce marka ve hak incelemesi gerekir. Gerçek müzik gruplarının görselleri veya müzikleri kullanılmaz. Kullanıcı onayı olmadan herkese açık dağıtım yapılmaz.

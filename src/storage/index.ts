@@ -1,0 +1,141 @@
+import { Capacitor } from "@capacitor/core";
+import { Preferences } from "@capacitor/preferences";
+import type { Operation, Question } from "../math-engine";
+export type Skill = {
+  level: number;
+  correct: number;
+  attempts: number;
+  hints: number;
+  streak: number;
+  recent: boolean[];
+  lastPlayed: number;
+};
+export type Attempt = {
+  operation: Operation;
+  correct: boolean;
+  hint: boolean;
+  elapsedMs: number;
+  at: number;
+  a: number;
+  b: number;
+};
+export type Progress = {
+  version: 1;
+  character: string;
+  stars: number;
+  skills: Record<Operation, Skill>;
+  history: Attempt[];
+  calibrationDone: boolean;
+  rewards: string[];
+};
+export const KEY = "ritma-progress-v1";
+const skill = (): Skill => ({
+  level: 1,
+  correct: 0,
+  attempts: 0,
+  hints: 0,
+  streak: 0,
+  recent: [],
+  lastPlayed: 0,
+});
+export const fresh = (): Progress => ({
+  version: 1,
+  character: "Mina",
+  stars: 0,
+  skills: {
+    add: skill(),
+    subtract: skill(),
+    multiply: skill(),
+    divide: skill(),
+  },
+  history: [],
+  calibrationDone: false,
+  rewards: [],
+});
+export function decode(raw: string | null): Progress {
+  if (!raw) return fresh();
+  try {
+    const p = JSON.parse(raw);
+    if (
+      p.version !== 1 ||
+      !Number.isInteger(p.stars) ||
+      p.stars < 0 ||
+      typeof p.character !== "string" ||
+      typeof p.calibrationDone !== "boolean" ||
+      !Array.isArray(p.history) ||
+      !Array.isArray(p.rewards)
+    )
+      return fresh();
+    for (const op of ["add", "subtract", "multiply", "divide"]) {
+      const s = p.skills?.[op];
+      if (
+        !s ||
+        !Number.isInteger(s.level) ||
+        s.level < 1 ||
+        s.level > 5 ||
+        !["correct", "attempts", "hints", "streak", "lastPlayed"].every(
+          (k) => Number.isFinite(s[k]) && s[k] >= 0,
+        ) ||
+        !Array.isArray(s.recent) ||
+        !s.recent.every((x: unknown) => typeof x === "boolean")
+      )
+        return fresh();
+    }
+    return p;
+  } catch {
+    return fresh();
+  }
+}
+export async function loadProgress(): Promise<Progress> {
+  const raw = Capacitor.isNativePlatform()
+    ? (await Preferences.get({ key: KEY })).value
+    : localStorage.getItem(KEY);
+  return decode(raw);
+}
+export async function saveProgress(p: Progress): Promise<void> {
+  if (Capacitor.isNativePlatform())
+    await Preferences.set({ key: KEY, value: JSON.stringify(p) });
+  else localStorage.setItem(KEY, JSON.stringify(p));
+}
+export function record(
+  p: Progress,
+  q: Question,
+  correct: boolean,
+  hint: boolean,
+  elapsedMs: number,
+): Progress {
+  const next = structuredClone(p),
+    s = next.skills[q.operation];
+  s.attempts++;
+  if (correct) s.correct++;
+  if (hint) s.hints++;
+  s.streak = correct && !hint ? s.streak + 1 : 0;
+  s.recent = [...s.recent, correct].slice(-8);
+  s.lastPlayed = Date.now();
+  if (s.streak >= 5) {
+    s.level = Math.min(5, s.level + 1);
+    s.streak = 0;
+  }
+  if (s.recent.length >= 4 && s.recent.slice(-4).filter(Boolean).length <= 1) {
+    s.level = Math.max(1, s.level - 1);
+    s.recent = [];
+  }
+  if (correct) next.stars++;
+  if (next.stars >= 5 && !next.rewards.includes("lights"))
+    next.rewards.push("lights");
+  if (next.stars >= 15 && !next.rewards.includes("confetti"))
+    next.rewards.push("confetti");
+  next.history = [
+    ...next.history,
+    {
+      operation: q.operation,
+      correct,
+      hint,
+      elapsedMs: Math.max(0, elapsedMs),
+      at: Date.now(),
+      a: q.a,
+      b: q.b,
+    },
+  ].slice(-200);
+  return next;
+}

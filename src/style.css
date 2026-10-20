@@ -766,6 +766,10 @@ footer button {
 .question-panel .eyebrow {
   justify-content: center;
 }
+.question-count { font-weight: 800; color: #e3ceee; }
+.section-progress { display: grid; grid-column: 1 / -1; gap: .5rem; padding: 1rem; margin: 1rem 0; border: 2px solid #b9e7d1; border-radius: 18px; background: #203c3a; color: #fff; overflow-wrap: anywhere; }
+.section-progress p { margin: 0; font-size: .95rem; }
+.question-panel .next:focus-visible { outline: 3px solid #b9e7d1; outline-offset: 5px; }
 .equation {
   font-size: clamp(32px, 4vw, 52px);
   display: flex;

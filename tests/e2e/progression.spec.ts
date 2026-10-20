@@ -14,10 +14,12 @@ test("matematik kolay başlar, beş doğruyla zorlaşır; yeniden giriş aynı s
     await page.getByRole("button", { name: String(operands[0] + operands[1]), exact: true }).click();
     await page.getByRole("button", { name: index === 4 ? "Sahnedeki ışıklarını gör →" : "Sıradaki keşif →" }).click();
   }
-  await page.getByRole("button", { name: "eylunica ana sayfa" }).click();
-  await page.getByRole("button", { name: /Toplama Ormanı/ }).click();
+  await expect(page.getByRole("region", { name: "Tamamlanan bölüm" })).toContainText("Zorluk yükseldi");
+  await page.getByRole("button", { name: "Devam et", exact: true }).click();
+  await expect(page.getByRole("region", { name: "Bölüm durumun" })).toContainText("Bölüm 2");
   const operands = (await page.locator(".equation").innerText()).match(/\d+/g)!.map(Number);
   expect(operands[0] + operands[1]).toBeGreaterThan(10);
+  await expect(page.getByRole("region", { name: "Bölüm durumun" })).toContainText("Zorluk: 2 / 5");
   expect(seen.has(operands.sort((first, second) => first - second).join(":"))).toBe(false);
   await page.getByRole("button", { name: "← Haritaya dön" }).click();
   await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();

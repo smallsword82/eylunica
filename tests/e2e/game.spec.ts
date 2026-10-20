@@ -125,7 +125,7 @@ test("beş soruluk görev tamamlanır, yıldız ve sahne dekoru kalıcıdır", a
   await expect(
     page.getByText("✦ Sahnenin renkli ışıkları açıldı!"),
   ).toBeVisible();
-  await expect(page.getByRole("region", { name: "Sıradaki adım" })).toContainText("Konser Görevleri");
+  await expect(page.getByRole("region", { name: "Sıradaki adım" })).toContainText("Zihin Atölyesi · Bölüm 2");
   await expect(page.getByRole("button", { name: "Devam et", exact: true })).toBeFocused();
   const { default: AxeBuilder } = await import("@axe-core/playwright");
   expect((await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa"]).analyze()).violations).toEqual([]);

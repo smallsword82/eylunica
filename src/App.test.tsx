@@ -1,8 +1,9 @@
-import { it, expect } from "vitest";
+import { it, expect, beforeEach } from "vitest";
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "./App";
 import { fresh, KEY } from "./storage";
+beforeEach(() => { localStorage.setItem(KEY, JSON.stringify(fresh())); });
 async function enter() {
   await userEvent.click(await screen.findByRole("button", { name: "eylunica’ya devam et →" }));
 }

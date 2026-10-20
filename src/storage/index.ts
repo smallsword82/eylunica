@@ -44,6 +44,8 @@ export type Progress = {
   calibrationDone: boolean;
   rewards: string[];
   arena: ArenaState;
+  mathSections?: Record<string, number>;
+  assessmentPending?: boolean;
 };
 export const KEY = "ritma-progress-v1";
 const skill = (): Skill => ({
@@ -111,6 +113,7 @@ export function decode(raw: string | null): Progress {
       : typeof p.customCharacter?.name === "string" && p.customCharacter.name.trim()
         ? p.customCharacter.name.trim().slice(0, 24) : "Eylül";
     p.arena = decodeArena(p.arena);
+    if (p.mathSections) p.mathSections = Object.fromEntries(Object.entries(p.mathSections).filter(([key, value]) => ["add", "subtract", "multiply", "divide", "mixed", "strategy"].includes(key) && Number.isSafeInteger(value) && (value as number) >= 0));
     if (p.customCharacter) {
       const custom = p.customCharacter;
       if (typeof custom.character === "string" && typeof custom.name === "string" && custom.name.trim())
@@ -143,7 +146,7 @@ export async function loadProgress(): Promise<Progress> {
   const raw = Capacitor.isNativePlatform()
     ? (await Preferences.get({ key: KEY })).value
     : localStorage.getItem(KEY);
-  return decode(raw);
+  return raw ? decode(raw) : { ...fresh(), assessmentPending: true };
 }
 export async function saveProgress(p: Progress): Promise<void> {
   if (Capacitor.isNativePlatform())

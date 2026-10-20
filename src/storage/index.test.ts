@@ -12,6 +12,13 @@ import {
 import { generate } from "../math-engine";
 import { completeArena } from "./index";
 import { getLane, makeDeck, observation, observe, specs, finishSession, freshArena } from "../arena-engine";
+it("ilk cihaz kaydı seviye tespitine yönlenir; mevcut kayıt ve bölüm sayaçları korunur", async () => {
+  localStorage.removeItem(KEY);
+  expect((await loadProgress()).assessmentPending).toBe(true);
+  const previous = { ...fresh(), mathSections: { divide: 3 } };
+  await saveProgress(previous);
+  expect(await loadProgress()).toEqual(previous);
+});
 it("yerel kayıt tekrar okunur", async () => {
   const p = fresh();
   p.character = "Esin";

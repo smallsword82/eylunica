@@ -113,6 +113,7 @@ test("normal matematik ve okumadan puan; kanıt eksikse kayıt yok; ayrı lig g�
 });
 
 test("ağ hatasında yerel öğrenme engellenmez ve çevrimiçi puan uydurulmaz", async ({ page }) => {
+  await page.addInitScript(value => localStorage.setItem("ritma-progress-v1", JSON.stringify(value)), fresh());
   await signedIn(page);
   await page.route(`${api}/rest/v1/rpc/**`, route => route.abort("internetdisconnected"));
   await page.goto("/");

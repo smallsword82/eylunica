@@ -79,6 +79,8 @@ export default function App() {
   }, []);
   const [count, setCount] = useState(0),
     [earned, setEarned] = useState(0),
+    [section, setSection] = useState(1),
+    [startingLevel, setStartingLevel] = useState(1),
     [error, setError] = useState(""),
     [calibration, setCalibration] = useState(false),
     [confirmReset, setConfirmReset] = useState(false),
@@ -89,7 +91,9 @@ export default function App() {
     usedHint = useRef(false),
     writes = useRef(Promise.resolve()),
     pending = useRef(false),
-    firstEntry = useRef<HTMLButtonElement>(null);
+    firstEntry = useRef<HTMLButtonElement>(null),
+    nextEntry = useRef<HTMLButtonElement>(null),
+    questionHeading = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
     loadProgress()
       .then(setProgress)
@@ -123,6 +127,11 @@ export default function App() {
   const wellbeing = useWellbeing(ready);
   const responseClock = useResponseClock(`${screen}:${mode}:${count}:${calibration}:${question?.a}:${question?.b}`, screen !== "play" || !!wellbeing.notice);
   useEffect(() => { if (wellbeing.notice) { stopEffects(); stopNarration(); } }, [wellbeing.notice]);
+  useEffect(() => {
+    if (screen !== "play" || wellbeing.notice) return;
+    if (solved) nextEntry.current?.focus();
+    else questionHeading.current?.focus();
+  }, [screen, question, solved, wellbeing.notice]);
   useEffect(() => {
     if (screen === "play") wellbeing.setContext("math", true);
     else if (screen === "parent") wellbeing.setContext(null, false);
@@ -166,10 +175,13 @@ export default function App() {
   }
   function start(m: string, cal = false) {
     wellbeing.transition(() => {
+      if (cal) persist({ ...progress, assessmentPending: true, calibrationDone: false });
       setMode(m);
       setCalibration(cal);
       setCount(0);
       setEarned(0);
+      setSection((progress.mathSections?.[m] ?? 0) + 1);
+      setStartingLevel(progress.skills[ops.includes(m as Operation) ? m as Operation : "add"].level);
       pickQuestion(m, progress, 0, cal);
       setScreen("play");
     });
@@ -194,6 +206,8 @@ export default function App() {
         timing.elapsedMs,
         timing.timingValid,
       );
+      if (calibration) next.skills[question.operation].level = correct && !usedHint.current
+        ? Math.min(5, question.level + (count < 8 ? 2 : 0)) : Math.max(1, question.level - 1);
       persist(next);
       attempted.current = true;
       if (correct) setEarned((n) => n + 1);
@@ -210,10 +224,12 @@ export default function App() {
     }
   }
   function next() {
+    if (!solved) return;
     wellbeing.transition(
       () => {
-        if (count >= 4 || (calibration && count >= 3)) {
-          if (calibration) persist({ ...progress, calibrationDone: true });
+        if (count >= (calibration ? 11 : 4)) {
+          if (calibration) persist({ ...progress, calibrationDone: true, assessmentPending: false });
+          else persist({ ...progress, mathSections: { ...progress.mathSections, [mode]: section } });
           setScreen("summary");
           return;
         }
@@ -222,7 +238,7 @@ export default function App() {
         pickQuestion(mode, progress, n, calibration);
         firstEntry.current?.focus();
       },
-      count < (calibration ? 3 : 4),
+      count < (calibration ? 11 : 4),
     );
   }
   const total = Object.values(progress.skills).reduce(
@@ -231,7 +247,7 @@ export default function App() {
     ),
     correct = Object.values(progress.skills).reduce((n, s) => n + s.correct, 0);
   const currentWorld = worlds.find((w) => w.operation === mode) || worlds[0];
-  const nextWorld = calibration ? worlds[0] : worlds[(worlds.indexOf(currentWorld) + 1) % worlds.length];
+  const nextWorld = calibration ? worlds[0] : currentWorld;
   const displayName = (name: string) => name;
   const guide = calibration ? "Zeynep" : currentWorld.character;
   return (
@@ -394,14 +410,15 @@ export default function App() {
                   <div className="stage-badge">✦ Her fikir bir ışık yakar</div>
                 </div>
               </section>
-              {!progress.calibrationDone && (
+              {(
                 <section className="checkin">
                   <div className="checkin-icon">✧</div>
                   <div>
-                    <strong>Önce seni tanıyalım mı?</strong>
+                    <strong>{progress.calibrationDone ? "Seviyeni yeniden keşfedelim mi?" : "Önce seni tanıyalım mı?"}</strong>
                     <p>
-                      Dört küçük soru, sana uygun bir başlangıç. Süre
+                      Dört işlemden toplam 12 küçük soru, sana uygun bir başlangıç. Süre
                       tutmuyoruz.
+                      Yıldızların ve tamamladığın bölümler korunur.
                     </p>
                   </div>
                   <button
@@ -442,6 +459,7 @@ export default function App() {
                       </div>
                       <div className="world-info">
                         <h3>{w.title}</h3>
+                        <p>Bölüm {(progress.mathSections?.[w.operation] ?? 0) + 1} · {(progress.mathSections?.[w.operation] ?? 0)} bölüm tamamlandı</p>
                         <p>{w.sub}</p>
                         <div className="card-progress">
                           <span>
@@ -571,7 +589,8 @@ export default function App() {
                 ))}
               </div>
               <p className="welcome-companion">{progress.learnerName || "Eylül"}, eğitmenin {progress.character}. Hazırsan sahne senin!</p>
-              <button className="primary" disabled={!audio.ready} onClick={() => setScreen("home")}>
+              {screen === "welcome" && progress.assessmentPending && !progress.calibrationDone && <p>Önce seviyeni keşfedelim: dört işlemden 12 soru. Yanıtlarına göre sorular kolaylaşır veya zorlaşır; süre sınırı yok.</p>}
+              <button className="primary" disabled={!audio.ready} onClick={() => screen === "welcome" && progress.assessmentPending && !progress.calibrationDone ? start("mixed", true) : setScreen("home")}>
                 {screen === "welcome" ? "eylunica’ya devam et →" : "Maceraya dön →"}
               </button>
             </main>
@@ -587,7 +606,7 @@ export default function App() {
                 </button>
                 <span>
                   {calibration ? "Seni tanıyalım" : currentWorld.title} ·{" "}
-                  {count + 1}/{calibration ? 4 : 5}
+                  {count + 1}/{calibration ? 12 : 5}
                 </span>
               </div>
               <div
@@ -595,14 +614,19 @@ export default function App() {
                 role="progressbar"
                 aria-valuenow={count + 1}
                 aria-valuemin={0}
-                aria-valuemax={calibration ? 4 : 5}
+                aria-valuemax={calibration ? 12 : 5}
                 aria-label="Görev ilerlemesi"
               >
-                {Array.from({ length: calibration ? 4 : 5 }, (_, i) => (
+                {Array.from({ length: calibration ? 12 : 5 }, (_, i) => (
                   <span key={i} className={i <= count ? "active" : ""} />
                 ))}
               </div>
               <div className="play-layout">
+                {!calibration && <section className="section-progress" aria-label="Bölüm durumun">
+                  <strong>{currentWorld.title} · Bölüm {section}</strong>
+                  <span>Zorluk: {question.level} / 5 · Tamamlanan: {count + (solved ? 1 : 0)} / 5 soru</span>
+                  <p>5 soru bitince bölüm tamamlanır. Zorluk, art arda 5 ipucusuz doğru yanıtta artar.</p>
+                </section>}
                 <aside className="guide">
                   <Avatar name={guide} large />
                   <h2>{guide} ile düşün</h2>
@@ -615,11 +639,15 @@ export default function App() {
                 </aside>
                 <section className="question-panel">
                   <ListenButton text={narrationTexts.math} />
+                  <p className="question-count">Soru {count + 1} / {calibration ? 12 : 5}</p>
+                  {!solved && <p className="small">Bu turda {calibration ? 12 : 5} soru var. Doğru yanıttan sonra aşağıdaki devam düğmesine dokun.</p>}
                   <div className="eyebrow muted">
                     {solved ? "BİR KEŞİF DAHA!" : "IŞIKLARI BİRLİKTE YAKALIM"}
                   </div>
                   <h1
                     className="equation"
+                    ref={questionHeading}
+                    tabIndex={-1}
                     aria-label={`${question.a} ${symbols[question.operation]} ${question.b} kaç eder?`}
                   >
                     {question.a} <span>{symbols[question.operation]}</span>{" "}
@@ -688,14 +716,15 @@ export default function App() {
                     </>
                   )}
                   <div
+                    id="math-feedback"
                     role="status"
                     className={`feedback ${solved ? "success" : ""}`}
                   >
                     {feedback}
                   </div>
                   {solved ? (
-                    <button className="primary next" onClick={next}>
-                      {count >= (calibration ? 3 : 4)
+                    <button ref={nextEntry} className="primary next" onClick={next} aria-describedby="math-feedback">
+                      {count >= (calibration ? 11 : 4)
                         ? "Sahnedeki ışıklarını gör"
                         : "Sıradaki keşif"}{" "}
                       →
@@ -752,7 +781,15 @@ export default function App() {
                 BUGÜN SAHNE BİRAZ DAHA AYDINLIK
               </div>
               <h1>Her keşif bir adım.</h1>
-              <ContinueCard title={nextWorld.title} onContinue={() => start(nextWorld.operation)} />
+              {calibration && <section className="section-progress" aria-label="Başlangıç seviyelerin"><h2>Seviye tespitin tamamlandı!</h2>{ops.map(operation => <p key={operation}>{worlds.find(world => world.operation === operation)?.title}: Seviye {progress.skills[operation].level} / 5</p>)}<p>Bu kısa keşif matematik içindir. Okuma ve dikkat dersleri kendi yanıtlarına göre ilerler.</p></section>}
+              {!calibration && <section className="section-progress" aria-label="Tamamlanan bölüm">
+                <h2>{currentWorld.title} · Bölüm {section} tamamlandı!</h2>
+                <p>5 / 5 soru tamamlandı. İlerlemen kaydedildi.</p>
+                <p>{progress.skills[ops.includes(mode as Operation) ? mode as Operation : "add"].level > startingLevel
+                  ? `Zorluk yükseldi! Yeni seviye: ${progress.skills[ops.includes(mode as Operation) ? mode as Operation : "add"].level} / 5.`
+                  : startingLevel === 5 ? "En yüksek zorluktasın. Yeni sorularla ustalaşmaya devam!" : "Henüz seviye atlanmadı. Art arda 5 ipucusuz doğru yanıtta zorluk artar; yeni sorularla pekiştirelim."}</p>
+              </section>}
+              <ContinueCard title={calibration ? nextWorld.title : `${currentWorld.title} · Bölüm ${section + 1} · Yeni sorular`} onContinue={() => start(calibration ? nextWorld.operation : mode)} />
               <p>
                 Birlikte düşündük, yeni yollar keşfettik.
                 <br />

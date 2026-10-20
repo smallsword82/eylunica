@@ -9,3 +9,11 @@
 - Arena isteğe bağlı bir doğruluk/hız alıştırmasıdır. Bir tur kendi içinde farklı on işlem içerir; karşılaştırılabilir doğruluk hazırlığı için sonraki turlarda aynı matematik olguları yeniden gelebilir. Normal derslerin yeni soru seçimiyle aynı değerlendirme sistemi değildir.
 
 Eski yıldızlar, düzeyler, ipuçları ve yerel kayıt anahtarı değiştirilmez. Hesaplar arası çevrimiçi puanlar ayrı; cihazdaki öğrenme geçmişi hâlâ cihaz bazlıdır. Soru çeşitliliği bu cihazın sınırlı geçmişini kullanır, cihazlar arası eksiksiz içerik takibi değildir.
+
+## Görünür matematik bölümleri
+
+Yeni cihaz kaydıyla başlayan öğrenci ilk girişte dört işlemden toplam 12 soruluk matematik seviye tespitine yönlendirilir. Her işlem üç kez yoklanır; ipucusuz doğru sonraki yoklamayı iki düzey artırır, hata bir düzey kolaylaştırır. Son yoklamada başarılı olunan düzey başlangıç düzeyidir (1–5). Bu kısa yerleştirme klinik/standartlaştırılmış bir ölçüm değildir. Mevcut cihaz kayıtları zorunlu sıfırlanmaz; haritadaki tanışma düğmesiyle isteğe bağlı yeniden keşif yapılabilir. Başlatılmış fakat bitirilmemiş yoklama sonraki girişte yeniden başlatılır; kaydedilmiş yanıtlar korunur. Okuma ve dikkat kendi uyarlamalı ilerleme sistemini kullanır.
+
+Her adada beş soruluk bölüm tamamlandığında cihaz kaydındaki `mathSections` sayacı ilerler. Sonuç ekranındaki Devam et aynı adanın bir sonraki bölümünü açar; ada değiştirmek için harita kullanılır. Harita, soru ekranı ve sonuç ekranında bölüm numarası görünür. Soru sayısı ve zorluk seviyesi ayrı gösterilir.
+
+Bölüm numarası her tamamlamada artar; zorluk ise öğrenme başarısına bağlıdır: art arda beş ipucusuz doğruyla yükselir (en fazla 5), zorlanmada destek için azalabilir. Yeni bölüm otomatik olarak zorlaştırılmaz. Son 200 işlemden kaçınma korunur. Önceki kayıtlarda bölüm tamamlanma sayacı bulunmadığından sayaç 1'den başlar; eski yıldızlar, beceriler ve soru geçmişi silinmez. Yarım bırakılmış bölümün soru indeksi kalıcı değildir.

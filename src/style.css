@@ -2051,9 +2051,12 @@ footer button,
 .league-delete { border: 2px solid #efb9c8; padding: 16px; border-radius: 16px; }
 .league-page [role="alert"] { color: #ffc5ce; overflow-wrap: anywhere; }
 @media (max-width: 760px) { .league-layout { grid-template-columns: 1fr; } .league-account, .league-board, .league-rules { padding: 18px; } }
-.account-entry { max-width: 560px; margin-inline: auto; }
+.account-entry { max-width: 560px; margin-inline: auto; padding-top: 24px; }
 .account-entry h1 { font-size: clamp(28px, 6vw, 38px); overflow-wrap: anywhere; }
 .account-entry input { font-size: 16px; min-width: 0; max-width: 100%; }
+.account-entry form { gap: 8px; }
+.account-entry form p { margin-block: 0 8px; line-height: 1.45; }
+.account-entry .league-consent { margin-block: 8px; line-height: 1.45; }
 .reading-steps { padding: 12px; border-radius: 12px; background: #eee8fb; color: #30204b; font-weight: 700; }
 @media (max-width: 900px) {
   .topbar { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; padding: 14px 0; }

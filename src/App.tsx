@@ -250,7 +250,7 @@ export default function App() {
             </span>
           </span>
         </button>
-        <div className="top-actions">
+        {!needsAccount && <><div className="top-actions">
           <button className="secondary" onClick={() => setScreen("league")}>Yıldız tablosu{account.username ? ` · ${account.username}` : " · Giriş"}</button>
           {ready && screen !== "parent" && (
             <button className="pause-button" onClick={() => wellbeing.pause()}>
@@ -273,10 +273,10 @@ export default function App() {
           >
             <Avatar name={progress.character} label={displayName(progress.character)} costume={progress.rewards.includes("arena-costume")} />
           </button>
-        </div>
+        </div></>}
       </header>
       <NarrationPlayback />
-      {ready && screen !== "parent" && <ManifestAudioControls paused={!!wellbeing.notice} onEnableMusic={() => audio.changeMode("music")} />}
+      {ready && !needsAccount && screen !== "parent" && <ManifestAudioControls paused={!!wellbeing.notice} onEnableMusic={() => audio.changeMode("music")} />}
       {narration.error && <div className="storage-error" role="alert">{narration.error}</div>}
       {error && (
         <div className="storage-error" role="alert">
@@ -295,7 +295,7 @@ export default function App() {
           <p>Perdeler açılıyor…</p>
         </main>
       ) : needsAccount ? (
-        <main className="subpage account-entry"><AccountForm /><p className="small">Cihazındaki mevcut ilerleme korunur.</p><button className="text-button" onClick={() => { sessionStorage.setItem("eylunica-local-session", "yes"); setGuest(true); }}>Şimdilik bu cihazda çevrimdışı devam et</button></main>
+        <main className="subpage account-entry league-page"><AccountForm /><p className="small">Cihazındaki mevcut ilerleme korunur.</p><button className="text-button" onClick={() => { sessionStorage.setItem("eylunica-local-session", "yes"); setGuest(true); }}>Şimdilik bu cihazda çevrimdışı devam et</button></main>
       ) : (
         <>
           {screen === "league" && <StarLeague onBack={() => setScreen("home")} />}

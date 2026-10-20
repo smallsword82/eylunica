@@ -10,7 +10,7 @@ before(async () => {
     create schema auth; grant usage on schema auth to anon, authenticated;
     create table auth.users(id uuid primary key, email text, raw_user_meta_data jsonb default '{}'::jsonb);
     create function auth.uid() returns uuid language sql stable as $$ select nullif(current_setting('request.jwt.claim.sub', true), '')::uuid; $$;`);
-  for (const migration of ["202610200001_star_league", "202610200002_username_accounts", "202610200003_lesson_scores", "202610200004_lesson_catalog"])
+  for (const migration of ["202610200001_star_league", "202610200002_username_accounts", "202610200003_lesson_scores", "202610200004_lesson_catalog", "202610200005_lesson_catalog_v2"])
     await database.exec(await readFile(new URL(`../../supabase/migrations/${migration}.sql`, import.meta.url), "utf8"));
 });
 after(async () => database?.close());
@@ -39,7 +39,7 @@ test("normal matematik sunucuda kontrol edilir; aynı bilet yeniden yıldız ver
 });
 test("okuma kanıtı, dikkat sırası ve konser kataloğu doğrulanır", async () => {
   const catalog = (await database.query("select key, expected from ritma_private.lesson_catalog order by key")).rows;
-  assert.equal(catalog.length, 1233);
+  assert.equal(catalog.length, 2430);
   for (const entry of [catalog.find(entry => entry.expected.evidence), catalog.find(entry => entry.key.startsWith("attention-instructions")), catalog.find(entry => entry.key.endsWith("-math"))]) {
     const ticket = await start(first, entry.key, null);
     const response = { ...entry.expected, ...(entry.expected.evidence ? { evidence: entry.expected.evidence[0] } : {}) };

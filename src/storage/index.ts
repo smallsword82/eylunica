@@ -162,6 +162,7 @@ export function record(
   const next = structuredClone(p),
     s = next.skills[q.operation];
   s.attempts++;
+  s.level = Math.max(s.level, q.level);
   if (correct) s.correct++;
   if (hint) s.hints++;
   s.streak = correct && !hint ? s.streak + 1 : 0;

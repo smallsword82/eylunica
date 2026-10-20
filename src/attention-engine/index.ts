@@ -148,7 +148,7 @@ export function generateAttention(
       explanation: `İstenen sıra ${sequence.map((i) => rot[i]).join(" → ")}. Sıra da şekiller kadar önemli.`,
     };
   }
-  const count = level + 2;
+  const count = level + 2 + Math.floor(rng() * 5);
   return reorder(
     {
       ...base,
@@ -181,12 +181,27 @@ export function generateAttention(
   );
 }
 export function attentionVariant(kind: AttentionKind, level: number, variant: number): Activity {
-  let state = variant + 1;
+  let state = Math.imul(variant + 1, 0x9e3779b1) >>> 0;
   const rng = () => {
     state = (Math.imul(1664525, state) + 1013904223) >>> 0;
     return state / 4294967296;
   };
-  return { ...generateAttention(kind, level, rng), id: `attention-${kind}-${level}-v${variant}` };
+  const task = generateAttention(kind, level, rng);
+  const colors = ["Mavi", "Sarı", "Mor", "Turuncu", "Yeşil", "Pembe", "Kırmızı", "Lacivert"];
+  const paint = (text: string) => {
+    const value = shapes.reduce((value, shape, index) => value.replaceAll(shape, `${shape} · ${colors[(variant + index * 2) % colors.length]}`), text);
+    if (kind !== "detail") return value;
+    const first = ["Mavi", "Mor", "Turuncu", "Kırmızı", "Lacivert"][variant % 5];
+    const second = ["Sarı", "Pembe", "Beyaz", "Kahverengi", "Siyah"][variant % 5];
+    return value.replaceAll("Mavi", first).replaceAll("mavi", first.toLocaleLowerCase("tr")).replaceAll("Sarı", second).replaceAll("sarı", second.toLocaleLowerCase("tr"));
+  };
+  return {
+    ...task, id: `attention2-${kind}-${level}-v${variant}`,
+    prompt: paint(task.prompt), choices: task.choices.map(paint), hint: paint(task.hint), explanation: paint(task.explanation),
+    ...(task.visual ? { visual: task.visual.map(paint) } : {}),
+    ...(task.memory ? { memory: task.memory.map(paint) } : {}),
+    ...(task.sentences ? { sentences: task.sentences.map(paint) } : {}),
+  };
 }
 export function checkSequence(task: Activity, selected: number[]): boolean {
   return (

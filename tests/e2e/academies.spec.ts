@@ -103,7 +103,7 @@ test("okuma: eski kayıt korunur, altı beceri tamamlanır ve çevrimdışı ger
   expect(Object.keys(p.academies.reading.bySkill)).toHaveLength(6);
   await readingButton(page).click();
   await expect(
-    page.getByRole("button", { name: /DÜZEY 2 · SANA ÖNERİLEN/ }),
+    page.getByRole("button", { name: /DÜZEY 1 · SANA ÖNERİLEN/ }),
   ).toBeVisible();
 });
 
@@ -164,10 +164,13 @@ test("dikkat: altı görev türü çevrimdışı oynanır, ekran küçükken ta�
         .split(" → "))
         await choices.getByRole("button", { name: label, exact: true }).click();
     }
-    if (name === "Ayrıntıyı yakala")
+    if (name === "Ayrıntıyı yakala") {
+      const sentence = await page.locator(".story-text p").nth(1).innerText();
+      const color = sentence.split(" ")[0];
       await choices
-        .getByRole("button", { name: "Mavi kurdeleler", exact: true })
+        .getByRole("button", { name: `${color} kurdeleler`, exact: true })
         .click();
+    }
     await check(page);
     await expect(
       page.getByText("Harika! Yanıtını dikkatle düşündün."),

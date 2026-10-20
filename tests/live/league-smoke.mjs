@@ -61,6 +61,10 @@ try {
   verify((await rpc(first, "lesson_answer", { p_id: reading.id, p_answer: { answer: readingQuestion.answer, evidence: readingQuestion.evidence[0] } })).stars === 1, "aynı okuma biletindeki yeniden deneme ek puan vermiyor");
   const newReading = await rpc(first, "lesson_start", { p_key: readingQuestion.id, p_math: null });
   verify((await rpc(first, "lesson_answer", { p_id: newReading.id, p_answer: { answer: readingQuestion.answer, evidence: readingQuestion.evidence[0] } })).stars === 2, "mevcut okuma sorusunda doğru yanıt ve kanıt yıldız kazandırıyor");
+  const attention = await rpc(first, "lesson_start", { p_key: "attention2-instructions-1-v0", p_math: null });
+  verify((await rpc(first, "lesson_answer", { p_id: attention.id, p_answer: { sequence: [0, 1] } })).stars === 3, "yeni dikkat varyantının sırası sunucuda doğrulanıyor");
+  const concert = await rpc(first, "lesson_start", { p_key: "concert2-1-1-focus", p_math: null });
+  verify((await rpc(first, "lesson_answer", { p_id: concert.id, p_answer: { sequence: [1, 3, 0] } })).stars === 4, "yeni konser işaret sırası sunucuda doğrulanıyor");
   const raw = await fetch(`${url}/rest/v1/players?select=*`, { headers: { apikey: key, "Accept-Profile": "ritma_private" } });
   verify(raw.status >= 400, "özel tablo Data API üzerinden açılmıyor");
 } finally {

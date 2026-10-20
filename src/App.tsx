@@ -22,7 +22,6 @@ import {
 import { useEffect, useRef, useState } from "react";
 import { Capacitor } from "@capacitor/core";
 import {
-  generate,
   strategy,
   symbols,
   type Operation,
@@ -41,6 +40,7 @@ import { Avatar } from "./ui/Avatar";
 import { MusicLounge } from "./ui/MusicLounge";
 import { ManifestAudioControls } from "./ui/ManifestAudioControls";
 import { getManifestPlayback, startManifestShuffle } from "./audio/manifest";
+import { freshQuestion, freshStrategy } from "./lesson-engine";
 const ops: Operation[] = ["add", "subtract", "multiply", "divide"];
 type Screen =
   | "welcome"
@@ -150,24 +150,9 @@ export default function App() {
         : m === "strategy"
           ? "add"
           : (m as Operation);
-    let q = generate(op, p.skills[op].level);
+    let q = freshQuestion(op, p.skills[op].level, p.history);
     if (m === "strategy") {
-      const pairs = [
-        [8, 7],
-        [9, 6],
-        [7, 5],
-        [6, 8],
-        [8, 9],
-      ];
-      const [a, b] = pairs[index % pairs.length];
-      q = {
-        a,
-        b,
-        answer: a + b,
-        operation: "add",
-        level: 1,
-        options: [a + b - 1, a + b, a + b + 1, a + b + 2],
-      };
+      q = freshStrategy(p.skills.add.level, p.history);
     }
     setQuestion(q);
     usedHint.current = m === "strategy";

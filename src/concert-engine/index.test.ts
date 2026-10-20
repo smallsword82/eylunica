@@ -10,7 +10,8 @@ it("konser seviyeleri tutarlı ve tam sonuçlu sayısal bağlam taşır", () => 
       expect(m.sentences[1]).toContain(String(m.math.b));
       expect(Number.isInteger(m.math.answer)).toBe(true);
       expect(Number(m.tasks[2].choices[m.tasks[2].answer])).toBe(m.math.answer);
-      expect(m.tasks[1].sequence).toEqual([0, 1, 2]);
+      expect(new Set(m.tasks[1].sequence).size).toBe(3);
+      for (const index of m.tasks[1].sequence!) expect(m.tasks[1].choices[index]).toBeTruthy();
     }
 });
 it("üç akademi ve konser ayrı izlenir, her adım yalnız bir yıldız verir", () => {

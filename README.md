@@ -6,6 +6,8 @@
 
 Android uygulamasının görünen adı **eylunica** olarak ayarlanmıştır; mevcut verileri korumak için paket kimliği değiştirilmez. Aşağıdaki sürüm notlarındaki eski “hesap/bulut yok” ifadeleri yalnız önceki yerel sürümleri anlatır.
 
+**Dersler:** yeni matematik soruları kolaydan zora ilerler, son 200 işlemi aynı/ters sırayla tekrarlamaz. Dikkatte yakın görünüm tekrarları elenir. Okuma ve konser, kaydedilmiş soruları atlayarak yeni içerikle devam eder; kütüphane bitince başa sarmaz. Sonlu havuz ve isteğe bağlı Arena alıştırmasının sınırları: `docs/LESSON_PROGRESSION.md`.
+
 **Sesler:** doğru yanıtta yükselen, yanlış yanıtta daha alçak ve yumuşak iki ayrı 0,18 saniyelik sözsüz efekt çalar. Ajda Pekkan’ın “Manifest” kaydı (2,7 saniye) yalnız bölüm/tur tamamlanınca çalar. Rastgele arka plan kataloğu korunur. Hikâyelerdeki eski uygulama adı da yeni metinle yerelde yeniden seslendirilmiştir.
 
 Güncel geliştirme deposu: `smallsword82/eylunica` (özel). `smallsword82/manifestakademi` kaynağının main dalı, 10 commitlik tüm ata geçmişi ve özgün commit kimlikleriyle korunarak aktarılmıştır. Kaynak depo değiştirilmemiştir.

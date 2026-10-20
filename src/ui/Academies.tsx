@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { playCompletionEffect, completionSoundSeconds } from "../audio";
 import { narrateFeedback, stopNarration } from "../audio/narration";
 import type { UsageDomain } from "../time-engine";
-import { chooseStory, readingSkills, type Story } from "../reading-engine";
+import { readingSkills, type Story } from "../reading-engine";
+import { freshAttention, nextStory, readingStep } from "../lesson-engine";
 import {
-  generateAttention,
   attentionKinds,
   attentionLabels,
   type AttentionKind,
@@ -117,41 +117,45 @@ export function ReadingAcademy({
     } | null>(null),
     [done, setDone] = useState(false);
   const state = progress.academies.reading;
+  const nextLevel = readingStep(state.seen);
+  const [libraryDone, setLibraryDone] = useState(false);
   useEffect(() => {
     onActivity?.(session && !done ? "reading" : "other", !!session && !done);
   }, [onActivity, !!session, done]);
   function start(level: number) {
     onTransition(() => {
-      setSession({ story: chooseStory(level, state.seen), index: 0 });
+      const story = nextStory(level, state.seen);
+      if (!story) { setLibraryDone(true); return; }
+      setSession({ story, index: 0 });
       setDone(false);
     });
   }
   return (
     <main className="subpage academy-page">
       <Header academy="reading" onBack={onBack} character="Zeynep" />
-      {done ? (
+      {libraryDone ? <section className="lesson-complete"><h2>Tüm hikâyeleri keşfettin!</h2><p>Şimdilik yeni okuma sorusu kalmadı. Aynı soruları yeniden sormak yerine diğer akademilerde devam edelim.</p><button className="primary" onClick={onBack}>Diğer akademilere geç →</button></section> : done ? (
         <Completion
           onBack={onBack}
           nextTitle="Yeni bir okuma keşfi"
-          onAgain={() => start(state.level)}
+          onAgain={() => start(nextLevel)}
         />
       ) : session ? (
         <>
-          <LessonProgress index={session.index} total={6} />
+          <LessonProgress index={session.index} total={session.story.questions.length} />
           <p className="level-note">{session.story.grade}</p>
           <ActivityPanel
             key={session.story.questions[session.index].id}
             task={session.story.questions[session.index]}
             onListen={() => setSession({ ...session, listened: true })}
             onRecord={(r) => onSave(recordAcademy(progress, "reading", { ...r, hint: r.hint || !!session.listened }))}
-            last={session.index === 5}
+            last={session.index === session.story.questions.length - 1}
             onNext={() =>
               onTransition(
                 () =>
-                  session.index === 5
+                  session.index === session.story.questions.length - 1
                     ? setDone(true)
                     : setSession({ ...session, index: session.index + 1 }),
-                session.index < 5,
+                session.index < session.story.questions.length - 1,
               )
             }
           />
@@ -160,8 +164,10 @@ export function ReadingAcademy({
         <>
           <p className="intro">
             eylunica ile altı özgün hikâyedeki ipuçlarını keşfet. Önce düşün, sonra
-            metindeki kanıtı göster. Önerilen düzey başarılarına göre değişir.
+            metindeki kanıtı göster. Yeni hikâyeler kısadan uzuna sıralanır.
           </p>
+          <button className="primary" onClick={() => start(nextLevel)}>Sıradaki yeni hikâye · Düzey {nextLevel} →</button>
+          <p className="small">Önce kısa ve kolay metinler, sonra daha uzun hikâyeler. Yanıtladığın sorular yeniden açılmaz; yarım bırakırsan sıradaki yeni sorudan devam edersin.</p>
           <div className="level-cards">
             {[
               "Kısa metinler · 7–9 yaş",
@@ -175,7 +181,7 @@ export function ReadingAcademy({
               >
                 <span>
                   DÜZEY {i + 1}
-                  {state.level === i + 1 ? " · SANA ÖNERİLEN" : ""}
+                  {nextLevel === i + 1 ? " · SANA ÖNERİLEN" : ""}
                 </span>
                 <h2>{s}</h2>
                 <p>
@@ -220,7 +226,8 @@ export function AttentionAcademy({
   function start(k: AttentionKind) {
     onTransition(() => {
       setKind(k);
-      setTasks([generateAttention(k, progress.academies.attention.level)]);
+      const state = progress.academies.attention;
+      setTasks([freshAttention(k, state.level, state.seen, state.history.map(result => result.id))]);
       setIndex(0);
       setDone(false);
     });
@@ -232,7 +239,7 @@ export function AttentionAcademy({
     }
     setTasks((s) => [
       ...s,
-      generateAttention(kind!, progress.academies.attention.level),
+      freshAttention(kind!, progress.academies.attention.level, progress.academies.attention.seen, [...progress.academies.attention.history.map(result => result.id), ...s.map(task => task.id)]),
     ]);
     setIndex((i) => i + 1);
   }
@@ -309,12 +316,13 @@ export function ConcertAcademy({
     ),
     [index, setIndex] = useState(0),
     [done, setDone] = useState(false);
+  const [allDone, setAllDone] = useState(false);
   useEffect(() => {
     onActivity?.(
       mission && !done
-        ? index === 0
+        ? mission.tasks[index].id.endsWith("-read")
           ? "reading"
-          : index === 1
+          : mission.tasks[index].id.endsWith("-focus")
             ? "attention"
             : "math"
         : "other",
@@ -323,12 +331,10 @@ export function ConcertAcademy({
   }, [onActivity, !!mission, done, index]);
   function start() {
     onTransition(() => {
-      setMission(
-        concert(
-          progress.academies.concert.level,
-          Math.floor(progress.academies.concert.attempts / 3) % 5,
-        ),
-      );
+      const missions = [1, 2, 3].flatMap(level => Array.from({ length: 5 }, (_, round) => concert(level, round)));
+      const unseen = missions.find(candidate => candidate.tasks.some(task => !progress.academies.concert.seen[task.id]));
+      if (!unseen) { setAllDone(true); return; }
+      setMission({ ...unseen, tasks: unseen.tasks.filter(task => !progress.academies.concert.seen[task.id]) });
       setIndex(0);
       setDone(false);
     });
@@ -336,16 +342,16 @@ export function ConcertAcademy({
   function save(r: LearningResult) {
     if (!mission) return;
     let next =
-      index === 2
+      r.id.endsWith("-math")
         ? record(progress, mission.math, r.correct, r.hint, r.elapsedMs, false, "concert")
-        : recordAcademy(progress, index === 0 ? "reading" : "attention", r);
+        : recordAcademy(progress, r.id.endsWith("-read") ? "reading" : "attention", r);
     next = trackConcert(next, r);
     onSave(next);
   }
   return (
     <main className="subpage academy-page">
       <Header academy="concert" onBack={onBack} character="Sueda" />
-      {done ? (
+      {allDone ? <section className="lesson-complete"><h2>Konser hazırlıklarının hepsini keşfettin!</h2><button className="primary" onClick={onBack}>Diğer akademilere geç →</button></section> : done ? (
         <Completion
           onBack={onBack}
           nextTitle="Yeni konser hazırlığı"
@@ -353,8 +359,8 @@ export function ConcertAcademy({
         />
       ) : mission ? (
         <>
-          <LessonProgress index={index} total={3} />
-          {index > 0 && (
+          <LessonProgress index={index} total={mission.tasks.length} />
+          {!mission.tasks[index].sentences && (
             <div className="story-text concert-context">
               <h2>Konser notu</h2>
               {mission.sentences.map((s) => (
@@ -366,11 +372,11 @@ export function ConcertAcademy({
             key={mission.tasks[index].id}
             task={mission.tasks[index]}
             onRecord={save}
-            last={index === 2}
+            last={index === mission.tasks.length - 1}
             onNext={() =>
               onTransition(
-                () => (index === 2 ? setDone(true) : setIndex((i) => i + 1)),
-                index < 2,
+                () => (index === mission.tasks.length - 1 ? setDone(true) : setIndex((i) => i + 1)),
+                index < mission.tasks.length - 1,
               )
             }
           />

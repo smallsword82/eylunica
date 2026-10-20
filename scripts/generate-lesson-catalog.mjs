@@ -16,6 +16,7 @@ try {
   }
   const records = tasks.map(task => ({ key: task.id, expected: task.sequence ? { sequence: task.sequence } : { answer: task.answer, ...(task.evidence ? { evidence: task.evidence } : {}) } }));
   const data = JSON.stringify(records).replaceAll("'", "''");
-  await writeFile("supabase/migrations/202610200004_lesson_catalog.sql", `begin;\ninsert into ritma_private.lesson_catalog(key, expected)\nselect item->>'key', item->'expected' from jsonb_array_elements('${data}'::jsonb) item\non conflict(key) do update set expected = excluded.expected;\ncommit;\n`);
+  const output = process.argv[2] || "supabase/migrations/202610200005_lesson_catalog_v2.sql";
+  await writeFile(output, `begin;\ninsert into ritma_private.lesson_catalog(key, expected)\nselect item->>'key', item->'expected' from jsonb_array_elements('${data}'::jsonb) item\non conflict(key) do update set expected = excluded.expected;\ncommit;\n`);
   console.log(`${records.length} eğitim sorusu doğrulama kataloğuna yazıldı.`);
 } finally { await rm(temporary, { recursive: true }); }

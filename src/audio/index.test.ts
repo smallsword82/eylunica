@@ -140,6 +140,8 @@ it("konuşma ve ekran geçişinde kullanılan durdurma tüm kesitleri keser; ses
   await playManifestTrack("zamansizdik");
   stopEffects();
   expect(clips[0].pause).toHaveBeenCalled();
+  setSoundMode("silent");
+  setSoundMode("music");
   vi.stubGlobal("Audio", class { constructor() { throw new Error("Unavailable"); } });
   await expect(playEffect("retry")).resolves.toBeUndefined();
   expect(getManifestPlayback().error).toContain("Ses başlatılamadı");

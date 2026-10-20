@@ -74,3 +74,22 @@ it("sıralı yönerge eksik adımda kabul edilmez; sıfırlayıp doğru sırayla
     expect.objectContaining({ correct: true, hint: false }),
   );
 });
+
+it("hikâyeyi dinleme isteği öğrenme kaydında destek sayılır", async () => {
+  const play = vi.spyOn(HTMLMediaElement.prototype, "play").mockResolvedValue();
+  const pause = vi.spyOn(HTMLMediaElement.prototype, "pause").mockImplementation(() => {});
+  try {
+    const user = userEvent.setup(), record = vi.fn(), listen = vi.fn();
+    const q = stories[0].questions[0];
+    const view = render(<ActivityPanel task={q} onRecord={record} onNext={vi.fn()} onListen={listen} />);
+    await user.click(screen.getByRole("button", { name: "Hikâyeyi dinle" }));
+    expect(play).toHaveBeenCalledOnce();
+    expect(listen).toHaveBeenCalledOnce();
+    await user.click(screen.getByRole("button", { name: q.choices[q.answer] }));
+    await user.click(screen.getByRole("button", { name: new RegExp(`Kanıt cümlesi ${q.evidence![0] + 1}:`) }));
+    await user.click(screen.getByRole("button", { name: "Yanıtımı kontrol et →" }));
+    expect(record).toHaveBeenCalledWith(expect.objectContaining({ correct: true, hint: true }));
+    view.unmount();
+    expect(pause).toHaveBeenCalled();
+  } finally { play.mockRestore(); pause.mockRestore(); }
+});

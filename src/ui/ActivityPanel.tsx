@@ -1,3 +1,7 @@
+import { useEffect } from "react";
+import { hasNarration, narrateFeedback, stopNarration } from "../audio/narration";
+import { narrationTexts, storyNarrationText } from "../audio/narration-texts";
+import { ListenButton } from "./ListenButton";
 import { playEffect } from "../audio";
 import { useRef, useState } from "react";
 import type { Activity, LearningResult } from "../learning-engine";
@@ -8,11 +12,13 @@ export function ActivityPanel({
   onRecord,
   onNext,
   last = false,
+  onListen,
 }: {
   task: Activity;
   onRecord: (result: LearningResult) => void;
   onNext: () => void;
   last?: boolean;
+  onListen?: () => void;
 }) {
   const [selected, setSelected] = useState<number | null>(null),
     [evidence, setEvidence] = useState<number | null>(null),
@@ -25,6 +31,7 @@ export function ActivityPanel({
     usedHint = useRef(false),
     start = useRef(performance.now()),
     lock = useRef(false);
+  useEffect(() => () => stopNarration(), [task.id]);
   function check() {
     if (solved || lock.current) return;
     lock.current = true;
@@ -35,7 +42,9 @@ export function ActivityPanel({
           evidence !== null &&
           checkReading(task, selected, evidence)
         : selected === task.answer;
+    stopNarration();
     void playEffect(correct ? (last ? "complete" : !attempted.current ? "star" : "correct") : "retry");
+    narrateFeedback(correct ? (last ? "complete" : "correct") : "retry");
     if (!correct) {
       usedHint.current = true;
       setHint(true);
@@ -61,10 +70,17 @@ export function ActivityPanel({
   const canCheck = task.sequence
     ? sequence.length === task.sequence.length
     : selected !== null && (!task.evidence || evidence !== null);
+  const storyText = task.sentences ? storyNarrationText(task.title, task.sentences) : "";
+  const canListenToStory = !!task.evidence && hasNarration(storyText);
   return (
     <section className="activity-panel" aria-label={task.title}>
       <div className="eyebrow muted">{task.skill}</div>
       <h2>{task.title}</h2>
+      <ListenButton text={canListenToStory ? narrationTexts.reading : task.memory ? narrationTexts.memory : task.sequence ? narrationTexts.sequence : narrationTexts.attention} />
+      {canListenToStory && <>
+        <ListenButton text={storyText} label="Hikâyeyi dinle" onRequest={() => { usedHint.current = true; onListen?.(); }} />
+        <p className="small">Hikâyeyi dinlemek bu okuma oturumunda destek olarak kaydedilir. Yıldızların azalmaz.</p>
+      </>}
       {task.sentences && (
         <div className="story-text">
           <h3>

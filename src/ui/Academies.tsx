@@ -102,6 +102,7 @@ export function ReadingAcademy({
   const [session, setSession] = useState<{
       story: Story;
       index: number;
+      listened?: boolean;
     } | null>(null),
     [done, setDone] = useState(false);
   const state = progress.academies.reading;
@@ -132,7 +133,8 @@ export function ReadingAcademy({
           <ActivityPanel
             key={session.story.questions[session.index].id}
             task={session.story.questions[session.index]}
-            onRecord={(r) => onSave(recordAcademy(progress, "reading", r))}
+            onListen={() => setSession({ ...session, listened: true })}
+            onRecord={(r) => onSave(recordAcademy(progress, "reading", { ...r, hint: r.hint || !!session.listened }))}
             last={session.index === 5}
             onNext={() =>
               onTransition(

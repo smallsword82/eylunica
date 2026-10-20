@@ -1,0 +1,4 @@
+# Build-time audio authoring only; not required to build web or APK.
+sherpa-onnx==1.12.35
+soundfile==0.14.0
+numpy==2.5.4

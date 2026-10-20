@@ -1,3 +1,7 @@
+import { useNarration } from "./audio/useNarration";
+import { narrateFeedback, stopNarration } from "./audio/narration";
+import { narrationTexts } from "./audio/narration-texts";
+import { ListenButton, NarrationPlayback } from "./ui/ListenButton";
 import { CharacterName } from "./ui/CharacterName";
 import { useAudio } from "./audio/useAudio";
 import { playEffect, stopEffects } from "./audio";
@@ -78,9 +82,14 @@ export default function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [screen]);
+  const narration = useNarration();
   const audio = useAudio();
+  useEffect(() => {
+    stopNarration();
+    if (screen === "summary") narrateFeedback("complete");
+  }, [screen]);
   const wellbeing = useWellbeing(ready);
-  useEffect(() => { if (wellbeing.notice) stopEffects(); }, [wellbeing.notice]);
+  useEffect(() => { if (wellbeing.notice) { stopEffects(); stopNarration(); } }, [wellbeing.notice]);
   useEffect(() => {
     if (screen === "play") wellbeing.setContext("math", true);
     else if (screen === "parent") wellbeing.setContext(null, false);
@@ -98,6 +107,7 @@ export default function App() {
       );
   }
   function pickQuestion(m: string, p: Progress, index: number, cal = false) {
+    stopNarration();
     const op: Operation = cal
       ? ops[index % 4]
       : m === "mixed"
@@ -148,7 +158,9 @@ export default function App() {
     if (!question || solved || pending.current) return;
     pending.current = true;
     const correct = value === question.answer;
+    stopNarration();
     void playEffect(correct ? (!attempted.current ? "star" : "correct") : "retry");
+    narrateFeedback(correct ? "correct" : "retry");
     if (!correct) usedHint.current = true;
     // One learning record and at most one star per question; retries remain encouraging.
     if (!attempted.current) {
@@ -237,6 +249,8 @@ export default function App() {
           </button>
         </div>
       </header>
+      <NarrationPlayback />
+      {narration.error && <div className="storage-error" role="alert">{narration.error}</div>}
       {error && (
         <div className="storage-error" role="alert">
           {error}
@@ -550,6 +564,7 @@ export default function App() {
                   <span className="guide-note">Acele etmen gerekmiyor ♡</span>
                 </aside>
                 <section className="question-panel">
+                  <ListenButton text={narrationTexts.math} />
                   <div className="eyebrow muted">
                     {solved ? "BİR KEŞİF DAHA!" : "IŞIKLARI BİRLİKTE YAKALIM"}
                   </div>
@@ -774,6 +789,14 @@ export default function App() {
                 baskısı uygulanmaz. Bir yanlış yanıttan düşünme süreci hakkında
                 kesin çıkarım yapılmaz.
               </p>
+              <section className="parent-time-panel" aria-labelledby="narration-title">
+                <h2 id="narration-title">Konuşmalı seslendirme</h2>
+                <label><input type="checkbox" checked={narration.enabled} disabled={!narration.ready}
+                  onChange={event => narration.change(event.target.checked)} /> Otomatik konuşmalı geri bildirim</label>
+                <p>Doğru yanıt, yeniden deneme ve tamamlama mesajlarını seslendirir. Varsayılan kapalıdır. Yönergeler ve altı hikâye, Dinle düğmesiyle her zaman isteğe bağlı dinlenebilir. Konuşmayı ekrandaki durdurma düğmesiyle kesebilirsin.</p>
+                <p>Sesler Türkçe sentetik bir anlatıcıyla hazırlanmıştır; karakterlerin gerçek sesi değildir. İnternet veya cihazda Türkçe ses paketi gerekmez. Hikâyeyi dinleme isteği okuma oturumunda destek sayılır; yıldız kaybettirmez.</p>
+                <ListenButton text={narrationTexts.correct} label="Anlatıcı sesini dene" />
+              </section>
               <ParentTimePanel wellbeing={wellbeing} />
               <AcademyProgress progress={progress} />
               <h2>Gizlilik ve çevrimdışı kullanım</h2>

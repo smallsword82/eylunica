@@ -1,0 +1,18 @@
+import { it, expect } from "vitest";
+import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { stories } from "../reading-engine";
+import { narrationTexts, storyNarrationText } from "./narration-texts";
+import { narrationManifest } from "./narration-manifest";
+
+it("bütün yönerge ve hikâyeler güncel metinle, sağlam gömülü ses dosyasıyla eşleşir", () => {
+  const texts = [...Object.values(narrationTexts), ...stories.map(s => storyNarrationText(s.title, s.sentences))];
+  expect(Object.keys(narrationManifest).sort()).toEqual([...texts].sort());
+  for (const text of texts) {
+    const asset = narrationManifest[text];
+    const bytes = readFileSync(`public/narration/${asset.file}`);
+    expect(createHash("sha256").update(bytes).digest("hex")).toBe(asset.sha256);
+    expect(asset.duration).toBeGreaterThan(1);
+    expect(bytes.length).toBeLessThan(2 * 1024 * 1024);
+  }
+});

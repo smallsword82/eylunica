@@ -1899,3 +1899,9 @@ footer button,
 .custom-character { margin: 1.5rem 0; padding: 1.2rem; border: 1px solid #d5c9df; border-radius: 18px; }
 .custom-character input { display: block; width: min(100%, 320px); padding: .8rem; margin: .5rem 0 1rem; font: inherit; border: 1px solid #8e7c9d; border-radius: 8px; }
 @media(max-width: 580px) { .sound-button { font-size: 11px; padding: 8px; } .topbar { gap: 6px; padding-inline: 12px; } .top-actions { gap: 5px; } .star-pill { padding-inline: 7px; } }
+
+.listen-control { margin: .6rem 0; }
+.listen-button { background: #ede4f7; color: #39264f; border: 1px solid #967ba8; border-radius: 10px; padding: .65rem 1rem; font: inherit; font-size: .9rem; cursor: pointer; min-height: 44px; }
+.listen-button[aria-pressed="true"] { background: #39264f; color: white; }
+.narration-playback { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1rem; padding: .6rem; background: #ede4f7; color: #39264f; }
+.narration-playback .text-button { color: #39264f; }

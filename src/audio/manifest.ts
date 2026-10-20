@@ -2,7 +2,7 @@ import { manifestTracks, type ManifestTrack } from "./manifest-catalog";
 export { manifestTracks, type ManifestTrack } from "./manifest-catalog";
 export const effectSeconds = { correct: 1.6, retry: 1.1, star: 2.2, record: 3, complete: 3.5 };
 export const answerSoundSeconds = 0.18;
-export const completionSoundSeconds = 2.7;
+export const completionSoundSeconds = 4;
 let active: HTMLAudioElement | null = null;
 const prepared = new Map<string, HTMLAudioElement>();
 let answering = false;
@@ -15,8 +15,46 @@ let shuffling = false;
 let volume = 0.35;
 let lastTrack: ManifestTrack | undefined;
 let bag: ManifestTrack[] = [];
+let studying = false;
+let studyAudio: HTMLAudioElement | null = null;
+let studyPlaying = false;
+let studyStarting = false;
+let studyGeneration = 0;
 const listeners = new Set<() => void>();
-export const getManifestPlayback = () => ({ playing, error, shuffling, volume, answering });
+export const getManifestPlayback = () => ({ playing, error, shuffling, volume, answering, studying, studyPlaying });
+function stopStudyMusic() { studyGeneration++; studyAudio?.pause(); studyPlaying = false; studyStarting = false; }
+export async function playStudyMusic() {
+  if (!studying || mode !== "music" || document.hidden || studyPlaying || studyStarting) return;
+  studyStarting = true;
+  const ticket = studyGeneration;
+  try {
+    if (!studyAudio) {
+      studyAudio = new Audio(`${import.meta.env.BASE_URL}audio/study-ambient.wav`); studyAudio.preload = "auto"; studyAudio.loop = true;
+    }
+    studyAudio.volume = volume * .35;
+    await studyAudio.play();
+    if (ticket !== studyGeneration) return;
+    if (!studying || mode !== "music" || document.hidden) { stopStudyMusic(); return; }
+    studyPlaying = true;
+    notify();
+  } catch { if (ticket === studyGeneration) { studyPlaying = false; notify(); } }
+  finally { if (ticket === studyGeneration) studyStarting = false; }
+}
+export function setStudyMode(value: boolean) {
+  if (studying === value) return;
+  studying = value;
+  if (value) { stopManifestAudio(); void playStudyMusic(); }
+  else stopStudyMusic();
+  notify();
+}
+export function beginStudyQuestion() {
+  studying = true;
+  shuffling = false;
+  clearCurrent();
+  void playStudyMusic();
+  notify();
+}
+export function stopManifestClip() { clearCurrent(); notify(); }
 function prepareClip(file: string) {
   let audio = prepared.get(file);
   if (!audio) {
@@ -55,17 +93,20 @@ function clearCurrent() {
 export function stopManifestAudio() {
   shuffling = false;
   clearCurrent();
+  stopStudyMusic();
   notify();
 }
 export function setManifestMode(value: string) {
   mode = value;
   stopManifestAudio();
   if (value === "silent") prepared.clear();
+  if (value === "music") void playStudyMusic();
 }
 export function setManifestVolume(value: number) {
   if (!Number.isFinite(value)) return;
   volume = Math.min(0.8, Math.max(0.05, value));
   if (active) active.volume = volume;
+  if (studyAudio) studyAudio.volume = volume * .35;
   notify();
 }
 export function takeRandomTrack(): ManifestTrack {
@@ -82,7 +123,9 @@ export function takeRandomTrack(): ManifestTrack {
 }
 function finish(ticket: number) {
   if (ticket !== generation) return;
+  const wasWelcome = active?.src.endsWith("/ajda-manifest.mp3");
   clearCurrent();
+  if (wasWelcome && studying) void playStudyMusic();
   notify();
   if (shuffling) {
     const nextTicket = generation;
@@ -91,7 +134,8 @@ function finish(ticket: number) {
     }, 2500);
   }
 }
-async function playClip(file: string, seconds: number, level: number, label: string) {
+async function playClip(file: string, seconds: number, level: number, label: string, completion = false) {
+  if (studying && !file.startsWith("answer-") && !completion) return;
   clearCurrent();
   error = "";
   if (mode === "silent" || document.hidden) { shuffling = false; notify(); return; }
@@ -99,7 +143,7 @@ async function playClip(file: string, seconds: number, level: number, label: str
   try {
     const audio = prepareClip(file);
     active = audio;
-    answering = file === "ajda-manifest";
+    answering = completion;
     audio.currentTime = 0;
     audio.volume = level;
     audio.loop = false;
@@ -130,23 +174,35 @@ async function playNext() {
   await playClip(selected.id, selected.seconds, volume, selected.title);
 }
 export async function startManifestShuffle() {
+  if (studying || answering) return;
   stopManifestAudio();
   if (mode !== "music" || document.hidden) return;
   shuffling = true;
   await playNext();
 }
 export async function playManifestEffect(effect: keyof typeof effectSeconds) {
+  if (studying) { await playManifestAnswer(effect !== "retry"); return; }
   if (answering) return;
   await playClip(takeRandomTrack(), effectSeconds[effect], Math.min(0.5, volume), "Kısa Manifest efekti");
 }
 export async function playManifestAnswer(correct = true) {
-  if (answering) return;
+  if (answering) { clearCurrent(); void playStudyMusic(); }
   await playClip(correct ? "answer-tick" : "answer-retry", answerSoundSeconds, Math.min(0.5, volume), correct ? "Doğru yanıt efekti" : "Yeniden deneme efekti");
 }
 export async function playManifestCompletion() {
-  await playClip("ajda-manifest", completionSoundSeconds, Math.min(0.65, volume + 0.1), "Ajda Pekkan · Manifest");
+  stopStudyMusic();
+  const selected = takeRandomTrack();
+  const track = manifestTracks.find(track => track.id === selected);
+  if (!track) return;
+  await playClip(track.id, completionSoundSeconds, Math.min(0.65, volume + 0.1), `Bölüm kutlaması · ${track.title}`, true);
+}
+export async function playManifestWelcome() {
+  stopStudyMusic();
+  await playClip("ajda-manifest", 2.7, Math.min(.65, volume + .1), "Hoş geldin · Manifest", true);
+  if (answering && !studying && mode === "music") { shuffling = true; notify(); }
 }
 export async function playManifestTrack(track: ManifestTrack, level = volume) {
+  if (studying) return;
   if (mode !== "music") return;
   const selected = manifestTracks.find(item => item.id === track);
   if (!selected) return;

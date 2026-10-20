@@ -2,7 +2,7 @@ import { afterEach, beforeEach, expect, it, vi } from "vitest";
 import { Capacitor } from "@capacitor/core";
 import { Preferences } from "@capacitor/preferences";
 import { AUDIO_KEY, enableEffects, loadAudio, saveAudio, playEffect, playAnswerEffect, playCompletionEffect, answerSoundSeconds, stopEffects, stopActivitySound, setSoundMode } from ".";
-import { effectSeconds, playManifestTrack, getManifestPlayback, manifestTracks, startManifestShuffle, takeRandomTrack, prepareManifestAudio } from "./manifest";
+import { effectSeconds, playManifestTrack, getManifestPlayback, manifestTracks, startManifestShuffle, takeRandomTrack, prepareManifestAudio, setStudyMode, playStudyMusic, beginStudyQuestion, playManifestWelcome } from "./manifest";
 vi.mock("@capacitor/preferences", () => ({ Preferences: { get: vi.fn(), set: vi.fn() } }));
 const clips: FakeAudio[] = [];
 class FakeAudio {
@@ -16,7 +16,7 @@ class FakeAudio {
   constructor(public src: string) { clips.push(this); }
 }
 beforeEach(() => { clips.length = 0; vi.stubGlobal("Audio", FakeAudio); });
-afterEach(() => { enableEffects(false); vi.restoreAllMocks(); vi.unstubAllGlobals(); vi.useRealTimers(); });
+afterEach(() => { setStudyMode(false); enableEffects(false); vi.restoreAllMocks(); vi.unstubAllGlobals(); vi.useRealTimers(); });
 it("ilk açılışta efektler açıktır, web seçimi kalıcıdır ve bozuk kayıt kapalı kalır", async () => {
   expect(await loadAudio()).toBe(true);
   await saveAudio(true);
@@ -75,11 +75,11 @@ it("cevap yalnız kısa sözsüz efekttir; sessiz modda çalmaz ve kısa sürede
 it("sesleri önceden yükler ve cevap tıklamasında hazır oynatıcıyı beklemeden başlatır", async () => {
   setSoundMode("music");
   prepareManifestAudio();
-  const answer = clips.find(clip => clip.src.endsWith("/ajda-manifest.mp3"))!;
+  const answer = clips.find(clip => clip.src.endsWith("/answer-tick.wav"))!;
   expect(answer.load).toHaveBeenCalledOnce();
   expect(answer.play).not.toHaveBeenCalled();
   const count = clips.length;
-  const playback = playCompletionEffect();
+  const playback = playAnswerEffect();
   expect(answer.play).toHaveBeenCalledOnce();
   await playback;
   expect(clips).toHaveLength(count);
@@ -92,6 +92,30 @@ it("doğru ve yanlış yanıtta farklı sözsüz efekt kullanır", async () => {
   expect(clips.at(-1)!.src).toBe("/manifest/audio/answer-retry.wav");
   await playAnswerEffect(true);
   expect(clips.at(-1)!.src).toBe("/manifest/audio/answer-tick.wav");
+});
+it("giriş sözü ayrıdır; soruda yalnız sözsüz fon, sonuçta rastgele şarkı çalar", async () => {
+  setSoundMode("music");
+  prepareManifestAudio();
+  const welcome = clips.find(clip => clip.src.endsWith("/ajda-manifest.mp3"))!;
+  await playManifestWelcome();
+  expect(welcome.play).toHaveBeenCalledOnce();
+  beginStudyQuestion();
+  await playStudyMusic();
+  await Promise.resolve();
+  const study = clips.find(clip => clip.src.endsWith("/study-ambient.wav"))!;
+  expect(study.loop).toBe(true);
+  expect(study.volume).toBeLessThan(.2);
+  expect(welcome.pause).toHaveBeenCalled();
+  await playManifestTrack("ariyo");
+  await startManifestShuffle();
+  expect(getManifestPlayback().shuffling).toBe(false);
+  await playCompletionEffect();
+  expect(getManifestPlayback().playing).toMatch(/^Bölüm kutlaması/);
+  expect(welcome.play).toHaveBeenCalledOnce();
+  beginStudyQuestion();
+  await playStudyMusic();
+  setSoundMode("silent");
+  expect(getManifestPlayback().studyPlaying).toBe(false);
 });
 it("hızlı bölüm geçişi bitiş sesini kesmez; sessiz ve mola keser", async () => {
   setSoundMode("music");

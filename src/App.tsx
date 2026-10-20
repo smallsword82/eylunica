@@ -42,7 +42,7 @@ import { awardCard } from "./storage/cards";
 import { Avatar } from "./ui/Avatar";
 import { MusicLounge } from "./ui/MusicLounge";
 import { ManifestAudioControls } from "./ui/ManifestAudioControls";
-import { getManifestPlayback, startManifestShuffle } from "./audio/manifest";
+import { getManifestPlayback, startManifestShuffle, setStudyMode, beginStudyQuestion, playManifestWelcome } from "./audio/manifest";
 import { freshQuestion, freshStrategy } from "./lesson-engine";
 const ops: Operation[] = ["add", "subtract", "multiply", "divide"];
 type Screen =
@@ -116,7 +116,9 @@ export default function App() {
   }, [screen]);
   const narration = useNarration();
   const audio = useAudio();
+  useEffect(() => { setStudyMode(["play", "reading", "attention", "concert", "arena"].includes(screen)); }, [screen]);
   const firstMusic = useRef(false);
+  const welcomed = useRef(false);
   useEffect(() => {
     stopNarration();
     if (screen === "parent") stopEffects();
@@ -156,7 +158,7 @@ export default function App() {
   }
   function pickQuestion(m: string, p: Progress, index: number, cal = false) {
     stopNarration();
-    stopActivitySound();
+    beginStudyQuestion();
     const op: Operation = cal
       ? ops[index % 4]
       : m === "mixed"
@@ -196,6 +198,7 @@ export default function App() {
     persist(named);
     if (screen === "welcome" && named.assessmentPending && !named.calibrationDone) start("mixed", true, named);
     else setScreen("home");
+    if (screen === "welcome" && !welcomed.current) { welcomed.current = true; void playManifestWelcome(); }
   }
   function answer(value: number) {
     if (!question || solved || pending.current) return;

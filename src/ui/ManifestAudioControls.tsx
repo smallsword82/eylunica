@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getSoundMode, subscribeSoundMode } from "../audio";
-import { getManifestPlayback, manifestTracks, playManifestTrack, setManifestVolume, startManifestShuffle, stopManifestAudio, subscribeManifestPlayback, type ManifestTrack } from "../audio/manifest";
+import { getManifestPlayback, manifestTracks, playManifestTrack, playStudyMusic, setManifestVolume, startManifestShuffle, stopManifestAudio, subscribeManifestPlayback, type ManifestTrack } from "../audio/manifest";
 
 export function ManifestAudioControls({ paused, onEnableMusic }: { paused: boolean; onEnableMusic: () => void }) {
   const [mode, setMode] = useState(getSoundMode());
@@ -17,18 +17,18 @@ export function ManifestAudioControls({ paused, onEnableMusic }: { paused: boole
   function enable() { if (getSoundMode() !== "music") onEnableMusic(); }
   return <section className="manifest-audio-bar" aria-label="Kısa Manifest müzikleri">
     <div className="manifest-audio-heading"><span aria-hidden="true">♫</span>
-      <div><strong>Manifest ritimleri</strong><small>{manifestTracks.length} şarkı ve remiks · Kısa, videosuz kesitler</small></div>
+      <div><strong>{playback.studying ? "Sözsüz odak müziği" : "Manifest ritimleri"}</strong><small>{playback.studying ? "Soru zamanı · Sakin, düşük sesli enstrümantal fon" : `${manifestTracks.length} şarkı ve remiks · Kısa, videosuz kesitler`}</small></div>
     </div>
     <button className="primary shuffle-button" disabled={paused} aria-pressed={playback.shuffling}
-      onClick={() => { enable(); void startManifestShuffle(); }}>Rastgele çal</button>
-    <button className="text-button" onClick={stopManifestAudio} disabled={!playback.playing && !playback.shuffling}>Sesi durdur</button>
+      onClick={() => { enable(); if (playback.studying) void playStudyMusic(); else void startManifestShuffle(); }}>{playback.studying ? "Sözsüz fonu aç" : "Rastgele çal"}</button>
+    <button className="text-button" onClick={stopManifestAudio} disabled={!playback.playing && !playback.shuffling && !playback.studyPlaying}>Sesi durdur</button>
     <details className="manifest-audio-details" open={expanded} onToggle={event => setExpanded(event.currentTarget.open)}>
       <summary>Müzik ayarları</summary>
       <div className="manifest-audio-options">
     <select aria-label="Kısa şarkı seç" value={track} onChange={event => { stopManifestAudio(); setTrack(event.target.value as ManifestTrack); }}>
       {manifestTracks.map(track => <option key={track.id} value={track.id}>{track.title}</option>)}
     </select>
-    <button className="secondary" disabled={paused} onClick={() => { enable(); void playManifestTrack(track); }}>12 saniye dinle</button>
+    <button className="secondary" disabled={paused || playback.studying} onClick={() => { enable(); void playManifestTrack(track); }}>12 saniye dinle</button>
     <label className="manifest-volume">Ses düzeyi
       <input type="range" min="5" max="80" value={Math.round(playback.volume * 100)}
         onChange={event => setManifestVolume(Number(event.target.value) / 100)} />
@@ -38,6 +38,7 @@ export function ManifestAudioControls({ paused, onEnableMusic }: { paused: boole
       </div>
     </details>
     {playback.playing && <small className="manifest-now-playing" aria-live="polite">Çalıyor: {playback.playing}</small>}
+    {playback.studyPlaying && !playback.playing && <small className="manifest-now-playing">Çalıyor: Özgün sözsüz odak fonu</small>}
     {playback.error && <p role="alert">{playback.error}</p>}
   </section>;
 }

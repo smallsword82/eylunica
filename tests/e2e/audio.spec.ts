@@ -102,7 +102,7 @@ test("ses tercihi çevrimdışı korunur, efekt üretilir ve karakter adları g�
   await expect(page.getByLabel("1 yıldız", { exact: true })).toBeVisible();
 });
 
-test("müzik kesiti ekran geçişinde yeniden başlamaz; Sessiz modu konuşmayı da kapatır", async ({ page }) => {
+test("soru geçişlerinde sözlü fon başlamaz; Sessiz modu konuşmayı da kapatır", async ({ page }) => {
   await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await expect(page.getByRole("combobox", { name: "Ses modu" })).toHaveValue("music");
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("silent");
@@ -112,7 +112,7 @@ test("müzik kesiti ekran geçişinde yeniden başlamaz; Sessiz modu konuşmayı
   await page.evaluate(() => {
     (window as any).idleSynthCalls = 0;
     const original = HTMLMediaElement.prototype.play;
-    HTMLMediaElement.prototype.play = function () { (window as any).idleSynthCalls++; return original.call(this); };
+    HTMLMediaElement.prototype.play = function () { if (!this.loop) (window as any).idleSynthCalls++; return original.call(this); };
   });
   await page.getByRole("button", { name: "Yönergeyi dinle" }).waitFor({ state: "visible" });
   expect(await page.getByRole("button", { name: "Yönergeyi dinle" }).isEnabled()).toBe(true);

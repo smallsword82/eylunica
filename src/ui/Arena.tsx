@@ -8,6 +8,7 @@ import { narrateFeedback, stopNarration } from "../audio/narration";
 import type { UsageDomain } from "../time-engine";
 import { ContinueCard } from "./ContinueCard";
 import { useLessonScore } from "../online/useLessonScore";
+import { beginStudyQuestion } from "../audio/manifest";
 
 type Session = { id: string; spec: LaneSpec; questions: Question[]; index: number; race: boolean };
 export function Arena({ progress, onSave, onBack, onPractice, onTransition, onActivity, paused }: {
@@ -27,6 +28,7 @@ export function Arena({ progress, onSave, onBack, onPractice, onTransition, onAc
   useEffect(() => {
     onActivity(session ? "math" : "other", !!session);
   }, [!!session, onActivity]);
+  useEffect(() => { if (session) { stopNarration(); beginStudyQuestion(); } }, [session?.id, session?.index]);
   useEffect(() => () => { onActivity("other", false); stopNarration(); stopActivitySound(); }, [onActivity]);
   const save = (p: Progress) => { latest.current = p; onSave(p); };
   function start(spec: LaneSpec) {

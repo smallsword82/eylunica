@@ -1,6 +1,6 @@
 import { test, expect } from "./local-test";
 
-test("sorularda sözsüz efekt, yalnız bölüm bitiminde Ajda Manifest çalar", async ({ page }) => {
+test("girişte bir Manifest sözü, sorularda sözsüz ses, bölüm bitiminde rastgele müzik çalar", async ({ page }) => {
   await page.addInitScript(() => {
     (window as any).answerClips = [];
     const original = HTMLMediaElement.prototype.play;
@@ -11,6 +11,7 @@ test("sorularda sözsüz efekt, yalnız bölüm bitiminde Ajda Manifest çalar",
   });
   await page.goto("/");
   await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
+  await expect.poll(() => page.evaluate(() => (window as any).answerClips.filter((audio: HTMLAudioElement) => audio.src.includes("ajda-manifest")).length)).toBe(1);
   await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
   for (const value of ["14", "15"]) {
     await page.getByRole("button", { name: value, exact: true }).click();
@@ -21,12 +22,15 @@ test("sorularda sözsüz efekt, yalnız bölüm bitiminde Ajda Manifest çalar",
   await page.getByRole("button", { name: "Sıradaki keşif →" }).click();
   for (const [index, value] of [15, 12, 14, 17].entries()) {
     await page.getByRole("button", { name: String(value), exact: true }).click();
-    expect(await page.evaluate(() => (window as any).answerClips.filter((audio: HTMLAudioElement) => audio.src.includes("ajda-manifest")).length)).toBe(0);
+    expect(await page.evaluate(() => (window as any).answerClips.filter((audio: HTMLAudioElement) => audio.src.includes("ajda-manifest")).length)).toBe(1);
     await page.getByRole("button", { name: index === 3 ? "Sahnedeki ışıklarını gör →" : "Sıradaki keşif →" }).click();
   }
   await expect(page.getByRole("heading", { name: "Her keşif bir adım." })).toBeVisible();
   await expect.poll(() => page.evaluate(() => (window as any).answerClips.filter((audio: HTMLAudioElement) => audio.src.includes("ajda-manifest")).length)).toBe(1);
+  const celebration = await page.evaluateHandle(() => (window as any).answerClips.filter((audio: HTMLAudioElement) => audio.src.includes("/manifest/audio/") && audio.src.endsWith(".mp3") && !audio.src.includes("ajda-manifest")).at(-1));
+  expect(await celebration.evaluate(audio => !!audio && !audio.paused)).toBe(true);
   await page.getByRole("button", { name: "Devam et", exact: true }).click();
+  expect(await celebration.evaluate(audio => audio.paused)).toBe(true);
   expect(await page.evaluate(() => (window as any).answerClips.at(-1).paused)).toBe(false);
   await page.getByRole("button", { name: "Mola ver" }).click();
   expect(await page.evaluate(() => (window as any).answerClips.at(-1).paused)).toBe(true);

@@ -1,4 +1,4 @@
-import { getManifestPlayback, playManifestAnswer, playManifestCompletion, playManifestEffect, setManifestMode, stopManifestAudio } from "./manifest";
+import { getManifestPlayback, playManifestAnswer, playManifestCompletion, playManifestEffect, setManifestMode, stopManifestAudio, stopManifestClip } from "./manifest";
 export { answerSoundSeconds, completionSoundSeconds } from "./manifest";
 import { Capacitor } from "@capacitor/core";
 import { Preferences } from "@capacitor/preferences";
@@ -34,7 +34,7 @@ export async function saveAudio(value: boolean): Promise<void> {
 export function stopEffects() { stopManifestAudio(); }
 export function stopActivitySound() {
   const playback = getManifestPlayback();
-  if (!playback.shuffling && !playback.answering) stopManifestAudio();
+  if (!playback.shuffling && !playback.answering) stopManifestClip();
 }
 export function enableEffects(value: boolean) { setSoundMode(value ? "effects" : "silent"); }
 export function setSoundMode(value: SoundMode) {

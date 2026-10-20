@@ -53,6 +53,7 @@ test("okuma: eski kayıt korunur, altı beceri tamamlanır ve çevrimdışı ger
   await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await context.setOffline(true);
   await readingButton(page).click();
+  await page.evaluate(() => { (window as any).sectionClips = []; });
   await page.getByRole("button", { name: /Kısa metinler/ }).click();
   for (const [i, q] of stories[0].questions.entries()) {
     await page
@@ -84,7 +85,8 @@ test("okuma: eski kayıt korunur, altı beceri tamamlanır ve çevrimdışı ger
     page.getByRole("heading", { name: "Birlikte yeni yollar keşfettik!" }),
   ).toBeVisible();
   await expect(page.getByRole("region", { name: "Bölüm ödülün" })).toBeVisible();
-  await expect.poll(() => page.evaluate(() => (window as any).sectionClips.filter((source: string) => source.includes("ajda-manifest")).length)).toBe(1);
+  await expect.poll(() => page.evaluate(() => (window as any).sectionClips.filter((source: string) => source.includes("/manifest/audio/") && source.endsWith(".mp3") && !source.includes("ajda-manifest")).length)).toBe(1);
+  expect(await page.evaluate(() => (window as any).sectionClips.filter((source: string) => source.includes("ajda-manifest")).length)).toBe(0);
   await page.screenshot({ path: "test-results/section-complete-sound.png", fullPage: true });
   await expect
     .poll(() =>

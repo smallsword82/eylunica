@@ -49,13 +49,13 @@ test("varsayılan müzik açık, tek tıkla dinleme ve tüm katalog çevrimdış
     expect(track.rms).toBeGreaterThan(0.01);
   }
   await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
+  await expect.poll(() => page.evaluate(() => (window as any).clips.filter((audio: HTMLAudioElement) => audio.src.includes("ajda-manifest")).at(-1)?.paused), { timeout: 5000 }).toBe(true);
   await expect(page.getByRole("button", { name: "Rastgele çal" })).toHaveAttribute("aria-pressed", "true");
   await page.getByRole("button", { name: "Rastgele çal" }).click();
   const first = await page.evaluate(() => (window as any).clips.at(-1).src as string);
   await page.getByRole("button", { name: /Zihin Atölyesi/ }).click();
-  expect(await page.evaluate(() => (window as any).clips.at(-1).src as string)).toBe(first);
-  expect(await page.evaluate(() => (window as any).clips.at(-1).paused)).toBe(false);
-  await expect.poll(() => page.evaluate(() => (window as any).clips.at(-1).src as string), { timeout: 18000 }).not.toBe(first);
+  await expect.poll(() => page.evaluate(() => (window as any).clips.at(-1).loop)).toBe(true);
+  expect(await page.evaluate(source => (window as any).clips.filter((audio: HTMLAudioElement) => audio.src === source).at(-1).paused, first)).toBe(true);
   await page.getByRole("button", { name: "Sesi durdur" }).click();
   expect(await page.evaluate(() => (window as any).clips.at(-1).paused)).toBe(true);
   await expect(page.locator("iframe,video")).toHaveCount(0);

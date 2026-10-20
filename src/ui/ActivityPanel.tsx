@@ -9,6 +9,7 @@ import { checkReading } from "../reading-engine";
 import { checkSequence } from "../attention-engine";
 import { useLessonScore } from "../online/useLessonScore";
 import { ShapeText, hasShapes } from "./ShapeText";
+import { beginStudyQuestion } from "../audio/manifest";
 export function ActivityPanel({
   task,
   onRecord,
@@ -37,7 +38,7 @@ export function ActivityPanel({
     start = useRef(performance.now()),
     lock = useRef(false);
   useEffect(() => {
-    stopActivitySound();
+    beginStudyQuestion();
     return () => { stopNarration(); stopActivitySound(); };
   }, [task.id]);
   function check() {

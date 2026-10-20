@@ -267,7 +267,7 @@ export default function App() {
   const displayName = (name: string) => name;
   const guide = calibration ? "Zeynep" : currentWorld.character;
   return (
-    <div className="app-shell" inert={!!wellbeing.notice}>
+    <div className={`app-shell ${screen === "welcome" || screen === "characters" ? "character-selection-active" : ""}`} inert={!!wellbeing.notice}>
       <header className="topbar">
         <button
           className="brand"
@@ -428,9 +428,11 @@ export default function App() {
               </div>
               <p className="welcome-companion">{progress.learnerName || "Eylül"}, eğitmenin {progress.character}. Hazırsan sahne senin!</p>
               {screen === "welcome" && <p>1 · İsmini ve eğitmenini seç. Devam edince akademi seçme sayfası açılır. Her akademinin ilk ziyaretinde kendi seviye tespiti yapılır.</p>}
-              <button className="primary" disabled={!audio.ready} onClick={enterAdventure}>
-                {screen === "welcome" ? "eylunica’ya devam et →" : "Maceraya dön →"}
-              </button>
+              <div className="character-selection-actions">
+                <button className="primary" disabled={!audio.ready} onClick={enterAdventure}>
+                  {screen === "welcome" ? "eylunica’ya devam et →" : "Maceraya dön →"}
+                </button>
+              </div>
             </main>
           )}
           {screen === "play" && question && (

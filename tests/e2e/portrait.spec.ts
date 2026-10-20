@@ -18,6 +18,16 @@ for (const width of [320, 360, 390, 430, 768]) {
     }
     await page.goto("/");
     expect((await page.locator(".topbar").boundingBox())!.height).toBeLessThan(150);
+    const continueButton = page.getByRole("button", { name: "eylunica’ya devam et →" });
+    await expect(continueButton).toBeInViewport({ ratio: 1 });
+    await page.evaluate(() => window.scrollTo(0, 600));
+    await expect(continueButton).toBeInViewport({ ratio: 1 });
+    await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
+    await expect(continueButton).toBeInViewport({ ratio: 1 });
+    const lastCard = await page.locator(".character-card").last().boundingBox();
+    const actionBar = await page.locator(".character-selection-actions").boundingBox();
+    expect(lastCard!.y + lastCard!.height).toBeLessThanOrEqual(actionBar!.y);
+    await page.evaluate(() => window.scrollTo(0, 0));
     if (width <= 600) {
       await expect(page.getByRole("combobox", { name: "Kısa şarkı seç" })).toBeHidden();
       await openSoundSettings(page);

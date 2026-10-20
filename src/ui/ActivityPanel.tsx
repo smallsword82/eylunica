@@ -8,6 +8,7 @@ import type { Activity, LearningResult } from "../learning-engine";
 import { checkReading } from "../reading-engine";
 import { checkSequence } from "../attention-engine";
 import { useLessonScore } from "../online/useLessonScore";
+import { ShapeText, hasShapes } from "./ShapeText";
 export function ActivityPanel({
   task,
   onRecord,
@@ -129,11 +130,11 @@ export function ActivityPanel({
           )}
         </div>
       )}
-      <h3 className="activity-prompt">{task.prompt}</h3>
+      <h3 className="activity-prompt" aria-label={task.prompt}><ShapeText text={task.prompt} /></h3>
       {task.visual && (
         <div className="shape-strip" aria-label="Örnek şekiller" role="group">
           {task.visual.map((s, i) => (
-            <span key={i}>{s}</span>
+            <span key={i} aria-label={s}><ShapeText text={s} /></span>
           ))}
         </div>
       )}
@@ -143,7 +144,7 @@ export function ActivityPanel({
             <>
               <div className="shape-strip">
                 {task.memory.map((s, i) => (
-                  <span key={i}>{s}</span>
+                  <span key={i} aria-label={s}><ShapeText text={s} /></span>
                 ))}
               </div>
               <button className="primary" onClick={() => setHidden(true)}>
@@ -173,7 +174,7 @@ export function ActivityPanel({
             <p className="sequence-picked" role="status">
               Seçtiğin sıra:{" "}
               {sequence.length
-                ? sequence.map((i) => task.choices[i]).join(" → ")
+                ? <ShapeText text={sequence.map((i) => task.choices[i]).join(" → ")} />
                 : "Henüz seçmedin."}
             </p>
           )}
@@ -186,6 +187,7 @@ export function ActivityPanel({
               <button
                 key={i}
                 ref={i === 0 ? answerStart : undefined}
+                className={hasShapes(choice) ? "visual-choice" : undefined}
                 aria-label={
                   task.skill === "Farklı olanı bul"
                     ? `Kart ${i + 1}: ${choice}`
@@ -199,7 +201,7 @@ export function ActivityPanel({
                   task.sequence ? setSequence((s) => [...s, i]) : setSelected(i)
                 }
               >
-                {choice}
+                <ShapeText text={choice} />
               </button>
             ))}
           </div>
@@ -232,13 +234,13 @@ export function ActivityPanel({
       {hint && (
         <aside className="strategy">
           <h3>Birlikte düşünelim</h3>
-          <p>{task.hint}</p>
-          {feedback && <p>{task.explanation}</p>}
+          <p><ShapeText text={task.hint} /></p>
+          {feedback && <p><ShapeText text={task.explanation} /></p>}
         </aside>
       )}
       {solved && (
         <>
-          <p className="explanation">{task.explanation}</p>
+          <p className="explanation"><ShapeText text={task.explanation} /></p>
           <button className="primary" onClick={onNext}>
             {last ? "Görevi tamamla" : "Sonraki keşif"} →
           </button>

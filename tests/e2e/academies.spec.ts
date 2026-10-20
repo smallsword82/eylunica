@@ -128,27 +128,27 @@ test("dikkat: altı görev türü çevrimdışı oynanır, ekran küçükken ta�
     await page.getByRole("button", { name: new RegExp(name) }).click();
     const choices = page.getByRole("group", { name: "Yanıt seçenekleri" });
     if (name === "Farklı olanı bul") {
-      const labels = await choices.getByRole("button").allTextContents();
+      const labels = await choices.getByRole("button").evaluateAll(buttons => buttons.map(button => button.getAttribute("aria-label")!.replace(/^Kart \d+: /, "")));
       const odd = labels.findIndex(
         (s) => labels.filter((x) => x === s).length === 1,
       );
       await choices.getByRole("button").nth(odd).click();
     }
     if (name === "Örüntüyü tamamla") {
-      const v = await page.locator(".shape-strip span").allTextContents();
+      const v = await page.locator(".shape-strip > span").evaluateAll(cards => cards.map(card => card.getAttribute("aria-label")!));
       const period = v[0] === v[1] ? 3 : v[0] === v[2] ? 2 : 3;
       await choices
         .getByRole("button", { name: v[v.length % period], exact: true })
         .click();
     }
     if (name === "Şekil eşleştir") {
-      const target = await page.locator(".shape-strip span").innerText();
+      const target = (await page.locator(".shape-strip > span").getAttribute("aria-label"))!;
       await choices.getByRole("button", { name: target, exact: true }).click();
     }
     if (name === "Görsel hafıza") {
       const sequence = await page
-        .locator(".shape-strip span")
-        .allTextContents();
+        .locator(".shape-strip > span")
+        .evaluateAll(cards => cards.map(card => card.getAttribute("aria-label")!));
       await page
         .getByRole("button", { name: "Hazırım, kartları kapat" })
         .click();
@@ -157,7 +157,7 @@ test("dikkat: altı görev türü çevrimdışı oynanır, ekran küçükken ta�
         .click();
     }
     if (name === "Sıralı yönergeler") {
-      const prompt = await page.locator(".activity-prompt").innerText();
+      const prompt = (await page.locator(".activity-prompt").getAttribute("aria-label"))!;
       for (const label of prompt
         .replace("Sırayla seç: ", "")
         .replace(/\.$/, "")

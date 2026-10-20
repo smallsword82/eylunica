@@ -1,0 +1,52 @@
+import { test, expect } from "./local-test";
+import { fresh } from "../../src/storage";
+import AxeBuilder from "@axe-core/playwright";
+
+test("dikkat kartları renkli, dolu/boş ve yazısızdır; seçim ve puan korunur", async ({ page }, testInfo) => {
+  const progress = fresh();
+  progress.academies.attention.level = 2;
+  progress.stars = 9;
+  await page.addInitScript(value => { if (!localStorage.getItem("ritma-progress-v1")) localStorage.setItem("ritma-progress-v1", JSON.stringify(value)); }, progress);
+  await page.goto("/");
+  await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
+  await page.getByRole("button", { name: /^Dikkat ve Odaklanma Akademisi/ }).click();
+  await page.getByRole("button", { name: /Şekil eşleştir/ }).click();
+  const choices = page.getByRole("group", { name: "Yanıt seçenekleri" });
+  const buttons = choices.getByRole("button");
+  expect(await buttons.allTextContents()).toEqual(["", "", "", ""]);
+  const fills = await choices.locator("svg").evaluateAll(shapes => shapes.map(shape => shape.getAttribute("fill")));
+  expect(fills).toContain("none");
+  expect(fills.filter(fill => fill !== "none")).toHaveLength(2);
+  const colors = await choices.locator("svg").evaluateAll(shapes => shapes.map(shape => shape.getAttribute("stroke")));
+  expect(new Set(colors).size).toBeGreaterThan(1);
+  await expect(choices.getByRole("img")).toHaveCount(4);
+  expect((await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa"]).analyze()).violations).toEqual([]);
+  const target = (await page.locator(".shape-strip > span").getAttribute("aria-label"))!;
+  await choices.getByRole("button", { name: target, exact: true }).click();
+  await page.screenshot({ path: testInfo.outputPath("colored-shapes.png"), fullPage: true });
+  await page.locator(".activity-panel").screenshot({ path: testInfo.outputPath("colored-shapes-detail.png") });
+  await page.getByRole("button", { name: "Yanıtımı kontrol et →" }).click();
+  await expect(page.getByRole("status")).toContainText("Harika");
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("ritma-progress-v1")!).stars)).toBe(10);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+});
+
+test("telefon boyutunda hafıza sıraları ve yönergeler de şekille gösterilir", async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 844 });
+  await page.goto("/");
+  await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
+  await page.getByRole("button", { name: /^Dikkat ve Odaklanma Akademisi/ }).click();
+  await page.getByRole("button", { name: /Görsel hafıza/ }).click();
+  const sequence = await page.locator(".shape-strip > span").evaluateAll(cards => cards.map(card => card.getAttribute("aria-label")!));
+  expect(await page.locator(".shape-strip").innerText()).toBe("");
+  await page.getByRole("button", { name: "Hazırım, kartları kapat" }).click();
+  await page.getByRole("button", { name: sequence.join(" → "), exact: true }).click();
+  await page.getByRole("button", { name: "Yanıtımı kontrol et →" }).click();
+  await expect(page.getByRole("status")).toContainText("Harika");
+  await page.getByRole("button", { name: "← Akademilere dön" }).click();
+  await page.getByRole("button", { name: /^Dikkat ve Odaklanma Akademisi/ }).click();
+  await page.getByRole("button", { name: /Sıralı yönergeler/ }).click();
+  expect(await page.locator(".activity-prompt").innerText()).not.toMatch(/Daire|Kare|Üçgen|Baklava|içi|Mavi|Mor/);
+  await expect(page.locator(".activity-prompt svg")).toHaveCount(2);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+});

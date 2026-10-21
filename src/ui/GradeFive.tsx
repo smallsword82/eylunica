@@ -1,3 +1,4 @@
+import { MathJourney } from './MathJourney';
 import { AngleLesson } from './AngleLesson';
 import { MathVisualLesson } from './MathVisualLesson';
 import { MathTopicArt } from './MathTopicArt';
@@ -63,6 +64,7 @@ export function GradeFive({ onBack, onTransition, guide, paused }: { onBack: () 
   const filteredTopics = courseTopics.filter(t => (!unitFilter || t.unit === unitFilter) && t.title.toLocaleLowerCase('tr').includes(topicFilter.toLocaleLowerCase('tr')));
   if (!courseId) return <GradeFiveDiscovery paused={paused} onTransition={onTransition} onBack={onBack} onCourse={id => { setCourse(id); setUnitFilter(''); setTopicFilter(''); setVisibleCount(24); if (id === 'course-6') setTerm('unknown'); else setTerm('first'); }} />;
   if (examOpen && course) return <GradeFiveExam initialTerm={term} courseId={course.id} onBack={() => setExamOpen(false)} onTransition={onTransition} paused={paused} guide={guide} onComplete={recordExam} />;
+  if (courseId === 'course-1') return <MathJourney onBack={() => setCourse(null)} onExam={value => {setTerm(value);setExamOpen(true);}} paused={paused} onTransition={onTransition} onRecord={(id, value, hinted) => { const q=questionById.get(id); if(!q)return; setLearning(current => { const next=recordAttempt(current,q,value,hinted); try{localStorage.setItem(learningKey,JSON.stringify(next));}catch{setStorageError('İlerleme kaydedilemedi.');}return next; }); }} />;
   return <main className="subpage grade-five">
     <button className="text-button" onClick={() => { if (topic) { setTopic(null); setPlayingVideo(null); } else if (course) setCourse(null); else onBack(); }}>← {topic ? 'Konulara dön' : course ? 'Derslere dön' : 'Akademilere dön'}</button>
     <div className="eyebrow muted">5. SINIF · 2026–2027</div>

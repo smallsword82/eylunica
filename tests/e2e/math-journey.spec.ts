@@ -1,0 +1,47 @@
+import {test,expect,type Page} from './local-test';
+import {mathJourneyQuestions} from '../../src/grade5/math-journey-bank';
+import AxeBuilder from '@axe-core/playwright';
+async function enter(page:Page){await page.goto('/');await page.getByRole('button',{name:'eylunica’ya devam et →'}).click();await page.getByRole('button',{name:/5. Sınıf Derslerim/}).click();await page.getByRole('button',{name:/^Matematik /}).click();}
+async function answer(page:Page,correct=true){const id=await page.locator('.journey-scene').getAttribute('data-question-id');const q=mathJourneyQuestions.find(q=>q.id===id)!;expect(q).toBeTruthy();const value=correct?q.answer:q.choices?q.choices.find(c=>c!==q.answer)!:q.answer==='0'?'1':'0';if(q.choices)await page.getByRole('button',{name:value,exact:true}).click();else for(const digit of value.replace('.',','))await page.locator('.journey-keypad').getByRole('button',{name:digit,exact:true}).click();await page.getByRole('button',{name:/Yanıtımı (kaydet|kontrol et)/}).click();return q;}
+async function fits(page:Page,rootSelector='.math-journey-shell'){const bad=await page.locator(rootSelector).evaluate(root=>Array.from(root.querySelectorAll('button,input,select,output')).filter(el=>el.getClientRects().length&&getComputedStyle(el).visibility!=='hidden').filter(el=>{const r=el.getBoundingClientRect();const hit=document.elementFromPoint(r.left+r.width/2,r.top+r.height/2);const disabled=el instanceof HTMLButtonElement&&el.disabled;return r.top<-.5||r.left<-.5||r.right>innerWidth+.5||r.bottom>innerHeight+.5||!disabled&&!!hit&&!el.contains(hit);}).map(el=>({text:el.textContent?.slice(0,50),rect:el.getBoundingClientRect().toJSON()})));expect(bad).toEqual([]);}
+test('telefon, tablet, masaüstü ve yatay ekranda tek sahne; kapı yalnız tamamlanınca görünür',async({page})=>{
+ test.setTimeout(120000);
+ await enter(page);
+ for(const size of [{width:320,height:568},{width:390,height:844},{width:768,height:1024},{width:1366,height:768},{width:844,height:390},{width:2560,height:1440}]){
+  await page.setViewportSize(size);await fits(page);
+  await page.locator('[data-topic-id="topic-a0155915387c7658"]').click();
+  await expect(page.locator('.journey-action-slot .journey-portal')).toHaveCount(0);
+  await page.getByRole('button',{name:'90°',exact:true}).click();
+  await expect(page.locator('.journey-action-slot .journey-portal')).toBeVisible();await fits(page);
+  await page.locator('.journey-action-slot .journey-portal').click();
+  await expect(page.locator('.journey-action-slot .journey-portal')).toHaveCount(0);
+  await page.getByRole('button',{name:'✦ Bu adımı anladım',exact:true}).click();await fits(page);
+  await page.getByRole('button',{name:'Konu testi · 20',exact:true}).click();
+  await expect(page.locator('input[type=text]')).toHaveCount(0);await fits(page);
+  await answer(page);await fits(page);
+  await page.getByRole('button',{name:'← Harita',exact:true}).click();
+  await page.getByRole('button',{name:'Yazılı testleri',exact:true}).click();await fits(page);await page.getByRole('button',{name:'Yazılıyı başlat',exact:true}).click();await fits(page);await page.getByRole('button',{name:'Boş bırak',exact:true}).click();await page.getByRole('button',{name:'← Harita',exact:true}).click();await page.getByRole('button',{name:'Yazılı testleri',exact:true}).click();await fits(page);await page.getByRole('button',{name:'← Harita',exact:true}).click();
+ }
+});
+test('yazılı notu, yanlış ve boş sayıları; görselli çözümler, kayıt ve tekrar etmeyen yeni sorular',async({page})=>{
+ test.setTimeout(120000);await enter(page);await page.getByRole('button',{name:'Yazılı testleri',exact:true}).click();await page.getByRole('button',{name:'Yazılıyı başlat',exact:true}).click();const ids:string[]=[];
+ for(let i=0;i<20;i++){ids.push((await page.locator('.journey-scene').getAttribute('data-question-id'))!);if(i>=18)await page.getByRole('button',{name:'Boş bırak',exact:true}).click();else await answer(page,i<12);await page.locator('.journey-action-slot .journey-portal').click();}
+ await expect(page.getByRole('heading',{name:'Yazılı notun',exact:true})).toBeVisible();await expect(page.getByText('60/100',{exact:true})).toBeVisible();await expect(page.getByText('12 doğru · 6 yanlış · 2 boş',{exact:true})).toBeVisible();await fits(page);
+ await page.getByRole('button',{name:'Görselli çözümleri incele →',exact:true}).click();await expect(page.locator('.figure-solution')).toBeVisible();await fits(page);
+ await page.getByRole('button',{name:'← Harita',exact:true}).click();await page.getByRole('button',{name:'Yazılı testleri',exact:true}).click();await page.getByRole('button',{name:'Yazılıyı başlat',exact:true}).click();expect(ids).not.toContain(await page.locator('.journey-scene').getAttribute('data-question-id'));
+ const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('eylunica-grade5-exams-v1')!));expect(saved.history.at(-1).questionIds).toEqual(ids);
+});
+test('ipucu ve çözüm görseli, ses tercihleri, klavyesiz alıştırma ve çevrimdışı harita',async({page,context})=>{
+ test.setTimeout(90000);await enter(page);await page.locator('[data-topic-id="topic-4add1fe377559e12"]').click();await page.getByRole('button',{name:'Alıştırma · 8',exact:true}).click();await page.getByRole('button',{name:'İpucu',exact:true}).click();await expect(page.locator('.figure-hint')).toBeVisible();await answer(page);await expect(page.locator('.figure-solution')).toBeVisible();
+ expect((await new AxeBuilder({page}).include('.math-journey-shell').withTags(['wcag2a','wcag2aa']).analyze()).violations).toEqual([]);
+ expect(await page.locator('input:not([type=range]):not([type=checkbox])').count()).toBe(0);await page.getByRole('button',{name:'← Harita',exact:true}).click();await page.evaluate(()=>navigator.serviceWorker.ready);await context.setOffline(true);await page.reload();await page.getByRole('button',{name:'eylunica’ya devam et →'}).click();await page.getByRole('button',{name:/5. Sınıf Derslerim/}).click();await page.getByRole('button',{name:/^Matematik /}).click();await expect(page.getByRole('region',{name:'Matematik oyun haritası'})).toBeVisible();
+});
+
+test('ders kitaplığı da sayfa kaydırmadan yedi kitabı dokunmatik sayfalarla sunar',async({page})=>{
+ test.setTimeout(90000);await page.goto('/');await page.getByRole('button',{name:'eylunica’ya devam et →'}).click();await page.getByRole('button',{name:/5. Sınıf Derslerim/}).click();
+ for(const size of [{width:320,height:568},{width:768,height:1024},{width:844,height:390},{width:1366,height:768}]){
+  await page.setViewportSize(size);await fits(page,'.discovery');const names=new Set<string>();
+  for(let i=0;i<5;i++){for(const name of await page.locator('.discovery-book:not([hidden]) strong').allTextContents())names.add(name);await fits(page,'.discovery');const next=page.getByRole('button',{name:'Sonraki kitaplar →',exact:true});if(!await next.isEnabled())break;await next.click();}
+  expect(names.size).toBe(7);
+ }
+});

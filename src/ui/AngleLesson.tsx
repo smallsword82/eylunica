@@ -3,15 +3,15 @@ import { playAnswerEffect } from '../audio';
 import './AngleLesson.css';
 const point=(angle:number,radius:number)=>({x:240+radius*Math.cos(angle*Math.PI/180),y:245-radius*Math.sin(angle*Math.PI/180)});
 const missions=[{angle:90,title:'Kapıyı tam dik açıyla aç.',hint:'Dik açı 90° olur.'},{angle:45,title:'Şimdi 45° büyüklüğünde dar açı oluştur.',hint:'45°, 0 ile 90 arasında; dik açının yarısıdır.'},{angle:120,title:'Son olarak 120° büyüklüğünde geniş açı oluştur.',hint:'120°, 90 ile 180 arasındadır.'}];
-export function AngleLesson({paused,onPractice,onTransition}:{paused:boolean;onPractice:()=>void;onTransition:(action:()=>void,startsTask?:boolean)=>void}){
+export function AngleLesson({paused,onPractice,onTransition,scene='all'}:{paused:boolean;onPractice:()=>void;onTransition:(action:()=>void,startsTask?:boolean)=>void;scene?:'all'|'explore'}){
  const [angle,setAngle]=useState(60),[long,setLong]=useState(false),[motion,setMotion]=useState(true);
  const [mission,setMission]=useState(0),[feedback,setFeedback]=useState<boolean|null>(null);
  const end=point(angle,65);const category=angle===0?'Sıfır açı':angle===90?'Dik açı':angle===180?'Doğru açı':angle<90?'Dar açı':'Geniş açı';
  function update(value:number){if(paused)return;setAngle(value);setFeedback(null);}
  function check(){if(paused)return;const ok=angle===missions[mission].angle;setFeedback(ok);void playAnswerEffect(ok);}
  return <section className={`angle-lesson ${!motion||paused?'angle-still':''}`} aria-label="Görselli açı anlatımı">
- <header className="angle-intro"><span>GEOMETRİ ATÖLYESİ · AÇI ÖLÇME</span><h2>Bir ışını hareket ettir.<br/><em>Açının sırrını keşfet!</em></h2><p>İki ışın aynı noktadan başlıyor. Aralarındaki açıklığın ölçüsüne bak.</p></header>
- <div className="angle-controls-top"><span>Dokun · Değiştir · Gözlemle</span><button aria-pressed={!motion} onClick={()=>setMotion(!motion)}>{motion?'Hareketleri durdur':'Hareketleri aç'}</button></div>
+ {scene==='all'&&<><header className="angle-intro"><span>GEOMETRİ ATÖLYESİ · AÇI ÖLÇME</span><h2>Bir ışını hareket ettir.<br/><em>Açının sırrını keşfet!</em></h2><p>İki ışın aynı noktadan başlıyor. Aralarındaki açıklığın ölçüsüne bak.</p></header>
+ <div className="angle-controls-top"><span>Dokun · Değiştir · Gözlemle</span><button aria-pressed={!motion} onClick={()=>setMotion(!motion)}>{motion?'Hareketleri durdur':'Hareketleri aç'}</button></div></>}
  <section className="angle-workshop" aria-label="Hareketli iletki"><div className="angle-guide"><span aria-hidden="true">✦</span><p>İletkinin merkezini ortak başlangıç noktasına, 0° çizgisini sabit ışına yerleştir. Sağdaki 0’dan başlayarak iç ölçeği oku.</p></div>
  <svg viewBox="0 0 480 300" role="img" aria-label={`İletki üzerinde ${angle} derecelik ${category.toLocaleLowerCase('tr')}; başlangıç ışını sağa bakıyor.`}>
  <defs><radialGradient id="angle-dome"><stop stopColor="#b18be8" stopOpacity=".25"/><stop offset="1" stopColor="#8eb4fa" stopOpacity=".1"/></radialGradient><marker id="angle-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/></marker></defs>
@@ -28,10 +28,10 @@ export function AngleLesson({paused,onPractice,onTransition}:{paused:boolean;onP
  <div className="angle-rule"><strong>{angle===0?'Işınlar aynı yönde.':angle===180?'Işınlar zıt yönlerde.':angle===90?'Bir dik köşe oluştu!':angle<90?'Dik açıdan daha küçük.':'Dik açıdan büyük, doğru açıdan küçük.'}</strong><p>Dar açı: 0° &lt; açı &lt; 90° · Dik açı: 90° · Geniş açı: 90° &lt; açı &lt; 180° · Doğru açı: 180°</p></div>
  <button className="angle-secondary" disabled={paused} onClick={()=>setLong(!long)}>{long?'Işını kısalt':'Işını uzat'}</button><p className="angle-small">Işınlar sonsuza uzanır; çizimde yalnız bir kısmını gösteririz. Çizgiyi uzatmak açıyı değiştirmez: açıklık hâlâ {angle}°.</p>
  </section>
- <section className="angle-mission" aria-label="Açı görevi"><span>KÜÇÜK GÖREV · {mission+1}/3</span><h3>{missions[mission].title}</h3><p>Yukarıdaki ışını değiştir, sonra kontrol et.</p><button className="angle-primary" disabled={paused||feedback===true} onClick={check}>Açımı kontrol et</button>
+ {scene==='all'&&<section className="angle-mission" aria-label="Açı görevi"><span>KÜÇÜK GÖREV · {mission+1}/3</span><h3>{missions[mission].title}</h3><p>Yukarıdaki ışını değiştir, sonra kontrol et.</p><button className="angle-primary" disabled={paused||feedback===true} onClick={check}>Açımı kontrol et</button>
  {feedback!==null&&<div role="status" className={`angle-feedback ${feedback?'angle-success':''}`}><strong>{feedback?'Keşfettin! ✦':'Biraz daha deneyelim.'}</strong><p>{feedback?`${angle}° ile görevi tamamladın. ${missions[mission].hint}`:`Şu an ${angle}° gösteriyorsun. ${missions[mission].hint}`}</p></div>}
  {feedback&&mission<2&&<button className="angle-secondary" disabled={paused} onClick={()=>onTransition(()=>{setMission(mission+1);setFeedback(null);},true)}>Sonraki keşif →</button>}
  {feedback&&mission===2&&<p className="angle-finish">Üç açıyı da oluşturdun. Şimdi konu alıştırmalarıyla pekiştirebilirsin.</p>}
  <button className="angle-secondary" disabled={paused} onClick={onPractice}>Konu alıştırmalarına geç →</button><p className="angle-small">Keşif denemeleri puanını değiştirmez. Alıştırma yanıtların mevcut çalışma geçmişine kaydedilir.</p>
- </section></section>;
+ </section>}</section>;
 }

@@ -1,3 +1,5 @@
+Güncel sahne/harita, soru setleri ve ses akışı: [MATH-JOURNEY.md](MATH-JOURNEY.md). Aşağıdaki metin önceki görselli anlatım katmanını açıklar.
+
 # Matematik konularının görselli akışı
 
 Matematik kitabı artık ayrı bir demo açmaz. Akış: yedi ana dersin kitaplığı → matematik konu haritası → seçilen konunun görselli anlatımı → mevcut alıştırmalar/yazılılar. Diğer derslerin görsel dönüşümü bu çalışmanın kapsamında değildir. Fazla programlar öğrenci kitaplığına geri eklenmez; geçmiş verileri korunur.

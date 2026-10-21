@@ -1,3 +1,4 @@
+import { mathJourneyQuestions } from './math-journey-bank.ts';
 import official from './official-curriculum.json' with { type: 'json' };
 import { lessons, lessonByTopic } from './content.ts';
 import { applyQuestionReview, type QuestionReview } from './question-review.ts';
@@ -54,7 +55,7 @@ function varyChoiceOrder(question: Question): Question {
 // Stable per-question ordering preserves resumed answers without making the
 // authored first option an answer-position clue. Keep legacy sample data intact.
 export const sourceComparedQuestions = comparedQuestions as Question[];
-export const questions: Question[] = [...sampleQuestions, ...lessons.flatMap(lesson => lesson.questions.map(q => varyChoiceOrder(applyQuestionReview({ ...q, topicId: lesson.topicId, outcomeCode: null })))), ...sourceComparedQuestions.map(varyChoiceOrder)];
+export const questions: Question[] = [...sampleQuestions, ...lessons.flatMap(lesson => lesson.questions.map(q => varyChoiceOrder(applyQuestionReview({ ...q, topicId: lesson.topicId, outcomeCode: null })))), ...sourceComparedQuestions.map(varyChoiceOrder), ...mathJourneyQuestions];
 export const questionById = new Map(questions.map(q => [q.id, q]));
 export const questionsByTopic = new Map<string, Question[]>();
 export const topicsByCourse = new Map<string, Topic[]>();

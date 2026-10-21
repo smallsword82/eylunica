@@ -1,8 +1,8 @@
 # MEB kaynaklarıyla soru bankası düzeltmesi
 
-Öncelik ilk dönemdir (doğrulanmış 1–18. haftalar): **157 konu**, **156 sorulu konu**, **974 soru ilişkisi**, bunların **48** tanesinde bireysel kaynak karşılaştırma kaydı. Dönemi belirtilmeyen **421** kayıt tahminen sınıflandırılmadı. İkinci dönem içerikleri korunur.
+Öncelik ilk dönemdir (doğrulanmış 1–18. haftalar): **157 konu**, **156 sorulu konu**, **2374 soru ilişkisi**, bunların **48** tanesinde bireysel kaynak karşılaştırma kaydı. Dönemi belirtilmeyen **421** kayıt tahminen sınıflandırılmadı. İkinci dönem içerikleri korunur.
 
-Tüm **2259 soru kaydı** konu bağlantısı, seçenek/cevap tutarlılığı ve zorunlu alanlar açısından tarandı. Teknik hata: **0**. Bu denetim pedagojik doğrulama veya her cevabın resmî bir soru anahtarından doğrulanması anlamına gelmez.
+Tüm **6259 soru kaydı** konu bağlantısı, seçenek/cevap tutarlılığı ve zorunlu alanlar açısından tarandı. Teknik hata: **0**. Bu denetim pedagojik doğrulama veya her cevabın resmî bir soru anahtarından doğrulanması anlamına gelmez.
 
 **77 soru kaydında (46 ortak soru kuralı) kök/çeldiriciler düzeltildi. 15 yeni bağlamlı soru** resmî örnek ve etkinliklerin beceri/soru yapısı karşılaştırılarak özgün hazırlandı. Doğru cevaplar ve eski soru kimlikleri korunarak mevcut kayıtların bozulması önlendi.
 
@@ -28,7 +28,7 @@ Sayfalar PDF dosyasındaki 1 tabanlı sayfa numarasıdır. Tam dosya karmaları,
 
 ## Kapsamın sınırı
 
-Bireysel resmî kaynak karşılaştırması kaydedilen **92**, henüz kaydedilmeyen **2167** soru ilişkisi var. İkincilere otomatik kaynak onayı verilmedi. Bütün bankanın kaynak karşılaştırmasının tamamlandığı iddia edilmez. İncelenen belgeler bir “çıkmış sınav soruları” koleksiyonu değildir; bu tur doğrudan çıkmış soru diye etiketlenen kayıt yoktur.
+Bireysel resmî kaynak karşılaştırması kaydedilen **92**, henüz kaydedilmeyen **6167** soru ilişkisi var. İkincilere otomatik kaynak onayı verilmedi. Bütün bankanın kaynak karşılaştırmasının tamamlandığı iddia edilmez. İncelenen belgeler bir “çıkmış sınav soruları” koleksiyonu değildir; bu tur doğrudan çıkmış soru diye etiketlenen kayıt yoktur.
 
 OYSS kılavuzunun PDF 4. sayfası okul yazılılarında açık uçlu/kısa cevaplı sorulara ilişkin çerçeveyi anlatır. Uygulamadaki çoktan seçmeli/karma yazılı çalışması özgün bir hazırlık testidir; okulun resmî yazılısı, dağılım senaryosu veya resmî notu olarak sunulmaz. Kılavuzdaki 9/10. sınıf pilot uygulaması 5. sınıf soru bankası kabul edilmedi.
 

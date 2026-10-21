@@ -1,3 +1,5 @@
+Güncel matematik haritası, sahneler, ayrı soru setleri, not ve ses akışı: [MATH-JOURNEY.md](MATH-JOURNEY.md). Güncel tüm katalog sayıları: [GRADE5-CONTENT-REPORT.md](GRADE5-CONTENT-REPORT.md). Aşağıdaki önceki sürüm sayıları tarihsel geliştirme notlarıdır.
+
 # Eylunica · 2026–2027 geliştirme durumu
 
 Mevcut React/TypeScript/Vite PWA ve Capacitor kabuğu korunur. Matematik, okuma, dikkat, konser, Arena, karakterler, sesler, kartlar ve ebeveyn sınırlarına dokunulmadan ana ekrana “5. Sınıf Derslerim” eklenmiştir. Eski `ritma-progress-v1` kayıtları dönüştürülmez; yeni çalışma kayıtları ayrı `eylunica-grade5-v1` anahtarındadır.

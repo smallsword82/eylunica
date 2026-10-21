@@ -1,3 +1,4 @@
+import {selectGradeCourse} from './local-test';
 import { test, expect, type Page } from './local-test';
 
 async function openGradeFive(page: Page) {
@@ -6,52 +7,15 @@ async function openGradeFive(page: Page) {
  await page.getByRole('button',{name:/5. Sınıf Derslerim/}).click();
 }
 
-test('yazılı cevapları çevrimdışı korunur; anahtar bitişte açılır ve yanlışlar öğrenme kaydına geçer', async ({page,context}) => {
- const external: string[]=[];
- page.on('request',r=>{if(/googleapis|youtube/.test(r.url()))external.push(r.url());});
- await openGradeFive(page);
- const previousGame=await page.evaluate(()=>localStorage.getItem('ritma-progress-v1'));
- await page.getByRole('button',{name:/^Matematik /}).click();
-  await page.getByLabel('Çalışma dönemi').selectOption('all');
- await page.getByRole('button',{name:'Yazılı testleri',exact:true}).click();
- const scope=page.getByRole('group',{name:'Yazılı kapsamı',exact:true});
- for(const checkbox of await scope.getByRole('checkbox').all())if(await checkbox.isEnabled())await checkbox.uncheck();
- await scope.getByRole('checkbox',{name:/Örnek sayı çalışmaları/}).check();
- await page.getByRole('button',{name:'Yazılıyı başlat',exact:true}).click();
- await expect(page.locator('fieldset.exam-question')).toHaveCount(6);
- await expect(page.getByText('Cevap anahtarı ve çözümler',{exact:true})).toHaveCount(0);
- await expect(page.getByRole('button',{name:'İpucu',exact:true})).toHaveCount(0);
- const first=page.locator('fieldset.exam-question').filter({hasText:'3 482'});
- await first.getByRole('radio',{name:'400',exact:true}).check();
- await expect(page.getByText('1/6 soru yanıtlandı.',{exact:false})).toBeVisible();
- await page.evaluate(()=>navigator.serviceWorker.ready);
- await context.setOffline(true);
- await page.reload();
- await page.getByRole('button',{name:'eylunica’ya devam et →'}).click();
- await page.getByRole('button',{name:/5. Sınıf Derslerim/}).click();
- await page.getByRole('button',{name:/^Matematik /}).click();
-  await page.getByLabel('Çalışma dönemi').selectOption('all');
- await page.getByRole('button',{name:'Yazılı testleri',exact:true}).click();
- await page.getByRole('button',{name:'Yarım kalan yazılıya devam et',exact:true}).click();
- await expect(page.locator('fieldset.exam-question').filter({hasText:'3 482'}).getByRole('radio',{name:'400',exact:true})).toBeChecked();
- await page.getByRole('button',{name:'Yazılıyı bitir',exact:true}).click();
- await expect(page.getByRole('alert').filter({hasText:'5 soru boş'})).toBeVisible();
- await page.getByRole('button',{name:'Boşlarla bitir',exact:true}).click();
- await expect(page.getByText('17/100 · 1 doğru · 0 yanlış · 5 boş',{exact:true})).toBeVisible();
- await expect(page.getByRole('heading',{name:'Cevap anahtarı ve çözümler',exact:true})).toBeVisible();
- const saved=await page.evaluate(()=>({learning:JSON.parse(localStorage.getItem('eylunica-grade5-v1')!),exams:JSON.parse(localStorage.getItem('eylunica-grade5-exams-v1')!),game:localStorage.getItem('ritma-progress-v1')}));
- expect(saved.game).toBe(previousGame);
- expect(saved.learning.attempts).toHaveLength(6);
- expect(saved.learning.attempts.filter((a:{correct:boolean})=>!a.correct)).toHaveLength(5);
- expect(saved.exams.history).toHaveLength(1);
- expect(saved.exams.drafts['course-1']).toBeUndefined();
- expect(external).toEqual([]);
- expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+test('matematik yazılısı çevrimdışı aynı yanıtla sürer ve sonunda not verir',async({page,context})=>{
+ test.setTimeout(90000);await openGradeFive(page);const before=await page.evaluate(()=>localStorage.getItem('ritma-progress-v1'));await page.getByRole('button',{name:/^Matematik /}).click();await page.getByRole('button',{name:'Yazılı testleri',exact:true}).click();await page.getByLabel('Soru sayısı').selectOption('10');await page.getByRole('button',{name:'Yazılıyı başlat',exact:true}).click();
+ const {mathJourneyQuestions}=await import('../../src/grade5/math-journey-bank');const id=await page.locator('.journey-scene').getAttribute('data-question-id');const q=mathJourneyQuestions.find(q=>q.id===id)!;if(q.choices)await page.getByRole('button',{name:q.answer,exact:true}).click();else for(const digit of q.answer)await page.locator('.journey-keypad').getByRole('button',{name:digit,exact:true}).click();await page.getByRole('button',{name:'Yanıtımı kaydet',exact:true}).click();await page.locator('.journey-action-slot .journey-portal').click();await page.evaluate(()=>navigator.serviceWorker.ready);await context.setOffline(true);await page.reload();await page.getByRole('button',{name:'eylunica’ya devam et →'}).click();await page.getByRole('button',{name:/5. Sınıf Derslerim/}).click();await page.getByRole('button',{name:/^Matematik /}).click();await page.getByRole('button',{name:'Yazılı testleri',exact:true}).click();await page.getByRole('button',{name:'Yarım kalan yazılıya devam et',exact:true}).click();
+ for(let i=0;i<9;i++){await page.getByRole('button',{name:'Boş bırak',exact:true}).click();await page.locator('.journey-action-slot .journey-portal').click();}await expect(page.getByText('10/100',{exact:true})).toBeVisible();await expect(page.getByText('1 doğru · 0 yanlış · 9 boş',{exact:true})).toBeVisible();expect(await page.evaluate(()=>localStorage.getItem('ritma-progress-v1'))).toBe(before);
 });
 
 test('resmî konuya eklenen anlatım, adımlı çözüm ve alıştırma çevrimdışı açılır', async ({page,context}) => {
  await openGradeFive(page);
- await page.getByRole('button',{name:/^Fen Bilimleri /}).click();
+ await selectGradeCourse(page,/^Fen Bilimleri /);
   await page.getByLabel('Çalışma dönemi').selectOption('all');
  await page.getByLabel('Konu ara').fill('Gökyüzündeki Komşumuz: Güneş');
  await page.getByRole('button',{name:/Gökyüzündeki Komşumuz: Güneş/}).click();
@@ -80,9 +44,10 @@ for (const [course, title] of [
  test(`${course}: anlatım, örnek ve alıştırma açılır`, async ({page}) => {
   await openGradeFive(page);
   const escape = (text: string) => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  await page.getByRole('button',{name:new RegExp('^'+escape(course)+' ')}).click();
+  await selectGradeCourse(page,new RegExp('^'+escape(course)+' '));
   await page.getByLabel('Çalışma dönemi').selectOption('all');
   await expect(page.getByRole('button',{name:'Yazılı testleri',exact:true})).toBeEnabled();
+  if(course==='Matematik'){await page.locator('[data-topic-id="topic-a0155915387c7658"]').click();await page.getByRole('button',{name:'90°',exact:true}).click();await page.locator('.journey-action-slot .journey-portal').click();while(await page.locator('.phase-explain').count()){await page.getByRole('button',{name:'✦ Bu adımı anladım',exact:true}).click();await page.locator('.journey-action-slot .journey-portal').click();}while(await page.locator('.phase-example').count()){await page.getByRole('button',{name:'✦ Çözüm adımını inceledim',exact:true}).click();await page.locator('.journey-action-slot .journey-portal').click();}await expect(page.locator('.phase-practice')).toBeVisible();return;}
   await page.getByLabel('Konu ara').fill(title);
   await page.getByRole('button',{name:new RegExp(escape(title))}).first().click();
   if(course==='Matematik') await expect(page.getByRole('region',{name:'Görselli açı anlatımı'})).toBeVisible();

@@ -1,3 +1,4 @@
+import { mathJourneyQuestions } from './math-journey-bank';
 import { describe, expect, it } from 'vitest';
 import { lessons, lessonByTopic, contentStats } from './content';
 import { topics, questions, questionById, questionsByTopic, topicsByCourse, questionsByCourse, sourceComparedQuestions } from './catalog';
@@ -11,7 +12,8 @@ describe('Özgün ders anlatımı ve alıştırma kataloğu', () => {
   expect(lessonByTopic.has('place-value')).toBe(false);
   expect(lessonByTopic.has('reading-evidence')).toBe(false);
   expect(topics.find(topic => topic.id === 'place-value')?.source.status).toBe('pending');
-  expect(questionsByTopic.get('place-value')).toHaveLength(6);
+  expect(questionsByTopic.get('place-value')?.filter(q=>!q.id.startsWith('mj-'))).toHaveLength(6);
+  expect(questionsByTopic.get('place-value')?.filter(q=>q.id.startsWith('mj-'))).toHaveLength(200);
   expect(questionsByTopic.get('reading-evidence')).toHaveLength(2);
  });
  it('hazır derslerde açıklama, adımlı örnek ve çözümlü soruları birlikte sunar', () => {
@@ -57,7 +59,7 @@ describe('Özgün ders anlatımı ve alıştırma kataloğu', () => {
    const topicIds = new Set(topicsByCourse.get(courseId)?.map(topic => topic.id));
    expect(pool.every(q => topicIds.has(q.topicId))).toBe(true);
   }
-  expect(contentStats.questionRecords + 8 + sourceComparedQuestions.length).toBe(questions.length);
+  expect(contentStats.questionRecords + 8 + sourceComparedQuestions.length + mathJourneyQuestions.length).toBe(questions.length);
   expect(contentStats.distinctQuestionPrompts).toBeLessThanOrEqual(contentStats.questionRecords);
  });
  it('doğru seçeneğin yeri geniş ders havuzlarında sabit bir ipucu oluşturmaz', () => {

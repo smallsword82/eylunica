@@ -28,3 +28,14 @@ export async function openMathWorld(page: Page, name: RegExp) {
 export async function openSoundSettings(page: Page) {
   if (!await page.getByRole("combobox", { name: "Ses modu" }).isVisible()) await page.getByRole("button", { name: "Ses ve müzik ayarları", exact: true }).click();
 }
+export async function selectGradeCourse(page: Page, name: RegExp) {
+ await page.locator('.discovery-books').waitFor({state:'visible'});
+ for(let i=0;i<5;i++){
+  const target=page.locator('.discovery-books').getByRole('button',{name});
+  if(await target.isVisible()){await target.click();return;}
+  const next=page.getByRole('button',{name:'Sonraki kitaplar →',exact:true});
+  if(!await next.isEnabled())break;
+  await next.click();
+ }
+ throw Error(`Kitaplıkta ders bulunamadı: ${name}`);
+}

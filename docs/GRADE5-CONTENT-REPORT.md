@@ -1,10 +1,12 @@
 # Eylunica · Ders içeriği ve yazılı hazırlığı
 
-Öncelik **1. dönem**: yıllık planda 1–18. haftalara ait **157 konu**, **156 hazır anlatım** ve **974 soru ilişkisi**. Öğrenci ve yazılı ekranları ilk dönemle açılır. Haftası olmayan kayıtlar tahminen sınıflandırılmaz; tüm yıl ve dönemi belirtilmeyen seçenekleriyle korunur. Kaynak karşılaştırması: [QUESTION-REVIEW-REPORT.md](QUESTION-REVIEW-REPORT.md).
+Öğrenci kitaplığı yedi ana dersle sınırlıdır. Aşağıdaki envanter, geçmişi korumak için tutulan tüm program kayıtlarını da içerir. Matematiğin dokunmatik harita ve ayrı soru setleri: [MATH-JOURNEY.md](MATH-JOURNEY.md).
 
-2026–2027 müfredat kayıtları korunarak **362 konuda anlatım ve örnek çözüm**, **2259 soru kaydı** ve **301 uygulama etkinliği** eklendi/korundu. 32 ders/programda çalışılabilir içerik var.
+Öncelik **1. dönem**: yıllık planda 1–18. haftalara ait **157 konu**, **156 hazır anlatım** ve **2374 soru ilişkisi**. Öğrenci ve yazılı ekranları ilk dönemle açılır. Haftası olmayan kayıtlar tahminen sınıflandırılmaz; tüm yıl ve dönemi belirtilmeyen seçenekleriyle korunur. Kaynak karşılaştırması: [QUESTION-REVIEW-REPORT.md](QUESTION-REVIEW-REPORT.md).
 
-Tekrar eden program başlıkları aynı kavram çalışmasını paylaşabilir. 2259 soru ilişkisi, 1766 farklı soru metnine karşılık gelir; her kayıt ayrı özgün problem sayılmaz.
+2026–2027 müfredat kayıtları korunarak **362 konuda anlatım ve örnek çözüm**, **6259 soru kaydı** ve **301 uygulama etkinliği** eklendi/korundu. 32 ders/programda çalışılabilir içerik var.
+
+Tekrar eden program başlıkları aynı kavram çalışmasını paylaşabilir. 6259 soru ilişkisi, 4765 farklı soru metnine karşılık gelir; her kayıt ayrı özgün problem sayılmaz.
 
 Anlatım ve sorular Eylunica için özgün hazırlanmıştır. Bunlar resmî MEB soruları, onaylı öğretmen materyali veya gelecek yazılı tahmini değildir. Kaynak program/ünite çıktıları gösterilir; sorulara doğrulanmamış bire bir çıktı kodu yazılmaz.
 
@@ -37,7 +39,7 @@ Anlatım ve sorular Eylunica için özgün hazırlanmıştır. Bunlar resmî MEB
 | Kur'an-ı Kerim | 1/23 | 6 | 6 |
 | Kültür ve Medeniyetimize Yön Verenler | 1/18 | 6 | 6 |
 | Masal ve Destanlarımız | 1/36 | 6 | 6 |
-| Matematik | 20/20 | 199 | 199 |
+| Matematik | 20/20 | 4199 | 3198 |
 | Müzik | 15/15 | 90 | 66 |
 | Okuma Becerileri | 1/13 | 6 | 6 |
 | Oyun ve Oyun Etkinlikleri (Drama) | 1/14 | 6 | 6 |
@@ -73,6 +75,6 @@ Anlatım ve sorular Eylunica için özgün hazırlanmıştır. Bunlar resmî MEB
 
 362 mevcut konu kaydında bağımsız anlatım/soru paketi henüz yok. Konusuz programlar, belirsiz/parçalı kaynak başlıkları ve hazırlanmamış seçmeli içerikler uygulamada hazır gösterilmez. Bölgesel dil dersleri için doğrulanmış dil örnekleri gereklidir.
 
-Konu başına 50 soru hedefi tamamlanmadı (0 konu bu hedefe ulaştı). Uygulamalı etkinlikler için kendini değerlendirme soruları vardır; yazılı puanı fiziksel/sanatsal performansı veya inancı ölçmez. Öğretmen içerik incelemesi ve eksik ders/soru yazımı sürdürülmelidir.
+Konu başına 50 soru hedefi tamamlanmadı (20 konu bu hedefe ulaştı). Uygulamalı etkinlikler için kendini değerlendirme soruları vardır; yazılı puanı fiziksel/sanatsal performansı veya inancı ölçmez. Öğretmen içerik incelemesi ve eksik ders/soru yazımı sürdürülmelidir.
 
 Tam konu listesi ve sayılar: [GRADE5-CONTENT-REPORT.json](GRADE5-CONTENT-REPORT.json). Yeniden üretim: `node tools/curriculum/content-report.mjs`. Üretim derlemesi ve test sonuçları [GRADE5-PROTOTYPE.md](GRADE5-PROTOTYPE.md) dosyasında tutulur.

@@ -39,6 +39,7 @@ const report = {
 await writeFile(new URL('../../docs/GRADE5-CONTENT-REPORT.json',import.meta.url),JSON.stringify(report,null,2)+'\n');
 const lines = [
  '# Eylunica · Ders içeriği ve yazılı hazırlığı', '',
+ 'Öğrenci kitaplığı yedi ana dersle sınırlıdır. Aşağıdaki envanter, geçmişi korumak için tutulan tüm program kayıtlarını da içerir. Matematiğin dokunmatik harita ve ayrı soru setleri: [MATH-JOURNEY.md](MATH-JOURNEY.md).', '',
  `Öncelik **1. dönem**: yıllık planda 1–18. haftalara ait **${firstSemester.topicRecords} konu**, **${firstSemester.readyTopics} hazır anlatım** ve **${firstSemester.questionRecords} soru ilişkisi**. Öğrenci ve yazılı ekranları ilk dönemle açılır. Haftası olmayan kayıtlar tahminen sınıflandırılmaz; tüm yıl ve dönemi belirtilmeyen seçenekleriyle korunur. Kaynak karşılaştırması: [QUESTION-REVIEW-REPORT.md](QUESTION-REVIEW-REPORT.md).`, '',
  `2026–2027 müfredat kayıtları korunarak **${report.readyTopics} konuda anlatım ve örnek çözüm**, **${report.questionRecords} soru kaydı** ve **${report.practicalActivities} uygulama etkinliği** eklendi/korundu. ${report.programsWithContent} ders/programda çalışılabilir içerik var.`, '',
  `Tekrar eden program başlıkları aynı kavram çalışmasını paylaşabilir. ${report.questionRecords} soru ilişkisi, ${report.distinctQuestionPrompts} farklı soru metnine karşılık gelir; her kayıt ayrı özgün problem sayılmaz.`, '',

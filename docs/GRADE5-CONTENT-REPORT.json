@@ -2,9 +2,9 @@
   "firstSemester": {
     "topicRecords": 157,
     "readyTopics": 156,
-    "questionRecords": 974
+    "questionRecords": 2374
   },
-  "generatedAt": "2026-10-21T10:28:32.511Z",
+  "generatedAt": "2026-10-21T15:45:56.762Z",
   "year": "2026-2027",
   "materialAuthor": "Eylunica",
   "officialExamQuestions": false,
@@ -33,19 +33,19 @@
     "meb-course-119"
   ],
   "pendingTopicRecords": 362,
-  "questionRecords": 2259,
-  "distinctQuestionPrompts": 1766,
+  "questionRecords": 6259,
+  "distinctQuestionPrompts": 4765,
   "practicalActivities": 301,
   "types": {
-    "choice": 1474,
+    "choice": 2024,
     "boolean": 445,
-    "fill": 337,
+    "fill": 3787,
     "ordering": 1,
     "matching": 1,
     "visual": 1
   },
   "perTopicTarget": 50,
-  "topicsMeetingQuestionTarget": 0,
+  "topicsMeetingQuestionTarget": 20,
   "programs": [
     {
       "id": "meb-course-95",
@@ -855,8 +855,8 @@
       "model": "standard",
       "topicRecords": 20,
       "readyTopics": 20,
-      "questionRecords": 199,
-      "distinctQuestionPrompts": 199,
+      "questionRecords": 4199,
+      "distinctQuestionPrompts": 3198,
       "missingTopics": []
     },
     {

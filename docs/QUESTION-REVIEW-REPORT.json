@@ -2,24 +2,24 @@
   "firstSemester": {
     "topicRecords": 157,
     "topicsWithQuestions": 156,
-    "questionRecords": 974,
+    "questionRecords": 2374,
     "sourceComparedRecords": 48,
     "unknownTermTopics": 421
   },
-  "generatedAt": "2026-10-21T10:27:39.602Z",
+  "generatedAt": "2026-10-21T15:45:58.128Z",
   "reviewer": "Codex",
   "teacherApproval": false,
   "officialPastExamItems": 0,
-  "totalQuestionRecords": 2259,
+  "totalQuestionRecords": 6259,
   "automatedChecks": {
-    "checkedRecords": 2259,
+    "checkedRecords": 6259,
     "failures": []
   },
   "sourceComparedRecords": 92,
   "writingGuidelineCorrections": 77,
   "distinctCorrectionRules": 46,
   "newExampleBasedQuestions": 15,
-  "withoutIndividualSourceComparison": 2167,
+  "withoutIndividualSourceComparison": 6167,
   "sourceChecks": [
     {
       "sourceId": "meb-item-guide-2026",

@@ -40,26 +40,47 @@ test('ipucu ve çözüm görseli, ses tercihleri, klavyesiz alıştırma ve çev
 test('ders kitaplığı da sayfa kaydırmadan yedi kitabı dokunmatik sayfalarla sunar',async({page})=>{
  test.setTimeout(90000);await page.goto('/');await page.getByRole('button',{name:'eylunica’ya devam et →'}).click();await page.getByRole('button',{name:/5. Sınıf Derslerim/}).click();
  for(const size of [{width:320,height:568},{width:768,height:1024},{width:844,height:390},{width:1366,height:768}]){
-  await page.setViewportSize(size);await fits(page,'.discovery');const names=new Set<string>();
-  for(let i=0;i<5;i++){for(const name of await page.locator('.discovery-book:not([hidden]) strong').allTextContents())names.add(name);await fits(page,'.discovery');const next=page.getByRole('button',{name:'Sonraki kitaplar →',exact:true});if(!await next.isEnabled())break;await next.click();}
+  await page.setViewportSize(size);const counter=page.locator('.discovery-pages>span');const pageSize=size.width>=1000?4:size.width>=650?3:2;await expect(counter).toHaveText(`1/${Math.ceil(7/pageSize)}`);await fits(page,'.discovery');const names=new Set<string>();
+  for(let i=0;i<5;i++){for(const name of await page.locator('.discovery-book:not([hidden]) strong').allTextContents())names.add(name);await fits(page,'.discovery');const next=page.getByRole('button',{name:'Sonraki kitaplar →',exact:true});if(!await next.isEnabled())break;const previous=await counter.textContent();await next.click();await expect(counter).not.toHaveText(previous!);}
   expect(names.size).toBe(7);
  }
 });
 
-test('Tonguç videosu ebeveyn bağlantı onayından sonra açılır; oynatıcı ve dönüş kontrolleri her ekrana sığar',async({page})=>{
+test('Tonguç kapakları onaysız açılır; video bitince veya kimliği değişince ders ekranına dönülür',async({page})=>{
  test.setTimeout(90000);const external:string[]=[];
  page.on('request',r=>{if(/youtube-nocookie|googleapis.com\/youtube/.test(r.url()))external.push(r.url());});
  // The browser contract is tested locally; this does not claim a real streamed-video review.
+ await page.route('https://i.ytimg.com/**',route=>route.fulfill({contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180"><rect width="320" height="180" fill="#8054aa"/></svg>'}));
+ await page.route('https://www.youtube.com/iframe_api',route=>route.fulfill({contentType:'application/javascript',body:`
+ window.YT={Player:class {
+  constructor(host,options){this.id=options.videoId;this.frame=document.createElement('iframe');this.frame.src='https://www.youtube-nocookie.com/embed/'+this.id+'?rel=0';this.frame.title='Onaylı matematik videosu';host.replaceWith(this.frame);this.state=e=>{if(e.detail.id)this.id=e.detail.id;options.events.onStateChange({target:this,data:e.detail.state});};window.addEventListener('lesson-test-state',this.state);setTimeout(()=>options.events.onReady({target:this}),0);}
+  getIframe(){return this.frame;}getVideoUrl(){return 'https://www.youtube.com/watch?v='+this.id;}destroy(){window.removeEventListener('lesson-test-state',this.state);this.frame.remove();}
+ }};window.onYouTubeIframeAPIReady();
+ `}));
  await page.route('https://www.youtube-nocookie.com/**',route=>route.fulfill({contentType:'text/html',body:'<!doctype html><html lang="tr"><title>Yerel oynatıcı testi</title><body>Oynatıcı çerçevesi</body></html>'}));
  await enter(page);await page.locator('[data-topic-id="topic-4add1fe377559e12"]').click();await page.getByRole('button',{name:'Video',exact:true}).click();
- await expect(page.locator('.journey-video-choice')).toHaveCount(2);await expect(page.locator('.journey-video-choice').first()).toBeDisabled();expect(external).toEqual([]);await expect(page.locator('.journey-video iframe')).toHaveCount(0);
- await page.getByRole('checkbox',{name:/Ebeveynimle birlikte/}).check();
+ await expect(page.locator('.journey-video-choice')).toHaveCount(2);await expect(page.locator('.journey-video-choice').first()).toBeEnabled();expect(external).toEqual([]);await expect(page.locator('.journey-video iframe')).toHaveCount(0);
+ await expect(page.getByRole('checkbox',{name:/Ebeveynimle birlikte/})).toHaveCount(0);
  for(const size of [{width:320,height:568},{width:390,height:844},{width:768,height:1024},{width:1366,height:768},{width:844,height:390}]){
-  await page.setViewportSize(size);await fits(page);await page.locator('.journey-video-choice').first().click();
+  await page.setViewportSize(size);await fits(page);const cover=page.locator('.journey-video-thumbnail img').first();await expect(cover).toHaveAttribute('src','https://i.ytimg.com/vi/12eff2QXilg/mqdefault.jpg');await expect(cover).toBeVisible();expect(await cover.evaluate((img:HTMLImageElement)=>img.naturalWidth)).toBeGreaterThan(0);await page.locator('.journey-video-choice').first().click();
   const frame=page.getByTitle('Onaylı matematik videosu');await expect(frame).toHaveAttribute('src','https://www.youtube-nocookie.com/embed/12eff2QXilg?rel=0');await expect(frame).toBeVisible();await fits(page);
   const rect=await frame.boundingBox();expect(rect!.width).toBeGreaterThanOrEqual(200);expect(rect!.height).toBeGreaterThanOrEqual(200);expect(rect!.y+rect!.height).toBeLessThanOrEqual(size.height+.5);
   await page.getByRole('button',{name:'← Diğer videolar',exact:true}).click();await expect(frame).toHaveCount(0);
  }
  expect(external.some(url=>url.includes('googleapis.com/youtube'))).toBe(false);
- await page.getByRole('checkbox',{name:/Ebeveynimle birlikte/}).uncheck();await expect(page.locator('.journey-video-choice').first()).toBeDisabled();
+ await page.locator('.journey-video-choice').first().click();await expect(page.getByTitle('Onaylı matematik videosu')).toBeVisible();
+ await page.evaluate(()=>window.dispatchEvent(new CustomEvent('lesson-test-state',{detail:{state:0}})));
+ await expect(page.locator('.math-visual,.angle-lesson')).toHaveCount(1);await expect(page.locator('.journey-video iframe')).toHaveCount(0);
+ await page.getByRole('button',{name:'Video',exact:true}).click();await page.locator('.journey-video-choice').first().click();await expect(page.getByTitle('Onaylı matematik videosu')).toBeVisible();
+ await page.evaluate(()=>window.dispatchEvent(new CustomEvent('lesson-test-state',{detail:{state:1,id:'not-selected'}})));
+ await expect(page.locator('.math-visual,.angle-lesson')).toHaveCount(1);await expect(page.locator('.journey-video iframe')).toHaveCount(0);
+ await page.getByRole('button',{name:'← Harita',exact:true}).click();await page.getByRole('button',{name:'Sonraki duraklar →',exact:true}).click();await page.locator('[data-topic-id="topic-05bf7580a6ccbb59"]').click();await page.getByRole('button',{name:'Video',exact:true}).click();await expect(page.locator('.journey-video-choice')).toHaveCount(3);
+ for(const size of [{width:320,height:568},{width:844,height:390}]){await page.setViewportSize(size);await fits(page);for(const img of await page.locator('.journey-video-thumbnail img').all())await expect(img).toBeVisible();}
+});
+
+test('YouTube kontrol API yüklenmezse denetimsiz oynatıcı açılmaz; derse dönüş çalışır',async({page})=>{
+ await page.route('https://www.youtube.com/iframe_api',route=>route.abort());
+ await enter(page);await page.locator('[data-topic-id="topic-4add1fe377559e12"]').click();await page.getByRole('button',{name:'Video',exact:true}).click();await page.locator('.journey-video-choice').first().click();
+ await expect(page.getByText('Video şu anda açılamadı.',{exact:true})).toBeVisible();await expect(page.locator('.journey-video iframe')).toHaveCount(0);
+ await page.getByRole('button',{name:'Görselli anlatıma dön',exact:true}).click();await expect(page.locator('.math-visual,.angle-lesson')).toHaveCount(1);
 });

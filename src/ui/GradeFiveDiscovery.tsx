@@ -1,5 +1,4 @@
-import { MathAdventure } from './MathAdventure';
-import { useState, type CSSProperties } from 'react';
+import { type CSSProperties } from 'react';
 import './GradeFiveDiscovery.css';
 const books = [
  { id:'course-1', name:'Matematik', mark:'01', color:'#fbbd69', title:'Sayıların gizli dünyası', icon:'math', hint:'Dene, çöz, keşfet' },
@@ -16,13 +15,11 @@ function CoverArt({ kind }: {kind:string}) {
  </g><circle cx="44" cy="31" r="4" fill="currentColor"/><path d="m194 108 3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="currentColor"/></svg>;
 }
 export function GradeFiveDiscovery({onBack,onCourse,paused,onTransition}:{onBack:()=>void;onCourse:(id:string)=>void;paused:boolean;onTransition:(action:()=>void,startsTask?:boolean)=>void}) {
- const [lesson,setLesson]=useState(false);
- if(lesson) return <MathAdventure paused={paused} onBack={()=>setLesson(false)} onTopics={()=>onCourse('course-1')} onTransition={onTransition}/>;
  return <main className="subpage discovery">
- <button className="text-button" onClick={onBack}>← {lesson?'Kitaplığıma dön':'Akademilere dön'}</button>
- <div className="discovery-kicker">EYLUNICA · 5. SINIF <span>MATEMATİK KEŞİF DENEMESİ</span></div>
- {!lesson ? <><header className="discovery-header"><p className="discovery-eyebrow">BUGÜN NEYİ MERAK EDİYORSUN?</p><h1>Küçük bir merak,<br/><em>kocaman bir keşif.</em></h1><p>Bir kitap seç. Yeni bir dünyanın kapısını arala.</p><span className="discovery-pill">7 ana ders · İlk dönem odağı</span></header>
- <section className="discovery-books" aria-label="Yedi ana ders">{books.map(book=><button key={book.id} aria-label={`${book.name} ${book.hint}`} className="discovery-book" style={{'--book':book.color} as CSSProperties} onClick={()=>book.icon==='math'?onTransition(()=>setLesson(true),true):onCourse(book.id)}><span className="discovery-cover"><span className="book-top">KEŞİF KİTAPLIĞI <b>{book.mark}</b></span>{book.icon==='math'?<span className="math-book-illustration" aria-hidden="true"/>:<CoverArt kind={book.icon}/>}<strong>{book.name}</strong><span className="book-subtitle">{book.title}</span><span className="book-line"/></span><span className="book-caption">{book.hint}<span aria-hidden="true">↗</span></span></button>)}</section>
- <p className="discovery-footnote">Matematik kitabında yeni görselli konu örneğini deneyebilirsin. Diğer kitaplar mevcut ders içeriğine açılır.</p></> : null}
+ <button className="text-button" onClick={onBack}>← Akademilere dön</button>
+ <div className="discovery-kicker">EYLUNICA · 5. SINIF <span>KEŞİF KİTAPLIĞI</span></div>
+ <><header className="discovery-header"><p className="discovery-eyebrow">BUGÜN NEYİ MERAK EDİYORSUN?</p><h1>Küçük bir merak,<br/><em>kocaman bir keşif.</em></h1><p>Bir kitap seç. Yeni bir dünyanın kapısını arala.</p><span className="discovery-pill">7 ana ders · İlk dönem odağı</span></header>
+ <section className="discovery-books" aria-label="Yedi ana ders">{books.map(book=><button key={book.id} aria-label={`${book.name} ${book.hint}`} className="discovery-book" style={{'--book':book.color} as CSSProperties} onClick={()=>onCourse(book.id)}><span className="discovery-cover"><span className="book-top">KEŞİF KİTAPLIĞI <b>{book.mark}</b></span>{book.icon==='math'?<span className="math-book-illustration" aria-hidden="true"/>:<CoverArt kind={book.icon}/>}<strong>{book.name}</strong><span className="book-subtitle">{book.title}</span><span className="book-line"/></span><span className="book-caption">{book.hint}<span aria-hidden="true">↗</span></span></button>)}</section>
+ <p className="discovery-footnote">Matematik kitabını aç, bir konu seç ve keşfetmeye başla. Diğer derslerin görselli anlatımları daha sonra hazırlanacak.</p></>
  </main>;
 }

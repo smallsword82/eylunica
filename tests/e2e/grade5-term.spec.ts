@@ -5,7 +5,6 @@ test('ilk dönem varsayılandır, planı belirsiz örnekler korunur ve yazılı 
  await page.getByRole('button', {name:'eylunica’ya devam et →'}).click();
  await page.getByRole('button', {name:/5. Sınıf Derslerim/}).click();
  await page.getByRole('button', {name:/^Matematik /}).click();
- await page.getByRole('button',{name:/Matematik konuları ve yazılı testleri/}).click();
  await expect(page.getByLabel('Çalışma dönemi')).toHaveValue('first');
  await expect(page.getByRole('button', {name:/Örnek sayı çalışmaları/})).toHaveCount(0);
  await page.getByRole('button', {name:'Yazılı testleri', exact:true}).click();

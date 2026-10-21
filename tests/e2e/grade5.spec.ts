@@ -5,10 +5,9 @@ test('5. sınıf çevrimdışı çalışma, yanlış tekrarı ve eski kaydın ko
   const before=await page.evaluate(()=>localStorage.getItem('ritma-progress-v1'));
   await page.getByRole('button',{name:/5. Sınıf Derslerim/}).click();
   await page.getByRole('button',{name:/^Matematik /}).click();
-  await page.getByRole('button',{name:/Matematik konuları ve yazılı testleri/}).click();
   await page.getByLabel('Çalışma dönemi').selectOption('all');
   await page.getByRole('button',{name:/Örnek sayı çalışmaları/}).click();
-  await expect(page.getByRole('heading',{name:'Basamak değeri',exact:true})).toBeVisible();
+  await expect(page.getByRole('heading',{name:'Basamak değeri',exact:true,level:1})).toBeVisible();
   await page.getByRole('button',{name:'Video',exact:true}).click();
   await expect(page.getByText('Bu konu için incelenip onaylanmış video henüz yok.')).toBeVisible();
   await expect(page.locator('iframe')).toHaveCount(0);
@@ -28,7 +27,6 @@ test('5. sınıf çevrimdışı çalışma, yanlış tekrarı ve eski kaydın ko
   await page.getByRole('button',{name:'eylunica’ya devam et →'}).click();
   await page.getByRole('button',{name:/5. Sınıf Derslerim/}).click();
   await page.getByRole('button',{name:/^Matematik /}).click();
-  await page.getByRole('button',{name:/Matematik konuları ve yazılı testleri/}).click();
   await page.getByLabel('Çalışma dönemi').selectOption('all');
   await page.getByRole('button',{name:/Örnek sayı çalışmaları/}).click();
   await expect(page.getByText(/2 yanıt · doğruluk %50/)).toBeVisible();
@@ -49,7 +47,6 @@ test('konu testi altı soru türünü çalıştırır ve oturum içinde soru tek
   await page.getByRole('button', { name: 'eylunica’ya devam et →' }).click();
   await page.getByRole('button', { name: /5. Sınıf Derslerim/ }).click();
   await page.getByRole('button', { name: /^Matematik / }).click();
-  await page.getByRole('button',{name:/Matematik konuları ve yazılı testleri/}).click();
   await page.getByLabel('Çalışma dönemi').selectOption('all');
   await page.getByRole('button', { name: /Örnek sayı çalışmaları/ }).click();
   await page.getByRole('button', { name: 'Konu testi', exact: true }).click();

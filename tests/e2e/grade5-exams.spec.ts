@@ -12,7 +12,6 @@ test('yazılı cevapları çevrimdışı korunur; anahtar bitişte açılır ve 
  await openGradeFive(page);
  const previousGame=await page.evaluate(()=>localStorage.getItem('ritma-progress-v1'));
  await page.getByRole('button',{name:/^Matematik /}).click();
-  await page.getByRole('button',{name:/Matematik konuları ve yazılı testleri/}).click();
   await page.getByLabel('Çalışma dönemi').selectOption('all');
  await page.getByRole('button',{name:'Yazılı testleri',exact:true}).click();
  const scope=page.getByRole('group',{name:'Yazılı kapsamı',exact:true});
@@ -31,7 +30,6 @@ test('yazılı cevapları çevrimdışı korunur; anahtar bitişte açılır ve 
  await page.getByRole('button',{name:'eylunica’ya devam et →'}).click();
  await page.getByRole('button',{name:/5. Sınıf Derslerim/}).click();
  await page.getByRole('button',{name:/^Matematik /}).click();
-  await page.getByRole('button',{name:/Matematik konuları ve yazılı testleri/}).click();
   await page.getByLabel('Çalışma dönemi').selectOption('all');
  await page.getByRole('button',{name:'Yazılı testleri',exact:true}).click();
  await page.getByRole('button',{name:'Yarım kalan yazılıya devam et',exact:true}).click();
@@ -83,12 +81,12 @@ for (const [course, title] of [
   await openGradeFive(page);
   const escape = (text: string) => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   await page.getByRole('button',{name:new RegExp('^'+escape(course)+' ')}).click();
-  if(course==='Matematik') await page.getByRole('button',{name:/Matematik konuları ve yazılı testleri/}).click();
   await page.getByLabel('Çalışma dönemi').selectOption('all');
   await expect(page.getByRole('button',{name:'Yazılı testleri',exact:true})).toBeEnabled();
   await page.getByLabel('Konu ara').fill(title);
   await page.getByRole('button',{name:new RegExp(escape(title))}).first().click();
-  expect(await page.locator('.lesson-reading > section').count()).toBeGreaterThanOrEqual(2);
+  if(course==='Matematik') await expect(page.getByRole('region',{name:'Görselli açı anlatımı'})).toBeVisible();
+  else expect(await page.locator('.lesson-reading > section').count()).toBeGreaterThanOrEqual(2);
   await page.getByRole('button',{name:'Örnek çözüm',exact:true}).click();
   await expect(page.locator('.lesson-reading ol li').first()).toBeVisible();
   await page.getByRole('button',{name:'Alıştırmalar',exact:true}).click();

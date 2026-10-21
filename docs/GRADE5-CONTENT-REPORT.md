@@ -6,7 +6,7 @@
 
 2026–2027 müfredat kayıtları korunarak **362 konuda anlatım ve örnek çözüm**, **6259 soru kaydı** ve **301 uygulama etkinliği** eklendi/korundu. 32 ders/programda çalışılabilir içerik var.
 
-Tekrar eden program başlıkları aynı kavram çalışmasını paylaşabilir. 6259 soru ilişkisi, 4765 farklı soru metnine karşılık gelir; her kayıt ayrı özgün problem sayılmaz.
+Tekrar eden program başlıkları aynı kavram çalışmasını paylaşabilir. 6259 soru ilişkisi, 4710 farklı soru metnine karşılık gelir; her kayıt ayrı özgün problem sayılmaz.
 
 Anlatım ve sorular Eylunica için özgün hazırlanmıştır. Bunlar resmî MEB soruları, onaylı öğretmen materyali veya gelecek yazılı tahmini değildir. Kaynak program/ünite çıktıları gösterilir; sorulara doğrulanmamış bire bir çıktı kodu yazılmaz.
 
@@ -39,7 +39,7 @@ Anlatım ve sorular Eylunica için özgün hazırlanmıştır. Bunlar resmî MEB
 | Kur'an-ı Kerim | 1/23 | 6 | 6 |
 | Kültür ve Medeniyetimize Yön Verenler | 1/18 | 6 | 6 |
 | Masal ve Destanlarımız | 1/36 | 6 | 6 |
-| Matematik | 20/20 | 4199 | 3198 |
+| Matematik | 20/20 | 4199 | 3143 |
 | Müzik | 15/15 | 90 | 66 |
 | Okuma Becerileri | 1/13 | 6 | 6 |
 | Oyun ve Oyun Etkinlikleri (Drama) | 1/14 | 6 | 6 |

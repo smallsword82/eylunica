@@ -4,7 +4,7 @@
     "readyTopics": 156,
     "questionRecords": 2374
   },
-  "generatedAt": "2026-10-21T15:45:56.762Z",
+  "generatedAt": "2026-10-21T17:51:50.800Z",
   "year": "2026-2027",
   "materialAuthor": "Eylunica",
   "officialExamQuestions": false,
@@ -34,12 +34,12 @@
   ],
   "pendingTopicRecords": 362,
   "questionRecords": 6259,
-  "distinctQuestionPrompts": 4765,
+  "distinctQuestionPrompts": 4710,
   "practicalActivities": 301,
   "types": {
-    "choice": 2024,
+    "choice": 2174,
     "boolean": 445,
-    "fill": 3787,
+    "fill": 3637,
     "ordering": 1,
     "matching": 1,
     "visual": 1
@@ -856,7 +856,7 @@
       "topicRecords": 20,
       "readyTopics": 20,
       "questionRecords": 4199,
-      "distinctQuestionPrompts": 3198,
+      "distinctQuestionPrompts": 3143,
       "missingTopics": []
     },
     {

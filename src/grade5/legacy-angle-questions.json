@@ -1,0 +1,4552 @@
+[
+  {
+    "id": "mj-practice-topic-a0155915387c7658-1",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 1° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "1",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        1
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-2",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "2° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        2
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-3",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 3°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "3",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        3
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-4",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 4°. Diğeri kaç derece?",
+    "answer": "176",
+    "explanation": "Verilenleri kullanalım: 180 − 4 = 176°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        4
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-5",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 5° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "5",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        5
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-6",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "6° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        6
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-7",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 7°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "7",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        7
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-8",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 8°. Diğeri kaç derece?",
+    "answer": "172",
+    "explanation": "Verilenleri kullanalım: 180 − 8 = 172°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        8
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-9",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 9° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "9",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        9
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-10",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "10° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        10
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-11",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 11°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "11",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        11
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-12",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 12°. Diğeri kaç derece?",
+    "answer": "168",
+    "explanation": "Verilenleri kullanalım: 180 − 12 = 168°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        12
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-13",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 13° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "13",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        13
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-14",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "14° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        14
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-15",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 15°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "15",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        15
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-16",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 16°. Diğeri kaç derece?",
+    "answer": "164",
+    "explanation": "Verilenleri kullanalım: 180 − 16 = 164°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        16
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-17",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 17° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "17",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        17
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-18",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "18° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        18
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-19",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 19°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "19",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        19
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-20",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 20°. Diğeri kaç derece?",
+    "answer": "160",
+    "explanation": "Verilenleri kullanalım: 180 − 20 = 160°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        20
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-21",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 21° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "21",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        21
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-22",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "22° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        22
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-23",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 23°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "23",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        23
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-24",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 24°. Diğeri kaç derece?",
+    "answer": "156",
+    "explanation": "Verilenleri kullanalım: 180 − 24 = 156°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        24
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-25",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 25° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "25",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        25
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-26",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "26° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        26
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-27",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 27°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "27",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        27
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-28",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 28°. Diğeri kaç derece?",
+    "answer": "152",
+    "explanation": "Verilenleri kullanalım: 180 − 28 = 152°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        28
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-29",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 29° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "29",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        29
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-30",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "30° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        30
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-31",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 31°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "31",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        31
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-32",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 32°. Diğeri kaç derece?",
+    "answer": "148",
+    "explanation": "Verilenleri kullanalım: 180 − 32 = 148°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        32
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-33",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 33° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "33",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        33
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-34",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "34° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        34
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-35",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 35°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "35",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        35
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-36",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 36°. Diğeri kaç derece?",
+    "answer": "144",
+    "explanation": "Verilenleri kullanalım: 180 − 36 = 144°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        36
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-37",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 37° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "37",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        37
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-38",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "38° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        38
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-39",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 39°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "39",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        39
+      ]
+    }
+  },
+  {
+    "id": "mj-practice-topic-a0155915387c7658-40",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "practice",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 40°. Diğeri kaç derece?",
+    "answer": "140",
+    "explanation": "Verilenleri kullanalım: 180 − 40 = 140°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        40
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-41",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 41° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "41",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        41
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-42",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "42° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        42
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-43",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 43°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "43",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        43
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-44",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 44°. Diğeri kaç derece?",
+    "answer": "136",
+    "explanation": "Verilenleri kullanalım: 180 − 44 = 136°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        44
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-45",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 45° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "45",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        45
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-46",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "46° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        46
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-47",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 47°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "47",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        47
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-48",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 48°. Diğeri kaç derece?",
+    "answer": "132",
+    "explanation": "Verilenleri kullanalım: 180 − 48 = 132°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        48
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-49",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 49° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "49",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        49
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-50",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "50° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        50
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-51",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 51°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "51",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        51
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-52",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 52°. Diğeri kaç derece?",
+    "answer": "128",
+    "explanation": "Verilenleri kullanalım: 180 − 52 = 128°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        52
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-53",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 53° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "53",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        53
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-54",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "54° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        54
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-55",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 55°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "55",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        55
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-56",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 56°. Diğeri kaç derece?",
+    "answer": "124",
+    "explanation": "Verilenleri kullanalım: 180 − 56 = 124°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        56
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-57",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 57° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "57",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        57
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-58",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "58° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        58
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-59",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 59°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "59",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        59
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-60",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 60°. Diğeri kaç derece?",
+    "answer": "120",
+    "explanation": "Verilenleri kullanalım: 180 − 60 = 120°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        60
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-61",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 61° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "61",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        61
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-62",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "62° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        62
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-63",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 63°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "63",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        63
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-64",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 64°. Diğeri kaç derece?",
+    "answer": "116",
+    "explanation": "Verilenleri kullanalım: 180 − 64 = 116°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        64
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-65",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 65° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "65",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        65
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-66",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "66° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        66
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-67",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 67°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "67",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        67
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-68",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 68°. Diğeri kaç derece?",
+    "answer": "112",
+    "explanation": "Verilenleri kullanalım: 180 − 68 = 112°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        68
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-69",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 69° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "69",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        69
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-70",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "70° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        70
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-71",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 71°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "71",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        71
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-72",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 72°. Diğeri kaç derece?",
+    "answer": "108",
+    "explanation": "Verilenleri kullanalım: 180 − 72 = 108°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        72
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-73",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 73° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "73",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        73
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-74",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "74° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        74
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-75",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 75°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "75",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        75
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-76",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 76°. Diğeri kaç derece?",
+    "answer": "104",
+    "explanation": "Verilenleri kullanalım: 180 − 76 = 104°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        76
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-77",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 77° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "77",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        77
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-78",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "78° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        78
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-79",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 79°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "79",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        79
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-80",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 80°. Diğeri kaç derece?",
+    "answer": "100",
+    "explanation": "Verilenleri kullanalım: 180 − 80 = 100°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        80
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-81",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 81° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "81",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        81
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-82",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "82° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        82
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-83",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 83°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "83",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        83
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-84",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 84°. Diğeri kaç derece?",
+    "answer": "96",
+    "explanation": "Verilenleri kullanalım: 180 − 84 = 96°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        84
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-85",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 85° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "85",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        85
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-86",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "86° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        86
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-87",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 87°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "87",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        87
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-88",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 88°. Diğeri kaç derece?",
+    "answer": "92",
+    "explanation": "Verilenleri kullanalım: 180 − 88 = 92°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        88
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-89",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 89° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "89",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        89
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-90",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "90° büyüklüğündeki açının türü nedir?",
+    "answer": "Dik açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        90
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-91",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 91°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "91",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        91
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-92",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 92°. Diğeri kaç derece?",
+    "answer": "88",
+    "explanation": "Verilenleri kullanalım: 180 − 92 = 88°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        92
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-93",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 93° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "93",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        93
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-94",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "94° büyüklüğündeki açının türü nedir?",
+    "answer": "Geniş açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        94
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-95",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 95°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "95",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        95
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-96",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 96°. Diğeri kaç derece?",
+    "answer": "84",
+    "explanation": "Verilenleri kullanalım: 180 − 96 = 84°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        96
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-97",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 97° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "97",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        97
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-98",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "98° büyüklüğündeki açının türü nedir?",
+    "answer": "Geniş açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        98
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-99",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 99°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "99",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        99
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-100",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 100°. Diğeri kaç derece?",
+    "answer": "80",
+    "explanation": "Verilenleri kullanalım: 180 − 100 = 80°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        100
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-101",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 101° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "101",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        101
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-102",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "102° büyüklüğündeki açının türü nedir?",
+    "answer": "Geniş açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        102
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-103",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 103°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "103",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        103
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-104",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 104°. Diğeri kaç derece?",
+    "answer": "76",
+    "explanation": "Verilenleri kullanalım: 180 − 104 = 76°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        104
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-105",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 105° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "105",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        105
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-106",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "106° büyüklüğündeki açının türü nedir?",
+    "answer": "Geniş açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        106
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-107",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 107°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "107",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        107
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-108",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 108°. Diğeri kaç derece?",
+    "answer": "72",
+    "explanation": "Verilenleri kullanalım: 180 − 108 = 72°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        108
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-109",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 109° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "109",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        109
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-110",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "110° büyüklüğündeki açının türü nedir?",
+    "answer": "Geniş açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        110
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-111",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 111°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "111",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        111
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-112",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 112°. Diğeri kaç derece?",
+    "answer": "68",
+    "explanation": "Verilenleri kullanalım: 180 − 112 = 68°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        112
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-113",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 113° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "113",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        113
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-114",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "114° büyüklüğündeki açının türü nedir?",
+    "answer": "Geniş açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        114
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-115",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 115°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "115",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        115
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-116",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 116°. Diğeri kaç derece?",
+    "answer": "64",
+    "explanation": "Verilenleri kullanalım: 180 − 116 = 64°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        116
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-117",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 117° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "117",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        117
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-118",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "118° büyüklüğündeki açının türü nedir?",
+    "answer": "Geniş açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        118
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-119",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 119°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "119",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        119
+      ]
+    }
+  },
+  {
+    "id": "mj-test-topic-a0155915387c7658-120",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "test",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 120°. Diğeri kaç derece?",
+    "answer": "60",
+    "explanation": "Verilenleri kullanalım: 180 − 120 = 60°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        120
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-141",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 141° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "141",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        141
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-142",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "142° büyüklüğündeki açının türü nedir?",
+    "answer": "Geniş açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        142
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-143",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 143°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "143",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        143
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-144",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 144°. Diğeri kaç derece?",
+    "answer": "36",
+    "explanation": "Verilenleri kullanalım: 180 − 144 = 36°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        144
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-145",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 145° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "145",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        145
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-146",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "146° büyüklüğündeki açının türü nedir?",
+    "answer": "Geniş açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        146
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-147",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 147°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "147",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        147
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-148",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 148°. Diğeri kaç derece?",
+    "answer": "32",
+    "explanation": "Verilenleri kullanalım: 180 − 148 = 32°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        148
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-149",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 149° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "149",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        149
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-150",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "150° büyüklüğündeki açının türü nedir?",
+    "answer": "Geniş açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        150
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-151",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 151°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "151",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        151
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-152",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 152°. Diğeri kaç derece?",
+    "answer": "28",
+    "explanation": "Verilenleri kullanalım: 180 − 152 = 28°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        152
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-153",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 153° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "153",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        153
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-154",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "154° büyüklüğündeki açının türü nedir?",
+    "answer": "Geniş açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        154
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-155",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 155°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "155",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        155
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-156",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 156°. Diğeri kaç derece?",
+    "answer": "24",
+    "explanation": "Verilenleri kullanalım: 180 − 156 = 24°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        156
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-157",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 157° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "157",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        157
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-158",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "158° büyüklüğündeki açının türü nedir?",
+    "answer": "Geniş açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        158
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-159",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 159°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "159",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        159
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-160",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 160°. Diğeri kaç derece?",
+    "answer": "20",
+    "explanation": "Verilenleri kullanalım: 180 − 160 = 20°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        160
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-161",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 161° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "161",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        161
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-162",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "162° büyüklüğündeki açının türü nedir?",
+    "answer": "Geniş açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        162
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-163",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 163°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "163",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        163
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-164",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 164°. Diğeri kaç derece?",
+    "answer": "16",
+    "explanation": "Verilenleri kullanalım: 180 − 164 = 16°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        164
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-165",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 165° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "165",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        165
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-166",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "166° büyüklüğündeki açının türü nedir?",
+    "answer": "Geniş açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        166
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-167",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 167°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "167",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        167
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-168",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 168°. Diğeri kaç derece?",
+    "answer": "12",
+    "explanation": "Verilenleri kullanalım: 180 − 168 = 12°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        168
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-169",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 169° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "169",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        169
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-170",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "170° büyüklüğündeki açının türü nedir?",
+    "answer": "Geniş açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        170
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-171",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 171°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "171",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        171
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-172",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 172°. Diğeri kaç derece?",
+    "answer": "8",
+    "explanation": "Verilenleri kullanalım: 180 − 172 = 8°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        172
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-173",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 173° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "173",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        173
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-174",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "174° büyüklüğündeki açının türü nedir?",
+    "answer": "Geniş açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        174
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-175",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 175°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "175",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        175
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-176",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 176°. Diğeri kaç derece?",
+    "answer": "4",
+    "explanation": "Verilenleri kullanalım: 180 − 176 = 4°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        176
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-177",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 177° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "177",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        177
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-178",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "178° büyüklüğündeki açının türü nedir?",
+    "answer": "Geniş açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        178
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-179",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 179°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "179",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        179
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-180",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 1°. Diğeri kaç derece?",
+    "answer": "179",
+    "explanation": "Verilenleri kullanalım: 180 − 1 = 179°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        1
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-181",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 2° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "2",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        2
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-182",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "3° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        3
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-183",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 4°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "4",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        4
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-184",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 5°. Diğeri kaç derece?",
+    "answer": "175",
+    "explanation": "Verilenleri kullanalım: 180 − 5 = 175°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        5
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-185",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 6° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "6",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        6
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-186",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "7° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        7
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-187",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 8°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "8",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        8
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-188",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 9°. Diğeri kaç derece?",
+    "answer": "171",
+    "explanation": "Verilenleri kullanalım: 180 − 9 = 171°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        9
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-189",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 10° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "10",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        10
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-190",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "11° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        11
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-191",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 12°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "12",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        12
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-192",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 13°. Diğeri kaç derece?",
+    "answer": "167",
+    "explanation": "Verilenleri kullanalım: 180 − 13 = 167°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        13
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-193",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 14° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "14",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        14
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-194",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "15° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        15
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-195",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 16°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "16",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        16
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-196",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 17°. Diğeri kaç derece?",
+    "answer": "163",
+    "explanation": "Verilenleri kullanalım: 180 − 17 = 163°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        17
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-197",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 18° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "18",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        18
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-198",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "19° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        19
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-199",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 20°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "20",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        20
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-200",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 21°. Diğeri kaç derece?",
+    "answer": "159",
+    "explanation": "Verilenleri kullanalım: 180 − 21 = 159°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        21
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-201",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 22° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "22",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        22
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-202",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "23° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        23
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-203",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 24°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "24",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        24
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-204",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 25°. Diğeri kaç derece?",
+    "answer": "155",
+    "explanation": "Verilenleri kullanalım: 180 − 25 = 155°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        25
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-205",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 26° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "26",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        26
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-206",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "27° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        27
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-207",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 28°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "28",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        28
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-208",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 29°. Diğeri kaç derece?",
+    "answer": "151",
+    "explanation": "Verilenleri kullanalım: 180 − 29 = 151°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        29
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-209",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 30° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "30",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        30
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-210",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "31° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        31
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-211",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 32°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "32",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        32
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-212",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 33°. Diğeri kaç derece?",
+    "answer": "147",
+    "explanation": "Verilenleri kullanalım: 180 − 33 = 147°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        33
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-213",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 34° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "34",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        34
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-214",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "35° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        35
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-215",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 36°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "36",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        36
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-216",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 37°. Diğeri kaç derece?",
+    "answer": "143",
+    "explanation": "Verilenleri kullanalım: 180 − 37 = 143°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        37
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-217",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 0,
+    "kind": "fill",
+    "prompt": "İletkinin merkezinden başlayan ışın 38° işaretinden geçiyor. Açıyı kaç derece ölçersin?",
+    "answer": "38",
+    "explanation": "Sağa bakan 0° ışınından başlayan ölçeği oku.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 1,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        38
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-218",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 1,
+    "kind": "choice",
+    "prompt": "39° büyüklüğündeki açının türü nedir?",
+    "answer": "Dar açı",
+    "choices": [
+      "Dik açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dar açı"
+    ],
+    "explanation": "Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 2,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        39
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-219",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 2,
+    "kind": "fill",
+    "prompt": "Bir açı 40°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?",
+    "answer": "40",
+    "explanation": "Işın çizgisini uzatmak açıklığı değiştirmez.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 3,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        40
+      ]
+    }
+  },
+  {
+    "id": "mj-written-topic-a0155915387c7658-220",
+    "topicId": "topic-a0155915387c7658",
+    "purpose": "written",
+    "taskFamily": 3,
+    "kind": "fill",
+    "prompt": "İki komşu açı birlikte 180°. Biri 41°. Diğeri kaç derece?",
+    "answer": "139",
+    "explanation": "Verilenleri kullanalım: 180 − 41 = 139°.",
+    "hints": [
+      "İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle."
+    ],
+    "difficulty": 4,
+    "outcomeCode": null,
+    "figure": {
+      "kind": "angle",
+      "values": [
+        180,
+        41
+      ]
+    }
+  }
+]

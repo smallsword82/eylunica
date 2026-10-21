@@ -1,9 +1,11 @@
+import {makeAngleItem,type AngleDiagram} from './angle-questions.ts';
+import archivedAngles from './legacy-angle-questions.json' with {type:'json'};
 import official from './official-curriculum.json' with {type:'json'};
 import type {Question} from './catalog';
 import {mathModels,type MathModel} from './math-models.ts';
-export type JourneyFigure={kind:'segment'|'angle'|'polygon'|'number'|'groups'|'rectangle'|'fraction'|'bars'|'balance'|'operation'|'pattern'|'bag';values:number[];labels?:string[]};
+export type JourneyFigure={kind:'segment'|'angle'|'polygon'|'number'|'groups'|'rectangle'|'fraction'|'bars'|'balance'|'operation'|'pattern'|'bag';values:number[];labels?:string[];angle?:AngleDiagram};
 export type JourneyQuestion=Question&{purpose:'practice'|'test'|'written';taskFamily:number;figure:JourneyFigure};
-type Item={prompt:string;answer:string;explanation:string;figure:JourneyFigure;choices?:string[]};
+type Item={prompt:string;answer:string;explanation:string;figure:JourneyFigure;choices?:string[];hint?:string};
 const number=(n:number)=>String(n);
 function make(mode:MathModel,i:number,practice:boolean):Item{
  const n=Math.floor(i/4)+2+(practice?0:4),m=(i%3)+2,t=i%4;
@@ -14,13 +16,7 @@ function make(mode:MathModel,i:number,practice:boolean):Item{
   if(t===2)return f(`Pergelin açıklığı ${n} cm. Çizilen çemberin yarıçapı kaç cm?`,n,'Pergelin sabit açıklığı yarıçaptır.','polygon',[0,n]);
   return f(`Bir doğru parçası ${2*n} cm. Orta noktadan bir uca uzaklık kaç cm?`,n,`${2*n} ÷ 2 = ${n} cm.`,'segment',[0,n,2*n]);
  }
- if(mode==='angle'){
-  const a=1+i%179;
-  if(t===0)return f(`İletkinin merkezinden başlayan ışın ${a}° işaretinden geçiyor. Açıyı kaç derece ölçersin?`,a,'Sağa bakan 0° ışınından başlayan ölçeği oku.','angle',[a]);
-  if(t===1)return f(`${a}° büyüklüğündeki açının türü nedir?`,a<90?'Dar açı':a===90?'Dik açı':a<180?'Geniş açı':'Doğru açı','Dar açı 0–90 arasında, dik açı 90, geniş açı 90–180 arasında, doğru açı 180 derecedir.','angle',[a],['Dar açı','Dik açı','Geniş açı','Doğru açı']);
-  if(t===2)return f(`Bir açı ${a}°. Işınların çizimde görünen kısımları uzatılıyor. Açının ölçüsü kaç derece olur?`,a,'Işın çizgisini uzatmak açıklığı değiştirmez.','angle',[a]);
-  return f(`İki komşu açı birlikte 180°. Biri ${a}°. Diğeri kaç derece?`,180-a,`180 − ${a} = ${180-a}°.`,'angle',[180,a]);
- }
+ if(mode==='angle')return makeAngleItem(i);
  if(mode==='polygon'){
   const sides=3+i%6;
   if(t===0)return f(`Düzgün çokgenin ${sides} kenarının her biri ${n} cm. Çevresi kaç cm?`,sides*n,`${sides} × ${n} = ${sides*n} cm.`,'polygon',[sides]);
@@ -104,22 +100,27 @@ export const mathJourneyQuestions:JourneyQuestion[]=topicRefs.flatMap(topic=>{
   let countAdded=0;
   for(let i=purpose==='practice'?0:purpose==='test'?40:140;countAdded<count&&i<2500;i++){
    const practice=purpose==='practice',item=make(mathModels[topic.id],i,practice);
-   const key=item.prompt.toLocaleLowerCase('tr').replace(/\s+/g,' ').trim();if(used.has(key))continue;used.add(key);
+   const key=questionSignature(item);if(used.has(key))continue;used.add(key);
    if(mathModels[topic.id]==='area'&&i%4===2)item.figure.labels=['?',String(item.figure.values[1])];
    if(mathModels[topic.id]==='construction'&&(i%4===1||i%4===3))item.figure.labels=['A','B','C'];
    if(mathModels[topic.id]==='equality'){const n=Math.floor(i/4)+2+(practice?0:4),m=i%3+2;item.figure.labels=i%4===0?[`${n} + ?`,String(n+m)]:i%4===1?[`${n+m} + ${m}`,`${n+m} + ${m}`]:i%4===2?[`${n*m} ÷ ${m}`,`${n*m} ÷ ${m}`]:[`? − ${m}`,String(n)];}
    if(mathModels[topic.id]==='fraction'&&i%4!==1)item.figure.labels=['Bir bütünün modeli'];
-   if(item.choices){const offset=i%item.choices.length;item.choices=[...item.choices.slice(offset),...item.choices.slice(0,offset)];}
-   result.push({id:`mj-${purpose}-${topic.id}-${i+1}`,topicId:topic.id,purpose,taskFamily:i%4,kind:item.choices?'choice':'fill',prompt:item.prompt,answer:item.answer,choices:item.choices,explanation:item.explanation.length>16?item.explanation:`Verilenleri kullanalım: ${item.explanation}`,hints:[item.figure.kind==='rectangle'?(item.prompt.includes('çevre')||item.prompt.includes('şerit')?'Dört kenarı takip et; karşılıklı kenarlar eşittir.':item.prompt.includes('Diğer kenarı')?'Alanı verilen kenar uzunluğuna böl.':'Şeklin iki kenarını incele; alan için birimkareleri düşün.'):item.figure.kind==='segment'?'Cetveldeki iki konumu karşılaştır; uzunluk konumların farkıdır.':item.figure.kind==='angle'?'İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle.':item.figure.kind==='fraction'?'Bütünün eş parçalarına bak; payı, paydayı ve sorulan miktarı ayırt et.':item.figure.kind==='balance'?'İki tarafın aynı değerde kalmasını sağlayan işlemi düşün.':item.figure.kind==='bars'?'Sütunların üzerindeki sayıları oku; sorunun toplam mı fark mı istediğine bak.':'Görseldeki verilenleri izle; sorulan miktar için işlemleri sırayla kur.'],difficulty:(practice?i%2+1:i%4+1) as 1|2|3|4,outcomeCode:null,figure:item.figure});countAdded++;
+   if(item.choices){const offset=(i+(mathModels[topic.id]==='angle'?Math.floor(i/4):0))%item.choices.length;item.choices=[...item.choices.slice(offset),...item.choices.slice(0,offset)];}
+   result.push({id:`mj-${purpose}-${topic.id}-${mathModels[topic.id]==='angle'?'v2-':''}${i+1}`,topicId:topic.id,purpose,taskFamily:i%4,kind:item.choices?'choice':'fill',prompt:item.prompt,answer:item.answer,choices:item.choices,explanation:item.explanation.length>16?item.explanation:`Verilenleri kullanalım: ${item.explanation}`,hints:[item.hint|| (item.figure.kind==='rectangle'?(item.prompt.includes('çevre')||item.prompt.includes('şerit')?'Dört kenarı takip et; karşılıklı kenarlar eşittir.':item.prompt.includes('Diğer kenarı')?'Alanı verilen kenar uzunluğuna böl.':'Şeklin iki kenarını incele; alan için birimkareleri düşün.'):item.figure.kind==='segment'?'Cetveldeki iki konumu karşılaştır; uzunluk konumların farkıdır.':item.figure.kind==='angle'?'İletkide başlangıç ışınındaki 0’dan say; açının açıklığını izle.':item.figure.kind==='fraction'?'Bütünün eş parçalarına bak; payı, paydayı ve sorulan miktarı ayırt et.':item.figure.kind==='balance'?'İki tarafın aynı değerde kalmasını sağlayan işlemi düşün.':item.figure.kind==='bars'?'Sütunların üzerindeki sayıları oku; sorunun toplam mı fark mı istediğine bak.':'Görseldeki verilenleri izle; sorulan miktar için işlemleri sırayla kur.')],difficulty:(practice?i%2+1:i%4+1) as 1|2|3|4,outcomeCode:null,figure:item.figure});countAdded++;
   }
  }
  return result;
 });
 export function journeyPool(topicId:string,purpose:'practice'|'test'|'written'):JourneyQuestion[]{return mathJourneyQuestions.filter(q=>q.topicId===topicId&&q.purpose===purpose);}
 export function freshJourneyQuestions(topicId:string,purpose:'practice'|'test'|'written',used:string[],count:number):JourneyQuestion[]{
- const blocked=new Set(used),unique=new Set<string>(),usedPrompts=new Set(mathJourneyQuestions.filter(q=>blocked.has(q.id)).map(q=>q.prompt.toLocaleLowerCase('tr').replace(/\s+/g,' ').trim()));
- const eligible=journeyPool(topicId,purpose).filter(q=>{const key=q.prompt.toLocaleLowerCase('tr').replace(/\s+/g,' ').trim();if(blocked.has(q.id)||usedPrompts.has(key)||unique.has(key))return false;unique.add(key);return true;});
+ const blocked=new Set(used),unique=new Set<string>(),usedPrompts=new Set(mathJourneyQuestions.filter(q=>blocked.has(q.id)).map(questionSignature));
+ const eligible=journeyPool(topicId,purpose).filter(q=>{const key=questionSignature(q);if(blocked.has(q.id)||usedPrompts.has(key)||unique.has(key))return false;unique.add(key);return true;});
  const buckets=[0,1,2,3].map(family=>eligible.filter(q=>q.taskFamily===family));const result:JourneyQuestion[]=[];
  for(let round=0;result.length<count&&round<80;round++){let added=false;for(const bucket of buckets){if(bucket[round]&&result.length<count){result.push(bucket[round]);added=true;}}if(!added)break;}
  return result;
 }
+
+// Historical IDs stay resolvable for saved answers and unfinished exams; never selected for new sessions.
+export const legacyAngleQuestions=archivedAngles as JourneyQuestion[];
+
+export function questionSignature(q:{prompt:string;figure?:JourneyFigure}):string{return q.prompt.toLocaleLowerCase('tr').replace(/\s+/g,' ').trim()+(q.figure?.angle?'::'+JSON.stringify(q.figure.angle):'');}

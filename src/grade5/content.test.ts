@@ -1,3 +1,4 @@
+import {legacyAngleQuestions} from './math-journey-bank';
 import { mathJourneyQuestions } from './math-journey-bank';
 import { describe, expect, it } from 'vitest';
 import { lessons, lessonByTopic, contentStats } from './content';
@@ -36,7 +37,7 @@ describe('Özgün ders anlatımı ve alıştırma kataloğu', () => {
   }
  });
  it('soru kimliği, seçenekleri, doğru yanıtı ve ipuçları tutarlıdır', () => {
-  expect(questionById.size).toBe(questions.length);
+  expect(questionById.size).toBe(questions.length+legacyAngleQuestions.length); // Archived angle IDs remain readable, outside fresh pools.
   for (const q of questions) {
    expect(q.prompt.length, q.id).toBeGreaterThan(8);
    expect(q.answer.trim(), q.id).not.toBe('');

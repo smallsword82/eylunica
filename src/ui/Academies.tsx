@@ -98,7 +98,7 @@ function Completion({
       <div className="summary-star">✦</div>
       <h2>Birlikte yeni yollar keşfettik!</h2>
       <CardReward progress={progress} />
-      <ContinueCard title={nextTitle} onContinue={onAgain} />
+      <ContinueCard focusOnMount={!progress.cards?.last || !!progress.cards.last.collectionComplete} title={nextTitle} onContinue={onAgain} />
       <p>
         İlerlemen bu cihazda saklanır. Yeniden denemek ve ipucu almak öğrenmenin
         bir parçası.
@@ -145,7 +145,7 @@ function AcademyPlacement({ academy, progress, onSave, onBack, onFinished, onAct
   }
   return <main className="subpage academy-page">
     <Header academy={academy} onBack={onBack} character={academy === "reading" ? "Zeynep" : "Hilal"} />
-    {done ? <section className="lesson-complete"><h2>Seviye tespitin tamamlandı!</h2><CardReward progress={progress} /><p>Başlangıç düzeyin: {progress.academies[academy].level} / 3. Yanıtlarına göre ilerlemeye devam edeceğiz.</p><ContinueCard title={`Sana uygun ${academy === "reading" ? "okuma" : "dikkat"} dersi`} onContinue={onFinished} /></section>
+    {done ? <section className="lesson-complete"><h2>Seviye tespitin tamamlandı!</h2><CardReward progress={progress} /><p>Başlangıç düzeyin: {progress.academies[academy].level} / 3. Yanıtlarına göre ilerlemeye devam edeceğiz.</p><ContinueCard focusOnMount={!progress.cards?.last || !!progress.cards.last.collectionComplete} title={`Sana uygun ${academy === "reading" ? "okuma" : "dikkat"} dersi`} onContinue={onFinished} /></section>
       : task ? <><section className="section-progress" aria-label="Seviye tespiti"><h2>Önce seviyeni keşfedelim</h2><p>6 kısa keşif · Şu anki düzey: {level} / 3. Süre sınırı yok; ipucu alabilirsin. Bu bir tanı veya sınav değildir.</p></section><LessonProgress index={index} total={6} /><ActivityPanel key={task.id} task={task} onRecord={recordPlacement} last={index === 5} onNext={next} /></>
       : <section><h2>Yeni değerlendirme sorusu kalmadı</h2><p>Mevcut düzeyin ve geçmişin korunarak devam edebilirsin.</p><button className="primary" onClick={() => { const updated = structuredClone(progress); updated.academies[academy].placementDone = true; onSave(updated); onFinished(); }}>Derslere devam et →</button></section>}
   </main>;

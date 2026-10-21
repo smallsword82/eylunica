@@ -635,7 +635,7 @@ export default function App() {
                   ? `Zorluk yükseldi! Yeni seviye: ${progress.skills[ops.includes(mode as Operation) ? mode as Operation : "add"].level} / 5.`
                   : startingLevel === 5 ? "En yüksek zorluktasın. Yeni sorularla ustalaşmaya devam!" : "Henüz seviye atlanmadı. Art arda 5 ipucusuz doğru yanıtta zorluk artar; yeni sorularla pekiştirelim."}</p>
               </section>}
-              <ContinueCard title={calibration ? nextWorld.title : `${currentWorld.title} · Bölüm ${section + 1} · Yeni sorular`} onContinue={() => start(calibration ? nextWorld.operation : mode)} />
+              <ContinueCard focusOnMount={!progress.cards?.last || !!progress.cards.last.collectionComplete} title={calibration ? nextWorld.title : `${currentWorld.title} · Bölüm ${section + 1} · Yeni sorular`} onContinue={() => start(calibration ? nextWorld.operation : mode)} />
               <p>
                 Birlikte düşündük, yeni yollar keşfettik.
                 <br />

@@ -10,7 +10,21 @@ test("bölüm kartları sırayla kazanılır, koleksiyon ve bölüm numarası ye
       await page.locator(".answer-options").getByRole("button", { name: String(first + second), exact: true }).click();
       await page.getByRole("button", { name: index === 4 ? "Sahnedeki ışıklarını gör →" : "Sıradaki keşif →" }).click();
     }
+    const opener = page.getByRole("button", { name: "Kart paketini aç" });
+    await expect(opener).toBeFocused();
+    await expect(opener).toBeInViewport({ ratio: 1 });
+    await page.screenshot({ path: testInfo.outputPath(`pack-${character}.png`) });
+    const savedCards = await page.evaluate(() => JSON.parse(localStorage.getItem("ritma-progress-v1")!).cards);
+    if (character === "Lidya") await page.emulateMedia({ reducedMotion: "reduce" });
+    await opener.press("Enter");
+    if (character === "Mina") await expect(page.locator(".pack-reward")).toHaveClass(/pack-opening/);
     await expect(page.getByRole("region", { name: "Bölüm ödülün" })).toContainText(`${character} kartı kazandın`);
+    await expect(page.locator(".pack-revealed-card")).toBeFocused();
+    const photo = await page.locator(".pack-revealed-card img").boundingBox();
+    expect(photo!.height).toBeGreaterThan(200);
+    expect(photo!.width).toBeGreaterThan(180);
+    expect(await page.evaluate(() => JSON.parse(localStorage.getItem("ritma-progress-v1")!).cards)).toEqual(savedCards);
+    await page.screenshot({ path: testInfo.outputPath(`revealed-${character}.png`) });
     if (character === "Mina") await page.getByRole("button", { name: "Devam et", exact: true }).click();
   }
   await page.screenshot({ path: testInfo.outputPath("earned-card.png"), fullPage: true });

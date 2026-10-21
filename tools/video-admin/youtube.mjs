@@ -1,10 +1,10 @@
 // Optional server-side YouTube Data API access. Never import in the student app.
-import { publicationRejection } from '../../src/grade5/video-policy.ts';
-import { newest } from './research.mjs';
+import { videoRejection, allowedVideoChannelId } from '../../src/grade5/video-policy.ts';
+import { newest, applyPublicationPolicy } from './research.mjs';
 import { restoreQuotaSchedule, researchPauseUntil } from './scheduling.mjs';
 export async function searchVideos({ state, input, key, fetcher = fetch, now = new Date(), onProgress = async () => {} }) {
   if (!key) throw Error('API araması için ortam ayarlarına YOUTUBE_API_KEY ekleyin.');
-  const next = restoreQuotaSchedule(state, now);
+  const next = restoreQuotaSchedule(applyPublicationPolicy(state), now);
   if (next.research?.pausedByUser) { await onProgress(next); return next; }
   if (researchPauseUntil(next, now)) { await onProgress(next); return next; }
   const { course, topicId, topicTitle } = input;
@@ -13,17 +13,23 @@ export async function searchVideos({ state, input, key, fetcher = fetch, now = n
   const request = (resource, params) => youtubeRequest(key, fetcher, resource, params);
   for (const [year, after] of [['2026-2027','2026-01-01T00:00:00Z'],['2025-2026','2025-01-01T00:00:00Z']]) {
     const q = `5. sınıf ${course.trim()} ${year} ${topicTitle.trim()} konu anlatımı`.replace(/\s+/g,' ');
-    const cacheKey = JSON.stringify([topicId,q,after]);
+    const cacheKey = JSON.stringify([topicId,q,after,allowedVideoChannelId]);
     if (next.searches[cacheKey]) continue;
-    const result = await request('search',{part:'snippet',type:'video',q,order:'date',safeSearch:'strict',relevanceLanguage:'tr',maxResults:'10',publishedBefore:year==='2025-2026'?'2026-01-01T00:00:00Z':now.toISOString(),...(after?{publishedAfter:after}:{})});
-    const ids = [...new Set((result.items || []).map(v=>v.id?.videoId).filter(id=>/^[\w-]{11}$/.test(id || '') && !next.videos.some(v=>v.identity===topicId+':'+id)))];
+    const result = await request('search',{part:'snippet',type:'video',channelId:allowedVideoChannelId,q,order:'date',safeSearch:'strict',relevanceLanguage:'tr',maxResults:'10',publishedBefore:year==='2025-2026'?'2026-01-01T00:00:00Z':now.toISOString(),...(after?{publishedAfter:after}:{})});
+    const ids = [...new Set((result.items || []).map(v=>v.id?.videoId).filter(id=>/^[\w-]{11}$/.test(id || '') && !next.videos.some(v=>v.identity===topicId+':'+id && v.rejectionReason!=='channel-not-allowed-or-unverified')))];
     if (ids.length) {
       const details = await request('videos',{part:'snippet,contentDetails,status',id:ids.join(',')});
       for (const video of details.items || []) {
         if (!ids.includes(video.id) || !video.status?.embeddable || video.status.privacyStatus !== 'public') continue;
         const publishedAt = Number.isFinite(Date.parse(video.snippet?.publishedAt)) ? video.snippet.publishedAt.slice(0,10) : null;
-        if (publicationRejection({ publishedAt, metadataStatus:'api-provided', metadataSource:'YouTube Data API v3', fetchedAt:now.toISOString() })) continue;
-        next.videos.push({ id:video.id,url:'https://www.youtube.com/watch?v='+video.id,identity:topicId+':'+video.id,topicId,course:course.trim(),topicTitle:topicTitle.trim(),title:video.snippet?.title || null,channel:video.snippet?.channelTitle || null,publishedAt,duration:video.contentDetails?.duration || null,metadataSource:'YouTube Data API v3',metadataStatus:'api-provided',status:'pending',addedAt:now.toISOString(),fetchedAt:now.toISOString(),method:'youtube-api',query:q });
+        if (videoRejection({ channelId:video.snippet?.channelId, publishedAt, metadataStatus:'api-provided', metadataSource:'YouTube Data API v3', fetchedAt:now.toISOString() })) continue;
+        const previous = next.videos.find(v=>v.identity===topicId+':'+video.id);
+        if (previous) {
+          Object.assign(previous,{title:video.snippet?.title||null,channel:video.snippet?.channelTitle||null,channelId:video.snippet?.channelId,publishedAt,duration:video.contentDetails?.duration||null,metadataSource:'YouTube Data API v3',metadataStatus:'api-provided',fetchedAt:now.toISOString(),status:'pending'});
+          delete previous.rejectionReason;
+          continue;
+        }
+        next.videos.push({ id:video.id,url:'https://www.youtube.com/watch?v='+video.id,identity:topicId+':'+video.id,topicId,course:course.trim(),topicTitle:topicTitle.trim(),title:video.snippet?.title || null,channel:video.snippet?.channelTitle || null,channelId:video.snippet?.channelId || null,publishedAt,duration:video.contentDetails?.duration || null,metadataSource:'YouTube Data API v3',metadataStatus:'api-provided',status:'pending',addedAt:now.toISOString(),fetchedAt:now.toISOString(),method:'youtube-api',query:q });
       }
     }
     next.searches[cacheKey] = now.toISOString();

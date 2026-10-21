@@ -1,4 +1,4 @@
-import { publicationRejection } from '../../src/grade5/video-policy.ts';
+import { videoRejection } from '../../src/grade5/video-policy.ts';
 // Local catalog operations only. No API requests, scraping or video downloads.
 export function newest(a, b) { return (Date.parse(b.publishedAt) || 0) - (Date.parse(a.publishedAt) || 0); }
 export function parseYouTubeUrl(value) {
@@ -34,14 +34,14 @@ export function score(v) { return ['curriculum', 'freshness', 'quality', 'safety
 export function review(video, input, now = new Date().toISOString()) {
   if (!['approved', 'rejected'].includes(input.status)) throw Error('Geçersiz karar');
   if (input.status === 'rejected') return { ...video, status: 'rejected', reviewedAt: now };
-  if (publicationRejection(video)) throw Error('Yayın tarihi YouTube API ile doğrulanmış, 1 Ocak 2025 veya sonrası olmalıdır.');
+  if (videoRejection(video)) throw Error('Yayın tarihi ve Tonguç 5. Sınıf kanal kimliği YouTube API ile doğrulanmış olmalıdır; yalnız 2025–2026 videoları kabul edilir.');
   if (input.curriculumVerified !== true || input.childSafetyVerified !== true || !input.reviewer?.trim() || !input.evidence?.trim()) throw Error('Müfredat, çocuk güvenliği, inceleyen ve inceleme notu zorunlu');
   const maxima = { curriculum: 40, freshness: 25, quality: 20, safety: 15 };
   for (const [key, max] of Object.entries(maxima)) if (!Number.isFinite(input.scores?.[key]) || input.scores[key] < 0 || input.scores[key] > max) throw Error('Geçersiz puan');
   return { ...video, status: 'approved', curriculumVerified: true, childSafetyVerified: true, reviewer: input.reviewer.trim(), evidence: input.evidence.trim(), scores: input.scores, reviewedAt: now };
 }
 export function publishable(state) {
-  const candidates = state.videos.filter(v => !publicationRejection(v) && v.status === 'approved' && v.curriculumVerified === true && v.childSafetyVerified === true && v.reviewer && v.evidence && /^[\w-]{11}$/.test(v.id));
+  const candidates = state.videos.filter(v => !videoRejection(v) && v.status === 'approved' && v.curriculumVerified === true && v.childSafetyVerified === true && v.reviewer && v.evidence && /^[\w-]{11}$/.test(v.id));
   // Verified 2026–2027 fit is a publication prerequisite. Among approved
   // candidates, prioritize known newest dates, then editorial score.
   const output = [];
@@ -54,7 +54,7 @@ export function publishable(state) {
 
 export function applyPublicationPolicy(state) {
   return { ...state, videos: state.videos.map(v => {
-    const reason = publicationRejection(v);
+    const reason = videoRejection(v);
     return reason ? { ...v, status: 'rejected', rejectionReason: reason } : v;
   }) };
 }

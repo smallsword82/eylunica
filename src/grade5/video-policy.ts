@@ -10,3 +10,10 @@ export function publicationRejection(video: Publication, today = new Date().toIS
   if (video.metadataStatus !== 'api-provided' || video.metadataSource !== 'YouTube Data API v3' || typeof video.fetchedAt !== 'string' || !Number.isFinite(Date.parse(video.fetchedAt))) return 'publication-date-unverified';
   return null;
 }
+
+// Resolved through YouTube Data API channels.list(forHandle=tonguc5).
+export const allowedVideoChannelId = 'UCb-0JQ4tI03T5rHdFe2GVoA';
+export const allowedVideoChannelName = 'tonguç 5. SINIF';
+export function videoRejection(video: Publication & { channelId?: unknown }): string | null {
+  return publicationRejection(video) || (video.channelId !== allowedVideoChannelId ? 'channel-not-allowed-or-unverified' : null);
+}

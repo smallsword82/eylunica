@@ -10,9 +10,9 @@ test('anahtar yokken ağ kullanmaz; manuel katalog korunur',async()=>{
 });
 test('tarih önceliği, güvenli arama, metadata ve sonraki günlerde de sorgu tekrarını önleme',async()=>{
   const calls=[];
-  const fetcher=async(url,options)=>{const u=new URL(url);calls.push(u);assert.equal(options.headers['X-Goog-Api-Key'],'fixture-key');assert.equal(u.searchParams.has('key'),false);return {ok:true,json:async()=>u.pathname.endsWith('/search')?{items:[{id:{videoId:'abcdefghijk'}}]}:{items:[{id:'abcdefghijk',snippet:{title:'Test adayı',channelTitle:'Test kanalı',publishedAt:'2026-10-01T12:00:00Z'},contentDetails:{duration:'PT5M'},status:{embeddable:true,privacyStatus:'public'}}]}};};
+  const fetcher=async(url,options)=>{const u=new URL(url);calls.push(u);assert.equal(options.headers['X-Goog-Api-Key'],'fixture-key');assert.equal(u.searchParams.has('key'),false);return {ok:true,json:async()=>u.pathname.endsWith('/search')?{items:[{id:{videoId:'abcdefghijk'}}]}:{items:[{id:'abcdefghijk',snippet:{title:'Test adayı',channelTitle:'tonguç 5. SINIF',channelId:'UCb-0JQ4tI03T5rHdFe2GVoA',publishedAt:'2026-10-01T12:00:00Z'},contentDetails:{duration:'PT5M'},status:{embeddable:true,privacyStatus:'public'}}]}};};
   const result=await searchVideos({state,input,key:'fixture-key',fetcher,now});
-  assert.equal(calls[0].searchParams.get('order'),'date');assert.equal(calls[0].searchParams.get('safeSearch'),'strict');assert.equal(calls[0].searchParams.get('publishedAfter'),'2026-01-01T00:00:00Z');
+  assert.equal(calls[0].searchParams.get('channelId'),'UCb-0JQ4tI03T5rHdFe2GVoA');assert.equal(calls[0].searchParams.get('order'),'date');assert.equal(calls[0].searchParams.get('safeSearch'),'strict');assert.equal(calls[0].searchParams.get('publishedAfter'),'2026-01-01T00:00:00Z');
   assert.equal(result.videos.length,1);assert.equal(result.videos[0].status,'pending');assert.equal(result.videos[0].publishedAt,'2026-10-01');assert.equal(result.videos[0].duration,'PT5M');
   assert.equal(calls.filter(u=>u.pathname.endsWith('/videos')).length,1);
   const count=calls.length;await searchVideos({state:result,input,key:'fixture-key',fetcher,now:new Date('2026-10-24')});assert.equal(calls.length,count);
@@ -42,4 +42,15 @@ test('API veya ağ hatası anahtar değerini açığa çıkarmaz ve kısmi başa
   await assert.rejects(searchVideos({state,input,key:'fixture-secret',now,fetcher:async()=>({ok:false,status:403})}),e=>e.message.includes('HTTP 403')&&!e.message.includes('fixture-secret'));
   await assert.rejects(searchVideos({state,input,key:'fixture-secret',now,fetcher:async()=>{throw Error('sensitive fixture-secret');}}),e=>!e.message.includes('fixture-secret'));
   assert.deepEqual(state.videos,[]);
+});
+
+test('arama kanal filtresine rağmen dönen başka kanalın videosu kaydedilmez',async()=>{
+ const result=await searchVideos({state,input,key:'fixture',now,fetcher:async url=>({ok:true,json:async()=>url.includes('/search?')?{items:[{id:{videoId:'abcdefghijk'}}]}:{items:[{id:'abcdefghijk',snippet:{title:'Basamak değeri',channelTitle:'tonguç 5. SINIF',channelId:'UC-other',publishedAt:'2026-10-01'},status:{embeddable:true,privacyStatus:'public'}}]}})});
+ assert.deepEqual(result.videos,[]);
+});
+
+test('kanal kimliği eksik eski aday API ile yeniden doğrulanır, kopyalanmaz ve onaylanmaz',async()=>{
+ const state={version:1,videos:[{id:'abcdefghijk',identity:'place-value:abcdefghijk',topicId:'place-value',status:'pending',publishedAt:'2026-10-01',metadataStatus:'api-provided',metadataSource:'YouTube Data API v3',fetchedAt:'2026-10-20T00:00:00Z'}]};
+ const result=await searchVideos({state,input,key:'fixture',now,fetcher:async url=>({ok:true,json:async()=>url.includes('/search?')?{items:[{id:{videoId:'abcdefghijk'}}]}:{items:[{id:'abcdefghijk',snippet:{title:'Basamak değeri',channelId:'UCb-0JQ4tI03T5rHdFe2GVoA',publishedAt:'2026-10-01'},status:{embeddable:true,privacyStatus:'public'}}]}})});
+ assert.equal(result.videos.length,1);assert.equal(result.videos[0].status,'pending');assert.equal(result.videos[0].channelId,'UCb-0JQ4tI03T5rHdFe2GVoA');assert.equal(state.videos[0].channelId,undefined);
 });

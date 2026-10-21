@@ -11,7 +11,7 @@ test('API yöneticisi: anahtar bekleme, inceleme kapısı, JSON aktarımı ve re
   const target = path.join(directory, 'approved.json');
   const origin = 'http://127.0.0.1:4181';
   await writeFile(target,JSON.stringify({version:1,videos:[{id:'old01234567',publishedAt:'2024-12-31',status:'approved'}]}));
-  await writeFile(path.join(directory,'state.json'), JSON.stringify({version:1,videos:[{identity:'place-value:abcdefghijk',id:'abcdefghijk',url:'https://www.youtube.com/watch?v=abcdefghijk',topicId:'place-value',title:'Basamak değeri',channel:null,publishedAt:'2026-10-01',metadataStatus:'api-provided',metadataSource:'YouTube Data API v3',fetchedAt:'2026-10-20T00:00:00Z',duration:null,status:'pending'}]}));
+  await writeFile(path.join(directory,'state.json'), JSON.stringify({version:1,videos:[{identity:'place-value:abcdefghijk',id:'abcdefghijk',url:'https://www.youtube.com/watch?v=abcdefghijk',topicId:'place-value',title:'Basamak değeri',channel:null,publishedAt:'2026-10-01',channelId:'UCb-0JQ4tI03T5rHdFe2GVoA',metadataStatus:'api-provided',metadataSource:'YouTube Data API v3',fetchedAt:'2026-10-20T00:00:00Z',duration:null,status:'pending'}]}));
   const child = spawn(process.execPath, [new URL('server.mjs', import.meta.url).pathname], { env: { ...process.env, YOUTUBE_API_KEY: '', EYLUNICA_VIDEO_ADMIN_PORT: '4181', EYLUNICA_VIDEO_ADMIN_DATA_DIR: directory, EYLUNICA_VIDEO_CATALOG_PATH: target }, stdio: ['ignore','pipe','pipe'] });
   let browser;
   const exited = new Promise(resolve => child.once('exit', resolve));

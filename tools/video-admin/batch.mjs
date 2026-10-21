@@ -1,6 +1,6 @@
 import { youtubeRequest } from './youtube.mjs';
 import { newest, applyPublicationPolicy } from './research.mjs';
-import { publicationRejection } from '../../src/grade5/video-policy.ts';
+import { videoRejection, allowedVideoChannelId } from '../../src/grade5/video-policy.ts';
 import { restoreQuotaSchedule, researchPauseUntil, recordResearchFailure } from './scheduling.mjs';
 const normalize = text => text.toLocaleLowerCase('tr').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ı/g,'i').replace(/[^\p{L}\p{N}]+/gu,' ');
 const stop = new Set('ve ile bir bu konu tema unite sinif dersi the and of to in at for der die das und im den dem sich'.split(' '));
@@ -28,19 +28,20 @@ export async function researchAll({state,topics,courses,key,fetcher=fetch,now=()
  if(next.research?.pausedByUser){await onProgress(next);return next;}
  if(researchPauseUntil(next,now())){await onProgress(next);return next;}
  next.batchQueries ||= {};next.topicScans ||= {};next.videoMetadata ||= {};
+ next.channelTopicScans ||= {};const topicScans=next.channelTopicScans[allowedVideoChannelId] ||= {};
  let lastRequest=0;
  const request=async(resource,params)=>{const delay=paceMs-(Date.now()-lastRequest);if(delay>0)await new Promise(resolve=>setTimeout(resolve,delay));lastRequest=Date.now();return youtubeRequest(key,fetcher,resource,params);};
  const priorities=['course-0','course-1','course-2','course-3','course-4','course-5','course-6','course-7','course-8','course-9','course-10','meb-course-35'];
  courses=[...courses].sort((a,b)=>(priorities.includes(a.id)?priorities.indexOf(a.id):100)-(priorities.includes(b.id)?priorities.indexOf(b.id):100));
  const groups=researchGroups(topics,courses);
- const scanned={ '2026-2027':new Set(Object.keys(next.topicScans)), '2025-2026':new Set() };
- for(const cache of Object.keys(next.batchQueries)) { try { const [year,,ids]=JSON.parse(cache); if(scanned[year]&&Array.isArray(ids))for(const id of ids)scanned[year].add(id); }catch{} }
- const active=id=>next.videos.filter(v=>v.topicId===id&&v.status!=='rejected'&&!publicationRejection(v));
+ const scanned={ '2026-2027':new Set(Object.keys(topicScans)), '2025-2026':new Set() };
+ for(const cache of Object.keys(next.batchQueries)) { try { const [year,,ids,,channelId]=JSON.parse(cache); if(channelId===allowedVideoChannelId&&scanned[year]&&Array.isArray(ids))for(const id of ids)scanned[year].add(id); }catch{} }
+ const active=id=>next.videos.filter(v=>v.topicId===id&&v.status!=='rejected'&&!videoRejection(v));
  const covered=course=>topics.filter(t=>t.courseId===course.id).some(t=>active(t.id).length>0);
 
  next.research={status:'running',totalTopics:topics.length,completedTopics:0,startedAt:now().toISOString(),updatedAt:now().toISOString()};
  const update=async()=>{
-  next.research.completedTopics=topics.filter(t=>active(t.id).length>0||next.topicScans[t.id]).length;
+  next.research.completedTopics=topics.filter(t=>active(t.id).length>0||scanned['2026-2027'].has(t.id)).length;
   next.research.updatedAt=now().toISOString();next.videos.sort(newest);await onProgress(next);
  };
  await update();
@@ -56,28 +57,28 @@ export async function researchAll({state,topics,courses,key,fetcher=fetch,now=()
    const subject=group.course.name.replace('Çoklu Yabancı Dil Eğitim Modeli ','').replace(/Yaşayan Dil ve Lehçeler \((.+)\)/,'$1').replace(/[\"“”…]/g,'').replace(/\.{2,}/g,'').trim();
    const terms=group.topics.map(t=>tokens(t.title).slice(0,4).join(' ')).filter(Boolean);
    const q=mode==='coverage'?`5. sınıf ${subject}`:`5. sınıf ${subject} ${terms.join(' | ')}`;
-   const cacheKey=JSON.stringify([year,group.course.id,mode==='coverage'?[]:group.topics.map(t=>t.id),mode]);
+   const cacheKey=JSON.stringify([year,group.course.id,mode==='coverage'?[]:group.topics.map(t=>t.id),mode,allowedVideoChannelId]);
    if(next.batchQueries[cacheKey])continue;
    try {
-    const found=await request('search',{part:'snippet',type:'video',q,order:'date',safeSearch:'strict',relevanceLanguage:'tr',maxResults:'50',publishedBefore:year==='2025-2026'?'2026-01-01T00:00:00Z':now().toISOString(),...(after?{publishedAfter:after}:{})});
+    const found=await request('search',{part:'snippet',type:'video',channelId:allowedVideoChannelId,q,order:'date',safeSearch:'strict',relevanceLanguage:'tr',maxResults:'50',publishedBefore:year==='2025-2026'?'2026-01-01T00:00:00Z':now().toISOString(),...(after?{publishedAfter:after}:{})});
     const ids=[...new Set((found.items||[]).map(v=>v.id?.videoId).filter(id=>/^[\w-]{11}$/.test(id||'')))];
-    const unknown=ids.filter(id=>now().getTime()-Date.parse(next.videoMetadata[id]?.fetchedAt||'')>=86400000||!next.videoMetadata[id]);
+    const unknown=ids.filter(id=>now().getTime()-Date.parse(next.videoMetadata[id]?.fetchedAt||'')>=86400000||!next.videoMetadata[id]||!next.videoMetadata[id].channelId);
     if(unknown.length){
      const details=await request('videos',{part:'snippet,contentDetails,status',id:unknown.join(',')});
-     for(const v of details.items||[])if(unknown.includes(v.id)&&v.status?.embeddable&&v.status.privacyStatus==='public')next.videoMetadata[v.id]={id:v.id,title:v.snippet?.title||'',description:v.snippet?.description||'',channel:v.snippet?.channelTitle||null,publishedAt:Number.isFinite(Date.parse(v.snippet?.publishedAt))?v.snippet.publishedAt.slice(0,10):null,duration:v.contentDetails?.duration||null,fetchedAt:now().toISOString()};
+     for(const v of details.items||[])if(unknown.includes(v.id)&&v.status?.embeddable&&v.status.privacyStatus==='public')next.videoMetadata[v.id]={id:v.id,title:v.snippet?.title||'',description:v.snippet?.description||'',channel:v.snippet?.channelTitle||null,channelId:v.snippet?.channelId||null,publishedAt:Number.isFinite(Date.parse(v.snippet?.publishedAt))?v.snippet.publishedAt.slice(0,10):null,duration:v.contentDetails?.duration||null,fetchedAt:now().toISOString()};
     }
     let processedSinceSave=0;
     for(const topic of group.topics){
      for(const id of ids){
-      const video=next.videoMetadata[id];if(!video||publicationRejection({...video,metadataStatus:'api-provided',metadataSource:'YouTube Data API v3'}))continue;
+      const video=next.videoMetadata[id];if(!video||videoRejection({...video,metadataStatus:'api-provided',metadataSource:'YouTube Data API v3'}))continue;
       const match=matchVideo(video,topic),identity=topic.id+':'+id;
       if(!match.eligible)continue;
       const existing=next.videos.find(v=>v.identity===identity);
-      if(existing){ Object.assign(existing,{title:video.title,channel:video.channel,publishedAt:video.publishedAt,duration:video.duration,fetchedAt:video.fetchedAt,metadataSource:'YouTube Data API v3',metadataStatus:'api-provided'}); if(existing.rejectionReason==='publication-date-unverified'){existing.status='pending';delete existing.rejectionReason;} continue; }
+      if(existing){ Object.assign(existing,{title:video.title,channel:video.channel,channelId:video.channelId,publishedAt:video.publishedAt,duration:video.duration,fetchedAt:video.fetchedAt,metadataSource:'YouTube Data API v3',metadataStatus:'api-provided'}); if(['publication-date-unverified','channel-not-allowed-or-unverified'].includes(existing.rejectionReason)){existing.status='pending';delete existing.rejectionReason;} continue; }
       const {description,...metadata}=video;
       next.videos.push({...metadata,identity,url:'https://www.youtube.com/watch?v='+id,topicId:topic.id,topicTitle:topic.title,unit:topic.unit,course:group.course.name,model:group.course.model,status:'pending',method:'youtube-api-batch',query:q,metadataSource:'YouTube Data API v3',metadataStatus:'api-provided',matchScore:match.score,matchNote:match.reason,addedAt:now().toISOString()});
      }
-     if(mode==='topics'){scanned[year].add(topic.id);if(year==='2026-2027')next.topicScans[topic.id]=now().toISOString();}
+     if(mode==='topics'){scanned[year].add(topic.id);if(year==='2026-2027')topicScans[topic.id]=now().toISOString();}
      processedSinceSave++;if(processedSinceSave>=50){await update();processedSinceSave=0;}
     }
     next.batchQueries[cacheKey]=now().toISOString();next.rateLimitErrors=0;await update();
@@ -92,12 +93,12 @@ export async function researchAll({state,topics,courses,key,fetcher=fetch,now=()
 }
 
 export function researchReport(state, topics) {
- const active=state.videos.filter(v=>v.status!=='rejected'&&!publicationRejection(v));
+ const active=state.videos.filter(v=>v.status!=='rejected'&&!videoRejection(v));
  const videos=[...new Map(active.map(v=>[v.id,v])).values()];
  const first=new Set(),fallback=new Set();
  for(const key of Object.keys(state.batchQueries||{})){
   let query;try{query=JSON.parse(key);}catch{continue;}
-  const [year,,ids]=query;if(!Array.isArray(ids))continue;for(const id of ids)(year==='2026-2027'?first:fallback).add(id);
+  const [year,,ids,,channelId]=query;if(channelId!==allowedVideoChannelId||!Array.isArray(ids))continue;for(const id of ids)(year==='2026-2027'?first:fallback).add(id);
  }
  const count=id=>active.filter(v=>v.topicId===id).length;
  const finished=topics.filter(t=>count(t.id)>=1||(first.has(t.id)&&fallback.has(t.id)));

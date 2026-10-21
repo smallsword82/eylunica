@@ -21,7 +21,7 @@ test('hatalı ve gelecekteki tarihler reddedilir; en yeni kayıt önce gelir', (
   assert.ok(newest({publishedAt:null},{publishedAt:'2026-02-01'})>0);
 });
 test('onayda müfredat ve çocuk uygunluğu kapıları ve kanıt zorunlu', () => {
-  const video={...addManual(initial,input).videos[0],publishedAt:'2026-10-01',metadataStatus:'api-provided',metadataSource:'YouTube Data API v3',fetchedAt:'2026-10-20T00:00:00Z'};
+  const video={...addManual(initial,input).videos[0],publishedAt:'2026-10-01',channelId:'UCb-0JQ4tI03T5rHdFe2GVoA',metadataStatus:'api-provided',metadataSource:'YouTube Data API v3',fetchedAt:'2026-10-20T00:00:00Z'};
   assert.throws(()=>review(video,{status:'approved',scores:approval.scores}));
   assert.throws(()=>review(video,{...approval,evidence:''}));
   assert.throws(()=>review(video,{...approval,scores:{...approval.scores,curriculum:41}}));
@@ -30,14 +30,19 @@ test('onayda müfredat ve çocuk uygunluğu kapıları ve kanıt zorunlu', () =>
   assert.equal(publishable({videos:[review(approved,{status:'rejected'})]}).length,0);
 });
 test('konu başına en yeni iki onaylı kayıt ana ve alternatif olarak JSONa aktarılır', () => {
-  const videos=['2025-01-01','2026-10-01','2026-09-01'].map((publishedAt,i)=>review({...addManual(initial,{...input,url:`https://youtu.be/abcdefghij${i}`}).videos[0],publishedAt,metadataStatus:'api-provided',metadataSource:'YouTube Data API v3',fetchedAt:'2026-10-20T00:00:00Z'},approval));
+  const videos=['2025-01-01','2026-10-01','2026-09-01'].map((publishedAt,i)=>review({...addManual(initial,{...input,url:`https://youtu.be/abcdefghij${i}`}).videos[0],publishedAt,channelId:'UCb-0JQ4tI03T5rHdFe2GVoA',metadataStatus:'api-provided',metadataSource:'YouTube Data API v3',fetchedAt:'2026-10-20T00:00:00Z'},approval));
   const catalog=publishable({videos});
   assert.deepEqual(catalog.map(v=>[v.publishedAt,v.role]),[['2026-10-01','primary'],['2026-09-01','alternative']]);
   assert.doesNotThrow(()=>JSON.parse(JSON.stringify({version:1,videos:catalog})));
 });
 
 test('2024 ve doğrulanmamış tarih yüksek puanla bile onaylanmaz veya dışa aktarılmaz',()=>{
- const good={...addManual(initial,input).videos[0],...approval,publishedAt:'2025-01-01',metadataStatus:'api-provided',metadataSource:'YouTube Data API v3',fetchedAt:'2026-10-20T00:00:00Z'};
+ const good={...addManual(initial,input).videos[0],...approval,publishedAt:'2025-01-01',channelId:'UCb-0JQ4tI03T5rHdFe2GVoA',metadataStatus:'api-provided',metadataSource:'YouTube Data API v3',fetchedAt:'2026-10-20T00:00:00Z'};
  for(const patch of [{publishedAt:'2024-12-31'},{publishedAt:null},{metadataStatus:'unverified'},{fetchedAt:null}]) {const v={...good,...patch};assert.throws(()=>review(v,approval),/2025/);assert.deepEqual(publishable({videos:[v]}),[]);}
  assert.equal(publishable({videos:[good]}).length,1);
+});
+
+test('kanal adı aynı olsa da başka kanal veya bilinmeyen kimlik onaylanmaz',()=>{
+ const good={...addManual(initial,input).videos[0],...approval,publishedAt:'2026-10-01',metadataStatus:'api-provided',metadataSource:'YouTube Data API v3',fetchedAt:'2026-10-20T00:00:00Z'};
+ for(const channelId of [undefined,'UCm3vDH7Uvz_qwql5Qih4yGw']){const v={...good,channel:'tonguç 5. SINIF',channelId};assert.throws(()=>review(v,approval),/kanal/);assert.deepEqual(publishable({videos:[v]}),[]);}
 });

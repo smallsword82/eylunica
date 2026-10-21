@@ -1,3 +1,5 @@
+Güncel kitaplık, yol haritası, otomatik test geçişi ve Sosyal Bilgiler başlangıcı: [LEARNING-ROAD.md](LEARNING-ROAD.md).
+
 İçeriğe bağlı yeni anlatım/soru animasyonları: [MATH-CONTENT-FILMS.md](MATH-CONTENT-FILMS.md).
 
 # Matematik: dokunmatik keşif yolculuğu

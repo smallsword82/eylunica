@@ -1,3 +1,5 @@
+import {CourseRoad} from './CourseRoad';
+import {SocialLesson,socialVisualTopics} from './SocialLesson';
 import { MathJourney } from './MathJourney';
 import { AngleLesson } from './AngleLesson';
 import { MathVisualLesson } from './MathVisualLesson';
@@ -17,6 +19,7 @@ type Stage = 'summary' | 'video' | 'example' | 'practice' | 'test' | 'review';
 export function GradeFive({ onBack, onTransition, guide, paused }: { onBack: () => void; onTransition: (action: () => void, startsTask?: boolean) => void; guide: string; paused: boolean }) {
   const [courseId, setCourse] = useState<string | null>(null);
   const [topic, setTopic] = useState<Topic | null>(null);
+  const [roadPage,setRoadPage]=useState(0);
   const [term, setTerm] = useState<StudyTerm>('first');
   const [unitFilter, setUnitFilter] = useState('');
   const [topicFilter, setTopicFilter] = useState('');
@@ -62,9 +65,11 @@ export function GradeFive({ onBack, onTransition, guide, paused }: { onBack: () 
   const courseQuestions = courseId ? (questionsByCourse.get(courseId) || []).filter(q => courseTopics.some(t => t.id === q.topicId)) : [];
   const topicQuestions = topic ? questionsByTopic.get(topic.id) || [] : [];
   const filteredTopics = courseTopics.filter(t => (!unitFilter || t.unit === unitFilter) && t.title.toLocaleLowerCase('tr').includes(topicFilter.toLocaleLowerCase('tr')));
-  if (!courseId) return <GradeFiveDiscovery paused={paused} onTransition={onTransition} onBack={onBack} onCourse={id => { setCourse(id); setUnitFilter(''); setTopicFilter(''); setVisibleCount(24); if (id === 'course-6') setTerm('unknown'); else setTerm('first'); }} />;
+  if (!courseId) return <GradeFiveDiscovery paused={paused} onTransition={onTransition} onBack={onBack} onCourse={id => { setCourse(id);setRoadPage(0); setUnitFilter(''); setTopicFilter(''); setVisibleCount(24); if (id === 'course-6') setTerm('unknown'); else setTerm('first'); }} />;
   if (examOpen && course) return <GradeFiveExam initialTerm={term} courseId={course.id} onBack={() => setExamOpen(false)} onTransition={onTransition} paused={paused} guide={guide} onComplete={recordExam} />;
   if (courseId === 'course-1') return <MathJourney onBack={() => setCourse(null)} onExam={value => {setTerm(value);setExamOpen(true);}} paused={paused} onTransition={onTransition} onRecord={(id, value, hinted) => { const q=questionById.get(id); if(!q)return; setLearning(current => { const next=recordAttempt(current,q,value,hinted); try{localStorage.setItem(learningKey,JSON.stringify(next));}catch{setStorageError('İlerleme kaydedilemedi.');}return next; }); }} />;
+  if(courseId==='course-3'&&!topic)return <CourseRoad page={roadPage} onPage={setRoadPage} topics={courseTopics} term={term} onTerm={setTerm} onTopic={t=>onTransition(()=>{setTopic(t);setStage('summary');},true)} onBack={()=>setCourse(null)} onExam={()=>onTransition(()=>setExamOpen(true))}/>;
+  if(courseId==='course-3'&&topic&&socialVisualTopics[topic.id]&&['summary','example'].includes(stage))return <SocialLesson key={`${topic.id}-${stage}`} topic={topic} example={stage==='example'} paused={paused} onBack={()=>setTopic(null)} onPractice={()=>selectStage('practice')} onExample={()=>selectStage('example')}/>;
   return <main className="subpage grade-five">
     <button className="text-button" onClick={() => { if (topic) { setTopic(null); setPlayingVideo(null); } else if (course) setCourse(null); else onBack(); }}>← {topic ? 'Konulara dön' : course ? 'Derslere dön' : 'Akademilere dön'}</button>
     <div className="eyebrow muted">5. SINIF · 2026–2027</div>

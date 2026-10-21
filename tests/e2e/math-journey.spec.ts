@@ -25,7 +25,7 @@ test('telefon, tablet, masaüstü ve yatay ekranda tek sahne; kapı yalnız tama
 });
 test('yazılı notu, yanlış ve boş sayıları; görselli çözümler, kayıt ve tekrar etmeyen yeni sorular',async({page})=>{
  test.setTimeout(120000);await enter(page);await page.getByRole('button',{name:'Yazılı testleri',exact:true}).click();await page.getByRole('button',{name:'Yazılıyı başlat',exact:true}).click();const ids:string[]=[];
- for(let i=0;i<20;i++){ids.push((await page.locator('.journey-scene').getAttribute('data-question-id'))!);if(i>=18)await page.getByRole('button',{name:'Boş bırak',exact:true}).click();else await answer(page,i<12);await page.locator('.journey-action-slot .journey-portal').click();}
+ for(let i=0;i<20;i++){ids.push((await page.locator('.journey-scene').getAttribute('data-question-id'))!);if(i>=18)await page.getByRole('button',{name:'Boş bırak',exact:true}).click();else await answer(page,i<12);await expect(page.getByText('Yanıtın kaydedildi.',{exact:true})).toHaveCount(0);if(i<19)await expect(page.locator('.journey-scene')).not.toHaveAttribute('data-question-id',ids.at(-1)!);}
  await expect(page.getByRole('heading',{name:'Yazılı notun',exact:true})).toBeVisible();await expect(page.getByText('60/100',{exact:true})).toBeVisible();await expect(page.getByText('12 doğru · 6 yanlış · 2 boş',{exact:true})).toBeVisible();await fits(page);
  await page.getByRole('button',{name:'Görselli çözümleri incele →',exact:true}).click();await expect(page.locator('.figure-solution')).toBeVisible();await fits(page);
  await page.getByRole('button',{name:'← Harita',exact:true}).click();await page.getByRole('button',{name:'Yazılı testleri',exact:true}).click();await page.getByRole('button',{name:'Yazılıyı başlat',exact:true}).click();expect(ids).not.toContain(await page.locator('.journey-scene').getAttribute('data-question-id'));
@@ -40,9 +40,8 @@ test('ipucu ve çözüm görseli, ses tercihleri, klavyesiz alıştırma ve çev
 test('ders kitaplığı da sayfa kaydırmadan yedi kitabı dokunmatik sayfalarla sunar',async({page})=>{
  test.setTimeout(90000);await page.goto('/');await page.getByRole('button',{name:'eylunica’ya devam et →'}).click();await page.getByRole('button',{name:/5. Sınıf Derslerim/}).click();
  for(const size of [{width:320,height:568},{width:768,height:1024},{width:844,height:390},{width:1366,height:768}]){
-  await page.setViewportSize(size);const counter=page.locator('.discovery-pages>span');const pageSize=size.width>=1000?4:size.width>=650?3:2;await expect(counter).toHaveText(`1/${Math.ceil(7/pageSize)}`);await fits(page,'.discovery');const names=new Set<string>();
-  for(let i=0;i<5;i++){for(const name of await page.locator('.discovery-book:not([hidden]) strong').allTextContents())names.add(name);await fits(page,'.discovery');const next=page.getByRole('button',{name:'Sonraki kitaplar →',exact:true});if(!await next.isEnabled())break;const previous=await counter.textContent();await next.click();await expect(counter).not.toHaveText(previous!);}
-  expect(names.size).toBe(7);
+  await page.setViewportSize(size);await fits(page,'.discovery');await expect(page.locator('.discovery-book:visible')).toHaveCount(7);await expect(page.locator('.discovery-pages')).toHaveCount(0);
+
  }
 });
 

@@ -1,0 +1,2 @@
+export const socialVisualTopics:Record<string,string>={
+ 'topic-f31f5d0c12bc3e58':'roles','topic-b20eac9e40044092':'culture','topic-32062864322ac081':'help','topic-a18c59a013bc6abf':'relative','topic-3dd631c7c22c9d3a':'change','topic-bb79c9e48d937792':'disaster','topic-10080f13e5fc9081':'neighbors','topic-5f90f82769573b87':'heritage','topic-59f1d9e007c486da':'archaeology','topic-98cc4f8de6f5aba0':'writing'};

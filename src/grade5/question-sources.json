@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "meb-item-guide-2026",
+      "publisher": "T.C. Millî Eğitim Bakanlığı",
+      "title": "Türkiye Yüzyılı Maarif Modeli Bağlam Temelli Çoktan Seçmeli Soru Yazım Kılavuzu",
+      "url": "https://tymm.meb.gov.tr/upload/kilavuz/coktan-secmeli-soru-yazim-kilavuzu.pdf",
+      "sha256": "26e496eb39ffb8e76c6e9ec1694722dd8ccad0b8d99acd76d10146fbd1eab948",
+      "pdfPages": 123,
+      "reviewedPdfPages": [
+        18,
+        19,
+        21,
+        22,
+        23,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94
+      ],
+      "role": "question-writing-and-official-examples",
+      "fetchedAt": "2026-10-21T10:18:19.586852+00:00",
+      "localCache": ".tools/content-review/question-guide.pdf",
+      "notPastExamCollection": true
+    },
+    {
+      "id": "meb-oyss-2026",
+      "publisher": "T.C. Millî Eğitim Bakanlığı",
+      "title": "Ortak Yazılı Sınav Sistemi Uygulama Kılavuzu",
+      "url": "https://www.meb.gov.tr/meb_iys_dosyalar/2026_10/6ad703eb1bb29010473792_Ortak_Yazili_Sinav_Sistemi_OYSS_Uygulama_Kilavuzu.pdf",
+      "sha256": "a9d53f63913ee27e64f8f10243218fbb625a4430aa3143b15f8da7ff30eb4bd0",
+      "pdfPages": 19,
+      "reviewedPdfPages": [
+        4
+      ],
+      "role": "assessment-policy",
+      "fetchedAt": "2026-10-21T10:18:19.589640+00:00",
+      "localCache": ".tools/content-review/exam-guide.pdf",
+      "notPastExamCollection": true
+    },
+    {
+      "id": "meb-bty5-2026",
+      "publisher": "T.C. Millî Eğitim Bakanlığı",
+      "title": "Bilişim Teknolojileri ve Yazılım 5. Sınıf Öğretmen Kılavuz Kitabı",
+      "url": "https://tymm.meb.gov.tr/assets/pdf/bilisim-teknolojileri-ve-yazilim-dersi-5sinif-ogretmen-kilavuz-kitabi_20260930_175401_503.pdf",
+      "sha256": "f25ea03220d907f7f8c65109bebd29e64854f30988768f9e7e457912659ed62d",
+      "pdfPages": 250,
+      "reviewedPdfPages": [
+        22,
+        46,
+        48,
+        54,
+        58
+      ],
+      "role": "teacher-guide",
+      "fetchedAt": "2026-10-21T10:18:19.598206+00:00",
+      "localCache": ".tools/content-review/book-432.pdf",
+      "notPastExamCollection": true
+    },
+    {
+      "id": "meb-art5-2026",
+      "publisher": "T.C. Millî Eğitim Bakanlığı",
+      "title": "Görsel Sanatlar 5. Sınıf Öğretmen Kılavuz Kitabı",
+      "url": "https://tymm.meb.gov.tr/assets/pdf/gorsel-sanatlar-5-sinif-ogretmen-kilavuz-kitabi_20260930_113624_715.pdf",
+      "sha256": "7b8b65c31806cddd77b4fd2a3072a720d610b42240a42e323ba6265d2243cfb6",
+      "pdfPages": 139,
+      "reviewedPdfPages": [
+        20,
+        21,
+        119,
+        120,
+        121
+      ],
+      "role": "teacher-guide",
+      "fetchedAt": "2026-10-21T10:18:19.612960+00:00",
+      "localCache": ".tools/content-review/book-436.pdf",
+      "notPastExamCollection": true
+    },
+    {
+      "id": "meb-dkab5-2026",
+      "publisher": "T.C. Millî Eğitim Bakanlığı",
+      "title": "Din Kültürü ve Ahlak Bilgisi 5. Sınıf Ders Kitabı",
+      "url": "https://tymm.meb.gov.tr/assets/pdf/din-kulturu-ve-ahlak-bilgisi-5sinif-ders-kitabi_20261003_183932_159.pdf",
+      "sha256": "5f5b86ef6b209faf901758776514b6041eb19736c2182e7acb849d4e1721b56e",
+      "pdfPages": 198,
+      "reviewedPdfPages": [
+        25,
+        95,
+        106,
+        108
+      ],
+      "role": "textbook",
+      "fetchedAt": "2026-10-21T10:18:19.626549+00:00",
+      "localCache": ".tools/content-review/book-18.pdf",
+      "notPastExamCollection": true
+    }
+  ]
+}

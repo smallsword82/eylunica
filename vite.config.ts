@@ -3,6 +3,18 @@ import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 export default defineConfig({
   base: "./",
+  build: {
+    rollupOptions: {
+      output: {
+        // Keep grade-5 material outside the initial app bundle and keep each
+        // offline asset within Workbox's size limit as the catalog grows.
+        manualChunks(id) {
+          if (id.includes('/src/grade5/official-curriculum.json')) return 'grade5-curriculum';
+          if (id.includes('/src/grade5/content/')) return 'grade5-lessons';
+        },
+      },
+    },
+  },
   plugins: [
     react(),
     VitePWA({

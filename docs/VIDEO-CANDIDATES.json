@@ -1,0 +1,221 @@
+{
+  "version": 1,
+  "reportedOn": "2026-10-21",
+  "note": "Adaylar API tarih doğrulamasından geçti. Konu ve çocuk uygunluğu onayı verilmemiştir; öğrenci kataloğu değildir.",
+  "videos": [
+    {
+      "id": "XsrZCRATRns",
+      "url": "https://www.youtube.com/watch?v=XsrZCRATRns",
+      "title": "🎬 5th Grade Theme 1 – School Life | Digital Story | 5. Sınıf İngilizce",
+      "channel": "The Teacher İhsan ",
+      "publishedAt": "2026-09-15",
+      "duration": "PT4M56S",
+      "fetchedAt": "2026-10-20T21:24:53.209Z",
+      "status": "pending",
+      "curriculumVerified": false,
+      "childSafetyVerified": false,
+      "topics": [
+        {
+          "id": "topic-d9e033ccf34ad356",
+          "title": "People, places and rules at school",
+          "course": "İngilizce",
+          "matchScore": 50
+        },
+        {
+          "id": "topic-2409a01c42aec18a",
+          "title": "school clubs",
+          "course": "İngilizce",
+          "matchScore": 100
+        },
+        {
+          "id": "topic-ee32c4efbaab6355",
+          "title": "countries",
+          "course": "İngilizce",
+          "matchScore": 100
+        }
+      ]
+    },
+    {
+      "id": "7M8R0VKDA5Y",
+      "url": "https://www.youtube.com/watch?v=7M8R0VKDA5Y",
+      "title": "5. Sınıf Matematik 2. Dönem 2. Yazılıya Hazırlık 🧑‍🏫#Yeni #2026",
+      "channel": "Ckmk Akademi",
+      "publishedAt": "2026-05-31",
+      "duration": "PT10M37S",
+      "fetchedAt": "2026-10-20T21:25:02.060Z",
+      "status": "pending",
+      "curriculumVerified": false,
+      "childSafetyVerified": false,
+      "topics": [
+        {
+          "id": "topic-5562bbd36f1b1115",
+          "title": "Eşitliğin Korunumu",
+          "course": "Matematik",
+          "matchScore": 100
+        },
+        {
+          "id": "topic-61b7fdd3038e685f",
+          "title": "Değişme-Birleşme ve Dağılma Özellikleri",
+          "course": "Matematik",
+          "matchScore": 75
+        },
+        {
+          "id": "topic-c608a0ed9abefba6",
+          "title": "İşlem Önceliği",
+          "course": "Matematik",
+          "matchScore": 100
+        },
+        {
+          "id": "topic-70f412a50ce80c2f",
+          "title": "Örüntüler",
+          "course": "Matematik",
+          "matchScore": 100
+        },
+        {
+          "id": "topic-735059132b26c64d",
+          "title": "Temel Aritmetik İşlemler ve                         Algoritma",
+          "course": "Matematik",
+          "matchScore": 100
+        },
+        {
+          "id": "topic-a606b079db4e39a1",
+          "title": "Temel Aritmetik İşlemler ve Algoritma",
+          "course": "Matematik",
+          "matchScore": 100
+        }
+      ]
+    },
+    {
+      "id": "LtnUaokv2p8",
+      "url": "https://www.youtube.com/watch?v=LtnUaokv2p8",
+      "title": "Devre Elemanlarının Sembolleri ve Devre Şemaları 📗 5FEN15 #2026",
+      "channel": "tonguç 5. SINIF",
+      "publishedAt": "2026-04-30",
+      "duration": "PT31M16S",
+      "fetchedAt": "2026-10-20T21:25:03.293Z",
+      "status": "pending",
+      "curriculumVerified": false,
+      "childSafetyVerified": false,
+      "topics": [
+        {
+          "id": "topic-69b9626166ee3111",
+          "title": "Devre Elemanlarının Sembollerle Gösterimi ve Devre Şemaları",
+          "course": "Fen Bilimleri",
+          "matchScore": 60
+        },
+        {
+          "id": "topic-80d6d54eafa04e87",
+          "title": "Devre Elemanlarının Sembollerle Gösterimi ve Devre Şemalar",
+          "course": "Fen Bilimleri",
+          "matchScore": 40
+        }
+      ]
+    },
+    {
+      "id": "vzKzFC6IZt8",
+      "url": "https://www.youtube.com/watch?v=vzKzFC6IZt8",
+      "title": "İNGİLİZCE 5. SINIF 8. ÜNİTE ''LIFE IN THE UNIVERSE & FUTURE'' KONU ANLATIM",
+      "channel": "Fatih Yavuz",
+      "publishedAt": "2026-04-27",
+      "duration": "PT12M39S",
+      "fetchedAt": "2026-10-20T21:25:06.477Z",
+      "status": "pending",
+      "curriculumVerified": false,
+      "childSafetyVerified": false,
+      "topics": [
+        {
+          "id": "topic-a4359f52adf62967",
+          "title": "life in the future",
+          "course": "Çoklu Yabancı Dil Eğitim Modeli İngilizce",
+          "matchScore": 100
+        }
+      ]
+    },
+    {
+      "id": "Jejn51NgjY8",
+      "url": "https://www.youtube.com/watch?v=Jejn51NgjY8",
+      "title": "Maddenin Hal Değişimi 📗 5FEN13 #2026",
+      "channel": "tonguç 5. SINIF",
+      "publishedAt": "2026-03-10",
+      "duration": "PT14M6S",
+      "fetchedAt": "2026-10-20T21:25:01.127Z",
+      "status": "pending",
+      "curriculumVerified": false,
+      "childSafetyVerified": false,
+      "topics": [
+        {
+          "id": "topic-ff867552a5acdf4a",
+          "title": "Maddenin Hâl Değişimi",
+          "course": "Fen Bilimleri",
+          "matchScore": 100
+        }
+      ]
+    },
+    {
+      "id": "pBf6YrSA5GQ",
+      "url": "https://www.youtube.com/watch?v=pBf6YrSA5GQ",
+      "title": "Basamak Değeri Konu Anlatımı | 5. Sınıf Matematik Yeni Müfredat",
+      "channel": "YÜKSEL HOCA MATEMATİK",
+      "publishedAt": "2025-11-25",
+      "duration": "PT16M7S",
+      "fetchedAt": "2026-10-20T21:11:41.711Z",
+      "status": "pending",
+      "curriculumVerified": false,
+      "childSafetyVerified": false,
+      "topics": [
+        {
+          "id": "place-value",
+          "title": "Basamak değeri",
+          "course": "Matematik",
+          "matchScore": null
+        }
+      ]
+    },
+    {
+      "id": "0ZF_9Fya17g",
+      "url": "https://www.youtube.com/watch?v=0ZF_9Fya17g",
+      "title": "5. Sınıf Matematik 2. Ünite ✅ Doğal Sayılar, Çözümleme, Basamak Değeri ve İşlemler | Konu Anlatımı",
+      "channel": "ÜMİT CAN HOCAN",
+      "publishedAt": "2025-11-20",
+      "duration": "PT33M52S",
+      "fetchedAt": "2026-10-20T21:11:41.711Z",
+      "status": "pending",
+      "curriculumVerified": false,
+      "childSafetyVerified": false,
+      "topics": [
+        {
+          "id": "place-value",
+          "title": "Basamak değeri",
+          "course": "Matematik",
+          "matchScore": null
+        }
+      ]
+    },
+    {
+      "id": "Gj_-meKN5z4",
+      "url": "https://www.youtube.com/watch?v=Gj_-meKN5z4",
+      "title": "5. SINIF İNGİLİZCE 1.ÜNİTE KONU ANLATIMI | SCHOOL LİFE 2025 - 2026",
+      "channel": "Ms. Jasmin ELT",
+      "publishedAt": "2025-09-29",
+      "duration": "PT15M2S",
+      "fetchedAt": "2026-10-20T21:25:09.354Z",
+      "status": "pending",
+      "curriculumVerified": false,
+      "childSafetyVerified": false,
+      "topics": [
+        {
+          "id": "topic-d9e033ccf34ad356",
+          "title": "People, places and rules at school",
+          "course": "İngilizce",
+          "matchScore": 50
+        },
+        {
+          "id": "topic-ee32c4efbaab6355",
+          "title": "countries",
+          "course": "İngilizce",
+          "matchScore": 100
+        }
+      ]
+    }
+  ]
+}

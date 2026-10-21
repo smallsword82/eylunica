@@ -1,0 +1,715 @@
+{
+  "firstSemester": {
+    "topicRecords": 157,
+    "topicsWithQuestions": 156,
+    "questionRecords": 974,
+    "sourceComparedRecords": 48,
+    "unknownTermTopics": 421
+  },
+  "generatedAt": "2026-10-21T10:27:39.602Z",
+  "reviewer": "Codex",
+  "teacherApproval": false,
+  "officialPastExamItems": 0,
+  "totalQuestionRecords": 2259,
+  "automatedChecks": {
+    "checkedRecords": 2259,
+    "failures": []
+  },
+  "sourceComparedRecords": 92,
+  "writingGuidelineCorrections": 77,
+  "distinctCorrectionRules": 46,
+  "newExampleBasedQuestions": 15,
+  "withoutIndividualSourceComparison": 2167,
+  "sourceChecks": [
+    {
+      "sourceId": "meb-item-guide-2026",
+      "cacheStatus": "hash-verified"
+    },
+    {
+      "sourceId": "meb-oyss-2026",
+      "cacheStatus": "hash-verified"
+    },
+    {
+      "sourceId": "meb-bty5-2026",
+      "cacheStatus": "hash-verified"
+    },
+    {
+      "sourceId": "meb-art5-2026",
+      "cacheStatus": "hash-verified"
+    },
+    {
+      "sourceId": "meb-dkab5-2026",
+      "cacheStatus": "hash-verified"
+    }
+  ],
+  "sourceScope": "Official item-writing guide, its basic-education examples, three grade-5 books/guides, and assessment guidance; not a historical exam collection.",
+  "corrections": [
+    {
+      "id": "gm-topic-d170313ab769758e-3",
+      "topicId": "topic-d170313ab769758e",
+      "prompt": "Bir sütun grafiğinde sayıları anlamak için hangisi gerekir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gf-topic-7e5324bf5f149562-4",
+      "topicId": "topic-7e5324bf5f149562",
+      "prompt": "Güneş gökyüzünde neden gerçek boyutuna göre küçük görünür?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-8168a94a47e4236a-4",
+      "topicId": "topic-8168a94a47e4236a",
+      "prompt": "Öyküde olayların sırasını izlemek için hangi not yararlıdır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-bf9c368f8b2e2922-1",
+      "topicId": "topic-bf9c368f8b2e2922",
+      "prompt": "Konuşmayı hazırlarken önce neyi belirlemek yararlıdır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-ccf77a66763c7052-6",
+      "topicId": "topic-ccf77a66763c7052",
+      "prompt": "Metin ağaçların havayı temizlemesini anlatıyor. “Ağaç, hava, temizlik” seçimini nasıl kontrol edersin?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-bce613462bdee1da-1",
+      "topicId": "topic-bce613462bdee1da",
+      "prompt": "Yazının girişinde genellikle ne yapılır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-bce613462bdee1da-4",
+      "topicId": "topic-bce613462bdee1da",
+      "prompt": "Bir yazı taslağını düzeltirken önce hangisini de kontrol etmeliyiz?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-458af044c95fd8b2-1",
+      "topicId": "topic-458af044c95fd8b2",
+      "prompt": "“Kalemler” sözcüğündeki -ler hangi anlamı katar?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-981bbbbc6d30a09e-1",
+      "topicId": "topic-981bbbbc6d30a09e",
+      "prompt": "Bir oyuncağı kurmak için en uygun materyal hangisidir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-5754ed8c1d35b730-4",
+      "topicId": "topic-5754ed8c1d35b730",
+      "prompt": "Öyküde olayların sırasını izlemek için hangi not yararlıdır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-63420f5003ba54f1-1",
+      "topicId": "topic-63420f5003ba54f1",
+      "prompt": "Yazının girişinde genellikle ne yapılır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-63420f5003ba54f1-4",
+      "topicId": "topic-63420f5003ba54f1",
+      "prompt": "Bir yazı taslağını düzeltirken önce hangisini de kontrol etmeliyiz?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-10bdd3c969a2fbcd-1",
+      "topicId": "topic-10bdd3c969a2fbcd",
+      "prompt": "“Kalemler” sözcüğündeki -ler hangi anlamı katar?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-53478463e6178eee-1",
+      "topicId": "topic-53478463e6178eee",
+      "prompt": "Bir oyuncağı kurmak için en uygun materyal hangisidir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-dc02f775fde36314-4",
+      "topicId": "topic-dc02f775fde36314",
+      "prompt": "Öyküde olayların sırasını izlemek için hangi not yararlıdır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-1223fb0b35cd58a1-1",
+      "topicId": "topic-1223fb0b35cd58a1",
+      "prompt": "Yazının girişinde genellikle ne yapılır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-1223fb0b35cd58a1-4",
+      "topicId": "topic-1223fb0b35cd58a1",
+      "prompt": "Bir yazı taslağını düzeltirken önce hangisini de kontrol etmeliyiz?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-b667be89c872e4bc-1",
+      "topicId": "topic-b667be89c872e4bc",
+      "prompt": "“Kalemler” sözcüğündeki -ler hangi anlamı katar?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-7162b7bb1a4ee679-1",
+      "topicId": "topic-7162b7bb1a4ee679",
+      "prompt": "Bir oyuncağı kurmak için en uygun materyal hangisidir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-0b6118b401a1f269-4",
+      "topicId": "topic-0b6118b401a1f269",
+      "prompt": "Öyküde olayların sırasını izlemek için hangi not yararlıdır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-f1c52ee0fcfdac77-1",
+      "topicId": "topic-f1c52ee0fcfdac77",
+      "prompt": "Yazının girişinde genellikle ne yapılır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-f1c52ee0fcfdac77-4",
+      "topicId": "topic-f1c52ee0fcfdac77",
+      "prompt": "Bir yazı taslağını düzeltirken önce hangisini de kontrol etmeliyiz?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-355458fa27d68d6f-1",
+      "topicId": "topic-355458fa27d68d6f",
+      "prompt": "“Kalemler” sözcüğündeki -ler hangi anlamı katar?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-3517cd79d3c2b5b3-1",
+      "topicId": "topic-3517cd79d3c2b5b3",
+      "prompt": "Bir oyuncağı kurmak için en uygun materyal hangisidir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-53672ef271e276eb-4",
+      "topicId": "topic-53672ef271e276eb",
+      "prompt": "Öyküde olayların sırasını izlemek için hangi not yararlıdır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-4895edf9e720ea3c-1",
+      "topicId": "topic-4895edf9e720ea3c",
+      "prompt": "Yazının girişinde genellikle ne yapılır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-4895edf9e720ea3c-4",
+      "topicId": "topic-4895edf9e720ea3c",
+      "prompt": "Bir yazı taslağını düzeltirken önce hangisini de kontrol etmeliyiz?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-936749f8fb1d3252-1",
+      "topicId": "topic-936749f8fb1d3252",
+      "prompt": "“Kalemler” sözcüğündeki -ler hangi anlamı katar?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-60abdf722d8fa3fd-1",
+      "topicId": "topic-60abdf722d8fa3fd",
+      "prompt": "Bir oyuncağı kurmak için en uygun materyal hangisidir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-b4b77aaf436b929c-4",
+      "topicId": "topic-b4b77aaf436b929c",
+      "prompt": "Öyküde olayların sırasını izlemek için hangi not yararlıdır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-723ec493a6739fb7-4",
+      "topicId": "topic-723ec493a6739fb7",
+      "prompt": "Temel düşünceyi bulurken hangi ayrıntıya öncelik verilir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-470d365c6fab7e6c-1",
+      "topicId": "topic-470d365c6fab7e6c",
+      "prompt": "Yazının girişinde genellikle ne yapılır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-470d365c6fab7e6c-4",
+      "topicId": "topic-470d365c6fab7e6c",
+      "prompt": "Bir yazı taslağını düzeltirken önce hangisini de kontrol etmeliyiz?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gt-topic-bc4421e920b09a12-1",
+      "topicId": "topic-bc4421e920b09a12",
+      "prompt": "“Kalemler” sözcüğündeki -ler hangi anlamı katar?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gs-topic-3dd631c7c22c9d3a-4",
+      "topicId": "topic-3dd631c7c22c9d3a",
+      "prompt": "Bir yerdeki değişimi incelemek için hangi karşılaştırma daha uygundur?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gs-topic-5f90f82769573b87-1",
+      "topicId": "topic-5f90f82769573b87",
+      "prompt": "Hangisi kültürel miras örneği olabilir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gs-topic-5f90f82769573b87-4",
+      "topicId": "topic-5f90f82769573b87",
+      "prompt": "Eski bir eserin tarihini bilmiyorsan afişe ne yazmalısın?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gs-topic-59f1d9e007c486da-6",
+      "topicId": "topic-59f1d9e007c486da",
+      "prompt": "Bir kap bulunduğunda kullanımını anlamak için neye ihtiyaç vardır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gs-topic-98cc4f8de6f5aba0-4",
+      "topicId": "topic-98cc4f8de6f5aba0",
+      "prompt": "İki uygarlığı karşılaştırırken hangisi uygundur?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gs-topic-cbc7e5a4f990fc71-2",
+      "topicId": "topic-cbc7e5a4f990fc71",
+      "prompt": "Sınıftaki öğrenme sorunu için ilk destek kimden alınabilir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gs-topic-fbd68f7e3a5702f4-2",
+      "topicId": "topic-fbd68f7e3a5702f4",
+      "prompt": "Sınıftaki öğrenme sorunu için ilk destek kimden alınabilir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gs-topic-06848a65cd4c7f94-2",
+      "topicId": "topic-06848a65cd4c7f94",
+      "prompt": "Sınıftaki öğrenme sorunu için ilk destek kimden alınabilir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gs-topic-fceea254542d41b4-2",
+      "topicId": "topic-fceea254542d41b4",
+      "prompt": "Sınıftaki öğrenme sorunu için ilk destek kimden alınabilir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gl-topic-2409a01c42aec18a-6",
+      "topicId": "topic-2409a01c42aec18a",
+      "prompt": "Rol yapmayı seven biri hangi cümleyi kullanabilir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gl-topic-ee32c4efbaab6355-6",
+      "topicId": "topic-ee32c4efbaab6355",
+      "prompt": "Almanyalı bir öğrenci ülkesini nasıl söyler?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gl-topic-75fb1c0990be496d-6",
+      "topicId": "topic-75fb1c0990be496d",
+      "prompt": "Anlamadığın bir yönergenin tekrarını nazikçe nasıl istersin?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gl-topic-dc45d8f4e97274b3-6",
+      "topicId": "topic-dc45d8f4e97274b3",
+      "prompt": "Her gün yaptığın bir işi hangi cümle anlatır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gl-topic-b8d74048e6bc96ad-6",
+      "topicId": "topic-b8d74048e6bc96ad",
+      "prompt": "Her gün yaptığın bir işi hangi cümle anlatır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gl-topic-93ca458beb6cce00-6",
+      "topicId": "topic-93ca458beb6cce00",
+      "prompt": "Anlamadığın bir yönergenin tekrarını nazikçe nasıl istersin?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gl-topic-df525b086d730011-6",
+      "topicId": "topic-df525b086d730011",
+      "prompt": "Rol yapmayı seven biri hangi cümleyi kullanabilir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gl-topic-9e4f8f28b49f3b49-6",
+      "topicId": "topic-9e4f8f28b49f3b49",
+      "prompt": "Rol yapmayı seven biri hangi cümleyi kullanabilir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gl-topic-00c81de17ebb3aef-6",
+      "topicId": "topic-00c81de17ebb3aef",
+      "prompt": "Bir aracın amacını açıklayan cümle hangisidir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gp-topic-48ae9ea75ad2cc7a-2",
+      "topicId": "topic-48ae9ea75ad2cc7a",
+      "prompt": "Vahiy kavramı neyi anlatır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gp-topic-3622c03ebcd89760-1",
+      "topicId": "topic-3622c03ebcd89760",
+      "prompt": "Kıssa çalışmasının amaçlarından biri hangisidir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gp-topic-3622c03ebcd89760-3",
+      "topicId": "topic-3622c03ebcd89760",
+      "prompt": "Kaynakta belirtilmeyen bir ayrıntı için hangi tutum doğrudur?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gp-topic-da8fab78eb6cfdd7-2",
+      "topicId": "topic-da8fab78eb6cfdd7",
+      "prompt": "Bir tarihî yapının cami mi, kervansaray mı olduğunu ayırt etmek için hangi bilgi doğrudan yardımcı olur?",
+      "note": "Genel kök birden fazla önemli bilgiye açıktı; kullanım işlevini ayırt etme amacı açıklaştırıldı."
+    },
+    {
+      "id": "gp-topic-e4c7f9c1018cdc8e-3",
+      "topicId": "topic-e4c7f9c1018cdc8e",
+      "prompt": "Cihazı kapatmadan önce ne yapılmalıdır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gp-topic-8d69a2b6d525a266-1",
+      "topicId": "topic-8d69a2b6d525a266",
+      "prompt": "Görsel tasarıma başlarken önce ne belirlenir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gp-topic-8d69a2b6d525a266-3",
+      "topicId": "topic-8d69a2b6d525a266",
+      "prompt": "Bir su tasarrufu afişinde hangi görsel daha uygundur?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gp-topic-5671d41092c44175-3",
+      "topicId": "topic-5671d41092c44175",
+      "prompt": "Düzenleme sonrasında hangi işlem gerekir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gp-topic-32410e04615afcec-4",
+      "topicId": "topic-32410e04615afcec",
+      "prompt": "Bir öğrenci yalnız büyük harf kullanarak uzun bir metin yazdı. Ne önerilebilir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gp-topic-ce386b2cc2429e18-2",
+      "topicId": "topic-ce386b2cc2429e18",
+      "prompt": "Başkalarının bilgisinden yararlanırken ne yapılmalıdır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gp-topic-c7fec790ddc978f8-3",
+      "topicId": "topic-c7fec790ddc978f8",
+      "prompt": "Blokların sırası neyi etkiler?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gp-topic-c7fec790ddc978f8-4",
+      "topicId": "topic-c7fec790ddc978f8",
+      "prompt": "Karakter beklenen yönde gitmiyor. Hangi yaklaşım uygundur?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gp-topic-1bdc89a0d30f1fbe-2",
+      "topicId": "topic-1bdc89a0d30f1fbe",
+      "prompt": "Okuma afişinde hangi görsel mesajı destekler?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gp-topic-1bdc89a0d30f1fbe-3",
+      "topicId": "topic-1bdc89a0d30f1fbe",
+      "prompt": "Afişte başlığın okunabilmesi neyle ilgilidir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gp-topic-68aa2407f8771664-2",
+      "topicId": "topic-68aa2407f8771664",
+      "prompt": "Müzenin temel görevlerinden biri hangisidir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gp-topic-867d3ee276a9c095-4",
+      "topicId": "topic-867d3ee276a9c095",
+      "prompt": "Bir nesne çok eski görünüyor. Nasıl yaklaşılır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "ge-topic-13cfcb12a836a832-1",
+      "topicId": "topic-13cfcb12a836a832",
+      "prompt": "Aşağıdakilerden hangisi kültür ögesidir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "ge-topic-dcb29d8e4c20a79e-3",
+      "topicId": "topic-dcb29d8e4c20a79e",
+      "prompt": "Bilmediğin bir sözcüğe rastladığında hangi yol uygundur?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "ge-topic-db8beb1cc4f3b26a-6",
+      "topicId": "topic-db8beb1cc4f3b26a",
+      "prompt": "Bir metinde olayın yeri belirtilmemişse nasıl not alınmalıdır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "ge-topic-12ce9831a7a24aad-1",
+      "topicId": "topic-12ce9831a7a24aad",
+      "prompt": "“Sınıfta kaç pencere var?” sorusu için en uygun ilk yöntem hangisidir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "ge-topic-4f82c04adf064ba7-1",
+      "topicId": "topic-4f82c04adf064ba7",
+      "prompt": "Yazmaya hazırlıkta hangi ikiliyi belirlemek yararlıdır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gad-topic-f0db619ac47d8d71-1",
+      "topicId": "topic-f0db619ac47d8d71",
+      "prompt": "Afet ve Acil Durum Yönetimi Başkanlığının kısa adı hangisidir?",
+      "note": "Koordinasyon görevini birden fazla kurum üstlenebilir; kurumun açık adı sorularak belirsizlik giderildi."
+    },
+    {
+      "id": "gad-topic-b18070615ebf07e2-1",
+      "topicId": "topic-b18070615ebf07e2",
+      "prompt": "Okul tatbikatı hangi çalışmaya örnektir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gs-topic-2a81763d4edb3954-1",
+      "topicId": "topic-2a81763d4edb3954",
+      "prompt": "Strateji en iyi nasıl açıklanır?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    },
+    {
+      "id": "gs-topic-2a81763d4edb3954-4",
+      "topicId": "topic-2a81763d4edb3954",
+      "prompt": "Bir takım oyununda oyuncular aynı yere koştuğu için paslaşma aksıyor. Planı düzeltmek için önce hangi bilgi incelenmelidir?",
+      "note": "Konu dışı veya kolay elenen çeldiriciler, aynı konu alanındaki karışıklıkları hedefleyecek şekilde düzeltildi. Doğru cevap ve soru kimliği korundu."
+    }
+  ],
+  "exampleBasedQuestions": [
+    {
+      "id": "sr-tr-evidence-1",
+      "topicId": "topic-dd9cd10951724f08",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            86,
+            87
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ]
+    },
+    {
+      "id": "sr-tr-inference-1",
+      "topicId": "topic-bc4e48cb1910634c",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            86,
+            87
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ]
+    },
+    {
+      "id": "sr-tr-story-1",
+      "topicId": "topic-211c8ddf94259378",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            86
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ]
+    },
+    {
+      "id": "sr-tr-sequence-1",
+      "topicId": "topic-5f26fd31a1685dfe",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            86,
+            87
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ]
+    },
+    {
+      "id": "sr-math-grid-1",
+      "topicId": "topic-70f412a50ce80c2f",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            88
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ]
+    },
+    {
+      "id": "sr-math-grid-2",
+      "topicId": "topic-a606b079db4e39a1",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            88
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ]
+    },
+    {
+      "id": "sr-math-grid-3",
+      "topicId": "topic-a219ce03fcdfdad6",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            88
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ]
+    },
+    {
+      "id": "sr-science-moon-1",
+      "topicId": "topic-55b0812fbc9fd348",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            89
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ]
+    },
+    {
+      "id": "sr-science-moon-2",
+      "topicId": "topic-55b0812fbc9fd348",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            90
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ]
+    },
+    {
+      "id": "sr-social-change-1",
+      "topicId": "topic-3dd631c7c22c9d3a",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            91,
+            92
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ]
+    },
+    {
+      "id": "sr-social-economy-1",
+      "topicId": "topic-2e2242280790450d",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            91
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ]
+    },
+    {
+      "id": "sr-dkab-meaning-1",
+      "topicId": "topic-f88e70eb7816d042",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            93,
+            94
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ]
+    },
+    {
+      "id": "sr-it-algorithm-1",
+      "topicId": "topic-8279adfa5784a890",
+      "references": [
+        {
+          "sourceId": "meb-bty5-2026",
+          "pdfPages": [
+            46,
+            54,
+            58
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ]
+    },
+    {
+      "id": "sr-it-source-1",
+      "topicId": "topic-87833803b43e526c",
+      "references": [
+        {
+          "sourceId": "meb-bty5-2026",
+          "pdfPages": [
+            22
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ]
+    },
+    {
+      "id": "sr-art-poster-1",
+      "topicId": "topic-1bdc89a0d30f1fbe",
+      "references": [
+        {
+          "sourceId": "meb-art5-2026",
+          "pdfPages": [
+            20,
+            21
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ]
+    }
+  ]
+}

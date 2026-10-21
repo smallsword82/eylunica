@@ -1,0 +1,104 @@
+import { matchesTerm, termLabels, type StudyTerm } from '../grade5/terms';
+import './GradeFive.css';
+import { useEffect, useState } from 'react';
+import { courses, questionsByTopic, topicsByCourse, questionsByCourse, questionById, curriculumStats, timetable, type Topic, type Question } from '../grade5/catalog';
+import { readLearning, learningKey, nextQuestion, recordAttempt, isCorrect, latestAttempts } from '../grade5/engine';
+import { approvedVideos, videoUrl } from '../grade5/videos';
+import { lessonByTopic, contentStats } from '../grade5/content';
+import { GradeFiveExam } from './GradeFiveExam';
+import { QuestionSourceNote } from './QuestionSourceNote';
+type Stage = 'summary' | 'video' | 'example' | 'practice' | 'test' | 'review';
+export function GradeFive({ onBack, onTransition, guide, paused }: { onBack: () => void; onTransition: (action: () => void, startsTask?: boolean) => void; guide: string; paused: boolean }) {
+  const [courseId, setCourse] = useState<string | null>(null);
+  const [topic, setTopic] = useState<Topic | null>(null);
+  const [model, setModel] = useState('all');
+  const [term, setTerm] = useState<StudyTerm>('first');
+  const [unitFilter, setUnitFilter] = useState('');
+  const [topicFilter, setTopicFilter] = useState('');
+  const [visibleCount, setVisibleCount] = useState(24);
+  const [stage, setStage] = useState<Stage>('summary');
+  const [storageError, setStorageError] = useState('');
+  const [learning, setLearning] = useState(() => { try { return readLearning(localStorage.getItem(learningKey)); } catch { return readLearning(null); } });
+  const [question, setQuestion] = useState<Question>();
+  const [answer, setAnswer] = useState('');
+  const [hint, setHint] = useState(false);
+  const [feedback, setFeedback] = useState<string | null>(null);
+  const [seen, setSeen] = useState<string[]>([]);
+  const [playingVideo, setPlayingVideo] = useState<string | null>(null);
+  const [videoConsent, setVideoConsent] = useState(false);
+  const [examOpen, setExamOpen] = useState(false);
+  useEffect(() => { if (paused) setPlayingVideo(null); }, [paused]);
+  useEffect(() => { const hide = () => { if (document.hidden) setPlayingVideo(null); }; document.addEventListener('visibilitychange', hide); return () => document.removeEventListener('visibilitychange', hide); }, []);
+  function selectStage(next: Stage) { onTransition(() => {
+    setPlayingVideo(null); setVideoConsent(false); setStage(next); setSeen([]); setAnswer(''); setFeedback(null); setHint(false);
+    setQuestion(topic ? nextQuestion(topic.id, learning, next === 'review') : undefined);
+  }, ['practice', 'test', 'review'].includes(next)); }
+  function submit() {
+    if (paused || !question || feedback !== null || !answer.trim()) return;
+    const updated = recordAttempt(learning, question, answer, hint);
+    setLearning(updated);
+    try { localStorage.setItem(learningKey, JSON.stringify(updated)); } catch { setStorageError('İlerleme kaydedilemedi; bu oturumda devam edebilirsin.'); }
+    setFeedback(`${isCorrect(question, answer) ? 'Doğru!' : 'Birlikte bakalım.'} ${question.explanation}`);
+  }
+  function recordExam(answers: { questionId: string; answer: string }[]) {
+    let updated = learning;
+    for (const response of answers) {
+      const q = questionById.get(response.questionId);
+      if (q) updated = recordAttempt(updated, q, response.answer, false);
+    }
+    setLearning(updated);
+    try { localStorage.setItem(learningKey, JSON.stringify(updated)); } catch { setStorageError('İlerleme kaydedilemedi; bu oturumda devam edebilirsin.'); }
+  }
+  const course = courses.find(c => c.id === courseId);
+  const lesson = topic ? lessonByTopic.get(topic.id) : undefined;
+  const attempts = topic ? learning.attempts.filter(a => questionById.get(a.questionId)?.topicId === topic.id) : [];
+  const latest = latestAttempts(learning);
+  const courseTopics = courseId ? (topicsByCourse.get(courseId) || []).filter(t => matchesTerm(t, term)) : [];
+  const courseQuestions = courseId ? (questionsByCourse.get(courseId) || []).filter(q => courseTopics.some(t => t.id === q.topicId)) : [];
+  const topicQuestions = topic ? questionsByTopic.get(topic.id) || [] : [];
+  const filteredTopics = courseTopics.filter(t => (!unitFilter || t.unit === unitFilter) && t.title.toLocaleLowerCase('tr').includes(topicFilter.toLocaleLowerCase('tr')));
+  const visibleCourses = courses.filter(c => model === 'all' || (model === 'standard' ? c.model !== 'multiple-language' : c.id !== 'course-4'))
+    .sort((a,b) => Number(b.category === 'mandatory') - Number(a.category === 'mandatory') || Number(b.model === 'multiple-language') - Number(a.model === 'multiple-language'));
+  if (examOpen && course) return <GradeFiveExam initialTerm={term} courseId={course.id} onBack={() => setExamOpen(false)} onTransition={onTransition} paused={paused} guide={guide} onComplete={recordExam} />;
+  return <main className="subpage grade-five">
+    <button className="text-button" onClick={() => { if (topic) { setTopic(null); setPlayingVideo(null); } else if (course) setCourse(null); else onBack(); }}>← {topic ? 'Konulara dön' : course ? 'Derslere dön' : 'Akademilere dön'}</button>
+    <div className="eyebrow muted">5. SINIF · 2026–2027</div>
+    <h1>{topic?.title || course?.name || 'Derslerim'}</h1>
+    <p>{guide} ile adım adım öğren. Anlatımı oku, örnekleri incele ve alıştırmalarla pekiştir.</p>
+    {!topic && <p role="note">MEB kaynaklarından {curriculumStats.courses} program, {curriculumStats.units} ünite/tema ve {curriculumStats.topics} konu kaydı. Standart çizelgede 30 zorunlu + 5 seçmeli saat vardır. Haftalar resmî taslak yıllık planlara dayanır; okul planı değişebilir. Seçmeli dersler ve çoklu dil modeli ayrı gösterilir.</p>}
+    {!topic && <p className="lesson-overview">{contentStats.lessonTopics + 2} konuda anlatım ve çözümlü örnek · {questionById.size} soru kaydı · {contentStats.practicalActivities} uygulama etkinliği. Anlatım ve sorular Eylunica tarafından hazırlanmıştır; resmî MEB sorusu değildir. Tekrar eden program konuları aynı kavram çalışmasını paylaşabilir.</p>}
+    {!topic && <p><a href={timetable.url} target="_blank" rel="noreferrer">2026–2027 resmî haftalık ders çizelgesi · Karar 115</a></p>}
+    {!topic && <><label>Çalışma dönemi <select value={term} onChange={e => { setTerm(e.target.value as StudyTerm); setUnitFilter(''); setVisibleCount(24); }}>{Object.entries(termLabels).map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label><p>İlk dönem kapsamı yıllık plandaki 1–18. haftalardır. İki döneme yayılan konular her iki kapsamda görünür. Haftası belirtilmeyen kayıtlar ayrı tutulur. Yukarıdaki içerik toplamları tüm yıla aittir.</p></>}
+    {!course && <label>Eğitim modeli <select value={model} onChange={e => setModel(e.target.value)}><option value="all">Tüm programlar</option><option value="standard">Standart model ve seçmeliler</option><option value="multiple">Çoklu yabancı dil modeli ve ortak dersler</option></select></label>}
+    {storageError && <p role="alert">{storageError}</p>}
+    {!course && <div className="academy-grid">{visibleCourses.map(c => <button key={c.id} className="academy-tile reading-tile" onClick={() => { setCourse(c.id); setUnitFilter(''); setTopicFilter(''); setVisibleCount(24); }}><strong>{c.name}</strong><span>{c.weeklyHours ? `Haftada ${c.weeklyHours} saat · ` : ''}{(topicsByCourse.get(c.id) || []).filter(t => matchesTerm(t, term)).length} {termLabels[term]} konusu · {c.model === 'multiple-language' ? 'Çoklu dil modeli' : c.model === 'elective' ? 'Seçmeli' : 'Ortak / standart program'}</span><span>{(topicsByCourse.get(c.id) || []).filter(t => matchesTerm(t, term) && (lessonByTopic.has(t.id) || t.source.status === 'pending' && t.summary)).length} hazır anlatım · {(questionsByCourse.get(c.id) || []).filter(q => (topicsByCourse.get(c.id) || []).some(t => t.id === q.topicId && matchesTerm(t, term))).length} soru</span></button>)}</div>}
+    {course && !topic && <>
+      {course.programUrl && <p><a href={course.programUrl} target="_blank" rel="noreferrer">MEB öğretim programı</a></p>}
+      <section className="written-exam-entry" aria-label="Yazılı hazırlığı"><h2>Yazılıya hazırlan</h2><p>Çalışacağın üniteleri seç, soruları çöz ve test sonunda çözümlerle birlikte sonucunu gör. Yazılı hazırlığı çevrimdışı çalışır.</p><button className="primary" disabled={!courseQuestions.length} onClick={() => onTransition(() => setExamOpen(true))}>Yazılı testleri</button>{!courseQuestions.length && <p>Seçilen dönem kapsamında hazır soru bulunamadı. Dönemi belirtilmeyen çalışmalar veya tüm yıl seçeneğine bakabilirsin.</p>}</section>
+      <label>Ünite / tema <select value={unitFilter} onChange={e => { setUnitFilter(e.target.value); setVisibleCount(24); }}><option value="">Tüm üniteler</option>{[...new Set(courseTopics.map(t => t.unit))].map(unit => <option key={unit}>{unit}</option>)}</select></label>
+      <label>Konu ara <input value={topicFilter} onChange={e => { setTopicFilter(e.target.value); setVisibleCount(24); }} /></label>
+      <p>{filteredTopics.length} konu · {courseQuestions.length} hazır soru</p>
+      <div className="academy-grid">{filteredTopics.slice(0,visibleCount).map(t => <button key={t.id} className="academy-tile" onClick={() => { setTopic(t); setStage('summary'); }}><strong>{t.unit} · {t.title}</strong><span>{lessonByTopic.has(t.id) || t.source.status === 'pending' && t.summary ? 'Anlatım hazır' : 'Anlatım hazırlanıyor'} · {questionsByTopic.get(t.id)?.length || 0} soru · {t.weeks.length ? `Hafta ${t.weeks.join(', ')}` : 'Hafta planı belirtilmedi'} · {t.source.status === 'verified' ? 'MEB konu kaydı' : 'Örnek çalışma'}</span>{questionsByTopic.has(t.id) && <span>Doğru çözdüğün: {questionsByTopic.get(t.id)!.filter(q => latest.get(q.id)?.correct).length}/{questionsByTopic.get(t.id)!.length}</span>}</button>)}</div>
+      {filteredTopics.length > visibleCount && <button onClick={() => setVisibleCount(n => n+24)}>Diğer konuları göster</button>}
+      {!filteredTopics.length && <p>Bu dönem ve filtre için konu bulunamadı. Haftası belirtilmeyen kayıtları görmek için çalışma dönemi seçimini değiştirebilirsin.</p>}
+    </>}
+    {topic && <>
+      <p><a href={topic.source.url} target="_blank" rel="noreferrer">Resmî program kaynağı</a> · {topic.source.note}</p>
+      <nav aria-label="Öğrenme adımları">{(['summary', 'video', 'example', 'practice', 'test', 'review'] as Stage[]).map((s, i) => <button key={s} aria-pressed={s === stage} onClick={() => selectStage(s)}>{['Konu anlatımı', 'Video', 'Örnek çözüm', 'Alıştırmalar', 'Konu testi', 'Yanlışları tekrar et'][i]}</button>)}</nav>
+      <p role="status">{attempts.length} yanıt · doğruluk %{attempts.length ? Math.round(attempts.filter(a => a.correct).length / attempts.length * 100) : 0} · {topicQuestions.filter(q => latest.get(q.id)?.correct === false).length} tekrar sorusu</p>
+      {stage === 'summary' && <section className="lesson-reading"><h2>Konu anlatımı</h2>{!lesson && topic.source.status === 'verified' && <p>Bu konu için bağımsız ders anlatımı henüz hazırlanmadı. Aşağıda kaynak programın hedefleri gösteriliyor.</p>}{topic.summary && <p>{topic.summary}</p>}{lesson?.sections.map((part,index) => <section key={index}><h3>{part.title}</h3>{part.body.map((paragraph,i) => <p key={i}>{paragraph}</p>)}</section>)}{lesson?.activity && <aside className="lesson-activity"><h3>{lesson.activity.title}</h3><ol>{lesson.activity.instructions.map((step,i) => <li key={i}>{step}</li>)}</ol><p>{lesson.activity.reflection}</p></aside>}{topic.outcomes.length > 0 && <details><summary>{topic.outcomeScope === 'week' ? 'Bu haftalara ait öğrenme çıktıları' : 'Ünite öğrenme çıktıları'}</summary><p>Kaynak programın kapsamını gösterir; her sorunun bu çıktılara tek tek eşleştirildiği anlamına gelmez.</p><ul>{topic.outcomes.map(o => <li key={o.code}>{o.code} · {o.text}</li>)}</ul></details>}{topic.weeks.length > 0 && <p>Taslak plan haftaları: {topic.weeks.join(', ')}</p>}{attempts.slice(-3).filter(a => !a.correct).length >= 2 && <p>Bu konuyu birlikte yeniden okuyalım; sonra örnek çözüme bakabilirsin.</p>}</section>}
+      {stage === 'example' && <section className="lesson-reading"><h2>Örnek çözüm</h2>{lesson ? <><h3>{lesson.workedExample.prompt}</h3><ol>{lesson.workedExample.steps.map((step,i) => <li key={i}>{step}</li>)}</ol><p><strong>Sonuç: </strong>{lesson.workedExample.answer}</p></> : <p>{topic.example || 'Bu konu için örnek çözüm henüz eklenmedi.'}</p>}</section>}
+      {stage === 'video' && <section><h2>Eğitim videosu</h2><p>Video için internet ve ebeveyn onayı gerekir. Oynatıcı açıldığında YouTube’a bağlantı kurulur ve platformun veri/gizlilik kuralları geçerlidir. İlerlemen YouTube’a gönderilmez. Videolar indirilmez; metin ve alıştırmalar çevrimdışı çalışır.</p>{!approvedVideos.some(v => v.topicId === topic.id) && <p>Bu konu için incelenip onaylanmış video henüz yok.</p>}{approvedVideos.filter(v => v.topicId === topic.id).map(v => <article key={v.id}><p>{v.role === 'primary' ? 'Ana video' : 'Alternatif video'} · {v.title || 'Başlık doğrulanmadı'} · {v.channel || 'Kanal bilgisi yok'} · {v.publishedAt?.slice(0, 10) || 'Yayın tarihi bilinmiyor'}</p><label><input type="checkbox" checked={videoConsent} onChange={e => setVideoConsent(e.target.checked)} /> Ebeveynimle birlikte dış video bağlantısını açmayı kabul ediyorum</label><button disabled={!videoConsent} onClick={() => setPlayingVideo(v.id)}>Videoyu aç</button></article>)}{playingVideo && videoConsent && <iframe title="Onaylı eğitim videosu" src={videoUrl(playingVideo)} referrerPolicy="no-referrer" allowFullScreen />}</section>}
+      {['practice', 'test', 'review'].includes(stage) && <section aria-label="Soru çalışması">
+        {!question ? <p>{stage === 'review' ? 'Tekrar bekleyen yanlış yanıt kalmadı.' : !seen.length ? 'Bu konu için henüz soru eklenmedi.' : topic.source.status === 'pending' ? 'Bu oturumdaki örnek sorular tamamlandı. Soru havuzu henüz 50 soruya ulaşmadı.' : 'Bu oturumdaki sorular tamamlandı. Yeni bir çalışma başlatabilir veya yazılı testine geçebilirsin.'}</p> : <>
+          <h2>{question.prompt}</h2><p>Zorluk {question.difficulty}/4</p>
+          {question.image && <img style={{ maxWidth: "100%", height: "auto" }} src={question.image.src} alt={question.image.alt} />}
+          {['choice', 'boolean', 'visual'].includes(question.kind) && question.choices ? question.choices.map(choice => <button key={choice} disabled={paused || feedback !== null} aria-pressed={answer === choice} onClick={() => setAnswer(choice)}>{choice}</button>) : <><p>{question.choices?.join(' · ')}</p><label>Yanıtın <input value={answer} disabled={paused || feedback !== null} onChange={e => setAnswer(e.target.value)} /></label></>}
+          {stage !== 'test' && <button onClick={() => setHint(true)} disabled={paused || feedback !== null}>İpucu</button>}{hint && <p>{question.hints.join(' ')}</p>}
+          <button className="primary" disabled={paused || !answer.trim() || feedback !== null} onClick={submit}>Yanıtı kontrol et</button>
+          {feedback !== null && <><p role="status">{feedback}</p><QuestionSourceNote question={question} /><button disabled={paused} onClick={() => onTransition(() => { const done = [...seen, question.id]; setSeen(done); setQuestion(nextQuestion(topic.id, learning, stage === 'review', done)); setAnswer(''); setFeedback(null); setHint(false); }, true)}>Sonraki soru</button></>}
+        </>}
+      </section>}
+    </>}
+  </main>;
+}

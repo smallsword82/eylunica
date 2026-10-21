@@ -1,0 +1,493 @@
+[
+  {
+    "id": "sr-tr-evidence-1",
+    "topicId": "topic-dd9cd10951724f08",
+    "prompt": "Okulun kitap değişim köşesinde Duru, getirdiği öykü kitabını masaya bıraktı. Aradığı kitabı bulamayan Eren’i görünce kendi kitabını ona önerdi. Eren kitabı alıp ertesi hafta geri getireceğini söyledi. Metinde açıkça belirtilen bilgi hangisidir?",
+    "answer": "Eren kitabı ertesi hafta geri getireceğini söyledi.",
+    "choices": [
+      "Eren kitabı ertesi hafta geri getireceğini söyledi.",
+      "Eren kitabın tamamını daha önce okumuştu.",
+      "Duru kitap köşesini tek başına kurmuştu.",
+      "Eren ile Duru aynı sınıfta okuyordu."
+    ],
+    "kind": "choice",
+    "difficulty": 2,
+    "explanation": "Son cümle geri getirme zamanını açıklar; diğer üç bilgi metinde verilmemiştir.",
+    "hints": [
+      "Her seçeneği metindeki bir cümleyle desteklemeyi dene."
+    ],
+    "outcomeCode": null,
+    "sourceReview": {
+      "reviewedAt": "2026-10-21",
+      "comparison": "official-example",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            86,
+            87
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ],
+      "note": "Resmî örneğin ölçtüğü beceri ve soru yapısı incelenerek farklı bağlamla özgün hazırlanmıştır. Çıkmış veya MEB tarafından onaylanmış soru değildir."
+    }
+  },
+  {
+    "id": "sr-tr-inference-1",
+    "topicId": "topic-bc4e48cb1910634c",
+    "prompt": "Okulun kitap değişim köşesinde Duru, getirdiği öykü kitabını masaya bıraktı. Aradığı kitabı bulamayan Eren’i görünce kendi kitabını ona önerdi. Eren kitabı alıp ertesi hafta geri getireceğini söyledi. Bu olaydan hangi çıkarım yapılabilir?",
+    "answer": "Bir öneri, aradığı kitabı bulamayan birine yardımcı olabilir.",
+    "choices": [
+      "Bir öneri, aradığı kitabı bulamayan birine yardımcı olabilir.",
+      "Kitap değişiminde herkes aradığı kitabı mutlaka bulur.",
+      "Öykü kitapları diğer bütün türlerden daha çok sevilir.",
+      "Kitap ödünç alan herkes onu tam zamanında geri getirir."
+    ],
+    "kind": "choice",
+    "difficulty": 3,
+    "explanation": "Duru’nun önerisi Eren’in kitap bulmasını sağlamıştır. Tek olaydan herkes ve bütün kitaplar için kesin sonuç çıkarılamaz.",
+    "hints": [
+      "Tek olayı aşan herkes ve bütün gibi genellemeleri denetle."
+    ],
+    "outcomeCode": null,
+    "sourceReview": {
+      "reviewedAt": "2026-10-21",
+      "comparison": "official-example",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            86,
+            87
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ],
+      "note": "Resmî örneğin ölçtüğü beceri ve soru yapısı incelenerek farklı bağlamla özgün hazırlanmıştır. Çıkmış veya MEB tarafından onaylanmış soru değildir."
+    }
+  },
+  {
+    "id": "sr-tr-story-1",
+    "topicId": "topic-211c8ddf94259378",
+    "prompt": "Okulun kitap değişim köşesinde Duru, getirdiği öykü kitabını masaya bıraktı. Aradığı kitabı bulamayan Eren’i görünce kendi kitabını ona önerdi. Eren kitabı alıp ertesi hafta geri getireceğini söyledi. Olayın gerçekleştiği yer hangisidir?",
+    "answer": "Okuldaki kitap değişim köşesi",
+    "choices": [
+      "Okuldaki kitap değişim köşesi",
+      "Eren’in evindeki kitaplık",
+      "Mahallenin halk kütüphanesi",
+      "Bir kitabevinin satış bölümü"
+    ],
+    "kind": "choice",
+    "difficulty": 2,
+    "explanation": "İlk cümle olayın okulun kitap değişim köşesinde gerçekleştiğini belirtir.",
+    "hints": [
+      "Yer bilgisini veren ifadeyi ilk cümlede bul."
+    ],
+    "outcomeCode": null,
+    "sourceReview": {
+      "reviewedAt": "2026-10-21",
+      "comparison": "official-example",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            86
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ],
+      "note": "Resmî örneğin ölçtüğü beceri ve soru yapısı incelenerek farklı bağlamla özgün hazırlanmıştır. Çıkmış veya MEB tarafından onaylanmış soru değildir."
+    }
+  },
+  {
+    "id": "sr-tr-sequence-1",
+    "topicId": "topic-5f26fd31a1685dfe",
+    "prompt": "Okulun kitap değişim köşesinde Duru, getirdiği öykü kitabını masaya bıraktı. Aradığı kitabı bulamayan Eren’i görünce kendi kitabını ona önerdi. Eren kitabı alıp ertesi hafta geri getireceğini söyledi. Olayların sırası hangi seçenekte doğrudur?",
+    "answer": "Kitabını bıraktı → Eren’i fark etti → Kitabını önerdi.",
+    "choices": [
+      "Kitabını bıraktı → Eren’i fark etti → Kitabını önerdi.",
+      "Kitabını önerdi → Eren’i fark etti → Kitabını bıraktı.",
+      "Eren’i fark etti → Kitabını önerdi → Kitabını bıraktı.",
+      "Kitabını bıraktı → Kitabını önerdi → Eren’i fark etti."
+    ],
+    "kind": "choice",
+    "difficulty": 3,
+    "explanation": "Duru önce kitabını masaya bırakır, sonra Eren’i fark eder ve öneride bulunur.",
+    "hints": [
+      "Eylemleri metinde anlatılma sırasına göre izle."
+    ],
+    "outcomeCode": null,
+    "sourceReview": {
+      "reviewedAt": "2026-10-21",
+      "comparison": "official-example",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            86,
+            87
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ],
+      "note": "Resmî örneğin ölçtüğü beceri ve soru yapısı incelenerek farklı bağlamla özgün hazırlanmıştır. Çıkmış veya MEB tarafından onaylanmış soru değildir."
+    }
+  },
+  {
+    "id": "sr-math-grid-1",
+    "topicId": "topic-70f412a50ce80c2f",
+    "prompt": "Bir sayı tablosunda üst satır 8, 1, 6; orta satır 3, ?, 7; alt satır 4, 9, 2 biçimindedir. Her satır ve sütunun toplamı 15 olmalıdır. Soru işareti yerine hangi sayı gelmelidir? Yalnız sayıyı yaz.",
+    "answer": "5",
+    "kind": "fill",
+    "difficulty": 3,
+    "explanation": "Orta satırda 3 + 7 = 10 olduğundan eksik sayı 15 − 10 = 5’tir. Orta sütun da 1 + 5 + 9 = 15 ile koşulu sağlar.",
+    "hints": [
+      "Önce eksik sayı bulunan bir satırın bilinen sayılarını topla."
+    ],
+    "outcomeCode": null,
+    "sourceReview": {
+      "reviewedAt": "2026-10-21",
+      "comparison": "official-example",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            88
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ],
+      "note": "Resmî örneğin ölçtüğü beceri ve soru yapısı incelenerek farklı bağlamla özgün hazırlanmıştır. Çıkmış veya MEB tarafından onaylanmış soru değildir."
+    }
+  },
+  {
+    "id": "sr-math-grid-2",
+    "topicId": "topic-a606b079db4e39a1",
+    "prompt": "Bir sayı tablosunda her satırın toplamı 15 olmalıdır. Bir satıra sırasıyla 4, 8 ve 5 yazılmıştır. Diğer iki sayıyı değiştirmeden 5 yerine hangi sayı yazılmalıdır? Yalnız sayıyı yaz.",
+    "answer": "3",
+    "kind": "fill",
+    "difficulty": 3,
+    "explanation": "Değişmeyen iki sayı 4 + 8 = 12 eder. Toplamın 15 olması için son sayı 15 − 12 = 3 olmalıdır. 4 + 8 + 3 = 15 ile kontrol edilir.",
+    "hints": [
+      "Değişmeyecek iki sayıyı topla ve hedef toplamdan çıkar."
+    ],
+    "outcomeCode": null,
+    "sourceReview": {
+      "reviewedAt": "2026-10-21",
+      "comparison": "official-example",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            88
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ],
+      "note": "Resmî örneğin ölçtüğü beceri ve soru yapısı incelenerek farklı bağlamla özgün hazırlanmıştır. Çıkmış veya MEB tarafından onaylanmış soru değildir."
+    }
+  },
+  {
+    "id": "sr-math-grid-3",
+    "topicId": "topic-a219ce03fcdfdad6",
+    "prompt": "Bir tabloda satırlardan oluşan üç basamaklı sayılar 816, 357 ve 492; sütunlardan oluşanlar 834, 159 ve 672’dir. Bu altı sayının en büyüğü hangisidir?",
+    "answer": "834",
+    "choices": [
+      "834",
+      "816",
+      "672",
+      "492"
+    ],
+    "kind": "choice",
+    "difficulty": 3,
+    "explanation": "En büyük yüzler basamağı 8’dir. 816 ve 834 karşılaştırıldığında onlar basamağı 3 olan 834 daha büyüktür.",
+    "hints": [
+      "Önce yüzler, eşitse onlar basamağını karşılaştır."
+    ],
+    "outcomeCode": null,
+    "sourceReview": {
+      "reviewedAt": "2026-10-21",
+      "comparison": "official-example",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            88
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ],
+      "note": "Resmî örneğin ölçtüğü beceri ve soru yapısı incelenerek farklı bağlamla özgün hazırlanmıştır. Çıkmış veya MEB tarafından onaylanmış soru değildir."
+    }
+  },
+  {
+    "id": "sr-science-moon-1",
+    "topicId": "topic-55b0812fbc9fd348",
+    "prompt": "Bir müze modelinde Ay, Dünya’nın çevresinde bir tur atarken kendi ekseni çevresinde de bir tur dönüyor. Ay üzerindeki işaretli yüz Dünya’ya dönük kalıyor. Bu model hangi ilişkiyi açıklamak için uygundur?",
+    "answer": "Ay’ın dönme ve Dünya çevresinde dolanma sürelerinin yaklaşık eşit olmasını",
+    "choices": [
+      "Ay’ın dönme ve Dünya çevresinde dolanma sürelerinin yaklaşık eşit olmasını",
+      "Ay’ın kendi ekseni çevresinde hiç dönmediğini",
+      "Ay’ın her dolanışında gerçek biçiminin değiştiğini",
+      "Ay’ın Dünya’dan uzaklaştıkça kendi ışığını ürettiğini"
+    ],
+    "kind": "choice",
+    "difficulty": 3,
+    "explanation": "Ay’ın bir dolanımı sırasında bir dönme yapması, Dünya’ya yaklaşık aynı yüzünü göstermesini açıklar. Dönmemesi farklı yüzlerin görülmesine neden olurdu.",
+    "hints": [
+      "Bir dolanma boyunca gerçekleşen dönme sayısını düşün."
+    ],
+    "outcomeCode": null,
+    "sourceReview": {
+      "reviewedAt": "2026-10-21",
+      "comparison": "official-example",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            89
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ],
+      "note": "Resmî örneğin ölçtüğü beceri ve soru yapısı incelenerek farklı bağlamla özgün hazırlanmıştır. Çıkmış veya MEB tarafından onaylanmış soru değildir."
+    }
+  },
+  {
+    "id": "sr-science-moon-2",
+    "topicId": "topic-55b0812fbc9fd348",
+    "prompt": "Bir öğrenci, Ay’daki eski ayak izlerinin fotoğraflarda uzun süre korunduğunu öğreniyor. Ay’da Dünya’daki gibi rüzgâr ve yağmur olmadığını da biliyor. Bu bilgilerin desteklediği açıklama hangisidir?",
+    "answer": "İzleri aşındıracak rüzgâr ve yağmurun bulunmaması izlerin korunmasını açıklar.",
+    "choices": [
+      "İzleri aşındıracak rüzgâr ve yağmurun bulunmaması izlerin korunmasını açıklar.",
+      "Ay’ın kalın atmosferi izleri örterek görünür kalmalarını sağlar.",
+      "Ay yüzeyindeki sürekli yağış izlerin derinleşmesini sağlar.",
+      "Ay’daki güçlü rüzgârlar izlerin biçimini sürekli yeniler."
+    ],
+    "kind": "choice",
+    "difficulty": 3,
+    "explanation": "Rüzgâr ve yağmur aşındırıcı etkenlerdir. Ay’da bu etkenlerin bulunmaması izlerin uzun süre korunmasıyla uyumludur; diğer seçenekler verilen bilgiyle çelişir.",
+    "hints": [
+      "Verilen iki bilgiyi birlikte kullan; olmayan bir atmosfer olayı ekleme."
+    ],
+    "outcomeCode": null,
+    "sourceReview": {
+      "reviewedAt": "2026-10-21",
+      "comparison": "official-example",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            90
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ],
+      "note": "Resmî örneğin ölçtüğü beceri ve soru yapısı incelenerek farklı bağlamla özgün hazırlanmıştır. Çıkmış veya MEB tarafından onaylanmış soru değildir."
+    }
+  },
+  {
+    "id": "sr-social-change-1",
+    "topicId": "topic-3dd631c7c22c9d3a",
+    "prompt": "Bir kasabada eski bir değirmen onarılarak ziyaretçilere açıldı. Ziyaretçiler artınca çevresinde el işi ürünler satan küçük dükkânlar açıldı. Belediye yürüyüş yolunu düzenledi. Ziyaret günlerinde atık miktarı da arttı. Verilen olayların başındaki değişim hangisidir?",
+    "answer": "Eski değirmenin onarılarak ziyaretçilere açılması",
+    "choices": [
+      "Eski değirmenin onarılarak ziyaretçilere açılması",
+      "Yürüyüş yolunun düzenlenmesi",
+      "El işi ürün dükkânlarının açılması",
+      "Ziyaret günlerinde atık miktarının artması"
+    ],
+    "kind": "choice",
+    "difficulty": 3,
+    "explanation": "Metinde önce değirmen açılır, ardından ziyaretçi artışı ve diğer değişimler anlatılır. Sonraki sonuçlar başlangıçtaki olayla karıştırılmamalıdır.",
+    "hints": [
+      "Olayların zaman sırasını ve çünkü/sonra ilişkisini ayırt et."
+    ],
+    "outcomeCode": null,
+    "sourceReview": {
+      "reviewedAt": "2026-10-21",
+      "comparison": "official-example",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            91,
+            92
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ],
+      "note": "Resmî örneğin ölçtüğü beceri ve soru yapısı incelenerek farklı bağlamla özgün hazırlanmıştır. Çıkmış veya MEB tarafından onaylanmış soru değildir."
+    }
+  },
+  {
+    "id": "sr-social-economy-1",
+    "topicId": "topic-2e2242280790450d",
+    "prompt": "Bir kasabada eski bir değirmen onarılarak ziyaretçilere açıldı. Ziyaretçiler artınca çevresinde el işi ürünler satan küçük dükkânlar açıldı. Belediye yürüyüş yolunu düzenledi. Ziyaret günlerinde atık miktarı da arttı. Kasabanın ekonomik yaşamıyla doğrudan ilgili değişim hangisidir?",
+    "answer": "El işi ürünlerin satıldığı dükkânların açılması",
+    "choices": [
+      "El işi ürünlerin satıldığı dükkânların açılması",
+      "Ziyaret günlerinde atık miktarının artması",
+      "Yürüyüş yolunun yüzeyinin düzenlenmesi",
+      "Eski yapının görünüşünün yenilenmesi"
+    ],
+    "kind": "choice",
+    "difficulty": 3,
+    "explanation": "Ürünlerin dükkânlarda satılması üretim, ticaret ve gelirle doğrudan ilişkilidir. Diğer seçenekler çevre veya düzenlemeyi anlatır.",
+    "hints": [
+      "Mal veya hizmet alışverişini anlatan bilgiyi bul."
+    ],
+    "outcomeCode": null,
+    "sourceReview": {
+      "reviewedAt": "2026-10-21",
+      "comparison": "official-example",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            91
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ],
+      "note": "Resmî örneğin ölçtüğü beceri ve soru yapısı incelenerek farklı bağlamla özgün hazırlanmıştır. Çıkmış veya MEB tarafından onaylanmış soru değildir."
+    }
+  },
+  {
+    "id": "sr-dkab-meaning-1",
+    "topicId": "topic-f88e70eb7816d042",
+    "prompt": "Bir öğrenci namaz konulu yazısında, ibadetin insanın Allah ile bağını güçlendirdiğini ve davranışlarında özenli olmasını hatırlattığını anlatıyor. Bu yazının temel düşüncesini en iyi özetleyen ifade hangisidir?",
+    "answer": "İbadet, kişinin manevi bağıyla günlük davranışları arasında ilişki kurabilir.",
+    "choices": [
+      "İbadet, kişinin manevi bağıyla günlük davranışları arasında ilişki kurabilir.",
+      "İbadet, yalnız ibadet edilen binanın özellikleriyle ilgilidir.",
+      "İbadet, günlük yaşamın davranışlarından tamamen ayrı tutulur.",
+      "İbadetin tek amacı insanların aynı yerde bulunmasını sağlamaktır."
+    ],
+    "kind": "choice",
+    "difficulty": 3,
+    "explanation": "Metinde hem manevi bağ hem davranışlara özen vurgulanır. Uygun özet bu iki yönü birlikte kapsar; diğerleri anlamı daraltır veya metinle çelişir.",
+    "hints": [
+      "Özette metindeki iki temel vurgu da yer almalı."
+    ],
+    "outcomeCode": null,
+    "sourceReview": {
+      "reviewedAt": "2026-10-21",
+      "comparison": "official-example",
+      "references": [
+        {
+          "sourceId": "meb-item-guide-2026",
+          "pdfPages": [
+            93,
+            94
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ],
+      "note": "Resmî örneğin ölçtüğü beceri ve soru yapısı incelenerek farklı bağlamla özgün hazırlanmıştır. Çıkmış veya MEB tarafından onaylanmış soru değildir."
+    }
+  },
+  {
+    "id": "sr-it-algorithm-1",
+    "topicId": "topic-8279adfa5784a890",
+    "prompt": "Bir öğrenci “Ödevi yaz → dosyayı kapat → kaydet” adımlarını uyguladığında çalışmasının kaybolduğunu görüyor. Sorunu gidermek için ilk hangi değişiklik yapılmalıdır?",
+    "answer": "Kaydetme adımı dosyayı kapatma adımından önceye alınmalıdır.",
+    "choices": [
+      "Kaydetme adımı dosyayı kapatma adımından önceye alınmalıdır.",
+      "Kaydetme adımı dosyayı kapattıktan sonra iki kez yapılmalıdır.",
+      "Dosya adı değiştirilmeden kaydetme adımı kaldırılmalıdır.",
+      "Dosya kapatıldıktan sonra yalnız yazı tipi değiştirilmelidir."
+    ],
+    "kind": "choice",
+    "difficulty": 3,
+    "explanation": "Dosya kapanmadan önce son değişiklikler kaydedilmelidir. Adımların sırasını düzeltmek, sorunun nedeni olan eksik kaydı hedefler.",
+    "hints": [
+      "Hangi adım kapatmadan önce yapılmalıydı?"
+    ],
+    "outcomeCode": null,
+    "sourceReview": {
+      "reviewedAt": "2026-10-21",
+      "comparison": "official-example",
+      "references": [
+        {
+          "sourceId": "meb-bty5-2026",
+          "pdfPages": [
+            46,
+            54,
+            58
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ],
+      "note": "Resmî örneğin ölçtüğü beceri ve soru yapısı incelenerek farklı bağlamla özgün hazırlanmıştır. Çıkmış veya MEB tarafından onaylanmış soru değildir."
+    }
+  },
+  {
+    "id": "sr-it-source-1",
+    "topicId": "topic-87833803b43e526c",
+    "prompt": "Ece bir sunum için iki sayfa buluyor. İlkinde kurum adı ve güncelleme tarihi var; ikincisinde kaynak ve yazar belirtilmiyor. Ece bilgiyi nasıl kullanmalıdır?",
+    "answer": "Kaynağı belli sayfadaki bilgiyi başka güvenilir kaynaklarla da karşılaştırmalıdır.",
+    "choices": [
+      "Kaynağı belli sayfadaki bilgiyi başka güvenilir kaynaklarla da karşılaştırmalıdır.",
+      "Kaynak belirtmeyen sayfayı yalnız ilk sırada çıktığı için seçmelidir.",
+      "İki sayfa aynı renkteyse bilgilerin de aynı doğrulukta olduğunu kabul etmelidir.",
+      "Yalnız daha büyük resim içeren sayfadaki bütün bilgileri doğru saymalıdır."
+    ],
+    "kind": "choice",
+    "difficulty": 3,
+    "explanation": "Kaynak ve tarih bilgileri değerlendirmeye yardımcı olur; bunlar tek başına her iddiayı doğru yapmaz. Güvenilir başka kaynaklarla karşılaştırmak daha sağlam bir yoldur.",
+    "hints": [
+      "Kaynağın kimliğine, tarihe ve bilginin başka kaynaklarla uyumuna bak."
+    ],
+    "outcomeCode": null,
+    "sourceReview": {
+      "reviewedAt": "2026-10-21",
+      "comparison": "official-example",
+      "references": [
+        {
+          "sourceId": "meb-bty5-2026",
+          "pdfPages": [
+            22
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ],
+      "note": "Resmî örneğin ölçtüğü beceri ve soru yapısı incelenerek farklı bağlamla özgün hazırlanmıştır. Çıkmış veya MEB tarafından onaylanmış soru değildir."
+    }
+  },
+  {
+    "id": "sr-art-poster-1",
+    "topicId": "topic-1bdc89a0d30f1fbe",
+    "prompt": "Bir kitap okuma afişinde başlık, kitap görselinin altında kalıyor ve zeminle aynı açık tonda yazılmış. Mesajın okunmasını kolaylaştırmak için hangi düzenleme uygundur?",
+    "answer": "Başlığı görselin kapatmadığı bir yere taşımak ve zeminle karşıt ton kullanmak",
+    "choices": [
+      "Başlığı görselin kapatmadığı bir yere taşımak ve zeminle karşıt ton kullanmak",
+      "Başlığı aynı yerde tutup zeminle daha benzer tona boyamak",
+      "Görseli büyütüp başlığın daha büyük bölümünü örtmek",
+      "Başlığın harflerini üst üste getirip aralıklarını kaldırmak"
+    ],
+    "kind": "choice",
+    "difficulty": 3,
+    "explanation": "Yazı ve görsel birlikte mesajı desteklemelidir. Başlığın örtülmemesi ve zeminle yeterli ton farkı okunmasını kolaylaştırır.",
+    "hints": [
+      "Yazıyı örten öğeyi ve yazı-zemin ton ilişkisini birlikte düşün."
+    ],
+    "outcomeCode": null,
+    "sourceReview": {
+      "reviewedAt": "2026-10-21",
+      "comparison": "official-example",
+      "references": [
+        {
+          "sourceId": "meb-art5-2026",
+          "pdfPages": [
+            20,
+            21
+          ],
+          "purpose": "Beceri, bağlam ve soru biçimi karşılaştırması"
+        }
+      ],
+      "note": "Resmî örneğin ölçtüğü beceri ve soru yapısı incelenerek farklı bağlamla özgün hazırlanmıştır. Çıkmış veya MEB tarafından onaylanmış soru değildir."
+    }
+  }
+]

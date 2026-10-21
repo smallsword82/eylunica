@@ -1,0 +1,375 @@
+[
+  {
+    "prompt": "Bir sütun grafiğinde sayıları anlamak için hangisi gerekir?",
+    "distractors": [
+      "Sütunların birbirine uzaklığı",
+      "Sütunların çizilme sırası",
+      "Sütunların kalınlığı"
+    ]
+  },
+  {
+    "prompt": "Güneş gökyüzünde neden gerçek boyutuna göre küçük görünür?",
+    "distractors": [
+      "Dünya’dan daha küçük olduğu için",
+      "Dünya’nın çevresinde dolandığı için",
+      "Işığını Ay’dan yansıttığı için"
+    ]
+  },
+  {
+    "prompt": "Öyküde olayların sırasını izlemek için hangi not yararlıdır?",
+    "distractors": [
+      "Kahramanların alfabetik listesi",
+      "Mekân adlarının alfabetik listesi",
+      "Betimlenen nesnelerin listesi"
+    ]
+  },
+  {
+    "prompt": "Konuşmayı hazırlarken önce neyi belirlemek yararlıdır?",
+    "distractors": [
+      "Sonuçta sorulacak soruları",
+      "Kullanılacak örneklerin sırasını",
+      "Giriş cümlesinin son sözcüğünü"
+    ]
+  },
+  {
+    "prompt": "Metin ağaçların havayı temizlemesini anlatıyor. “Ağaç, hava, temizlik” seçimini nasıl kontrol edersin?",
+    "distractors": [
+      "Bu kelimeler metindeki ilk üç sözcükle aynı mı diye bakarım",
+      "Bu kelimelerin her biri metinde yalnız bir kez mi kullanılmış diye bakarım",
+      "Bu kelimeler metindeki en uzun sözcükler mi diye bakarım"
+    ]
+  },
+  {
+    "prompt": "Yazının girişinde genellikle ne yapılır?",
+    "distractors": [
+      "Bütün örnekler ayrıntılarıyla açıklanır",
+      "Önceki bölümlerdeki bilgiler toparlanır",
+      "Sonuçta verilen öneriler tekrarlanır"
+    ]
+  },
+  {
+    "prompt": "Bir yazı taslağını düzeltirken önce hangisini de kontrol etmeliyiz?",
+    "distractors": [
+      "Bütün cümleler aynı sayıda sözcük mü içeriyor?",
+      "Her paragraf aynı uzunlukta mı yazılmış?",
+      "Her cümlede mutlaka bir özel ad kullanılmış mı?"
+    ]
+  },
+  {
+    "prompt": "“Kalemler” sözcüğündeki -ler hangi anlamı katar?",
+    "distractors": [
+      "Tek bir kalem",
+      "Kaleme sahip olan kişi",
+      "Kalemin bulunduğu yer"
+    ]
+  },
+  {
+    "prompt": "Bir oyuncağı kurmak için en uygun materyal hangisidir?",
+    "distractors": [
+      "Oyuncağın satış ilanı",
+      "Oyuncağı anlatan bir öykü",
+      "Oyuncakların fiyat listesi"
+    ]
+  },
+  {
+    "prompt": "Temel düşünceyi bulurken hangi ayrıntıya öncelik verilir?",
+    "distractors": [
+      "Yalnız ilk cümledeki örneğe",
+      "Yalnız son paragraftaki kişi adına",
+      "En sık tekrarlanan noktalama işaretine"
+    ]
+  },
+  {
+    "prompt": "Bir yerdeki değişimi incelemek için hangi karşılaştırma daha uygundur?",
+    "distractors": [
+      "Aynı tarihte iki farklı yerin görüntüleri",
+      "Aynı yerin yalnız bugünkü görüntüleri",
+      "Aynı yerin yalnız geleceğe ait çizimleri"
+    ]
+  },
+  {
+    "prompt": "Hangisi kültürel miras örneği olabilir?",
+    "distractors": [
+      "Bir akarsuyun akış hızı",
+      "Bir dağın oluşum biçimi",
+      "Bir bölgenin yıllık yağış miktarı"
+    ]
+  },
+  {
+    "prompt": "Eski bir eserin tarihini bilmiyorsan afişe ne yazmalısın?",
+    "distractors": [
+      "Eser eski göründüğü için tahmin ettiğim yılı kesin tarih diye yazmalıyım.",
+      "Benzer bir eserin tarihini bu eserin de kesin tarihi olarak yazmalıyım.",
+      "Ziyaretçilerin çoğunun söylediği yılı araştırmadan doğru kabul etmeliyim."
+    ]
+  },
+  {
+    "prompt": "Bir kap bulunduğunda kullanımını anlamak için neye ihtiyaç vardır?",
+    "distractors": [
+      "Kabın renginden kullanımını kesin belirlemeye",
+      "Benzer bütün kapların aynı amaçla kullanıldığını kabul etmeye",
+      "Yalnız günümüzde aynı biçimdeki kabın kullanımına"
+    ]
+  },
+  {
+    "prompt": "İki uygarlığı karşılaştırırken hangisi uygundur?",
+    "distractors": [
+      "Farklı alanlardaki tek bir buluşla bütün yaşamlarını sıralamak",
+      "Yalnız en yeni bulunan esere göre bütün katkıları değerlendirmek",
+      "Yalnız bir uygarlığın eserlerini inceleyip ikisi hakkında sonuç çıkarmak"
+    ]
+  },
+  {
+    "prompt": "Sınıftaki öğrenme sorunu için ilk destek kimden alınabilir?",
+    "distractors": [
+      "Okul kantinini işleten kişiden",
+      "Okul taşıtını kullanan kişiden",
+      "Mahalledeki muhtardan"
+    ]
+  },
+  {
+    "prompt": "Bir aracın amacını açıklayan cümle hangisidir?",
+    "distractors": [
+      "The telescope is used at night.",
+      "The telescope is in the observatory.",
+      "The telescope has a large lens."
+    ]
+  },
+  {
+    "prompt": "Vahiy kavramı neyi anlatır?",
+    "distractors": [
+      "Kutsal metnin başka bir dile anlam aktarımını",
+      "Peygamberin örnek davranışlarının anlatılmasını",
+      "Bir dinî metnin insanlar tarafından açıklanmasını"
+    ]
+  },
+  {
+    "prompt": "Kıssa çalışmasının amaçlarından biri hangisidir?",
+    "distractors": [
+      "Anlatıdaki her ayrıntıyı güncel bir olayla aynı saymak",
+      "Kaynakta bulunmayan ayrıntıları tamamlanmış bilgi saymak",
+      "Yalnız kişi adlarını ezberleyip verilen mesajı incelememek"
+    ]
+  },
+  {
+    "prompt": "Kaynakta belirtilmeyen bir ayrıntı için hangi tutum doğrudur?",
+    "distractors": [
+      "Benzer bir anlatıdan alıp kesin bilgi diye eklemek",
+      "Yaygın anlatıldığı için doğrulamadan doğru kabul etmek",
+      "Kendi tahminini kaynakta yazan bilgi gibi aktarmak"
+    ]
+  },
+  {
+    "prompt": "Bir tarihî yapıyı incelerken hangi bilgi önemlidir?",
+    "distractors": [
+      "Duvarlarının ana rengi",
+      "En son onarıldığı gün",
+      "Merdivenlerinin basamak sayısı"
+    ],
+    "revisedPrompt": "Bir tarihî yapının cami mi, kervansaray mı olduğunu ayırt etmek için hangi bilgi doğrudan yardımcı olur?",
+    "reason": "Genel kök birden fazla önemli bilgiye açıktı; kullanım işlevini ayırt etme amacı açıklaştırıldı."
+  },
+  {
+    "prompt": "Cihazı kapatmadan önce ne yapılmalıdır?",
+    "distractors": [
+      "Açık dosyaların yalnız adları değiştirilmelidir.",
+      "Dosyalar kaydedilmeden programlar kapatılmalıdır.",
+      "Kaydetmek yerine yalnız ekran parlaklığı azaltılmalıdır."
+    ]
+  },
+  {
+    "prompt": "Görsel tasarıma başlarken önce ne belirlenir?",
+    "distractors": [
+      "Kullanılacak filtrelerin sırası",
+      "Dosyanın kaydedileceği klasörün rengi",
+      "Baskıda kullanılacak kâğıdın boyutu"
+    ]
+  },
+  {
+    "prompt": "Bir su tasarrufu afişinde hangi görsel daha uygundur?",
+    "distractors": [
+      "Boşa akan musluğu olumlu gösteren bir görsel",
+      "Suyun tükenmeyeceği izlenimi veren bir görsel",
+      "Musluğu açık bırakmayı ödüllendiren bir görsel"
+    ]
+  },
+  {
+    "prompt": "Düzenleme sonrasında hangi işlem gerekir?",
+    "distractors": [
+      "Kaydetmeden uygulamayı kapatmak",
+      "Yalnız dosyanın adını kâğıda yazmak",
+      "Yalnız ekranın görüntüsüne bakmak"
+    ]
+  },
+  {
+    "prompt": "Bir öğrenci yalnız büyük harf kullanarak uzun bir metin yazdı. Ne önerilebilir?",
+    "distractors": [
+      "Bütün metni daha da büyük harflerle yazması",
+      "Her satırda başka bir yazı tipi kullanması",
+      "Bütün metni tek paragrafta sıkıştırması"
+    ]
+  },
+  {
+    "prompt": "Başkalarının bilgisinden yararlanırken ne yapılmalıdır?",
+    "distractors": [
+      "Yalnız yazı tipini değiştirip kendi bilgisi saymalıdır.",
+      "Yalnız sözcük sırasını değiştirip kaynak vermemelidir.",
+      "Kaynak yerine dosyayı kaydettiği klasörü yazmalıdır."
+    ]
+  },
+  {
+    "prompt": "Blokların sırası neyi etkiler?",
+    "distractors": [
+      "Programın dosya adını",
+      "Kullanılan ekranın çözünürlüğünü",
+      "Kullanıcının seçtiği yazı tipini"
+    ]
+  },
+  {
+    "prompt": "Karakter beklenen yönde gitmiyor. Hangi yaklaşım uygundur?",
+    "distractors": [
+      "Yönü incelemeden yalnız arka planı değiştirmek",
+      "Yönü incelemeden yalnız karakteri büyütmek",
+      "Yönü incelemeden yalnız ses bloğu eklemek"
+    ]
+  },
+  {
+    "prompt": "Okuma afişinde hangi görsel mesajı destekler?",
+    "distractors": [
+      "Yazıların tamamını örten bir süsleme",
+      "Okumak yerine kitapları kullanmamayı öneren bir işaret",
+      "Mesajla ilişkisi kurulmamış bir reklam logosu"
+    ]
+  },
+  {
+    "prompt": "Afişte başlığın okunabilmesi neyle ilgilidir?",
+    "distractors": [
+      "Yazı ile zeminin aynı tonda seçilmesiyle",
+      "Yazının görsellerin arkasında kalmasıyla",
+      "Harflerin birbirinin üstüne bindirilmesiyle"
+    ]
+  },
+  {
+    "prompt": "Müzenin temel görevlerinden biri hangisidir?",
+    "distractors": [
+      "Eserlerin bulunduğu yer bilgisini önemsiz sayma",
+      "Eserleri yalnız güncel fiyatlarına göre sınıflama",
+      "Eserleri bağlamlarından ayırıp kayıtsız sergileme"
+    ]
+  },
+  {
+    "prompt": "Bir nesne çok eski görünüyor. Nasıl yaklaşılır?",
+    "distractors": [
+      "Yaşı yalnız yüzeyinin koyu rengine göre kesinleştirilir.",
+      "Yaşı yalnız büyüklüğüne göre kesinleştirilir.",
+      "Yaşı yalnız benzer yeni bir nesneyle görünüşüne göre kesinleştirilir."
+    ]
+  },
+  {
+    "prompt": "Aşağıdakilerden hangisi kültür ögesidir?",
+    "distractors": [
+      "Bir akarsuyun akış hızı",
+      "Bir dağın yükseltisi",
+      "Bir yerin yıllık yağış miktarı"
+    ]
+  },
+  {
+    "prompt": "Bilmediğin bir sözcüğe rastladığında hangi yol uygundur?",
+    "distractors": [
+      "Yalnız ilk harfine bakıp anlamını kesinleştirmek",
+      "Benzer yazılan her sözcükle aynı anlamda olduğunu kabul etmek",
+      "Cümledeki görevini incelemeden her anlamını aynı saymak"
+    ]
+  },
+  {
+    "prompt": "Bir metinde olayın yeri belirtilmemişse nasıl not alınmalıdır?",
+    "distractors": [
+      "Yazarın yaşadığı şehir olayın yeri kabul edilmelidir.",
+      "Okurun yaşadığı şehir olayın yeri kabul edilmelidir.",
+      "Başka bir öyküdeki yer bu metin için de kesin kabul edilmelidir."
+    ]
+  },
+  {
+    "prompt": "“Sınıfta kaç pencere var?” sorusu için en uygun ilk yöntem hangisidir?",
+    "distractors": [
+      "Sınıfın yalnız taban alanını ölçmek",
+      "Başka bir sınıfın pencerelerini saymak",
+      "Okuldaki bütün kapıları saymak"
+    ]
+  },
+  {
+    "prompt": "Yazmaya hazırlıkta hangi ikiliyi belirlemek yararlıdır?",
+    "distractors": [
+      "Son cümlenin uzunluğu ve sayfa numarası",
+      "Paragraf sayısı ve her satırın harf sayısı",
+      "Nokta sayısı ve başlığın yazı rengi"
+    ]
+  },
+  {
+    "prompt": "Afet çalışmalarında koordinasyon görevleri bulunan kurum hangisidir?",
+    "revisedPrompt": "Afet ve Acil Durum Yönetimi Başkanlığının kısa adı hangisidir?",
+    "distractors": [
+      "UMKE",
+      "AKOM",
+      "MEB"
+    ],
+    "reason": "Koordinasyon görevini birden fazla kurum üstlenebilir; kurumun açık adı sorularak belirsizlik giderildi."
+  },
+  {
+    "prompt": "Okul tatbikatı hangi çalışmaya örnektir?",
+    "distractors": [
+      "Afet sonrasındaki hasar hesabı",
+      "Afet sonrasındaki yeniden yapım",
+      "Afet sonrasındaki yardım dağıtımı"
+    ]
+  },
+  {
+    "prompt": "Strateji en iyi nasıl açıklanır?",
+    "distractors": [
+      "Oyun içindeki tek bir pas",
+      "Oyun sonunda yazılan skor",
+      "Isınmada yapılan tek bir tekrar"
+    ]
+  },
+  {
+    "prompt": "Bir planı geliştirmek için hangi bilgi yararlıdır?",
+    "distractors": [
+      "Oyuncuların yeni bir takım adı seçip seçmediği",
+      "Oyun topunun aynı renkte kalıp kalmadığı",
+      "Forma numaralarının küçükten büyüğe dizilip dizilmediği"
+    ],
+    "revisedPrompt": "Bir takım oyununda oyuncular aynı yere koştuğu için paslaşma aksıyor. Planı düzeltmek için önce hangi bilgi incelenmelidir?"
+  },
+  {
+    "prompt": "Rol yapmayı seven biri hangi cümleyi kullanabilir?",
+    "distractors": [
+      "I want to join the chess club.",
+      "I want to join the music club.",
+      "I want to join the science club."
+    ]
+  },
+  {
+    "prompt": "Almanyalı bir öğrenci ülkesini nasıl söyler?",
+    "distractors": [
+      "I am from Italy.",
+      "I am from Japan.",
+      "I am from Türkiye."
+    ]
+  },
+  {
+    "prompt": "Anlamadığın bir yönergenin tekrarını nazikçe nasıl istersin?",
+    "distractors": [
+      "Can I close the door, please?",
+      "Can I borrow your ruler, please?",
+      "Can I leave the room, please?"
+    ]
+  },
+  {
+    "prompt": "Her gün yaptığın bir işi hangi cümle anlatır?",
+    "distractors": [
+      "I am doing my homework now.",
+      "I did my homework yesterday.",
+      "I will do my homework tomorrow."
+    ]
+  }
+]

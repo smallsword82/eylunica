@@ -1,0 +1,2357 @@
+{
+  "firstSemester": {
+    "topicRecords": 157,
+    "readyTopics": 156,
+    "questionRecords": 974
+  },
+  "generatedAt": "2026-10-21T10:28:32.511Z",
+  "year": "2026-2027",
+  "materialAuthor": "Eylunica",
+  "officialExamQuestions": false,
+  "questionOutcomeMapping": "not-individually-verified",
+  "videoResearch": "paused-by-user",
+  "programCount": 47,
+  "totalTopicRecords": 724,
+  "readyTopics": 362,
+  "newlyAuthoredTopics": 360,
+  "programsWithContent": 32,
+  "programsWithoutContent": [
+    "guidance",
+    "meb-course-87",
+    "meb-course-88",
+    "meb-course-89",
+    "meb-course-90",
+    "meb-course-91",
+    "meb-course-92",
+    "meb-course-93",
+    "meb-course-154",
+    "meb-course-115",
+    "meb-course-116",
+    "meb-course-117",
+    "meb-course-118",
+    "meb-course-114",
+    "meb-course-119"
+  ],
+  "pendingTopicRecords": 362,
+  "questionRecords": 2259,
+  "distinctQuestionPrompts": 1766,
+  "practicalActivities": 301,
+  "types": {
+    "choice": 1474,
+    "boolean": 445,
+    "fill": 337,
+    "ordering": 1,
+    "matching": 1,
+    "visual": 1
+  },
+  "perTopicTarget": 50,
+  "topicsMeetingQuestionTarget": 0,
+  "programs": [
+    {
+      "id": "meb-course-95",
+      "name": "\"Şehrimiz ...\"",
+      "model": "elective",
+      "topicRecords": 11,
+      "readyTopics": 1,
+      "questionRecords": 6,
+      "distinctQuestionPrompts": 6,
+      "missingTopics": [
+        {
+          "id": "topic-cc464e3e0f881e73",
+          "title": "Medeniyete Yön Veren Şehirler",
+          "unit": "1. Ünite: Şehir Ve Medeniyet"
+        },
+        {
+          "id": "topic-d3c8ee6ebcb1748a",
+          "title": "Şehir ve Sosyal Yaşam Şehrin Fırsatları ve Riskleri",
+          "unit": "2. Ünite: Şehirlerdeki Toplumsal Yaşam"
+        },
+        {
+          "id": "topic-7cde280cfaf3258c",
+          "title": "Şehirde Sosyal Sorumluluk",
+          "unit": "2. Ünite: Şehirlerdeki Toplumsal Yaşam"
+        },
+        {
+          "id": "topic-729653d2afc75f64",
+          "title": "Şehrimizin Coğrafi Özellikleri",
+          "unit": "3. Ünite: Şehrimi Tanıyorum"
+        },
+        {
+          "id": "topic-bae92e64d3b42c97",
+          "title": "Şehrimizin Coğrafi Özelliklerinin Şehir Yaşamına Etkileri",
+          "unit": "3. Ünite: Şehrimi Tanıyorum"
+        },
+        {
+          "id": "topic-c000074987006838",
+          "title": "Geçmişten Günümüze Şehrimiz",
+          "unit": "4. Ünite: Şehrimin Tarihi Ve İdari Yapısı"
+        },
+        {
+          "id": "topic-72367f00c2006dda",
+          "title": "Şehrimizin İdari Yapısı ve Demografik Özellikleri",
+          "unit": "4. Ünite: Şehrimin Tarihi Ve İdari Yapısı"
+        },
+        {
+          "id": "topic-82f8142d279b008f",
+          "title": "Şehrimdeki Ekonomik Faaliyetler Şehrimin Ekonomisine Katkı Sağlayan Unsurlar Şehrimdeki Ulaşım",
+          "unit": "5. Ünite: Şehrimdeki Ekonomi"
+        },
+        {
+          "id": "topic-2a2b4b94aac6f1bd",
+          "title": "Şehrimin Yetiştirdiği Önemli Şahsiyetler",
+          "unit": "6. Ünite: Şehrimde Sosyal Ve Kültürel Yaşam"
+        },
+        {
+          "id": "topic-3d233710505246ed",
+          "title": "Şehrimdeki Sosyal ve Kültürel Faaliyetler Şehrimin Kültürel Mirası",
+          "unit": "6. Ünite: Şehrimde Sosyal Ve Kültürel Yaşam"
+        }
+      ]
+    },
+    {
+      "id": "meb-course-66",
+      "name": "Afet Bilinci",
+      "model": "elective",
+      "topicRecords": 22,
+      "readyTopics": 22,
+      "questionRecords": 132,
+      "distinctQuestionPrompts": 114,
+      "missingTopics": []
+    },
+    {
+      "id": "meb-course-67",
+      "name": "Ahlak ve Vatandaşlık Eğitimi",
+      "model": "elective",
+      "topicRecords": 21,
+      "readyTopics": 1,
+      "questionRecords": 6,
+      "distinctQuestionPrompts": 6,
+      "missingTopics": [
+        {
+          "id": "topic-1ca060846e5e0344",
+          "title": "Ahlaki Ölçütler Çerçevesinde Olay ve Olgular",
+          "unit": "Ahlak Ve Vatandaşlık Eğitimi Dersi I. Düzey · 1. Tema: Ahlaki Değerler Ve Davranışlar"
+        },
+        {
+          "id": "topic-f087ea3ce87d58d1",
+          "title": "Ahlaki Davranışlar",
+          "unit": "Ahlak Ve Vatandaşlık Eğitimi Dersi I. Düzey · 1. Tema: Ahlaki Değerler Ve Davranışlar"
+        },
+        {
+          "id": "topic-1ffe0e405590d83e",
+          "title": "Toplumsal Ahlak Kuralları",
+          "unit": "Ahlak Ve Vatandaşlık Eğitimi Dersi I. Düzey · 2. Tema: Toplumsal Yaşamda Ahlak Ve Değerler"
+        },
+        {
+          "id": "topic-c0b5fff1907e2dd4",
+          "title": "Ahlaklı Olmanın Toplum Üzerindeki Etkisi Ahlaki",
+          "unit": "Ahlak Ve Vatandaşlık Eğitimi Dersi I. Düzey · 2. Tema: Toplumsal Yaşamda Ahlak Ve Değerler"
+        },
+        {
+          "id": "topic-0315874d0b4b9ae6",
+          "title": "Gelişimde Kültür ve Dinin Etkisi",
+          "unit": "Ahlak Ve Vatandaşlık Eğitimi Dersi I. Düzey · 2. Tema: Toplumsal Yaşamda Ahlak Ve Değerler"
+        },
+        {
+          "id": "topic-f6de6597a0fec8b6",
+          "title": "Ortak Yaşamda Gerekli Olan Kurallar",
+          "unit": "Ahlak Ve Vatandaşlık Eğitimi Dersi I. Düzey · 3. Tema: Birlikte Yaşamak Ve Sorumluluklarımız"
+        },
+        {
+          "id": "topic-e59078517f172d84",
+          "title": "Ortak Yaşamdaki Sorumluluklar",
+          "unit": "Ahlak Ve Vatandaşlık Eğitimi Dersi I. Düzey · 3. Tema: Birlikte Yaşamak Ve Sorumluluklarımız"
+        },
+        {
+          "id": "topic-eb912079e63e3332",
+          "title": "Günlük Yaşamda Karşılaştığı Problemleri Çözme",
+          "unit": "Ahlak Ve Vatandaşlık Eğitimi Dersi I. Düzey · 3. Tema: Birlikte Yaşamak Ve Sorumluluklarımız"
+        },
+        {
+          "id": "topic-0b75ad542211a546",
+          "title": "Vatandaşlığın Temel Kavramları",
+          "unit": "Ahlak Ve Vatandaşlık Eğitimi Dersi I. Düzey · 4. Tema: Vatandaşlık Bilinci Ve Toplumsal Sorumluluk"
+        },
+        {
+          "id": "topic-74b5a322e8bc72a4",
+          "title": "Vatandaş Olarak Hak, Görev ve Sorumluluklar",
+          "unit": "Ahlak Ve Vatandaşlık Eğitimi Dersi I. Düzey · 4. Tema: Vatandaşlık Bilinci Ve Toplumsal Sorumluluk"
+        },
+        {
+          "id": "topic-a2234ba0aca2561a",
+          "title": "Devlet-Vatandaş İlişkisi",
+          "unit": "Ahlak Ve Vatandaşlık Eğitimi Dersi I. Düzey · 4. Tema: Vatandaşlık Bilinci Ve Toplumsal Sorumluluk"
+        },
+        {
+          "id": "topic-7e05ecad70978150",
+          "title": "Güzel Ahlak",
+          "unit": "Ahlak Ve Vatandaşlık Eğitimi Dersi II. Düzey · 1. Tema: Ahlaki Değerler Ve Davranışlar"
+        },
+        {
+          "id": "topic-4c9a622a69c783f1",
+          "title": "Ahlaki Değerler",
+          "unit": "Ahlak Ve Vatandaşlık Eğitimi Dersi II. Düzey · 1. Tema: Ahlaki Değerler Ve Davranışlar"
+        },
+        {
+          "id": "topic-f466d2e6ed4f08ec",
+          "title": "Ahlaki Ölçütlere Göre Güncel Olaylar",
+          "unit": "Ahlak Ve Vatandaşlık Eğitimi Dersi II. Düzey · 1. Tema: Ahlaki Değerler Ve Davranışlar"
+        },
+        {
+          "id": "topic-a6d3c8a42beefceb",
+          "title": "Ahlaki İlke ve Davranışlar",
+          "unit": "Ahlak Ve Vatandaşlık Eğitimi Dersi II. Düzey · 2. Tema: Toplumsal Yaşamda Ahlak Ve Değerler"
+        },
+        {
+          "id": "topic-a025668d3a891ac5",
+          "title": "Olayları Ortak Fayda Temelinde Çözümleme",
+          "unit": "Ahlak Ve Vatandaşlık Eğitimi Dersi II. Düzey · 2. Tema: Toplumsal Yaşamda Ahlak Ve Değerler"
+        },
+        {
+          "id": "topic-dc8b44cc923e098f",
+          "title": "Ortak Yaşamda Gerekli Olan Kurallar",
+          "unit": "Ahlak Ve Vatandaşlık Eğitimi Dersi II. Düzey · 3. Tema: Birlikte Yaşamak Ve Sorumluluklarımız"
+        },
+        {
+          "id": "topic-ee080f66c9d4dbf6",
+          "title": "Topluma Hizmet",
+          "unit": "Ahlak Ve Vatandaşlık Eğitimi Dersi II. Düzey · 3. Tema: Birlikte Yaşamak Ve Sorumluluklarımız"
+        },
+        {
+          "id": "topic-6fd4344c090194f6",
+          "title": "Sorunlar ve Çözümler",
+          "unit": "Ahlak Ve Vatandaşlık Eğitimi Dersi II. Düzey · 4. Tema: Vatandaşlık Bilinci Ve Toplumsal Sorumluluk"
+        },
+        {
+          "id": "topic-98b472e02ad1f4c5",
+          "title": "Vatandaşlıkla İlgili Güncel Konular",
+          "unit": "Ahlak Ve Vatandaşlık Eğitimi Dersi II. Düzey · 4. Tema: Vatandaşlık Bilinci Ve Toplumsal Sorumluluk"
+        }
+      ]
+    },
+    {
+      "id": "course-10",
+      "name": "Beden Eğitimi ve Spor",
+      "model": "standard",
+      "topicRecords": 16,
+      "readyTopics": 16,
+      "questionRecords": 96,
+      "distinctQuestionPrompts": 96,
+      "missingTopics": []
+    },
+    {
+      "id": "course-7",
+      "name": "Bilişim Teknolojileri ve Yazılım",
+      "model": "standard",
+      "topicRecords": 23,
+      "readyTopics": 23,
+      "questionRecords": 140,
+      "distinctQuestionPrompts": 140,
+      "missingTopics": []
+    },
+    {
+      "id": "course-5",
+      "name": "Çoklu Yabancı Dil Eğitim Modeli Almanca",
+      "model": "multiple-language",
+      "topicRecords": 16,
+      "readyTopics": 16,
+      "questionRecords": 96,
+      "distinctQuestionPrompts": 95,
+      "missingTopics": []
+    },
+    {
+      "id": "meb-course-35",
+      "name": "Çoklu Yabancı Dil Eğitim Modeli İngilizce",
+      "model": "multiple-language",
+      "topicRecords": 49,
+      "readyTopics": 49,
+      "questionRecords": 294,
+      "distinctQuestionPrompts": 256,
+      "missingTopics": []
+    },
+    {
+      "id": "course-6",
+      "name": "Din Kültürü ve Ahlak Bilgisi",
+      "model": "standard",
+      "topicRecords": 18,
+      "readyTopics": 18,
+      "questionRecords": 109,
+      "distinctQuestionPrompts": 109,
+      "missingTopics": []
+    },
+    {
+      "id": "course-2",
+      "name": "Fen Bilimleri",
+      "model": "standard",
+      "topicRecords": 22,
+      "readyTopics": 22,
+      "questionRecords": 134,
+      "distinctQuestionPrompts": 116,
+      "missingTopics": []
+    },
+    {
+      "id": "meb-course-72",
+      "name": "Görgü Kuralları ve Nezaket",
+      "model": "elective",
+      "topicRecords": 16,
+      "readyTopics": 1,
+      "questionRecords": 6,
+      "distinctQuestionPrompts": 6,
+      "missingTopics": [
+        {
+          "id": "topic-403b3345731e6c57",
+          "title": "Görgü Kuralları ve Nezaketin Kaynakları",
+          "unit": "Görgü Kuralları Ve Nezaket Dersi Düzey I · 1. Tema: Görgü Kuralları Ve Nezaketin Gücü"
+        },
+        {
+          "id": "topic-0610e34660e6f9e8",
+          "title": "Birlikte Yaşama Kültüründe Görgü Kuralları ve Nezaketin Yeri",
+          "unit": "Görgü Kuralları Ve Nezaket Dersi Düzey I · 1. Tema: Görgü Kuralları Ve Nezaketin Gücü"
+        },
+        {
+          "id": "topic-f658a2338e8341df",
+          "title": "Kendine Saygı: Öz Bakımın Önemi",
+          "unit": "Görgü Kuralları Ve Nezaket Dersi Düzey I · 2. Tema: Erdemli İnsandan Huzurlu Aileye"
+        },
+        {
+          "id": "topic-8b98b7117aa27f38",
+          "title": "Aile İçi Davranış Kültürü",
+          "unit": "Görgü Kuralları Ve Nezaket Dersi Düzey I · 2. Tema: Erdemli İnsandan Huzurlu Aileye"
+        },
+        {
+          "id": "topic-bdde2118267c5f23",
+          "title": "Okul İçi İletişimde Gösterilen Tutum ve Davranışlar",
+          "unit": "Görgü Kuralları Ve Nezaket Dersi Düzey I · 3.Tema: Nazik Öğrenciden Mutlu Okula"
+        },
+        {
+          "id": "topic-8e5f3c9571b043bc",
+          "title": "Okul Kaynaklarını Verimli Kullanma, Temizlik ve Tasarruf Kültürü",
+          "unit": "Görgü Kuralları Ve Nezaket Dersi Düzey I · 3.Tema: Nazik Öğrenciden Mutlu Okula"
+        },
+        {
+          "id": "topic-5a874a2f09a55148",
+          "title": "Toplumsal Yaşamda Ortak Alanlarda Görgü Kuralları ve Nezaketin Önemi",
+          "unit": "Görgü Kuralları Ve Nezaket Dersi Düzey I · 4. Tema: Bir Arada Yaşamanın İncelikleri"
+        },
+        {
+          "id": "topic-ea8c9fa32feb9691",
+          "title": "Millî ve Manevi Değerlerin Görgü Kuralları ve Nezaket İle İlişkisi",
+          "unit": "Görgü Kuralları Ve Nezaket Dersi Düzey I · 4. Tema: Bir Arada Yaşamanın İncelikleri"
+        },
+        {
+          "id": "topic-3099892c058a284e",
+          "title": "İnsani İlişkiler",
+          "unit": "Görgü Kuralları Ve Nezaket Dersi Düzey II · 1. Tema: Görgü Kuralları Ve Nezaketin İnsani İlişkilerdeki Rolü"
+        },
+        {
+          "id": "topic-128b0375825d06a5",
+          "title": "Haklarını Savunurken Görgü Kuralları ve Nezakete Uygun Davranışlar Sergilemenin Günlük Hayata Etkileri",
+          "unit": "Görgü Kuralları Ve Nezaket Dersi Düzey II · 1. Tema: Görgü Kuralları Ve Nezaketin İnsani İlişkilerdeki Rolü"
+        },
+        {
+          "id": "topic-b8dd45f6dce413b0",
+          "title": "Doğanın Ortak Kullanımında Nezaket ve Görgünün Yeri",
+          "unit": "Görgü Kuralları Ve Nezaket Dersi Düzey II · 2. Tema: Doğaya Saygı Yaşama Nezaket"
+        },
+        {
+          "id": "topic-233f303a04b6ec24",
+          "title": "Çevre Bilincinin Oluşmasında Nezaket ve Görgünün Rolü",
+          "unit": "Görgü Kuralları Ve Nezaket Dersi Düzey II · 2. Tema: Doğaya Saygı Yaşama Nezaket"
+        },
+        {
+          "id": "topic-fe9c3b7d82daceea",
+          "title": "Dijital Ortamlarda Kişisel Bilgilerin Gizliliği",
+          "unit": "Görgü Kuralları Ve Nezaket Dersi Düzey II · 3.Tema: Dijital Dünyada Görgü Kuralları Ve Nezaket"
+        },
+        {
+          "id": "topic-030d06f4653e0834",
+          "title": "Dijital İletişimde Etik ve Nazik Davranmanın Günlük Hayata Etkileri",
+          "unit": "Görgü Kuralları Ve Nezaket Dersi Düzey II · 3.Tema: Dijital Dünyada Görgü Kuralları Ve Nezaket"
+        },
+        {
+          "id": "topic-2c5661245c448e3b",
+          "title": "Farklı Kültürlere Ait Görgü Kuralları ve Nezaket",
+          "unit": "Görgü Kuralları Ve Nezaket Dersi Düzey II · 4. Tema: Kültürden Kültüre Görgü Kuralları Ve Nezaket"
+        }
+      ]
+    },
+    {
+      "id": "course-8",
+      "name": "Görsel Sanatlar",
+      "model": "standard",
+      "topicRecords": 13,
+      "readyTopics": 13,
+      "questionRecords": 79,
+      "distinctQuestionPrompts": 79,
+      "missingTopics": []
+    },
+    {
+      "id": "meb-course-73",
+      "name": "Halk Oyunları",
+      "model": "elective",
+      "topicRecords": 9,
+      "readyTopics": 1,
+      "questionRecords": 6,
+      "distinctQuestionPrompts": 6,
+      "missingTopics": [
+        {
+          "id": "topic-54b9698e36c051a6",
+          "title": "Seçilen Halk Oyunlarının Ortaya Çıkış Hikâyeleri",
+          "unit": "1. Tema: Halk Oyunlarına Giriş"
+        },
+        {
+          "id": "topic-ce7b6e8ee03e0928",
+          "title": "Basit ve Birleşik Ritim Kalıpları",
+          "unit": "1. Tema: Halk Oyunlarına Giriş"
+        },
+        {
+          "id": "topic-229229ee61494eb1",
+          "title": "Seçilen Halk Oyunlarındaki Temel Figürler",
+          "unit": "1. Tema: Halk Oyunlarına Giriş"
+        },
+        {
+          "id": "topic-1a65d5ab02a822fa",
+          "title": "Seçilen Halk Oyunlarının Ritim, Müzik ve Kültürel Özellikleri",
+          "unit": "2. Tema: Kültürel Zenginliğimiz Halk Oyunları"
+        },
+        {
+          "id": "topic-c80bcd6cc21350d0",
+          "title": "Seçilen Halk Oyunlarının Sergilenmesi",
+          "unit": "2. Tema: Kültürel Zenginliğimiz Halk Oyunları"
+        },
+        {
+          "id": "topic-4d775b54c5f5758a",
+          "title": "Seçilen Halk Oyunlarının Eşle/Grupla Sergilenmesi",
+          "unit": "2. Tema: Kültürel Zenginliğimiz Halk Oyunları"
+        },
+        {
+          "id": "topic-dcdaf98a3d5dedd2",
+          "title": "Seçilen Halk Oyununun Ritim ve Ezgi Eşliğinde Oynanması",
+          "unit": "3. Tema: Halk Oyunlarında Sahneleme"
+        },
+        {
+          "id": "topic-048f993984f58e3a",
+          "title": "Seçilen Halk Oyununun Uygun Çizgi ve Formlarında Oynanması",
+          "unit": "3. Tema: Halk Oyunlarında Sahneleme"
+        }
+      ]
+    },
+    {
+      "id": "course-4",
+      "name": "İngilizce",
+      "model": "standard",
+      "topicRecords": 25,
+      "readyTopics": 25,
+      "questionRecords": 150,
+      "distinctQuestionPrompts": 144,
+      "missingTopics": []
+    },
+    {
+      "id": "meb-course-12",
+      "name": "Kur'an-ı Kerim",
+      "model": "elective",
+      "topicRecords": 23,
+      "readyTopics": 1,
+      "questionRecords": 6,
+      "distinctQuestionPrompts": 6,
+      "missingTopics": [
+        {
+          "id": "topic-7a0f8ecf03ce11fe",
+          "title": "Harfler ve Özellikleri",
+          "unit": "1. Tema: Kur’an-ı Kerim’i Tanıyorum"
+        },
+        {
+          "id": "topic-4bc86bf7fc9e4a4d",
+          "title": "Harfleri Seslendirme",
+          "unit": "1. Tema: Kur’an-ı Kerim’i Tanıyorum"
+        },
+        {
+          "id": "topic-4d84decfa9284481",
+          "title": "Sübhaneke Duası ve Rabbena Duaları ile Anlamları",
+          "unit": "1. Tema: Kur’an-ı Kerim’i Tanıyorum"
+        },
+        {
+          "id": "topic-797ecbe0b733a0c4",
+          "title": "Cezim",
+          "unit": "2. Tema: Kur’an-ı Kerim’i Okumaya Giriş"
+        },
+        {
+          "id": "topic-195af9f23d34ba54",
+          "title": "Şedde",
+          "unit": "2. Tema: Kur’an-ı Kerim’i Okumaya Giriş"
+        },
+        {
+          "id": "topic-4f55a1c289105bd1",
+          "title": "Tenvin",
+          "unit": "2. Tema: Kur’an-ı Kerim’i Okumaya Giriş"
+        },
+        {
+          "id": "topic-63feae8fdb45f022",
+          "title": "Tahiyyat Duası ve Anlamı",
+          "unit": "2. Tema: Kur’an-ı Kerim’i Okumaya Giriş"
+        },
+        {
+          "id": "topic-9828c3c47b9f30c3",
+          "title": "Med Harfleri",
+          "unit": "3. Tema: Kur’an-ı Kerim’i Öğreniyorum"
+        },
+        {
+          "id": "topic-1eb64605c33ab330",
+          "title": "Âsar-çeker",
+          "unit": "3. Tema: Kur’an-ı Kerim’i Öğreniyorum"
+        },
+        {
+          "id": "topic-37184faa4479ad04",
+          "title": "Okunmayan Elif",
+          "unit": "3. Tema: Kur’an-ı Kerim’i Öğreniyorum"
+        },
+        {
+          "id": "topic-08728c870e2122db",
+          "title": "Vav ve Ya Şeklinde Yazılan Elif",
+          "unit": "3. Tema: Kur’an-ı Kerim’i Öğreniyorum"
+        },
+        {
+          "id": "topic-fb14391f283da1a5",
+          "title": "Elif Lâm Takısı",
+          "unit": "3. Tema: Kur’an-ı Kerim’i Öğreniyorum"
+        },
+        {
+          "id": "topic-67bce239e312866c",
+          "title": "Lafzatullah",
+          "unit": "3. Tema: Kur’an-ı Kerim’i Öğreniyorum"
+        },
+        {
+          "id": "topic-059ec796afb5c0dd",
+          "title": "Med ve Kasır",
+          "unit": "3. Tema: Kur’an-ı Kerim’i Öğreniyorum"
+        },
+        {
+          "id": "topic-e4dc2bb48cb68c86",
+          "title": "Zamirin Okunuşu",
+          "unit": "3. Tema: Kur’an-ı Kerim’i Öğreniyorum"
+        },
+        {
+          "id": "topic-9777f35cc372d405",
+          "title": "Hurufumukattaa",
+          "unit": "3. Tema: Kur’an-ı Kerim’i Öğreniyorum"
+        },
+        {
+          "id": "topic-ae6bc68bcfe61e56",
+          "title": "Fatiha Suresi ve Bakara Suresinin 1-24. Ayetleri",
+          "unit": "3. Tema: Kur’an-ı Kerim’i Öğreniyorum"
+        },
+        {
+          "id": "topic-e4d5449c2c31007d",
+          "title": "Fatiha Suresi ve Anlamı",
+          "unit": "3. Tema: Kur’an-ı Kerim’i Öğreniyorum"
+        },
+        {
+          "id": "topic-1f6e5a9b1d2ca7fc",
+          "title": "Med Çeşitleri",
+          "unit": "4. Tema: Kur’an-ı Kerim’i Okuyorum"
+        },
+        {
+          "id": "topic-64550789c25b410e",
+          "title": "Bakara Suresinin 25-83. Ayetleri",
+          "unit": "4. Tema: Kur’an-ı Kerim’i Okuyorum"
+        },
+        {
+          "id": "topic-3148ee1c9648b660",
+          "title": "Peygamber Duaları: Hz. İbrahim’in Duası",
+          "unit": "4. Tema: Kur’an-ı Kerim’i Okuyorum"
+        },
+        {
+          "id": "topic-02ef21966a449060",
+          "title": "İhlas ve Kevser Sureleri ile Anlamları",
+          "unit": "4. Tema: Kur’an-ı Kerim’i Okuyorum"
+        }
+      ]
+    },
+    {
+      "id": "meb-course-75",
+      "name": "Kültür ve Medeniyetimize Yön Verenler",
+      "model": "elective",
+      "topicRecords": 18,
+      "readyTopics": 1,
+      "questionRecords": 6,
+      "distinctQuestionPrompts": 6,
+      "missingTopics": [
+        {
+          "id": "topic-e438f15278da050c",
+          "title": "Kültür ve Medeniyetin Korunması ve Sürdürülebilirliği",
+          "unit": "Kültür Ve Medeniyetimize Yön Verenler Dersi I. Düzey Üniteleri · 1. Ünite: Kültür Ve Medeniyet"
+        },
+        {
+          "id": "topic-1c6ec74558206497",
+          "title": "Kültür ve Medeniyetimizin Rehberlerini Merak Ediyorum",
+          "unit": "Kültür Ve Medeniyetimize Yön Verenler Dersi I. Düzey Üniteleri · 2. Ünite: Kültür Ve Medeniyetimizin Rehberleri"
+        },
+        {
+          "id": "topic-624ad42480d2f17f",
+          "title": "Kültür ve Medeniyetimizin Rehberlerini Araştırıyorum",
+          "unit": "Kültür Ve Medeniyetimize Yön Verenler Dersi I. Düzey Üniteleri · 2. Ünite: Kültür Ve Medeniyetimizin Rehberleri"
+        },
+        {
+          "id": "topic-1ebc19ea1483e73f",
+          "title": "Kültür ve Medeniyetimizin Rehberlerini Tanıtıyorum",
+          "unit": "Kültür Ve Medeniyetimize Yön Verenler Dersi I. Düzey Üniteleri · 2. Ünite: Kültür Ve Medeniyetimizin Rehberleri"
+        },
+        {
+          "id": "topic-4ed8d04996515db3",
+          "title": "Türk-İslam Bilim ve Düşünce Havzasında Yetişen Şahsiyetlerin Hayatı ve Eserleri",
+          "unit": "Kültür Ve Medeniyetimize Yön Verenler Dersi I. Düzey Üniteleri · 3. Ünite: Bilim, Düşünce Ve Teknoloji Tarihimizde İz Bırakanlar"
+        },
+        {
+          "id": "topic-efc32ec73089907c",
+          "title": "Türk-İslam Bilim ve Düşünce Havzasında Yetişen Şahsiyetlerin Kültür ve Medeniyetimize Katkıları",
+          "unit": "Kültür Ve Medeniyetimize Yön Verenler Dersi I. Düzey Üniteleri · 3. Ünite: Bilim, Düşünce Ve Teknoloji Tarihimizde İz Bırakanlar"
+        },
+        {
+          "id": "topic-e5150bf361b95efe",
+          "title": "Kültür ve Medeniyetimize Yön Veren Sanat Önderleri",
+          "unit": "Kültür Ve Medeniyetimize Yön Verenler Dersi I. Düzey Üniteleri · 4. Ünite: Kültür Ve Medeniyetimizin Sanat Önderleri"
+        },
+        {
+          "id": "topic-7b2fbf9d4f167a6b",
+          "title": "Sanat Önderlerimizin Kültür ve Medeniyetimize Katkıları",
+          "unit": "Kültür Ve Medeniyetimize Yön Verenler Dersi I. Düzey Üniteleri · 4. Ünite: Kültür Ve Medeniyetimizin Sanat Önderleri"
+        },
+        {
+          "id": "topic-e667b7504822f02d",
+          "title": "Kültür ve Medeniyet Arasındaki İlişki",
+          "unit": "Kültür Ve Medeniyetimize Yön Verenler Dersi II. Düzey Üniteleri · 1. Ünite: Kültür Ve Medeniyet"
+        },
+        {
+          "id": "topic-4a79ac8ad0a59fa0",
+          "title": "Kültür ve Medeniyetin Korunması ve Sürdürülebilirliği",
+          "unit": "Kültür Ve Medeniyetimize Yön Verenler Dersi II. Düzey Üniteleri · 1. Ünite: Kültür Ve Medeniyet"
+        },
+        {
+          "id": "topic-989c102d255d543c",
+          "title": "Kültür ve Medeniyetimizin Rehberlerini Merak Ediyorum",
+          "unit": "Kültür Ve Medeniyetimize Yön Verenler Dersi II. Düzey Üniteleri · 2. Ünite: Kültür Ve Medeniyetimizin Rehberleri"
+        },
+        {
+          "id": "topic-b23351b73577acec",
+          "title": "Kültür ve Medeniyetimizin Rehberlerini Araştırıyorum",
+          "unit": "Kültür Ve Medeniyetimize Yön Verenler Dersi II. Düzey Üniteleri · 2. Ünite: Kültür Ve Medeniyetimizin Rehberleri"
+        },
+        {
+          "id": "topic-6f11fd286c4b6811",
+          "title": "Kültür ve Medeniyetimizin Rehberlerini Tanıtıyorum",
+          "unit": "Kültür Ve Medeniyetimize Yön Verenler Dersi II. Düzey Üniteleri · 2. Ünite: Kültür Ve Medeniyetimizin Rehberleri"
+        },
+        {
+          "id": "topic-8c701ad65c973192",
+          "title": "Bilim, Düşünce ve Teknoloji Tarihimizde İz Bırakanların Hayatı ve Eserleri",
+          "unit": "Kültür Ve Medeniyetimize Yön Verenler Dersi II. Düzey Üniteleri · 3. Ünite: Bilim, Düşünce Ve Teknoloji Tarihimizde İz Bırakanlar"
+        },
+        {
+          "id": "topic-ea60d93392bd3df7",
+          "title": "Bilim, Düşünce ve Teknoloji Tarihimizde İz Bırakanların Kültür ve Medeniyetimize Katkıları",
+          "unit": "Kültür Ve Medeniyetimize Yön Verenler Dersi II. Düzey Üniteleri · 3. Ünite: Bilim, Düşünce Ve Teknoloji Tarihimizde İz Bırakanlar"
+        },
+        {
+          "id": "topic-dae11350dfdef92f",
+          "title": "Kültür ve Medeniyetimize Yön Veren Sanat Önderleri",
+          "unit": "Kültür Ve Medeniyetimize Yön Verenler Dersi II. Düzey Üniteleri · 4. Ünite: Kültür Ve Medeniyetimizin Sanat Önderleri"
+        },
+        {
+          "id": "topic-2521a315bddfafde",
+          "title": "Sanat Önderlerimizin Kültür ve Medeniyetimize Katkıları",
+          "unit": "Kültür Ve Medeniyetimize Yön Verenler Dersi II. Düzey Üniteleri · 4. Ünite: Kültür Ve Medeniyetimizin Sanat Önderleri"
+        }
+      ]
+    },
+    {
+      "id": "meb-course-77",
+      "name": "Masal ve Destanlarımız",
+      "model": "elective",
+      "topicRecords": 36,
+      "readyTopics": 1,
+      "questionRecords": 6,
+      "distinctQuestionPrompts": 6,
+      "missingTopics": [
+        {
+          "id": "topic-b7be6dd59563e3f3",
+          "title": "Masalda Tahmin ve Anlam Kurma",
+          "unit": "Masal Ve Destanlarımız Dersi I · 1. Tema: Masallar I"
+        },
+        {
+          "id": "topic-78c6dc97176d4d1c",
+          "title": "Masalın Yapı Unsurları ve İletileri",
+          "unit": "Masal Ve Destanlarımız Dersi I · 1. Tema: Masallar I"
+        },
+        {
+          "id": "topic-067813b5fb2cafa4",
+          "title": "Masallarda Değerler ve Kültürel Aktarım",
+          "unit": "Masal Ve Destanlarımız Dersi I · 1. Tema: Masallar I"
+        },
+        {
+          "id": "topic-b83b303917843d75",
+          "title": "Masalların Araştırılması ve Kayda Geçirilmesi",
+          "unit": "Masal Ve Destanlarımız Dersi I · 1. Tema: Masallar I"
+        },
+        {
+          "id": "topic-26efd39ed8734b9d",
+          "title": "Masal Oluşturma ve Sunma",
+          "unit": "Masal Ve Destanlarımız Dersi I · 1. Tema: Masallar I"
+        },
+        {
+          "id": "topic-5d229980c35d9f57",
+          "title": "Destan Türünün Özellikleri",
+          "unit": "Masal Ve Destanlarımız Dersi I · 2. Tema: Doğal Destanlar I"
+        },
+        {
+          "id": "topic-ec2de771e2ab34a9",
+          "title": "Destanda Tahmin ve Anlam Kurma",
+          "unit": "Masal Ve Destanlarımız Dersi I · 2. Tema: Doğal Destanlar I"
+        },
+        {
+          "id": "topic-41ef16d69bfcf00f",
+          "title": "Destanın Yapı Unsurları ve İletileri",
+          "unit": "Masal Ve Destanlarımız Dersi I · 2. Tema: Doğal Destanlar I"
+        },
+        {
+          "id": "topic-96fb5d09fd3ae24d",
+          "title": "Destanlarda Millî Motif ve Kültürel Aktarım",
+          "unit": "Masal Ve Destanlarımız Dersi I · 2. Tema: Doğal Destanlar I"
+        },
+        {
+          "id": "topic-0ef21b2c34e7aa06",
+          "title": "Doğal Destanların Araştırılması ve Kayda Geçirilmesi",
+          "unit": "Masal Ve Destanlarımız Dersi I · 2. Tema: Doğal Destanlar I"
+        },
+        {
+          "id": "topic-76599ac16ba97dea",
+          "title": "Destan Kahramanı Oluşturma ve Sunma",
+          "unit": "Masal Ve Destanlarımız Dersi I · 2. Tema: Doğal Destanlar I"
+        },
+        {
+          "id": "topic-d4f74765292cda67",
+          "title": "Yapma Destan Türünün Özellikleri",
+          "unit": "Masal Ve Destanlarımız Dersi I · 3. Tema: Yapma Destanlar I"
+        },
+        {
+          "id": "topic-ed8c7a1f72d20ae7",
+          "title": "Yapma Destanda Tahmin ve Anlam Kurma",
+          "unit": "Masal Ve Destanlarımız Dersi I · 3. Tema: Yapma Destanlar I"
+        },
+        {
+          "id": "topic-414e409cbf60cd6b",
+          "title": "Yapma Destanın Yapı Unsurları ve İletileri",
+          "unit": "Masal Ve Destanlarımız Dersi I · 3. Tema: Yapma Destanlar I"
+        },
+        {
+          "id": "topic-27e205dd379e7017",
+          "title": "Yapma Destanlarda Millî Bilinç ve Tarihsel Bellek",
+          "unit": "Masal Ve Destanlarımız Dersi I · 3. Tema: Yapma Destanlar I"
+        },
+        {
+          "id": "topic-64a893508b698325",
+          "title": "Yapma Destanların Okunması ve Yorumlanması",
+          "unit": "Masal Ve Destanlarımız Dersi I · 3. Tema: Yapma Destanlar I"
+        },
+        {
+          "id": "topic-3150fea8358b9cf0",
+          "title": "Yapma Destan Oluşturma ve Sunma",
+          "unit": "Masal Ve Destanlarımız Dersi I · 3. Tema: Yapma Destanlar I"
+        },
+        {
+          "id": "topic-c3999520dff01733",
+          "title": "Masal Türünün Özelliklerini Sorgulama",
+          "unit": "Masal Ve Destanlarımız Dersi II · 1. Tema: Masallar II"
+        },
+        {
+          "id": "topic-36797b9894993f3c",
+          "title": "Masalda Tahmin ve Anlam Kurma",
+          "unit": "Masal Ve Destanlarımız Dersi II · 1. Tema: Masallar II"
+        },
+        {
+          "id": "topic-972e7095b5899a0a",
+          "title": "Masalın Yapı Unsurlarını Genelleme",
+          "unit": "Masal Ve Destanlarımız Dersi II · 1. Tema: Masallar II"
+        },
+        {
+          "id": "topic-5f71cdf4a8e634c9",
+          "title": "Masalın İletilerini ve Değerlerini Değerlendirme",
+          "unit": "Masal Ve Destanlarımız Dersi II · 1. Tema: Masallar II"
+        },
+        {
+          "id": "topic-2573cb3feb7119d5",
+          "title": "Masalların Araştırılması ve Kayda Geçirilmesi",
+          "unit": "Masal Ve Destanlarımız Dersi II · 1. Tema: Masallar II"
+        },
+        {
+          "id": "topic-9a436981f709576e",
+          "title": "Masal Oluşturma ve Sunma",
+          "unit": "Masal Ve Destanlarımız Dersi II · 1. Tema: Masallar II"
+        },
+        {
+          "id": "topic-4aab0beef7f42002",
+          "title": "Destan Türünün Özelliklerini Sorgulama",
+          "unit": "Masal Ve Destanlarımız Dersi II · 2. Tema: Doğal Destanlar II"
+        },
+        {
+          "id": "topic-1b6b950f9fcd682f",
+          "title": "Destanda Tahmin ve Anlam Kurma",
+          "unit": "Masal Ve Destanlarımız Dersi II · 2. Tema: Doğal Destanlar II"
+        },
+        {
+          "id": "topic-96f96bfc650e179b",
+          "title": "Doğal Destanın Yapı Unsurlarını ve Motiflerini İnceleme",
+          "unit": "Masal Ve Destanlarımız Dersi II · 2. Tema: Doğal Destanlar II"
+        },
+        {
+          "id": "topic-e9b9957ce860383e",
+          "title": "Doğal Destanın İletileri ve Değerleri Üzerine Çıkarım Yapma",
+          "unit": "Masal Ve Destanlarımız Dersi II · 2. Tema: Doğal Destanlar II"
+        },
+        {
+          "id": "topic-6b9ab1bd74f39c9a",
+          "title": "Doğal Destanların Araştırılması ve Kayda Geçirilmesi",
+          "unit": "Masal Ve Destanlarımız Dersi II · 2. Tema: Doğal Destanlar II"
+        },
+        {
+          "id": "topic-d613dbb5318c5651",
+          "title": "Destansal Kahraman Oluşturma ve Sunma",
+          "unit": "Masal Ve Destanlarımız Dersi II · 2. Tema: Doğal Destanlar II"
+        },
+        {
+          "id": "topic-6a2092ada6c1bc9f",
+          "title": "Yapma Destan Türünün Özelliklerini Sorgulama",
+          "unit": "Masal Ve Destanlarımız Dersi II · 3. Tema: Yapma Destanlar II"
+        },
+        {
+          "id": "topic-cf5b2e9408eba9c3",
+          "title": "Yapma Destanda İleti ve Anlam Kurma",
+          "unit": "Masal Ve Destanlarımız Dersi II · 3. Tema: Yapma Destanlar II"
+        },
+        {
+          "id": "topic-cda6c87a21336de5",
+          "title": "Yapma Destanın Yapı Unsurlarını İnceleme",
+          "unit": "Masal Ve Destanlarımız Dersi II · 3. Tema: Yapma Destanlar II"
+        },
+        {
+          "id": "topic-7aec6c70293c416f",
+          "title": "Yapma Destanları Okuma ve Karşılaştırma",
+          "unit": "Masal Ve Destanlarımız Dersi II · 3. Tema: Yapma Destanlar II"
+        },
+        {
+          "id": "topic-bb76e24547b9169e",
+          "title": "Yapma Destanlarda Millî Bilinç ve Tarihsel Bellek",
+          "unit": "Masal Ve Destanlarımız Dersi II · 3. Tema: Yapma Destanlar II"
+        },
+        {
+          "id": "topic-e660ab02009bf414",
+          "title": "Yapma Destan Oluşturma ve Sunma",
+          "unit": "Masal Ve Destanlarımız Dersi II · 3. Tema: Yapma Destanlar II"
+        }
+      ]
+    },
+    {
+      "id": "course-1",
+      "name": "Matematik",
+      "model": "standard",
+      "topicRecords": 20,
+      "readyTopics": 20,
+      "questionRecords": 199,
+      "distinctQuestionPrompts": 199,
+      "missingTopics": []
+    },
+    {
+      "id": "course-9",
+      "name": "Müzik",
+      "model": "standard",
+      "topicRecords": 15,
+      "readyTopics": 15,
+      "questionRecords": 90,
+      "distinctQuestionPrompts": 66,
+      "missingTopics": []
+    },
+    {
+      "id": "meb-course-80",
+      "name": "Okuma Becerileri",
+      "model": "elective",
+      "topicRecords": 13,
+      "readyTopics": 1,
+      "questionRecords": 6,
+      "distinctQuestionPrompts": 6,
+      "missingTopics": [
+        {
+          "id": "topic-26e6fd9b0b3ad5be",
+          "title": "Anlam Kurma",
+          "unit": "1. Öğrenme Alanı: Okuma Süreçleri"
+        },
+        {
+          "id": "topic-64d427daef72b75f",
+          "title": "Söz Varlığını Geliştirme",
+          "unit": "1. Öğrenme Alanı: Okuma Süreçleri"
+        },
+        {
+          "id": "topic-dc87270167ac38da",
+          "title": "Metnin Yapısını ve İlişkilerini Çözümleme",
+          "unit": "1. Öğrenme Alanı: Okuma Süreçleri"
+        },
+        {
+          "id": "topic-58e956c2925f043b",
+          "title": "Bilgiye Dayalı Okuma",
+          "unit": "2. Öğrenme Alanı: Stratejik Okuma"
+        },
+        {
+          "id": "topic-3620c264177e1513",
+          "title": "Görselle Anlam Kurma",
+          "unit": "2. Öğrenme Alanı: Stratejik Okuma"
+        },
+        {
+          "id": "topic-310cba4bc9c5201d",
+          "title": "Çevrim İçi Okuma",
+          "unit": "3. Öğrenme Alanı: Dijital Ve Çevrim İçi Okuma"
+        },
+        {
+          "id": "topic-70f470305b4c4f9a",
+          "title": "Dijital Kaynak Seçimi",
+          "unit": "3. Öğrenme Alanı: Dijital Ve Çevrim İçi Okuma"
+        },
+        {
+          "id": "topic-c3e4fd6e5751108e",
+          "title": "Dijital Bilgiyle Anlam Oluşturma",
+          "unit": "3. Öğrenme Alanı: Dijital Ve Çevrim İçi Okuma"
+        },
+        {
+          "id": "topic-4a2aae6993de8f33",
+          "title": "Okuma Kültürü",
+          "unit": "4. Öğrenme Alanı: Okuma Kültürü Geliştirme"
+        },
+        {
+          "id": "topic-9c08b383f46f7fba",
+          "title": "Okur Kimliği",
+          "unit": "4. Öğrenme Alanı: Okuma Kültürü Geliştirme"
+        },
+        {
+          "id": "topic-3bc01e4c735767d2",
+          "title": "Okuma Planı Oluşturma",
+          "unit": "4. Öğrenme Alanı: Okuma Kültürü Geliştirme"
+        },
+        {
+          "id": "topic-0510bf6cb50fc1f0",
+          "title": "Okuma Günlüğü",
+          "unit": "4. Öğrenme Alanı: Okuma Kültürü Geliştirme"
+        }
+      ]
+    },
+    {
+      "id": "meb-course-81",
+      "name": "Oyun ve Oyun Etkinlikleri (Drama)",
+      "model": "elective",
+      "topicRecords": 14,
+      "readyTopics": 1,
+      "questionRecords": 6,
+      "distinctQuestionPrompts": 6,
+      "missingTopics": [
+        {
+          "id": "topic-4c64031071bd48b2",
+          "title": "Duyuları Etkin Kullanma Uyum Çalışmaları Güven Çalışmaları Ritim Çalışmaları",
+          "unit": "1. Düzey Oyun Ve Oyun Etkinlikleri Dersi Öğretim Programı Drama Modülü · 2. Ünite: Duyu, Uyum Ve Güven"
+        },
+        {
+          "id": "topic-9cec9056e3bfa5a0",
+          "title": "Drama ve Oyun İlişkisi Dramada Adil Oyun Anlayışı",
+          "unit": "1. Düzey Oyun Ve Oyun Etkinlikleri Dersi Öğretim Programı Drama Modülü · 3. Ünite: Drama Ve Oyun"
+        },
+        {
+          "id": "topic-330ae8e4f29e44b6",
+          "title": "Rol Oynama ve Doğaçlama Rol Oynama ve Doğaçlama Teknikleri Edebî Türlerden Yararlanarak Rol Oynama Doğaçlamalardan Edebî Metin Oluşturma",
+          "unit": "1. Düzey Oyun Ve Oyun Etkinlikleri Dersi Öğretim Programı Drama Modülü · 4. Ünite: Rol Oynama Ve Doğaçlama"
+        },
+        {
+          "id": "topic-eaf85860a95c80f3",
+          "title": "Drama ve Maske İlişkisi Drama ve Kukla İlişkisi Drama ve Görsel Sanatlar İlişkisi Drama Yoluyla Görsel Sanat Ürünü Oluşturma",
+          "unit": "1. Düzey Oyun Ve Oyun Etkinlikleri Dersi Öğretim Programı Drama Modülü · 5. Ünite: Drama Ve Diğer Sanatlar"
+        },
+        {
+          "id": "topic-654561f593d72c85",
+          "title": "Drama ve Toplumsal Yaşam İlişkisi Drama ile Toplumsal Farkındalık ve Duyarlılık İlişkisi",
+          "unit": "1. Düzey Oyun Ve Oyun Etkinlikleri Dersi Öğretim Programı Drama Modülü · 6. Ünite: Drama Ve Toplum"
+        },
+        {
+          "id": "topic-159a6175a5c3db46",
+          "title": "Drama ve Okul Dışı Öğrenme Ortamları",
+          "unit": "1. Düzey Oyun Ve Oyun Etkinlikleri Dersi Öğretim Programı Drama Modülü · 7. Ünite: Drama Ve Okul Dışı Öğrenme Ortamları"
+        },
+        {
+          "id": "topic-f3aed67fe5d70b7a",
+          "title": "Dramayla Tanışma Dramayla Mekânı Tanıma Grup Etkileşimi",
+          "unit": "2. Düzey Oyun Ve Oyun Etkinlikleri Dersi Öğretim Programı Drama Modülü · 1. Ünite: Drama İle Tanışma"
+        },
+        {
+          "id": "topic-dbe827d521312f29",
+          "title": "Duyuları Etkin Kullanma Uyum Çalışmaları Güven Çalışmaları Güveni Etkileyen Faktörler Ritim Çalışmaları",
+          "unit": "2. Düzey Oyun Ve Oyun Etkinlikleri Dersi Öğretim Programı Drama Modülü · 2. Ünite: Duyu, Uyum Ve Güven"
+        },
+        {
+          "id": "topic-f4db428c3550c4da",
+          "title": "Oyun İçinde Strateji Geliştirme Kurallı Oyunlar Oyun, Rol ve Yaşam İlişkisi Dramada Adil Oyun Anlayışı",
+          "unit": "2. Düzey Oyun Ve Oyun Etkinlikleri Dersi Öğretim Programı Drama Modülü · 3. Ünite: Drama Ve Oyun"
+        },
+        {
+          "id": "topic-00c989373142d648",
+          "title": "Rol Oynama ve Doğaçlama Rol Oynama ve Doğaçlama Teknikleri Metinsel Türlerden Yararlanarak Rol Oynama Doğaçlamalardan Metin Oluşturma",
+          "unit": "2. Düzey Oyun Ve Oyun Etkinlikleri Dersi Öğretim Programı Drama Modülü · 4. Ünite: Rol Oynama Ve Doğaçlama"
+        },
+        {
+          "id": "topic-37e9a09af2a0e3ed",
+          "title": "Drama ve Tuluat, Meddah İlişkisi Drama ve Maske İlişkisi Drama ve Kukla İlişkisi Drama ve Görsel Sanatlar İlişkisi Drama Yoluyla Görsel Sanat Ürünü Oluşturma Drama ve Heykel İlişkisi",
+          "unit": "2. Düzey Oyun Ve Oyun Etkinlikleri Dersi Öğretim Programı Drama Modülü · 5. Ünite: Drama Ve Diğer Sanatlar"
+        },
+        {
+          "id": "topic-88a928217ee512b6",
+          "title": "Drama ve Toplumsal Yaşam İlişkisi Drama ile Toplumsal Farkındalık ve Duyarlılık İlişkisi Toplumsal Durumlardan Doğaçlamalar Oluşturma",
+          "unit": "2. Düzey Oyun Ve Oyun Etkinlikleri Dersi Öğretim Programı Drama Modülü · 6. Ünite: Drama Ve Toplum"
+        },
+        {
+          "id": "topic-681d67671ed9bdef",
+          "title": "Drama ve Okul Dışı Öğrenme Ortamları",
+          "unit": "2. Düzey Oyun Ve Oyun Etkinlikleri Dersi Öğretim Programı Drama Modülü · 7. Ünite: Drama Ve Okul Dışı Öğrenme Ortamları"
+        }
+      ]
+    },
+    {
+      "id": "meb-course-82",
+      "name": "Oyun ve Oyun Etkinlikleri (Geleneksel Oyunlar)",
+      "model": "elective",
+      "topicRecords": 10,
+      "readyTopics": 1,
+      "questionRecords": 6,
+      "distinctQuestionPrompts": 6,
+      "missingTopics": [
+        {
+          "id": "topic-b5202652c91db657",
+          "title": "Geleneksel Oyunlar ile Günümüzde Oynanan Oyunları Karşılaştırma",
+          "unit": "1. Tema"
+        },
+        {
+          "id": "topic-daa2a3888ab93e61",
+          "title": "Geleneksel Oyunlarda Hareket Becerileri",
+          "unit": "1. Tema"
+        },
+        {
+          "id": "topic-d045d77153d75e06",
+          "title": "Geleneksel Oyunlarda Taktik ve Stratejiler",
+          "unit": "1. Tema"
+        },
+        {
+          "id": "topic-a741c207cf04194c",
+          "title": "Geleneksel Oyunlar Aracılığıyla Fiziksel Aktiviteye Katılma",
+          "unit": "2. Tema"
+        },
+        {
+          "id": "topic-9df471e1fb56aa6d",
+          "title": "Geleneksel Oyunların Kişisel ve Sosyal Gelişime Etkisi",
+          "unit": "2. Tema"
+        },
+        {
+          "id": "topic-2261e7bfb7408f7b",
+          "title": "Geleneksel Oyunlarda Adil Oyun Anlayışı",
+          "unit": "2. Tema"
+        },
+        {
+          "id": "topic-6b497f456348159e",
+          "title": "Geleneksel Oyun Etkinliklerinde Liderlik",
+          "unit": "2. Tema"
+        },
+        {
+          "id": "topic-4edc80fe09606868",
+          "title": "Geleneksel Oyunların Toplumsal ve Kültürel Yaşamdaki Önemi",
+          "unit": "3.Tema"
+        },
+        {
+          "id": "topic-41c53b67f1a66098",
+          "title": "Geleneksel Oyunlardaki Hareket Becerileri",
+          "unit": "3.Tema"
+        }
+      ]
+    },
+    {
+      "id": "meb-course-83",
+      "name": "Oyun ve Oyun Etkinlikleri (Satranç)",
+      "model": "elective",
+      "topicRecords": 12,
+      "readyTopics": 1,
+      "questionRecords": 6,
+      "distinctQuestionPrompts": 6,
+      "missingTopics": [
+        {
+          "id": "topic-06705ca5efc31f6c",
+          "title": "Satrançta Açma Satranç Saati Saldırının Oyuna Etkisi",
+          "unit": "10.Tema: Açmaz, Saldırı Ve Satranç Saati"
+        },
+        {
+          "id": "topic-ada5f64dc2699cf9",
+          "title": "Satrançta Beraberlik Yetersiz Güç Pat Durumu Satrançta Açılış ve Açılış İlkeleri",
+          "unit": "11.Tema: Satrançta Beraberlik Ve Açılış"
+        },
+        {
+          "id": "topic-c6f6ea686e800fb4",
+          "title": "Dünyada veTürkiye’de Satranç Çevrimiçi Satranç",
+          "unit": "12.Tema: Satranç Kültürü"
+        },
+        {
+          "id": "topic-e73619ce1ef667c8",
+          "title": "Satranç Tahtasının Özellikleri Satranç Tahtasını Yerleştirme Kare İsimlendirme Merkez Kareler",
+          "unit": "2.Tema: Satranç Tahtası"
+        },
+        {
+          "id": "topic-776c10c489872e5f",
+          "title": "Satranç Taşları ve Özellikleri Satrançta Taş Alma",
+          "unit": "3.Tema: Satranç Taşları Ve Hareketleri"
+        },
+        {
+          "id": "topic-14e0653ea51ae6a6",
+          "title": "Satrançta Hamle Taş İsteme Hamlesi Rakip taşı isteme Satrançta Tehditı Örtü Konumu Tehdit oluşturma",
+          "unit": "4.Tema: Taş İsteme"
+        },
+        {
+          "id": "topic-60f234adb273df6e",
+          "title": "Şah Çekme ve Teknikleri Şahı Koruma Mat Durumu Mattan Korunma",
+          "unit": "5.Tema: Şah Ve Mat"
+        },
+        {
+          "id": "topic-b5ed702af6e2d6cb",
+          "title": "Satrançta Hücum Çatal Hamlesi Satrançta Savunma Şiş Hamlesi",
+          "unit": "6.Tema: Satrançta Hücum Ve Savunma"
+        },
+        {
+          "id": "topic-159a5f6fe49d8758",
+          "title": "Temel Matlar Opozisyon ve Önemi Bir ve İki Hamlelik Matlar",
+          "unit": "7.Tema: Basit Matlar Opozisyon Ve İki Hamlelik Matlar"
+        },
+        {
+          "id": "topic-1e99b668caefeab2",
+          "title": "Taşların Gücü Taş Fedası Satrançta Taş Değişimi",
+          "unit": "8.Tema: Taş Değişimleri Ve Feda"
+        },
+        {
+          "id": "topic-c9caf95f48d97d22",
+          "title": "Rok hamlesi ve amacı Piyonu terfi ettirme Satrançta puanlama Rok hamlesinin yapılamayacağı durumlar Adil oyun anlayışı Notasyon kâğıdı ve Hamle yazımı",
+          "unit": "9.Tema: Kurallar Ve Puanlama"
+        }
+      ]
+    },
+    {
+      "id": "meb-course-84",
+      "name": "Oyun ve Oyun Etkinlikleri (Zekâ Oyunları)",
+      "model": "elective",
+      "topicRecords": 21,
+      "readyTopics": 1,
+      "questionRecords": 6,
+      "distinctQuestionPrompts": 6,
+      "missingTopics": [
+        {
+          "id": "topic-85150e7bf1711b7d",
+          "title": "Soma Küpleri",
+          "unit": "1. Düzey · 1.Tema: Geometrik-Mekanik Oyunlar"
+        },
+        {
+          "id": "topic-38b83e57a725dac5",
+          "title": "Birim Küpler",
+          "unit": "1. Düzey · 1.Tema: Geometrik-Mekanik Oyunlar"
+        },
+        {
+          "id": "topic-5cc87037d9f28c34",
+          "title": "Mekanik Ayırma Oyunları",
+          "unit": "1. Düzey · 1.Tema: Geometrik-Mekanik Oyunlar"
+        },
+        {
+          "id": "topic-172daa36debdeee7",
+          "title": "Şekil Oluşturma Oyunları",
+          "unit": "1. Düzey · 1.Tema: Geometrik-Mekanik Oyunlar"
+        },
+        {
+          "id": "topic-4522494bb61d2be7",
+          "title": "Tetramino",
+          "unit": "1. Düzey · 1.Tema: Geometrik-Mekanik Oyunlar"
+        },
+        {
+          "id": "topic-b75c809b4e2d005a",
+          "title": "Domino",
+          "unit": "1. Düzey · 1.Tema: Geometrik-Mekanik Oyunlar"
+        },
+        {
+          "id": "topic-636c80ca04bb6c4a",
+          "title": "Tromino",
+          "unit": "1. Düzey · 1.Tema: Geometrik-Mekanik Oyunlar"
+        },
+        {
+          "id": "topic-cacbf70ee6f06a79",
+          "title": "Rubik küp",
+          "unit": "1. Düzey · 1.Tema: Geometrik-Mekanik Oyunlar"
+        },
+        {
+          "id": "topic-95bcf35273002212",
+          "title": "Pentomino geometrik şekil, mekanik oyun, üç boyut, örüntü OOEZO.1.1.1 Labirentler Düğüm Oyunları Mikado Küp Sayma Oyunları Yapbozlar",
+          "unit": "1. Düzey · 1.Tema: Geometrik-Mekanik Oyunlar"
+        },
+        {
+          "id": "topic-e025fc2d075915a1",
+          "title": "Anagram, Kelime Yerleştirme ,Sözcük Yerleştirme, Şifre Oyunları, Sözcük Gruplama,Kelime Ağı,Kelime Avı",
+          "unit": "1. Düzey · 2.Tema: Sözel Oyunlar"
+        },
+        {
+          "id": "topic-7b04f049be1b214d",
+          "title": "3. Tema Akıl Yürütme Ve İşlem Oyunları",
+          "unit": "1. Düzey · 3. Tema Akıl Yürütme Ve İşlem Oyunları"
+        },
+        {
+          "id": "topic-989144b792fd07f7",
+          "title": "Go Mangala Üçtaş Tic-Tac-Toe Dokuztaş Hedef5 Kulami Nim Pentago Koridor Reversi Dama",
+          "unit": "1. Düzey · 4.Tema: Strateji Oyunları"
+        },
+        {
+          "id": "topic-882174ccd7f6aa64",
+          "title": "Fark Bulma Oyunları Yön Bulma Resim Hatırlama Nesneyi Tanıma Saklı Objeleri Bulma Resim Eşleme Oyunları",
+          "unit": "1. Düzey · 5.Tema: Hafıza Oyunları"
+        },
+        {
+          "id": "topic-831db08b68bfa284",
+          "title": "Kibrit Çöpleri Yalancı-Doğrucu Kurt, Kuzu ve Ot",
+          "unit": "1. Düzey · 6.Tema: Zekâ Soruları"
+        },
+        {
+          "id": "topic-9bfd727f516c6077",
+          "title": "1.Tema: Geometrik-Mekanik Oyunlar",
+          "unit": "2. Düzey · 1.Tema: Geometrik-Mekanik Oyunlar"
+        },
+        {
+          "id": "topic-686afe1dae96c1c6",
+          "title": "Anagram Kelime Yerleştirme Sözcük Yerleştirme Şifre Oyunları Sözcük Gruplama Kelime Ağı Kelime Avı",
+          "unit": "2. Düzey · 2.Tema: Sözel Oyunlar"
+        },
+        {
+          "id": "topic-d455f30bd69aa5ab",
+          "title": "3.Tema: Akıl Yürütme Ve İşlem Oyunları",
+          "unit": "2. Düzey · 3.Tema: Akıl Yürütme Ve İşlem Oyunları"
+        },
+        {
+          "id": "topic-9e4b881ac227e0ea",
+          "title": "Go Mangala Üçtaş Tic-Tac-Toe Dokuztaş Hedef5 Kulami Nim Pentago Koridor Reversi Dama",
+          "unit": "2. Düzey · 4.Tema: Strateji Oyunları"
+        },
+        {
+          "id": "topic-00cbdf0d9bd3c0cb",
+          "title": "Fark Bulma Oyunları Yön Bulma Resim Hatırlama Nesneyi Tanıma Saklı Objeleri Bulma Resim Eşleme Oyunları",
+          "unit": "2. Düzey · 5.Tema: Hafıza Oyunları"
+        },
+        {
+          "id": "topic-982084961766a30f",
+          "title": "Kibrit Çöpleri Yalancı-Doğrucu Kurt, Kuzu ve Ot",
+          "unit": "2. Düzey · 6.Tema: Zekâ Soruları"
+        }
+      ]
+    },
+    {
+      "id": "meb-course-11",
+      "name": "Peygamberimizin Hayatı",
+      "model": "elective",
+      "topicRecords": 12,
+      "readyTopics": 1,
+      "questionRecords": 6,
+      "distinctQuestionPrompts": 6,
+      "missingTopics": [
+        {
+          "id": "topic-16236c114ca54e6f",
+          "title": "Peygamberimizin Doğumu",
+          "unit": "1. Ünite: Çocukluk Yıllarında Peygamberimiz"
+        },
+        {
+          "id": "topic-8f9857505760e73c",
+          "title": "Peygamberimizin Çocukluğu",
+          "unit": "1. Ünite: Çocukluk Yıllarında Peygamberimiz"
+        },
+        {
+          "id": "topic-04272698a74b05fb",
+          "title": "Peygamberimizin Çocuklarla İletişimi",
+          "unit": "2. Ünite: Peygamberimizin Çevresindeki Çocuklar"
+        },
+        {
+          "id": "topic-ddad8148df536410",
+          "title": "Çocukların Dünyasında Peygamberimiz",
+          "unit": "2. Ünite: Peygamberimizin Çevresindeki Çocuklar"
+        },
+        {
+          "id": "topic-3ccd847bc0439270",
+          "title": "Peygamberimizin Yanında Yetişen Çocuklar",
+          "unit": "2. Ünite: Peygamberimizin Çevresindeki Çocuklar"
+        },
+        {
+          "id": "topic-1009da06694016a2",
+          "title": "Peygamberimizin Temizlik Adabı",
+          "unit": "3. Ünite: Rehberim Peygamberim"
+        },
+        {
+          "id": "topic-233c6ec35ac8cc30",
+          "title": "Peygamberimizin Yeme İçme Adabı",
+          "unit": "3. Ünite: Rehberim Peygamberim"
+        },
+        {
+          "id": "topic-dd9cd50dd17035dc",
+          "title": "Peygamberimizin Giyim Kuşam Adabı",
+          "unit": "3. Ünite: Rehberim Peygamberim"
+        },
+        {
+          "id": "topic-89dd992ec25239d1",
+          "title": "Eş Olarak Peygamberimiz",
+          "unit": "4. Ünite: Aile Hayatında Peygamberimiz"
+        },
+        {
+          "id": "topic-6d44de1d4dc2d6f9",
+          "title": "Baba Olarak Peygamberimiz",
+          "unit": "4. Ünite: Aile Hayatında Peygamberimiz"
+        },
+        {
+          "id": "topic-736b45654dbf4c5a",
+          "title": "Dede Olarak Peygamberimiz",
+          "unit": "4. Ünite: Aile Hayatında Peygamberimiz"
+        }
+      ]
+    },
+    {
+      "id": "meb-course-85",
+      "name": "Proje Tasarımı ve Uygulamaları",
+      "model": "elective",
+      "topicRecords": 17,
+      "readyTopics": 1,
+      "questionRecords": 6,
+      "distinctQuestionPrompts": 6,
+      "missingTopics": [
+        {
+          "id": "topic-95ab0df0509760f8",
+          "title": "Güvenilir Bilgi Kaynakları",
+          "unit": "1. Ünite: Bilim, Bilgi, Araştırma Ve Proje"
+        },
+        {
+          "id": "topic-658b4b3264d2d6da",
+          "title": "Proje Türleri",
+          "unit": "2. Ünite: Proje Türleri"
+        },
+        {
+          "id": "topic-4d9b83392a524c1a",
+          "title": "Proje Türleri Arasındaki Benzerlik ve Farklılıklar",
+          "unit": "2. Ünite: Proje Türleri"
+        },
+        {
+          "id": "topic-ade06f73a6836474",
+          "title": "Girişimcilik Kavramı ve Girişimci Bireyin Özellikleri",
+          "unit": "3. Ünite: Proje Yaşam Döngüsü"
+        },
+        {
+          "id": "topic-1afd5d6b73bd62bc",
+          "title": "Proje Yazım Sürecinin Temel Unsurları",
+          "unit": "3. Ünite: Proje Yaşam Döngüsü"
+        },
+        {
+          "id": "topic-1ebc8c40e6ad4f5e",
+          "title": "Proje Destek Programları ve Başvuru Sürecinin Aşamaları",
+          "unit": "3. Ünite: Proje Yaşam Döngüsü"
+        },
+        {
+          "id": "topic-8022cee18c476751",
+          "title": "Proje Uygulama Süreci ve Görev Dağılımı",
+          "unit": "4. Ünite: Proje Süreci"
+        },
+        {
+          "id": "topic-35c74d1cdbec41dc",
+          "title": "Süreç İzleme, Zaman Yönetimi ve Problem Çözme",
+          "unit": "4. Ünite: Proje Süreci"
+        },
+        {
+          "id": "topic-dfae5ba2497f6447",
+          "title": "Proje Çıktısının Değerlendirilmesi ve Raporlanması",
+          "unit": "4. Ünite: Proje Süreci"
+        },
+        {
+          "id": "topic-0df89b85545080fa",
+          "title": "Proje Sunum Teknikleri ve İletişim Becerileri",
+          "unit": "5. Ünite: Proje Sunumu"
+        },
+        {
+          "id": "topic-493f87ee99927fa6",
+          "title": "Proje Sonuçlarının Paylaşımı ve Yaygınlaştırılması",
+          "unit": "5. Ünite: Proje Sunumu"
+        },
+        {
+          "id": "topic-53aa720b2d1de594",
+          "title": "Projenin Etkisinin Değerlendirilmesi ve Sürdürülebilirliği",
+          "unit": "5. Ünite: Proje Sunumu"
+        },
+        {
+          "id": "topic-2fcbac52b5278898",
+          "title": "Fikrî ve Sınai Mülkiyet Hakları",
+          "unit": "6. Ünite: Projede Yaygın Etki"
+        },
+        {
+          "id": "topic-e16011b1e9130ec7",
+          "title": "Proje Deneyiminden Çıkarım Yapma ve Yeni Proje Fikirleri Geliştirme",
+          "unit": "6. Ünite: Projede Yaygın Etki"
+        },
+        {
+          "id": "topic-afe4888721a62bf1",
+          "title": "Yaygın Etki Kavramı",
+          "unit": "6. Ünite: Projede Yaygın Etki"
+        },
+        {
+          "id": "topic-81da954c8d41a56f",
+          "title": "Telif ve İntihal",
+          "unit": "6. Ünite: Projede Yaygın Etki"
+        }
+      ]
+    },
+    {
+      "id": "guidance",
+      "name": "Rehberlik ve Yönlendirme",
+      "model": "standard",
+      "topicRecords": 0,
+      "readyTopics": 0,
+      "questionRecords": 0,
+      "distinctQuestionPrompts": 0,
+      "missingTopics": []
+    },
+    {
+      "id": "meb-course-86",
+      "name": "Robotik Kodlama",
+      "model": "elective",
+      "topicRecords": 18,
+      "readyTopics": 1,
+      "questionRecords": 6,
+      "distinctQuestionPrompts": 6,
+      "missingTopics": [
+        {
+          "id": "topic-1ee95eb78bbb19ea",
+          "title": "Robotik Uygulamaların Günlük Hayata Etkisi",
+          "unit": "1. Düzey · 1. Tema: Robotik Sistemlere Giriş Ve Temel Programlama"
+        },
+        {
+          "id": "topic-a7401e59fe062d54",
+          "title": "Problem Çözümünde Algoritmik Düşünebilme",
+          "unit": "1. Düzey · 1. Tema: Robotik Sistemlere Giriş Ve Temel Programlama"
+        },
+        {
+          "id": "topic-e4dd47dffd2707ae",
+          "title": "Çevrim içi Robotik Kodlama Ortamlarını Tanıma",
+          "unit": "1. Düzey · 2. Tema: Robotik Sistem Geliştirme Ortamları Ve Bileşenleri"
+        },
+        {
+          "id": "topic-05c133f2cd1951c9",
+          "title": "Robotik Uygulama Bileşenlerini Tanıma",
+          "unit": "1. Düzey · 2. Tema: Robotik Sistem Geliştirme Ortamları Ve Bileşenleri"
+        },
+        {
+          "id": "topic-0d77a80093e9414c",
+          "title": "Çevrim İçi Benzetim Araçlarını Kullanarak Robotik Devre Tasarımı",
+          "unit": "1. Düzey · 3. Tema: Robotik Devre Tasarımı"
+        },
+        {
+          "id": "topic-6f8dc34e083663d3",
+          "title": "Fiziksel (Gerçek) Ortamda Robotik Devre Tasarımı",
+          "unit": "1. Düzey · 3. Tema: Robotik Devre Tasarımı"
+        },
+        {
+          "id": "topic-7a12453d05abfbf3",
+          "title": "Blok Tabanlı Ortamda Program Hazırlama ve Test Etme",
+          "unit": "1. Düzey · 3. Tema: Robotik Devre Tasarımı"
+        },
+        {
+          "id": "topic-4abcd5bf7833a174",
+          "title": "Giriş Düzeyi Robotik Uygulamaları",
+          "unit": "1. Düzey · 4. Tema: Farklı Düzeylerde Robotik Uygulamalar"
+        },
+        {
+          "id": "topic-6f907198c823669f",
+          "title": "Orta Düzey Robotik Uygulamaları",
+          "unit": "1. Düzey · 4. Tema: Farklı Düzeylerde Robotik Uygulamalar"
+        },
+        {
+          "id": "topic-0f8930433fa3c2ab",
+          "title": "Robotikte Yapay Zekâ (AI) Uygulamaları",
+          "unit": "2. Düzey · 1. Tema: Robotik Sistemlere Giriş Ve Temel Programlama"
+        },
+        {
+          "id": "topic-e35c5d0a2f92221e",
+          "title": "İleri Düzey Robotik Uygulamaların Günlük Hayata Etkisi",
+          "unit": "2. Düzey · 1. Tema: Robotik Sistemlere Giriş Ve Temel Programlama"
+        },
+        {
+          "id": "topic-3a16be08dd83da86",
+          "title": "Problem Çözümünde İleri Seviyede Algoritmik Düşünebilme",
+          "unit": "2. Düzey · 1. Tema: Robotik Sistemlere Giriş Ve Temel Programlama"
+        },
+        {
+          "id": "topic-94ac46f42e9e231a",
+          "title": "Çevrimdışı Robotik Kodlama Ortamlarını Tanıma",
+          "unit": "2. Düzey · 2. Tema: Robotik Sistem Geliştirme Ortamları Ve Bileşenleri"
+        },
+        {
+          "id": "topic-76d85345d877d8bd",
+          "title": "Robotik Uygulama Bileşenlerini Tanıma",
+          "unit": "2. Düzey · 2. Tema: Robotik Sistem Geliştirme Ortamları Ve Bileşenleri"
+        },
+        {
+          "id": "topic-9ef03430e59ccba4",
+          "title": "Çevrimdışı Blok Tabanlı Program Hazırlama ve Test Etme",
+          "unit": "2. Düzey · 3. Tema: Robotik Devre Tasarımı"
+        },
+        {
+          "id": "topic-7eec952775fe7bfa",
+          "title": "Orta Düzey Robotik Uygulamaları",
+          "unit": "2. Düzey · 4. Tema: Farklı Düzeylerde Robotik Uygulamalar"
+        },
+        {
+          "id": "topic-481d2c05186c2533",
+          "title": "İleri Düzey Robotik Uygulamaları",
+          "unit": "2. Düzey · 4. Tema: Farklı Düzeylerde Robotik Uygulamalar"
+        }
+      ]
+    },
+    {
+      "id": "meb-course-87",
+      "name": "Seçmeli Müzik (Bağlama)",
+      "model": "elective",
+      "topicRecords": 0,
+      "readyTopics": 0,
+      "questionRecords": 0,
+      "distinctQuestionPrompts": 0,
+      "missingTopics": []
+    },
+    {
+      "id": "meb-course-88",
+      "name": "Seçmeli Müzik (Genel Müzik Eğitimi)",
+      "model": "elective",
+      "topicRecords": 0,
+      "readyTopics": 0,
+      "questionRecords": 0,
+      "distinctQuestionPrompts": 0,
+      "missingTopics": []
+    },
+    {
+      "id": "meb-course-89",
+      "name": "Seçmeli Müzik (Gitar)",
+      "model": "elective",
+      "topicRecords": 0,
+      "readyTopics": 0,
+      "questionRecords": 0,
+      "distinctQuestionPrompts": 0,
+      "missingTopics": []
+    },
+    {
+      "id": "meb-course-90",
+      "name": "Seçmeli Müzik (Keman)",
+      "model": "elective",
+      "topicRecords": 0,
+      "readyTopics": 0,
+      "questionRecords": 0,
+      "distinctQuestionPrompts": 0,
+      "missingTopics": []
+    },
+    {
+      "id": "meb-course-91",
+      "name": "Seçmeli Müzik (Piyano)",
+      "model": "elective",
+      "topicRecords": 0,
+      "readyTopics": 0,
+      "questionRecords": 0,
+      "distinctQuestionPrompts": 0,
+      "missingTopics": []
+    },
+    {
+      "id": "meb-course-92",
+      "name": "Seçmeli Müzik (Türk Halk Müziği Koro)",
+      "model": "elective",
+      "topicRecords": 0,
+      "readyTopics": 0,
+      "questionRecords": 0,
+      "distinctQuestionPrompts": 0,
+      "missingTopics": []
+    },
+    {
+      "id": "meb-course-93",
+      "name": "Seçmeli Müzik (Ud)",
+      "model": "elective",
+      "topicRecords": 0,
+      "readyTopics": 0,
+      "questionRecords": 0,
+      "distinctQuestionPrompts": 0,
+      "missingTopics": []
+    },
+    {
+      "id": "course-3",
+      "name": "Sosyal Bilgiler",
+      "model": "standard",
+      "topicRecords": 22,
+      "readyTopics": 22,
+      "questionRecords": 134,
+      "distinctQuestionPrompts": 116,
+      "missingTopics": []
+    },
+    {
+      "id": "meb-course-94",
+      "name": "Spor ve Fiziki Etkinlikler",
+      "model": "elective",
+      "topicRecords": 8,
+      "readyTopics": 1,
+      "questionRecords": 6,
+      "distinctQuestionPrompts": 6,
+      "missingTopics": [
+        {
+          "id": "topic-eec22c3eafebbd39",
+          "title": "Spor Branşının Tarihi",
+          "unit": "I. Ünite: Spor Branşımı Öğreniyorum"
+        },
+        {
+          "id": "topic-7252a4f6119123e2",
+          "title": "Spor Branşının Kuralları",
+          "unit": "I. Ünite: Spor Branşımı Öğreniyorum"
+        },
+        {
+          "id": "topic-202dee37a52395a5",
+          "title": "Branşa Özgü Teknik",
+          "unit": "II. Ünite: Spor Branşına Özgü Hareket Becerilerini Öğreniyorum"
+        },
+        {
+          "id": "topic-cac0d3244ca82111",
+          "title": "Branşa Özgü Fiziksel Uygunluk Bileşenleri",
+          "unit": "II. Ünite: Spor Branşına Özgü Hareket Becerilerini Öğreniyorum"
+        },
+        {
+          "id": "topic-2effe7bd63a58854",
+          "title": "Branşa Özgü Taktik ve Strateji",
+          "unit": "III. Ünite: Spor Branşının Taktik Becerilerini Öğreniyorum"
+        },
+        {
+          "id": "topic-c129d37d7448599a",
+          "title": "Seçili Branşta Adil Oyun",
+          "unit": "III. Ünite: Spor Branşının Taktik Becerilerini Öğreniyorum"
+        },
+        {
+          "id": "topic-fda4e3f2e9cb4657",
+          "title": "Takım Sporlarında Liderlik",
+          "unit": "III. Ünite: Spor Branşının Taktik Becerilerini Öğreniyorum"
+        }
+      ]
+    },
+    {
+      "id": "meb-course-154",
+      "name": "Temel Dinî Bilgiler",
+      "model": "elective",
+      "topicRecords": 0,
+      "readyTopics": 0,
+      "questionRecords": 0,
+      "distinctQuestionPrompts": 0,
+      "missingTopics": []
+    },
+    {
+      "id": "meb-course-96",
+      "name": "Temel Yaşam Becerileri",
+      "model": "elective",
+      "topicRecords": 30,
+      "readyTopics": 1,
+      "questionRecords": 6,
+      "distinctQuestionPrompts": 6,
+      "missingTopics": [
+        {
+          "id": "topic-29d860b069622796",
+          "title": "Duygusal Farkındalık ve Duygu Yönetimi",
+          "unit": "Temel Yaşam Becerileri Dersi I. Düzey · 1. Öğrenme Alanı: İletişim Ve Sosyal Beceriler"
+        },
+        {
+          "id": "topic-c732f46c0ac23009",
+          "title": "Sözlü Anlatımda Diksiyonun Rolü",
+          "unit": "Temel Yaşam Becerileri Dersi I. Düzey · 1. Öğrenme Alanı: İletişim Ve Sosyal Beceriler"
+        },
+        {
+          "id": "topic-df697284ffdd5253",
+          "title": "Dijital Ayak İzi",
+          "unit": "Temel Yaşam Becerileri Dersi I. Düzey · 1. Öğrenme Alanı: İletişim Ve Sosyal Beceriler"
+        },
+        {
+          "id": "topic-57a6516d50dc3f1f",
+          "title": "Günlük Temizlik Alışkanlıkları",
+          "unit": "Temel Yaşam Becerileri Dersi I. Düzey · 2. Öğrenme Alanı: Düzenli Bakım, Sağlıklı Yaşam"
+        },
+        {
+          "id": "topic-76e5ecde6a06c099",
+          "title": "Günlük Yaşamda Sağlık ve Hijyen",
+          "unit": "Temel Yaşam Becerileri Dersi I. Düzey · 2. Öğrenme Alanı: Düzenli Bakım, Sağlıklı Yaşam"
+        },
+        {
+          "id": "topic-b0a92727c8caefc6",
+          "title": "Vücut Sağlığı ve Beslenme İlişkisi",
+          "unit": "Temel Yaşam Becerileri Dersi I. Düzey · 2. Öğrenme Alanı: Düzenli Bakım, Sağlıklı Yaşam"
+        },
+        {
+          "id": "topic-8e881eb42a1cd7b2",
+          "title": "Günlük Yaşam Etkinlikleri Planlama",
+          "unit": "Temel Yaşam Becerileri Dersi I. Düzey · 3. Öğrenme Alanı: Güvenli Ev, Düzenli Yaşam"
+        },
+        {
+          "id": "topic-cfb90907bac1f80f",
+          "title": "Ev Güvenliği Konusunda Farkındalık Kazanma",
+          "unit": "Temel Yaşam Becerileri Dersi I. Düzey · 3. Öğrenme Alanı: Güvenli Ev, Düzenli Yaşam"
+        },
+        {
+          "id": "topic-38f81756c2037663",
+          "title": "Ev İçi Görev ve Sorumluluklar",
+          "unit": "Temel Yaşam Becerileri Dersi I. Düzey · 3. Öğrenme Alanı: Güvenli Ev, Düzenli Yaşam"
+        },
+        {
+          "id": "topic-d75f3223ad53d4e6",
+          "title": "Düzenli Bir Yaşam Alanı Oluşturma",
+          "unit": "Temel Yaşam Becerileri Dersi I. Düzey · 3. Öğrenme Alanı: Güvenli Ev, Düzenli Yaşam"
+        },
+        {
+          "id": "topic-3851d997c6dcc94f",
+          "title": "Sürdürülebilirlik Bilinci",
+          "unit": "Temel Yaşam Becerileri Dersi I. Düzey · 4. Öğrenme Alanı: Bilinçli Tüketim, Sürdürülebilir Yaşam"
+        },
+        {
+          "id": "topic-789712cbcafd0ab0",
+          "title": "Doğa Dostu Ürünler",
+          "unit": "Temel Yaşam Becerileri Dersi I. Düzey · 4. Öğrenme Alanı: Bilinçli Tüketim, Sürdürülebilir Yaşam"
+        },
+        {
+          "id": "topic-3ed1f419fefbaa2f",
+          "title": "Gıda, Su ve Enerji Tasarrufu",
+          "unit": "Temel Yaşam Becerileri Dersi I. Düzey · 4. Öğrenme Alanı: Bilinçli Tüketim, Sürdürülebilir Yaşam"
+        },
+        {
+          "id": "topic-3c894724f165460f",
+          "title": "Alışverişte Bütçe Planlamas",
+          "unit": "Temel Yaşam Becerileri Dersi I. Düzey · 4. Öğrenme Alanı: Bilinçli Tüketim, Sürdürülebilir Yaşam"
+        },
+        {
+          "id": "topic-c22daf62c2b19342",
+          "title": "Aile İçi İletişim",
+          "unit": "Temel Yaşam Becerileri Dersi II. Düzey · 1. Öğrenme Alanı: İletişim Ve Sosyal Beceriler"
+        },
+        {
+          "id": "topic-90dd5da44b03dcad",
+          "title": "İletişimde Beden Dili ve Sözsüz İletişim",
+          "unit": "Temel Yaşam Becerileri Dersi II. Düzey · 1. Öğrenme Alanı: İletişim Ve Sosyal Beceriler"
+        },
+        {
+          "id": "topic-db6bba20af89a185",
+          "title": "Rol Modelin Etkisi",
+          "unit": "Temel Yaşam Becerileri Dersi II. Düzey · 1. Öğrenme Alanı: İletişim Ve Sosyal Beceriler"
+        },
+        {
+          "id": "topic-9a53fe435d900cfb",
+          "title": "Dijital Paylaşımların Bireysel ve Toplumsal Etkileri",
+          "unit": "Temel Yaşam Becerileri Dersi II. Düzey · 1. Öğrenme Alanı: İletişim Ve Sosyal Beceriler"
+        },
+        {
+          "id": "topic-00a9bcbe7bc1d0a5",
+          "title": "Gelişime Özgü Sağlık, Hijyen ve Beden Değişimleri",
+          "unit": "Temel Yaşam Becerileri Dersi II. Düzey · 2. Öğrenme Alanı: Düzenli Bakım, Sağlıklı Yaşam"
+        },
+        {
+          "id": "topic-ce12f896ba95039c",
+          "title": "Spor ve Oyun Süreçlerinde Hijyen",
+          "unit": "Temel Yaşam Becerileri Dersi II. Düzey · 2. Öğrenme Alanı: Düzenli Bakım, Sağlıklı Yaşam"
+        },
+        {
+          "id": "topic-bc754bccf8554e7a",
+          "title": "Sağlık ve Hijyenle İlgili Günlük Yaşam Sorunları",
+          "unit": "Temel Yaşam Becerileri Dersi II. Düzey · 2. Öğrenme Alanı: Düzenli Bakım, Sağlıklı Yaşam"
+        },
+        {
+          "id": "topic-6dd166c31cef04ff",
+          "title": "Zaman Yönetiminde Dijital Araçlar",
+          "unit": "Temel Yaşam Becerileri Dersi II. Düzey · 3. Öğrenme Alanı: Güvenli Ev, Düzenli Yaşam"
+        },
+        {
+          "id": "topic-641e53f7c68ae9ba",
+          "title": "Ailenin Günlük Yaşama Etkisi",
+          "unit": "Temel Yaşam Becerileri Dersi II. Düzey · 3. Öğrenme Alanı: Güvenli Ev, Düzenli Yaşam"
+        },
+        {
+          "id": "topic-82c60f512f876a2c",
+          "title": "Basit Onarımlar Yapma",
+          "unit": "Temel Yaşam Becerileri Dersi II. Düzey · 3. Öğrenme Alanı: Güvenli Ev, Düzenli Yaşam"
+        },
+        {
+          "id": "topic-f77ce1c45ddbe0fa",
+          "title": "Ev Güvenliğinde Uygun Davranışlar",
+          "unit": "Temel Yaşam Becerileri Dersi II. Düzey · 3. Öğrenme Alanı: Güvenli Ev, Düzenli Yaşam"
+        },
+        {
+          "id": "topic-5c55f93fc9309cc6",
+          "title": "Biyoçeşitliliği Koruma",
+          "unit": "Temel Yaşam Becerileri Dersi II. Düzey · 4. Öğrenme Alanı: Bilinçli Tüketim, Sürdürülebilir Yaşam"
+        },
+        {
+          "id": "topic-eb3feb06c86df4bb",
+          "title": "Çevre Dostu Ulaşım Seçenekleri",
+          "unit": "Temel Yaşam Becerileri Dersi II. Düzey · 4. Öğrenme Alanı: Bilinçli Tüketim, Sürdürülebilir Yaşam"
+        },
+        {
+          "id": "topic-a7aa29eea93ebc7e",
+          "title": "Enerji Tasarrufu",
+          "unit": "Temel Yaşam Becerileri Dersi II. Düzey · 4. Öğrenme Alanı: Bilinçli Tüketim, Sürdürülebilir Yaşam"
+        },
+        {
+          "id": "topic-252797498590922e",
+          "title": "Tüketim Kararları",
+          "unit": "Temel Yaşam Becerileri Dersi II. Düzey · 4. Öğrenme Alanı: Bilinçli Tüketim, Sürdürülebilir Yaşam"
+        }
+      ]
+    },
+    {
+      "id": "meb-course-97",
+      "name": "Türk Sosyal Hayatında Aile",
+      "model": "elective",
+      "topicRecords": 12,
+      "readyTopics": 1,
+      "questionRecords": 6,
+      "distinctQuestionPrompts": 6,
+      "missingTopics": [
+        {
+          "id": "topic-5c15bca0180d292a",
+          "title": "Ailenin Toplumsal İşlevleri ve Toplum Hayatına Etkileri",
+          "unit": "1. Öğrenme Alanı: Ailenin Önemi"
+        },
+        {
+          "id": "topic-c8e7a8c6eebb6506",
+          "title": "Değerlerin İçselleştirilmesinde Ailenin Önemi",
+          "unit": "1. Öğrenme Alanı: Ailenin Önemi"
+        },
+        {
+          "id": "topic-e596527b236ccab8",
+          "title": "Ailede Roller, Görev ve Sorumluluk Bilinci Aile Bağlarını Güçlendiren Davranışlar Aile İçi Anlaşmazlıklar ve Çözüm Süreçleri Aileyi Bir Arada Tutan Olaylar",
+          "unit": "2. Öğrenme Alanı: Aile Olmak"
+        },
+        {
+          "id": "topic-167842130d00a043",
+          "title": "Türkistan'daki İlk Türk Devletlerinde Aile Yapısının Özellikleri",
+          "unit": "3. Öğrenme Alanı: Türk Aile Yapısının Tarihsel Süreci"
+        },
+        {
+          "id": "topic-c4e20472b7db630c",
+          "title": "Türk-İslam Devletlerinde Aileye Verilen Değer",
+          "unit": "3. Öğrenme Alanı: Türk Aile Yapısının Tarihsel Süreci"
+        },
+        {
+          "id": "topic-8ab432a2c0b72956",
+          "title": "Cumhuriyet'in İlanından Sonraki Hukuki Düzenlemelerin Aile Yapısı Üzerindeki Etkisi",
+          "unit": "3. Öğrenme Alanı: Türk Aile Yapısının Tarihsel Süreci"
+        },
+        {
+          "id": "topic-f9b1a76884c633b9",
+          "title": "Günümüzdeki Aile Yapısı",
+          "unit": "3. Öğrenme Alanı: Türk Aile Yapısının Tarihsel Süreci"
+        },
+        {
+          "id": "topic-d87005520d227360",
+          "title": "Toplumsal Değişimin Aile Yapısına Etkisi",
+          "unit": "4. Öğrenme Alanı: Toplumsal Değişim Ve Aile"
+        },
+        {
+          "id": "topic-46af03901c26d291",
+          "title": "Dijital Platform ve Aile İçi İletişim",
+          "unit": "4. Öğrenme Alanı: Toplumsal Değişim Ve Aile"
+        },
+        {
+          "id": "topic-1bc48001f2e474de",
+          "title": "Akrabalık İlişkilerinin Sosyalleşmeye Katkısı",
+          "unit": "4. Öğrenme Alanı: Toplumsal Değişim Ve Aile"
+        },
+        {
+          "id": "topic-d29ad0d1b98d8755",
+          "title": "Aile ve Akrabalık İlişkileri ile Toplumsal Birlik",
+          "unit": "4. Öğrenme Alanı: Toplumsal Değişim Ve Aile"
+        }
+      ]
+    },
+    {
+      "id": "course-0",
+      "name": "Türkçe",
+      "model": "standard",
+      "topicRecords": 84,
+      "readyTopics": 82,
+      "questionRecords": 492,
+      "distinctQuestionPrompts": 198,
+      "missingTopics": [
+        {
+          "id": "topic-6ba2087e42e60d25",
+          "title": "ve içerik",
+          "unit": "ATATÜRK'Ü TANIMAK"
+        },
+        {
+          "id": "topic-6742d3514488a7b1",
+          "title": "yolları",
+          "unit": "GELENEKLERİMİZ"
+        }
+      ]
+    },
+    {
+      "id": "meb-course-115",
+      "name": "Yaşayan Dil ve Lehçeler (Abazaca)",
+      "model": "elective",
+      "topicRecords": 4,
+      "readyTopics": 0,
+      "questionRecords": 0,
+      "distinctQuestionPrompts": 0,
+      "missingTopics": [
+        {
+          "id": "topic-6da22bb1faf85460",
+          "title": "аибадырра, аԥсшәаеибыҳәара",
+          "unit": "1. Tema: Tanışalım"
+        },
+        {
+          "id": "topic-9516a2fd1e019603",
+          "title": "Ахыԥхьаӡарақәа рыԥхьаӡара, Амчыбжь амшқәа",
+          "unit": "2. Tema: Sayalım"
+        },
+        {
+          "id": "topic-272f25164839fbf1",
+          "title": "Аԥштәқәа, акласс аизыргылоу, aгәаԥхара",
+          "unit": "3. Tema: Renkler"
+        },
+        {
+          "id": "topic-5f01642f41d49c95",
+          "title": "Аҩнатә ԥстәқәеи аԥсаатәқәеи рыхьӡқәа, Арбагатә хьыӡцынхәрақәа, Агәаԥхара",
+          "unit": "4. Tema: Çiftlik Hayvanları"
+        }
+      ]
+    },
+    {
+      "id": "meb-course-116",
+      "name": "Yaşayan Dil ve Lehçeler (Adigece)",
+      "model": "elective",
+      "topicRecords": 9,
+      "readyTopics": 0,
+      "questionRecords": 0,
+      "distinctQuestionPrompts": 0,
+      "missingTopics": [
+        {
+          "id": "topic-29026ee3dfa77f85",
+          "title": "Сэлам",
+          "unit": "1. Tema: Evim"
+        },
+        {
+          "id": "topic-64ce06c54ad3d894",
+          "title": "Сиунагъо Исхэр",
+          "unit": "1. Tema: Evim"
+        },
+        {
+          "id": "topic-07277d8442466dc1",
+          "title": "Сиунэ Ит Пкъыгъохэр",
+          "unit": "1. Tema: Evim"
+        },
+        {
+          "id": "topic-c4c3fb99c084e0fc",
+          "title": "Сыныф Yнашъохэр",
+          "unit": "2. Tema: Okulum"
+        },
+        {
+          "id": "topic-f59d33b70048160a",
+          "title": "Сыныфым Ит Пкъыгъохэр",
+          "unit": "2. Tema: Okulum"
+        },
+        {
+          "id": "topic-301cadd0e78bf416",
+          "title": "Сиадрес",
+          "unit": "3. Tema: Şehrim"
+        },
+        {
+          "id": "topic-47fd77c112ec6525",
+          "title": "Сикъалэ Дэтхэр",
+          "unit": "3. Tema: Şehrim"
+        },
+        {
+          "id": "topic-7c54cff8d3401cf4",
+          "title": "Силъэпкъ",
+          "unit": "4. Tema: Ülkem"
+        },
+        {
+          "id": "topic-2df99994fcab2dab",
+          "title": "Чӏыпӏэ Цӏэрыӏохэр",
+          "unit": "4. Tema: Ülkem"
+        }
+      ]
+    },
+    {
+      "id": "meb-course-117",
+      "name": "Yaşayan Dil ve Lehçeler (Arnavutça)",
+      "model": "elective",
+      "topicRecords": 12,
+      "readyTopics": 0,
+      "questionRecords": 0,
+      "distinctQuestionPrompts": 0,
+      "missingTopics": [
+        {
+          "id": "topic-5f94339450fc9d29",
+          "title": "Kendimi Tanıtıyorum",
+          "unit": "1. Tema: Ben Ve Sen"
+        },
+        {
+          "id": "topic-9850c02b42bf22d4",
+          "title": "Harfleri Tanıyorum",
+          "unit": "1. Tema: Ben Ve Sen"
+        },
+        {
+          "id": "topic-5116c97b4b1e435d",
+          "title": "Benim Ailem",
+          "unit": "1. Tema: Ben Ve Sen"
+        },
+        {
+          "id": "topic-8bca3fea0cc0c644",
+          "title": "Yaş ve Sayılar",
+          "unit": "2. Tema: Ben Buyum"
+        },
+        {
+          "id": "topic-c731665b4a080290",
+          "title": "Vücudum",
+          "unit": "2. Tema: Ben Buyum"
+        },
+        {
+          "id": "topic-bc127061fa14be2c",
+          "title": "Kıyafetler",
+          "unit": "2. Tema: Ben Buyum"
+        },
+        {
+          "id": "topic-ac8d46642536391a",
+          "title": "Okul Eşyaları",
+          "unit": "3. Tema: Okulum"
+        },
+        {
+          "id": "topic-60afd31cdf0f616f",
+          "title": "Sınıf Ortamı",
+          "unit": "3. Tema: Okulum"
+        },
+        {
+          "id": "topic-5638ef04ce43f805",
+          "title": "Hayvanlar",
+          "unit": "3. Tema: Okulum"
+        },
+        {
+          "id": "topic-0c6441b11fb67f5c",
+          "title": "Ülkeler ve Diller",
+          "unit": "4. Tema: Benim Şehrim"
+        },
+        {
+          "id": "topic-852c64c044f6e18d",
+          "title": "Meslekler",
+          "unit": "4. Tema: Benim Şehrim"
+        },
+        {
+          "id": "topic-017d2d06b94ae78c",
+          "title": "Yiyecekler",
+          "unit": "4. Tema: Benim Şehrim"
+        }
+      ]
+    },
+    {
+      "id": "meb-course-118",
+      "name": "Yaşayan Dil ve Lehçeler (Kurmancca)",
+      "model": "elective",
+      "topicRecords": 12,
+      "readyTopics": 0,
+      "questionRecords": 0,
+      "distinctQuestionPrompts": 0,
+      "missingTopics": [
+        {
+          "id": "topic-f425e536d9240410",
+          "title": "Alfabe ve Sesler (Alfabe û Deng)",
+          "unit": "1. Tema: Merhaba, Başlıyoruz (Sılav, Em Dest Pê Dıkın)"
+        },
+        {
+          "id": "topic-4ef6f62a62489196",
+          "title": "Sayılar (Hejmar)",
+          "unit": "1. Tema: Merhaba, Başlıyoruz (Sılav, Em Dest Pê Dıkın)"
+        },
+        {
+          "id": "topic-72d6d830ad88acd0",
+          "title": "Selamlaşma, Tanışma ve Vedalaşma (Silavdayîn, Hevnasîn û Xatirxwestin)",
+          "unit": "1. Tema: Merhaba, Başlıyoruz (Sılav, Em Dest Pê Dıkın)"
+        },
+        {
+          "id": "topic-fd51fdea39add8d3",
+          "title": "Okul ve Çevre (Xwendingeh û Jîngeh)",
+          "unit": "2. Tema: Okulum Ve Çevrem (Xwendıngeh Û Jîngeha Mın)"
+        },
+        {
+          "id": "topic-86f06620b9dc3b68",
+          "title": "İş ve Meslekler (Kar û Pîşe)",
+          "unit": "2. Tema: Okulum Ve Çevrem (Xwendıngeh Û Jîngeha Mın)"
+        },
+        {
+          "id": "topic-2543dd8eab45ab99",
+          "title": "Aile (Malbat)",
+          "unit": "2. Tema: Okulum Ve Çevrem (Xwendıngeh Û Jîngeha Mın)"
+        },
+        {
+          "id": "topic-3a884bee63f5a819",
+          "title": "Temizlik ve Sağlık (Paqijî û Tenduristî)",
+          "unit": "3. Tema: Bedenım Ve Sağlığım (Laş Û Tendurıstîya Mın)"
+        },
+        {
+          "id": "topic-1f282b0cae16aa98",
+          "title": "Yeme-İçme (Xwarin û Vexwarin)",
+          "unit": "3. Tema: Bedenım Ve Sağlığım (Laş Û Tendurıstîya Mın)"
+        },
+        {
+          "id": "topic-58bc6bc41279be00",
+          "title": "Trafik (Hatûçû)",
+          "unit": "3. Tema: Bedenım Ve Sağlığım (Laş Û Tendurıstîya Mın)"
+        },
+        {
+          "id": "topic-e083cc39675c748b",
+          "title": "Yurdumuz ve Kültürümüz (Welat û Çanda Me)",
+          "unit": "4. Tema: Yurdum Ve Dünyam (Welat Û Cîhana Mın)"
+        },
+        {
+          "id": "topic-67245242fc6015c2",
+          "title": "Takvim ve Mevsimler (Salname û Demsal)",
+          "unit": "4. Tema: Yurdum Ve Dünyam (Welat Û Cîhana Mın)"
+        },
+        {
+          "id": "topic-76ba81ef4b8caf8f",
+          "title": "Hava Olayları (Keş û Hewa)",
+          "unit": "4. Tema: Yurdum Ve Dünyam (Welat Û Cîhana Mın)"
+        }
+      ]
+    },
+    {
+      "id": "meb-course-114",
+      "name": "Yaşayan Dil ve Lehçeler (Lazca)",
+      "model": "elective",
+      "topicRecords": 11,
+      "readyTopics": 0,
+      "questionRecords": 0,
+      "distinctQuestionPrompts": 0,
+      "missingTopics": [
+        {
+          "id": "topic-a19994cf575c24f3",
+          "title": "Selamlaşma ve vedalaşma",
+          "unit": "1. Tema: Okulda İlk Günüm"
+        },
+        {
+          "id": "topic-c428899b6f57fec1",
+          "title": "Tanışma ve kendini tanıtma",
+          "unit": "1. Tema: Okulda İlk Günüm"
+        },
+        {
+          "id": "topic-592f303ef477f84f",
+          "title": "Kişisel Bilgiler",
+          "unit": "1. Tema: Okulda İlk Günüm"
+        },
+        {
+          "id": "topic-8daa3d3a4dd6c366",
+          "title": "Aile Bireyleri ve Aile İçi İlişkiler",
+          "unit": "2. Tema: Ailem"
+        },
+        {
+          "id": "topic-cd3c6da8adcf95ec",
+          "title": "Aile Bireylerini Tanıtma",
+          "unit": "2. Tema: Ailem"
+        },
+        {
+          "id": "topic-7cf8f68ad3411938",
+          "title": "Aile Bireylerinin Meslekleri",
+          "unit": "2. Tema: Ailem"
+        },
+        {
+          "id": "topic-5465cbfbfccaf263",
+          "title": "Okulun Bölümleri",
+          "unit": "3. Tema: Okulum"
+        },
+        {
+          "id": "topic-9e72f0a0f2e613bc",
+          "title": "Sınıf Eşyaları",
+          "unit": "3. Tema: Okulum"
+        },
+        {
+          "id": "topic-9e474da3d255f1d0",
+          "title": "Sınıf İçi Yönergeler",
+          "unit": "3. Tema: Okulum"
+        },
+        {
+          "id": "topic-066dd463788e339a",
+          "title": "Günlük Yaşam Etkinlikleri",
+          "unit": "4. Tema: Günlük Hayatım"
+        },
+        {
+          "id": "topic-79db7cce7fc9d859",
+          "title": "Sanatsal ve Kültürel Etkinlikler",
+          "unit": "4. Tema: Günlük Hayatım"
+        }
+      ]
+    },
+    {
+      "id": "meb-course-119",
+      "name": "Yaşayan Dil ve Lehçeler (Zazaca)",
+      "model": "elective",
+      "topicRecords": 12,
+      "readyTopics": 0,
+      "questionRecords": 0,
+      "distinctQuestionPrompts": 0,
+      "missingTopics": [
+        {
+          "id": "topic-be38585192250437",
+          "title": "Alfabe ve Tanışma",
+          "unit": "1. Tema: Okulum"
+        },
+        {
+          "id": "topic-b5cb9327c8bc6941",
+          "title": "Sayılar",
+          "unit": "1. Tema: Okulum"
+        },
+        {
+          "id": "topic-92b65dfaf2f9f1c5",
+          "title": "Sınıfım",
+          "unit": "1. Tema: Okulum"
+        },
+        {
+          "id": "topic-d288d47fa89bb001",
+          "title": "Aile Bireyleri",
+          "unit": "2. Tema: Evim"
+        },
+        {
+          "id": "topic-775af1c55b69ce7e",
+          "title": "Mahallem",
+          "unit": "2. Tema: Evim"
+        },
+        {
+          "id": "topic-08b0f0144494f154",
+          "title": "Meslekler",
+          "unit": "2. Tema: Evim"
+        },
+        {
+          "id": "topic-a72baa83e11c796f",
+          "title": "Günler ve Aylar",
+          "unit": "3. Tema: Mevsim Ve Takvim"
+        },
+        {
+          "id": "topic-1ba249f49fef2c57",
+          "title": "Mevsimler",
+          "unit": "3. Tema: Mevsim Ve Takvim"
+        },
+        {
+          "id": "topic-f3a28e6cec456162",
+          "title": "Hava Olayları",
+          "unit": "3. Tema: Mevsim Ve Takvim"
+        },
+        {
+          "id": "topic-f0eb1e80eb891fc3",
+          "title": "Vücudumuz",
+          "unit": "4. Tema: Beden Ve Sağlık"
+        },
+        {
+          "id": "topic-d03ab5b0d1f31645",
+          "title": "Temizlik",
+          "unit": "4. Tema: Beden Ve Sağlık"
+        },
+        {
+          "id": "topic-fbe42d281908bf0e",
+          "title": "Sağlık ve Spor",
+          "unit": "4. Tema: Beden Ve Sağlık"
+        }
+      ]
+    },
+    {
+      "id": "meb-course-99",
+      "name": "Yazarlık ve Yazma Becerileri",
+      "model": "elective",
+      "topicRecords": 18,
+      "readyTopics": 1,
+      "questionRecords": 6,
+      "distinctQuestionPrompts": 6,
+      "missingTopics": [
+        {
+          "id": "topic-87638853fe8dabc9",
+          "title": "Yazma Amacı",
+          "unit": "Yazarlık Ve Yazma Becerileri Dersi (I) · 1. Öğrenme Alanı: Yazının Planlanması"
+        },
+        {
+          "id": "topic-d33d866a3228ac97",
+          "title": "Yazı Planı",
+          "unit": "Yazarlık Ve Yazma Becerileri Dersi (I) · 1. Öğrenme Alanı: Yazının Planlanması"
+        },
+        {
+          "id": "topic-33bc51c419e147fa",
+          "title": "Yazma Sürecinin",
+          "unit": "Yazarlık Ve Yazma Becerileri Dersi (I) · 1. Öğrenme Alanı: Yazının Planlanması"
+        },
+        {
+          "id": "topic-502b49a38d7bf840",
+          "title": "Zaman Planı",
+          "unit": "Yazarlık Ve Yazma Becerileri Dersi (I) · 1. Öğrenme Alanı: Yazının Planlanması"
+        },
+        {
+          "id": "topic-71fea822023d6ea0",
+          "title": "Yazının Yapılandırılması",
+          "unit": "Yazarlık Ve Yazma Becerileri Dersi (I) · 1. Öğrenme Alanı: Yazının Planlanması"
+        },
+        {
+          "id": "topic-9c36dcd4a2142835",
+          "title": "Yazım Kuralları",
+          "unit": "Yazarlık Ve Yazma Becerileri Dersi (I) · 1. Öğrenme Alanı: Yazının Planlanması"
+        },
+        {
+          "id": "topic-9cb61602826024bc",
+          "title": "Yazıyı Geliştirme",
+          "unit": "Yazarlık Ve Yazma Becerileri Dersi (I) · 2. Öğrenme Alanı: Yazının Geliştirilmesi"
+        },
+        {
+          "id": "topic-3af08948dba648df",
+          "title": "Türe Uygun Özgün İçerik Oluşturma",
+          "unit": "Yazarlık Ve Yazma Becerileri Dersi (I) · 2. Öğrenme Alanı: Yazının Geliştirilmesi"
+        },
+        {
+          "id": "topic-133bb264725f7430",
+          "title": "Yazma Sürecini Değerlendirme",
+          "unit": "Yazarlık Ve Yazma Becerileri Dersi (I) · 2. Öğrenme Alanı: Yazının Geliştirilmesi"
+        },
+        {
+          "id": "topic-bd55421cb5c36470",
+          "title": "Yazının Sunumu/Paylaşımı",
+          "unit": "Yazarlık Ve Yazma Becerileri Dersi (I) · 3. Öğrenme Alanı: Yazının Sunuma Hazırlanması"
+        },
+        {
+          "id": "topic-38028875ce411366",
+          "title": "Yazma Sürecini Yapılandırma",
+          "unit": "Yazarlık Ve Yazma Becerileri Dersi (II) · 1. Öğrenme Alanı: Yazının Planlanması"
+        },
+        {
+          "id": "topic-1569dab1b5a6545d",
+          "title": "Yazı Planını Oluşturma",
+          "unit": "Yazarlık Ve Yazma Becerileri Dersi (II) · 1. Öğrenme Alanı: Yazının Planlanması"
+        },
+        {
+          "id": "topic-aedb4ffb54916fe5",
+          "title": "Yazıyı Oluşturma",
+          "unit": "Yazarlık Ve Yazma Becerileri Dersi (II) · 1. Öğrenme Alanı: Yazının Planlanması"
+        },
+        {
+          "id": "topic-98b62bd80a7878fb",
+          "title": "Yazıyı Geliştirme",
+          "unit": "Yazarlık Ve Yazma Becerileri Dersi (II) · 2. Öğrenme Alanı: Yazının Geliştirilmesi"
+        },
+        {
+          "id": "topic-66d3b89c3da119f9",
+          "title": "Türe Uygun Özgün İçerik Oluşturma",
+          "unit": "Yazarlık Ve Yazma Becerileri Dersi (II) · 2. Öğrenme Alanı: Yazının Geliştirilmesi"
+        },
+        {
+          "id": "topic-ecd24ea8425ce78b",
+          "title": "Yazma Sürecini Değerlendirme",
+          "unit": "Yazarlık Ve Yazma Becerileri Dersi (II) · 2. Öğrenme Alanı: Yazının Geliştirilmesi"
+        },
+        {
+          "id": "topic-0ad4da91633acd4e",
+          "title": "Sunum İçeriği Oluşturma",
+          "unit": "Yazarlık Ve Yazma Becerileri Dersi (II) · 3. Öğrenme Alanı: Yazının Sunuma Hazırlanması"
+        }
+      ]
+    }
+  ]
+}

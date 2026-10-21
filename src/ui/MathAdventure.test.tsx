@@ -1,0 +1,30 @@
+import { fireEvent, render, screen } from '@testing-library/react';
+import { beforeEach, expect, it, vi } from 'vitest';
+import { MathAdventure } from './MathAdventure';
+const sound=vi.hoisted(()=>vi.fn());
+vi.mock('../audio',()=>({playAnswerEffect:sound}));
+const transition=(action:()=>void)=>action();
+beforeEach(()=>sound.mockClear());
+it('shows place value, movement and feedback with existing sound effects',()=>{
+ render(<MathAdventure onBack={()=>{}} onTopics={()=>{}} paused={false} onTransition={transition}/>);
+ fireEvent.click(screen.getByRole('button',{name:/Binler/}));
+ expect(screen.getByText('= 4.000')).toBeInTheDocument();
+ fireEvent.click(screen.getByRole('button',{name:/Rakamı taşımayı dene/}));
+ fireEvent.click(screen.getByRole('button',{name:'5 rakamını binler kulesine taşı'}));
+ expect(screen.getByRole('status')).toHaveTextContent('10 katına çıktı');
+ fireEvent.click(screen.getByRole('button',{name:/Son göreve geç/}));
+ fireEvent.click(screen.getByRole('button',{name:'80'}));
+ expect(sound).toHaveBeenLastCalledWith(false);
+ fireEvent.click(screen.getByRole('button',{name:'800'}));
+ expect(sound).toHaveBeenLastCalledWith(true);
+ expect(screen.getByRole('status')).toHaveTextContent('8 × 100 = 800');
+});
+it('disables lesson actions during breaks and offers an animation stop',()=>{
+ const props={onBack:()=>{},onTopics:()=>{},paused:false,onTransition:transition};
+ const {container,rerender}=render(<MathAdventure {...props}/>);
+ fireEvent.click(screen.getByRole('button',{name:'Hareketleri durdur'}));
+ expect(container.querySelector('.adventure-still')).toBeInTheDocument();
+ rerender(<MathAdventure {...props} paused/>);
+ expect(screen.getByRole('button',{name:/Binler/})).toBeDisabled();
+ expect(screen.getByRole('button',{name:/Sırrı çöz/})).toBeDisabled();
+});

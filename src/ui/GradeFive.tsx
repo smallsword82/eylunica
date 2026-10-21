@@ -1,17 +1,17 @@
+import { GradeFiveDiscovery } from './GradeFiveDiscovery';
 import { matchesTerm, termLabels, type StudyTerm } from '../grade5/terms';
 import './GradeFive.css';
 import { useEffect, useState } from 'react';
-import { courses, questionsByTopic, topicsByCourse, questionsByCourse, questionById, curriculumStats, timetable, type Topic, type Question } from '../grade5/catalog';
+import { courses, questionsByTopic, topicsByCourse, questionsByCourse, questionById, timetable, type Topic, type Question } from '../grade5/catalog';
 import { readLearning, learningKey, nextQuestion, recordAttempt, isCorrect, latestAttempts } from '../grade5/engine';
 import { approvedVideos, videoUrl } from '../grade5/videos';
-import { lessonByTopic, contentStats } from '../grade5/content';
+import { lessonByTopic } from '../grade5/content';
 import { GradeFiveExam } from './GradeFiveExam';
 import { QuestionSourceNote } from './QuestionSourceNote';
 type Stage = 'summary' | 'video' | 'example' | 'practice' | 'test' | 'review';
 export function GradeFive({ onBack, onTransition, guide, paused }: { onBack: () => void; onTransition: (action: () => void, startsTask?: boolean) => void; guide: string; paused: boolean }) {
   const [courseId, setCourse] = useState<string | null>(null);
   const [topic, setTopic] = useState<Topic | null>(null);
-  const [model, setModel] = useState('all');
   const [term, setTerm] = useState<StudyTerm>('first');
   const [unitFilter, setUnitFilter] = useState('');
   const [topicFilter, setTopicFilter] = useState('');
@@ -57,21 +57,17 @@ export function GradeFive({ onBack, onTransition, guide, paused }: { onBack: () 
   const courseQuestions = courseId ? (questionsByCourse.get(courseId) || []).filter(q => courseTopics.some(t => t.id === q.topicId)) : [];
   const topicQuestions = topic ? questionsByTopic.get(topic.id) || [] : [];
   const filteredTopics = courseTopics.filter(t => (!unitFilter || t.unit === unitFilter) && t.title.toLocaleLowerCase('tr').includes(topicFilter.toLocaleLowerCase('tr')));
-  const visibleCourses = courses.filter(c => model === 'all' || (model === 'standard' ? c.model !== 'multiple-language' : c.id !== 'course-4'))
-    .sort((a,b) => Number(b.category === 'mandatory') - Number(a.category === 'mandatory') || Number(b.model === 'multiple-language') - Number(a.model === 'multiple-language'));
+  if (!courseId) return <GradeFiveDiscovery paused={paused} onTransition={onTransition} onBack={onBack} onCourse={id => { setCourse(id); setUnitFilter(''); setTopicFilter(''); setVisibleCount(24); if (id === 'course-6') setTerm('unknown'); else setTerm('first'); }} />;
   if (examOpen && course) return <GradeFiveExam initialTerm={term} courseId={course.id} onBack={() => setExamOpen(false)} onTransition={onTransition} paused={paused} guide={guide} onComplete={recordExam} />;
   return <main className="subpage grade-five">
     <button className="text-button" onClick={() => { if (topic) { setTopic(null); setPlayingVideo(null); } else if (course) setCourse(null); else onBack(); }}>← {topic ? 'Konulara dön' : course ? 'Derslere dön' : 'Akademilere dön'}</button>
     <div className="eyebrow muted">5. SINIF · 2026–2027</div>
     <h1>{topic?.title || course?.name || 'Derslerim'}</h1>
     <p>{guide} ile adım adım öğren. Anlatımı oku, örnekleri incele ve alıştırmalarla pekiştir.</p>
-    {!topic && <p role="note">MEB kaynaklarından {curriculumStats.courses} program, {curriculumStats.units} ünite/tema ve {curriculumStats.topics} konu kaydı. Standart çizelgede 30 zorunlu + 5 seçmeli saat vardır. Haftalar resmî taslak yıllık planlara dayanır; okul planı değişebilir. Seçmeli dersler ve çoklu dil modeli ayrı gösterilir.</p>}
-    {!topic && <p className="lesson-overview">{contentStats.lessonTopics + 2} konuda anlatım ve çözümlü örnek · {questionById.size} soru kaydı · {contentStats.practicalActivities} uygulama etkinliği. Anlatım ve sorular Eylunica tarafından hazırlanmıştır; resmî MEB sorusu değildir. Tekrar eden program konuları aynı kavram çalışmasını paylaşabilir.</p>}
-    {!topic && <p><a href={timetable.url} target="_blank" rel="noreferrer">2026–2027 resmî haftalık ders çizelgesi · Karar 115</a></p>}
-    {!topic && <><label>Çalışma dönemi <select value={term} onChange={e => { setTerm(e.target.value as StudyTerm); setUnitFilter(''); setVisibleCount(24); }}>{Object.entries(termLabels).map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label><p>İlk dönem kapsamı yıllık plandaki 1–18. haftalardır. İki döneme yayılan konular her iki kapsamda görünür. Haftası belirtilmeyen kayıtlar ayrı tutulur. Yukarıdaki içerik toplamları tüm yıla aittir.</p></>}
-    {!course && <label>Eğitim modeli <select value={model} onChange={e => setModel(e.target.value)}><option value="all">Tüm programlar</option><option value="standard">Standart model ve seçmeliler</option><option value="multiple">Çoklu yabancı dil modeli ve ortak dersler</option></select></label>}
+    {!topic && <details><summary>İçerik ve program kaynakları</summary><p>Anlatım ve sorular Eylunica tarafından hazırlanmıştır; resmî MEB sorusu değildir. Plan haftaları okuluna göre değişebilir.</p><a href={timetable.url} target="_blank" rel="noreferrer">Resmî haftalık ders çizelgesi</a></details>}
+    {!topic && <><label>Çalışma dönemi <select value={term} onChange={e => { setTerm(e.target.value as StudyTerm); setUnitFilter(''); setVisibleCount(24); }}>{Object.entries(termLabels).map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label><p>İlk dönem kapsamı yıllık plandaki 1–18. haftalardır. İki döneme yayılan konular her iki kapsamda görünür. Haftası belirtilmeyen kayıtlar ayrı tutulur.</p></>}
+
     {storageError && <p role="alert">{storageError}</p>}
-    {!course && <div className="academy-grid">{visibleCourses.map(c => <button key={c.id} className="academy-tile reading-tile" onClick={() => { setCourse(c.id); setUnitFilter(''); setTopicFilter(''); setVisibleCount(24); }}><strong>{c.name}</strong><span>{c.weeklyHours ? `Haftada ${c.weeklyHours} saat · ` : ''}{(topicsByCourse.get(c.id) || []).filter(t => matchesTerm(t, term)).length} {termLabels[term]} konusu · {c.model === 'multiple-language' ? 'Çoklu dil modeli' : c.model === 'elective' ? 'Seçmeli' : 'Ortak / standart program'}</span><span>{(topicsByCourse.get(c.id) || []).filter(t => matchesTerm(t, term) && (lessonByTopic.has(t.id) || t.source.status === 'pending' && t.summary)).length} hazır anlatım · {(questionsByCourse.get(c.id) || []).filter(q => (topicsByCourse.get(c.id) || []).some(t => t.id === q.topicId && matchesTerm(t, term))).length} soru</span></button>)}</div>}
     {course && !topic && <>
       {course.programUrl && <p><a href={course.programUrl} target="_blank" rel="noreferrer">MEB öğretim programı</a></p>}
       <section className="written-exam-entry" aria-label="Yazılı hazırlığı"><h2>Yazılıya hazırlan</h2><p>Çalışacağın üniteleri seç, soruları çöz ve test sonunda çözümlerle birlikte sonucunu gör. Yazılı hazırlığı çevrimdışı çalışır.</p><button className="primary" disabled={!courseQuestions.length} onClick={() => onTransition(() => setExamOpen(true))}>Yazılı testleri</button>{!courseQuestions.length && <p>Seçilen dönem kapsamında hazır soru bulunamadı. Dönemi belirtilmeyen çalışmalar veya tüm yıl seçeneğine bakabilirsin.</p>}</section>

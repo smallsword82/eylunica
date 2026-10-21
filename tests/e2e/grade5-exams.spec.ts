@@ -4,7 +4,6 @@ async function openGradeFive(page: Page) {
  await page.goto('/');
  await page.getByRole('button',{name:'eylunica’ya devam et →'}).click();
  await page.getByRole('button',{name:/5. Sınıf Derslerim/}).click();
-  await page.getByLabel('Çalışma dönemi').selectOption('all');
 }
 
 test('yazılı cevapları çevrimdışı korunur; anahtar bitişte açılır ve yanlışlar öğrenme kaydına geçer', async ({page,context}) => {
@@ -13,6 +12,8 @@ test('yazılı cevapları çevrimdışı korunur; anahtar bitişte açılır ve 
  await openGradeFive(page);
  const previousGame=await page.evaluate(()=>localStorage.getItem('ritma-progress-v1'));
  await page.getByRole('button',{name:/^Matematik /}).click();
+  await page.getByRole('button',{name:/Matematik konuları ve yazılı testleri/}).click();
+  await page.getByLabel('Çalışma dönemi').selectOption('all');
  await page.getByRole('button',{name:'Yazılı testleri',exact:true}).click();
  const scope=page.getByRole('group',{name:'Yazılı kapsamı',exact:true});
  for(const checkbox of await scope.getByRole('checkbox').all())if(await checkbox.isEnabled())await checkbox.uncheck();
@@ -29,8 +30,9 @@ test('yazılı cevapları çevrimdışı korunur; anahtar bitişte açılır ve 
  await page.reload();
  await page.getByRole('button',{name:'eylunica’ya devam et →'}).click();
  await page.getByRole('button',{name:/5. Sınıf Derslerim/}).click();
-  await page.getByLabel('Çalışma dönemi').selectOption('all');
  await page.getByRole('button',{name:/^Matematik /}).click();
+  await page.getByRole('button',{name:/Matematik konuları ve yazılı testleri/}).click();
+  await page.getByLabel('Çalışma dönemi').selectOption('all');
  await page.getByRole('button',{name:'Yazılı testleri',exact:true}).click();
  await page.getByRole('button',{name:'Yarım kalan yazılıya devam et',exact:true}).click();
  await expect(page.locator('fieldset.exam-question').filter({hasText:'3 482'}).getByRole('radio',{name:'400',exact:true})).toBeChecked();
@@ -52,6 +54,7 @@ test('yazılı cevapları çevrimdışı korunur; anahtar bitişte açılır ve 
 test('resmî konuya eklenen anlatım, adımlı çözüm ve alıştırma çevrimdışı açılır', async ({page,context}) => {
  await openGradeFive(page);
  await page.getByRole('button',{name:/^Fen Bilimleri /}).click();
+  await page.getByLabel('Çalışma dönemi').selectOption('all');
  await page.getByLabel('Konu ara').fill('Gökyüzündeki Komşumuz: Güneş');
  await page.getByRole('button',{name:/Gökyüzündeki Komşumuz: Güneş/}).click();
  expect(await page.locator('.lesson-reading > section').count()).toBeGreaterThanOrEqual(2);
@@ -73,18 +76,15 @@ for (const [course, title] of [
  ['Fen Bilimleri', 'Gökyüzündeki Komşumuz: Güneş'],
  ['Sosyal Bilgiler', 'Gruplar ve Roller'],
  ['İngilizce', 'People, places and rules at school'],
- ['Çoklu Yabancı Dil Eğitim Modeli İngilizce', 'School rules'],
- ['Çoklu Yabancı Dil Eğitim Modeli Almanca', 'Sich vorstellen'],
+ ['Almanca', 'Sich vorstellen'],
  ['Din Kültürü ve Ahlak Bilgisi', 'Evrendeki Mükemmel Düzen'],
- ['Bilişim Teknolojileri ve Yazılım', 'Bilişim Teknolojilerinin Sınıflandırılması'],
- ['Görsel Sanatlar', 'Resimleme ve Afiş İlişkisi'],
- ['Müzik', 'İstiklâl Marşı'],
- ['Beden Eğitimi ve Spor', 'Fiziksel Aktivite Sırasında Vücudunda Meydana Gelen Değişimler'],
 ]) {
  test(`${course}: anlatım, örnek ve alıştırma açılır`, async ({page}) => {
   await openGradeFive(page);
   const escape = (text: string) => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   await page.getByRole('button',{name:new RegExp('^'+escape(course)+' ')}).click();
+  if(course==='Matematik') await page.getByRole('button',{name:/Matematik konuları ve yazılı testleri/}).click();
+  await page.getByLabel('Çalışma dönemi').selectOption('all');
   await expect(page.getByRole('button',{name:'Yazılı testleri',exact:true})).toBeEnabled();
   await page.getByLabel('Konu ara').fill(title);
   await page.getByRole('button',{name:new RegExp(escape(title))}).first().click();

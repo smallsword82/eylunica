@@ -19,3 +19,16 @@ it('2025 öncesi, bilinmeyen veya API doğrulaması olmayan yayın tarihini öğ
 it('aynı kanal adını kullanan farklı kanal ve bilinmeyen kanal kimliği kabul edilmez',()=>{
  for(const channelId of [undefined,null,'UC-other-channel'])expect(approvedOnly({version:1,videos:[{...fixture,channel:'tonguç 5. SINIF',channelId}]})).toEqual([]);
 });
+
+it('yayınlanan matematik kataloğu gerçek API kaydı, sınırlı inceleme kapsamı ve konu başına en fazla üç video taşır',async()=>{
+ const catalog=(await import('./video-catalog.json')).default;
+ expect(approvedOnly(catalog)).toHaveLength(catalog.videos.length);
+ expect(catalog.videos.length).toBeGreaterThan(0);
+ const byTopic=new Map<string,number>();
+ for(const v of catalog.videos){
+  expect(v.channelId).toBe('UCb-0JQ4tI03T5rHdFe2GVoA');expect(v.madeForKids).toBe(true);expect(v.fullVideoWatched).toBe(false);expect(v.reviewScope).toBe('channel-title-description-publisher-kids-declaration');expect(v.evidence).toContain('Video bütünü izlenmedi');expect(v.topicCoverage.length).toBeGreaterThan(5);
+  byTopic.set(v.topicId,(byTopic.get(v.topicId)||0)+1);
+ }
+ expect([...byTopic.values()].every(count=>count<=3)).toBe(true);
+ expect(new Set(catalog.videos.map(v=>v.topicId+':'+v.id)).size).toBe(catalog.videos.length);
+});

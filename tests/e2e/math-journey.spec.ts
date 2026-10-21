@@ -45,3 +45,21 @@ test('ders kitaplığı da sayfa kaydırmadan yedi kitabı dokunmatik sayfalarla
   expect(names.size).toBe(7);
  }
 });
+
+test('Tonguç videosu ebeveyn bağlantı onayından sonra açılır; oynatıcı ve dönüş kontrolleri her ekrana sığar',async({page})=>{
+ test.setTimeout(90000);const external:string[]=[];
+ page.on('request',r=>{if(/youtube-nocookie|googleapis.com\/youtube/.test(r.url()))external.push(r.url());});
+ // The browser contract is tested locally; this does not claim a real streamed-video review.
+ await page.route('https://www.youtube-nocookie.com/**',route=>route.fulfill({contentType:'text/html',body:'<!doctype html><html lang="tr"><title>Yerel oynatıcı testi</title><body>Oynatıcı çerçevesi</body></html>'}));
+ await enter(page);await page.locator('[data-topic-id="topic-4add1fe377559e12"]').click();await page.getByRole('button',{name:'Video',exact:true}).click();
+ await expect(page.locator('.journey-video-choice')).toHaveCount(2);await expect(page.locator('.journey-video-choice').first()).toBeDisabled();expect(external).toEqual([]);await expect(page.locator('.journey-video iframe')).toHaveCount(0);
+ await page.getByRole('checkbox',{name:/Ebeveynimle birlikte/}).check();
+ for(const size of [{width:320,height:568},{width:390,height:844},{width:768,height:1024},{width:1366,height:768},{width:844,height:390}]){
+  await page.setViewportSize(size);await fits(page);await page.locator('.journey-video-choice').first().click();
+  const frame=page.getByTitle('Onaylı matematik videosu');await expect(frame).toHaveAttribute('src','https://www.youtube-nocookie.com/embed/12eff2QXilg?rel=0');await expect(frame).toBeVisible();await fits(page);
+  const rect=await frame.boundingBox();expect(rect!.width).toBeGreaterThanOrEqual(200);expect(rect!.height).toBeGreaterThanOrEqual(200);expect(rect!.y+rect!.height).toBeLessThanOrEqual(size.height+.5);
+  await page.getByRole('button',{name:'← Diğer videolar',exact:true}).click();await expect(frame).toHaveCount(0);
+ }
+ expect(external.some(url=>url.includes('googleapis.com/youtube'))).toBe(false);
+ await page.getByRole('checkbox',{name:/Ebeveynimle birlikte/}).uncheck();await expect(page.locator('.journey-video-choice').first()).toBeDisabled();
+});

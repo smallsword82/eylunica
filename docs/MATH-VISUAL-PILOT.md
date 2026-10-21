@@ -1,3 +1,5 @@
+İçeriğe bağlı yeni anlatım/soru animasyonları: [MATH-CONTENT-FILMS.md](MATH-CONTENT-FILMS.md).
+
 Güncel sahne/harita, soru setleri ve ses akışı: [MATH-JOURNEY.md](MATH-JOURNEY.md). Aşağıdaki metin önceki görselli anlatım katmanını açıklar.
 
 # Matematik konularının görselli akışı

@@ -1,3 +1,5 @@
+İçeriğe bağlı yeni anlatım/soru animasyonları: [MATH-CONTENT-FILMS.md](MATH-CONTENT-FILMS.md).
+
 # Matematik: dokunmatik keşif yolculuğu
 
 Matematik kitabı, ilk dönemle açılan dört duraklı sayfalardan oluşan oyun haritasına gider. Fazla dersler geri eklenmez: öğrenci kitaplığı yedi ana dersle sınırlıdır. Matematikte 19 müfredat konu kaydı ve korunmuş bir ek örnek bu akışa bağlıdır. Tüm yıl/dönemi belirtilmeyen çalışmalar ayrı kapsam seçenekleriyle korunur.

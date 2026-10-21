@@ -11,7 +11,7 @@ test('telefon, tablet, masaüstü ve yatay ekranda tek sahne; kapı yalnız tama
   await page.setViewportSize(size);await fits(page);
   await page.locator('[data-topic-id="topic-a0155915387c7658"]').click();
   await expect(page.locator('.journey-action-slot .journey-portal')).toHaveCount(0);
-  await page.getByRole('button',{name:'90°',exact:true}).click();
+  await page.getByRole('button',{name:'Modeli kendin değiştir',exact:true}).click();await page.getByRole('button',{name:'90°',exact:true}).click();
   await expect(page.locator('.journey-action-slot .journey-portal')).toBeVisible();await fits(page);
   await page.locator('.journey-action-slot .journey-portal').click();
   await expect(page.locator('.journey-action-slot .journey-portal')).toHaveCount(0);
@@ -70,10 +70,10 @@ test('Tonguç kapakları onaysız açılır; video bitince veya kimliği değiş
  expect(external.some(url=>url.includes('googleapis.com/youtube'))).toBe(false);
  await page.locator('.journey-video-choice').first().click();await expect(page.getByTitle('Onaylı matematik videosu')).toBeVisible();
  await page.evaluate(()=>window.dispatchEvent(new CustomEvent('lesson-test-state',{detail:{state:0}})));
- await expect(page.locator('.math-visual,.angle-lesson')).toHaveCount(1);await expect(page.locator('.journey-video iframe')).toHaveCount(0);
+ await expect(page.locator('.math-film:not(.math-film-question)')).toHaveCount(1);await expect(page.locator('.journey-video iframe')).toHaveCount(0);
  await page.getByRole('button',{name:'Video',exact:true}).click();await page.locator('.journey-video-choice').first().click();await expect(page.getByTitle('Onaylı matematik videosu')).toBeVisible();
  await page.evaluate(()=>window.dispatchEvent(new CustomEvent('lesson-test-state',{detail:{state:1,id:'not-selected'}})));
- await expect(page.locator('.math-visual,.angle-lesson')).toHaveCount(1);await expect(page.locator('.journey-video iframe')).toHaveCount(0);
+ await expect(page.locator('.math-film:not(.math-film-question)')).toHaveCount(1);await expect(page.locator('.journey-video iframe')).toHaveCount(0);
  await page.getByRole('button',{name:'← Harita',exact:true}).click();await page.getByRole('button',{name:'Sonraki duraklar →',exact:true}).click();await page.locator('[data-topic-id="topic-05bf7580a6ccbb59"]').click();await page.getByRole('button',{name:'Video',exact:true}).click();await expect(page.locator('.journey-video-choice')).toHaveCount(3);
  for(const size of [{width:320,height:568},{width:844,height:390}]){await page.setViewportSize(size);await fits(page);for(const img of await page.locator('.journey-video-thumbnail img').all())await expect(img).toBeVisible();}
 });
@@ -82,5 +82,5 @@ test('YouTube kontrol API yüklenmezse denetimsiz oynatıcı açılmaz; derse d�
  await page.route('https://www.youtube.com/iframe_api',route=>route.abort());
  await enter(page);await page.locator('[data-topic-id="topic-4add1fe377559e12"]').click();await page.getByRole('button',{name:'Video',exact:true}).click();await page.locator('.journey-video-choice').first().click();
  await expect(page.getByText('Video şu anda açılamadı.',{exact:true})).toBeVisible();await expect(page.locator('.journey-video iframe')).toHaveCount(0);
- await page.getByRole('button',{name:'Görselli anlatıma dön',exact:true}).click();await expect(page.locator('.math-visual,.angle-lesson')).toHaveCount(1);
+ await page.getByRole('button',{name:'Görselli anlatıma dön',exact:true}).click();await expect(page.locator('.math-film:not(.math-film-question)')).toHaveCount(1);
 });

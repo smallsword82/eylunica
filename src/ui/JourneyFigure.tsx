@@ -1,6 +1,8 @@
+import {MathFilm} from './MathFilm';
 import {AngleQuestionFigure} from './AngleQuestionFigure';
 import type {JourneyFigure as Figure} from '../grade5/math-journey-bank';
-export function JourneyFigure({figure,mode='question'}:{figure:Figure;mode?:'question'|'hint'|'solution'}){
+export function JourneyFigure({figure,mode='question',paused=false,motion=true}:{figure:Figure;mode?:'question'|'hint'|'solution';paused?:boolean;motion?:boolean}){
+ if(figure.diagram)return <MathFilm diagram={figure.diagram} mode={mode} paused={paused} motion={motion}/>;
  if(figure.kind==='angle')return <AngleQuestionFigure figure={figure} mode={mode}/>;
  const [a,b,c]=figure.values;const r=55;
  return <svg className={`journey-figure figure-${mode}`} viewBox="0 0 400 150" role="img" aria-label={`Soru modeli: ${figure.kind}; verilenler ${figure.labels?.join(', ')||figure.values.join(', ')}`}><defs><linearGradient id="journey-gold"><stop stopColor="#ffe7a8"/><stop offset="1" stopColor="#cc91e7"/></linearGradient></defs><g stroke="#e8c98b" strokeWidth="3" fill="none" strokeLinecap="round">

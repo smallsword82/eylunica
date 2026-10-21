@@ -1,9 +1,10 @@
+import {questionDiagram,diagramHint,type MathDiagram} from './math-diagrams.ts';
 import {makeAngleItem,type AngleDiagram} from './angle-questions.ts';
 import archivedAngles from './legacy-angle-questions.json' with {type:'json'};
 import official from './official-curriculum.json' with {type:'json'};
 import type {Question} from './catalog';
 import {mathModels,type MathModel} from './math-models.ts';
-export type JourneyFigure={kind:'segment'|'angle'|'polygon'|'number'|'groups'|'rectangle'|'fraction'|'bars'|'balance'|'operation'|'pattern'|'bag';values:number[];labels?:string[];angle?:AngleDiagram};
+export type JourneyFigure={kind:'segment'|'angle'|'polygon'|'number'|'groups'|'rectangle'|'fraction'|'bars'|'balance'|'operation'|'pattern'|'bag';values:number[];labels?:string[];angle?:AngleDiagram;diagram?:MathDiagram};
 export type JourneyQuestion=Question&{purpose:'practice'|'test'|'written';taskFamily:number;figure:JourneyFigure};
 type Item={prompt:string;answer:string;explanation:string;figure:JourneyFigure;choices?:string[];hint?:string};
 const number=(n:number)=>String(n);
@@ -41,7 +42,7 @@ function make(mode:MathModel,i:number,practice:boolean):Item{
   if(t===0)return f(`Dikdörtgenin kenarları ${n} cm ve ${m} cm. Alanı kaç cm²?`,n*m,`${n} × ${m} = ${n*m} cm².`,'rectangle',[n,m]);
   if(t===1)return f(`${n} cm ve ${m} cm kenarlı kartın çevresi kaç cm?`,2*(n+m),`2 × (${n}+${m}) = ${2*(n+m)} cm.`,'rectangle',[n,m]);
   if(t===2)return f(`Bahçenin alanı ${n*m} m², bir kenarı ${m} m. Diğer kenarı kaç m?`,n,`${n*m} ÷ ${m} = ${n} m.`,'rectangle',[n,m]);
-  return f(`${n} cm ve ${m} cm kenarlı dikdörtgenin uzun kenarı 1 cm artırılıyor. Yeni alan kaç cm²?`,(Math.max(n,m)+1)*Math.min(n,m),`Uzun kenara 1 ekle: (${Math.max(n,m)}+1) × ${Math.min(n,m)} = ${(Math.max(n,m)+1)*Math.min(n,m)}.`,'rectangle',[n,m]);
+  return f(`${n} cm ve ${m} cm kenarlı dikdörtgenin ${n===m?'bir':'uzun'} kenarı 1 cm artırılıyor. Yeni alan kaç cm²?`,(Math.max(n,m)+1)*Math.min(n,m),`${n===m?'Bir':'Uzun'} kenara 1 ekle: (${Math.max(n,m)}+1) × ${Math.min(n,m)} = ${(Math.max(n,m)+1)*Math.min(n,m)}.`,'rectangle',[n,m]);
  }
  if(mode==='fraction'||mode==='fractionCompare'){
   const den=mode==='fractionCompare'?4+Math.floor(i/4):[4,5,8,10,20][i%5],num=1+i%(den-1);
@@ -100,6 +101,7 @@ export const mathJourneyQuestions:JourneyQuestion[]=topicRefs.flatMap(topic=>{
   let countAdded=0;
   for(let i=purpose==='practice'?0:purpose==='test'?40:140;countAdded<count&&i<2500;i++){
    const practice=purpose==='practice',item=make(mathModels[topic.id],i,practice);
+   const diagram=questionDiagram(mathModels[topic.id],i,practice);if(diagram){item.figure.diagram=diagram;item.hint=diagramHint(diagram);}
    const key=questionSignature(item);if(used.has(key))continue;used.add(key);
    if(mathModels[topic.id]==='area'&&i%4===2)item.figure.labels=['?',String(item.figure.values[1])];
    if(mathModels[topic.id]==='construction'&&(i%4===1||i%4===3))item.figure.labels=['A','B','C'];

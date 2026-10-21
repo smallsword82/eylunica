@@ -78,3 +78,7 @@ Kaynak aktarım araçları `tools/curriculum/import.py` ve `build.py` dosyaları
 Video taraması kullanıcı isteğiyle beklemektedir. 362 mevcut konu kaydında bağımsız anlatım/soru paketi henüz yoktur; seçmelilerin çoğunda yalnız giriş dersi vardır. Bölgesel dil içerikleri, dokuz konusuz programın kaynak çıkarımı, bütün konularda 50 soru hedefi, öğretmen içerik incelemesi, Android kayıt/APK ve gerçek cihaz testleri tamamlanmış değildir. Uygulamalı etkinliklerdeki bilgi testi, fiziksel/sanatsal performansı ölçmez. Müfredattaki iki belirsiz Türkçe başlık parçası uydurulmamıştır.
 
 Başlangıç geri dönüş noktası `46136e1240a0040e6b6c0d02852480530b36ef03`; doğrulanmış Git arşivi `/workspace/onboarding-backups/eylunica-before-grade5.bundle` dosyasında durur. Kurulum/başlangıç talimatları ortam taslağına kaydedilir. Taslak kaydı çalıştırma, değişken enjeksiyonu, site veya ortam yayımlama değildir; canlı süreçlerin yeni görevde yeniden başlaması gerekir.
+
+## Netlify yayın hazırlığı
+
+Mevcut main dalındaki kart paketi animasyonu güncellemesi korunarak ders modülü birleştirildi. Birleşmiş sürümde 231 birim/bileşen testi ve 24 ders/yazılı/kart/oyun tarayıcı testi geçti; TypeScript ve üretim/PWA derlemesi başarılı. Netlify ayarı `npm run build` ve `dist` kullanır. Yayın için main dalına gönderim yapılır; bu ortamda Netlify alan adına HTTP erişimi ağ politikası tarafından reddedildiğinden canlı yayın sonucu ayrıca doğrulanmalıdır.

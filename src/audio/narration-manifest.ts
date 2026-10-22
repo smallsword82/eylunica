@@ -9740,6 +9740,1971 @@ export const narrationManifest: Record<string, {file: string; duration: number; 
     "duration": 5.164292,
     "sha256": "8128758705ec402cceb91853bbf713d19cd7d40bd090ff10bf289dffbbae2a30"
   },
+  "Alıştırma zamanı. Soruyu dinle, görseli incele ve yanıtına dokun. Yanıtımı kontrol et düğmesine dokun. İpucu isteyebilir, açıklamayı dinleyebilirsin. Klavye kullanmana gerek yok.": {
+    "file": "tr-6f06429a56ea3e99.mp3",
+    "duration": 10.273958,
+    "sha256": "d190667c929baec7fef3910153faf20551283c966b5251c3eaedb8807b27a8ed"
+  },
+  "Konu testinde yirmi yeni soru var. Görseli incele ve yanıtını seç. Yanıtımı kaydet düğmesine dokununca sonraki soruya geçeceksin. İpucu ve çözümler test sırasında gösterilmez; sonunda notunu ve çözümleri göreceksin.": {
+    "file": "tr-0a2956a5b881e44f.mp3",
+    "duration": 11.773375,
+    "sha256": "1c101e2dfc84bba7fbfbaf007661cf1db70b39b14ae5d47a02838ae941528c15"
+  },
+  "Fen yazılısında kapsamı ve soru sayısını seç. Yazılıyı başlat düğmesine dokun. Her doğru eşit puan getirir; yanlışlar ayrıca puan düşürmez. Sonuç yüz üzerinden verilir.": {
+    "file": "tr-4adfcf0bb1d0ad0e.mp3",
+    "duration": 9.443042,
+    "sha256": "550e727cc75a26bbd6a51ecc5bef1350b10979c5a0b9d88462373d9ea999d5fe"
+  },
+  "Fen yazılısı başladı. Görseli ve soruyu incele. Yanıtına, sonra Yanıtımı kaydet düğmesine dokun. Sonraki soruya doğrudan geçeceksin. İstersen boş bırakabilirsin. Yanıtların bu cihazda saklanır.": {
+    "file": "tr-c77e5152000c2730.mp3",
+    "duration": 11.087708,
+    "sha256": "5811a2a0e4ceeb045effa5cd959e6944137543d112173f62f97f539a27253853"
+  },
+  "Çalışman tamamlandı. Yüz üzerinden notun ve doğru, yanlış, boş sayıları ekranda. Çözümleri incele düğmesinden görselli açıklamalara bakabilirsin.": {
+    "file": "tr-33c79c2df1087f31.mp3",
+    "duration": 8.361833,
+    "sha256": "a8ff2dfc29ba25964eb07be79e153ed028e33cba8c148edae3037206eb656d41"
+  },
+  "Bu konuyu pekiştirelim. Görselli çözümleri sırayla inceleyince durağın tamamlanacak. Aynı soruları yeniden yanıtlaman gerekmiyor. Aldığın not değişmeyecek.": {
+    "file": "tr-7ffcd228cf9e9770.mp3",
+    "duration": 8.684292,
+    "sha256": "afa06400b4aa28d109228bc35a318fddc428d7c2cd64fd1828b97b8ac67a8c62"
+  },
+  "Masada çatlamış bir kap var. Önce gözlüğe dokunarak koruyucunu tak; sonra güvenli davranışı seç.": {
+    "file": "tr-36e68df02d13aded.mp3",
+    "duration": 5.591042,
+    "sha256": "933f596d8a23b778702d09b835f10c0316c8f8fe8963b5e169723e449c7c3e84"
+  },
+  "Çatlamış cama dokunma. Deneyi yöneten yetişkinden yardım iste.": {
+    "file": "tr-78797c0b19dca19a.mp3",
+    "duration": 3.483,
+    "sha256": "8c2e77be5ed10490034439d203aeab84dc4151dd9e4811a0218897a6ef4c9d6c"
+  },
+  "Koruyucunu taktın ve öğretmene haber verdin. Güvenli keşfe hazırsın.": {
+    "file": "tr-63eb7d11ecc4c3b6.mp3",
+    "duration": 3.645542,
+    "sha256": "a00e1cd151196c8e92193d9562ab4bebf418fdb662d140bb13a4e074974d8364"
+  },
+  "Dönmeyi göster düğmesine dokun. Güneş lekesinin yer değiştirmesini izle. Sonra Güneş’i tanımlayan seçeneği bul.": {
+    "file": "tr-423665384764349f.mp3",
+    "duration": 6.292625,
+    "sha256": "032d9e5ff90c09808795ef7892f009e05973bb9ca6bd8d2966034f893f65cbf7"
+  },
+  "Güneş kendi ışığını üretir. Kendi ışığını üreten gök cismi yıldızdır.": {
+    "file": "tr-da5d65c1d1997e94.mp3",
+    "duration": 4.113958,
+    "sha256": "7044315e6c393e95605db28eff5cecbeada08b6532aeacee09d1ad151ba5f24d"
+  },
+  "Lekeyi izleyerek dönmeyi fark ettin. Güneş kendi ışığını üreten bir yıldızdır.": {
+    "file": "tr-7bb5343a04945337.mp3",
+    "duration": 4.255667,
+    "sha256": "aef14e692645d42004b5ec4c7fb5e5066699b2dd5612dff1d0675c58c94916e6"
+  },
+  "Ay’ı ilerlet düğmesiyle yeni aydan dolunaya ulaş. Sonra görünüşün neden değiştiğini seç.": {
+    "file": "tr-1fa66a2d81c305cd.mp3",
+    "duration": 4.825958,
+    "sha256": "be25788bdeaddd0168ea9c519fbd7acbe0f767f4c1323afe8773dd4761146734"
+  },
+  "Ay’ın biçimi değişmez. Güneş’in aydınlattığı yarının Dünya’dan görülen kısmı değişir.": {
+    "file": "tr-3c4442fed1bd177a.mp3",
+    "duration": 4.631792,
+    "sha256": "4300769f1161d3859d74f2d5cfee55498876f364d8367a0632ec3e206c8f3196"
+  },
+  "Dolunayı buldun. Ay küçülüp büyümez; aydınlık bölümün görünüşü değişir.": {
+    "file": "tr-996aa498098fb605.mp3",
+    "duration": 3.959,
+    "sha256": "d3aa837cad78baa3680f1181683a415683dea90236a78dc528a5b318a088ccdc"
+  },
+  "Önce Dünya’yı, sonra Ay’ı dolandır düğmelerine dokun. İki hareketi izle ve doğru ilişkiyi seç.": {
+    "file": "tr-2a2e09aadc3da1b8.mp3",
+    "duration": 5.43475,
+    "sha256": "36b6f82a4877441dba9b67650df9691b18ad5b00c80c1278ba7c2581bf8c20d8"
+  },
+  "Ay Dünya’nın çevresinde dolanır. Dünya ise Güneş’in çevresinde dolanır.": {
+    "file": "tr-5958ea047318c42c.mp3",
+    "duration": 4.318917,
+    "sha256": "94c3271522796332a88f108a34692f3794b4f5a9609b737e7a2ac25c64614ab4"
+  },
+  "İki dolanma hareketini ayırdın. Model uzaklık ve boyutları gerçek ölçekte göstermez.": {
+    "file": "tr-92b1f6834724d1e7.mp3",
+    "duration": 4.887833,
+    "sha256": "73612ffd82317b821de009748566c77c68a15fc40533355880c4a1508db9a511"
+  },
+  "Her biri iki newtonluk ağırlıklardan ekle. Dinamometrede altı newtona ulaş ve ölçüm birimini seç.": {
+    "file": "tr-5e5926db48c0f82b.mp3",
+    "duration": 5.617958,
+    "sha256": "8969107d290d3fe86ed6641dd23131b95740ec5342830606883dae4513605ddc"
+  },
+  "Üç ağırlık, iki artı iki artı iki newtonluk kuvvet uygular. Kuvvetin birimi newtondur.": {
+    "file": "tr-3fab20545c9c40ea.mp3",
+    "duration": 5.247708,
+    "sha256": "49c804c0e7173b7c6a049bffc65fd9a4e16d947af7f714ee2e6ac143fc7e02e8"
+  },
+  "Altı newtonu ölçtün. Kuvvet dinamometreyle ölçülür ve birimi newtondur.": {
+    "file": "tr-f5c3547a5b42fd47.mp3",
+    "duration": 4.295708,
+    "sha256": "696d459a03c25e2e25e98734c1e9b13a6b78ff5348cb4fcab605a3cc27819914"
+  },
+  "Valizi Ay’a götür düğmesine dokun. Kütle ve ağırlık göstergelerini karşılaştır; değişmeyen özelliği seç.": {
+    "file": "tr-7c5c7e76b5cfc849.mp3",
+    "duration": 5.83675,
+    "sha256": "9a0cf42695743d4fada8716277015e142228d9ecdb121a54f6777177742d4694"
+  },
+  "Aynı valizin madde miktarı değişmez. Kütle sabit kalır; çekim azaldığında ağırlık azalır.": {
+    "file": "tr-afae4320f9598d56.mp3",
+    "duration": 5.022083,
+    "sha256": "9b48b9ba71079107480b56bb31f855521be05d7e2bdd7f13c10dd4bf50fadaba"
+  },
+  "Valizin kütlesi aynı kaldı, ağırlığı azaldı. Kilogram kütlenin, newton ağırlığın birimidir.": {
+    "file": "tr-1e08112fc5b4a17e.mp3",
+    "duration": 5.226417,
+    "sha256": "c954936f3f12972d452bd99f2030b741f02025d6eb8140d9de82868b54e6273d"
+  },
+  "Arabaları aynı başlangıç hızıyla bırak. Pürüzsüz ve pürüzlü yüzeyde durdukları yerleri karşılaştır; daha fazla yavaşlatan yüzeyi seç.": {
+    "file": "tr-d0f2d71253f33548.mp3",
+    "duration": 6.959667,
+    "sha256": "be25019049b0452952694b8e14a42312985f1036dbc6923ca3293b766370f083"
+  },
+  "İtme bırakıldıktan sonra sürtünme hareketi yavaşlatır. Bu modelde pürüzlü yüzeyde sürtünme daha büyüktür.": {
+    "file": "tr-c17c88511e0e5455.mp3",
+    "duration": 6.188125,
+    "sha256": "a041953bcbb2b412ce3b029f9b015cbc9b44efe075a5a6c88decf5047b07cb9f"
+  },
+  "Aynı hızla başlayan araba pürüzlü yüzeyde daha kısa mesafede durdu. Yalnız yüzey değiştirildi.": {
+    "file": "tr-e255a881b190281f.mp3",
+    "duration": 5.282542,
+    "sha256": "3e664ea37203f277a0a2374cc2287ddc0b84b30abfe23e0b552105942d83ab04"
+  },
+  "Hücre zarı, sitoplazma ve çekirdeğe sırayla dokun. Üçünü keşfedince hücreyi yöneten yapıyı seç.": {
+    "file": "tr-82e92c1479fb4561.mp3",
+    "duration": 5.689958,
+    "sha256": "1ca50e6518c507f9a833285ae3f6f9e21ee8fe2f4332f2bab589469e1f5debe6"
+  },
+  "Çekirdek, hücrenin yönetim merkezidir. Zar sınır oluşturur; sitoplazma birçok yaşamsal olayın gerçekleştiği bölümdür.": {
+    "file": "tr-47b017edf4650321.mp3",
+    "duration": 6.815083,
+    "sha256": "02bf7629007724bdfc176082ca6b46525f7abd0effb642151b269f0a50b3b933"
+  },
+  "Üç temel kısmı keşfettin. Çekirdek yönetim merkezidir; bitki hücresinin ayrıca hücre duvarı bulunur.": {
+    "file": "tr-0eea728f967e7c3a.mp3",
+    "duration": 5.665958,
+    "sha256": "704f026db579f26b2075cea89779ce1b11a6cd746dfecaa31032b6d2d2662f3a"
+  },
+  "Kolu bük düğmesine dokun. Kemiklerin arasındaki eklemde hareketi ve kasın kısalmasını izle; hareketi sağlayan ekibi seç.": {
+    "file": "tr-1ac2d368161c0fd1.mp3",
+    "duration": 6.284125,
+    "sha256": "ed05f7e1890be1883567a87fd085e6eb0a3c53b9eafb87a991e3b2024ff015c7"
+  },
+  "Kemikler destek olur; eklemler kemiklerin birleşme yeridir. Kaslar kasılıp gevşeyerek kemikleri hareket ettirir.": {
+    "file": "tr-c386a511e97382b7.mp3",
+    "duration": 6.188083,
+    "sha256": "17b7362c653bd47c28dbb57b8b350009b4bb10b3c4ece8a3d9caea9d9a1c04b4"
+  },
+  "Kas, kemik ve eklemin birlikte çalıştığını gördün. Bu çizim sadeleştirilmiş bir hareket modelidir.": {
+    "file": "tr-8f9ac8b4c6a8e76b.mp3",
+    "duration": 5.294167,
+    "sha256": "0eb45fb9dc92305b1df126d60af34ca6f494dc59fe3286b2788ad00bdd5c96d6"
+  },
+  "Öğretmenin yönergesini oku ve anlamadığın adımı sor. Çalışma alanını düzenle; gerekiyorsa koruyucu gözlük kullan, uzun saçları topla.": {
+    "file": "tr-529f11db7f21a792.mp3",
+    "duration": 7.177958,
+    "sha256": "1106ad3494b6c68bbd56495f431aca42da49d4c44722b7e32a9b5fae09ae87ce"
+  },
+  "Kimyasal maddeler tadılmaz. Etiketsiz kap kullanılmaz; öğretmenin yönlendirmesi olmadan maddeye dokunulmaz veya madde koklanmaz.": {
+    "file": "tr-51b1eb6d575e82f8.mp3",
+    "duration": 7.024042,
+    "sha256": "7936599e27f64a3a43dc034f4c6deb0725572edc5372e48d9986a0fc682a050c"
+  },
+  "Kırık camı elinle toplama. Dökülme, yaralanma veya araç arızasını hemen öğretmene bildir; arkadaşlarını tehlikeli bölgeden uzak tut.": {
+    "file": "tr-0983b1c6be054dde.mp3",
+    "duration": 7.084583,
+    "sha256": "a96d518738ccb32362a7534bced35160b7f885c9d351320ff4f667cd76488392"
+  },
+  "Deney bittikten sonra araçları yönergeye göre bırak, ellerini yıka ve masayı düzenle. Evde priz, alev veya bilinmeyen maddelerle deney yapma.": {
+    "file": "tr-88762638bde5d00b.mp3",
+    "duration": 7.644667,
+    "sha256": "a5d2d1aadac2fdf6ca16554122741dca8e6cf843fa3e60b7cf06187e8fb7ae51"
+  },
+  "Sıvıyı tatma, koklama veya başka kaba aktarma.": {
+    "file": "tr-fe9a9596b90ac022.mp3",
+    "duration": 2.61225,
+    "sha256": "9c57de82e89d7211f8e8860922abc5ea16e0a140f3434b344b0f32766ac760a2"
+  },
+  "Çatlamış kaba dokunma ve arkadaşlarını uyar.": {
+    "file": "tr-591f837841207594.mp3",
+    "duration": 2.519375,
+    "sha256": "6989be0d77c1fd0ff4b8ba919b37c565a27839d6863f221f700051860abae9f7"
+  },
+  "İki durumu da öğretmene bildir, güvenli yönergeyi bekle.": {
+    "file": "tr-c9d8112f2308b1ef.mp3",
+    "duration": 3.107333,
+    "sha256": "fc1a05e08ddb746fa6d37c1dcbfbe5e51aa819919fdb0567985efd4f1ed387d3"
+  },
+  "Güneş yaklaşık küreseldir ve çok sıcak gazlardan oluşur. Dünya’dan çok büyüktür; gökyüzünde küçük görünmesinin nedeni bize çok uzakta olmasıdır.": {
+    "file": "tr-3898c8ec7eb210c6.mp3",
+    "duration": 8.277917,
+    "sha256": "f5e4398de2d5efe8c15ab665fb54bb6f9c0b1916991764175d9e8a89d54241ba"
+  },
+  "Güneş’in görünen yüzeyinde çevresine göre daha serin bölgeler koyu lekeler olarak gözlenebilir. Koyu görünmek soğuk olmak anlamına gelmez.": {
+    "file": "tr-21c75d4675e984c3.mp3",
+    "duration": 7.720667,
+    "sha256": "a8413df0862cd00ad6d70a537e8275c51369784438063edfcc756d5fbb39e642"
+  },
+  "Güneş kendi ekseni çevresinde döner. Bilim insanları güneş lekelerinin konum değişimini inceleyerek dönme hareketi hakkında bilgi edinir.": {
+    "file": "tr-01c10883a41612c8.mp3",
+    "duration": 7.220958,
+    "sha256": "90d29e390781af4ba60c8a279b2136c4a874b41f6caf63e52aafad349035d65c"
+  },
+  "Güneş’e çıplak gözle, dürbünle veya sıradan teleskopla bakılmaz. Fotoğraf, güvenilir bilimsel görüntü ve güvenli modeller üzerinden inceleme yapılır.": {
+    "file": "tr-39025b5dcaa971b4.mp3",
+    "duration": 8.799125,
+    "sha256": "405a5ae512bd6e32047d6b4d3d8c564d740e25687803015db555b40c811770a9"
+  },
+  "Ampul ve Güneş ışık kaynağıdır.": {
+    "file": "tr-77252d7e4e0ddd58.mp3",
+    "duration": 1.9505,
+    "sha256": "9e08550b3e256fa942abdcae380677c745ca79f456bc1002dc1de7d815e1a432"
+  },
+  "Ay kendi ışığını üretmez; Güneş ışığını yansıtır.": {
+    "file": "tr-b75de3b4496b599e.mp3",
+    "duration": 2.92575,
+    "sha256": "bd143a67c13c5bca69f678ee39ebe4227842ce49c689c09fadc58c09eaee0c5d"
+  },
+  "Bu nedenle Güneş bir yıldız, Ay ise Dünya’nın doğal uydusudur.": {
+    "file": "tr-98c9bb1f838a08e6.mp3",
+    "duration": 3.663875,
+    "sha256": "fa1f81649247f05cbfeffc566b4f34b38e3457db994e4b8a4c6018b10583a1b5"
+  },
+  "Ay kendi ekseni çevresinde döner ve Dünya çevresinde dolanır. Bu iki hareketin süreleri yaklaşık eşit olduğundan Dünya’dan Ay’ın hep yaklaşık aynı yüzü görülür.": {
+    "file": "tr-9dcea68ec2a4697f.mp3",
+    "duration": 8.533333,
+    "sha256": "347cb2493b2a5d0b007b64eed308dd87eda79de38e922f5855bf63349643fd5e"
+  },
+  "Ay, Dünya ile birlikte Güneş çevresindeki yolculuğa da katılır. Ay’ın Dünya çevresindeki bir turu ile evrelerin yeniden aynı görünmesi için geçen süre tam aynı değildir.": {
+    "file": "tr-517623672e260962.mp3",
+    "duration": 8.939167,
+    "sha256": "abd0ce2bafd224aeeb23add6c7b82d8a1899cb589882ae437feb37bb9d04a17c"
+  },
+  "Güneş Ay’ın her zaman yaklaşık yarısını aydınlatır. Dünya’dan bu aydınlık yarının farklı bölümlerini görmemiz evreleri oluşturur.": {
+    "file": "tr-ef5458de11c35dff.mp3",
+    "duration": 6.815083,
+    "sha256": "3a7c75ca1d8aec80eac899895ae8edd11fd519714e77f33f28526ff08d275baa"
+  },
+  "Başlıca evreler yeni ay, ilk dördün, dolunay ve son dördündür. Evreler Ay’ın biçim değiştirmesi veya Dünya’nın gölgesinin her ay Ay’a düşmesi sonucu oluşmaz.": {
+    "file": "tr-7ce873643d4f29f8.mp3",
+    "duration": 8.764417,
+    "sha256": "258b24064ab4da045e7cbacf4432e14e36ede24be9580d280e1e6bee8d7a5703"
+  },
+  "Ay’ın biçimi yaklaşık küresel olarak kalır.": {
+    "file": "tr-bd1020f759da955e.mp3",
+    "duration": 2.310417,
+    "sha256": "bc8d7c77d61ad1d2f21dc26e22d8a4474baeb28020d9df9cab8c5eb32c1f202d"
+  },
+  "Güneş’in aydınlattığı bölümün Dünya’dan görülen kısmı değişir.": {
+    "file": "tr-3d4842d965227abb.mp3",
+    "duration": 3.193958,
+    "sha256": "6aa4afaa7055cb41360a409d1c09a034f0b83b4b91802a08651e66868e1137d7"
+  },
+  "Görünen değişim evredir; Ay’ın parçalanması veya küçülmesi değildir.": {
+    "file": "tr-1023d7dcbf09e1ce.mp3",
+    "duration": 3.573167,
+    "sha256": "fd2f54d8c2710330624d1d883d4db5035b7a0cd6bba1f9d2e8020f357b396545"
+  },
+  "Bu üç gök cismi arasında en büyük Güneş, sonra Dünya, sonra Ay gelir. Güneş yıldız, Dünya gezegen, Ay doğal uydudur.": {
+    "file": "tr-24bca7857595e163.mp3",
+    "duration": 7.952833,
+    "sha256": "5d3e4841dd84e1b88f8749b8a20b0555e6b9464a49a9aa83e713f33359e5dd30"
+  },
+  "Modelde kullanılan topların boyutları ve aralarındaki uzaklıklar her zaman aynı ölçekte olmayabilir. Modelin hangi ilişkiyi temsil ettiği belirtilmelidir.": {
+    "file": "tr-a39a23f0a5a44158.mp3",
+    "duration": 7.918,
+    "sha256": "3ed4fbce295deb697968fa056df1b8590beddf926e8a1b202d4f8649db7ecdb8"
+  },
+  "Dünya kendi ekseni çevresinde döner ve Güneş çevresinde dolanır. Dünya’nın dönmesi yaklaşık bir gün, Güneş çevresinde dolanması yaklaşık bir yıl sürer.": {
+    "file": "tr-f4732cda4b2c761b.mp3",
+    "duration": 8.034125,
+    "sha256": "ef4eb01d5a52498d479cb7807d9b6098b1e2953c7250f6ce10f55898783782e5"
+  },
+  "Ay Dünya çevresinde dolanırken Dünya ile birlikte Güneş çevresinde hareket eder. Kendi ekseni çevresindeki hareket dönme, başka bir cisim çevresindeki hareket dolanmadır.": {
+    "file": "tr-0108bfc38439b320.mp3",
+    "duration": 9.68275,
+    "sha256": "a3bdabb04125bb5285c3e4ce259f9fea220153d14f1d725978fa794b5e763917"
+  },
+  "En büyük top Güneş’i temsil eder.": {
+    "file": "tr-c097f1806eb82342.mp3",
+    "duration": 1.811167,
+    "sha256": "5d9158ab0c800e2c2dce4957b2ada793e2624d34635c5ae885adc1b56af05d88"
+  },
+  "Orta top Dünya’yı, küçük top Ay’ı temsil eder.": {
+    "file": "tr-3e24904b83a6bc42.mp3",
+    "duration": 2.61225,
+    "sha256": "4333e5587daf1ecc47152868280e099eca82911657459a624e7f62b5bece202e"
+  },
+  "Dünya topunu Güneş çevresinde; Ay topunu Dünya çevresinde hareket ettir.": {
+    "file": "tr-2e30f7e4e558a3fd.mp3",
+    "duration": 4.191208,
+    "sha256": "26555c90c97c9d04cc959591df8217f7789f2e2a3e1b7c347bb923c49d4f596f"
+  },
+  "Top boylarıyla uzaklıkların gerçek oranlarda olmadığını model notuna yaz.": {
+    "file": "tr-551d9e008baf3c6c.mp3",
+    "duration": 3.774,
+    "sha256": "03ff191e3fbcca21010cbc6555782565a2cb574080656f1245b1c1b1cacb5478"
+  },
+  "Bir kapıyı itmek, bir çekmeceyi çekmek ve esnek bir yayı uzatmak kuvvet uygulamaya örnektir. Her kuvvet hareket oluşturmak zorunda değildir.": {
+    "file": "tr-263ce6fd18dc6f75.mp3",
+    "duration": 7.906417,
+    "sha256": "a920341be9d061b97ab0bda9aa7a7d04e6434146fc199b844877424689d16fa8"
+  },
+  "Kuvvetin büyüklüğü vardır. Bir cismi daha güçlü çekmek, uygun bir yayda daha fazla uzamaya neden olabilir.": {
+    "file": "tr-612ab7e0b45c21f6.mp3",
+    "duration": 5.696042,
+    "sha256": "38baca96f387118cc89a7937c9ed9c21692605726958a02890517b94d5ba99b6"
+  },
+  "Kuvvet dinamometreyle ölçülür. Kuvvet birimi newtondur ve N simgesiyle yazılır. Dinamometre, esnek yayın uygulanan kuvvetle uzamasından yararlanır.": {
+    "file": "tr-c40b92f3f627ab57.mp3",
+    "duration": 8.217375,
+    "sha256": "254d62ded75bd9bd046be849964db5cdbc358fcf4f07d57c7d3769612a550d0b"
+  },
+  "Ölçümden önce aracın sıfırı ve ölçebileceği en büyük değer kontrol edilir. Sınırından büyük kuvvet uygulamak aracı bozabilir.": {
+    "file": "tr-265a141eed5953fd.mp3",
+    "duration": 7.175,
+    "sha256": "b1d9f8db95873321f5c2fbebc3c31ba6b6b83a24e299766d1f557f6dcdc08648"
+  },
+  "Her aralık 10 ÷ 5 = 2 N’dir.": {
+    "file": "tr-78d27ed700167ab9.mp3",
+    "duration": 2.391667,
+    "sha256": "e4af1d12537dad64652c37ac3b15d7279df3441bc3537ee23005252601fc9d54"
+  },
+  "Üç aralık 3 × 2 = 6 N eder.": {
+    "file": "tr-73e0cf2bef85e576.mp3",
+    "duration": 2.519375,
+    "sha256": "c8b6cdfb4a7b29bcc22e6cdcbfe40f46069b4875bd60694bc1b950acd06f76cc"
+  },
+  "Sonucu birimiyle yaz.": {
+    "file": "tr-70a6600e905d9663.mp3",
+    "duration": 1.169167,
+    "sha256": "3f5b68cab12645402998b594f521ae7631444ebc1ed620e3c6528336fd77d31e"
+  },
+  "Kütle, cismin madde miktarının bir ölçüsüdür. Gram ve kilogram yaygın kütle birimleridir. Eşit kollu teraziyle kütle karşılaştırılabilir.": {
+    "file": "tr-125e2187f0eb938f.mp3",
+    "duration": 7.504833,
+    "sha256": "887c37abde50aebfcf409255c5d82e0228a12b3793b7d42a06cddd22369b4798"
+  },
+  "Bir çantayı Dünya’dan Ay’a götürdüğümüzde çantadan madde eksilmezse kütlesi değişmez.": {
+    "file": "tr-7dfeff262b219de1.mp3",
+    "duration": 4.712417,
+    "sha256": "3b76a6c322a46a3e7d0243a04bf77617bcbf727b7a8122c64a177a408b57e954"
+  },
+  "Ağırlık bir çekim kuvvetidir. Dinamometreyle ölçülür ve birimi newtondur. Aynı cismin ağırlığı farklı gök cisimlerinde değişebilir.": {
+    "file": "tr-7bbc3553eb17a8f2.mp3",
+    "duration": 7.25625,
+    "sha256": "84003f159d45803e9748372e877d59eaa3f16bfa005a1dab07582bbea9a39c1e"
+  },
+  "Ay’ın yüzeyindeki çekim Dünya’nınkinden daha zayıftır. Bu yüzden aynı cismin Ay’daki ağırlığı daha az, kütlesi ise aynıdır.": {
+    "file": "tr-33ebcb7ccc498477.mp3",
+    "duration": 6.916875,
+    "sha256": "f2e656b9db9846ce2e29d77dde544e51c929836aa70fb8674e63e08d1459ba0d"
+  },
+  "Çantanın içindeki madde miktarı değişmiyor.": {
+    "file": "tr-9be420658e923573.mp3",
+    "duration": 2.252333,
+    "sha256": "bcf1b252c0296199c3c83358b02d36724745651d795ec44f77b734248e803526"
+  },
+  "Bu nedenle kütlesi 6 kg kalır.": {
+    "file": "tr-1060160af3842377.mp3",
+    "duration": 2.101417,
+    "sha256": "8dac4677b2f534f70abec51cf8cb6f4df50db67930d8cbeb1fdb74dda9260a73"
+  },
+  "Ay’ın çekimi daha zayıf olduğundan çantanın ağırlığı azalır.": {
+    "file": "tr-e666433ba1eb6724.mp3",
+    "duration": 2.920875,
+    "sha256": "bb2de2d0ee5dea243269e96438e8f1fd63233e88ca17533b9d94f40d4520b0eb"
+  },
+  "Aynı cisim ve koşullarda pürüzlü bir yüzey çoğu zaman harekete daha çok direnç gösterir. Buz gibi kaygan yüzeylerde yürümek zorlaşabilir.": {
+    "file": "tr-17026091b6e7eae8.mp3",
+    "duration": 7.399167,
+    "sha256": "b1a546ea9d0ff7f6c5ec78d955881d6ac6f0b082dd3bc4f31e314869bf950ce1"
+  },
+  "Hava ve su da hareket eden cisimlere direnç uygular. Paraşüt geniş yüzeyiyle hava direncinden yararlanır.": {
+    "file": "tr-b7f5fe3314f06ea7.mp3",
+    "duration": 5.53925,
+    "sha256": "20ba381c25339a8b75df9f21559e70b7ed5bd8632593c85158357b6da5056eb7"
+  },
+  "Ayakkabı tabanındaki desenler ve araç frenleri sürtünmeden yararlanır. Yürürken yere tutunabilmemizde sürtünme önemlidir.": {
+    "file": "tr-4b1009c7c4417b4d.mp3",
+    "duration": 6.256708,
+    "sha256": "656db74f9ab5e898e8c8ac74e55f8403f698e84d9f13eba375348d2d8ae3fdd7"
+  },
+  "Bazı makine parçalarının yağlanması istenmeyen sürtünme ve aşınmayı azaltır. Bir deneyde yüzeyin etkisini karşılaştırırken cisim ve başlangıç koşulları aynı tutulur.": {
+    "file": "tr-7091687970e910b1.mp3",
+    "duration": 8.637833,
+    "sha256": "603bc3ac8d8005bcce33126a494195e3a2301e3c5027f812b34794e1fa069744"
+  },
+  "Araba ve başlangıç koşulu aynıdır; değişen yüzeydir.": {
+    "file": "tr-78cb30dcccc157bb.mp3",
+    "duration": 3.183833,
+    "sha256": "d074cf3d366518ae1279a263d8b05bfc74d25d1f3926d4f0871bbb40ae8ca19d"
+  },
+  "Halıdaki araba daha kısa yol almıştır.": {
+    "file": "tr-d879f68ceeb6b921.mp3",
+    "duration": 2.043375,
+    "sha256": "f02a20f0d6e230ab902eabae5169424e1034b2f58076131c14366e6109cee55b"
+  },
+  "Bu deney koşullarında halının harekete daha fazla direnç gösterdiği sonucuna ulaşılır.": {
+    "file": "tr-373e146f3b67c72c.mp3",
+    "duration": 4.273958,
+    "sha256": "e00193f0dbed3d89f1ccbf84e331ca82de70857efc81f669054e5e6110395e5a"
+  },
+  "Bitki ve hayvan hücrelerinde hücre zarı, sitoplazma ve genellikle çekirdek bulunur. Zar madde geçişini düzenler; sitoplazma birçok yaşamsal olayın gerçekleştiği bölümdür.": {
+    "file": "tr-1eb27c02d860667e.mp3",
+    "duration": 9.3095,
+    "sha256": "c850dc3d4d0f5ef555410f9cd066ab631f79545c9aefdf2225552171ef981f6c"
+  },
+  "Çekirdek hücrenin yönetiminde rol alır. Mitokondri enerjiyle ilgili süreçlerde görev yapar. Kofullar bazı maddelerin depolanmasında görev alır.": {
+    "file": "tr-743da574188dec40.mp3",
+    "duration": 7.674208,
+    "sha256": "a8140b0f3eccc28a763ce3df90245000d8d4520f969e6ca6f47c650aef316050"
+  },
+  "Bitki hücrelerinde hücre zarının dışında hücre duvarı vardır. Fotosentez yapan yeşil bitki hücrelerinde kloroplast bulunur; her bitki hücresinde kloroplast bulunmak zorunda değildir.": {
+    "file": "tr-8ea632d415bb8f86.mp3",
+    "duration": 9.625958,
+    "sha256": "bd358f986b134ced79320ff0403df3648c995ce15731a30f2039e4c9e5063159"
+  },
+  "Benzer görevli hücreler dokuları, dokular organları, organlar sistemleri oluşturur. Sistemler birlikte organizmanın yaşamını sürdürür.": {
+    "file": "tr-d77d957101b4582e.mp3",
+    "duration": 7.684333,
+    "sha256": "27ca6e9c8a07d0a5e9fb00de2d3d5123adb68225a91201a85da62fd8b7182d70"
+  },
+  "Hücre duvarı bitki hücrelerinde bulunur.": {
+    "file": "tr-a3ca0ba389b6c168.mp3",
+    "duration": 1.985333,
+    "sha256": "e3c08de4284c38879775cb6d8c0410f54a45f5d1a506aaeffe6c253b075f5237"
+  },
+  "Kloroplastlar fotosentez yapan bitki hücreleriyle ilişkilidir.": {
+    "file": "tr-d67c6a252d6922ff.mp3",
+    "duration": 3.517833,
+    "sha256": "024a6cb7e94417c51a0cdded5db2369b6c62ef9a1f5d6275be6dff0c3eb19790"
+  },
+  "Model bu özellikleri taşıyan bir bitki hücresini temsil eder.": {
+    "file": "tr-c4efc78cc63c510e.mp3",
+    "duration": 3.633958,
+    "sha256": "3c10db558efbb084c6d80055926124b5f349332ad7962db109b8ce91609839f5"
+  },
+  "İskelet kemiklerden oluşur. Kafatası beyni, göğüs kafesi kalp ve akciğerleri korumaya yardımcı olur. Kemiklerin birleştiği yerler eklemlerdir.": {
+    "file": "tr-f14653d6266a62a3.mp3",
+    "duration": 8.115375,
+    "sha256": "cc85858d30893b2937efae73c5938b309540c9f2cafb02417c12497dbf2be5c5"
+  },
+  "Kaslar kasılıp gevşeyerek kemiklerle birlikte hareketi sağlar. Her eklem aynı miktarda hareket etmez; örneğin kafatası kemikleri arasındaki eklemlerle dirsek farklıdır.": {
+    "file": "tr-f642f90c5ceab65d.mp3",
+    "duration": 8.931208,
+    "sha256": "c219c117cc393546984aa148b1d88c0f5d9a0e5243345b18fcfd3fd60d2828ef"
+  },
+  "Dengeli beslenmek, yaşa uygun hareket etmek ve doğru duruş alışkanlığı kazanmak önemlidir. Çantayı gereksiz ağırlıkla doldurmamak ve iki askıyı kullanmak yükü dengeler.": {
+    "file": "tr-81a768482ef20414.mp3",
+    "duration": 9.253167,
+    "sha256": "913834274183d6cc2883778e0298a5c4723f41545004bd69812c39d7db28d3ad"
+  },
+  "Ani veya zorlayıcı hareketler, yüksekten atlama ve başkasının bedenini zorlamak güvenli değildir. Ağrı, düşme veya yaralanmada etkinlik bırakılır ve bir yetişkinden yardım istenir.": {
+    "file": "tr-29ad21ece5a27c39.mp3",
+    "duration": 10.233583,
+    "sha256": "aeb607725c389277de3bc61deea934c050e4bd13e993265b6f394cc05256593b"
+  },
+  "Kol kemikleri destek sağlar.": {
+    "file": "tr-e8e7796a24b8ad84.mp3",
+    "duration": 1.76475,
+    "sha256": "244bd2b6f72a0e3291cd5cbd75018949a092262e96fb15ecaae218ed21ba67fa"
+  },
+  "Dirsek eklemi kemikler arasında harekete olanak verir.": {
+    "file": "tr-bfab12260ff130b3.mp3",
+    "duration": 3.065042,
+    "sha256": "d41ee7c01c4ff5a99fde5e13ad3b2388f6a754972d4ca0ea209a936cdd392519"
+  },
+  "Kasların kasılması ve gevşemesiyle kol bükülür veya açılır.": {
+    "file": "tr-cb4b5823c4876391.mp3",
+    "duration": 3.262417,
+    "sha256": "eaf9bb43354826a12fb7f265bd7f941ccafda1c008fbd881045c53d9f20d6d68"
+  },
+  "Etiketsiz bir sıvı ile karşılaşırsan ilk güvenli davranış hangisidir?": {
+    "file": "tr-d9fa2646069c517c.mp3",
+    "duration": 3.549417,
+    "sha256": "da0293ef7426ea7df47e51b17290c1d8bca38756630aa123f104a9b1314cab4d"
+  },
+  "İpucu: Maddenin ne olduğunu bilmiyorsun.": {
+    "file": "tr-5ee72883461e9144.mp3",
+    "duration": 2.34525,
+    "sha256": "0766ea6ccdb8867dbd9eff403fe4fce7d1d92cd281457182cd1bdf08b5e00044"
+  },
+  "Çözümü birlikte inceleyelim. İçeriği bilinmeyen maddeyle işlem yapılmaz; öğretmen yönlendirmesi gerekir.": {
+    "file": "tr-662f081cfc59e49b.mp3",
+    "duration": 5.781792,
+    "sha256": "acd18479e501690155ef6b58c0fdae82d1e9f0f9325ac7780f099b5e1e6c9b50"
+  },
+  "Kırılan camı çıplak elle toplamak güvenlidir.": {
+    "file": "tr-458f440f0443774c.mp3",
+    "duration": 2.497958,
+    "sha256": "d6a5dc4c0334f1b9495e30d1eeb7865f1decfbdf64deb73ae1a86e82041164d5"
+  },
+  "İpucu: Camın keskin kenarlarını düşün.": {
+    "file": "tr-690dfe7da39b4da3.mp3",
+    "duration": 2.438125,
+    "sha256": "83e2157966c768c63192e9a7d25339d52fc683eda3089215226c710e63e30e23"
+  },
+  "Çözümü birlikte inceleyelim. Kırık cam kesebilir; bölgeyi koruyup öğretmene bildirmek gerekir.": {
+    "file": "tr-b672c1b791681784.mp3",
+    "duration": 5.041958,
+    "sha256": "f2136898b71431f2e907d7987a4edc5d7e81d9bc238a95e404226dd467e6d1fc"
+  },
+  "Deney sırasında anlaşılmayan bir adım için kime danışılır? Uygun yanıta dokun.": {
+    "file": "tr-f9db4be264275de1.mp3",
+    "duration": 3.862208,
+    "sha256": "4bd8a7d9eb89c627b0d47795f0a477b0964c7050fdf4e632b2821639be000d1d"
+  },
+  "İpucu: Deneyi yöneten kişiyi düşün.": {
+    "file": "tr-dcb91a3deb9d3795.mp3",
+    "duration": 2.078208,
+    "sha256": "3e2d7c7d9768a6f2e00da21e917c062d3d68ad51b617cec2e7bd9cc9f9c1259d"
+  },
+  "Çözümü birlikte inceleyelim. Deneyi yöneten öğretmenden açıklama alınır.": {
+    "file": "tr-2f8dd95a8967ac91.mp3",
+    "duration": 3.726833,
+    "sha256": "98268ce8f24be14e7f9b7d351e29382fc6ef3f4977f4b2a72488805e2d20b22f"
+  },
+  "Deney öncesi hangi hazırlık uygundur?": {
+    "file": "tr-b5f88725e2cf4363.mp3",
+    "duration": 2.057875,
+    "sha256": "6cc49ba49a230a18674ceab9f871c0624d23c47c1be133132e530c7dc63149e8"
+  },
+  "İpucu: Temas ve takılma riskini azaltan seçeneği bul.": {
+    "file": "tr-2babff187e03491b.mp3",
+    "duration": 3.030208,
+    "sha256": "330b634c02bbe2536aaea52ac5c89f504eb73d623d48c3a2b9ea5b77eee4f130"
+  },
+  "Çözümü birlikte inceleyelim. Saçların araçlara veya maddelere temas etmesi engellenir.": {
+    "file": "tr-7f8d50d91da444bc.mp3",
+    "duration": 4.713667,
+    "sha256": "9ea90a4ac82dcb8f915b5c96391cce6b09632225dc2e3cf6900e90cdc035ef54"
+  },
+  "Arkadaşın sıvı dökülen masaya dokunmak istiyor. Ne önerirsin?": {
+    "file": "tr-42ea06cbca35f565.mp3",
+    "duration": 3.494625,
+    "sha256": "d66f1defcb37dcfa6184b9553012e68ba69bb6afc34cc41f94af13c76439fec1"
+  },
+  "İpucu: Önce güvenliği sağla.": {
+    "file": "tr-e70340a8ead0d6e3.mp3",
+    "duration": 1.938875,
+    "sha256": "066b604b985473cf87e2ab80fa729640e3242175021c043dc189639260a4f757"
+  },
+  "Çözümü birlikte inceleyelim. İçeriği bilinmeyen döküntüye temas edilmemeli ve öğretmen bilgilendirilmelidir.": {
+    "file": "tr-cb45e7bf2bc18e2b.mp3",
+    "duration": 5.456708,
+    "sha256": "cca066b021c9ce16e4eac1866ef78eb4593c7dff37688c223377db885b06fe27"
+  },
+  "Bir ekip deneyi çok hızlı bitirmiş fakat yönergeyi okumamış. Başarıyı değerlendirirken neye öncelik verilir?": {
+    "file": "tr-3b408e55bd2b7233.mp3",
+    "duration": 5.596042,
+    "sha256": "263f78f3b2ba5f11686fb1152d33fd9d9dddcc898e98afec84a012d99b9a945b"
+  },
+  "İpucu: Bir deneyin güvenilir olması için nasıl yapılması gerekir?": {
+    "file": "tr-068bbf817fd79ab0.mp3",
+    "duration": 3.40175,
+    "sha256": "6038b512ae59eef0df56e7e0723c4cb83d08abdb75feae91b33d67ebb4227d58"
+  },
+  "Çözümü birlikte inceleyelim. Hız, güvenli ve doğru yöntemin yerini tutmaz.": {
+    "file": "tr-f745d78c73450c33.mp3",
+    "duration": 3.994875,
+    "sha256": "045b29aa136dba208a4277f7b26924c59c406e1726660a5728d261cb81c20dce"
+  },
+  "Keşif görevindeki doğru sonuç hangisidir? Güvenli laboratuvar": {
+    "file": "tr-50757834485a1ec9.mp3",
+    "duration": 3.3785,
+    "sha256": "417584f956711830e43fb1968a2fdfa6a7ca18f4feb05ad70007fd1c0d5ab268"
+  },
+  "İpucu: Çatlamış cama dokunma. Deneyi yöneten yetişkinden yardım iste.": {
+    "file": "tr-a255d8b9e03ce0a0.mp3",
+    "duration": 4.086708,
+    "sha256": "5c9323942a71ddaa5bd5f15bd3a5df651d97b1f1d51b15f659ed2a93571fd206"
+  },
+  "Çözümü birlikte inceleyelim. Koruyucunu taktın ve öğretmene haber verdin. Güvenli keşfe hazırsın.": {
+    "file": "tr-bd8f2ae068590b44.mp3",
+    "duration": 5.150125,
+    "sha256": "1ce041acec1201980aafb3fd1ebb774c32b56dc08e5864c01f3f874e62d1a04b"
+  },
+  "Deney öncesinde bir adımı anlamadın. Hangisini seçersin?": {
+    "file": "tr-6d18f66a30d4b6b0.mp3",
+    "duration": 3.216,
+    "sha256": "da5bfc4c41279e72e0d253d9d4edb595548ffcc207e05d3fa1e8bb8ac2f3c5b4"
+  },
+  "Çözümü birlikte inceleyelim. Öğretmenden açıklama isterim.": {
+    "file": "tr-27dc8bc8c4300484.mp3",
+    "duration": 3.1115,
+    "sha256": "3e428a23495600ac62aed47496b777b9dc308bee07b21f935bb7a260903ba7e3"
+  },
+  "Güneş hangi gök cismi türüdür?": {
+    "file": "tr-cc41edf565028c5e.mp3",
+    "duration": 1.811167,
+    "sha256": "e3e3248a7c9f306bb75f396e765bb85b305cd35c17a008af6850ab25b84b3626"
+  },
+  "İpucu: Kendi ışığını üretmesine dikkat et.": {
+    "file": "tr-de37c4bf89fe7aa3.mp3",
+    "duration": 2.577417,
+    "sha256": "2ac84eb6c03d9fdf9683b69ce92de556b49c7ec6d7a6779fdbb56acb782656ae"
+  },
+  "Çözümü birlikte inceleyelim. Güneş kendi ışığını üreten bir yıldızdır.": {
+    "file": "tr-bb4afe6d877a31c4.mp3",
+    "duration": 3.734625,
+    "sha256": "6b6482e214f52bba9124ca0408a86ae2a4dbb6b4b51cf8d60aaee81c08d386d4"
+  },
+  "Güneş yalnız Dünya çevresinde dolaşan bir uydudur.": {
+    "file": "tr-29d2944645d7b105.mp3",
+    "duration": 2.879292,
+    "sha256": "d23913401ff1d6598e6a553d8fb1315208deb679d1ded43cced4d9ad92d15f90"
+  },
+  "İpucu: Dünya’nın doğal uydusu Ay’dır.": {
+    "file": "tr-b0d12d82ebc4261a.mp3",
+    "duration": 2.264625,
+    "sha256": "0b204bf3db84a68c41efa72e9f4387447b2066316c4895ade5f80c57eef1e434"
+  },
+  "Çözümü birlikte inceleyelim. Güneş yıldızdır; Dünya Güneş çevresinde dolanır.": {
+    "file": "tr-31f4bf96141d14c4.mp3",
+    "duration": 4.633958,
+    "sha256": "3d2b2894a793f8fae16920485265849a819020b12ef513f4e4844578582cda2b"
+  },
+  "Güneş’in kendi ekseni çevresindeki hareketine ne denir? Uygun yanıta dokun.": {
+    "file": "tr-9a18767b8ff71dcb.mp3",
+    "duration": 4.202833,
+    "sha256": "566106a13aa952b5a13c9b3f7e28daefeb941feb3ed2fc2749afaf8f8e747089"
+  },
+  "İpucu: Dolanma ile kendi ekseni çevresinde hareketi ayır.": {
+    "file": "tr-92fffa9bd6587862.mp3",
+    "duration": 3.622333,
+    "sha256": "4468a2f1c5aafa484dc941a4157426e4036cada06d8c22001f13adda7bc5c6fd"
+  },
+  "Çözümü birlikte inceleyelim. Bir cismin kendi ekseni çevresindeki hareketi dönmedir.": {
+    "file": "tr-483612e4e2dfb00a.mp3",
+    "duration": 4.574333,
+    "sha256": "ace32d1bf8d04a683de26b9fca596549d0d955bb241a8b3b48d4307a02b94346"
+  },
+  "Güneş gökyüzünde neden gerçek boyutuna göre küçük görünür?": {
+    "file": "tr-7f9da3715fcad238.mp3",
+    "duration": 3.227583,
+    "sha256": "950274209e0cde701199f84a70e50081bcbfec86483eea59bfa0962988368152"
+  },
+  "İpucu: Uzak bir ağacın görünüşünü düşün.": {
+    "file": "tr-36da7d70cd7401fb.mp3",
+    "duration": 2.322,
+    "sha256": "78b5246505f10e4be414e8f69afc6253c30cc8be49785e64c1bdefd04a63f595"
+  },
+  "Çözümü birlikte inceleyelim. Uzak cisimlerin görünür boyutu küçük olabilir; Güneş Dünya’dan çok büyüktür.": {
+    "file": "tr-472f2a25bdbdb97b.mp3",
+    "duration": 5.609792,
+    "sha256": "f6bde5f83b4846d661292b7bd25f0be1e58f444d2c7cbfd4e78e8aa1d3acccec"
+  },
+  "Güneş lekelerinin günler içindeki yer değişimi hangi bilgiye kanıt sağlar?": {
+    "file": "tr-4c19ae13941437f5.mp3",
+    "duration": 3.726833,
+    "sha256": "48fadbb0be539741c4aa2dbc5444b42fb783223bdcb8dbff88a8793379f8ab87"
+  },
+  "İpucu: Bir topun üzerindeki işaret dönerken ne olur?": {
+    "file": "tr-582d6750de06e7e2.mp3",
+    "duration": 3.204375,
+    "sha256": "d4fcb1069b0836d7c31987cb8a4122ff3b874a8dc149bee3f2394702515e1a44"
+  },
+  "Çözümü birlikte inceleyelim. Lekelerin konum değişimleri Güneş’in ekseni çevresinde döndüğünü incelemek için kullanılır.": {
+    "file": "tr-4a17f9c71645e067.mp3",
+    "duration": 6.222958,
+    "sha256": "c96b61e515c1df51e8260099ff462d85e3355205a148cfc2c8ea77e597dd083c"
+  },
+  "Bir öğrenci Güneş’i incelemek istiyor. Hangi yöntem güvenlidir?": {
+    "file": "tr-29ca821e0e31eb00.mp3",
+    "duration": 3.471667,
+    "sha256": "88db46b280e458f9cc4439b0492030b5ad043be683362083fb0ab6370917088c"
+  },
+  "İpucu: Doğrudan Güneş’e bakmayı gerektirmeyen yolu bul.": {
+    "file": "tr-4f0b473265fe4d59.mp3",
+    "duration": 2.844458,
+    "sha256": "078338c1a6fbde39b4ea2c49da65e038d1c4c57f6a05272df9fb5a03aa72e8c2"
+  },
+  "Çözümü birlikte inceleyelim. Doğrudan bakış gözlere zarar verebilir; güvenilir görüntüler üzerinden bilgi toplanabilir.": {
+    "file": "tr-63ffe53096f71057.mp3",
+    "duration": 6.382875,
+    "sha256": "9fd8d16f7db4e6aaf90c707711d79ed7e01f9bc3b42acc5fbfd3d7ab23a336c2"
+  },
+  "Keşif görevindeki doğru sonuç hangisidir? Işığın kaynağı": {
+    "file": "tr-abfd68e916b175b9.mp3",
+    "duration": 3.099875,
+    "sha256": "a1aa53c1b81960ae05afd046389cced9d013d76ba95f856501e6080e8027cda3"
+  },
+  "İpucu: Güneş kendi ışığını üretir. Kendi ışığını üreten gök cismi yıldızdır.": {
+    "file": "tr-245681d45ef2108a.mp3",
+    "duration": 4.633958,
+    "sha256": "37dcea557296510db4570d7bcc808deb051f4ffc228a700634d2fa4b2af2ff16"
+  },
+  "Çözümü birlikte inceleyelim. Lekeyi izleyerek dönmeyi fark ettin. Güneş kendi ışığını üreten bir yıldızdır.": {
+    "file": "tr-0aa7829671028fe6.mp3",
+    "duration": 5.782042,
+    "sha256": "3044fc9bad18ce5d4d942eb9b35f142d32729bdeee09353329de9e0f6307b218"
+  },
+  "Bir yıldız ile bir uyduyu karşılaştırıyorsun. Hangisi Güneş için uygundur?": {
+    "file": "tr-3852ae2116b014a5.mp3",
+    "duration": 3.796458,
+    "sha256": "60ec3780d58198331256715d2b271ba0872027bb12e3adb46edecab3eaa8d2d0"
+  },
+  "Çözümü birlikte inceleyelim. Kendi enerjisini ve ışığını üretir.": {
+    "file": "tr-5b4280bcca29b007.mp3",
+    "duration": 3.575875,
+    "sha256": "5a247a2958e56ac89c029a7432cb1f75c5f3ad23656e00b2920bcc49055e4e2b"
+  },
+  "Ay’ın kendi ışığı olmadığı hâlde görünmesinin nedeni nedir?": {
+    "file": "tr-019001d7f9047ece.mp3",
+    "duration": 2.92575,
+    "sha256": "db97943d4f034065d677e4358d8eaf3136b49c71000c631be3713085e024e235"
+  },
+  "İpucu: Ay’a ışık hangi kaynaktan ulaşır?": {
+    "file": "tr-03b61f11d102cd38.mp3",
+    "duration": 2.531,
+    "sha256": "86d26c3cbb7c13d34e1cff1019f409dbb22b174a3280222abd948c037e3435ca"
+  },
+  "Çözümü birlikte inceleyelim. Ay, yüzeyine gelen Güneş ışığını yansıtır.": {
+    "file": "tr-3292a8220b8278a1.mp3",
+    "duration": 4.214417,
+    "sha256": "40b4f2ba03c795cb327c35d70930c0ed7be5fab5c2f2097feb25ada9e6cb2fb5"
+  },
+  "Ay’ın evrelerinde Ay’ın gerçek küresel biçimi değişir.": {
+    "file": "tr-9edd2595e2d735fc.mp3",
+    "duration": 2.746375,
+    "sha256": "33b1a77a4c8bd43b7fecc37cb6d97b77aad1ed08155070c1b4929e33248e5799"
+  },
+  "İpucu: Görünüş ile gerçek biçimi ayır.": {
+    "file": "tr-b71aa875b46b240f.mp3",
+    "duration": 2.356292,
+    "sha256": "724d39b50ebb9ca14c6a6ec8c788c36bac766d4cd0bdae08f4ea458f14a1a428"
+  },
+  "Çözümü birlikte inceleyelim. Görünen aydınlık bölüm değişir; Ay’ın biçimi yaklaşık küresel kalır.": {
+    "file": "tr-a8d315d0a616504c.mp3",
+    "duration": 4.993958,
+    "sha256": "99ec3319c60e582406e5a7f2a7e800f1e3ff7be32deea06784c1f48a1840966c"
+  },
+  "Ay’ın aydınlık yüzünün Dünya’dan dolu daire gibi görüldüğü ana evre hangisidir?": {
+    "file": "tr-0754dcf354da7669.mp3",
+    "duration": 4.040292,
+    "sha256": "ae9cad5bfa12757173be00c1207b887233cc45336fc78f2b60882d048e2f2425"
+  },
+  "İpucu: Adında dolu anlamı olan evreyi düşün.": {
+    "file": "tr-b53e4c6e9aa47bef.mp3",
+    "duration": 2.71675,
+    "sha256": "d18038173f006e30cf6f2d2ab2efd91b77abce62999a6aa162cda79685966f4e"
+  },
+  "Çözümü birlikte inceleyelim. Dolunayda aydınlık yarının Dünya’ya dönük kısmı dolu daire görünümündedir.": {
+    "file": "tr-652d43d8b753b6d5.mp3",
+    "duration": 5.41025,
+    "sha256": "18f60866bcf39307087fd634f2f9e27ab602f291478d694a8bd1fb93946d9400"
+  },
+  "Yeni aydan sonraki ana evre hangisidir?": {
+    "file": "tr-8201fe07d1f45435.mp3",
+    "duration": 2.34525,
+    "sha256": "ac01d43a00c8b3d6bc843a8653b84ca2ec324f34ece1d32deba7bc9d81988b5e"
+  },
+  "İpucu: Dördünlerin adındaki sırayı kullan.": {
+    "file": "tr-88f9e72337842fde.mp3",
+    "duration": 2.333625,
+    "sha256": "42a08f5ea768a9a9639824307281592944d160c1a900fbd9d05568718f49abcc"
+  },
+  "Çözümü birlikte inceleyelim. Ana evre sırası yeni ay, ilk dördün, dolunay, son dördündür.": {
+    "file": "tr-04a8fea4d47b9b64.mp3",
+    "duration": 5.340625,
+    "sha256": "e6bbe01f1b51a054d80709db1bab316333940f08a1474ca4493a8a4674ced34b"
+  },
+  "Dünya’dan Ay’ın yaklaşık aynı yüzünü görmemiz neyle açıklanır?": {
+    "file": "tr-47d295959da73888.mp3",
+    "duration": 3.1115,
+    "sha256": "cd304cd71c07cbfd60e5ca59ca72c1a735a852a267448783ea19d0ac9e0a37d8"
+  },
+  "İpucu: İki hareketin sürelerini karşılaştır.": {
+    "file": "tr-70a726fee1ff6683.mp3",
+    "duration": 2.702167,
+    "sha256": "138a78fe5336f39b56a1d098b613940c02bc7c4870e2a964daae0d2a11d85cbd"
+  },
+  "Çözümü birlikte inceleyelim. Ay bir tur dolanırken kendi ekseni çevresinde de yaklaşık bir tur döner.": {
+    "file": "tr-44fbc1e6121aface.mp3",
+    "duration": 5.689958,
+    "sha256": "aca2c949657a1e43171474a5f22ca377e3549023a841ddb5556e19355129bdcd"
+  },
+  "“Ay’ın her evresi Dünya’nın gölgesinden oluşur.” diyen arkadaşına hangi açıklama uygundur?": {
+    "file": "tr-1dbaf69eacd1737c.mp3",
+    "duration": 4.725292,
+    "sha256": "6127532033020dd8e0683e789b9d740ac90229bb16501af31b887f0ebd77eb04"
+  },
+  "İpucu: Her ay gerçekleşen evreyi tutulmayla karıştırma.": {
+    "file": "tr-cb9750a4402aa698.mp3",
+    "duration": 3.448167,
+    "sha256": "04858d9bca8f2ce23e5a7ff9e4bb0befa74b85fcc369323b4d61114f0e3f72f2"
+  },
+  "Çözümü birlikte inceleyelim. Evreler konumlara bağlı görünüş değişimidir; tutulma farklı bir olaydır.": {
+    "file": "tr-09ca3da2bf1e55c6.mp3",
+    "duration": 5.164625,
+    "sha256": "87dd9414f35e25773cd99dbeee81de780ef6cf5f43e072afa23ab1a6e21c8d22"
+  },
+  "Keşif görevindeki doğru sonuç hangisidir? Ay’ın ışıklı yüzü": {
+    "file": "tr-0f1b227c3edf2c9c.mp3",
+    "duration": 3.250792,
+    "sha256": "499d08c0d43719fe916f0974cc3c342086fc6e834eb3b79eb5345eb126cf66ee"
+  },
+  "İpucu: Ay’ın biçimi değişmez. Güneş’in aydınlattığı yarının Dünya’dan görülen kısmı değişir.": {
+    "file": "tr-4e27934dbe8b3eae.mp3",
+    "duration": 5.218583,
+    "sha256": "ba91701b2be970056970dabb54a2acf51d050d2ecb63735944fee5f85c8e30c8"
+  },
+  "Çözümü birlikte inceleyelim. Dolunayı buldun. Ay küçülüp büyümez; aydınlık bölümün görünüşü değişir.": {
+    "file": "tr-7f49ba224da5f216.mp3",
+    "duration": 5.30325,
+    "sha256": "f4135d20f709c536917670be9e9d29e62875b2e6bf3bd84fbb179c2f4972b531"
+  },
+  "Yeni ay ve dolunay çizimlerinde Ay dairesinin boyutu nasıl olmalı?": {
+    "file": "tr-cb5d11355200b9fd.mp3",
+    "duration": 3.332083,
+    "sha256": "d937a929c207402d2133fc509ed42856487222791d9d97b7e40e28ba42732e04"
+  },
+  "Çözümü birlikte inceleyelim. Aynı büyüklükte.": {
+    "file": "tr-338849e4d2cc21cc.mp3",
+    "duration": 2.438125,
+    "sha256": "4115baceaeb6aa030a539116ed176ef41cde8012fc1649ace902de367c31b5e5"
+  },
+  "Güneş, Dünya ve Ay’ın büyükten küçüğe sırası hangisidir?": {
+    "file": "tr-8a21c0c548080153.mp3",
+    "duration": 3.157917,
+    "sha256": "54dd339f4cf10d46baa1f78981ff12f931cd66b9b34ed3a44a87bd05c8b00db5"
+  },
+  "İpucu: Ay Dünya’nın uydusudur.": {
+    "file": "tr-85efd7275d485be4.mp3",
+    "duration": 1.973708,
+    "sha256": "78aa00bb3c169aa854d4bf786848624716481d49a6cc783935487af356b418a9"
+  },
+  "Çözümü birlikte inceleyelim. Güneş en büyük, Ay en küçüktür.": {
+    "file": "tr-f44902e32db20cda.mp3",
+    "duration": 3.553958,
+    "sha256": "bbc1891ec1c284fe81b166101ddd46c0dff0986c0deeffd3d61338ab05565685"
+  },
+  "Dünya kendi ekseni çevresinde de hareket eder.": {
+    "file": "tr-5637d08edc9297e6.mp3",
+    "duration": 2.461333,
+    "sha256": "0aabb23035f2a8b0567a47e6ab491e786bf1b0671456237dc0147499b57c3be7"
+  },
+  "İpucu: Dönme ile dolanma ayrı hareketlerdir.": {
+    "file": "tr-27cccf328ad1554f.mp3",
+    "duration": 2.690375,
+    "sha256": "02f35e6411c3326e0e7e65fb3ce262b2606363de38956e8fe421b852799d5aa5"
+  },
+  "Çözümü birlikte inceleyelim. Bu hareket dönmedir ve yaklaşık bir gün sürer.": {
+    "file": "tr-8fedad5b4d96a196.mp3",
+    "duration": 4.202833,
+    "sha256": "fa31800d3e5974adb7cfba554cef6d51d9da0e95350a2263b635236da1ca9ee2"
+  },
+  "Dünya’nın Güneş çevresinde yaklaşık bir tam dolanma süresine ne denir? Bir sözcük yaz.": {
+    "file": "tr-27ea6d20b14fbfd2.mp3",
+    "duration": 4.899417,
+    "sha256": "2cd9795d0ff807806b88fc85868a655129a2453e495afee007b4a16caddc66a6"
+  },
+  "İpucu: Takvimde on iki ayı düşün.": {
+    "file": "tr-9a17cfa19b43e0fc.mp3",
+    "duration": 2.333625,
+    "sha256": "d9acc899379404c6a23ce742af87c0dcd19880077685355472edd3f3110f7a3c"
+  },
+  "Çözümü birlikte inceleyelim. Bir yıl Dünya’nın Güneş çevresindeki yaklaşık bir turudur.": {
+    "file": "tr-a07b2f1c259107c9.mp3",
+    "duration": 4.609958,
+    "sha256": "9cba6e3b52afa8493247b8a518205cecaff576fc954415a0078cb27cf716d2cc"
+  },
+  "Ay hangi cismin doğal uydusudur?": {
+    "file": "tr-05bfdcfd66e8a096.mp3",
+    "duration": 1.962083,
+    "sha256": "c9be009ef8fa88b1437a04b71f10676738fe6c43368558b383bfba81ce9c694e"
+  },
+  "İpucu: Ay’ın çevresinde dolandığı gezegeni bul.": {
+    "file": "tr-7ad0266559a869c7.mp3",
+    "duration": 2.751583,
+    "sha256": "c1bb5c4dd90f66963ed0877de7233a5a82e8f74155c626c9becea5a8bc96db14"
+  },
+  "Çözümü birlikte inceleyelim. Ay Dünya’nın çevresinde dolanan doğal uydusudur.": {
+    "file": "tr-2a1f3407e97975b8.mp3",
+    "duration": 4.109958,
+    "sha256": "a1941c476a8bc396fd4bb1fe232f705d1481642339dee8a848f5e9e98fd968cf"
+  },
+  "Modelde Dünya’nın Güneş çevresinde çizilen okları neyi gösterir?": {
+    "file": "tr-ced11a3b26652992.mp3",
+    "duration": 3.517833,
+    "sha256": "43a21641fe2fa686bd7090d4a091948f5c15eba3110d3a14b4c16ea254999b5a"
+  },
+  "İpucu: Ok hangi cismin çevresindedir?": {
+    "file": "tr-4035be3c9d9c656d.mp3",
+    "duration": 2.356833,
+    "sha256": "672e797063b0d38cfb9a71db31757ed5e6de5a3d1a07f20bd53457440fd992aa"
+  },
+  "Çözümü birlikte inceleyelim. Bir cismin başka bir cisim çevresindeki hareketi dolanmadır.": {
+    "file": "tr-c538bac0a222aa1e.mp3",
+    "duration": 4.565083,
+    "sha256": "fcfba4817d8f44f59469b52a460ddc6457e865894a89fdf352b0bc6c884e3665"
+  },
+  "Bir modelde Güneş topu büyük ama Dünya’ya çok yakın çizilmiş. Hangi yorum bilimsel olur?": {
+    "file": "tr-2a32ee30eadf7b74.mp3",
+    "duration": 4.690458,
+    "sha256": "e215179cb4e0a5a690e4cbca19a68345b7f5a4718a016ca09fa4ee65a9261feb"
+  },
+  "İpucu: Modelin temsil ettiği ve etmediği özellikleri ayır.": {
+    "file": "tr-5ad13192eecf29c9.mp3",
+    "duration": 3.199167,
+    "sha256": "124b571265d9d6ba17f150f8b6e0b85187b26d41ef78a32c6e858e7b47fa9acf"
+  },
+  "Çözümü birlikte inceleyelim. Modeller belirli ilişkileri temsil eder; bütün özellikleri aynı ölçekte olmak zorunda değildir.": {
+    "file": "tr-e1a0c004beaebe6a.mp3",
+    "duration": 6.754292,
+    "sha256": "883b135a1607ac1c26bba9f2dc89d43e7082bbef38c12d01512b838dd7033c46"
+  },
+  "Keşif görevindeki doğru sonuç hangisidir? Uzaydaki yol arkadaşları": {
+    "file": "tr-cbd636fd2c63336c.mp3",
+    "duration": 3.854542,
+    "sha256": "3034989e0c5ae5c9b7fda9c8f2c3152cc247224b38d4fe90a0449700ef3f9d98"
+  },
+  "İpucu: Ay Dünya’nın çevresinde dolanır. Dünya ise Güneş’in çevresinde dolanır.": {
+    "file": "tr-8f4a7977fd645fb3.mp3",
+    "duration": 4.6355,
+    "sha256": "ca6a15df2cf99810dbefe41d340791756b51e44ed3cc06c5debb0ba35fd5c303"
+  },
+  "Çözümü birlikte inceleyelim. İki dolanma hareketini ayırdın. Model uzaklık ve boyutları gerçek ölçekte göstermez.": {
+    "file": "tr-d36002f899edb0f9.mp3",
+    "duration": 6.269417,
+    "sha256": "ad57f9a1759f89499b84a13cc92dca9c76dc3b9bf3c1000fd64a5f2b720cb81e"
+  },
+  "Dünya maketi Güneş çevresinde taşınırken Ay maketi masada kaldı. Modelde ne düzeltilmeli?": {
+    "file": "tr-c98bd23394d9f556.mp3",
+    "duration": 5.247708,
+    "sha256": "13da4e1801b6e34d920f52c50a4e729855e811416d70c5f57ab62f3fe790e9d4"
+  },
+  "Çözümü birlikte inceleyelim. Ay, Dünya’yla birlikte taşınmalı.": {
+    "file": "tr-9a3a5492ff3a67da.mp3",
+    "duration": 3.575875,
+    "sha256": "8cb77e2bc6de18ceb5ecc20b733583a020c7122f2d459e920a8d4b74c4395856"
+  },
+  "Kuvvet hangi araçla ölçülür?": {
+    "file": "tr-9e89979dd8661cd4.mp3",
+    "duration": 1.787958,
+    "sha256": "d46f60157fde8b570ec0394d9a3f478edee4cba20adc31ebfa0974abccb31bb7"
+  },
+  "İpucu: Yaylı ölçme aracını düşün.": {
+    "file": "tr-9656c73e7dc79fe1.mp3",
+    "duration": 2.24075,
+    "sha256": "c1ba9cbbaa72723cb9d14a09c43806b89480363df99bb8b5adc1cbeb09cddc58"
+  },
+  "Çözümü birlikte inceleyelim. Dinamometre kuvvetin büyüklüğünü ölçer.": {
+    "file": "tr-f48344c09e07660b.mp3",
+    "duration": 3.842917,
+    "sha256": "3bad27175753a2d57711e1f82e178e0a363c734b210c1e2965d86f2eefc2966c"
+  },
+  "Kuvvet birimi newtondur.": {
+    "file": "tr-286d8748f411d4b3.mp3",
+    "duration": 1.567375,
+    "sha256": "b4c6569455b15623a615787de4ba33f26282f186863337fa0ee2c1439fd2c440"
+  },
+  "İpucu: Kuvvet birimi ile kütle birimini ayır.": {
+    "file": "tr-d441e7e9c78ffd3f.mp3",
+    "duration": 2.547333,
+    "sha256": "01fcb60806f258f3186b793244392ad3611342f3e97674ffb8d29c9f894d54b4"
+  },
+  "Çözümü birlikte inceleyelim. Newton N simgesiyle gösterilir.": {
+    "file": "tr-66e6c5067d28a57d.mp3",
+    "duration": 3.413333,
+    "sha256": "a875d288b33af2b78fafa81f2248c8158348862d6e460e48bf784e5818901cc6"
+  },
+  "0–20 N ölçeği 10 eşit aralığa ayrılmışsa bir aralık kaç N’dir? Uygun yanıta dokun.": {
+    "file": "tr-52f178376e051aea.mp3",
+    "duration": 4.451333,
+    "sha256": "33645e36394dc36a4f41a71f461ed791ed9de1cc0865adc6115455925e916f41"
+  },
+  "İpucu: Toplam değeri aralık sayısına böl.": {
+    "file": "tr-98d27c86333d7b46.mp3",
+    "duration": 2.34525,
+    "sha256": "e1f7d18cbeb21cfe19414690405ea61be6d7280ca1c9bee7b3b7bc580f8354a3"
+  },
+  "Çözümü birlikte inceleyelim. 20 ÷ 10 = 2 N bulunur.": {
+    "file": "tr-584d4704bede277f.mp3",
+    "duration": 3.366917,
+    "sha256": "94448c1b0027332b1bb731490a009aeba1232bf7ac97e469d2d48e7277e591d8"
+  },
+  "Kuvvet bir süngere uygulandığında hangisini değiştirebilir?": {
+    "file": "tr-c4db8a80e4fb458b.mp3",
+    "duration": 3.065042,
+    "sha256": "c9b9d4663cf4836139006125a2c8fe641eac3232923310eb5c38fb29d064ceb9"
+  },
+  "İpucu: Sünger sıkıldığında ne olur?": {
+    "file": "tr-1e8c38443ac2edbe.mp3",
+    "duration": 2.229125,
+    "sha256": "9996f521966850aa69a58efcd1cd9f62a8003606adc8a7be18835655232b9e0c"
+  },
+  "Çözümü birlikte inceleyelim. Süngeri sıkmak şeklini değiştirir.": {
+    "file": "tr-0ea275408d429096.mp3",
+    "duration": 3.3275,
+    "sha256": "aecb561063c05c62714a527eefd341ba9d15f05805c72f7004fb1ca8c806554e"
+  },
+  "En fazla 10 N ölçen dinamometreyle hangi kuvvet ölçülebilir?": {
+    "file": "tr-3471f824ffe17dd5.mp3",
+    "duration": 3.265958,
+    "sha256": "c504082b5e1ca4fe6ef00c658fb6f4bdb71dd61520cdaa8e722fdf2b3a42dc03"
+  },
+  "İpucu: Ölçüm aralığını kontrol et.": {
+    "file": "tr-a4afbb04173cd382.mp3",
+    "duration": 2.072208,
+    "sha256": "99a789c37f07b8c3025451e42bd051c5ac04c0e74e3ac0275985f4cd1deae4dd"
+  },
+  "Çözümü birlikte inceleyelim. 8 N aracın sınırı içindedir; diğerleri sınırı aşar.": {
+    "file": "tr-5c1ee349467c9f13.mp3",
+    "duration": 4.359667,
+    "sha256": "ce072259de9892936abe8a4be0b269e41a282f3e4e185aeaad9725d2d4730cde"
+  },
+  "Bir yay 2 N’de 1 birim, 4 N’de 2 birim uzuyor. Esneklik sınırı aşılmadığında 6 N için ne beklersin?": {
+    "file": "tr-9f4e6f0770bcc5c1.mp3",
+    "duration": 6.397125,
+    "sha256": "005256fc603adad3bce23c81c2095481bed77a52afbf589dc3a3ab22943d8d20"
+  },
+  "İpucu: Ölçümlerdeki düzeni sürdür.": {
+    "file": "tr-2f9400b38cb7faf1.mp3",
+    "duration": 2.229125,
+    "sha256": "2e4db2b83b2ca4a068369030131db6410b3b16b672cfeab3d43e4d3993d16415"
+  },
+  "Çözümü birlikte inceleyelim. Verilen modelde kuvvet her 2 N arttığında uzama 1 birim artar.": {
+    "file": "tr-b204396fb76eef62.mp3",
+    "duration": 5.247708,
+    "sha256": "eefe6b40a532098277f251be516d768b27d0c2d6c6d210b32aecac67d4ecaa49"
+  },
+  "Keşif görevindeki doğru sonuç hangisidir? Kuvvet dedektifi": {
+    "file": "tr-8ad9d4779237384a.mp3",
+    "duration": 3.274042,
+    "sha256": "e7509220139f65b6f81464b4334387bccff5997b859def8b21ad32bdb37eb99b"
+  },
+  "İpucu: Üç ağırlık, iki artı iki artı iki newtonluk kuvvet uygular. Kuvvetin birimi newtondur.": {
+    "file": "tr-ab6c0b28315dfaeb.mp3",
+    "duration": 6.025958,
+    "sha256": "65652da62ca32bc167a20b572a4cfbc423c41dfc1e44e4e847c7861cb4893a7f"
+  },
+  "Çözümü birlikte inceleyelim. Altı newtonu ölçtün. Kuvvet dinamometreyle ölçülür ve birimi newtondur.": {
+    "file": "tr-675968f6914c04f4.mp3",
+    "duration": 5.719708,
+    "sha256": "e3737faa3e899367d60832b168520d0d59ce8cde0a91637bd86aa9f2020fd472"
+  },
+  "Dinamometre başlangıçta yük yokken sıfırı göstermiyorsa ne yaparsın?": {
+    "file": "tr-64067137f402b213.mp3",
+    "duration": 3.680375,
+    "sha256": "2fd0732a8adab4b4f300dd10e28a98b97f72c6c95c22170dfae68b1deb147964"
+  },
+  "Çözümü birlikte inceleyelim. Öğretmene bildirip uygun ayarı beklersin.": {
+    "file": "tr-a5139b0cc5bc9913.mp3",
+    "duration": 3.831292,
+    "sha256": "9060c4b1e6984cc26c569861c9b7290db3cf62a2d42a01d290e843f37a954c86"
+  },
+  "Hangisi kütle birimidir?": {
+    "file": "tr-c1da9467a8b6237d.mp3",
+    "duration": 1.359125,
+    "sha256": "ee34a23c8d6608db335ac4b385b2dfb0401b61fff28b00cd70ab85644a6a9c9d"
+  },
+  "İpucu: Madde miktarı için kullanılan birimi bul.": {
+    "file": "tr-9cd81086f196d949.mp3",
+    "duration": 2.751583,
+    "sha256": "d482475a40583260c3b590e118cf125966068a7b1b222fe466c1b1e705f5d9a8"
+  },
+  "Çözümü birlikte inceleyelim. Kilogram kütleyi, newton kuvveti belirtir.": {
+    "file": "tr-28d58d7cc7b8aa45.mp3",
+    "duration": 3.993833,
+    "sha256": "fb6ddd3425b6cfb4da3b614409cc35019f283eb5caa023023a3d8adb8d8954e0"
+  },
+  "Ağırlık bir kuvvettir.": {
+    "file": "tr-6a25bd550e4e7644.mp3",
+    "duration": 1.242,
+    "sha256": "4fb91f03abc52d385dd9050f709384230d4ba11ce982bce599860ee8e63b58af"
+  },
+  "İpucu: Dinamometrenin neyi ölçtüğünü düşün.": {
+    "file": "tr-309948e1824a3ba5.mp3",
+    "duration": 2.368458,
+    "sha256": "88b086a753b36c9c131849f948018d39b25c6454d6626dcfcb0f828e062cc317"
+  },
+  "Çözümü birlikte inceleyelim. Ağırlık, gök cisminin cisme uyguladığı çekim kuvvetidir.": {
+    "file": "tr-2c3d2d8b8da5e703.mp3",
+    "duration": 4.654708,
+    "sha256": "bb592c993edec449e7fe6c937354b5e9164d5c36197219aa9724410584a27416"
+  },
+  "Ağırlık ölçümünde kullanılan yaylı aracın adı nedir?": {
+    "file": "tr-acf693a68bbc3ad2.mp3",
+    "duration": 2.380042,
+    "sha256": "5f506268776f266502d149cde9d82d45dd0c8b2048211cd8c501fa703a118fda"
+  },
+  "İpucu: Kuvvet ölçme aracını hatırla.": {
+    "file": "tr-5e40f8c22a6f6b4e.mp3",
+    "duration": 2.414875,
+    "sha256": "5b0ed6aef7e79556f7615c4cd48e66a716d02861a77ec96f7d431a7e11f4a86a"
+  },
+  "Çözümü birlikte inceleyelim. Ağırlık bir kuvvet olduğu için dinamometreyle ölçülür.": {
+    "file": "tr-5fd1ebf5edcef6ed.mp3",
+    "duration": 4.423417,
+    "sha256": "20ed4e38ab17bb85fd18c0ea0ef599cbb531aebe64a958f8ea72d25bb44c7785"
+  },
+  "Bir taş Dünya’dan Ay’a taşınırsa hangisi değişmeden kalır?": {
+    "file": "tr-6428ffabc511f212.mp3",
+    "duration": 2.948958,
+    "sha256": "487eebfc05fb63d8e46686d6d285ba77c328d40612ec410bfd814b34716ae05a"
+  },
+  "İpucu: Taştan madde eksiliyor mu?": {
+    "file": "tr-0da847097e6b5d95.mp3",
+    "duration": 2.03175,
+    "sha256": "a524aafab8dafec559961616d923dce02cf7a306fb9b4caabd48df91efef8f47"
+  },
+  "Çözümü birlikte inceleyelim. Madde miktarı değişmediğinden kütlesi aynı kalır.": {
+    "file": "tr-34062effea4e1964.mp3",
+    "duration": 4.028833,
+    "sha256": "f8f9242d3914645d2af3aaf26dd94f81350250207b96f32d07e8f4e4fb1c7e45"
+  },
+  "“Bu cismin ağırlığı 12 kg’dır.” cümlesi nasıl düzeltilir?": {
+    "file": "tr-d02cfec346cb1283.mp3",
+    "duration": 3.431833,
+    "sha256": "542a20272cf482ff6b4521282e9fbed379adbb66f08e1980d2f566835d007031"
+  },
+  "İpucu: Verilen birim hangi büyüklüğe ait?": {
+    "file": "tr-b74daea99ebda321.mp3",
+    "duration": 2.473958,
+    "sha256": "e23f362b39ecc0e2708284b1012b347d0322f9bb54e84bc3d4dd01a4ce52c946"
+  },
+  "Çözümü birlikte inceleyelim. Kilogram kütle birimidir; ağırlık newton ile ifade edilir.": {
+    "file": "tr-62f1aab7a266f7de.mp3",
+    "duration": 4.690458,
+    "sha256": "45444e1b270b1a4e5505ccd94a414183fb3b281dc9db05c48237560dbd6da06e"
+  },
+  "Aynı cisme farklı gök cisimlerinde iki farklı ağırlık ölçülüyor. En uygun açıklama nedir?": {
+    "file": "tr-a058e3e4d0e3f156.mp3",
+    "duration": 4.760125,
+    "sha256": "d4f0dcd0d30301b2169dcca942e9f4bb44eac59962d6e40dfba324a59ad420d4"
+  },
+  "İpucu: Değişen ortamın çekim etkisini düşün.": {
+    "file": "tr-b86bbaef6ceb4a90.mp3",
+    "duration": 2.554208,
+    "sha256": "1528bf8f92bb351f9c76a4814b43d2ffcb63dc651187132153202e9671eb2176"
+  },
+  "Çözümü birlikte inceleyelim. Ağırlık çekime bağlıdır; kütle aynı kalırken ağırlık değişebilir.": {
+    "file": "tr-84ec183c56701b79.mp3",
+    "duration": 4.857125,
+    "sha256": "48704f52e88ce1567623f67e8a5e8439bb89722eb0ed999d527dfb4b54a70eb8"
+  },
+  "Keşif görevindeki doğru sonuç hangisidir? Dünya’dan Ay’a valiz": {
+    "file": "tr-02981b754a56a84f.mp3",
+    "duration": 3.306625,
+    "sha256": "1eff8f32544099318ebcf9af94ecdb099b570175c150565297bc0e12a96f9d30"
+  },
+  "İpucu: Aynı valizin madde miktarı değişmez. Kütle sabit kalır; çekim azaldığında ağırlık azalır.": {
+    "file": "tr-b54971ad28f93310.mp3",
+    "duration": 5.579667,
+    "sha256": "ffd29961e7e2dda3acdd081c5d4ba72a8e44573eb6ff64a7a403d061bacd0a2a"
+  },
+  "Çözümü birlikte inceleyelim. Valizin kütlesi aynı kaldı, ağırlığı azaldı. Kilogram kütlenin, newton ağırlığın birimidir.": {
+    "file": "tr-3798d8a8d7eb5f20.mp3",
+    "duration": 6.724542,
+    "sha256": "8ee6d9a02fe6e2b3a29681546c5dc248346e2ada874451bb69e404d00afdddda"
+  },
+  "Aynı yerde bir çantadan kitap çıkarılıyor. Hangi değişim beklenir?": {
+    "file": "tr-34fe707db55b9888.mp3",
+    "duration": 3.542917,
+    "sha256": "3a6a17ce2be4cfabce597cc0af34a8f9fd0d302aba591026e624cb0fc321fe52"
+  },
+  "Çözümü birlikte inceleyelim. Kütle azalır.": {
+    "file": "tr-7cf2a75f55f2bcc3.mp3",
+    "duration": 2.541083,
+    "sha256": "9834fe820fa924f2d8f776fcf8e04cc23340676e0720dc0a63d23ef802a80bd8"
+  },
+  "Hangi olay sürtünmenin yararlı etkisine örnektir?": {
+    "file": "tr-0e89a736dfe5ce9e.mp3",
+    "duration": 2.6045,
+    "sha256": "85f6c284f625b27af95752135a3eaec2518df73cec3ecfbeb91fdccc8982940f"
+  },
+  "İpucu: Güvenli durmayı düşün.": {
+    "file": "tr-7338123c70450714.mp3",
+    "duration": 1.892458,
+    "sha256": "65bc09b330f4d11aad3b0727563c16eb3445b2a428cd9bb344d90f7707f83d68"
+  },
+  "Çözümü birlikte inceleyelim. Frenlerde sürtünme hareketi yavaşlatmaya yardımcı olur.": {
+    "file": "tr-d5e270dc5deaa524.mp3",
+    "duration": 4.45825,
+    "sha256": "1c8045ea8d19513170cc800eed912aa27a8094fe95144455a14810d12e0ee748"
+  },
+  "Hava da hareket eden cisimlere direnç uygulayabilir.": {
+    "file": "tr-ab0c7aefb78246dd.mp3",
+    "duration": 2.763208,
+    "sha256": "5f19ad97ca260dc077892c439fa9c2e6fb91384ad32b30335186cca65ea1e561"
+  },
+  "İpucu: Paraşütü düşün.": {
+    "file": "tr-fe922c42ed310ea1.mp3",
+    "duration": 1.544125,
+    "sha256": "d0be36dd72e522fc0cd6c3b1e77e42ed52e6463cdc391f3fd382fbb8aeb7dd92"
+  },
+  "Çözümü birlikte inceleyelim. Hava direnci bir sürtünme etkisidir.": {
+    "file": "tr-006462ce02cabfcf.mp3",
+    "duration": 3.506208,
+    "sha256": "01f4a8c2fa3eade9caf0389db11d5882b1e863138c3efd88182a77a7f30eabcf"
+  },
+  "Geniş yüzeyiyle hava direncinden yararlanıp düşüşü yavaşlatan aracın adı nedir?": {
+    "file": "tr-a276e202d1f284b5.mp3",
+    "duration": 3.954125,
+    "sha256": "01a67b172cdf38a80fcad04b55ee2dd0caaf02bf7a9128c1e99f053bc364de14"
+  },
+  "İpucu: Yavaş iniş için açılan geniş kumaşı düşün.": {
+    "file": "tr-eb961d6cd615d7c0.mp3",
+    "duration": 2.798,
+    "sha256": "56ffbcd337059b9ed76bd0e5cb98eacc51bd115913549c64e339ca35634404a8"
+  },
+  "Çözümü birlikte inceleyelim. Paraşüt hava direncini artırarak düşüşü yavaşlatır.": {
+    "file": "tr-5a82d84764170656.mp3",
+    "duration": 4.45825,
+    "sha256": "8b148a3558b88c452bb0b2c6efa8e30eaaa76cb739f10ff4ef96172b789b0041"
+  },
+  "Makine parçasını yağlamak çoğunlukla hangi amaçla yapılır?": {
+    "file": "tr-7dcdf84c0f39aef3.mp3",
+    "duration": 2.914125,
+    "sha256": "c170c7412d1f200e369aa95d27c04aacc5dc9500b2e3c2473d4e428407a23f1d"
+  },
+  "İpucu: Kolay kayan yüzeyleri düşün.": {
+    "file": "tr-c8f386283c3bb339.mp3",
+    "duration": 2.066583,
+    "sha256": "566d528347931277cbb506a6aaf77485eebdf7d90232a06fc8dbeb2dbc047f1b"
+  },
+  "Çözümü birlikte inceleyelim. Yağlama temas yüzeyleri arasındaki istenmeyen sürtünmeyi azaltabilir.": {
+    "file": "tr-3e465d6e1b27842b.mp3",
+    "duration": 5.108417,
+    "sha256": "adb6ccb363628b958a852ba7234c78c90db0378792a94410e1cf6cf7a1bea160"
+  },
+  "İki yüzeydeki sürtünmeyi karşılaştıran deneyde hangisi aynı tutulmalıdır?": {
+    "file": "tr-51f1ac7db9a10b2b.mp3",
+    "duration": 3.627833,
+    "sha256": "ebddb25ac95db81cb0ecd2675c97a5efeac8890b5902366cd268356c5f934ba6"
+  },
+  "İpucu: Deneyde yalnız araştırılan etken değişsin.": {
+    "file": "tr-2908ebaa84cd726a.mp3",
+    "duration": 2.948958,
+    "sha256": "631bebdd101bc9e1b92d1512775f60a06f3cf5fc4d85018e99ed41dfe024eea6"
+  },
+  "Çözümü birlikte inceleyelim. Yüzey değişirken cisim ve başlangıç koşulları aynı tutulmalıdır.": {
+    "file": "tr-fcfad1dcfa549068.mp3",
+    "duration": 4.945958,
+    "sha256": "1ff20147fe669cd0786344bfd9fd1eaaeb23e773984d46953950a8a96b0c8bd6"
+  },
+  "Bir öğrenci “Sürtünme tamamen yok olsa yürümek kolaylaşır.” diyor. En uygun yanıt hangisidir?": {
+    "file": "tr-8b77e8ca4f686852.mp3",
+    "duration": 5.073583,
+    "sha256": "c42bfef23498106e599a958430525b8067c50908c3310f807c8c3e1e33e93d53"
+  },
+  "İpucu: Buz üstünde yürümeyi düşün.": {
+    "file": "tr-a75d8e3dbbfce36d.mp3",
+    "duration": 2.124625,
+    "sha256": "1b464fd8b03eee987f8f5b35a41f02a382bee2665b9916351473eccce38d6b47"
+  },
+  "Çözümü birlikte inceleyelim. Ayağın geriye kaymadan ilerleyebilmesinde yüzeyle sürtünme önemlidir.": {
+    "file": "tr-70a2f91f2a2401c5.mp3",
+    "duration": 5.746958,
+    "sha256": "dd3d9e7880ff12a6dd6ce478c140c58bf21aa575638637c9aef1efc199cd9229"
+  },
+  "Keşif görevindeki doğru sonuç hangisidir? Yüzey yarışı": {
+    "file": "tr-a19b2078c69ce757.mp3",
+    "duration": 3.262417,
+    "sha256": "03b98b003f043faec8206bdea55edd262b22ab47237e99a2a7dc37f1f623494d"
+  },
+  "İpucu: İtme bırakıldıktan sonra sürtünme hareketi yavaşlatır. Bu modelde pürüzlü yüzeyde sürtünme daha büyüktür.": {
+    "file": "tr-40e75d1b70a51328.mp3",
+    "duration": 6.838292,
+    "sha256": "353410b2003e16ab604fd93e278a5df9e99c930185d6c5a5062923fa8e067a88"
+  },
+  "Çözümü birlikte inceleyelim. Aynı hızla başlayan araba pürüzlü yüzeyde daha kısa mesafede durdu. Yalnız yüzey değiştirildi.": {
+    "file": "tr-1eb7fc36e74a28d1.mp3",
+    "duration": 6.8615,
+    "sha256": "546eeb48aa440255522dd4e79b2ce643de5342bded8d3b4df67a45624e72fcb0"
+  },
+  "Islak ve kaygan zeminde yürürken hangi davranış daha uygundur?": {
+    "file": "tr-c1d92fce0f4f7ab8.mp3",
+    "duration": 3.529958,
+    "sha256": "410901b2eff9e8b9c05d50364a7f90050b12b10bdb1abe88881c7bcf0e2f7884"
+  },
+  "Çözümü birlikte inceleyelim. Yavaş ve dikkatli hareket etmek.": {
+    "file": "tr-9f135cc13baa3ae6.mp3",
+    "duration": 3.448167,
+    "sha256": "dbb2220f2ff2de98f9287162a0744b5be935a0d5a097f789d26161b59d90fc96"
+  },
+  "Canlıların temel yapı ve işlev birimi hangisidir?": {
+    "file": "tr-6e17bd15dea17e11.mp3",
+    "duration": 2.647083,
+    "sha256": "d9f837db2b0334f6e782b35c59bde5204193aaf30208f77e25a990f46318a685"
+  },
+  "İpucu: Mikroskopla incelenen temel birimi düşün.": {
+    "file": "tr-30451401b37e8920.mp3",
+    "duration": 2.867667,
+    "sha256": "2cf7e41db48a237f95c6f7bc4529ec65c8c4920f61b5cad707b0770d36ba7c57"
+  },
+  "Çözümü birlikte inceleyelim. Canlıların yaşamsal yapısının temelinde hücreler vardır.": {
+    "file": "tr-405f80b527e8f741.mp3",
+    "duration": 4.725292,
+    "sha256": "258dedd16616a994d4b88be7c4adc4ab815a3f9b8af5548f8252603037cac20b"
+  },
+  "Hayvan hücrelerinde hücre duvarı bulunur.": {
+    "file": "tr-5cef78e3148c5427.mp3",
+    "duration": 2.078208,
+    "sha256": "1a851ee80943c21edee35527e56eccd3c167928766b92413311ee99dd3317a62"
+  },
+  "İpucu: Zar ile duvar aynı yapı değildir.": {
+    "file": "tr-8c45a8d35e0f0b73.mp3",
+    "duration": 2.531,
+    "sha256": "568b8ef9cc489cae96c357e4fb15a7cfd92d8732e680dc5e6ce432de3a7de431"
+  },
+  "Çözümü birlikte inceleyelim. Hücre duvarı bitki hücrelerinin özelliklerindendir; hayvan hücrelerinde yoktur.": {
+    "file": "tr-37362e1db6f7da9e.mp3",
+    "duration": 5.986583,
+    "sha256": "2575da9277fee75a6a300e90f1e68bc1d64d879d34b599f4eb0565805d08cbd1"
+  },
+  "Hücrenin yönetiminde rol alan temel kısmın adı nedir?": {
+    "file": "tr-1b2c96815b9005d2.mp3",
+    "duration": 2.807208,
+    "sha256": "409fe00b18a40403917dbb163cd61db9d883ceeb145f28e72eb09846d82b4c91"
+  },
+  "İpucu: Hücrenin yönetim merkezi olarak anlatılır.": {
+    "file": "tr-09da4d43759c945a.mp3",
+    "duration": 2.752875,
+    "sha256": "c72cba141711fd7e0f8d0e97f1053775a4e3cc46b2d55830417d273fcb0b328a"
+  },
+  "Çözümü birlikte inceleyelim. Çekirdek hücrenin faaliyetlerinin yönetiminde görev alır.": {
+    "file": "tr-9a3ac231781bc8f6.mp3",
+    "duration": 4.35375,
+    "sha256": "998da744b9bf2098c11999b8f3620ead64dbb0891e3f00b872a719b2f07b787e"
+  },
+  "Hücre zarının temel görevlerinden biri hangisidir?": {
+    "file": "tr-d4f15e82ad133c46.mp3",
+    "duration": 2.867667,
+    "sha256": "eb38309b66e02d6c9a9f0507f81f14c80d5a8e79b76b5e0372c7ca477c753d56"
+  },
+  "İpucu: Hücrenin sınırını düşün.": {
+    "file": "tr-6167671cd4480001.mp3",
+    "duration": 1.973708,
+    "sha256": "8b3432012013e11624869108946c9add6259def98d39ff040970e4684fab98cc"
+  },
+  "Çözümü birlikte inceleyelim. Hücre zarı hücre ile çevre arasındaki madde geçişinde rol alır.": {
+    "file": "tr-5775e98532337d2b.mp3",
+    "duration": 5.236125,
+    "sha256": "ffc563885f1de7d22c64c2494776b018cb554acf3872108453b8a92ffaa1c29e"
+  },
+  "Küçükten büyüğe doğru yapı sırası hangisidir?": {
+    "file": "tr-28c493998c7099a2.mp3",
+    "duration": 2.50775,
+    "sha256": "5531aa0a003428bc3688743c76b0a1913ab3f89b392e0acd8b8f72455d7998cb"
+  },
+  "İpucu: En küçük yapıdan başla.": {
+    "file": "tr-392ccc2923d4e985.mp3",
+    "duration": 2.066583,
+    "sha256": "c4d7b54d943944d9484342c64ec0a2c31f8a32cb7c3810e56e6b9d4c36f9515a"
+  },
+  "Çözümü birlikte inceleyelim. Benzer görevli hücreler doku; dokular organ; organlar sistem oluşturur.": {
+    "file": "tr-ce2d03ed4254ab23.mp3",
+    "duration": 5.955917,
+    "sha256": "a852f2c8f424f63a693f1bd8a38b20e2bf85eade04bd7298e19ca255ae11113c"
+  },
+  "“Bir bitkinin bütün hücrelerinde mutlaka kloroplast vardır.” ifadesi için hangisi uygundur?": {
+    "file": "tr-ac89f5d94a59ccca.mp3",
+    "duration": 4.957458,
+    "sha256": "c2271f38e46bc6aff4f08447eb2e9b2045c43e33335edd4984f211c0acc32d4c"
+  },
+  "İpucu: Toprağın altındaki kök ile yeşil yaprağı karşılaştır.": {
+    "file": "tr-b35184ee761851b5.mp3",
+    "duration": 3.610708,
+    "sha256": "092dd0aeba95f2d2018f3b93fb67b2ab5572917b412a0ae2c0876ec0d0aa053f"
+  },
+  "Çözümü birlikte inceleyelim. Kloroplast fotosentezle ilişkilidir; her bitki hücresi fotosentez yapmaz.": {
+    "file": "tr-4c49145dcdaa2164.mp3",
+    "duration": 5.658792,
+    "sha256": "c7c36f041e151748d2e6df546fc3aa7e75469e2331c28e8e8a6b7d7be5f6abf3"
+  },
+  "Keşif görevindeki doğru sonuç hangisidir? Hücrenin içine yolculuk": {
+    "file": "tr-341f7e63bb59c9a6.mp3",
+    "duration": 3.5875,
+    "sha256": "cdd1e8932b4eb9ba39f08f14dd9fe27296ee0372c3a81d112ff7479db57659db"
+  },
+  "İpucu: Çekirdek, hücrenin yönetim merkezidir. Zar sınır oluşturur; sitoplazma birçok yaşamsal olayın gerçekleştiği bölümdür.": {
+    "file": "tr-c4274c6ea3d90e92.mp3",
+    "duration": 7.383958,
+    "sha256": "f0ee98b5208dcfa18728467b87497298ec388733982e58d3837d97080139657e"
+  },
+  "Çözümü birlikte inceleyelim. Üç temel kısmı keşfettin. Çekirdek yönetim merkezidir; bitki hücresinin ayrıca hücre duvarı bulunur.": {
+    "file": "tr-db8965ad51c64556.mp3",
+    "duration": 7.302708,
+    "sha256": "e5b440fea435216fe55204cc4debf005d605ce91106b92b5177c1324e17e9078"
+  },
+  "Hayvan hücresi modeli için hangisi ortak temel kısımlardan biridir?": {
+    "file": "tr-d39f6e593c74163c.mp3",
+    "duration": 3.66875,
+    "sha256": "8629c820af615b58bd73a7642358149a2ddd0c2608b178541b48946e2dcf8cd3"
+  },
+  "Çözümü birlikte inceleyelim. Hücre zarı.": {
+    "file": "tr-3e2597a58725b3d3.mp3",
+    "duration": 2.414875,
+    "sha256": "625cce944fc522fc46e99479007f0b50d8ce0969a5e83c4c49f722c60b37e254"
+  },
+  "Kemiklerin birleştiği yerlere ne denir?": {
+    "file": "tr-337cc9243c37692e.mp3",
+    "duration": 2.113958,
+    "sha256": "2212365e54b3c63836c8efe6083902d9597cac029736680bab6e5ed208a380b9"
+  },
+  "İpucu: Dirseğin birleşme yerini düşün.": {
+    "file": "tr-ceb7b240be0c4640.mp3",
+    "duration": 2.252333,
+    "sha256": "a8ed812334da025a53d4b337ce9f646dd3d99624915259dcb80028536f32d4b3"
+  },
+  "Çözümü birlikte inceleyelim. Eklemler kemiklerin bir araya geldiği bölgelerdir.": {
+    "file": "tr-18a39df6feaf0abc.mp3",
+    "duration": 4.308208,
+    "sha256": "70ebcbd8f854ca930c9e79b68d89967e5d248a1e9d68dbe7513ac32a3f88da7e"
+  },
+  "Kaslar, kemikler ve eklemler hareket sırasında birlikte çalışır.": {
+    "file": "tr-55eafadb5309b155.mp3",
+    "duration": 3.77325,
+    "sha256": "5135919f3f5355f40e55d6acc70e71fc702e16230f17a370f612f1c4e576f21a"
+  },
+  "İpucu: Kolunu bükerken hangi yapılar görevlidir?": {
+    "file": "tr-710b35e90a3a6bac.mp3",
+    "duration": 2.809958,
+    "sha256": "2a69e20ff04ee9bc623ded7ee372df4875dd894c0259e00004980a35b0cec2c4"
+  },
+  "Çözümü birlikte inceleyelim. Hareket destek ve hareket sistemi yapılarının iş birliğiyle gerçekleşir.": {
+    "file": "tr-68bbce26f4212404.mp3",
+    "duration": 5.366708,
+    "sha256": "f05722d578b1031c1793a6d052e060b50e1b8e3547ccfd099e06f430ba561dec"
+  },
+  "Beyni koruyan kemik yapının adı nedir?": {
+    "file": "tr-7f33425a5d2d89fc.mp3",
+    "duration": 2.020167,
+    "sha256": "29bb021f6cde9904065392c8895f4f4532d98a0b25e7be809f636dbc23bbf8ea"
+  },
+  "İpucu: Başındaki kemik yapıyı düşün.": {
+    "file": "tr-1b12330ac4b77e4f.mp3",
+    "duration": 2.101417,
+    "sha256": "17c7a4d234f37944faa7eb0812e7ce734e3d9b34c73249f8205667bb43c9fdbf"
+  },
+  "Çözümü birlikte inceleyelim. Kafatası beyni dış etkilerden korumaya yardımcı olur.": {
+    "file": "tr-70b3e21c5081cf29.mp3",
+    "duration": 4.318917,
+    "sha256": "8160397bf81f291bde53499e46529f717015c7b7177e70e90c868bc293fcc524"
+  },
+  "Destek ve hareket sistemini korumak için hangisi uygundur?": {
+    "file": "tr-c1b58a6ecf17b05b.mp3",
+    "duration": 3.181167,
+    "sha256": "84d396fadf712d08648ec70a4658f38e98b9eb078215b05f4892bd15ee98e387"
+  },
+  "İpucu: Vücudu destekleyen alışkanlığı seç.": {
+    "file": "tr-3eceab89839199e4.mp3",
+    "duration": 2.809958,
+    "sha256": "521169dcfb470df5876616d21c3e8f9a23f060429d9ff0f8498efcf160b9999e"
+  },
+  "Çözümü birlikte inceleyelim. Beslenme ve güvenli hareket destek ve hareket sisteminin sağlığına katkı sağlar.": {
+    "file": "tr-4c097efefed7e112.mp3",
+    "duration": 5.572792,
+    "sha256": "aa29a37170f1e8f97b2f770b2323644fee3d6c7232d1b9ffb868a6e84f60e5c0"
+  },
+  "Kafatası ve dirsekteki eklemler için hangi karşılaştırma doğrudur?": {
+    "file": "tr-438c4c52f9c7e906.mp3",
+    "duration": 3.459792,
+    "sha256": "d4c87c2d15aeb69b766ad67b5761187d12b2dacb7874b0da8ea429a263a32baf"
+  },
+  "İpucu: Baş kemikleri ile kolunun hareketini karşılaştır.": {
+    "file": "tr-3f751f7bc11e6767.mp3",
+    "duration": 2.991458,
+    "sha256": "9e2b72c6813dfc1b68af1eed76fb718aae382d71b89ab59b53de20a3d52b8312"
+  },
+  "Çözümü birlikte inceleyelim. Eklemler vücutta farklı hareket özellikleri gösterir.": {
+    "file": "tr-41af72be71621fcf.mp3",
+    "duration": 4.293,
+    "sha256": "07dd04270608780113e54ea68a53038fe6f6785c0a13799c2089b467efc9b27e"
+  },
+  "Bir öğrenci oyunda düştükten sonra kolunda ağrı hissediyor. En uygun davranış hangisidir?": {
+    "file": "tr-3de3b5c23b5522e0.mp3",
+    "duration": 5.085167,
+    "sha256": "5465bd6616ac991df424f28c467799feb94e939e4f2c265c58f6788123932390"
+  },
+  "İpucu: Yeni bir zorlanmanın önüne geç.": {
+    "file": "tr-9618ece15403ef3d.mp3",
+    "duration": 2.368458,
+    "sha256": "15834f98c740bd34df32d950c806060e654836e426e04c3f61f5ae5fe4bcb4e8"
+  },
+  "Çözümü birlikte inceleyelim. Ağrı veya yaralanmada hareketi zorlamamak ve yetişkin desteği almak gerekir.": {
+    "file": "tr-d0e43b390b73c146.mp3",
+    "duration": 5.43575,
+    "sha256": "83e3eb01208ba20fb6f92d193fe52d1bfc85191c8f560f1a9f67b5ebfd8e8cfd"
+  },
+  "Keşif görevindeki doğru sonuç hangisidir? Hareketin gizli ekibi": {
+    "file": "tr-d50f89fcb7634735.mp3",
+    "duration": 3.66875,
+    "sha256": "f499001fa488f3fc8808d5604403eb2a8bf0e66614b4cd9193c94dd3419de99d"
+  },
+  "İpucu: Kemikler destek olur; eklemler kemiklerin birleşme yeridir. Kaslar kasılıp gevşeyerek kemikleri hareket ettirir.": {
+    "file": "tr-fde6069ada8e584f.mp3",
+    "duration": 6.433958,
+    "sha256": "d12f5f9a0faa625d0e9dfde4ee15cfff090f5d7a307f8a9a88f953fbf569af5a"
+  },
+  "Çözümü birlikte inceleyelim. Kas, kemik ve eklemin birlikte çalıştığını gördün. Bu çizim sadeleştirilmiş bir hareket modelidir.": {
+    "file": "tr-2deb6b174887f21f.mp3",
+    "duration": 6.88475,
+    "sha256": "a4a0f11ee30d758755202255028daa7af956a6c0272f9f48d7710bbbfe9bda76"
+  },
+  "Dirseğini bükerken kolundaki kemikler nasıl davranır?": {
+    "file": "tr-a93d88258c4229ce.mp3",
+    "duration": 2.748125,
+    "sha256": "cbe4e98d5d2121854cf64628dfc48088577260259872da39ee2b305e8910892c"
+  },
+  "Çözümü birlikte inceleyelim. Eklemin çevresinde konumları değişir.": {
+    "file": "tr-71a3bb7fb283437b.mp3",
+    "duration": 3.529958,
+    "sha256": "18498598c3f8f60c775779119e5321a1dee72b66732b4340ebac176bd28fe301"
+  },
+  "Çözümü birlikte inceleyelim. Etiketsiz bir maddeyle işlem yapmadan öğretmene danışılır.": {
+    "file": "tr-521564ae93a6116f.mp3",
+    "duration": 4.493083,
+    "sha256": "6b05c32c70291c22688ff2ba6b683ced90114c2689413412281869f486ccd06f"
+  },
+  "Çözümü birlikte inceleyelim. Kırık camdan uzak durup yetişkine haber verilir.": {
+    "file": "tr-e662983d5e39bd2c.mp3",
+    "duration": 4.226042,
+    "sha256": "91855463b6be86cfb6dcf9d66058f4d4f374b74030b852bbb29cdc48f1d9e0b5"
+  },
+  "Çözümü birlikte inceleyelim. Koruyucu gözlük gözlere sıçrama riskini azaltmaya yardım eder.": {
+    "file": "tr-25b46b1cac3d8124.mp3",
+    "duration": 4.93425,
+    "sha256": "0f3fb42d98af468918845e23d25ef5d34aba63dfbc062461909348cea0f463e7"
+  },
+  "Çözümü birlikte inceleyelim. Çalışma masasında gereksiz eşya olmaması devrilme riskini azaltır.": {
+    "file": "tr-6ba0d9cddcad945f.mp3",
+    "duration": 5.166458,
+    "sha256": "6385d2d3335d665d0a91ca15ad445a0ca629e6735c4293bad53a5a79861f7ae1"
+  },
+  "Çözümü birlikte inceleyelim. Uzun saçlar deneyden önce toplanır.": {
+    "file": "tr-a9dc3b7d8d75ee85.mp3",
+    "duration": 3.657167,
+    "sha256": "b1286208e729a78a8e5ceedb310ec7e63e71a1e542ad124524b6cde466b1d255"
+  },
+  "Çözümü birlikte inceleyelim. Bir araç arızalandığında deney durdurulup öğretmene bildirilir.": {
+    "file": "tr-ddeac0769d680ce2.mp3",
+    "duration": 4.693333,
+    "sha256": "57932c4f2ba62d3610aa1bbfe1f8de607b6d8f7c18c0b6b0e3b3047a6f8d9857"
+  },
+  "Çözümü birlikte inceleyelim. Bilinmeyen döküntüye çıplak elle dokunulmaz.": {
+    "file": "tr-060fef292a12ab3c.mp3",
+    "duration": 3.98225,
+    "sha256": "c954950433c861ecbd0fed0592d0c8615221f7d3826f81fd03ef000627afaf98"
+  },
+  "Çözümü birlikte inceleyelim. Güvenli bir deneyde yönerge anlaşılır ve izlenir.": {
+    "file": "tr-38fb2b49d3cc8a2d.mp3",
+    "duration": 4.12075,
+    "sha256": "05192ced7eca5b5d7d31297ee542e5cd9518343347179db3aac8ee4f8ac4a5c5"
+  },
+  "Çözümü birlikte inceleyelim. Deney sonunda araçlar yönergeye göre bırakılıp eller yıkanır.": {
+    "file": "tr-a7c4fd18360bf1a2.mp3",
+    "duration": 4.864583,
+    "sha256": "82070bf2b792c9fb633bc1d705c3f264416d044d62cc9d71f3dd56e6c25fd515"
+  },
+  "Çözümü birlikte inceleyelim. Ölçüm ve gözlemler yapıldığı gibi kaydedilir.": {
+    "file": "tr-4247554b59adaaec.mp3",
+    "duration": 3.993833,
+    "sha256": "95bb00440e95752864f4d5aa866163531a8d003a7afafc4d2626beca83c7d3e6"
+  },
+  "Çözümü birlikte inceleyelim. Güneş yaklaşık küreseldir.": {
+    "file": "tr-7e43367feac59842.mp3",
+    "duration": 3.274042,
+    "sha256": "6cbfc13eeb2c617fa933762667a049a032296ac817da35f2906e71295e1b94d4"
+  },
+  "Çözümü birlikte inceleyelim. Güneş Dünya’dan çok daha büyüktür.": {
+    "file": "tr-0bb28c56100223e9.mp3",
+    "duration": 3.575875,
+    "sha256": "1604be2b3c50b586e53c075dbbe4569f20e88df9440ea9037ee225b8f1d10ed6"
+  },
+  "Çözümü birlikte inceleyelim. Güneş Dünya’ya çok uzakta olduğu için küçük görünür.": {
+    "file": "tr-8aa0651745b5a7a8.mp3",
+    "duration": 4.45825,
+    "sha256": "982dbf7032a6ee440d66a6c93a3347a15e0c706fd1f6aeaecfc3dd46959e3fb0"
+  },
+  "Çözümü birlikte inceleyelim. Güneş kendi ekseni çevresinde döner.": {
+    "file": "tr-a17039ceea472413.mp3",
+    "duration": 3.571167,
+    "sha256": "f3235a412e40281532c22cedb1d52720b8cac4b55549913f99d168c80f5e0ed8"
+  },
+  "Çözümü birlikte inceleyelim. Güneş lekeleri çevrelerine göre daha serin görünür bölgelerle ilişkilidir.": {
+    "file": "tr-2f78b0768c1417cf.mp3",
+    "duration": 5.654083,
+    "sha256": "719ca1f6cd7f9acd235ff9b782121f22cdfb2edec9dcccc8c5cd3dc80d964197"
+  },
+  "Çözümü birlikte inceleyelim. Güneş çok sıcak gazlardan oluşur.": {
+    "file": "tr-4897dbf41fadf9af.mp3",
+    "duration": 3.55175,
+    "sha256": "8b08cb4d032a331b341a25e941bfdd3bd9cd2d91aa3047f59978bc4f2c729c24"
+  },
+  "Çözümü birlikte inceleyelim. Güneş’i ders kitabındaki bilimsel görüntülerden incelemek güvenlidir.": {
+    "file": "tr-1e7de288e928f1a4.mp3",
+    "duration": 5.270958,
+    "sha256": "ea82812da2d021de67113dc6d8681d37f4289395f467cd413a18cc0121ba8a71"
+  },
+  "Çözümü birlikte inceleyelim. Güneş’in ışığı ve enerjisi Dünya’daki yaşam için önemlidir.": {
+    "file": "tr-a66b9a2d12d84567.mp3",
+    "duration": 5.015542,
+    "sha256": "f7e220fe913c102935d812fe60c3b1e6195cbac6942132bb0df2b67fb71bed3a"
+  },
+  "Çözümü birlikte inceleyelim. Güneş ve Ay’ın ışıkla ilişkisi farklıdır.": {
+    "file": "tr-a806c64a9637343b.mp3",
+    "duration": 4.098333,
+    "sha256": "ed4894202da4cfa94cd9d12bbff92a1b955fa83dce9b80320d69d2537a7d353d"
+  },
+  "Çözümü birlikte inceleyelim. Ay Dünya’nın doğal uydusudur.": {
+    "file": "tr-1a5cbc9dfe25c188.mp3",
+    "duration": 3.308875,
+    "sha256": "ae0b08a3913d46b35f1fbb159abbb72ea6f4f8fd56673ffa280e3471ca3bb969"
+  },
+  "Çözümü birlikte inceleyelim. Ay Güneş ışığını yansıtır.": {
+    "file": "tr-eb6385ffdd2ab626.mp3",
+    "duration": 3.099875,
+    "sha256": "9c2acf0c15be79a43c5c769d6965433b5bdf4408ee73707f2376fa925a734d1a"
+  },
+  "Çözümü birlikte inceleyelim. Ay’ın yüzeyindeki çukurlara krater denir.": {
+    "file": "tr-fa0c3f8446e02dec.mp3",
+    "duration": 3.715208,
+    "sha256": "a4f3e3f5fb841b88b2c6e309f7812a35ec46713784c50ba0a6f771aef24f0257"
+  },
+  "Çözümü birlikte inceleyelim. Ay kendi ekseni çevresinde döner.": {
+    "file": "tr-61ee67f5688f3f0f.mp3",
+    "duration": 3.413333,
+    "sha256": "43a8a9bd60e9ca7ff7405ce8dfca15231b27a119b6d8d9c687245f70fe0605ae"
+  },
+  "Çözümü birlikte inceleyelim. Ay’ın dönme ve Dünya çevresinde dolanma süreleri yaklaşık eşittir.": {
+    "file": "tr-fdfbc63c54cdc232.mp3",
+    "duration": 4.922667,
+    "sha256": "f09bbc050fc645560f7de70424524c5d0bf34da50da746f47924e277c40693cc"
+  },
+  "Çözümü birlikte inceleyelim. Ay’ın evrelerinde gerçek biçimi yaklaşık küresel kalır.": {
+    "file": "tr-c203aad00272b2ff.mp3",
+    "duration": 4.510667,
+    "sha256": "e9383b26da3c76ecf869f0a767a4dd3eeaa3d2d5c186765c9cd899a8d9d06134"
+  },
+  "Çözümü birlikte inceleyelim. Ana evreler yeni ay, ilk dördün, dolunay ve son dördündür.": {
+    "file": "tr-af6c24b9ff36e3cd.mp3",
+    "duration": 5.212875,
+    "sha256": "f597f382b526985b45a936b480246d4a10e6b436d4023eb44d932c9948448133"
+  },
+  "Çözümü birlikte inceleyelim. Dolunayda görünen Ay diski yaklaşık tamamen aydınlıktır.": {
+    "file": "tr-ebfee43cc8c9709b.mp3",
+    "duration": 4.702042,
+    "sha256": "09fd7cc8386313523b9d163ada6b3862f35201446505e3c2637c04b349cb884d"
+  },
+  "Çözümü birlikte inceleyelim. Evreler aydınlık yarının görülen bölümüne bağlıdır.": {
+    "file": "tr-68bdbdf3b43376b5.mp3",
+    "duration": 4.179625,
+    "sha256": "4bd7718cbc99621fd4cd1aa01450e8abb076e6a5a95d28cf2fd92003972aa79d"
+  },
+  "Çözümü birlikte inceleyelim. Ay Dünya ile birlikte Güneş çevresinde de yol alır.": {
+    "file": "tr-75fabcbae3382c2e.mp3",
+    "duration": 4.400208,
+    "sha256": "d2c3ab742e569633810fb9032aa4d2475c31cc5a4d42845fe5417924e5ee5a18"
+  },
+  "Çözümü birlikte inceleyelim. Güneş Dünya ve Ay’dan büyüktür.": {
+    "file": "tr-a252531d953a8ea0.mp3",
+    "duration": 3.448167,
+    "sha256": "7eec7f8c4f9f7f1c1e5ba2170d1e0d41ea1c4be67a3b6936c9a2a806e73d0e3b"
+  },
+  "Çözümü birlikte inceleyelim. Dünya Ay’dan büyüktür.": {
+    "file": "tr-38d0e1cdecb1ae33.mp3",
+    "duration": 2.786167,
+    "sha256": "c1afd555430cd562cbd2d32043f9ba71c2615d6d0cf4b05f56f814b9516b8dfe"
+  },
+  "Çözümü birlikte inceleyelim. Dünya Güneş çevresinde dolanır.": {
+    "file": "tr-110f1eebab10d726.mp3",
+    "duration": 3.40175,
+    "sha256": "ecef327abd4642369da5246162ebbe35641889d61e988a7e3a93d969e86dd8a6"
+  },
+  "Çözümü birlikte inceleyelim. Ay Dünya çevresinde dolanır.": {
+    "file": "tr-49fbeb0b2e984512.mp3",
+    "duration": 3.320458,
+    "sha256": "d68d2c3588637ce89c5ed73b9fe974ae41823f4652ca0c320a9a64f0de49df9b"
+  },
+  "Çözümü birlikte inceleyelim. Kendi ekseni çevresinde hareket dönmedir.": {
+    "file": "tr-823b3f441f9de2be.mp3",
+    "duration": 3.889958,
+    "sha256": "7e052c064b64f99a5dec7d9eb2b60ba144ed1c3463715d6fe1270f2b99596bcb"
+  },
+  "Çözümü birlikte inceleyelim. Başka bir cisim çevresindeki hareket dolanmadır.": {
+    "file": "tr-78beb7fcc247b0c8.mp3",
+    "duration": 4.214417,
+    "sha256": "63490b381d37dbd647383754a24b424eb74435bf87bf9782ff6fb1f8c7954e03"
+  },
+  "Çözümü birlikte inceleyelim. Dünya’nın dönmesi yaklaşık bir gün sürer.": {
+    "file": "tr-cb39c4934248377a.mp3",
+    "duration": 3.854542,
+    "sha256": "ebdd4b7370e67b52a5805e693cf5a2fc3a6d30d2f805963b915264afd3921958"
+  },
+  "Çözümü birlikte inceleyelim. Dünya Güneş çevresinde yaklaşık bir yılda dolanır.": {
+    "file": "tr-9854332f9b351839.mp3",
+    "duration": 4.633958,
+    "sha256": "484842a88e7fb4441c23be363b175180348a43b965611c2af269a96ef8be9020"
+  },
+  "Çözümü birlikte inceleyelim. Basitleştirilmiş bir modelde boyut ve uzaklıklar ölçekli olmayabilir.": {
+    "file": "tr-55006c5b26f32b81.mp3",
+    "duration": 5.398667,
+    "sha256": "1bf5cda73ff34b8e86de7ce6cca295b7c07775a2debfc90a548c0992b9cce9f1"
+  },
+  "Çözümü birlikte inceleyelim. Güneş yıldız, Dünya gezegen ve Ay doğal uydudur.": {
+    "file": "tr-5f618f46a545d12c.mp3",
+    "duration": 4.771708,
+    "sha256": "b21719970e1ff307314b6a764d49f31121c66907faa2e7f437afe594bf8faa18"
+  },
+  "Çözümü birlikte inceleyelim. Kuvvet bir itme veya çekme etkisidir.": {
+    "file": "tr-0666c8206b214a09.mp3",
+    "duration": 3.750042,
+    "sha256": "8c70e3f8cbdf6198f4d7675817485fe83c825a8a210c61f368570fe1b0008280"
+  },
+  "Çözümü birlikte inceleyelim. Kuvvetin birimi newtondur.": {
+    "file": "tr-656c78cc7db9032d.mp3",
+    "duration": 3.053458,
+    "sha256": "4112752a6501dc39d7ecb3bf1c5b6b8c969dee501b6e88b0f3a37e9d0ecbb11f"
+  },
+  "Çözümü birlikte inceleyelim. Kuvvet dinamometreyle ölçülür.": {
+    "file": "tr-166d4e2dd0e673bc.mp3",
+    "duration": 3.308875,
+    "sha256": "f52c7cc0fa945cef803dc371e076b66e50a40837460181b2fa64f3a10a1d306d"
+  },
+  "Çözümü birlikte inceleyelim. Esnek bir yay üzerindeki kuvvet arttığında yay daha çok uzayabilir.": {
+    "file": "tr-21f974c1a1c74039.mp3",
+    "duration": 5.108417,
+    "sha256": "a07553e07f2b05bae3ace4de28762a1c0d6411431a32490a900c79933ca9fe4d"
+  },
+  "Çözümü birlikte inceleyelim. Dinamometrede eşit aralıklar eşit kuvvet değişimini gösterir.": {
+    "file": "tr-dd5834a68b732b83.mp3",
+    "duration": 4.513958,
+    "sha256": "55fea89073cf8dfb90ff7c1211c0fe0d77f869384ba4637880dd228234488b13"
+  },
+  "Çözümü birlikte inceleyelim. Ölçüm aracı kapasitesine uygun kuvvetlerle kullanılır.": {
+    "file": "tr-bb6973ba3f557e39.mp3",
+    "duration": 4.527917,
+    "sha256": "a2bd901f63a1723ac3ec75fffcca07d3934d0391283309acf9887a16f2aa8d93"
+  },
+  "Çözümü birlikte inceleyelim. Kuvvet bir cismin hızını değiştirebilir.": {
+    "file": "tr-b3f18483b3056617.mp3",
+    "duration": 3.715208,
+    "sha256": "1cea88278b3ee34219aef34af9e1aa7ea3446fe67627701350bef24ff27754b8"
+  },
+  "Çözümü birlikte inceleyelim. Kuvvet hareketin yönünü değiştirebilir.": {
+    "file": "tr-b0e7d956ebafb07e.mp3",
+    "duration": 3.424958,
+    "sha256": "b39d68e2a495c3b679c177f8321c5ca91bc821e595663d8d9bc7c2038e272b5a"
+  },
+  "Çözümü birlikte inceleyelim. Kuvvet bazı cisimlerin şeklini değiştirebilir.": {
+    "file": "tr-d695ce795791d023.mp3",
+    "duration": 4.075125,
+    "sha256": "91eaa910ae172ca3d83bc3356c0dc4bb32b86cdd53b948b21c794e0c9a107c1e"
+  },
+  "Çözümü birlikte inceleyelim. Esneklik sınırı aşılınca araç zarar görebilir.": {
+    "file": "tr-b0156a7a6537ff6c.mp3",
+    "duration": 4.342167,
+    "sha256": "ecfb57a07edcd9d392e4ed709571dda5b4d046fdca725071bfdd2182fcc24c1a"
+  },
+  "Çözümü birlikte inceleyelim. Kütle madde miktarının bir ölçüsüdür.": {
+    "file": "tr-166eebbbe85a3059.mp3",
+    "duration": 3.485375,
+    "sha256": "cfa683f5923a8c8c86c2f74e555ad55edb8c1746dc0365b1e5c59cc206a9ebdc"
+  },
+  "Çözümü birlikte inceleyelim. Kütlenin birimi kilogram olabilir.": {
+    "file": "tr-83c06949892ebc51.mp3",
+    "duration": 3.337958,
+    "sha256": "4731b0056582a296dd7ce8e6714de9d0f1286f39e7b1bccf7ca827ffa69213e9"
+  },
+  "Çözümü birlikte inceleyelim. Ağırlık bir çekim kuvvetidir.": {
+    "file": "tr-cf8d64270b13b652.mp3",
+    "duration": 3.009958,
+    "sha256": "954f3574969f5877ed68125f325be82eb137b3dc76cc9e24a978712cbe0e6149"
+  },
+  "Çözümü birlikte inceleyelim. Ağırlık newtonla ifade edilir.": {
+    "file": "tr-d04e5285dcda3a77.mp3",
+    "duration": 3.146333,
+    "sha256": "19d3952a8aef7d6a4137ad3dde4c8be26b80712318db7130eac4dbca5f194090"
+  },
+  "Çözümü birlikte inceleyelim. Aynı cismin kütlesi Dünya’dan Ay’a gidince değişmez.": {
+    "file": "tr-1ab670101e7a5ef9.mp3",
+    "duration": 4.367292,
+    "sha256": "9812c57366c8afc7ed14d4d6595384a196410a36917290f88a208c345bcc03da"
+  },
+  "Çözümü birlikte inceleyelim. Aynı cismin Ay’daki ağırlığı Dünya’dakinden daha azdır.": {
+    "file": "tr-04978fca41d958dd.mp3",
+    "duration": 4.690458,
+    "sha256": "70885e60272924e4b7685f2adee084e91ff758f1b1c7c06f0df649a02ed3ec91"
+  },
+  "Çözümü birlikte inceleyelim. Çekim daha büyükse aynı cismin ağırlığı daha büyük olur.": {
+    "file": "tr-73dcce3817b02732.mp3",
+    "duration": 4.56275,
+    "sha256": "505d379cf9ee945e067e62e51b1cbcd905384b1f47109c27522fbf20cb839c63"
+  },
+  "Çözümü birlikte inceleyelim. Terazi kütle, dinamometre kuvvet ölçmede kullanılır.": {
+    "file": "tr-e71d2e3eb5972900.mp3",
+    "duration": 4.179875,
+    "sha256": "4e6621ce4b333313ff231b11a8aa29bf177255518698957dd4b32887e205ae20"
+  },
+  "Çözümü birlikte inceleyelim. Kütle ile ağırlık farklı büyüklüklerdir.": {
+    "file": "tr-438d3bdb12451d53.mp3",
+    "duration": 3.819708,
+    "sha256": "f3f001079f934c20ec50bb4db01b5c766b6a09d2702f7180cd06646f09a04674"
+  },
+  "Çözümü birlikte inceleyelim. Madde eklemek cismin kütlesini artırabilir.": {
+    "file": "tr-cf4a73cb742815c1.mp3",
+    "duration": 4.028667,
+    "sha256": "4a604dda1ed974df648a46344f819314fcba0275562bb4c4cf3d051064bc9723"
+  },
+  "Çözümü birlikte inceleyelim. Sürtünme temas eden yüzeyler arasında oluşabilir.": {
+    "file": "tr-348bd6f38cae6a41.mp3",
+    "duration": 4.075125,
+    "sha256": "a6c5c26dad47a01c26909912f682718bdea2ab4a31430f0b20d1112d6c2cef24"
+  },
+  "Çözümü birlikte inceleyelim. Kayan cismin sürtünme kuvveti hareketin ters yönündedir.": {
+    "file": "tr-ea39f69a63f4a53b.mp3",
+    "duration": 4.667208,
+    "sha256": "08c0428dd25df0eefebbb98f86f8f6cae7699fc2c242bfd6214e763a48d791a4"
+  },
+  "Çözümü birlikte inceleyelim. Bu karşılaştırmada pürüzlü yüzey daha çok yavaşlatır.": {
+    "file": "tr-5d61c6654281667e.mp3",
+    "duration": 4.35375,
+    "sha256": "85ac15a328a79edea86997ae967c607c9903a5119cbde5c76598797ea4577f3f"
+  },
+  "Çözümü birlikte inceleyelim. Adil yüzey karşılaştırmasında araba ve başlangıç koşulları aynı tutulur.": {
+    "file": "tr-15e932aa19dde565.mp3",
+    "duration": 5.445083,
+    "sha256": "d39c7c545bec719aa011a1ac650bbc598d528f8795f1a884fcdfca3494f3aa68"
+  },
+  "Çözümü birlikte inceleyelim. Sürtünme yürürken kaymayı önlemeye yardım eder.": {
+    "file": "tr-d1ea293a43007d98.mp3",
+    "duration": 4.086708,
+    "sha256": "2268e8425b31f719239167da410d79c787769e1d2e0da708b5c5897a7849d3d1"
+  },
+  "Çözümü birlikte inceleyelim. Frenleme sırasında sürtünme yavaşlamaya yardım eder.": {
+    "file": "tr-3dacb1ac581b3d70.mp3",
+    "duration": 4.365375,
+    "sha256": "717189282d0bcecc8e1ff6435f0b58bade468a708eb75288071b237213292ca1"
+  },
+  "Çözümü birlikte inceleyelim. Sürtünme yüzeylerde aşınmaya yol açabilir.": {
+    "file": "tr-97cade97a57bfc53.mp3",
+    "duration": 3.913958,
+    "sha256": "87a8c1702e5a1c0bcb0f6f50451c353c1ffbe9bef9d4bf89903dd59afeffb2b2"
+  },
+  "Çözümü birlikte inceleyelim. Uygun yağlama bazı düzeneklerde sürtünmeyi azaltabilir.": {
+    "file": "tr-47ca9b73f44e929a.mp3",
+    "duration": 4.853,
+    "sha256": "8486a98305372cec0749bec3521397f12d72e10eec856f3f0485f6bf5224626a"
+  },
+  "Çözümü birlikte inceleyelim. Sürtünmenin etkisi yüzey özelliklerine bağlıdır.": {
+    "file": "tr-1aa852e344f08da9.mp3",
+    "duration": 4.09825,
+    "sha256": "d7f27034208f1b9de98233f5042c21fe20d10416836d8d9d1e56db6a43f642b8"
+  },
+  "Çözümü birlikte inceleyelim. İtme bırakıldığında da sürtünme hareketi yavaşlatabilir.": {
+    "file": "tr-466c6c0170c6b8d7.mp3",
+    "duration": 4.574333,
+    "sha256": "98af5beedefdfaf7086f613a0a30afadfc2dcc8c5d25ff0d752bcc383e53c068"
+  },
+  "Çözümü birlikte inceleyelim. Hücre canlıların temel yapı birimidir.": {
+    "file": "tr-fd6c442b19813ae5.mp3",
+    "duration": 3.796458,
+    "sha256": "e28424b2ed61c1dc03711bcac37696f29f8645437618ef8ddcbd88e1c12feea6"
+  },
+  "Çözümü birlikte inceleyelim. Hücre zarı madde alışverişinde seçici bir sınır oluşturur.": {
+    "file": "tr-a53f978232350e76.mp3",
+    "duration": 4.597583,
+    "sha256": "5c6837da6e85b94e9fcc351b065deb2b4b6247188d3cd76dfec582598de82f41"
+  },
+  "Çözümü birlikte inceleyelim. Sitoplazmada birçok yaşamsal olay gerçekleşir.": {
+    "file": "tr-0846f6999ddeb9de.mp3",
+    "duration": 4.644,
+    "sha256": "a339a1514e75b21962492cb4a490b46543b5f29a59c4f52da95ed2cca69840b7"
+  },
+  "Çözümü birlikte inceleyelim. Çekirdek hücrenin yönetiminde görev alır.": {
+    "file": "tr-1915c90e3336b9b5.mp3",
+    "duration": 3.831292,
+    "sha256": "ff262aa1ca71fc5dda4df28cb2f96570ccc3f4ea9a75bc39d07fd32203d6f961"
+  },
+  "Çözümü birlikte inceleyelim. Bitki hücresinde zarın dışında hücre duvarı bulunur.": {
+    "file": "tr-cffbdb15bfcd75ed.mp3",
+    "duration": 4.214417,
+    "sha256": "1c75765b391e25816faadb61fed8e43ac7390d828f86f4f6a7119b008b335289"
+  },
+  "Çözümü birlikte inceleyelim. Kloroplast ışık kullanılarak besin üretilmesinde görevlidir.": {
+    "file": "tr-39b0c2a34ef85b2b.mp3",
+    "duration": 4.725292,
+    "sha256": "faf02a774790a0b6ab9aa910193e265d1dd711d5a32d7cf07f92bd32373b7ba5"
+  },
+  "Çözümü birlikte inceleyelim. Mitokondri hücrenin kullanılabilir enerji elde etmesinde görevlidir.": {
+    "file": "tr-c5b4f009505b126b.mp3",
+    "duration": 5.22325,
+    "sha256": "d19e133dcc306365ef1c2de129ed93ca5d163b26767af25cac7086986c7121dd"
+  },
+  "Çözümü birlikte inceleyelim. Bitki ve hayvan hücrelerinde hücre zarı ve sitoplazma bulunur.": {
+    "file": "tr-c72120af5e0253c8.mp3",
+    "duration": 4.794917,
+    "sha256": "3bc7b41373c3580c61bc1afa56981bc96176eec078e930576c86f578a7c8166e"
+  },
+  "Çözümü birlikte inceleyelim. Kofullar depolamada görev alır.": {
+    "file": "tr-0d11a34a03dc3493.mp3",
+    "duration": 3.217958,
+    "sha256": "20ed3aaa56d65bc2a3f202050694f660c53f02a4cec9af6c704ac76b353cb7c3"
+  },
+  "Çözümü birlikte inceleyelim. Doku ve organlar çok sayıda hücrenin örgütlenmesiyle oluşur.": {
+    "file": "tr-cca1ec9ab74e9e1b.mp3",
+    "duration": 5.031333,
+    "sha256": "f587f8a3952e455cd6cbfa9828ea5842152ae9a1e1038073719a01ef0e1ec986"
+  },
+  "Çözümü birlikte inceleyelim. İskelet vücuda destek sağlar.": {
+    "file": "tr-4b9815d1dc4980d7.mp3",
+    "duration": 3.355292,
+    "sha256": "a22574695305608fefc18400a224a2486b4bb06342adefaa52f5e8f54842605f"
+  },
+  "Çözümü birlikte inceleyelim. Kafatası beyni korumaya yardım eder.": {
+    "file": "tr-62bc96c79790feab.mp3",
+    "duration": 3.506208,
+    "sha256": "33b6edd91defb7a3d5be6029373e5d46388900557f813fc5914b0964f8043b62"
+  },
+  "Çözümü birlikte inceleyelim. Eklemler kemiklerin birleşme yerleridir.": {
+    "file": "tr-fa5c3405286dbfec.mp3",
+    "duration": 3.8455,
+    "sha256": "50df8bb861fcebaa4b9400df0c07ac2bbcfdffdfc02d15f29e242783521e45e3"
+  },
+  "Çözümü birlikte inceleyelim. Her eklemin hareket yeteneği aynı değildir.": {
+    "file": "tr-a2aa5a051804d180.mp3",
+    "duration": 3.5875,
+    "sha256": "17be447da598f27040d52804c74f538d9ec316974f46247dc982b92c7c7edcec"
+  },
+  "Çözümü birlikte inceleyelim. Kaslar kasılıp gevşeyerek hareketi sağlar.": {
+    "file": "tr-5b6ab96933ccefed.mp3",
+    "duration": 3.98225,
+    "sha256": "84af90c192804465c27f95a604707ad4df4809aec63e9a73ff3014d748fd85f8"
+  },
+  "Çözümü birlikte inceleyelim. Kemikler ve kaslar hareket sırasında birlikte çalışır.": {
+    "file": "tr-f29ea9913fab03e8.mp3",
+    "duration": 4.377792,
+    "sha256": "2057d083cb5ab6b9c626a8cf45cc6b7d3e20cea41442b8e2182395ce2cf27b56"
+  },
+  "Çözümü birlikte inceleyelim. Dengeli beslenme destek ve hareket sistemi için önemlidir.": {
+    "file": "tr-d64eb237592a025d.mp3",
+    "duration": 4.504667,
+    "sha256": "d4c9490de4f0b02b10f28940eaa83aa29c2717c7f197114ff541629bcee93f53"
+  },
+  "Çözümü birlikte inceleyelim. Uygun düzenli hareket kas ve kemik sağlığını destekler.": {
+    "file": "tr-10781c22511b7a09.mp3",
+    "duration": 4.609958,
+    "sha256": "c7e3a5154703c95bfcac3f063475c835a03371fd380be05eb894f34f22472617"
+  },
+  "Çözümü birlikte inceleyelim. Doğru duruş ve uygun çanta kullanımı önemlidir.": {
+    "file": "tr-52a43631ec6d0bbc.mp3",
+    "duration": 4.388583,
+    "sha256": "37c1682bf2291a51a2e74b40b5117e2a1b25ef0ee58e0ab9f5d0e0519f5e96f5"
+  },
+  "Çözümü birlikte inceleyelim. Bir yaralanmada yetişkine haber verilir ve zorlayıcı hareket bırakılır.": {
+    "file": "tr-50496c6c8743452d.mp3",
+    "duration": 5.259333,
+    "sha256": "703d4ce5c3cfcc6e8834f263eb6c632b9d3b00994ba35b360260b78005096a21"
+  },
   "Renkli Fener. Mina, okul konseri için kâğıttan bir fener yaptı. Rüzgâr çıkınca fenerin ince sapı koptu. Eylül, sapı daha kalın bir iple bağlamayı önerdi. İkisi birlikte çalışınca fener yeniden sahneye asıldı. Mina, dayanıklı bir şeyin kolayca bozulmadığını o gün öğrendi.": {
     "file": "tr-050f66b19a403d62.mp3",
     "duration": 15.292708,

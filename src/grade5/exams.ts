@@ -44,7 +44,7 @@ export function availableExamQuestions(
   courseId: string, units: string[], pool: Question[] = questions, references: TopicReference[] = topics, term: StudyTerm = 'all',
 ): Question[] {
   const allowed = new Set(references.filter(topic => topic.courseId === courseId && units.includes(topic.unit) && matchesTerm(topic, term)).map(topic => topic.id));
-  return pool.filter(question => allowed.has(question.topicId) && !question.id.startsWith('mj-'));
+  return pool.filter(question => allowed.has(question.topicId) && !question.id.startsWith('mj-') && (!question.id.startsWith('sj-') || question.id.startsWith('sj-written-')));
 }
 
 // A topic gets one question per round before it gets a second question. Both

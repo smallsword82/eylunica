@@ -36,7 +36,7 @@ test('replaying reading level one preserves the level-three lock after reload; e
 test('moon appearance has the correct illuminated area from crescent through gibbous and back', async ({page}) => {
   await page.goto('/');await page.getByRole('button',{name:'eylunica’ya devam et →'}).click();
   await page.getByRole('button',{name:/^5. Sınıf Derslerim/}).click();await page.getByRole('button',{name:/^Fen Bilimleri /}).click();
-  await page.getByRole('button',{name:/Gökyüzündeki Komşumuz: Ay/}).click();
+  await page.getByRole('button',{name:/Gökyüzündeki Komşumuz: Ay/}).click();await page.getByRole('button',{name:'Konu kaynakları ve ayrıntılar'}).click();
   const model=page.getByRole('region',{name:'Ay evreleri keşif modeli'});
   const slider=model.getByRole('slider');
   for(const day of [0,4,7.5,11,15,18.5,22,26,29.5]){

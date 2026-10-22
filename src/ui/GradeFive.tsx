@@ -1,3 +1,4 @@
+import {ScienceJourney} from './ScienceJourney';
 import {CourseRoad} from './CourseRoad';
 import {ScienceOrbitModel} from './ScienceOrbitModel';
 import {MoonPhaseModel} from './MoonPhaseModel';
@@ -71,6 +72,7 @@ export function GradeFive({ onBack, onTransition, guide, paused, audioMode, onAu
   if (!courseId) return <GradeFiveDiscovery audioMode={audioMode} onAudioMode={onAudioMode} paused={paused} onTransition={onTransition} onBack={onBack} onCourse={id => { setCourse(id);setRoadPage(0); setUnitFilter(''); setTopicFilter(''); setVisibleCount(24); if (id === 'course-6') setTerm('unknown'); else setTerm('first'); }} />;
   if (examOpen && course) return <GradeFiveExam initialTerm={term} courseId={course.id} onBack={() => setExamOpen(false)} onTransition={onTransition} paused={paused} guide={guide} onComplete={recordExam} />;
   if (courseId === 'course-1') return <MathJourney onBack={() => setCourse(null)} onExam={value => {setTerm(value);setExamOpen(true);}} paused={paused} onTransition={onTransition} onRecord={(id, value, hinted) => { const q=questionById.get(id); if(!q)return; setLearning(current => { const next=recordAttempt(current,q,value,hinted); try{localStorage.setItem(learningKey,JSON.stringify(next));}catch{setStorageError('İlerleme kaydedilemedi.');}return next; }); }} />;
+  if(courseId==='course-2'&&!topic)return <ScienceJourney paused={paused} onBack={()=>setCourse(null)} onLegacyTopic={t=>onTransition(()=>{setTopic(t);setStage('summary');},true)} onLegacyExam={value=>{setTerm(value);setExamOpen(true);}} onTransition={onTransition} onRecord={(id,value,hinted)=>{const q=questionById.get(id);if(!q)return;setLearning(current=>{const next=recordAttempt(current,q,value,hinted);try{localStorage.setItem(learningKey,JSON.stringify(next));}catch{setStorageError('İlerleme kaydedilemedi.');}return next;});}}/>;
   if((courseId==='course-3'||courseId==='course-2')&&!topic)return <CourseRoad courseId={courseId} page={roadPage} onPage={setRoadPage} topics={courseTopics} term={term} onTerm={setTerm} onTopic={t=>onTransition(()=>{setTopic(t);setStage('summary');},true)} onBack={()=>setCourse(null)} onExam={()=>onTransition(()=>setExamOpen(true))}/>;
   if(courseId==='course-3'&&topic&&socialVisualTopics[topic.id]&&['summary','example'].includes(stage))return <SocialLesson key={`${topic.id}-${stage}`} topic={topic} example={stage==='example'} paused={paused} onBack={()=>setTopic(null)} onPractice={()=>selectStage('practice')} onExample={()=>selectStage('example')}/>;
   return <main className="subpage grade-five">

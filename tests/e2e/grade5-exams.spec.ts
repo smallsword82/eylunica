@@ -18,7 +18,7 @@ test('resmî konuya eklenen anlatım, adımlı çözüm ve alıştırma çevrimd
  await openGradeFive(page);
  await selectGradeCourse(page,/^Fen Bilimleri /);
   await page.getByLabel('Çalışma dönemi').selectOption('all');
- await page.getByRole('button',{name:/Gökyüzündeki Komşumuz: Güneş/}).click();
+ await page.getByRole('button',{name:/Gökyüzündeki Komşumuz: Güneş/}).click();await page.getByRole('button',{name:'Konu kaynakları ve ayrıntılar'}).click();
  expect(await page.locator('.lesson-reading > section').count()).toBeGreaterThanOrEqual(2);
  await expect(page.getByText('Bu konu için bağımsız ders anlatımı henüz hazırlanmadı.',{exact:false})).toHaveCount(0);
  await page.getByRole('button',{name:'Örnek çözüm',exact:true}).click();
@@ -51,6 +51,7 @@ for (const [course, title] of [
   if(course==='Sosyal Bilgiler'){await page.locator('[data-topic-id="topic-f31f5d0c12bc3e58"]').click();await expect(page.getByRole('region',{name:'Sosyal bilgiler görselli anlatım'})).toBeVisible();for(let i=0;i<3;i++)await page.getByRole('button',{name:'Sonraki adım →',exact:true}).click();await page.getByRole('button',{name:'✦ Örnek çözüm',exact:true}).click();await expect(page.getByRole('heading',{name:/Deniz evde/})).toBeVisible();await page.getByRole('button',{name:'Alıştırmalar',exact:true}).click();await expect(page.getByRole('region',{name:'Soru çalışması'})).toBeVisible();return;}
   if(course!=='Fen Bilimleri') await page.getByLabel('Konu ara').fill(title);
   await page.getByRole('button',{name:new RegExp(escape(title))}).first().click();
+  if(course==='Fen Bilimleri')await page.getByRole('button',{name:'Konu kaynakları ve ayrıntılar'}).click();
   if(course==='Matematik') await expect(page.getByRole('region',{name:'Görselli açı anlatımı'})).toBeVisible();
   else expect(await page.locator('.lesson-reading > section').count()).toBeGreaterThanOrEqual(2);
   await page.getByRole('button',{name:'Örnek çözüm',exact:true}).click();

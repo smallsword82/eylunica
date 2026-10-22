@@ -1,3 +1,4 @@
+import {scienceQuestions} from './science-question-bank';
 import {legacyAngleQuestions} from './math-journey-bank';
 import { mathJourneyQuestions } from './math-journey-bank';
 import { describe, expect, it } from 'vitest';
@@ -60,7 +61,7 @@ describe('Özgün ders anlatımı ve alıştırma kataloğu', () => {
    const topicIds = new Set(topicsByCourse.get(courseId)?.map(topic => topic.id));
    expect(pool.every(q => topicIds.has(q.topicId))).toBe(true);
   }
-  expect(contentStats.questionRecords + 8 + sourceComparedQuestions.length + mathJourneyQuestions.length).toBe(questions.length);
+  expect(contentStats.questionRecords + 8 + sourceComparedQuestions.length + mathJourneyQuestions.length + scienceQuestions.length).toBe(questions.length);
   expect(contentStats.distinctQuestionPrompts).toBeLessThanOrEqual(contentStats.questionRecords);
  });
  it('doğru seçeneğin yeri geniş ders havuzlarında sabit bir ipucu oluşturmaz', () => {

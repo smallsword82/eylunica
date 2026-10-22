@@ -78,7 +78,6 @@ export const fresh = (): Progress => ({
     divide: skill(),
   },
   history: [],
-  academyUnlocked: { math: 1, reading: 1, attention: 1 },
   calibrationDone: false,
   rewards: [],
   arena: freshArena(),
@@ -112,12 +111,14 @@ export function decode(raw: string | null): Progress {
       )
         return fresh();
     }
-    p.mathCompleted = p.mathCompleted && typeof p.mathCompleted === "object" && !Array.isArray(p.mathCompleted) ? p.mathCompleted : {};
-    p.academyUnlocked = {
-      math: Math.min(5, Math.max(1, Math.floor(p.academyUnlocked?.math || 1))),
-      reading: Math.min(3, Math.max(1, Math.floor(p.academyUnlocked?.reading || 1))),
-      attention: Math.min(3, Math.max(1, Math.floor(p.academyUnlocked?.attention || 1))),
-    };
+    if (p.mathCompleted !== undefined && (typeof p.mathCompleted !== "object" || !p.mathCompleted || Array.isArray(p.mathCompleted))) delete p.mathCompleted;
+    if (p.academyUnlocked !== undefined) {
+      p.academyUnlocked = {
+        math: Math.min(5, Math.max(1, Math.floor(p.academyUnlocked?.math || 1))),
+        reading: Math.min(3, Math.max(1, Math.floor(p.academyUnlocked?.reading || 1))),
+        attention: Math.min(3, Math.max(1, Math.floor(p.academyUnlocked?.attention || 1))),
+      };
+    }
     p.character = normalizeCharacter(p.character);
     p.learnerName = typeof p.learnerName === "string" && p.learnerName.trim()
       ? p.learnerName.trim().slice(0, 24)

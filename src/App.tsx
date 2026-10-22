@@ -368,7 +368,7 @@ export default function App() {
             <section className="companion"><Avatar name={progress.character} costume={progress.rewards.includes("arena-costume")} /><div><h2>{progress.character} yanında.</h2><p>{progress.stars} yıldızın ve kart koleksiyonun bu cihazda korunuyor.</p></div><button className="secondary" onClick={() => setScreen("characters")}>Arkadaşını seç →</button></section>
             <div className={`stage compact-stage ${progress.rewards.includes("arena-lights") ? "arena-lit" : ""} ${progress.rewards.includes("lights") ? "lit" : ""} ${progress.rewards.includes("confetti") ? "confetti" : ""}`}>✦ Her keşif sahneni aydınlatır.</div>
           </main>}
-          {screen === "grade5" && <Suspense fallback={<main className="subpage" role="status">Dersler yükleniyor…</main>}><GradeFive paused={!!wellbeing.notice} onBack={() => setScreen("home")} onTransition={wellbeing.transition} guide={characters.find(c => c.name === progress.character)?.name || "Eğitmenin"} /></Suspense>}
+          {screen === "grade5" && <Suspense fallback={<main className="subpage" role="status">Dersler yükleniyor…</main>}><GradeFive audioMode={audio.mode} onAudioMode={audio.changeMode} paused={!!wellbeing.notice} onBack={() => setScreen("home")} onTransition={wellbeing.transition} guide={characters.find(c => c.name === progress.character)?.name || "Eğitmenin"} /></Suspense>}
           {screen === "math" && <main className="subpage math-selection">
             <button className="text-button" onClick={() => setScreen("academies")}>← Akademilere dön</button>
             <div className="eyebrow muted">MATEMATİK · SEVİYENE UYGUN ALIŞTIRMALAR</div><h1>Matematik Akademisi</h1>

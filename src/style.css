@@ -2227,3 +2227,10 @@ footer button,
 .academy-level-card strong { font-size: 19px; }
 .academy-level-card small { font-size: 12px; }
 .academy-level-card.is-locked, .academy-level-card:disabled { opacity: .47; cursor: not-allowed; filter: grayscale(.55); }
+
+/* Math academy: adventure cards remain the landing view; levels are compact tabs. */
+.math-level-strip { display:flex; flex-wrap:wrap; gap:9px; margin:18px 0 8px; }
+.math-level-strip button { border:1px solid #ab88d4; border-radius:22px; background:#38264d; color:#f8e9ff; padding:9px 15px; font-weight:700; }
+.math-level-strip button[aria-pressed="true"] { background:#f1c98f; border-color:#f1c98f; color:#2b183a; }
+.math-level-strip button:disabled { opacity:.42; cursor:not-allowed; }
+.math-level-status { margin:5px 0 16px; font-size:13px; color:#dfcde9; }

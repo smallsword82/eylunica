@@ -46,6 +46,7 @@ export type Progress = {
   rewards: string[];
   arena: ArenaState;
   mathSections?: Record<string, number>;
+  academyUnlocked?: { math: number; reading: number; attention: number };
   assessmentPending?: boolean;
   cards?: { counts: Record<string, number>; variants?: Record<string, number>; grants: string[]; last: { character: string; source: string; cardId?: string; collectionComplete?: boolean } };
 };
@@ -76,6 +77,7 @@ export const fresh = (): Progress => ({
     divide: skill(),
   },
   history: [],
+  academyUnlocked: { math: 1, reading: 1, attention: 1 },
   calibrationDone: false,
   rewards: [],
   arena: freshArena(),
@@ -109,6 +111,11 @@ export function decode(raw: string | null): Progress {
       )
         return fresh();
     }
+    p.academyUnlocked = {
+      math: Math.min(5, Math.max(1, Math.floor(p.academyUnlocked?.math || 1))),
+      reading: Math.min(3, Math.max(1, Math.floor(p.academyUnlocked?.reading || 1))),
+      attention: Math.min(3, Math.max(1, Math.floor(p.academyUnlocked?.attention || 1))),
+    };
     p.character = normalizeCharacter(p.character);
     p.learnerName = typeof p.learnerName === "string" && p.learnerName.trim()
       ? p.learnerName.trim().slice(0, 24)

@@ -43,6 +43,7 @@ it("yanlış cevapta ipucu, tekrar deneme ve tek soru kaydı çalışır", async
   await screen.findByText("Bugün nerede buluşalım?");
   await user.click(screen.getByRole("button", { name: /^Akademiler/ }));
   await user.click(screen.getByRole("button", { name: /^Matematik Akademisi/ }));
+  await user.click(screen.getByRole("button", { name: /Düzey 1Başla/ }));
   await user.click(screen.getByRole("button", { name: /Zihin Atölyesi/ }));
   await user.click(screen.getByRole("button", { name: "14" }));
   expect(screen.getByRole("status")).toHaveTextContent("Henüz olmadı");
@@ -61,6 +62,7 @@ it("doğru yanıtta yıldız verir ve aynı soruda tekrar ödüllendirmez", asyn
   await screen.findByText("Bugün nerede buluşalım?");
   await user.click(screen.getByRole("button", { name: /^Akademiler/ }));
   await user.click(screen.getByRole("button", { name: /^Matematik Akademisi/ }));
+  await user.click(screen.getByRole("button", { name: /Düzey 1Başla/ }));
   await user.click(screen.getByRole("button", { name: /Zihin Atölyesi/ }));
   await user.click(screen.getByRole("button", { name: "15" }));
   await waitFor(() =>

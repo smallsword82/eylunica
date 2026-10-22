@@ -43,7 +43,6 @@ it("yanlış cevapta ipucu, tekrar deneme ve tek soru kaydı çalışır", async
   await screen.findByText("Bugün nerede buluşalım?");
   await user.click(screen.getByRole("button", { name: /^Akademiler/ }));
   await user.click(screen.getByRole("button", { name: /^Matematik Akademisi/ }));
-  await user.click(screen.getByRole("button", { name: /Düzey 1Başla/ }));
   await user.click(screen.getByRole("button", { name: /Zihin Atölyesi/ }));
   await user.click(screen.getByRole("button", { name: "14" }));
   expect(screen.getByRole("status")).toHaveTextContent("Henüz olmadı");
@@ -62,7 +61,6 @@ it("doğru yanıtta yıldız verir ve aynı soruda tekrar ödüllendirmez", asyn
   await screen.findByText("Bugün nerede buluşalım?");
   await user.click(screen.getByRole("button", { name: /^Akademiler/ }));
   await user.click(screen.getByRole("button", { name: /^Matematik Akademisi/ }));
-  await user.click(screen.getByRole("button", { name: /Düzey 1Başla/ }));
   await user.click(screen.getByRole("button", { name: /Zihin Atölyesi/ }));
   await user.click(screen.getByRole("button", { name: "15" }));
   await waitFor(() =>
@@ -110,4 +108,16 @@ it("eski özel öğrenci adı ve ilerleme kaybolmaz", async () => {
   render(<App />);
   expect(await screen.findByRole("heading", { name: "Ada, sahne senin." })).toBeVisible();
   expect(screen.getByRole("button", { name: /Esin Birlikte paylaş/ })).toHaveAttribute("aria-pressed", "true");
+});
+
+it("matematikte altı macera doğrudan açılır, sonraki düzey kilitli kalır", async () => {
+  const user = userEvent.setup();
+  render(<App />);
+  await enter();
+  await screen.findByText("Bugün nerede buluşalım?");
+  await user.click(screen.getByRole("button", { name: /^Akademiler/ }));
+  await user.click(screen.getByRole("button", { name: /^Matematik Akademisi/ }));
+  expect(screen.getByRole("button", { name: /Toplama Ormanı/ })).toBeVisible();
+  expect(screen.getByRole("button", { name: /Zihin Atölyesi/ })).toBeVisible();
+  expect(screen.getByRole("button", { name: /Düzey 2/ })).toBeDisabled();
 });

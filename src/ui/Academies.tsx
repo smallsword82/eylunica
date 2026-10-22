@@ -61,6 +61,19 @@ function Header({
     </>
   );
 }
+function LevelCards({ unlocked, max, onSelect }: { unlocked: number; max: number; onSelect: (level: number) => void }) {
+  return <section className="academy-levels" aria-label="Akademi düzeyleri">
+    <h2>Düzeyini seç</h2><p>İlk düzeyden başla. Tamamladıkça yeni düzeylerin kilidi açılır.</p>
+    <div className="academy-level-grid">{Array.from({ length: max }, (_, i) => {
+      const level = i + 1, locked = level > unlocked;
+      return <button key={level} className={`academy-level-card ${locked ? "is-locked" : ""}`} disabled={locked} onClick={() => onSelect(level)}>
+        <span aria-hidden="true">{locked ? "🔒" : level < unlocked ? "✓" : "✦"}</span>
+        <strong>Düzey {level}</strong>
+        <small>{locked ? "Önceki düzeyi tamamla" : level < unlocked ? "Tamamlandı · Tekrar oyna" : "Başla →"}</small>
+      </button>;
+    })}</div>
+  </section>;
+}
 function LessonProgress({ index, total }: { index: number; total: number }) {
   return (
     <div
@@ -165,7 +178,8 @@ export function ReadingAcademy({
     } | null>(null),
     [done, setDone] = useState(false);
   const state = progress.academies.reading;
-  const [placing, setPlacing] = useState(!state.placementDone);
+  const [placing, setPlacing] = useState(false);
+  const [levelMenu, setLevelMenu] = useState(true);
   const nextLevel = state.placementDone ? state.level : readingStep(state.seen);
   const [libraryDone, setLibraryDone] = useState(false);
   useEffect(() => {
@@ -175,6 +189,7 @@ export function ReadingAcademy({
     onTransition(() => {
       const story = nextStory(level, state.seen);
       if (!story) { setLibraryDone(true); return; }
+      setLevelMenu(false);
       setSession({ story, index: 0 });
       setDone(false);
     });
@@ -183,7 +198,7 @@ export function ReadingAcademy({
   return (
     <main className="subpage academy-page">
       <Header academy="reading" onBack={onBack} character="Zeynep" />
-      {libraryDone ? <section className="lesson-complete"><h2>Tüm hikâyeleri keşfettin!</h2><p>Şimdilik yeni okuma sorusu kalmadı. Aynı soruları yeniden sormak yerine diğer akademilerde devam edelim.</p><button className="primary" onClick={onBack}>Diğer akademilere geç →</button></section> : done ? (
+      {levelMenu ? <LevelCards unlocked={progress.academyUnlocked?.reading ?? 1} max={3} onSelect={start} /> : libraryDone ? <section className="lesson-complete"><h2>Tüm hikâyeleri keşfettin!</h2><p>Şimdilik yeni okuma sorusu kalmadı. Aynı soruları yeniden sormak yerine diğer akademilerde devam edelim.</p><button className="primary" onClick={onBack}>Diğer akademilere geç →</button></section> : done ? (
         <Completion
           progress={progress}
           onBack={onBack}
@@ -204,7 +219,7 @@ export function ReadingAcademy({
               onTransition(
                 () =>
                   session.index === session.story.questions.length - 1
-                    ? (onSave(awardCard(progress, `reading:${session.story.id}`, session.story.title)), setDone(true))
+                    ? (onSave(awardCard({ ...progress, academyUnlocked: { math: progress.academyUnlocked?.math ?? 1, reading: Math.min(3, Math.max(progress.academyUnlocked?.reading ?? 1, session.story.grade.includes("5.") ? 3 : session.story.grade.includes("4.") ? 2 : 1) + 1), attention: progress.academyUnlocked?.attention ?? 1 } }, `reading:${session.story.id}`, session.story.title)), setDone(true))
                     : setSession({ ...session, index: session.index + 1 }),
                 session.index < session.story.questions.length - 1,
               )
@@ -268,7 +283,9 @@ export function AttentionAcademy({
   onTransition = (action) => action(),
   onActivity,
 }: Props) {
-  const [placing, setPlacing] = useState(!progress.academies.attention.placementDone);
+  const [placing, setPlacing] = useState(false);
+  const [levelMenu, setLevelMenu] = useState(true);
+  const [selectedLevel, setSelectedLevel] = useState(1);
   const rewardKey = useRef("");
   const [kind, setKind] = useState<AttentionKind | null>(null),
     [tasks, setTasks] = useState<Activity[]>([]),
@@ -279,23 +296,24 @@ export function AttentionAcademy({
   }, [onActivity, kind, done, placing]);
   function start(k: AttentionKind) {
     onTransition(() => {
+      setLevelMenu(false);
       setKind(k);
       rewardKey.current = crypto.randomUUID();
       const state = progress.academies.attention;
-      setTasks([freshAttention(k, state.level, state.seen, state.history.map(result => result.id))]);
+      setTasks([freshAttention(k, selectedLevel, state.seen, state.history.map(result => result.id))]);
       setIndex(0);
       setDone(false);
     });
   }
   function next() {
     if (index === 3) {
-      onSave(awardCard(progress, `attention:${rewardKey.current}`, names.attention));
+      onSave(awardCard({ ...progress, academyUnlocked: { math: progress.academyUnlocked?.math ?? 1, reading: progress.academyUnlocked?.reading ?? 1, attention: Math.min(3, Math.max(progress.academyUnlocked?.attention ?? 1, selectedLevel + 1)) } }, `attention:${rewardKey.current}`, names.attention));
       setDone(true);
       return;
     }
     setTasks((s) => [
       ...s,
-      freshAttention(kind!, progress.academies.attention.level, progress.academies.attention.seen, [...progress.academies.attention.history.map(result => result.id), ...s.map(task => task.id)]),
+      freshAttention(kind!, selectedLevel, progress.academies.attention.seen, [...progress.academies.attention.history.map(result => result.id), ...s.map(task => task.id)]),
     ]);
     setIndex((i) => i + 1);
   }
@@ -307,7 +325,7 @@ export function AttentionAcademy({
         Bu oyunlar öğrenme alıştırmasıdır; tıbbi teşhis veya tedavi aracı
         değildir.
       </p>
-      {done ? (
+      {levelMenu ? <LevelCards unlocked={progress.academyUnlocked?.attention ?? 1} max={3} onSelect={level => { setSelectedLevel(level); setLevelMenu(false); }} /> : done ? (
         <Completion
           progress={progress}
           onBack={onBack}

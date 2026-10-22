@@ -11,7 +11,6 @@ export function MoonPhaseModel(){
  // The eight phase icons are pedagogical approximations, not a lunar ephemeris.
  const litFraction=(1-Math.cos(phaseAngle))/2;
  const waxing=day<14.75;
- const left= waxing ? false : true;
  const r=38;
  const terminatorX=r*Math.abs(2*litFraction-1);
  const litPath=litFraction<0.5

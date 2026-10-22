@@ -1,3 +1,4 @@
+import {enterAcademies} from "./local-test";
 import { test, expect, openMathWorld, type Page } from "./local-test";
 const minute = 60_000,
   key = "ritma-wellbeing-v1";
@@ -125,17 +126,17 @@ test("ebeveyn sınırı açık soruyu bitirtir, yenisini durdurur; ayarlar çevr
   for (const kind of ["reading", "attention", "concert"]) {
     await main(page);
     if (kind === "reading") {
-      await page
+      await enterAcademies(page);await page
         .getByRole("button", { name: /^Okuduğunu Anlama Akademisi/ })
         .click();
       await page.getByRole("button", { name: /Kısa metinler/ }).click();
     } else if (kind === "attention") {
-      await page
+      await enterAcademies(page);await page
         .getByRole("button", { name: /^Dikkat ve Odaklanma Akademisi/ })
         .click();
       await page.getByRole("button", { name: /Farklı olanı bul/ }).click();
     } else {
-      await page.getByRole("button", { name: "Büyük Konser Görevi →" }).click();
+      await enterAcademies(page);await page.getByRole("button", { name: "Büyük Konser Görevi →" }).click();
       await page
         .getByRole("button", { name: "Konser hazırlığına başla →" })
         .click();
@@ -170,7 +171,7 @@ test("ön plan, bölümler ve ebeveyn raporu; arka plan sinyali ve ebeveyn süre
   await page
     .getByRole("button", { name: "eylunica ana sayfa" })
     .click();
-  await page
+  await enterAcademies(page);await page
     .getByRole("button", { name: /^Okuduğunu Anlama Akademisi/ })
     .click();
   await page.getByRole("button", { name: /Kısa metinler/ }).click();
@@ -178,7 +179,7 @@ test("ön plan, bölümler ve ebeveyn raporu; arka plan sinyali ve ebeveyn süre
   await page
     .getByRole("button", { name: "eylunica ana sayfa" })
     .click();
-  await page
+  await enterAcademies(page);await page
     .getByRole("button", { name: /^Dikkat ve Odaklanma Akademisi/ })
     .click();
   await page.getByRole("button", { name: /Farklı olanı bul/ }).click();

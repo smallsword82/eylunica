@@ -1,3 +1,4 @@
+import {enterAcademies} from "./local-test";
 import { test, expect, openSoundSettings } from "./local-test";
 
 test("Eylül başrolde; gerçek eğitmen fotoğrafları ve kısa müzikler videosuz, çevrimdışı çalışır", async ({ page, context }) => {
@@ -46,7 +47,7 @@ test("Eylül başrolde; gerçek eğitmen fotoğrafları ve kısa müzikler video
   await openSoundSettings(page);
   await page.getByRole("combobox", { name: "Ses modu" }).selectOption("silent");
   expect(await page.evaluate(() => (window as any).manifestPlayed.at(-1).paused)).toBe(true);
-  await page.getByRole("button", { name: "Manifest müzik odası →" }).click();
+  await enterAcademies(page);await page.getByRole("button", { name: "Manifest müzik odası →" }).click();
   await page.getByLabel("Ritim sorusunun yanıtı").fill("8");
   await page.getByRole("button", { name: "Birlikte kontrol edelim →" }).click();
   await expect(page.getByRole("status")).toContainText("Harika, Eylül!");

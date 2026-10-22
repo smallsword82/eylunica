@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import {DiscoveryCover,type DiscoveryScene} from "./DiscoveryCover";
 import { playCompletionEffect, completionSoundSeconds } from "../audio";
 import { narrateFeedback, stopNarration } from "../audio/narration";
 import type { UsageDomain } from "../time-engine";
@@ -229,6 +230,7 @@ export function ReadingAcademy({
                 key={s}
                 onClick={() => start(i + 1)}
               >
+                <DiscoveryCover scene={(['shortReading','paragraphReading','deepReading'] as DiscoveryScene[])[i]}/>
                 <span>
                   DÜZEY {i + 1}
                   {nextLevel === i + 1 ? " · SANA ÖNERİLEN" : ""}
@@ -337,6 +339,7 @@ export function AttentionAcademy({
                 key={k}
                 onClick={() => start(k)}
               >
+                <DiscoveryCover scene={({odd:'attention',pattern:'pattern',match:'memory',memory:'memory',instructions:'instructions',detail:'deepReading'} as Record<AttentionKind,DiscoveryScene>)[k]}/>
                 <span>0{i + 1} · eylunica İLE KEŞFET</span>
                 <h2>{attentionLabels[k]}</h2>
                 <p>
@@ -439,7 +442,7 @@ export function ConcertAcademy({
           />
         </>
       ) : (
-        <section className="concert-invitation">
+        <section className="concert-invitation"><DiscoveryCover scene="mixed"/>
           <div className="summary-star">✦</div>
           <h2>Bir hikâye, üç keşif.</h2>
           <p>

@@ -1,3 +1,4 @@
+import {enterAcademies} from "./local-test";
 import { test, expect, openMathWorld, openSoundSettings } from "./local-test";
 
 test("tüm soru alanlarında fon kapalıdır; cevap efektleri ve sessiz mod çevrimdışı çalışır", async ({ page, context }) => {
@@ -13,6 +14,7 @@ test("tüm soru alanlarında fon kapalıdır; cevap efektleri ve sessiz mod çev
   await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await context.setOffline(true);
   for (const name of [/Zihin Atölyesi/, /^Okuduğunu Anlama Akademisi/, /^Dikkat ve Odaklanma Akademisi/, /Büyük Konser Görevi/, /eylunica Hız Arenası/]) {
+    await enterAcademies(page);
     if (name.source === "Zihin Atölyesi") await openMathWorld(page, name);
     else await page.getByRole("button", { name }).click();
     await openSoundSettings(page);

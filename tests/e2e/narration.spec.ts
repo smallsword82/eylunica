@@ -1,3 +1,4 @@
+import {enterAcademies} from "./local-test";
 import { test, expect, openMathWorld, type Page, openSoundSettings } from "./local-test";
 import { stories } from "../../src/reading-engine";
 import { narrationManifest } from "../../src/audio/narration-manifest";
@@ -18,6 +19,7 @@ const isPlaying = (page: Page) => page.evaluate(() => {
 });
 
 test("gömülü Türkçe hikâyeler çevrimdışı çalar; dinleme oturumu destek sayılır ve durdurulur", async ({ page, context }) => {
+  test.setTimeout(90000);
   await observeAudio(page);
   await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await openSoundSettings(page);
@@ -28,15 +30,18 @@ test("gömülü Türkçe hikâyeler çevrimdışı çalar; dinleme oturumu deste
   await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   // Decode every bundled recording while offline, including the longest stories.
   const durations = await page.evaluate(async entries => {
-    return Promise.all(entries.map(entry => new Promise<number>((resolve, reject) => {
-      const audio = new Audio(`./narration/${entry.file}`);
-      audio.onloadedmetadata = () => resolve(audio.duration);
-      audio.onerror = () => reject(new Error(entry.file));
-      audio.load();
-    })));
+    const durations:number[]=[];let next=0;
+    // The catalog now contains thousands of clips. Release each media decoder
+    // and bound concurrency instead of exceeding Chromium's player limit.
+    await Promise.all(Array.from({length:8},async()=>{while(next<entries.length){const index=next++,entry=entries[index];durations[index]=await new Promise<number>((resolve,reject)=>{
+      const audio=new Audio(`./narration/${entry.file}`);audio.preload='metadata';
+      const release=()=>{audio.onloadedmetadata=null;audio.onerror=null;audio.removeAttribute('src');audio.load();};
+      audio.onloadedmetadata=()=>{const duration=audio.duration;release();resolve(duration);};
+      audio.onerror=()=>{release();reject(new Error(entry.file));};audio.load();
+    });}}));return durations;
   }, Object.values(narrationManifest));
   Object.values(narrationManifest).forEach((entry, i) => expect(Math.abs(durations[i] - entry.duration)).toBeLessThan(0.2));
-  await page.getByRole("button", { name: /^Okuduğunu Anlama Akademisi/ }).click();
+  await enterAcademies(page);await page.getByRole("button", { name: /^Okuduğunu Anlama Akademisi/ }).click();
   await page.getByRole("button", { name: /Kısa metinler/ }).click();
   await page.getByRole("button", { name: "Hikâyeyi dinle", exact: true }).click();
   await expect.poll(() => isPlaying(page)).toBe(true);

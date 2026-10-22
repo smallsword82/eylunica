@@ -80,6 +80,9666 @@ export const narrationManifest: Record<string, {file: string; duration: number; 
     "duration": 6.339083,
     "sha256": "60ecc66fb8572ee53f5e394e1f407dad7eb6ba14665b464ea379527e13b16d16"
   },
+  "Şimdi alıştırma zamanı. Soruyu dinle ve görseli incele. Yanıta dokun veya ekrandaki sayı tuşlarını kullan. Sonra Yanıtımı kontrol et düğmesine dokun. Takılırsan ipucu alabilirsin.": {
+    "file": "tr-a71caaa8f5642f50.mp3",
+    "duration": 10.089083,
+    "sha256": "6687b9b872a533ca4583fa67676b72df338e2a0d5d35840ba85e810bd53aa049"
+  },
+  "Konu testinde yirmi yeni soru var. Görseli incele, yanıtını seç ve Yanıtımı kaydet düğmesine dokun. Otomatik olarak sonraki soruya geçeceksin. Çözümleri ve yüz üzerinden sonucunu test bitince göreceksin.": {
+    "file": "tr-438be2553f67ea36.mp3",
+    "duration": 10.78975,
+    "sha256": "e1937812d05e5afbc77be5b1af514aec596457e596c85f41e1350f2051c44069"
+  },
+  "Yazılı için çalışacağın üniteyi ve soru sayısını seç. Yazılıyı başlat düğmesine dokun. Her doğru eşit puan getirir. Yanlışlar ayrıca puan düşürmez. Sonunda yüz üzerinden notunu göreceksin.": {
+    "file": "tr-7eb2402042670ea8.mp3",
+    "duration": 10.716083,
+    "sha256": "696fc6af0f4b40973e06596016959e5cb99a3adfa2642530d51fd44f8b25bc9a"
+  },
+  "Yazılı başladı. Soruyu ve görseli incele. Yanıtını seçip Yanıtımı kaydet düğmesine dokun. Sonraki soruya doğrudan geçeceksin. İstersen Boş bırak düğmesini kullanabilirsin. Çözümler yazılı bitince açılacak.": {
+    "file": "tr-05147ec69e3e861f.mp3",
+    "duration": 11.69125,
+    "sha256": "3525a51712b7e2ed227d17f7b6039c8f2ed8a00b60bf38ad50e8203478399b87"
+  },
+  "Çalışman tamamlandı. Yüz üzerinden puanını ekranda görebilirsin. Görselli çözümleri incele düğmesine dokunarak her sorunun nasıl çözüldüğüne bakabilirsin.": {
+    "file": "tr-6639339c31140146.mp3",
+    "duration": 8.219875,
+    "sha256": "b8d87d895d50cc5aeaa103f9f08449971ed8d720dbad4681289ce31e7197c96c"
+  },
+  "A sıfırda kalsın. B noktasını dört santimetreye taşı.": {
+    "file": "tr-eed3286e35aa69c2.mp3",
+    "duration": 3.134917,
+    "sha256": "d2315866374d79f96414216907380284cbd8eded9ad4aeea0e44e6ef05beb318"
+  },
+  "Uzat düğmesi B noktasını bir santimetre sağa taşır. Dörde ulaş.": {
+    "file": "tr-75afc069c7a0e538.mp3",
+    "duration": 3.784875,
+    "sha256": "24dd0129f94a8452493481b210c15e1573398f7a785c413a33886cceed18dc93"
+  },
+  "İki uç arasındaki doğru parçası dört santimetre oldu.": {
+    "file": "tr-128b157f5b10af3c.mp3",
+    "duration": 3.204375,
+    "sha256": "e7fabdb7a8e5886a587b3e4e796191c577364455a24d41f125becb292719b5ae"
+  },
+  "Şimdi doğru parçasını üç santimetre yap.": {
+    "file": "tr-45f73a43118df4ca.mp3",
+    "duration": 2.171083,
+    "sha256": "e0cf88e8db0ad4285988d617c32b31e9b0ca5c450832b8827d34598f9c618971"
+  },
+  "B noktasını sola taşımak için Kısalt düğmesine dokun.": {
+    "file": "tr-b8b12216952d3eff.mp3",
+    "duration": 2.8125,
+    "sha256": "0d0a2a300a6de7288e350fdd0eeb171871c910e780e44e27ff1415d009159f5d"
+  },
+  "Sıfır ile üç arasındaki uzaklık üç santimetredir.": {
+    "file": "tr-6feb8a1c1c98a017.mp3",
+    "duration": 2.844458,
+    "sha256": "57f28edb58f599bb11894f6c51c62eb3843fa4fd2198716452e6d65e6b151749"
+  },
+  "Üçgene bir kenar ekle. Dört kenarlı kapalı bir şekil oluştur.": {
+    "file": "tr-84b009c590a849e9.mp3",
+    "duration": 3.331,
+    "sha256": "290cef4b6ab4719ee078ce0a986dda392bd60fb476701fa22644a43be47fc3d2"
+  },
+  "Kenar ekle düğmesine bir kez dokun. Kenarlar ve köşeler birlikte değişir.": {
+    "file": "tr-f5c9abbc391cbecc.mp3",
+    "duration": 4.284083,
+    "sha256": "a114a36939a9194c56b362082aec7fe4a9dcefb8e610b305fbeae75ffb7b0530"
+  },
+  "Dört düz kenarı ve dört köşesi olan kapalı şekil bir dörtgendir.": {
+    "file": "tr-bcb84272bbaca319.mp3",
+    "duration": 3.924208,
+    "sha256": "668d7246f382be911fe00c66a984c73c85e4d0857dc5b1ab2539bdc468ba0b9f"
+  },
+  "Şimdi altı kenarlı bir çokgen oluştur.": {
+    "file": "tr-ae3cf75477117bfe.mp3",
+    "duration": 2.147875,
+    "sha256": "eab8d869f24abb434e351e0bcc148361cf0675dc76f2fdb9fc0d997b6cf12b40"
+  },
+  "Kenar sayısını altıya getir. Şeklin kapalı kaldığına bak.": {
+    "file": "tr-0306fee65c54e908.mp3",
+    "duration": 3.320458,
+    "sha256": "b53a810858834baafa72ba4887d4f52da89ac1599b1f673f9c0f8853a0077a8c"
+  },
+  "Altıgenin altı düz kenarı ve altı köşesi vardır.": {
+    "file": "tr-2e9fe12cc330e4a0.mp3",
+    "duration": 3.041833,
+    "sha256": "c7f5d622432dc4859befdcc8adbeeffe6ede544829971c9da796471bae725b3e"
+  },
+  "Bölükler sağdan üçerli ayrılır. Binler bölüğünü seç.": {
+    "file": "tr-c5bce402d13c8251.mp3",
+    "duration": 3.169958,
+    "sha256": "0d27f4aae200fceb492ba22cd3f21f59311249de571199e99476ac1f2dd70fe1"
+  },
+  "Birler en sağda. Sola ilerle düğmesiyle binlere ulaş.": {
+    "file": "tr-70ec90fb23a2aece.mp3",
+    "duration": 3.343708,
+    "sha256": "0130b8b4eb8978ec346a85472fab724de21e8402b371f13e87bf5269c2ea5749"
+  },
+  "Yüz yirmi üç bölüğü binleri gösterir: yüz yirmi üç bin.": {
+    "file": "tr-5f4b8d5f97d413c6.mp3",
+    "duration": 2.960542,
+    "sha256": "67d01517ddcc7e87819df374a63fc5953817f717ee0ca238cf2dfdb7daa0e872"
+  },
+  "Bu kez milyonlar bölüğünü sen seç.": {
+    "file": "tr-eb221c60dedbeb36.mp3",
+    "duration": 1.938875,
+    "sha256": "cd0f64b15f7d7644fad9addc53f999702b9149f563f31e941c1918e326ac0020"
+  },
+  "En soldaki dört, milyonlar bölüğündedir.": {
+    "file": "tr-b212855203797025.mp3",
+    "duration": 2.385125,
+    "sha256": "fc10170bedd7c77e52f325c121690b70c66179268fa6a214a75ecf092d647f19"
+  },
+  "Milyonlar bölüğünde dört var. Değeri dört milyondur.": {
+    "file": "tr-66529ffd303f9562.mp3",
+    "duration": 3.216,
+    "sha256": "54a1a22c03b67b3f41af0ce83898c58c4366a19bcdadc65bc5f98ae3c417dc2a"
+  },
+  "Yüzler basamağını bulalım. Sola ilerleyerek beş rakamını seç.": {
+    "file": "tr-059e9ca866fb9369.mp3",
+    "duration": 3.377417,
+    "sha256": "ed14f636baf64f5845390647603f198a6bd5f64c0b56e3701bfd1c1147bd44be"
+  },
+  "Birlerden başla. Sola iki kez dokun: onlar, sonra yüzler.": {
+    "file": "tr-e3b9d8ded309bbce.mp3",
+    "duration": 3.993833,
+    "sha256": "0af91da894f4c49256ee6f55fe726a7b234e38c303aff6879d57227e2627eab2"
+  },
+  "Beş yüzler basamağında. Beş yüzlük, beş yüz eder.": {
+    "file": "tr-bce080c107c60db9.mp3",
+    "duration": 3.123083,
+    "sha256": "089f7bd52ef86c4fdc3e754f2701b8141ff6b891cae895461d00e764ad6f17bf"
+  },
+  "Şimdi binler basamağındaki dört rakamını sen seç.": {
+    "file": "tr-f8c32fe7b7e6ba3d.mp3",
+    "duration": 2.572167,
+    "sha256": "44a33844216bed93def07df5dbfc684a4dc7a7ac26e1a5df94eae78aebec3ffb"
+  },
+  "Sola doğru ilerle. Dört rakamı binler basamağında.": {
+    "file": "tr-51a2020cd53ba62f.mp3",
+    "duration": 2.983792,
+    "sha256": "57970a1914f1b64f0f8c1bec6b840c2ffd46563be5eeab342f341d1dba42d7b6"
+  },
+  "Dört binlik, dört bin eder. Rakamın yeri değerini değiştirdi.": {
+    "file": "tr-0972b4f388f8ce98.mp3",
+    "duration": 3.564292,
+    "sha256": "40f1ff8046a8ac2ca00fcd467ba24003cbc7f1fa11ab1bd2f87a2343f2d682f5"
+  },
+  "Her kutuda üç kalem var. Kutu ekleyerek toplamı on iki kalem yap.": {
+    "file": "tr-c2568176e2c8601d.mp3",
+    "duration": 3.924208,
+    "sha256": "5c4429d60769e5efbc4ad2991c4b07dcce12e075a2913c2376441a7f81c48c4f"
+  },
+  "Dört kutunun her birinde üç kalem olursa on iki kalem olur.": {
+    "file": "tr-fdd0c3268a133010.mp3",
+    "duration": 3.355292,
+    "sha256": "e825d96903e5bea48f443be3d7e3da46a017b690828b7f30ca4722146a007346"
+  },
+  "Dört eş grup, her grupta üç kalem: dört çarpı üç, on iki.": {
+    "file": "tr-bf46ebcf590cc6fc.mp3",
+    "duration": 3.897542,
+    "sha256": "c775d3fbd0f725df58a8cd3a7fe5e1b8e0938e011fbcdafd444925fd34e0227c"
+  },
+  "Her kutuda dört kalem var. Toplam yirmi kalem olacak şekilde kutu sayısını ayarla.": {
+    "file": "tr-86a499d5213a9a9b.mp3",
+    "duration": 4.435042,
+    "sha256": "69ee1a899400f7f3f81beea891278439f6c1306ae0c48bac8f8408995c80897c"
+  },
+  "Kaç tane dörtlü grup yirmi eder? Kutuları ekleyerek dene.": {
+    "file": "tr-4b2b22637a21eddf.mp3",
+    "duration": 3.193958,
+    "sha256": "6d38ed9d2871c4c6bbf234064f2183e185ad78ac0a7668a27fc51533300f0b32"
+  },
+  "Beş kutuda dörder kalem, toplam yirmi kalem eder.": {
+    "file": "tr-d93d28bf0044eecb.mp3",
+    "duration": 2.627542,
+    "sha256": "f90d18edb84c9deda1de220f7719015efb76b85ec57f520402bba37a9d54d3fd"
+  },
+  "Bahçenin bir kenarı üç birim. Diğerini dört yap; on iki birim kareyi gör.": {
+    "file": "tr-a9b62ec35f51ef97.mp3",
+    "duration": 4.017083,
+    "sha256": "714675ccac273a815092c924872cc02e323e304ed68b2522811929424b38a7aa"
+  },
+  "Uzat düğmesiyle yatay kenarı dörde getir. Kareleri satır satır say.": {
+    "file": "tr-9df4d3aa6b7dc2ee.mp3",
+    "duration": 3.947417,
+    "sha256": "b43fd62e2748350ea4efc6eb8851a1800ea775cac21b8fc9dc4c2fc3409e39ac"
+  },
+  "Üç satırda dörder kare var. Alan on iki birim karedir.": {
+    "file": "tr-2b10ed2068401a30.mp3",
+    "duration": 3.018625,
+    "sha256": "bfea7bc5b5df7acb01dde6ad9c8dbe1989b1ae68a54608d5da3e9b126b50a0b7"
+  },
+  "Diğer kenar yine üç birim. Alanı on beş birim kare yap.": {
+    "file": "tr-7d0a6e4e9ac73367.mp3",
+    "duration": 3.123083,
+    "sha256": "ad3a9c97e1c54f16891f1bdcd697ac8381cb5cfcf70b60a7436a4625f0878e92"
+  },
+  "Üç satırın her birinde kaç kare olmalı? Kenarı beşe getir.": {
+    "file": "tr-32cf5596e1c96e5b.mp3",
+    "duration": 3.541042,
+    "sha256": "fd76109ae292fa33a18f9f586752fc0bfa3b2700af6a7ca4fe696e7b48110992"
+  },
+  "Beş çarpı üç, on beş. Alan iç bölgedeki birim kareleri sayar.": {
+    "file": "tr-1f8757127f07a2ff.mp3",
+    "duration": 3.831292,
+    "sha256": "cd7b7282fd5c6e0157e261f6140d89a976bfd794608e88b6eca3f8fe8de6b6c1"
+  },
+  "Bütün dört eş parçaya ayrıldı. Üç parçasını boya.": {
+    "file": "tr-e09a3984be12ae44.mp3",
+    "duration": 2.833958,
+    "sha256": "80a4b7d656d4a8dc30f8f9bdee1b243f75071cddba4b96c4d5fc5af217fbbcb0"
+  },
+  "Parça boya düğmesine dokun. Pay üç, payda dört olsun.": {
+    "file": "tr-0e6ec0bae2a18ea5.mp3",
+    "duration": 3.436583,
+    "sha256": "3056b9b3d7e9e0cb4d3f574992b05013e3ab7523931b8c4cf578d2efed5d60e7"
+  },
+  "Dört eş parçanın üçü boyalı. Kesrimiz dörtte üç.": {
+    "file": "tr-abf6258db938f2af.mp3",
+    "duration": 3.030208,
+    "sha256": "a8a7cceb07e23365e3e4b0da6ee42c62331c62dba890070ccce64dd788fea9e0"
+  },
+  "Şimdi aynı bütünün dörtte ikisini boyalı bırak.": {
+    "file": "tr-d56bf470e503bac5.mp3",
+    "duration": 2.50775,
+    "sha256": "25692114995afc8357a0ce27fd96d590973de09617bcb324f19bfec79b2a0b90"
+  },
+  "Boyalı parçaları ikiye indir. Eş parça sayısı dört kalır.": {
+    "file": "tr-4a214cdf46e38b48.mp3",
+    "duration": 3.476417,
+    "sha256": "4a8deb1990347f0f91a9d7b8e00e94b8f20c5b96be3817fdc140c338c1936076"
+  },
+  "Dörtte iki, iki eş parçanın boyalı olduğunu gösterir. Bu, bütünün yarısıdır.": {
+    "file": "tr-3aec65ac1e6d43fc.mp3",
+    "duration": 4.56275,
+    "sha256": "13cce5711ac38248536cd733a72520c30be815c09b068a72d75b89c0d1413af2"
+  },
+  "İki bütün eş büyüklükte. İkinciyi de dörtte üç yaparak paylaşımları eşitle.": {
+    "file": "tr-c5fd1d8484623635.mp3",
+    "duration": 4.273958,
+    "sha256": "6d71f3e2736123189c1ef6a1f9625c2fab7e850bf5cf7cde1c33442cc6b82895"
+  },
+  "Alttaki boyalı parçaları üçe getir. İki pay da üç olsun.": {
+    "file": "tr-a84f43f1fd538e0c.mp3",
+    "duration": 3.285625,
+    "sha256": "9c44ef06c8c26158d657915607d49bc8c239887c8c5932733fd3f89e35ff9116"
+  },
+  "Aynı büyüklükte bütünlerde dörtte üç ile dörtte üç eşittir.": {
+    "file": "tr-3036643a1fc038c6.mp3",
+    "duration": 3.367292,
+    "sha256": "e179f64bab073483b1c545ae5963db409654e38dba4798fa3d0c73d3a8ac7815"
+  },
+  "Şimdi alt kesri dörtte iki yap. Üstteki dörtte üç daha büyük kalsın.": {
+    "file": "tr-37bdd84a227b5ad5.mp3",
+    "duration": 3.854542,
+    "sha256": "e6f1b763545b9a20322bb10b6618d445ad57f2252126bcf87916da9e44878f38"
+  },
+  "Alttaki payı ikiye getir. Paydalar eşitken payları karşılaştır.": {
+    "file": "tr-c11e064ab93c7d3b.mp3",
+    "duration": 3.889958,
+    "sha256": "24df9d192e5ea42a458c9684b75c0c41ba52b72b4efa53b7e56637d5a5ea2a0a"
+  },
+  "Dörtte üç, dörtte ikiden büyüktür; çünkü eş parçalardan daha fazlası boyalıdır.": {
+    "file": "tr-9cd9a48385a707aa.mp3",
+    "duration": 4.553208,
+    "sha256": "a75316fddd0cbacb2910fe6b55fc9fd62702c7ae46d752bad19a269bfa6a1609"
+  },
+  "Sınıfın meyve oylarını incele. Armut oyunu beşe getir.": {
+    "file": "tr-789f86a17e2e3347.mp3",
+    "duration": 3.262417,
+    "sha256": "8e25f07344a81a0377541f67f7aaf647fe9aacbb897c968c0ab1bdb6f0222152"
+  },
+  "Armuta oy ekle. Mor sütun her yeni oyda bir kişi yükselir.": {
+    "file": "tr-4799356a591f66e9.mp3",
+    "duration": 3.275375,
+    "sha256": "7d7ed1c162f98626382485185f9c9db13971f000f90f0b061e3a3a8640148754"
+  },
+  "Armut sütunu beş kişiyi gösteriyor. Sütun yüksekliği sıklığı verir.": {
+    "file": "tr-c65b8d416cb43ef0.mp3",
+    "duration": 3.692,
+    "sha256": "00997aeebb5322f082bef7f3fcf8280804082a639d37ab6a396fec95cb810124"
+  },
+  "Bir oy yanlış yazılmış. Armutun oyunu dörde düzelt.": {
+    "file": "tr-aaaad0b383f8bdba.mp3",
+    "duration": 2.92575,
+    "sha256": "90572e0d6deb06b9e54879586f4d0fb0dff1b77f05117bc5720b33f6f340da32"
+  },
+  "Armut sütununu dört kişiye getir. Elma ile yükseklikleri eşit olsun.": {
+    "file": "tr-2d3f79ff70cbd52e.mp3",
+    "duration": 3.947417,
+    "sha256": "dd5eff38c8b57c4a8e7cbce74afb16e9e2afa5bae0f0cacba8f246e31811dec0"
+  },
+  "Elma ve armut dörder oy aldı. Eşit sütunlar eşit sıklığı gösterir.": {
+    "file": "tr-e5b708c044909c6e.mp3",
+    "duration": 3.927333,
+    "sha256": "13b56fbb555039bdf7fb4259430fedcda6008191a26e779fea1a5aea8f8b604d"
+  },
+  "Kitap tercihleri grafiğinde öykü oylarını altıya getir. Öykü en çok seçilen olsun.": {
+    "file": "tr-899a958a16127a5d.mp3",
+    "duration": 4.494333,
+    "sha256": "91c3249a02bd175618a11ceb476dd3c1d678cab981105952fc09c44829e3ac1d"
+  },
+  "Öyküye oy ekle. Diğer sütunların üç ve dört olduğuna bak.": {
+    "file": "tr-c40b103e3243ee85.mp3",
+    "duration": 3.506208,
+    "sha256": "0e986473b50b9f9abc3e60f85bfa14f2af0cbc1078a6db762fb868593c263d19"
+  },
+  "Altı oy, üçten ve dörtten fazladır. Öykü en çok seçilendir; herkes seçti diyemeyiz.": {
+    "file": "tr-42e6b3315621bddd.mp3",
+    "duration": 5.545958,
+    "sha256": "2b491b8bd56b134de4bbfe63a0594258ba1a99a4a831566cd9109f73861d7454"
+  },
+  "Öykü ve masal eşit seçilmiş olsun. Öykü oylarını dörde getir.": {
+    "file": "tr-15cdf835b12320f6.mp3",
+    "duration": 3.5875,
+    "sha256": "0c1bb71b83cc6b21c2d4b75f28d56cae348762f510eb77d66a7797d4968fa5c4"
+  },
+  "Masal dört oy aldı. Öykü sütununu onunla aynı yüksekliğe getir.": {
+    "file": "tr-466c5476feb605ba.mp3",
+    "duration": 3.483,
+    "sha256": "7aa63f27ca52c2fdda524ca118a8011a98e177c193888e4bd8fe888069f5e00b"
+  },
+  "İki tür dörder oy aldı. Bu grafikten herkesin aynı türü seçtiği sonucu çıkmaz.": {
+    "file": "tr-e4df4a2f6d37156f.mp3",
+    "duration": 4.620792,
+    "sha256": "ca2423d0a4f0a20bb0afe4c4bc6de287c0a3a640eb6423a59895ea6ae11e19f9"
+  },
+  "İki tarafta da altı var. Her iki tarafa ikişer ekle.": {
+    "file": "tr-6c078be70b7276c1.mp3",
+    "duration": 3.448167,
+    "sha256": "8f666741085dd270d5c5afebd308bf6fbd97a152d83f5c6cc089c68fed25d656"
+  },
+  "İkisine ekle düğmesi iki tarafı da birer artırır. Eklenen miktarı ikiye getir.": {
+    "file": "tr-86ff63d13d5baf1d.mp3",
+    "duration": 4.214417,
+    "sha256": "65fe9f4ce110dd8e3d7321dd70cce4ca7706717d410b57a5032ce5bc041d6a25"
+  },
+  "Altıya iki ekledik: iki taraf da sekiz oldu. Eşitlik korundu.": {
+    "file": "tr-be94db536bdf1ca5.mp3",
+    "duration": 3.477042,
+    "sha256": "f08b0578dc2b056d83af7488085973a4e3da8d1c427be05b098f2ed9b34c1407"
+  },
+  "İki tarafa da toplam dört eklenmiş olsun. Dengeyi koru.": {
+    "file": "tr-c79204a29e30114f.mp3",
+    "duration": 3.076667,
+    "sha256": "e03699e094343face49cc6ff40d77f054c1c3ba64dc7b57ded54a740c4130510"
+  },
+  "Eklenen miktarı dörde getir. Aynı işlemi iki tarafta yapıyoruz.": {
+    "file": "tr-b86c9ef95b45dc6b.mp3",
+    "duration": 3.483,
+    "sha256": "a6fb52477870f4f9faa312424a93cf2e1d51f5359add2f84d01b91940fb11d86"
+  },
+  "Altıya dört ekledik. Her iki taraf da on; terazi hâlâ dengede.": {
+    "file": "tr-2a63db15568f582b.mp3",
+    "duration": 3.645542,
+    "sha256": "4a0d6bb49dd60c499f3c75ef6d4606330c43861a7f387d65f1b3bff50e468b33"
+  },
+  "Üç satırlık karelere bak. Altın renkli bölümü iki sütuna getir.": {
+    "file": "tr-be14f9b82ecc7463.mp3",
+    "duration": 3.599125,
+    "sha256": "06e5c6b4617f5e7bf066e5821ca91560162efd47bd5c7612104b2ed2ead52932"
+  },
+  "Altın sütun ekle. Üç çarpı dört ile üç çarpı ikiyi ayrı ayrı say.": {
+    "file": "tr-363820c4dd7623c1.mp3",
+    "duration": 4.342167,
+    "sha256": "d48f947a45c570a8d941bd055f2c916abf10de36e85dffbe83f36d1c4f35a760"
+  },
+  "Üç çarpı altı, üç çarpı dört artı üç çarpı ikiyle aynıdır. Toplam on sekiz.": {
+    "file": "tr-5f60c4b1ec39b107.mp3",
+    "duration": 4.887833,
+    "sha256": "2fde8bdd56d066df9c42133f904ac87b6e086254853d0696cefd77311e8d8e52"
+  },
+  "Bu kez altın bölümü üç sütun yap. İki bölgenin toplamını incele.": {
+    "file": "tr-65691335dff9f6c1.mp3",
+    "duration": 3.5875,
+    "sha256": "15966db637f9887713944888937ab5061c918da1cc7bbccfebe77c4c6d768a23"
+  },
+  "Altın bölge üç sütun olunca dokuz kare içerir. Mavi bölgede on iki kare var.": {
+    "file": "tr-5b69fa0b748ad547.mp3",
+    "duration": 4.678833,
+    "sha256": "7adc913e9328bd61b8587cad9f82db67954c5218adaec692c3f26eb5d9d4765d"
+  },
+  "On iki artı dokuz, yirmi bir eder. Üç çarpı yedi de yirmi birdir.": {
+    "file": "tr-69bb9a3689dd3305.mp3",
+    "duration": 3.866125,
+    "sha256": "d3cbeef5855e8bedddf5cc402447e6f14d10963ef2b53f2bf0cc718bb511a4d3"
+  },
+  "İki artı üç çarpı dörtte önce çarpma yapılır. Gösterimde çarpma sonucuna ilerle.": {
+    "file": "tr-bf8640aae0ccaee8.mp3",
+    "duration": 4.690458,
+    "sha256": "ccf0d1bb08ab5aa2f80a12eb692ff22494a6284641f1441af36055061d7cb662"
+  },
+  "Sonraki adım düğmesine bir kez dokun. Üç çarpı dört, on iki olur.": {
+    "file": "tr-463f56e45dcab4ec.mp3",
+    "duration": 3.913958,
+    "sha256": "a6a3131e47a475ebd0691fefb8460ec18a5123dd784294f4630c40a2bd913438"
+  },
+  "Toplama bekledi; önce çarpma yapıldı. Şimdi iki artı on iki kaldı.": {
+    "file": "tr-f53c4dff19aa63ea.mp3",
+    "duration": 3.808083,
+    "sha256": "2efae471fe1080ecec943b8b41c6712b10e2124400ec1d83a3cfe27a2c7960a8"
+  },
+  "Beş artı iki çarpı üç işlemini doğru sırayla sonuca ulaştır.": {
+    "file": "tr-67c2956631035bb2.mp3",
+    "duration": 3.448167,
+    "sha256": "d91e23ce5c1ca6215615790183119c9a549eda6c1aa17fa88109802f6ce005ff"
+  },
+  "Önce iki çarpı üç, altı. Sonra beş artı altı. İki adımı da ilerlet.": {
+    "file": "tr-ca8ff55739750311.mp3",
+    "duration": 4.633958,
+    "sha256": "1438fb03c85fc77281e6f2b0e46cc6ee209c6c7e789ebbfdee36980f7c62360e"
+  },
+  "Önce çarpma, sonra toplama yaptın. Sonuç on bir.": {
+    "file": "tr-01a1e0327e17b641.mp3",
+    "duration": 3.239208,
+    "sha256": "39fe7d2bdd1699357a0eb0d9070a246dd8684f67fd3e40d37a378d161d88d6fe"
+  },
+  "Örüntü ikiden başlıyor. Artışı üç yap: iki, beş, sekiz.": {
+    "file": "tr-34a5b3adb7f735f8.mp3",
+    "duration": 3.999083,
+    "sha256": "4219fb09d23322d742999abf9f6a46897be4c22795e52a9aedde6cbdce09a101"
+  },
+  "Artışı artır düğmesiyle her adımda eklenen miktarı üçe getir.": {
+    "file": "tr-c4d681a3fc966a6b.mp3",
+    "duration": 3.448167,
+    "sha256": "f99fb5f204263a828a9a14f0a515369c743f825ac81aee2fa04e37d759092705"
+  },
+  "İkiden başlayıp üçer ekledik. İki, beş, sekiz, on bir, on dört.": {
+    "file": "tr-86f28479d62a74be.mp3",
+    "duration": 4.679667,
+    "sha256": "8c788efe44a0c0fc72d25f0843261fca2c4a6d2b0c1a19c7c8c627dfdc67d43f"
+  },
+  "Bu kez dörtten başlayan örüntüyü ikişer artır.": {
+    "file": "tr-2748005666bcb9e2.mp3",
+    "duration": 2.565833,
+    "sha256": "3eaf10586333f1468188246fd2be4c91a64e3ba61f3bf98d35cf7cfb8f035522"
+  },
+  "Artış miktarı iki olmalı. Dört, altı, sekiz diye kontrol et.": {
+    "file": "tr-3b2c4e30fc20d33b.mp3",
+    "duration": 3.808083,
+    "sha256": "85829d98d1fe08c5a24e5de4680722618ea08a81fdb0e921e385d2a05236d8af"
+  },
+  "Dört, altı, sekiz, on, on iki. Her terimde iki ekledin.": {
+    "file": "tr-9f4c316e84d205d9.mp3",
+    "duration": 4.21725,
+    "sha256": "f6f0ff0dd2d314383d6e187dbdc246cfa5ecb151b7c3127e77b5f93641bedd7e"
+  },
+  "Robot dörtten başlıyor. Önce üç ekleme adımını uygula.": {
+    "file": "tr-c9584c3864eae0bf.mp3",
+    "duration": 3.366917,
+    "sha256": "34a075b155eb164411e977a3a52d50a2e555259732d7851f4c46a9926ec50d56"
+  },
+  "İlerle düğmesine bir kez dokun. İlk işlem dört artı üçtür.": {
+    "file": "tr-96662fd05e264931.mp3",
+    "duration": 3.750042,
+    "sha256": "bc029c95a136e1f060e7ef5148fc41cca6e8345b7688e84279f57a8968b73551"
+  },
+  "İlk adımın sonucu yedi. Sonraki işlem bu yedi üzerinde yapılır.": {
+    "file": "tr-4b6b4b62982dd51c.mp3",
+    "duration": 3.517833,
+    "sha256": "2f398937e57c5ff16e1b6ab04831703a30a3454524b0edfd51d6181ef145aa26"
+  },
+  "Robot bu kez altıdan başlıyor. Önce iki ekle, sonra ikiyle çarp. İki adımı da tamamla.": {
+    "file": "tr-f933b9209f4d169b.mp3",
+    "duration": 5.51475,
+    "sha256": "bffa319737eb19de2b269408d0bf978a904123f1fd72ca505dbe52399810f526"
+  },
+  "İlerle düğmesiyle sırayı takip et: önce altı artı iki, sonra sekiz çarpı iki.": {
+    "file": "tr-df05b1fb16a146de.mp3",
+    "duration": 5.090042,
+    "sha256": "ab6bd7af4c02a77cfb3d9baef26b3c4f04d8ab3be394015d55a800098f7999b4"
+  },
+  "Sırayı korudun. Altı artı iki, sekiz; sekiz çarpı iki, on altı.": {
+    "file": "tr-270611653e773251.mp3",
+    "duration": 4.114,
+    "sha256": "eda60b6e14e6055bfe5e3dff06072e45985c48876cc4c87ba874f7fa84b301e3"
+  },
+  "Kuralımız: sayı çiftse ikiye böl, tekse bir ekle. Girdiyi sekiz yap; izlenen yolu gör.": {
+    "file": "tr-3669d6774e66011a.mp3",
+    "duration": 5.453292,
+    "sha256": "d9e0c49d0cd31409ea903f825604047745c2562a39c1c2481d2966b1c7803299"
+  },
+  "Girdiyi artırarak sekize getir. Sekiz çift olduğu için Evet yolu seçilir.": {
+    "file": "tr-92818fef784806e9.mp3",
+    "duration": 4.129958,
+    "sha256": "33c07fae4b28e3749d19aeba126d39158894a69bdd4d030ea9d76950a55027a7"
+  },
+  "Sekiz çift. İkiye bölününce çıktı dört olur. Yalnız Evet yolu izlendi.": {
+    "file": "tr-0758ca152edcf8c7.mp3",
+    "duration": 4.307333,
+    "sha256": "ca65f11ff79a19fe0a9124b77f6d8885f4222c3d3022cde8198e4d421a29572e"
+  },
+  "Şimdi girdiyi dokuz yap. Bu kez hangi yolun seçildiğini incele.": {
+    "file": "tr-d5698fc44901329c.mp3",
+    "duration": 3.610708,
+    "sha256": "ad140be3515f5a260c8351d7f5ee24540a7a2cc40ea6617c0ed68963978c5981"
+  },
+  "Dokuz tek. Girdiyi dokuza getirince Hayır yolu seçilir.": {
+    "file": "tr-8674f6b060b3891b.mp3",
+    "duration": 3.262417,
+    "sha256": "925721b8aebf3f5d84bb158d116084d12223ccc72ff3c6c1174a8d84917c2916"
+  },
+  "Dokuz tek olduğundan bir ekledik. Çıktı on oldu. Koşul seçilen yolu değiştirdi.": {
+    "file": "tr-35b19b531fc616c3.mp3",
+    "duration": 4.423417,
+    "sha256": "c72d6047451a1d5010a0a0bb062bc4687c12ee1b75a9a238252beb35b6a3e9dc"
+  },
+  "Torbada dört sarı taş var. Morları da dört yap; renklerin şansını eşitle.": {
+    "file": "tr-bcc7e8c4e7fcbda8.mp3",
+    "duration": 4.330542,
+    "sha256": "66837413bf463e62af48d3c8838f7509dd6174ba4ecf04ca5508b7b0b4b375d7"
+  },
+  "Mor taş ekle. Her renkten dört taş olduğunda sayılar eşittir.": {
+    "file": "tr-0e0ae57919cb2c71.mp3",
+    "duration": 3.575875,
+    "sha256": "e35132810f20caaea362749b523b73cb9a8b19ed0ada3dd93e155327ed26bb54"
+  },
+  "Taşların özellikleri aynıysa ve iyi karıştırılmışsa renkler eşit olasıdır.": {
+    "file": "tr-38b408f4a934a28f.mp3",
+    "duration": 3.959,
+    "sha256": "e307f2a9065006188aadb72e42b901e2a1dd1c0e930b5493ee75596274ceab28"
+  },
+  "Şimdi mor taşları ikiye indir. Sarı çekmek daha olası olsun.": {
+    "file": "tr-6a1de5bdd2ce6132.mp3",
+    "duration": 3.483,
+    "sha256": "f0ee027105672fe6253b68d4f432d221688fe005635d1bb10fd9a482975a6c38"
+  },
+  "Mor taş çıkar düğmesiyle sayıyı ikiye getir. Sarılar dört kalıyor.": {
+    "file": "tr-83f7b6f5fc09bf45.mp3",
+    "duration": 3.866125,
+    "sha256": "2c2fdc8bdbf4250553dd7635e50b45e34e096fd5f0d5f37d0d79fdde4abe7b8a"
+  },
+  "Dört sarı, iki mor var. Sarı daha olasıdır; ama kesin sarı çıkar diyemeyiz.": {
+    "file": "tr-f43a9b2ea65ae66b.mp3",
+    "duration": 4.321958,
+    "sha256": "db264b3142aa2e5b53c8303dae9ddf1bac468c7c96804efad4409ed4ea65e653"
+  },
+  "Renklerin olasılıklarını karşılaştıralım. Morları altı yap; mor daha olası olsun.": {
+    "file": "tr-6de084e1b3487c96.mp3",
+    "duration": 4.098333,
+    "sha256": "513e6cd19a635295ad36c2e0ae707b756d65c065b60309eea3ea504188363435"
+  },
+  "Sarılar dört tane. Morları altıya çıkar; altı dörtten büyüktür.": {
+    "file": "tr-8229fce692131bc0.mp3",
+    "duration": 3.633958,
+    "sha256": "a5cdfdaa540508af7e2eb69d88b99e7fc2de917482654dab81fb4863c868776a"
+  },
+  "Altı mor, dört sarı var. Mor daha olası; bu, tek çekilişin sonucunu garanti etmez.": {
+    "file": "tr-f0049dc3a3044af2.mp3",
+    "duration": 5.015542,
+    "sha256": "23baee423cbb9f1dd4ebeba75fea4493ac12f0344f763cf2490ddaf43c86d91f"
+  },
+  "Şimdi iki rengin seçilme şansını eşitle. Mor taş sayısını kendin bul.": {
+    "file": "tr-9f44c37207d1a077.mp3",
+    "duration": 3.889958,
+    "sha256": "2fc458ec7504f65143f772ed79d76f3b43e8326f0c9fd90f6f4953de3a06be33"
+  },
+  "Sarılar dört tane. Eşit şans için mor taş sayısı da dört olmalı.": {
+    "file": "tr-a600b0f173c2289f.mp3",
+    "duration": 3.692,
+    "sha256": "09b92fb7e70bb6b3454266076d5fe01e88ccd2361525a3fad981198a264ed46f"
+  },
+  "Her renkten dört taş var. Özellikleri aynı ve iyi karışmışsa renkler eşit olasıdır.": {
+    "file": "tr-6f68230231cb7b00.mp3",
+    "duration": 4.574375,
+    "sha256": "a4beea75672b2845983983249b691ead859df0a78d0eb7631ced42f8791abc93"
+  },
+  "Nokta yalnız bir konumu gösterir.": {
+    "file": "tr-cd6da6787f574124.mp3",
+    "duration": 1.958708,
+    "sha256": "5ae5b1987ea27961eae88459d0943fd5849d76413c2dc44dfcf47dee71d9542f"
+  },
+  "Doğru iki yönde sınırsız uzanır.": {
+    "file": "tr-7a72de36e0359a52.mp3",
+    "duration": 1.973708,
+    "sha256": "99c10516e7325f356885f7d6e17c2ef9ec7dabbfa368d09e9386990c83f1b4fa"
+  },
+  "Doğru parçasının iki ucu vardır.": {
+    "file": "tr-3c8559cceeccfaa9.mp3",
+    "duration": 1.892458,
+    "sha256": "292aad00c73134867b68d53521e97f1942c7cf1940eec8696ffc26a4334e3ac8"
+  },
+  "Işının bir başlangıcı, bir uzanma yönü vardır.": {
+    "file": "tr-0470d8a099b5d35d.mp3",
+    "duration": 2.774792,
+    "sha256": "8d1d9635e8c5f4c917b5e7277cf2e8ca49978bfc76466072b6f12584fc7d0d0c"
+  },
+  "Örnek: A cetvelin 0 çizgisinde.": {
+    "file": "tr-eb103f10b352f037.mp3",
+    "duration": 2.194292,
+    "sha256": "08b506f1dad815bfc5710f762d67578f07ca389628257c7c534c5b1bf5a679fa"
+  },
+  "B, 6 cm çizgisinde olsun.": {
+    "file": "tr-a2205f6f91321a39.mp3",
+    "duration": 2.263958,
+    "sha256": "fd20ad810e7aad6e2427f47ca6b6578b58876bd7e58f3b813292f05de592388c"
+  },
+  "İki noktayı düz kenarla birleştir.": {
+    "file": "tr-084d21714d0717ca.mp3",
+    "duration": 1.919167,
+    "sha256": "eabc7747470eae6ee7e0165c057fee77e8e8a197f2a413c924c20aa2315d27e3"
+  },
+  "AB uzunluğu 6 − 0 = 6 cm.": {
+    "file": "tr-693ac223b602b42a.mp3",
+    "duration": 3.181167,
+    "sha256": "4b048733ab9b5d7a32921f82e6ff3469011deae1568d6733978ab5d1140b637f"
+  },
+  "Örnek: pergelin açıklığı 4 cm.": {
+    "file": "tr-cee9fc629f7a1657.mp3",
+    "duration": 2.739958,
+    "sha256": "5d34975877ff68522be8825471cf87ab1321ae1bfbf48deb2f87cfec7b8dbe9d"
+  },
+  "Bir uç merkezde sabit kalır.": {
+    "file": "tr-84d384c51fab6a9b.mp3",
+    "duration": 1.892458,
+    "sha256": "071e2efb2520f155714b29e9eaf8de5647f82b05080c57d354c5b5068c8fa50e"
+  },
+  "Öteki uç aynı açıklıkla döner.": {
+    "file": "tr-de9b7bb6cda44ddd.mp3",
+    "duration": 1.892458,
+    "sha256": "b9579cad8aa01e29305d997591edd3adfd8f8b378300cf6441d2d0e14fc7b3f2"
+  },
+  "Çemberdeki her nokta merkezden 4 cm uzakta.": {
+    "file": "tr-8f66a4b3c21d7e6b.mp3",
+    "duration": 3.181167,
+    "sha256": "eb6ffecec59d39c370d93896b5eb35d1a8943702c231c2dc7d095cc43c8f67f5"
+  },
+  "Soldaki doğrular paralel.": {
+    "file": "tr-9c8a9d9ac48a7348.mp3",
+    "duration": 1.497708,
+    "sha256": "374d480f69e81da7d859b2e6830a996dcd702974f68986d81944cd903e0624fe"
+  },
+  "Ne kadar uzatılsa da kesişmezler.": {
+    "file": "tr-1af22b1c2fbdcf06.mp3",
+    "duration": 1.880833,
+    "sha256": "cb9eb7dfa874465a83d54c0d06256bcb6cf8195c845cd31c487e929e3ccc03a1"
+  },
+  "Sağdaki doğrular dik kesişir.": {
+    "file": "tr-f1b500844d21fe68.mp3",
+    "duration": 1.764625,
+    "sha256": "caa6d66c066b9a43cdd205789c55cf3ecdb137be4f7067684c366c12744ff4dc"
+  },
+  "Dik kesişmede köşe açısı 90° olur.": {
+    "file": "tr-cf3e11153f1efd49.mp3",
+    "duration": 2.589042,
+    "sha256": "ebe8eeff590d13024cc275aba50a4b05cfa92a66762f2014f958653e7bd68c91"
+  },
+  "Cetvelin 0 çizgisini bul.": {
+    "file": "tr-0c70c9b867cd802a.mp3",
+    "duration": 1.66025,
+    "sha256": "682f658c882f30c619fc0eeff9ea3ea80998100659a904c0a5e0ad27dee07c47"
+  },
+  "A noktasını 0’a yerleştir.": {
+    "file": "tr-e27c35b8985b635e.mp3",
+    "duration": 1.912125,
+    "sha256": "826dcf3061bfb390e824c327cd1c7eb5e6a6159c4d450d345e3c78dafa37ead0"
+  },
+  "Ölçüm A’dan başlayacak.": {
+    "file": "tr-a609e0aeb7395773.mp3",
+    "duration": 1.45125,
+    "sha256": "4b4c6df444757186a72b4daa9b62e636945da6ee494914fd6162c9fae0ad62f8"
+  },
+  "A başlangıç noktasıdır.": {
+    "file": "tr-fd09f8a2c08034df.mp3",
+    "duration": 1.4195,
+    "sha256": "c2c7374dea0257b76ac317846896384cf42e8cc10016b26169e2993335ab07a6"
+  },
+  "Cetvelin aynı kenarını izle.": {
+    "file": "tr-698c5bc88b6896b9.mp3",
+    "duration": 1.7415,
+    "sha256": "969b871eed96dde72b807597e1513a9b1bf2641c7fbb2d9bd6f00588985f9476"
+  },
+  "6 cm işaretini bul.": {
+    "file": "tr-5d56e7ee74ffde29.mp3",
+    "duration": 1.799542,
+    "sha256": "6febad9409c83e4970b0b890e8ca2c03e50aee947dc8352addc210c113f88117"
+  },
+  "Bu hizaya B noktasını koy.": {
+    "file": "tr-5323834da458e8f3.mp3",
+    "duration": 1.625417,
+    "sha256": "044f93c6af6f1952e298046e0ad7e1150b69e036567a926dc2606323200ebe20"
+  },
+  "A ve B aynı doğru üzerinde.": {
+    "file": "tr-b0604d218e67b80e.mp3",
+    "duration": 1.811167,
+    "sha256": "7c64dbe53d002b1e4481ad88d841fc3506d8378fb7799997a1782a00f7dbc6b4"
+  },
+  "A ve B’yi düz çizgiyle birleştir.": {
+    "file": "tr-c4ae93b628b8a167.mp3",
+    "duration": 1.943292,
+    "sha256": "2e20536a743018e002c021f8874b7a8697d1f1907c31c1c7bbcbebd2029baa96"
+  },
+  "İki uç arasını ölç.": {
+    "file": "tr-c1a4aa7583d33aa0.mp3",
+    "duration": 1.462875,
+    "sha256": "68d98c6347007859c46a47b55d5bdab5099ddff27191c17a8016c7ac8926b2d2"
+  },
+  "6 − 0 = 6 cm.": {
+    "file": "tr-3c1298c98ae534cb.mp3",
+    "duration": 2.34525,
+    "sha256": "c1dfb941f9b63ad5e0f13e688caca5035f7cf6fbce646b811be9c17b17651c0f"
+  },
+  "AB doğru parçası 6 cm.": {
+    "file": "tr-9c71c6fd30771e00.mp3",
+    "duration": 2.101417,
+    "sha256": "c552dfe89950f6982f2df1f00714aab1ac0f1d251ba3d2f1250b868c8bfeeee2"
+  },
+  "Örnek: 45° dar açı.": {
+    "file": "tr-c49484698001b488.mp3",
+    "duration": 1.985333,
+    "sha256": "bec1c640e7467ee3f0a05afbd3139d7ab98d7b30ec09f3147c2bc8cada8368ac"
+  },
+  "90° dik açı.": {
+    "file": "tr-5d475d41bc2a5834.mp3",
+    "duration": 1.404833,
+    "sha256": "6d8eb2d22c1f9a740357d18f381ed0c9d24cbba59162606e44d7517918361e5d"
+  },
+  "120° geniş açı.": {
+    "file": "tr-4916c1901a76c600.mp3",
+    "duration": 1.718292,
+    "sha256": "039509d468652a4fb7162f46b46fc7221cfd89d837be25f6f48949fd6b8388c3"
+  },
+  "Açı, iki ışın arasındaki açıklıktır.": {
+    "file": "tr-8c712cf76581adc0.mp3",
+    "duration": 2.022458,
+    "sha256": "f58264cdcd3b0036943fe683fa578ae4404a84a8c5473fe878dbac03a11fed6f"
+  },
+  "Bir çeyrek dönüş: 90°.": {
+    "file": "tr-c37350b11e6e12c9.mp3",
+    "duration": 2.263958,
+    "sha256": "8f869614616cdda8e536eb39426bbf9a9b6edb182184e25f891ef3b8777a0755"
+  },
+  "Yarım dönüş: 180°.": {
+    "file": "tr-b9a677241098c193.mp3",
+    "duration": 2.113958,
+    "sha256": "271e8d544463489a2c2626320b8d10d5c2b926831846cc34ac041dc0c293f046"
+  },
+  "Üç çeyrek dönüş: 270°.": {
+    "file": "tr-348a61dd243194a7.mp3",
+    "duration": 2.286417,
+    "sha256": "1da304f9d440331505138a24bf1850627ec9cdd937f0db74f1d09ec9c6d63205"
+  },
+  "Tam dönüş: 360°.": {
+    "file": "tr-c4595b8eff127d5f.mp3",
+    "duration": 2.09975,
+    "sha256": "2f48d3cf1e9877b01e91203fe689097e3fe674ec651140f103be4b439bfcdf70"
+  },
+  "Merkez ile köşe aynı noktada olmalı.": {
+    "file": "tr-4e8961d0e5d93879.mp3",
+    "duration": 2.078208,
+    "sha256": "6fc4b54bd610eb897366992ca1bec9822bfed8eaa16596df1ebd7eb114808126"
+  },
+  "Başlangıç ışını 0° ile hizalanır.": {
+    "file": "tr-d8cbdf29e619ede3.mp3",
+    "duration": 2.305958,
+    "sha256": "921715200d442830ce15f93761ddc59b3b01a6ecb1c940e33c0b661121495de4"
+  },
+  "Öteki taraftaki 0’ı karıştırma.": {
+    "file": "tr-c3bf522d0c632637.mp3",
+    "duration": 1.927292,
+    "sha256": "8aea4f6baee366f9a7c5c0c7eaf0ccbf14c66a916b524aa7215583707f0da4bc"
+  },
+  "Derece, iki ışının açıklığını ölçer.": {
+    "file": "tr-b38e16c133e87021.mp3",
+    "duration": 2.069208,
+    "sha256": "1c43f3c37e27cf26c3a72305aedc5e05dabaaf93e88b35b1ecda817a5b3cabef"
+  },
+  "Örnek: kesişen iki doğru.": {
+    "file": "tr-e75fb41997f9afd0.mp3",
+    "duration": 1.7415,
+    "sha256": "395d1a43bce7e8f59d2832e4a29857034ddf12c4cb7465de7b2780467018e0aa"
+  },
+  "Karşılıklı iki açı 65° ve 65°.": {
+    "file": "tr-c2f9c926b87dbab1.mp3",
+    "duration": 3.320458,
+    "sha256": "4bcfbf15bbd68983d50f414894ef39393945271d31ff95faa53613de4d7fc7e6"
+  },
+  "Komşu açı: 180 − 65 = 115°.": {
+    "file": "tr-84ba629e399ff610.mp3",
+    "duration": 3.445083,
+    "sha256": "3737fa2799e5c68811aeb8fb02a04c4e40b28224d7766e88f40373a31bad2dc5"
+  },
+  "65° + 115° = 180° ile kontrol et.": {
+    "file": "tr-3575110c3e9965e8.mp3",
+    "duration": 4.376958,
+    "sha256": "4acb98ede93d63b451a2462158a209b1c09b4cea9cfcb82fb771bdbb70eb2a40"
+  },
+  "Bir doğru, yarım dönüş oluşturur.": {
+    "file": "tr-fe7e13de425ac219.mp3",
+    "duration": 2.101417,
+    "sha256": "e8aeeceb1b9fa05228a234ad8a669eac963d157eed91ec7bccf028e7d1e5f977"
+  },
+  "Doğru açı 180° olur.": {
+    "file": "tr-92a72d5c1a54c0f2.mp3",
+    "duration": 1.892458,
+    "sha256": "7a049943a325e8a97b34facb1ae5d316e853999ededb48edd396edf0bb00b5fe"
+  },
+  "Üstteki iki parça bu 180°’yi paylaşır.": {
+    "file": "tr-42f79c3266cc56a0.mp3",
+    "duration": 2.983792,
+    "sha256": "9ed16af177476fd00f5ab5c426f937e477824c9ca38af794ca7595dc99bcbd4d"
+  },
+  "Toplam değişmez: 180°.": {
+    "file": "tr-d351d9f6b9b11096.mp3",
+    "duration": 2.322,
+    "sha256": "025feaa4237f996d9b91e38978dd948bce5302bd0cfd3ac52d3851649fa6f26e"
+  },
+  "Bir parça 65°.": {
+    "file": "tr-f4ead74ef24393bd.mp3",
+    "duration": 1.602208,
+    "sha256": "5ea2a989c6fa7dce2e2837a82466883f2e05db62e2c788c6895836d563718750"
+  },
+  "Diğer parçaya ? diyelim.": {
+    "file": "tr-dd2b2f7e784860f7.mp3",
+    "duration": 1.567375,
+    "sha256": "4be3a20d5e50e9f3207bd47c5e6c5475094a86f563225d6a697bd79cf4b79bc8"
+  },
+  "65° + ? = 180°.": {
+    "file": "tr-2edff40d03aa1349.mp3",
+    "duration": 3.193958,
+    "sha256": "5935344ff25d7a78ecae10977c2353e91c6d02189f874282068de037b2e4a9ad"
+  },
+  "İki parçayı birlikte düşün.": {
+    "file": "tr-c608ae8709dc63c9.mp3",
+    "duration": 1.567375,
+    "sha256": "4e29763eaea465717cadabd38217d449f349988d3173be00588a8e6a92e5961f"
+  },
+  "Toplam 180°’den 65°’yi çıkar.": {
+    "file": "tr-42ae9ed5027b6965.mp3",
+    "duration": 3.007,
+    "sha256": "830f3f92ff56f0dff08a74c5ffad2877d62b0bee932131398c20a0e6ff5dafb4"
+  },
+  "180 − 65 = 115°.": {
+    "file": "tr-5f37c5a1309984bb.mp3",
+    "duration": 2.948958,
+    "sha256": "64e4d08d0f993258dc60116b24c60184b0db28d13cdcc3cbd16b5ed4f7c2f0cd"
+  },
+  "Bilinmeyen açı 115°.": {
+    "file": "tr-6d3389ce4c4915a0.mp3",
+    "duration": 1.915667,
+    "sha256": "c6030b5aff7ca55ea7a9cc5599ebd6f713a7c82d69d0e295d9a51c77e87af3ff"
+  },
+  "Kontrol: 65 + 115 = 180.": {
+    "file": "tr-c107f6272a9f33b8.mp3",
+    "duration": 3.157917,
+    "sha256": "de9a8e71eb750c7ecdcc3de176cb7d7bdb6f44bd1074d99c11925861c3099862"
+  },
+  "Üçgen: 3 düz kenar, 3 köşe.": {
+    "file": "tr-8be7aa225d4a7448.mp3",
+    "duration": 2.229125,
+    "sha256": "851606ef925062db464ac37471858e02e86cbbfa20bd8974c8d2588b0260d33e"
+  },
+  "Dörtgen: 4 düz kenar, 4 köşe.": {
+    "file": "tr-68a31436fc4d1e6b.mp3",
+    "duration": 2.497958,
+    "sha256": "c1dad8f870f59bd9dfde317fdbc5f7dafdbdb6da18d8226805926aeced466388"
+  },
+  "Beşgen: 5 düz kenar, 5 köşe.": {
+    "file": "tr-9a11e9b944c0e6f8.mp3",
+    "duration": 2.4265,
+    "sha256": "9b2cbf23667431804e055e4778a9ddc15eeef701e439efcd43915010cb34e124"
+  },
+  "Kenarlar uç uca birleşir; sınır kapalıdır.": {
+    "file": "tr-6ca824c046c8a15a.mp3",
+    "duration": 2.58175,
+    "sha256": "03976cffac41bd4806c07701cbdcb6a529aaea8f214ec4b483e8be02fb2b475e"
+  },
+  "Çember eğridir; düz kenarı yoktur.": {
+    "file": "tr-817ac7b536efa0c7.mp3",
+    "duration": 2.147875,
+    "sha256": "c0a6e65ec75931c0afeb7e128224498cb4b07a7d660a9bc1cb00c98381c63d36"
+  },
+  "Açık kırık çizgi kapalı değildir.": {
+    "file": "tr-23a4e0647ce9f471.mp3",
+    "duration": 1.822792,
+    "sha256": "9324bb115121cadb40c66f3088f47da38de65a5ddaa04cfabe553575ccaa765e"
+  },
+  "Çokgenin sınırı kapalı ve düz kenarlıdır.": {
+    "file": "tr-0fb09da2daa3ba8e.mp3",
+    "duration": 2.449958,
+    "sha256": "b8558efac183ae22dd5da0ad7e0f34b619cc26dd183b34048dc6e5634c8fa4c0"
+  },
+  "Bu üç şekil aynı tür değildir.": {
+    "file": "tr-376e5bca3830800c.mp3",
+    "duration": 1.834375,
+    "sha256": "b7ac538977202f6c9f9d4bd164fcb7ba0f19781e20cf211f68a33c1381b98d8e"
+  },
+  "Örnek: OB yarıçapı 4 cm.": {
+    "file": "tr-d6afe4993ece70e3.mp3",
+    "duration": 2.333625,
+    "sha256": "4abf8d436c6713d3941228d54263e362c79ca55cea2dbebc142d6d5c8b519f6f"
+  },
+  "A–O–B doğrusu merkezden geçiyor.": {
+    "file": "tr-5f45286bdcee4df2.mp3",
+    "duration": 1.938875,
+    "sha256": "853bf335a04e9303d27ddf29a9a640a872256599b8d9d0f3ed811ef608934920"
+  },
+  "Çap iki yarıçaptan oluşur.": {
+    "file": "tr-72284f12e9b09d2b.mp3",
+    "duration": 1.441958,
+    "sha256": "4e6aa5b9e65cc02040a3647f4d09c0955771bda3dc27e2d29fd1724bd0aaef75"
+  },
+  "AB = 4 + 4 = 8 cm.": {
+    "file": "tr-8aedfcc5cc006af1.mp3",
+    "duration": 3.193958,
+    "sha256": "2dd01f0c55b875c595ca6a358793fd09e65c75c777cb2e8ed43916713b562747"
+  },
+  "A ve B merkezli çemberler aynı yarıçapta.": {
+    "file": "tr-88cd8e79cd17d8bc.mp3",
+    "duration": 2.368458,
+    "sha256": "ef6759d685e8449f24d60e0eef842a6a562348516e452d05b4603280b180a65d"
+  },
+  "C, iki çemberin ortak noktası.": {
+    "file": "tr-6707cf93aeea78c1.mp3",
+    "duration": 1.996917,
+    "sha256": "6043f1d8ad82ff21987191135ec06ac68eae83fb247fe064493e53e2778a4983"
+  },
+  "AC ve BC eşit yarıçaplardır: ikizkenar.": {
+    "file": "tr-129705b0dd13f8b0.mp3",
+    "duration": 2.744667,
+    "sha256": "8547522f7eae55075982966f476475aea29a809c500df668f16984279f5f6734"
+  },
+  "AB de yarıçapa eşitse üç kenar eşit: eşkenar.": {
+    "file": "tr-77de00782ca80f95.mp3",
+    "duration": 2.995375,
+    "sha256": "865ca48e3366d04127642b887b3fde4d949f2d5bbe7025c83650d23d0074e9b6"
+  },
+  "A merkezli çemberi izle.": {
+    "file": "tr-a9cf6cb20e70b250.mp3",
+    "duration": 1.671833,
+    "sha256": "ed60f23b84fb11430bd14dac188a1452aacf0e6a2c9f74c45dc57d99a88fce1d"
+  },
+  "C bu çember üzerinde.": {
+    "file": "tr-ee2ff74d95a993ab.mp3",
+    "duration": 1.439667,
+    "sha256": "9c754e717248c2e35a3aed5a2340e8cf62af697c37dabbb91e3d31c1dfb40211"
+  },
+  "Merkez A’dan C’ye uzaklık bir yarıçap.": {
+    "file": "tr-f7da3455388418cf.mp3",
+    "duration": 2.043375,
+    "sha256": "fa0b917e349ba558cad7fe3d9d627f12d164225f735da9925368046f0df0e6ef"
+  },
+  "AC = 4 cm.": {
+    "file": "tr-91495422efe30ba5.mp3",
+    "duration": 1.9095,
+    "sha256": "704ee1e2c8ddb7a3dd29e498874d648112274771bd064a2f584f634b2326bba8"
+  },
+  "Şimdi B merkezli çemberi izle.": {
+    "file": "tr-db0acd031ac5236d.mp3",
+    "duration": 1.904042,
+    "sha256": "46e22d6ff93d0893c858fe1ac9d00f94767037e862ad202e982ba567c206f92a"
+  },
+  "C bu çember üzerinde de bulunuyor.": {
+    "file": "tr-9f85e57e32d599a3.mp3",
+    "duration": 1.834375,
+    "sha256": "c7534f24430aadd99804a1d0c0f28aa00d64ab15ea2950eae8a029b6adcf8d49"
+  },
+  "BC de bir yarıçap.": {
+    "file": "tr-c7bdf49ea9749fbf.mp3",
+    "duration": 1.288708,
+    "sha256": "b26f69a8b7fe492188a1c9daa0797a5994084129eec797414d343b262738265a"
+  },
+  "BC = 4 cm.": {
+    "file": "tr-92349e0bd974e573.mp3",
+    "duration": 1.787958,
+    "sha256": "4e1fb96040d94b27ba68250d85d660c2db9e6dce7177f5ca5e963ff6eba218d7"
+  },
+  "AC = 4 cm ve BC = 4 cm.": {
+    "file": "tr-9f5a184c44adb77b.mp3",
+    "duration": 3.61025,
+    "sha256": "5c20ea4b50d48b809a804acef319610889e45d81f4ecff635278345b265d5219"
+  },
+  "İki kenar eşit: ikizkenar üçgen.": {
+    "file": "tr-c956d98c9b2c380f.mp3",
+    "duration": 2.124625,
+    "sha256": "9b46fd03da786f60ef551463599c0b05fbd12763c0287557935797ed0c6fb9ee"
+  },
+  "AB uzunluğu verilmedi.": {
+    "file": "tr-f16b9c9909222eef.mp3",
+    "duration": 1.544125,
+    "sha256": "59d6ebebbf20a5f2838abd2b671e0808165c0e5540d07cda8b1c5c1a6bc4da75"
+  },
+  "Üç kenarın da eşit olduğunu söyleyemeyiz.": {
+    "file": "tr-40df52a4159a57ef.mp3",
+    "duration": 2.414875,
+    "sha256": "8cbb38c91a8ec5c3852aa382a368e857c7a2b846c1da9fde16ddf518edd0c485"
+  },
+  "Örnek sayıyı sağdan üçerli ayır.": {
+    "file": "tr-f802d2e80128b0f7.mp3",
+    "duration": 1.749333,
+    "sha256": "02618dd4b9423e576497d147fe92b8b947c2522425ebd0f91be584dcb121616f"
+  },
+  "Birler bölüğü en sağda.": {
+    "file": "tr-64517f53665fbacf.mp3",
+    "duration": 1.323542,
+    "sha256": "7ae74edf699a5e5dee24fa0c2eacf22e4a6cda1566c868ea559b0c1fca630967"
+  },
+  "Sonra binler ve milyonlar gelir.": {
+    "file": "tr-047a3fbf5a076f87.mp3",
+    "duration": 2.008542,
+    "sha256": "fe4bf1f634d4418da161db84df175d10a7adce1674352cc9feb9d9c07179be7d"
+  },
+  "Dördüncü bölük milyarlardır.": {
+    "file": "tr-2bae3b6ba3b7d0c3.mp3",
+    "duration": 1.777958,
+    "sha256": "bd921ff4fee8497a779ece6775c2d1352a362944fe491564a4d849f98e3bdfcf"
+  },
+  "Milyonlar: 12.": {
+    "file": "tr-72a24bf906b06ba1.mp3",
+    "duration": 1.335167,
+    "sha256": "3b6034f7e0d4dbe212b8fc39ca5be78d7f4866870139be88402e842826206922"
+  },
+  "Binler: 304.": {
+    "file": "tr-7895868caa3da991.mp3",
+    "duration": 1.486083,
+    "sha256": "d9436f9e386b7ed42c9acd6db16f37a65b630ff435b8a3e7d42823cf5b6a4d02"
+  },
+  "Birler: 005, yani 5.": {
+    "file": "tr-b5fe3350ee242e21.mp3",
+    "duration": 2.550417,
+    "sha256": "65d86c1c244aaa6c8fa83197b86aeaec83ece8d0941e4b8914e8c05aa98d0374"
+  },
+  "On iki milyon üç yüz dört bin beş.": {
+    "file": "tr-a792c6ea08239389.mp3",
+    "duration": 2.182708,
+    "sha256": "6ce0e589c432785ebd9082aeab64e536150af6f8a9037b487944a7dfa99a94fe"
+  },
+  "Sekiz milyon → 8.": {
+    "file": "tr-ab681afbd368925d.mp3",
+    "duration": 1.241,
+    "sha256": "eec0ab1c79d1e11b8619832739b3358218c067322f3d9633405a2eaffea0ff25"
+  },
+  "Yirmi üç bin → 023.": {
+    "file": "tr-66a427c6d5e39822.mp3",
+    "duration": 1.671833,
+    "sha256": "b2b4e14737b447e5586a35409227edc8c048ec71f12222aca277c83717932da3"
+  },
+  "Kırk → 040.": {
+    "file": "tr-073f78ad4a4bee34.mp3",
+    "duration": 1.161,
+    "sha256": "76bea93b2ff43a50b16a988a645b83c063aa629ed768dcca5f16441ec1f6715c"
+  },
+  "8 | 023 | 040 → 8 023 040.": {
+    "file": "tr-ac9d4f2312a77304.mp3",
+    "duration": 3.274042,
+    "sha256": "121a5d61c012d65d612db55d1eaeef735497ccc10bbd89c666171c882cb56ac4"
+  },
+  "Baştaki sıfırlar yeni basamak oluşturmaz.": {
+    "file": "tr-720cc949b789d817.mp3",
+    "duration": 2.279167,
+    "sha256": "543e5db690a71e11b66881d6e7b1d8497316657bee88625aa1a0d4a9bf66170e"
+  },
+  "İçteki sıfır, boş basamağı korur.": {
+    "file": "tr-d1c6925c76eaba5c.mp3",
+    "duration": 2.101667,
+    "sha256": "871eb17b9cd336a68b8910fe8ec185648e99bdf329f90c75d2de2b0ed903953b"
+  },
+  "Sondaki sıfır sayının değerini değiştirir.": {
+    "file": "tr-e586b999781af652.mp3",
+    "duration": 2.275583,
+    "sha256": "53f93755079f9263f42c19edf05f12acf2bd64b5dfb563b4c042da82201a45b4"
+  },
+  "Sıfırları gelişigüzel silme.": {
+    "file": "tr-0b0abf93b58c900f.mp3",
+    "duration": 1.66025,
+    "sha256": "c7381446894b02ecc9a2a8847b3f41f3b7d77e116d2909fc526022420ddd77dc"
+  },
+  "Üç yüz altı milyon deniyor.": {
+    "file": "tr-08926fc22b23476a.mp3",
+    "duration": 1.45125,
+    "sha256": "cb5e35244f618f87fd4109a5d9140bfd4f1f2ed88c46d76e6cc79b85ba64532c"
+  },
+  "Milyonlar bölüğü 306.": {
+    "file": "tr-d7edc4e184c3ebf8.mp3",
+    "duration": 1.834375,
+    "sha256": "d08c7e9c5a78e9dbe0592775f5b9797f42c7940c1a519ab6eb429fd5a9d4dc96"
+  },
+  "Soldaki bölüğe 306 yaz.": {
+    "file": "tr-e090dc44db6a964e.mp3",
+    "duration": 1.915667,
+    "sha256": "959b155373a02dc71070e5193a5dc4b4b697b61bad1f3905380fa4b7af2ce926"
+  },
+  "Henüz binler ve birleri atlama.": {
+    "file": "tr-7d8492bcace27a4f.mp3",
+    "duration": 1.857625,
+    "sha256": "b835f947f5a4f62fe4a48ecb0b48d64d9ad8fe9dec0f5829e48ff906af2bfaa3"
+  },
+  "Kırk iki bin deniyor.": {
+    "file": "tr-69abd65a004ef777.mp3",
+    "duration": 1.126167,
+    "sha256": "a268712a61535e911915714562ea4dc1d98846f699fc5a2be79356a0fe700f45"
+  },
+  "Binler bölüğü 42.": {
+    "file": "tr-ab26df9b0635abb8.mp3",
+    "duration": 1.335167,
+    "sha256": "0125c65c673c7bd0fcf370d799d26039e1197eda9fc5c0ef538954dd0f102692"
+  },
+  "Aradaki bölük üç haneli olmalı.": {
+    "file": "tr-3c844f429ac9ae9c.mp3",
+    "duration": 1.76475,
+    "sha256": "31b92ae05b0570da0472272899e7649e0d557bd35e0d2a4bd2f4d84bb28e5cc6"
+  },
+  "42 yerine 042 yaz.": {
+    "file": "tr-0e74fb1302d1c03d.mp3",
+    "duration": 1.851417,
+    "sha256": "e93e0941f64f85e9acf4e98e9764ac9dd59e422f696ef9cd7e3b4fdd7f7b66ba"
+  },
+  "Birler bölüğünde yedi var.": {
+    "file": "tr-5da1d28188007124.mp3",
+    "duration": 1.428042,
+    "sha256": "3cf5cf2514677df69ab0c77564168d537f7dd031b8adfe85e377988d9ed55d8e"
+  },
+  "Üç haneli bölük: 007.": {
+    "file": "tr-0fefebc6e25a1a70.mp3",
+    "duration": 2.101417,
+    "sha256": "525064f29f78e8c4981ad739d53b005d8af3cd944cffcd01aad90b83a1760ce3"
+  },
+  "Bölükleri sırasıyla birleştir.": {
+    "file": "tr-61e0866b73d29a61.mp3",
+    "duration": 1.678958,
+    "sha256": "e520bdcc4952580f1a9822b9ff17f8e32566918bbeebf3f987955e341cf547cf"
+  },
+  "306 042 007.": {
+    "file": "tr-30d0cb16dcc9a3c6.mp3",
+    "duration": 2.403292,
+    "sha256": "971695e652238c1706b38dfe9322ce84581c01609acc9f8a859dd7881fdd9053"
+  },
+  "Rakamın kendisi her yerde 4.": {
+    "file": "tr-9a5760b7fc271571.mp3",
+    "duration": 1.804958,
+    "sha256": "ebc18fbb607aab1189d2d6454eada5623a005047e3f6ed19263da6862ebdc925"
+  },
+  "40 içinde 4 onlar basamağında: 40.": {
+    "file": "tr-6ae2d4574fc8dfbb.mp3",
+    "duration": 2.202833,
+    "sha256": "7acdc733fad1d26d9ed078f57e1a071c150ddcb138c27d6c7f718c8e0f3fe66f"
+  },
+  "4 000 içinde 4 binler basamağında.": {
+    "file": "tr-16c1f3b8fe028be7.mp3",
+    "duration": 3.065042,
+    "sha256": "ed8230ea0945aff454b72344b7896ae8534ebd8db6de5a5bf390dd1cd14f9b13"
+  },
+  "Rakam aynı, basamak değeri farklı.": {
+    "file": "tr-3a0920ceb92c352c.mp3",
+    "duration": 2.205917,
+    "sha256": "73c523966416a29f0eafd705d751b34ea0a3c8aa1d0185cfe765be2f2711b7e0"
+  },
+  "Birler birimi 1.": {
+    "file": "tr-311ecd7536a41d0f.mp3",
+    "duration": 1.137792,
+    "sha256": "77873903bd2dd97713b0f39ae58b2e28eb2031bc3152dec073badec97425ccdf"
+  },
+  "Bir basamak solda birim 10 olur.": {
+    "file": "tr-be01709ec8b1b07c.mp3",
+    "duration": 1.777958,
+    "sha256": "a18d888a5f2427b5a064bb70762fa41c8a20a6d16cbe62bcf723b28a939a855d"
+  },
+  "Bir basamak daha solda birim 100.": {
+    "file": "tr-4af718a95e50ae53.mp3",
+    "duration": 1.985333,
+    "sha256": "a36db3bbe925cbbe661419e1f3d23c1f1167404c1577d4b496c36754d669e010"
+  },
+  "Sağa giderken birim onda bire iner.": {
+    "file": "tr-cf01ac3702490355.mp3",
+    "duration": 2.020167,
+    "sha256": "3a14cffaa9ce20258d15dcf85e6b72ec41482d642dad91f9bdcefb915ee76aec"
+  },
+  "Yüz binlerdeki 3: 300 000.": {
+    "file": "tr-0e59060e7b794fe9.mp3",
+    "duration": 2.738125,
+    "sha256": "96bbcbae4e0fed3ea2c181accd2381ed7bbb2eb587599caefee9ab73c0bfb2a3"
+  },
+  "Binlerdeki 5: 5 000.": {
+    "file": "tr-ced5523478b3ff34.mp3",
+    "duration": 2.350708,
+    "sha256": "dd5e17d10be24bb726f9371edb51bd91fd12b4412e1d7675f5dea202c54b4890"
+  },
+  "Onlardaki 4: 40; birlerdeki 2: 2.": {
+    "file": "tr-db59f42ef8a6d10a.mp3",
+    "duration": 3.030208,
+    "sha256": "4d172f19d0a97f099d984b5f8b21581e899505ec595e482988e2ad2b903500f7"
+  },
+  "300 000 + 5 000 + 40 + 2.": {
+    "file": "tr-98f499109494167f.mp3",
+    "duration": 4.237667,
+    "sha256": "1e65a85cf8462e7614a2339bffd4087da091bf01fe5b7f409915d238ca7c72ba"
+  },
+  "7 milyon → 7 000 000.": {
+    "file": "tr-dfefdb31bfcaa3d5.mp3",
+    "duration": 2.92575,
+    "sha256": "6cad3882b1b98ea1f6d7cc297bcc76e17d0994166cde79f35513bf32516c6d50"
+  },
+  "20 bin → 020 bölüğü.": {
+    "file": "tr-c83a515ae11435c0.mp3",
+    "duration": 1.4745,
+    "sha256": "48c52532c5a12fc0336408e9fe3791407d8db9148d9b0551876f846ded368c11"
+  },
+  "6 → 006 bölüğü.": {
+    "file": "tr-dbb79da2fb1174d0.mp3",
+    "duration": 1.578958,
+    "sha256": "6612e1b296847b7631cb52af3503c4eab198d7614f4acda239bd6f4c6a1ee9ff"
+  },
+  "7 020 006; boş basamakları koru.": {
+    "file": "tr-b647e8be12dcf55b.mp3",
+    "duration": 2.867667,
+    "sha256": "b589d1af1a794394bc18ef83d6b78b2e29e1de3269ba6c5923f8eb5a74a419cf"
+  },
+  "Sayımız 8 306 205.": {
+    "file": "tr-22310a3cd04eca61.mp3",
+    "duration": 2.196792,
+    "sha256": "a493412c02f8af2fc0e75f35633393903252228c24a2b6a4745f799046b02069"
+  },
+  "Sağdan üçerli ayır.": {
+    "file": "tr-834f2d6af8b7334f.mp3",
+    "duration": 1.335167,
+    "sha256": "954796f900bf4cbcce5b28195e79b00340cb12cdc11fda43b7effeb93a9f5981"
+  },
+  "8 | 306 | 205.": {
+    "file": "tr-c9d3683b8af97035.mp3",
+    "duration": 1.9505,
+    "sha256": "a6d170230618b3845eac66d8d2d498f0ee00e1a3c3eedbf2679895a4955ba5e9"
+  },
+  "İki rakamın yerini ayrı ayrı incele.": {
+    "file": "tr-b57877132459b9ab.mp3",
+    "duration": 2.078208,
+    "sha256": "835b4a127a383121553f0655a28cd925804658853584a8db2f707fba413a9f35"
+  },
+  "3 rakamını bul.": {
+    "file": "tr-39acad4d894db28f.mp3",
+    "duration": 1.1,
+    "sha256": "9bfda4aa5c9a0309b2628945cb9734bb2d698ccb48cf615a17b3798842827987"
+  },
+  "Sağdan altıncı: yüz binler.": {
+    "file": "tr-4353d1177700c5ed.mp3",
+    "duration": 1.834375,
+    "sha256": "77a2cc4fca38f2d40be69fd3cd5bdc361c655cfae383f789a0b5243d1f5792d7"
+  },
+  "Basamak birimi 100 000.": {
+    "file": "tr-4b4878d1604ab8dd.mp3",
+    "duration": 2.098833,
+    "sha256": "cdc5bd5efb89c2980e8ec35fde932273df44f5a4203476d58dc6a55aa7c40855"
+  },
+  "3 × 100 000 = 300 000.": {
+    "file": "tr-d35abaac82cef3c2.mp3",
+    "duration": 3.750042,
+    "sha256": "80af7967c2e2ddd4f1b61372b2787e99d3cd8005c11b3f23fd09bede9fa37c30"
+  },
+  "2 rakamını bul.": {
+    "file": "tr-484e77315c3b411a.mp3",
+    "duration": 1.1,
+    "sha256": "d22d3aed1684c565b841df8a095be7d85b89eb422d39c75a2e6ab596d3a9a43c"
+  },
+  "Sağdan üçüncü: yüzler.": {
+    "file": "tr-0e52a2d7e82bab07.mp3",
+    "duration": 1.637042,
+    "sha256": "8526985bf47f28753fa5618754a281250511edabde17e243bddc2caf23dbc0c2"
+  },
+  "Basamak birimi 100.": {
+    "file": "tr-9ee46383d953556e.mp3",
+    "duration": 1.311958,
+    "sha256": "9659a573c100f583dcf030b21bfbbc0fde85b5ff28c3d5f9e19344e60581041f"
+  },
+  "2 × 100 = 200.": {
+    "file": "tr-09b1f2ff8a861a64.mp3",
+    "duration": 1.799542,
+    "sha256": "62ef3f066979bd8a7ef2b71c686da7ab9b0e80b6f81791b7f288617d1a9ccd40"
+  },
+  "Örnek: büyük miktar 12, fark 5.": {
+    "file": "tr-79938cae80c1a552.mp3",
+    "duration": 2.336333,
+    "sha256": "3f24205bd9d58f33067d0ae0c6713a964d3b9bb3a7fe7eb1427a8a030a6a162c"
+  },
+  "Küçük miktarı arıyoruz.": {
+    "file": "tr-00a8c3d7eccafc8e.mp3",
+    "duration": 1.417958,
+    "sha256": "6a26f371b6971b7164aeba6482455452472dce062414803ff30a20ebe70934fd"
+  },
+  "“Fazla” sözüne bakıp hemen toplama.": {
+    "file": "tr-f464cf3b598d4876.mp3",
+    "duration": 1.880833,
+    "sha256": "5de6b1fc61cbe6ce62ccb5269815112c5fcb94d83b9212df3ef2096a5aa13d57"
+  },
+  "12 − 5 = 7 kalem.": {
+    "file": "tr-02ee8f5ce5a1b237.mp3",
+    "duration": 1.892458,
+    "sha256": "51a2dbe3f11716be783f19ade6795f697c6eb656beab915d21a86c194626cf84"
+  },
+  "Örnek plan: 8 kutu, her kutuda 24 kalem.": {
+    "file": "tr-1f980e238ec698f9.mp3",
+    "duration": 3.124875,
+    "sha256": "971729790f720afbf91169e32ea89ed8a82ce051f188446c90274188235755f8"
+  },
+  "Önce 8 × 24 = 192 kalem.": {
+    "file": "tr-808e2cfb41dab1c5.mp3",
+    "duration": 2.914125,
+    "sha256": "05a8edf7d386b162327ae7d4be68796f155b581d91680f70f097f7961b77d337"
+  },
+  "Sonra 57 kalemi çıkar.": {
+    "file": "tr-e57a9f2c18239a24.mp3",
+    "duration": 1.695083,
+    "sha256": "2c9db0309a8ec746e628b189258324d6b96a0a8b9c1566afa258f8538534a98d"
+  },
+  "Ara sonuçların birimini yaz.": {
+    "file": "tr-64bb2d2c66a03b88.mp3",
+    "duration": 1.520917,
+    "sha256": "6d529a4958c15716e0f9f6ba8bc1d7b23b2122362ead51a3e6f390a67b029b71"
+  },
+  "Bölmede tam grupları bul.": {
+    "file": "tr-bfe32cf3e6a68a82.mp3",
+    "duration": 1.590583,
+    "sha256": "460ec32471f0e774d25b4d97d4e51802a07199b5fcfd3334618ba6434a38f559"
+  },
+  "Artanı kalan olarak ayır.": {
+    "file": "tr-0bde663ca642aea5.mp3",
+    "duration": 1.358667,
+    "sha256": "469bf5f609313692461be043c529e1e040166b4654a184abd93b20587f02ec42"
+  },
+  "Bölen × bölüm + kalan ile denetle.": {
+    "file": "tr-833d572f5bc49a87.mp3",
+    "duration": 2.137958,
+    "sha256": "40a1b942fe77dec53d5916add04cbc06f5923fe3657d3852368f6b5af3e3d00d"
+  },
+  "Kalan, bölenden küçük olmalı.": {
+    "file": "tr-570e44ac0641e272.mp3",
+    "duration": 1.718292,
+    "sha256": "13625a16ac9ec1ce3013e3d809cac7ca9ba3049a62d41cd953b51786b26e33ec"
+  },
+  "73 kişi, araç başına en çok 20 kişi.": {
+    "file": "tr-e15ae86502784181.mp3",
+    "duration": 2.74875,
+    "sha256": "e8cf4bf946d442653c3b97deb24e839503fdd650454838816b1f2df80c712b57"
+  },
+  "Üç araç yalnız 60 kişiyi taşır.": {
+    "file": "tr-9fe93dd7fc9941e5.mp3",
+    "duration": 2.089958,
+    "sha256": "f4b24cd392b9f9a88c6876a9c3fa30834e1765a2fbde3d7b3ca2402f5ee81677"
+  },
+  "Kalan 13 kişiye bir araç daha gerekir.": {
+    "file": "tr-6ebba3412c9c52f4.mp3",
+    "duration": 2.287167,
+    "sha256": "1299a8a576f3d861a156e6a494963f0f0694b2be01b551a035900b083a4b9737"
+  },
+  "Toplam 4 araç; 3 araç yetmez.": {
+    "file": "tr-12842a5a415e7966.mp3",
+    "duration": 1.987875,
+    "sha256": "2f712afbe00920a5fabe04e7c1341ab58718a3739abf6fb2b182471e376df140"
+  },
+  "8 kutu var.": {
+    "file": "tr-7acd2a5b0ad7acc6.mp3",
+    "duration": 1.1,
+    "sha256": "0905dfd219f1cfc3400778688c23cad2a741c915cf77099380475a614f69825b"
+  },
+  "Her kutuda 24 kalem.": {
+    "file": "tr-29ad78857e3eb29c.mp3",
+    "duration": 1.578958,
+    "sha256": "f3cb903419d5f29330333803b232ed253d087cf2787d876a1250d592e5b10d74"
+  },
+  "8 × 24 işlemini yap.": {
+    "file": "tr-f041584820911404.mp3",
+    "duration": 1.892458,
+    "sha256": "cb9aaeb25cf4a7ee4890f41fb8e4a4264f3f43fb7ccfd7fe7576b9682af049a1"
+  },
+  "Başlangıçta 192 kalem.": {
+    "file": "tr-0019094ea7b2f379.mp3",
+    "duration": 1.811167,
+    "sha256": "7abddfaa57aeb8bf584ed9e06d1a85b6db65634255e673b0ad1237e790b5fdd7"
+  },
+  "Başlangıç 192 kalem.": {
+    "file": "tr-193e1a5e82d0efde.mp3",
+    "duration": 1.777958,
+    "sha256": "205f4781633a0c028b7a0d1fcd902e84ab3b3980ab3212ec8ded286bc7c5c914"
+  },
+  "57 kalem dağıtılıyor.": {
+    "file": "tr-8f12ae0826450e42.mp3",
+    "duration": 1.429,
+    "sha256": "a6b4d615dc478958660a03e678de5eff0d65bacb27924918b395cad7667de535"
+  },
+  "192 − 57 = 135.": {
+    "file": "tr-6c9231327c9accde.mp3",
+    "duration": 3.016125,
+    "sha256": "b469e9135d483646ab4527b25d863fe925919b91321c79140cead10fe21b2f04"
+  },
+  "135 kalem kalır.": {
+    "file": "tr-4a72c7ceef25d4ac.mp3",
+    "duration": 1.497708,
+    "sha256": "6728c92812dfc5ee2727e68a5c231e130b24e71dfc601a7fcf6f5ba466e99266"
+  },
+  "Sonucu başlangıçla denetle.": {
+    "file": "tr-b5bfa1a9478e2747.mp3",
+    "duration": 1.602208,
+    "sha256": "53fe4ec9b28d8ebd86d29220ee7c86770d66da0a3415a6757b8fe5c981bed78f"
+  },
+  "Kalan + dağıtılan = başlangıç.": {
+    "file": "tr-ee4ff50cf07e80c8.mp3",
+    "duration": 2.147875,
+    "sha256": "ffb628381f960f2dc9eac7dff38d8b52a52cc4d09dec456c6961a3f17ff5b6a5"
+  },
+  "135 + 57 = 192.": {
+    "file": "tr-158d2f0b71afed32.mp3",
+    "duration": 2.914125,
+    "sha256": "6769ea87fd8b368b3a910e5b3bf2865ed0548ecc91a9a759543ead97ffcfda8e"
+  },
+  "İşlemler ve birimler tutarlı.": {
+    "file": "tr-8f29d98f8a879617.mp3",
+    "duration": 1.648625,
+    "sha256": "af52e275647dc2373665030dd263924698ea601dca4fdacd48ec78729ac18c92"
+  },
+  "Örnek kenarlar: 9 cm ve 6 cm.": {
+    "file": "tr-1b453b59f44b62ae.mp3",
+    "duration": 3.126542,
+    "sha256": "44aba1192374656044ab57e26197bd3b57b148f20f9947d2e27ec697f9e0f28e"
+  },
+  "Karşılıklı kenarlar eşit.": {
+    "file": "tr-53d91ab8d65287d8.mp3",
+    "duration": 1.706667,
+    "sha256": "5798f58d9a76f76f87547a11877499f5302163f091bbb82d2a548f8eea79a827"
+  },
+  "Sınırı izle: 9 + 6 + 9 + 6.": {
+    "file": "tr-112d3a2ade14daf2.mp3",
+    "duration": 3.250792,
+    "sha256": "a038b49bb6e237ba582fe797b7b3bcfd9b3b6880086ae07d6c798a18f9fc837a"
+  },
+  "Çevre 30 cm; alanla karıştırma.": {
+    "file": "tr-67267b422bbfdc56.mp3",
+    "duration": 2.6355,
+    "sha256": "e092797be6aabc0fa019a4d0427ca06b6293b6a3115d8bfa331a6d65a94c1fde"
+  },
+  "Çevre iki aynı kenar toplamını içerir.": {
+    "file": "tr-644c62decf6d3bca.mp3",
+    "duration": 2.287167,
+    "sha256": "50c32ee0ce542a4cf89bae89ba492ab08e4410f18b3d9ef13233d6ef8aefbe70"
+  },
+  "Önce 2’ye böl.": {
+    "file": "tr-62a9929f7497f6b9.mp3",
+    "duration": 1.126167,
+    "sha256": "29eb703112e967c0d3311d77d7d7d4e356a6f186c27f39c63d9591ce07f52b28"
+  },
+  "Komşu iki kenar toplamından 9’u çıkar.": {
+    "file": "tr-554e1f7073f0df60.mp3",
+    "duration": 2.461333,
+    "sha256": "f6f56d0f4ce9355a6b99e5569736b907073d59692d923c437ff37d74b4e2790d"
+  },
+  "Diğer kenar 6 cm.": {
+    "file": "tr-d4dc35e52d2b67e2.mp3",
+    "duration": 1.869208,
+    "sha256": "0e9978926f1db950c36247cc4284b9f520547d7343d36f1290a389e1db573cab"
+  },
+  "9 sütun ve 6 satır.": {
+    "file": "tr-bf4d82c757167792.mp3",
+    "duration": 1.671833,
+    "sha256": "d0d61e93896785dd1866ba687cd3b88a87d0b599e3148ca2d49e809465bfc579"
+  },
+  "Birim kareleri gruplayarak say.": {
+    "file": "tr-b56d6a53279fb21b.mp3",
+    "duration": 1.822792,
+    "sha256": "bcbefaaded4492e61b0938a532c9d2c626e4a7e01014c5d61190098103a52f05"
+  },
+  "9 × 6 = 54 birimkare.": {
+    "file": "tr-63c90a19c114de95.mp3",
+    "duration": 2.403292,
+    "sha256": "2beca7525bddb5729b9942c854eafb7205d7899f04377820d6512e7f471db4b1"
+  },
+  "Kenar cm ise alan cm² olur.": {
+    "file": "tr-1945386775859a2b.mp3",
+    "duration": 2.6355,
+    "sha256": "b28e981b11d4f223d455270b6875ff6cbe96afd58a5bd0019cf4147bc218f480"
+  },
+  "1 × 24: alan 24, çevre 50.": {
+    "file": "tr-2cb69a2ecae7a42c.mp3",
+    "duration": 3.030208,
+    "sha256": "a24a4defb5d8a1f87e7276d4f5e0b59741a45e912dd40371d86069dc49736499"
+  },
+  "2 × 12: alan 24, çevre 28.": {
+    "file": "tr-bc7373a3830b6197.mp3",
+    "duration": 3.355292,
+    "sha256": "c088d4860ee6588012bab96d2d9955267c9b36dea7ba4d0ef85b9ef872fdbd27"
+  },
+  "3 × 8: alan 24, çevre 22.": {
+    "file": "tr-4ddac562238cfe11.mp3",
+    "duration": 3.0335,
+    "sha256": "3b7e5e1eedde35a27c59d65fbc176307cf205c95a6159694c439d37ae3e071e1"
+  },
+  "4 × 6: alan 24, çevre 20.": {
+    "file": "tr-f96f8f2c3ac17c56.mp3",
+    "duration": 2.914125,
+    "sha256": "a4fc517f22fae895e4a5315cbda31eb8a99b943e58ab0a6ed6c8d9a76545eb4b"
+  },
+  "Çevrenin yarısını al.": {
+    "file": "tr-420a5a844c6c4b3e.mp3",
+    "duration": 1.2655,
+    "sha256": "9ab6370d575a28dba2453e0b96769377979dcdafd3ed81197333ff87125d74f4"
+  },
+  "30 ÷ 2 = 15.": {
+    "file": "tr-27b8625b2052684e.mp3",
+    "duration": 1.846,
+    "sha256": "2089b69df7168c7912b44068970be6a0d4e017ac6646525270c8fa2152daeea8"
+  },
+  "İki komşu kenarın toplamı 15 cm.": {
+    "file": "tr-11ec85f6f5ff1d61.mp3",
+    "duration": 2.403292,
+    "sha256": "81b69b82faa00e777d79ff48337030909cf0e0f542db4738d39d89dfe98fa3b8"
+  },
+  "Bir kenar 9 cm olarak verildi.": {
+    "file": "tr-f5bba2a8ca35a797.mp3",
+    "duration": 2.287167,
+    "sha256": "8c18e0854de3a14c4e6caafa50b0cc5e7d1f356624b08e4498e68245b1081bf8"
+  },
+  "Komşu kenarların toplamı 15 cm.": {
+    "file": "tr-75ce55e807c39535.mp3",
+    "duration": 2.4265,
+    "sha256": "21f24b8fdc44c4ab69aed4e4d62601ea1d7997c5cf2e524222cb977fd429bd34"
+  },
+  "Bilinen kenar 9 cm.": {
+    "file": "tr-f162dec7305fea4a.mp3",
+    "duration": 1.892458,
+    "sha256": "c2dc4f24ad394ada6cf05f0c1a6da181c96c35042583363a92bba79e6302fb7f"
+  },
+  "15 − 9 = 6.": {
+    "file": "tr-f726550bbf62888d.mp3",
+    "duration": 1.822792,
+    "sha256": "72e268fd682e12fc11f64bb474af3976cd8d744b145f45e12ab32926675bd9c8"
+  },
+  "Alan için iki kenarı çarp.": {
+    "file": "tr-ea1ab916bf4b643b.mp3",
+    "duration": 1.462875,
+    "sha256": "8116ffb3c35c97a42f9d39013088ee39062c7416f937cd718c6bd655e62c05b1"
+  },
+  "9 × 6 = 54 cm².": {
+    "file": "tr-ce7b5115db9dac75.mp3",
+    "duration": 2.890917,
+    "sha256": "02796820b9fe681c69d033b04e2be758883e04812d3ee815c0500075d71765b0"
+  },
+  "Çevre kontrolü: 2 × (9 + 6).": {
+    "file": "tr-91adceeba4b4b397.mp3",
+    "duration": 2.670292,
+    "sha256": "a656ecf485c28ffb3c1c832b46d227aacea028587d53a4ef6abb62dff0f615d7"
+  },
+  "Çevre 30 cm; alan 54 cm².": {
+    "file": "tr-4be42aab8b4746a2.mp3",
+    "duration": 3.216,
+    "sha256": "773ef4836ae654e34ecc0619d4580cf70336846f7ac046bffed932e38df4e10c"
+  },
+  "Örnek bütün 4 eş parça.": {
+    "file": "tr-34021df66d5fda52.mp3",
+    "duration": 1.729958,
+    "sha256": "20d84695ad0f4625191bdac17f1c45adf5106ada3592f6fb8836f46dd7bbd53a"
+  },
+  "3 parça boyalı: pay 3.": {
+    "file": "tr-788e118911e80637.mp3",
+    "duration": 1.509333,
+    "sha256": "87601782cb24d5cf1ece5bfe697ffd89e73722ef12d5a52c74bee0e38623bc53"
+  },
+  "Bütün 4 eş parça: payda 4.": {
+    "file": "tr-78716e8026210a5e.mp3",
+    "duration": 2.066583,
+    "sha256": "a18fe73354e0d5a10b57257687ef17a042bf7034b8d9c5056f698850fd90385c"
+  },
+  "Eş olmayan parçalarda yalnız saymak yetmez.": {
+    "file": "tr-348657583c93e138.mp3",
+    "duration": 2.456458,
+    "sha256": "f281141ab5a5e3928be113610ac73cd9a863f3f3d87e2de7b8bfdab7eff5c0e8"
+  },
+  "0 ile 1 arası bir bütün.": {
+    "file": "tr-09b691a521a2f2de.mp3",
+    "duration": 1.637042,
+    "sha256": "a6d0849d8e44b8e0bad88bde5fb611791d0c06b33ce4ca06c952ba60e0d4f11e"
+  },
+  "Dört eş aralığa böl.": {
+    "file": "tr-ed520103c9215c64.mp3",
+    "duration": 1.358375,
+    "sha256": "e75757b5d227fc63d86bbbadd51c5a31e841c5c9ed3f0ac50b64fa137f59b4e0"
+  },
+  "Üç eş parçayı seç.": {
+    "file": "tr-64fb5a2eae58a47a.mp3",
+    "duration": 1.180375,
+    "sha256": "c9ff2b8394f7ee391d867522429823527dcf19e079ef505f4291f90f482a4f4a"
+  },
+  "3/4 aynı miktarı anlatır.": {
+    "file": "tr-e5349d22037f7482.mp3",
+    "duration": 1.565542,
+    "sha256": "201e2de5c576a8f1b6dd4cfeee2dc0b01d3dd4db7517b059f9fac02174370dce"
+  },
+  "1/2: bütünün yarısı.": {
+    "file": "tr-3538d1eac3d2486c.mp3",
+    "duration": 1.602208,
+    "sha256": "99295a961c482b9e2957740fb661ba3f652a375063e0dcc8aa511faac2bb8a59"
+  },
+  "Payı ve paydayı 2 ile çarp: 2/4.": {
+    "file": "tr-66ff389743b0260c.mp3",
+    "duration": 2.473958,
+    "sha256": "8477fb51c8760e3ab746d0c4f1297f1f13aa8f4d7662754d046e6717cf70a056"
+  },
+  "50/100 de aynı miktar.": {
+    "file": "tr-287831c4179713f7.mp3",
+    "duration": 1.590583,
+    "sha256": "8cb368bc6a5750b0ed8c1c163c51ee9c307266bd15ddeaa87c043faea7f35c17"
+  },
+  "Parça sayısı değişti, miktar değişmedi.": {
+    "file": "tr-ea9eb22063974d75.mp3",
+    "duration": 2.461333,
+    "sha256": "016d4afbaf3c85cbf9b0931487f2a8bbd257ad754af490ffda3f454d575d8397"
+  },
+  "7/10 → 0,7.": {
+    "file": "tr-432c0b1eef1e64eb.mp3",
+    "duration": 1.55575,
+    "sha256": "02421f8a633564e0efd311d1a2fe2e3a99c4eb727702a797357d7008176c04a0"
+  },
+  "Ondalık ve kesir aynı miktarı gösterir.": {
+    "file": "tr-1ec92d6fbf9c918f.mp3",
+    "duration": 2.098875,
+    "sha256": "b9addbaba94e21062d6c714eaa343382babf7fb50224541b289b7365369d350f"
+  },
+  "25/100 → 0,25.": {
+    "file": "tr-08d59a440dab78aa.mp3",
+    "duration": 1.9505,
+    "sha256": "858733a61669273196581b2a82228a372e95c07a6fe11e3d6544318884f91ca4"
+  },
+  "25/100 aynı zamanda %25.": {
+    "file": "tr-d30a54514087bdfb.mp3",
+    "duration": 2.681917,
+    "sha256": "5d84d490452ace2fee65692d7d5e895d3ada08ee88b2147ea25926e282a98444"
+  },
+  "Çikolata 8 eş parça.": {
+    "file": "tr-13aa3eb2fb0fdfc0.mp3",
+    "duration": 1.520917,
+    "sha256": "aec9aa5e9cd94bb5b7b156831f4a136530497de763e07d2abd43e11511a8cac3"
+  },
+  "6 parça yenmiş.": {
+    "file": "tr-7e9d51dd00f980cb.mp3",
+    "duration": 1.335167,
+    "sha256": "8617efedc1fd23d9a638f82cd80413cb63ac3753e2d7a9b6c1964a274f980efc"
+  },
+  "Yenilen miktar 6/8.": {
+    "file": "tr-e31faf4e3c99f855.mp3",
+    "duration": 1.48525,
+    "sha256": "b56218ab7d293f35d18ead1b133da859864efb9f39b2d08645c47cee9bc875e0"
+  },
+  "Bütün değişmeden payı ve paydayı incele.": {
+    "file": "tr-0078faf7068c0808.mp3",
+    "duration": 2.263958,
+    "sha256": "59d183f1f46a86ad88e0fa326a764678d57ffe0a47688f9c6dbb21de104a04bc"
+  },
+  "6/8 ile başla.": {
+    "file": "tr-fbfcc4d7dc246bde.mp3",
+    "duration": 1.300333,
+    "sha256": "7cb9a3f7b4beaeead70c49bcc52ceea955c84ac0d5c4d5c59f7b27fb6a96e934"
+  },
+  "Payı ve paydayı 2’ye böl.": {
+    "file": "tr-607cc20009af0f6d.mp3",
+    "duration": 1.532542,
+    "sha256": "e4602211bd63330beafcbf9024bc928cdb8f7f94b5b303c60443f909e03d2895"
+  },
+  "6 ÷ 2 = 3; 8 ÷ 2 = 4.": {
+    "file": "tr-469708276826c473.mp3",
+    "duration": 3.169958,
+    "sha256": "ac7affaa33d935fbc882afb4878bf9a06c086b6275f0a9ac6d389de5bbac6d4f"
+  },
+  "6/8 = 3/4.": {
+    "file": "tr-17641a2016644105.mp3",
+    "duration": 1.683458,
+    "sha256": "b6b0a7d7b84485f84baad42e9a95d1888392643b15c23fc61d431953fbb43ca3"
+  },
+  "3/4’ü yüz eş parçayla göster.": {
+    "file": "tr-497cf9cbff6aeee5.mp3",
+    "duration": 2.229125,
+    "sha256": "f1f2aa597eed0122d299785af8d62351fa4f5f215e92c74f117a5279dfb2b2cd"
+  },
+  "Payı ve paydayı 25 ile çarp.": {
+    "file": "tr-90427e39bfd733aa.mp3",
+    "duration": 2.043375,
+    "sha256": "fe16fa74ceab1592aac93f4f01cdcd2f0dbac8f3462c691b6388ffba623f559d"
+  },
+  "3/4 = 75/100.": {
+    "file": "tr-0c2e29ad2bde52c1.mp3",
+    "duration": 1.811167,
+    "sha256": "053951dbc7a104e0fad81e10ba01c56402619040871aee30420ed8b10f7bb0f3"
+  },
+  "Yenilen miktar %75.": {
+    "file": "tr-772a1bd1a96146d6.mp3",
+    "duration": 1.748583,
+    "sha256": "142aa633de77e9263ab383a6d278b5edcae1005a5027be871d95217bc544ae3f"
+  },
+  "Bütünler aynı büyüklükte.": {
+    "file": "tr-ba0653ce79f395ad.mp3",
+    "duration": 1.509333,
+    "sha256": "f92741a56756ba73aa85f9ac5986fda54f05bb14ec3d176ba728a4673aed4829"
+  },
+  "İki bütün de 8 eş parça.": {
+    "file": "tr-218522efb0dbb178.mp3",
+    "duration": 1.625417,
+    "sha256": "ff79c2f3e72e75154c3afbb51d349435691bb3cf3eeac70c14ba02ff38a6d700"
+  },
+  "5 boyalı parça, 3 parçadan fazla.": {
+    "file": "tr-315c68f975c1113e.mp3",
+    "duration": 2.310417,
+    "sha256": "c7baf4aea56dcf1e12c654535150113b0e21435a00bc8e37a10a052095084758"
+  },
+  "5/8 > 3/8.": {
+    "file": "tr-24615a9aec4c2b2f.mp3",
+    "duration": 1.2785,
+    "sha256": "adb2e6bdb4d4cfedb0719714bf22c046f377d58861dcf1508b09fd4b440389b9"
+  },
+  "İki bütünde de 2 parça boyalı.": {
+    "file": "tr-cd5001598e6035aa.mp3",
+    "duration": 1.822792,
+    "sha256": "2134bae2ecad7de8cfdb3b66051c2837b4fa056b553b15e7d2f22c27ca830776"
+  },
+  "Üçe bölünen bütünün parçaları daha büyük.": {
+    "file": "tr-033cfc9ffcdedcc8.mp3",
+    "duration": 2.095417,
+    "sha256": "1763fe9a4e9d66c5e044f761bcdae5f9f30fff31453de089e04c27f094e8158c"
+  },
+  "Yediye bölünendeki parçalara bak.": {
+    "file": "tr-d3ddb5d0263c6710.mp3",
+    "duration": 1.904042,
+    "sha256": "6a65ef3d59eaa72746b26104ff7f915c72e64a7e3372a5cad7db4f02dbf82a05"
+  },
+  "2/3 > 2/7.": {
+    "file": "tr-5ac68f3532f217b0.mp3",
+    "duration": 1.1,
+    "sha256": "5d747448c48dd953ea1fba764794bf5088f42778bd8a8f10b1f063fe0b83366f"
+  },
+  "2/3 ile 3/4’ü karşılaştır.": {
+    "file": "tr-412f8281bb00b67e.mp3",
+    "duration": 2.322,
+    "sha256": "990efd1e0a242c0fdbe226394ad679ca8504f0327904cf1bc83de9ff248c1270"
+  },
+  "Ortak payda 12.": {
+    "file": "tr-a2ca7d32707f89a0.mp3",
+    "duration": 1.207458,
+    "sha256": "4c6ab4bd271e7b24ea314f1b83c4400dbd988f89480908f2f97759d9baa0d3d2"
+  },
+  "2/3 = 8/12; 3/4 = 9/12.": {
+    "file": "tr-b16a899fd879d1c7.mp3",
+    "duration": 3.448167,
+    "sha256": "ace2b5267ceae5aa4e0c5ed6acd04d643c344832f8a0eb00491b0bf15dccafb0"
+  },
+  "8/12 < 9/12, yani 2/3 < 3/4.": {
+    "file": "tr-8bc096f591c7dafa.mp3",
+    "duration": 2.995375,
+    "sha256": "ac8976a82e4a75f68930f6945be49a540d3d1129c27a71861ba2f0ad6e1a8d5c"
+  },
+  "3/8 yarımdan küçüktür.": {
+    "file": "tr-c1c2db2bb2a01ad2.mp3",
+    "duration": 1.637042,
+    "sha256": "ef0cb04e2843a9e767d66c4ba0a9f14eaea471e2bdbb9859887ad33425c2ee78"
+  },
+  "5/8 yarımdan büyüktür.": {
+    "file": "tr-d095cf9847eeffd0.mp3",
+    "duration": 1.613792,
+    "sha256": "75201873fc9ab140922ef3ebe241822d61afcf589ddaa84c7c6ae3a13d1160dd"
+  },
+  "Aynı bütünlerde 3/8 < 5/8.": {
+    "file": "tr-e0cda09b2184d99f.mp3",
+    "duration": 2.205,
+    "sha256": "3a2016b54a743b60110a19ed1436bbe26bad3a5d4d1238d3ec5e7b82122edb72"
+  },
+  "Bütünler farklıysa eşit kesir, eşit gerçek miktar demek değildir.": {
+    "file": "tr-effc15fcd447732d.mp3",
+    "duration": 3.871917,
+    "sha256": "261c8f6014a101ce62b8978ace37354d2ce4e7259ab17b6847b70a4c0ef5e6d2"
+  },
+  "3/5 ile 7/10 verildi.": {
+    "file": "tr-91b716fcec52fa17.mp3",
+    "duration": 1.695083,
+    "sha256": "98532e05f5a59083f5825518496fa68945bd297775b24922f2b24faeef5956fa"
+  },
+  "İlk kesrin pay ve paydasını 2 ile çarp.": {
+    "file": "tr-ecfffa8f24e85b8e.mp3",
+    "duration": 2.287167,
+    "sha256": "9ad79161c0d2e2cb5fa9bd819806ee07dff103cdae6deafea86ef9f8b1142729"
+  },
+  "3/5 = 6/10.": {
+    "file": "tr-76a768d062bbf9f4.mp3",
+    "duration": 1.578958,
+    "sha256": "0d5ba18c91163ccc58a82537e656f797e8af23fc7904fa784aa3f7d8e55efc19"
+  },
+  "Boyalı miktar değişmedi.": {
+    "file": "tr-f5eacc18693c0549.mp3",
+    "duration": 1.4745,
+    "sha256": "dafb01106deea46eeb421e30e892158d169eaa0e0f4f05440217f02874d33a4f"
+  },
+  "İkisi de 10 eş parça.": {
+    "file": "tr-7d67a5accabc5d09.mp3",
+    "duration": 1.532542,
+    "sha256": "02a0214869d13751eea41c9648e9066d5c4e9baea7febac1d85ccb43bf794950"
+  },
+  "Parça büyüklükleri eşit.": {
+    "file": "tr-fd996851605a0d42.mp3",
+    "duration": 1.532542,
+    "sha256": "19233b34012f8c3cfe34f63bc4eee81bff4c86fd2cd07b6f296366c748ebec08"
+  },
+  "Yalnız boyalı parça sayılarını karşılaştır.": {
+    "file": "tr-d976f54d1b1c8c20.mp3",
+    "duration": 2.461208,
+    "sha256": "a5ab848d49b10d5406ca005047ad3473c0df36e09ccafb6daa68d7dc99f17eea"
+  },
+  "6 parça ile 7 parçayı karşılaştır.": {
+    "file": "tr-481b98487fd75c53.mp3",
+    "duration": 2.310417,
+    "sha256": "c9fff3dce47ddec04ce594f9c4b9da4adf577c4ae0a76fb0fd97626ab07aec9e"
+  },
+  "6 < 7.": {
+    "file": "tr-f1f9c48d7dbebace.mp3",
+    "duration": 1.1,
+    "sha256": "21f10629ae36e57f5482744ae3f07de68052e8a6e8f317a86ad7f219786fd0b5"
+  },
+  "6/10 < 7/10.": {
+    "file": "tr-c6d25fe24d03de87.mp3",
+    "duration": 1.102958,
+    "sha256": "2bf43556e89807f0b8270f063c882b3e09e3a025c97de1175969e7404f5ee4d2"
+  },
+  "Bu nedenle 3/5 < 7/10.": {
+    "file": "tr-4a012cf2ccfe441c.mp3",
+    "duration": 1.671833,
+    "sha256": "23d50926edeba65bac793477185fa18878ffc0858f3d9b3cb6fd7f868a3e1a12"
+  },
+  "Örnek soru: sınıf hangi meyveyi seçiyor?": {
+    "file": "tr-b07e093914c76ebe.mp3",
+    "duration": 2.403292,
+    "sha256": "8040f7d0eb3f134a45091b1e0638a7c0b063398c5f01036de4e141ebd76e11d7"
+  },
+  "Katılımcı grubu bu sınıf.": {
+    "file": "tr-60ecee993f1a9a15.mp3",
+    "duration": 1.358375,
+    "sha256": "44f1d413588e4149896e7ce799a431cc1751c8bfce1c3ad275a1eeb8bb054d51"
+  },
+  "Herkes yalnız bir tercih yapıyor.": {
+    "file": "tr-fb9dc34952d4155c.mp3",
+    "duration": 2.03175,
+    "sha256": "a59da64243bf1b88ff0f4d59751c577776b03643ad84dfbbe464625062d129f7"
+  },
+  "Kategori: elma, muz veya armut.": {
+    "file": "tr-1f3afd49a325211d.mp3",
+    "duration": 2.275583,
+    "sha256": "4f417d550d894ea84838259800f0972aa204e5bdddd5610eeec9884a99f51245"
+  },
+  "Soruyu yönlendirmeden sor.": {
+    "file": "tr-403150d3174b62a3.mp3",
+    "duration": 1.637042,
+    "sha256": "a6b0ae576707c29500f89706ec81192b6ba256d344c041789ea6061789ab4442"
+  },
+  "Bir kişiyi yalnız bir kez say.": {
+    "file": "tr-223252474a74aa0a.mp3",
+    "duration": 1.822792,
+    "sha256": "8714638c95a5dfeb399710c6177c210f2b79284ec92dc69e014e1a2f7b00ff4c"
+  },
+  "Tercihler kategori olarak gruplanır.": {
+    "file": "tr-1a6c1fe124072539.mp3",
+    "duration": 2.055,
+    "sha256": "dc4e91198c4c5668da6977271565176a1ddc5efa32ddbecece3bd5993d9acebb"
+  },
+  "Santimetreyle boy ölçmek farklı veri türüdür.": {
+    "file": "tr-1a93673772246538.mp3",
+    "duration": 2.3895,
+    "sha256": "e063e7a25ddb0ddd3587d03efd76bbf6028c09dc6ede0bcd53a0fa0b95277590"
+  },
+  "Elma 9, muz 6, armut 5.": {
+    "file": "tr-75bd0f8eb770c154.mp3",
+    "duration": 2.249083,
+    "sha256": "d1b022cd1a5f2456717008e158a051def48223ab8e68520aef68b447abaffbd7"
+  },
+  "Sıklık, o kategorideki kişi sayısı.": {
+    "file": "tr-124405bb50341b41.mp3",
+    "duration": 2.113958,
+    "sha256": "2f60c21cc05c6e38c5d24ce256e18a56070a6569845c95c52b5c2592c3a18bea"
+  },
+  "Aynı sayılar sütun yüksekliğiyle gösterilir.": {
+    "file": "tr-8a288158b2b83110.mp3",
+    "duration": 2.34525,
+    "sha256": "0cd1cc6acd92aae6326d3d36f7549652c3e503710853d5be32a741879cd85d8c"
+  },
+  "Eksen 0’dan başlar; birim kişi.": {
+    "file": "tr-e51bb89d9a64e303.mp3",
+    "duration": 2.159458,
+    "sha256": "ba9f0fcd9b140f01beff05089d9cf4acc4bf393af45f1d1fe1664adcc9e8843c"
+  },
+  "En sık tercih elma: 9 kişi.": {
+    "file": "tr-e1a115158fa0ef48.mp3",
+    "duration": 2.4265,
+    "sha256": "913c34344b9d1e9367e461f624f7adf617ce07c13cc9d923a5c7f759e754daa6"
+  },
+  "En az tercih armut: 5 kişi.": {
+    "file": "tr-f417e8611361e214.mp3",
+    "duration": 2.066583,
+    "sha256": "a643e1b86dc54e5725bf511860c65c01f3e1212ed818691bd87bff050814cdb1"
+  },
+  "Toplam 20 kişi.": {
+    "file": "tr-0becae2aa9f096d2.mp3",
+    "duration": 1.137792,
+    "sha256": "f72e038ee639c707266bc66524a6b38f8debe390d3637e32992d235376ba1880"
+  },
+  "Bu sonuç yalnız bu örnek sınıfı anlatır.": {
+    "file": "tr-55c26d05da4b0616.mp3",
+    "duration": 2.461333,
+    "sha256": "e862d4f1fb2859fa5c49f71b2426d2d9633fc483470394db85b1d6e12d7ea30d"
+  },
+  "Her öğrenci bir tercih yaptı.": {
+    "file": "tr-43871d533b3f2ecb.mp3",
+    "duration": 1.787958,
+    "sha256": "a4446d5a4363f5f02e6f012263a355b9305cbf7282d5676ddc67df395d95cbf3"
+  },
+  "Kategoriler: 9, 6 ve 5 kişi.": {
+    "file": "tr-12715fbcf9fdfc23.mp3",
+    "duration": 2.71925,
+    "sha256": "710ab6de5fab669e11a918aca58b9f9146a91e158d41665503e2a5bc9eb9f568"
+  },
+  "9 + 6 + 5 = 20.": {
+    "file": "tr-141a1044595ee36b.mp3",
+    "duration": 2.368458,
+    "sha256": "1d1f3e7e599092698b01f910edfe4bb2989751c6451c850914710f72b97a359b"
+  },
+  "Sınıfta 20 öğrenci var.": {
+    "file": "tr-52915634813a873c.mp3",
+    "duration": 1.37,
+    "sha256": "77b35f676bece5e71b6a0e8c866d4843939fa9b60f72f6f75454af9f2a853e82"
+  },
+  "Sıklıkları karşılaştır.": {
+    "file": "tr-dd940e9d05767ffc.mp3",
+    "duration": 1.329708,
+    "sha256": "5189cd583f4a99b0da46e40df9f07dbfb61ffd9292243a45e0155ab6315b4c03"
+  },
+  "9, 6 ve 5’ten büyük.": {
+    "file": "tr-fc827e9df52648fb.mp3",
+    "duration": 2.055,
+    "sha256": "0333e87f9d0a58d3e6fe58ab6b2a69be9a6891d0d2d630b2445579ecc58cdebb"
+  },
+  "En yüksek sütun elma.": {
+    "file": "tr-4d455593c5a386a1.mp3",
+    "duration": 1.55575,
+    "sha256": "79bdc295668a77f531e780fc1e3717f4d0c583b63b068067eb3e88022b74438d"
+  },
+  "En sık tercih elma.": {
+    "file": "tr-4051488feb65ec73.mp3",
+    "duration": 1.277125,
+    "sha256": "5df90bbf2c82b11426b99ea084ec73ee229b6cc3f8be44646a82aa8435ddf86b"
+  },
+  "Araştırmaya katılan grup bu sınıf.": {
+    "file": "tr-0b551932bd850fe0.mp3",
+    "duration": 1.705958,
+    "sha256": "01478ee16a046f8a4f820794ceabbc4476dcc988e29f1f41693f0e83988ef560"
+  },
+  "20 kişinin tercihi biliniyor.": {
+    "file": "tr-0fd39fd03025eeff.mp3",
+    "duration": 1.683458,
+    "sha256": "4e89877727fff16fc5250e773889adbeb5640d5ec53e8d5f7935549acd347ef5"
+  },
+  "Bütün okul hakkında veri yok.": {
+    "file": "tr-b9e423bb0fd872ab.mp3",
+    "duration": 1.604958,
+    "sha256": "96dc2d45b28ea38061f48ae03b1382a23183292421156e9c65dcf65d24d0492d"
+  },
+  "Sonucu bu sınıfla sınırla.": {
+    "file": "tr-97133267d8a67f02.mp3",
+    "duration": 1.381583,
+    "sha256": "b6688baf28a41d965680dcd4c3096ae736ec99a3cf8a77859b3c736dbb88c750"
+  },
+  "Başlık: örnek sınıfın kitap tercihleri.": {
+    "file": "tr-7042944d6a71d383.mp3",
+    "duration": 2.50775,
+    "sha256": "aba14b85f8ea38282f70bebd9d4dd6e8df477207b857e46d5fc00ff5f4e4311b"
+  },
+  "Yatay eksende kategori adları var.": {
+    "file": "tr-127f9564a9c3ab37.mp3",
+    "duration": 2.089958,
+    "sha256": "fac41357ef381a06000784de2452376145f75b286d397b10383e6fa7203f1664"
+  },
+  "Dikey ölçek kişi sayısını gösterir.": {
+    "file": "tr-18d7f64bdb155450.mp3",
+    "duration": 2.03175,
+    "sha256": "47f0e6f3d0fa8ef988fa06aff20d7a3a65ab7dbf2de100b9df0ef37a31c9504f"
+  },
+  "0 başlangıcı ve sayıları birlikte incele.": {
+    "file": "tr-caecc156cfb59910.mp3",
+    "duration": 2.623875,
+    "sha256": "35d8f38d00d385bf868c66ab9adc1d492abd8b21a6604393b36ffe62c89a6ba9"
+  },
+  "Örnek anket yalnız bir sınıfta yapıldı.": {
+    "file": "tr-bd816708bf3b1581.mp3",
+    "duration": 2.101417,
+    "sha256": "15d1f8e57ad89447aefaba3cbe38ef0d3edcb1ead4f33d307588fdedd0c28b49"
+  },
+  "Katılan kişi sayısı 20.": {
+    "file": "tr-ebb0d8b241efdb99.mp3",
+    "duration": 1.544125,
+    "sha256": "25359957a8f794a325a2bd199f536cf15a3f13f546cc2de9f7dab9c1a1166279"
+  },
+  "9 kişi roman seçti.": {
+    "file": "tr-c3b7eefa5575576d.mp3",
+    "duration": 1.613792,
+    "sha256": "468466afa44cfa572bdb5992fdb81df5f187324f35bb106679a6896115f81e27"
+  },
+  "En çok tercih, herkesin tercihi demek değil.": {
+    "file": "tr-5d54e3fd7b933509.mp3",
+    "duration": 2.786417,
+    "sha256": "e5572f37719943f435322a194426200983b4116f16622f689d06cb07c2182d28"
+  },
+  "İddia: herkes romanı seçti.": {
+    "file": "tr-ea672782eb17142f.mp3",
+    "duration": 1.783,
+    "sha256": "607437f1df2d51ecaae8ba2f74bac9474731bbc851b138b46eae588328baf4e2"
+  },
+  "Herkes demek 20 kişi demek.": {
+    "file": "tr-c216f1c275c645d9.mp3",
+    "duration": 1.7415,
+    "sha256": "34bf11fe589a1a5ae9c80b398cd1a9bdf551083c63128e67b2e5e4f98cb6ff32"
+  },
+  "Romanı seçen 9 kişi var.": {
+    "file": "tr-cbee72986e392db0.mp3",
+    "duration": 1.695083,
+    "sha256": "2ea3e73eecbc49ffb442b4e75dcc4707230660f29530713ff76d7d3b7b2007da"
+  },
+  "9 ≠ 20; iddia desteklenmiyor.": {
+    "file": "tr-e971a8f62d3d2f18.mp3",
+    "duration": 2.774792,
+    "sha256": "522898180efa722174b1484820e3bfd5febdf7c1cf0a789e51980bc06060011c"
+  },
+  "İki farklı anket düşün.": {
+    "file": "tr-2d1c0285aa97e550.mp3",
+    "duration": 1.393958,
+    "sha256": "b0092c5b098ebcc0850a051c5a2078f4b7b1be98c3c327faf474dc0e0a38d581"
+  },
+  "Birinde 20, diğerinde 40 kişi var.": {
+    "file": "tr-c09a9aebf5733268.mp3",
+    "duration": 2.24075,
+    "sha256": "0de080d02aefeec015d353758841aa8e10fbec426c2410594075c40d185bd7f1"
+  },
+  "Ham sayıların büyüklüğü tek başına yetmez.": {
+    "file": "tr-111dfdf3b3cd2ec6.mp3",
+    "duration": 2.269417,
+    "sha256": "e2839bdc2b9ee51edcc307b996ccf36efc0314ff79c40034291237f3a8f6f6e0"
+  },
+  "Grupları ve toplamları da karşılaştır.": {
+    "file": "tr-244b8b23008ff138.mp3",
+    "duration": 2.148417,
+    "sha256": "b0cf247cbaf6025325cc7a014fa2bb175761837bf397d75fbf030faf4ae1ab9a"
+  },
+  "Ankette toplam 20 kişi var.": {
+    "file": "tr-6a1267c5a5225b46.mp3",
+    "duration": 1.718292,
+    "sha256": "f108bdaf44ea7a5d8c894959ad8fe8862a090ab946b17a692d88df57a34244ca"
+  },
+  "Herkes sözü tamamını ifade eder.": {
+    "file": "tr-e876da91183ae4b2.mp3",
+    "duration": 2.043375,
+    "sha256": "2914c6cf74b46eb06512a6b896181b2b6371f0ab59b7ba2736ec8223c9dd93fe"
+  },
+  "İddia 20 roman tercihi gerektirir.": {
+    "file": "tr-ab7d890f1c7d9372.mp3",
+    "duration": 2.076208,
+    "sha256": "911514eaca17329c34a72db996872597914fb42259a57b5f2be98170bef4e2ef"
+  },
+  "Grafikteki roman sıklığını bul.": {
+    "file": "tr-e986b4df28c9366d.mp3",
+    "duration": 1.683458,
+    "sha256": "b01f5d30ea1ee31fbbb0e892246dc90765bbdc54669972558c061b887e518397"
+  },
+  "Roman tercihi 9.": {
+    "file": "tr-96ad7ec97fd8248d.mp3",
+    "duration": 1.462875,
+    "sha256": "3d864e26443c4361463bed833bcdb3ac41b711c86282c9e0eb8bf082f445b5f0"
+  },
+  "Toplam kişi sayısı 20.": {
+    "file": "tr-51bee0b4b1870c5f.mp3",
+    "duration": 1.439667,
+    "sha256": "7274b86283e788f9875a4cc19536c140011b207dd81ceea76c46ac6f999e6ebd"
+  },
+  "9, 20’ye eşit değil.": {
+    "file": "tr-685923940eb6c0d4.mp3",
+    "duration": 1.663375,
+    "sha256": "22f939c25075858c970907f91de846bcd33b9bca94099f325858b0d1e111e663"
+  },
+  "Herkes roman seçmemiş.": {
+    "file": "tr-5c042563aec99333.mp3",
+    "duration": 1.520917,
+    "sha256": "dea63d5ea15882304134ab524cc26497795c868d2842dca338bb12ad2872da1f"
+  },
+  "9 en büyük sıklık.": {
+    "file": "tr-6329453104680126.mp3",
+    "duration": 1.509333,
+    "sha256": "8c815e7e3055ad13b5f9536e7e354e8b14a7933833139809052841d3bed17b62"
+  },
+  "Roman en çok tercih edilen kategori.": {
+    "file": "tr-59c5651069bf175e.mp3",
+    "duration": 2.252333,
+    "sha256": "ec64d4037d5950493db4b87de5ab12ee88ccdaa76501a8efb86f7f575e7b0176"
+  },
+  "Bu, diğer kategorilerin olmadığı anlamına gelmez.": {
+    "file": "tr-59ce797c0ca41e4d.mp3",
+    "duration": 2.867333,
+    "sha256": "f366684688062bec22088868af1194bd6a5c2f8981586a39b714d985dc76fc86"
+  },
+  "Doğru cümle: bu ankette en çok roman seçildi.": {
+    "file": "tr-aa3a9731f74be660.mp3",
+    "duration": 2.658708,
+    "sha256": "1f6fcc194fdd43da1912bc2167efa978fe6393e2e1f1dab80081ec41f3a107e5"
+  },
+  "Sol tarafı hesapla: 8 + 4.": {
+    "file": "tr-73f50978c7a756be.mp3",
+    "duration": 2.403292,
+    "sha256": "040cb3544821ca934ea5118486ae5acfaf4e8cdd3574da7ac589d61e1eb5c551"
+  },
+  "Sağ tarafı hesapla: 7 + 5.": {
+    "file": "tr-d4c5a0550d63c6fc.mp3",
+    "duration": 2.137958,
+    "sha256": "76db0ce6ebd2392c76c626e911115e4f85bdc62c21b61409f5205152cb5caf84"
+  },
+  "İkisinin değeri 12.": {
+    "file": "tr-a0dbbb36463c835b.mp3",
+    "duration": 1.242292,
+    "sha256": "3130f52e668c3131be3ad6aa3188c03de5854bfd4e5a3c3fd7a0e77cba8e76b0"
+  },
+  "Eşittir, iki tarafın aynı miktarını anlatır.": {
+    "file": "tr-b184a19b0df92bde.mp3",
+    "duration": 2.437375,
+    "sha256": "c13eb7699d33cd6a310fc687af8e48582f8ef70c8223cf6668da6134464ed77a"
+  },
+  "Örnek: 7 + ? = 19.": {
+    "file": "tr-e473fd9f590ac2b9.mp3",
+    "duration": 2.71675,
+    "sha256": "45ac16db33a72b22b415b9c4888d219c97ef735e40c66bd9cef334d4c4f27149"
+  },
+  "Boş kutu bilinmeyen sayıyı temsil eder.": {
+    "file": "tr-5840aa53ee3855c4.mp3",
+    "duration": 2.101417,
+    "sha256": "a5b85de6ae33d019c2ad46ce4fa64cf4e98a7428895b474b5a18648794ba572d"
+  },
+  "İki taraf aynı miktarda olmalı.": {
+    "file": "tr-7fc705e4ed11ad39.mp3",
+    "duration": 1.66025,
+    "sha256": "26ef9613fb6d0b22b4442368c158c6f91ef85d512f217e06feb2b309edd3c526"
+  },
+  "19 − 7 = 12; yerine koyup kontrol et.": {
+    "file": "tr-4932598d70b474df.mp3",
+    "duration": 3.320458,
+    "sha256": "b4355dd578ec6307a1a089e2a8b0b2155228fef7335e9021815503fe85704eb8"
+  },
+  "Örnek başlangıç: 12 = 12.": {
+    "file": "tr-1a03ae589c549c0a.mp3",
+    "duration": 2.263958,
+    "sha256": "dcba98bb1a3db4becc13844289759e481b5404a5617863316e5ab0be630e2c0e"
+  },
+  "İki tarafa da 3 ekle.": {
+    "file": "tr-f765887f4470b9e8.mp3",
+    "duration": 1.567375,
+    "sha256": "dc53630ef15d8bfc571b0c8c8d2cc614803e45da3a7f82cb564985e2175ae48d"
+  },
+  "15 = 15; denge korunur.": {
+    "file": "tr-b3332233a8c4b35e.mp3",
+    "duration": 2.24075,
+    "sha256": "b9ccdc57e81b7c3c04abd156215665a9295c7c7e334e695850ff9f25c14523de"
+  },
+  "Aynı işlem iki tarafta da uygulanmalı.": {
+    "file": "tr-ae1d86d57cec1f3a.mp3",
+    "duration": 2.078208,
+    "sha256": "b98c64d737d7736379c12e0f0ca55db4bcb80084554e750ac99842b3533d5b81"
+  },
+  "Başlangıç dengede.": {
+    "file": "tr-023d43a8d1580b3f.mp3",
+    "duration": 1.161,
+    "sha256": "fdec246fcd629cede8ad0898ceb2d69bb96b359a629a32537695a0944397df59"
+  },
+  "Yalnız bir tarafı değiştir.": {
+    "file": "tr-14e809d8c5c09ed9.mp3",
+    "duration": 1.594167,
+    "sha256": "cfe6dea9808dac07a4deee2196ea246ee4deeaad2bad50b0114ec35987c21873"
+  },
+  "Değerler farklı oldu.": {
+    "file": "tr-2b20e1542ef96d4d.mp3",
+    "duration": 1.149417,
+    "sha256": "76e9fde2c41fe14df4c2582f40ea0dce62030e4162990822ca68afe153024878"
+  },
+  "Eşitliği başlangıç denkleminde denetle.": {
+    "file": "tr-b2883f5e868ab5d4.mp3",
+    "duration": 2.159458,
+    "sha256": "4f1b19c0f87cfdbf78aa1cd47ccf01eda1c29bf61932a3f3d4f38fa29aa7b7f8"
+  },
+  "Denklem: □ + 7 = 19.": {
+    "file": "tr-ef6acf623a013c70.mp3",
+    "duration": 2.700625,
+    "sha256": "596b7bf69ccd8c3c99ec460f0222d76c3e7949e1c367f46c4dd022fa835ad836"
+  },
+  "Eklenen 7’yi kaldırmak istiyoruz.": {
+    "file": "tr-a9502befcb28f6ae.mp3",
+    "duration": 2.101417,
+    "sha256": "351b3228b25e4a849232752799773febfdcc4f01917f2ee3a5e665c343bb78b0"
+  },
+  "Her iki taraftan 7 çıkar.": {
+    "file": "tr-cf1280efa890c44b.mp3",
+    "duration": 1.625417,
+    "sha256": "832bfc97295f2ce2821591150cb56cccf9766832421be6e97bb8a1976f0b334a"
+  },
+  "Dengeyi koruyoruz.": {
+    "file": "tr-3f48c2f4dad99310.mp3",
+    "duration": 1.253875,
+    "sha256": "4db8af7c9c35465ab9c8d65ae5ad253a32c4ac17ebb5a34f6ef4e468223c99b9"
+  },
+  "Solda +7 ve −7 birbirini götürür.": {
+    "file": "tr-473706dcca1d9f39.mp3",
+    "duration": 2.391667,
+    "sha256": "f25fba064c489ffd2d3d262e6bfc36b98ab312373e6337f13b9d810b9bbb237e"
+  },
+  "Sağda 19 − 7 hesaplanır.": {
+    "file": "tr-d42f0c8a7f17f8a4.mp3",
+    "duration": 2.043375,
+    "sha256": "34a4f1aceea730b762eb8181d144f623a57a93afc87bf63f3f33de5f14752652"
+  },
+  "Sağ taraf 12.": {
+    "file": "tr-8d1a8440a3ebf410.mp3",
+    "duration": 1.126167,
+    "sha256": "32ee9eb9350fe3412c049c443423170e701d10a1376cfde2a96ddc3f5074c12c"
+  },
+  "Bilinmeyen 12.": {
+    "file": "tr-3cb4971628cfbf0d.mp3",
+    "duration": 1.1,
+    "sha256": "f3bd0e30f4398ed90bca81db28063b28007224f8bece52d41fd1b9001b63273b"
+  },
+  "12’yi kutunun yerine koy.": {
+    "file": "tr-065f4fe3f215f971.mp3",
+    "duration": 1.5405,
+    "sha256": "32e0c9cdcac92139894e0266aed35ba657c0a5670f76a9bdf2682070dfb4d71c"
+  },
+  "12 + 7’yi hesapla.": {
+    "file": "tr-26689ec146c18d64.mp3",
+    "duration": 1.486083,
+    "sha256": "ec03b534fe4b89cc5f9f5231ff906c84fc68225eff69340a1603d69f63023cb2"
+  },
+  "19 elde edilir.": {
+    "file": "tr-a5b8ede0f0e5af79.mp3",
+    "duration": 1.358375,
+    "sha256": "c1a01b947a93cf3d182fd477e73e0027362fb508ac28675cf0cd840be6bd6666"
+  },
+  "Başlangıçtaki sağ tarafla eşit: doğru.": {
+    "file": "tr-829291deceb0e618.mp3",
+    "duration": 2.403292,
+    "sha256": "d60a070f644ba069bdf555e197a645ee42a234ea3934248fe57aa16ac6b106b3"
+  },
+  "İlk sıra: 7 + 12.": {
+    "file": "tr-4ebcb6a17c75e395.mp3",
+    "duration": 1.695083,
+    "sha256": "210cd37126e94f6784d6d53f1cf32d27cbd3e1e68f3b450aa176f113e6f8a61c"
+  },
+  "Toplananların yerini değiştir.": {
+    "file": "tr-ef280e9ec0f9fe0c.mp3",
+    "duration": 1.787958,
+    "sha256": "f296ba234757e96d46812a3cdcedf5f531d926069b8d21f7725d3af777364334"
+  },
+  "12 + 7 de 19.": {
+    "file": "tr-910042b9508cad01.mp3",
+    "duration": 1.811167,
+    "sha256": "b20d65f68344c848537b246f61bbea5785f71d964df2ade3cd501e4fcbfd8c2e"
+  },
+  "Çarpanların yer değişimi de çarpımı korur.": {
+    "file": "tr-ee34876b60e1fa33.mp3",
+    "duration": 2.310417,
+    "sha256": "9a17ae052724801dd81872a61f3f0659395bd94daeb00bfdd80e0abb29531e0b"
+  },
+  "Sayıların sırası 2, 8, 5.": {
+    "file": "tr-4ab0a29e9fe829fb.mp3",
+    "duration": 2.522833,
+    "sha256": "ef39ff687a9d67295a61ee013c0813ed3d70d28bbd9f6381838356976af27b7c"
+  },
+  "Önce 2 ile 8’i grupla.": {
+    "file": "tr-29fa5938466e01ca.mp3",
+    "duration": 1.695083,
+    "sha256": "31f9e599173a4e480f81e52279c214ba654254f4f7cccb238cbcdd4bda54731d"
+  },
+  "Sonra 8 ile 5’i grupla.": {
+    "file": "tr-eda8697fbf7cda3d.mp3",
+    "duration": 1.822792,
+    "sha256": "42c174fd50c55e80da799d2219a78993d0c6a0cf175e65cbdad3aeaec6eea4be"
+  },
+  "Yalnız parantez değişir; toplam 15 kalır.": {
+    "file": "tr-0465ebaac8e587e9.mp3",
+    "duration": 2.763208,
+    "sha256": "e2ddcd4cb926f5d110e0fcfb4dfaed6a212c025bb7603849b15ee1384d1ab5e3"
+  },
+  "6 × (10 + 3) örneğinde her iki parçayı çarp.": {
+    "file": "tr-9caed13f3859f6c5.mp3",
+    "duration": 3.041833,
+    "sha256": "cdf59744946d8224a20450533e9a55649434cd8f662f32506f53c4518ac196c2"
+  },
+  "6 × 10 = 60.": {
+    "file": "tr-58100231747319b8.mp3",
+    "duration": 1.683458,
+    "sha256": "48f6a96a37a368e7c115dd4f1f32bda334f52e63da964f53293cc8e66da4ac82"
+  },
+  "6 × 3 = 18.": {
+    "file": "tr-6bc3b0cd34015119.mp3",
+    "duration": 1.938875,
+    "sha256": "c869ea9fd1e628247b7dfda82e851bc56d96e52b47d33dfe92a546f9e9fa238b"
+  },
+  "Toplam 60 + 18 = 78.": {
+    "file": "tr-951a8424755ca9ff.mp3",
+    "duration": 2.739958,
+    "sha256": "8de14519e09d04bf799f6681f0be9c27ae3f402af12216dbef0dec3b1cc94932"
+  },
+  "12 − 5 işlemini düşün.": {
+    "file": "tr-2c685e3e2908f65e.mp3",
+    "duration": 1.695083,
+    "sha256": "d2265c115e047f7f839993429e80c3c725696871c726a1c657e7bc6b67f3a38d"
+  },
+  "5 − 12 aynı işlem değildir.": {
+    "file": "tr-f33577a5f3ce4f2a.mp3",
+    "duration": 2.310417,
+    "sha256": "c7bdbb2ac3c5898d4996571cf10882771dc6273670f6ed75dabf430e0c1016e3"
+  },
+  "Çıkarmada değişme özelliği yoktur.": {
+    "file": "tr-de53958c63d58eb3.mp3",
+    "duration": 2.008542,
+    "sha256": "540b4848de1adad92f8267c8709ac869931f3249bee255bd095e097b80335ba5"
+  },
+  "Dağılırken parantezdeki her terimi çarp.": {
+    "file": "tr-dff17cf5b0d80fb8.mp3",
+    "duration": 2.205917,
+    "sha256": "44500ae39766dd729083e26f732ca735d869a082ac8d19017f50e659dc45d455"
+  },
+  "16’yı 4 × 4 olarak ayır.": {
+    "file": "tr-f437769b2d90191e.mp3",
+    "duration": 2.275583,
+    "sha256": "b6f11c0469718d559a6abd36950fcec59cac7cbbc933e6b10150db499fee257a"
+  },
+  "25 × 16 = 25 × (4 × 4).": {
+    "file": "tr-4fd6b9bcadbd529e.mp3",
+    "duration": 3.529958,
+    "sha256": "ba09d333e34aa5c38f830f35e185aa2d1eb97479393954a8d5fc685327911053"
+  },
+  "Çarpanlar değişmedi.": {
+    "file": "tr-bd1ecfc042fe85ae.mp3",
+    "duration": 1.45125,
+    "sha256": "b2c8dd7d99eda3fb3d4ab0922b10b8c2ec54b0b48cb0679b57f86e68ed48d249"
+  },
+  "Şimdi gruplamayı değiştirebiliriz.": {
+    "file": "tr-06aa1305af1589cc.mp3",
+    "duration": 1.734792,
+    "sha256": "0574b25316e9c84012b52f398166c0cbbced1bbee37caac4e9ffc5861eb7840a"
+  },
+  "Birleşme özelliğini kullan.": {
+    "file": "tr-2bdaf365207b2f5d.mp3",
+    "duration": 1.544125,
+    "sha256": "ad299f4894a4213983f1832de005a7c94ebea0f0169068a6e474c39e1c5d2920"
+  },
+  "(25 × 4) × 4 yaz.": {
+    "file": "tr-3e17008a3cddd42f.mp3",
+    "duration": 2.119292,
+    "sha256": "f3e05e261c313249d3ba96b2529bdb3150b290868e3d1029c43319f8b4615645"
+  },
+  "25 × 4 = 100.": {
+    "file": "tr-ad116afebe115e9a.mp3",
+    "duration": 1.938875,
+    "sha256": "c56630a94b2b8d2d116fa7693dde5bb34a09f3e823eef9935dcfc37b88d09efa"
+  },
+  "İşlem 100 × 4 oldu.": {
+    "file": "tr-c6765ae1c929d3fa.mp3",
+    "duration": 1.695083,
+    "sha256": "88367bad1cbafd8751e3f7600834a743c1a06e3dd2e0dd59e1ea83bb9597ddfe"
+  },
+  "100 × 4 işlemini yap.": {
+    "file": "tr-153ea6d218e72c57.mp3",
+    "duration": 1.578958,
+    "sha256": "4311c9572dd8992d92db8e620ea93aacc45fbf32f5a043da2f20ac93303b3e9c"
+  },
+  "Sonuç 400.": {
+    "file": "tr-f3cf734b9619f1ce.mp3",
+    "duration": 1.219083,
+    "sha256": "d6c7e1e7e1765d849625d8da3739d699f8c3ce36bbcbf63c202d23abaeb8885b"
+  },
+  "İlk çarpanlar 25 ve 16 idi.": {
+    "file": "tr-5aa4b67297c519e4.mp3",
+    "duration": 2.4265,
+    "sha256": "21624ad3a6d7b2317e12be50253df5a09769d285ccd50b2abae142226a6c53bd"
+  },
+  "25 × 16 = 400.": {
+    "file": "tr-7c32588a044e1432.mp3",
+    "duration": 2.31475,
+    "sha256": "154306cdd1d41f98939305c3d75b67e2938031118f37da30379d8ccdb40ed9e5"
+  },
+  "Önce parantez.": {
+    "file": "tr-8d96bc25f201ddcb.mp3",
+    "duration": 1.1,
+    "sha256": "75394fe8009681400ffb0a76a114415c02424415d2f72eb251e7a7c63190cee0"
+  },
+  "Sonra çarpma ve bölme.": {
+    "file": "tr-2bc22b22c620ce8f.mp3",
+    "duration": 1.381583,
+    "sha256": "7309933b1ae865443549d0758a6e341a26d817c40e6a0597c1365743f2b7d653"
+  },
+  "Sonra toplama ve çıkarma.": {
+    "file": "tr-0b8e3a8d94034287.mp3",
+    "duration": 1.544125,
+    "sha256": "c41f486f44cf9b1cf8c74b38a8ec9b5b136b58c0198d7a9aa8e7306b60cee973"
+  },
+  "Aynı öncelikte soldan sağa git.": {
+    "file": "tr-9d558c719b00b30b.mp3",
+    "duration": 1.822792,
+    "sha256": "41e79ef14080f7896f54070147ed68955e809b4f4b86e34ce477687d8024446a"
+  },
+  "Örnek: 24 ÷ 3 × 2.": {
+    "file": "tr-72eb02ab0c0f75f7.mp3",
+    "duration": 2.484542,
+    "sha256": "de9ff9c7b225afc7453e574a37eec8a06404b1043ce2b5abcdb19aa3c49c5f99"
+  },
+  "Bölme ve çarpma aynı öncelikte.": {
+    "file": "tr-69c9ecd247866b6f.mp3",
+    "duration": 1.857625,
+    "sha256": "9c4003ed0aa145a3c8762b9065186862830c57a5fde59e4b89b4d466c535e7c8"
+  },
+  "Soldan başla: 24 ÷ 3 = 8.": {
+    "file": "tr-94d4afa34674343b.mp3",
+    "duration": 2.876958,
+    "sha256": "67774802a0292df0733c2a105b6e70c5cf113bbf9d2afb51f7cfd8d28bd88786"
+  },
+  "Sonra 8 × 2 = 16.": {
+    "file": "tr-94004a0f5dd8a8d7.mp3",
+    "duration": 2.171083,
+    "sha256": "eca50e2c760992dd840ab77dc61f1a1bb4efd805b973999b767a82d9e20df3cd"
+  },
+  "İlk durumda 5 nesne kutuların dışında.": {
+    "file": "tr-04a62ec3d84fcd7b.mp3",
+    "duration": 2.287167,
+    "sha256": "de70d783a1e489195ecb24156eb0c5ed2ff6f7fdbcbc43562f539f4ebe7badbc"
+  },
+  "3 × 8 + 5 = 29.": {
+    "file": "tr-e413da81dee6f947.mp3",
+    "duration": 2.519375,
+    "sha256": "5e8650fb381930c7038b6150ec998997bdbe74ba62fc9e1d4c4898320e7e7779"
+  },
+  "İkinci durumda her kutuda 8 + 5 var.": {
+    "file": "tr-77309b6739e7c1f6.mp3",
+    "duration": 2.6355,
+    "sha256": "381ad2dc6cb8c8ef74a9cb664f4e6fccd63300d44876ee787792afd72884041b"
+  },
+  "3 × (8 + 5) = 39; parantez anlamı değiştirir.": {
+    "file": "tr-ff369ac7c6cf303e.mp3",
+    "duration": 4.051917,
+    "sha256": "63f93f9180e63836f5baffa92d4be19a4c609a52e487827a93fa2b960cb38307"
+  },
+  "Uzun ifadeyi küçük işlemlere ayır.": {
+    "file": "tr-a94815af293a25c7.mp3",
+    "duration": 1.91475,
+    "sha256": "c6c0d9df8f4750658adc5f54cf7c298b3caba1c7db09fdbc182e3d26450fb0e3"
+  },
+  "Parantezde 2 + 3 = 5.": {
+    "file": "tr-8674ff7fcc25c8ee.mp3",
+    "duration": 2.101417,
+    "sha256": "399f17a7e738a8d8cab3f49ab4fad9f4fdcb964be5196ef1c2aa7fbd6be52b12"
+  },
+  "Sonra 4 × 5 = 20.": {
+    "file": "tr-1e1b235a4031baee.mp3",
+    "duration": 1.973708,
+    "sha256": "cbed1d35971bd7f1e5a3c66bb9264ca3f406046af7d4631b74aa613b2ab4a713"
+  },
+  "En son 30 − 20 = 10.": {
+    "file": "tr-7f81039314915513.mp3",
+    "duration": 2.137958,
+    "sha256": "7f2382884e940367703134c57ef220e2499898e87a6b2429a1640948751f3411"
+  },
+  "İfade: 30 − 4 × (2 + 3).": {
+    "file": "tr-016546c63e88851d.mp3",
+    "duration": 2.914125,
+    "sha256": "96cf7b318d8a6d0f3d21722510d3f86a50231c60b2c9bdfa81f47f1259831859"
+  },
+  "Önce parantezdeki toplama.": {
+    "file": "tr-ff07ea38451098a9.mp3",
+    "duration": 1.532542,
+    "sha256": "e1ea7f2755fbc261bdee1ca95cbb6d711f35c2ab6426e8e89150aadc3e0d7c59"
+  },
+  "2 + 3 = 5.": {
+    "file": "tr-9aaf9633b98b121d.mp3",
+    "duration": 1.648625,
+    "sha256": "0454b70c642329441f161dd9eb1d4b169b0afd6413bd613f4f19004b723ea26d"
+  },
+  "İfade 30 − 4 × 5 olur.": {
+    "file": "tr-cd172fae42fcf527.mp3",
+    "duration": 2.159458,
+    "sha256": "866684ca578ad38334d23df7f9c141e024b31df6a4306be1decfc33645c940bb"
+  },
+  "Şimdi çarpma öncelikli.": {
+    "file": "tr-6dacefbc31d69d96.mp3",
+    "duration": 1.417958,
+    "sha256": "de207874144e6b46f6d063a43528f6324e74420a78cf3417ed27d1bd01ed1cf8"
+  },
+  "4 × 5 = 20.": {
+    "file": "tr-5dac1aa00b480192.mp3",
+    "duration": 1.718292,
+    "sha256": "12b3190cad7bb8c54879d12eef337077cb8a5a5e9f6465534601c4f3c22a5e6b"
+  },
+  "Çıkarma henüz yapılmaz.": {
+    "file": "tr-72416b99d60d5a06.mp3",
+    "duration": 1.578958,
+    "sha256": "4ea05090f17ff573362770b41bc490afa29c7a2a9c68b8bd57cf0794e4118faa"
+  },
+  "İfade 30 − 20 olur.": {
+    "file": "tr-7fe25b6c2295313e.mp3",
+    "duration": 1.625417,
+    "sha256": "b28035b74bcfaf14460e7c4ebd783797f2b1c84579c2be811c60e8fc007b4d27"
+  },
+  "En son çıkarma.": {
+    "file": "tr-46140f5496b9cdb6.mp3",
+    "duration": 1.1,
+    "sha256": "91acfcdc23a22e96663d21d2f4409bee1c4be9cc413ff93dba7736cb1b66e44e"
+  },
+  "30 − 20 = 10.": {
+    "file": "tr-ade700171e836af0.mp3",
+    "duration": 1.695083,
+    "sha256": "06169ad774229f6bd7ba3205efcbdd6d6117441779b7bba6dd1251af0e7a28c3"
+  },
+  "İşlem sırası korundu.": {
+    "file": "tr-5b6f54272cef07ce.mp3",
+    "duration": 1.2655,
+    "sha256": "75cd28e54c68ca0d8ff41ce5fd2c22d397065943ccbd669bb0045c8c9cf99122"
+  },
+  "Sonuç 10.": {
+    "file": "tr-b636f9a79e1a00bd.mp3",
+    "duration": 1.1,
+    "sha256": "4836b377a25c1c27b9f01ed8e57803ffb0a672d22f4776d8c0af98a4086658f4"
+  },
+  "4, 7, 10, 13: her adımda +3.": {
+    "file": "tr-40af1ec5937390ef.mp3",
+    "duration": 3.193958,
+    "sha256": "6ae3d2f85567937606868d8d66e088255feea91c10d116fdc3d05963409036d4"
+  },
+  "Sonraki terim 16.": {
+    "file": "tr-948fa0d93c50c55b.mp3",
+    "duration": 1.288708,
+    "sha256": "4766683942090490a285c6291fe2a82a64dbe81e3118d369541fd77ff1931be9"
+  },
+  "30, 25, 20: her adımda −5.": {
+    "file": "tr-f2bbf5249df54e95.mp3",
+    "duration": 3.285625,
+    "sha256": "a50fd4d3c24a8d3f9b8fded72026375cc40b3eccb0653c3c9b6f10f2f9b6e8fb"
+  },
+  "Şekillerde bir tekrar bloğu da olabilir.": {
+    "file": "tr-6fb62e7e748dbc7d.mp3",
+    "duration": 2.34525,
+    "sha256": "eaca4ed90b29687c1f1bc44ab75147ee1a7dcc758c21aedbe6c8a7167fefa676"
+  },
+  "2, 4, 8, 16 örneğine bak.": {
+    "file": "tr-972df133c9f1c18b.mp3",
+    "duration": 2.914125,
+    "sha256": "af5b56ce6de9b513813cf69751f4c76f205fa5218497fb3c6339367fa6578e64"
+  },
+  "Farklar 2, 4 ve 8; sabit değil.": {
+    "file": "tr-4f114681b109f5db.mp3",
+    "duration": 2.39525,
+    "sha256": "673314735675111bac5ab5cb5ae97dca548b44664d7cfd997c74027e4916b0cc"
+  },
+  "Her terim 2 ile çarpılıyor.": {
+    "file": "tr-76af80a9bc5019fb.mp3",
+    "duration": 1.822792,
+    "sha256": "6430a3c2238ffeb04919b932d035a58d6c9749e1733ff100356143d0fbbe8e62"
+  },
+  "Sonraki terim 32.": {
+    "file": "tr-9027c3db2b04b6a7.mp3",
+    "duration": 1.364917,
+    "sha256": "02e000e28d802b871812c2d365e7c4796891d25a2802053f990a525f41b29f40"
+  },
+  "İlk terim 5.": {
+    "file": "tr-37c28df40d0056b6.mp3",
+    "duration": 1.1,
+    "sha256": "6d23a7973fde04e3d029ef67dd753f5720b1d9af191a7e8378c6a30ad3ac408f"
+  },
+  "4. terime kadar 3 artış gerekir.": {
+    "file": "tr-b65c0a4a3a2b1b00.mp3",
+    "duration": 2.1435,
+    "sha256": "94af0f52592dda75253a79a3dfcd325e203e9a5245efe93743924b2ef5319792"
+  },
+  "5 + 4 × (4 − 1).": {
+    "file": "tr-735632cb01952a58.mp3",
+    "duration": 2.113958,
+    "sha256": "ac1c22f43a55541628f92937c283ef7139cf1738f46fc2b74a20cee55cea8f67"
+  },
+  "4. terim 17.": {
+    "file": "tr-e7260a13fc30ab37.mp3",
+    "duration": 1.195333,
+    "sha256": "5d0d5613c89d13777f7d323adbbd2a2882610e1969dd9d6835c0748e8e85c06a"
+  },
+  "İlk iki terim tek başına yeterli olmayabilir.": {
+    "file": "tr-005d49578acbadab.mp3",
+    "duration": 2.461333,
+    "sha256": "4bb54defdab80ff12f4f524f7a16225907bdeefdef7b27ec45c2405a5da1b4ae"
+  },
+  "Bir kural 2 eklemek olabilir.": {
+    "file": "tr-591aa633631ff2bd.mp3",
+    "duration": 1.846,
+    "sha256": "99204b3bca8c1726fa65c6bfb8d230f42217a19ea0120b5eaed2a6cd2d0c945c"
+  },
+  "Başka kural 2 ile çarpmak olabilir.": {
+    "file": "tr-d022bd04bac90abb.mp3",
+    "duration": 2.194292,
+    "sha256": "f5ec7dc8ab5a971f5d82e59a03febe512f8156c8e1efefe3c90f6f09d6c0e454"
+  },
+  "Bu çalışmada açıkça verilen kuralı izle.": {
+    "file": "tr-a5ea40a4b11ae8bb.mp3",
+    "duration": 2.310417,
+    "sha256": "89eca348a0dd79a1a0662bd9f909a0fa1d583db646a7401537835567564c6a9f"
+  },
+  "İlk terim 6.": {
+    "file": "tr-506aed9f3b3297f1.mp3",
+    "duration": 1.1,
+    "sha256": "d128c77cfb26cb9891f563db55755395fc46ed08c8691abdddb17c335b452c61"
+  },
+  "8. terime gidiyoruz.": {
+    "file": "tr-13fc531ae47b37da.mp3",
+    "duration": 1.346792,
+    "sha256": "72d07f51cfaf62f9fa3773866af2fa28e8bc2de958a2ca1013ad75d9f862fdf0"
+  },
+  "İlk terimde artış yapılmaz.": {
+    "file": "tr-e66972453f4471df.mp3",
+    "duration": 1.927292,
+    "sha256": "4226e1a4a39cab112f127836acba11ce261e83d58f7989d35c80b47a624bd01f"
+  },
+  "Bu yüzden 7 artış gerekir.": {
+    "file": "tr-92fcc8902674c4d5.mp3",
+    "duration": 1.780875,
+    "sha256": "d8f676e8d7a5078b458b4d63891f6f45bd21fcc7f0ed75f22632d9252c3aea77"
+  },
+  "Her artış 5.": {
+    "file": "tr-1bba41d591a546e5.mp3",
+    "duration": 1.1,
+    "sha256": "ec9c6be6290093a04eddfd167aa99ce7b7f1b64d036ecec832440a03b003dd17"
+  },
+  "7 artış yapılacak.": {
+    "file": "tr-6be1cf9ec18b74e6.mp3",
+    "duration": 1.277125,
+    "sha256": "d4888a90d7f847c8ee1d371565b4766e4c7befabee5f9ae011d0cc38a3be4f9c"
+  },
+  "7 × 5 = 35.": {
+    "file": "tr-50ccb4281b322e55.mp3",
+    "duration": 1.876917,
+    "sha256": "1934294a20ddee110d8732d7adac694b9ee786156c0868187deeaa8f880e5d2c"
+  },
+  "Toplam artış 35.": {
+    "file": "tr-7633b1de21802bf3.mp3",
+    "duration": 1.40375,
+    "sha256": "2d3bdd83a8a030d79a0ab0ba984040789676b9ff57d429c4c6842b878618428b"
+  },
+  "Başlangıç 6 idi.": {
+    "file": "tr-81403e37107cf524.mp3",
+    "duration": 1.2655,
+    "sha256": "34961deea13196280d39e71d9d018606447098a84d39296803832ef60872319b"
+  },
+  "Toplam artışı ekle.": {
+    "file": "tr-baee5033e14d3b41.mp3",
+    "duration": 1.323542,
+    "sha256": "8967853a45563125ed76ddfd4632a87d6db3b3391edd22a7f4a25f92e0613459"
+  },
+  "6 + 35 = 41.": {
+    "file": "tr-8f50415580259b47.mp3",
+    "duration": 2.03175,
+    "sha256": "2a63e30c2d8f523ddf739027ca542019764116b82ef2dc10728c43092a7c7418"
+  },
+  "8. terim 41.": {
+    "file": "tr-e3716fdc0f7b3280.mp3",
+    "duration": 1.230667,
+    "sha256": "226f79ad1002d43189b603f6025fcfaac840a74a012f93e86b3a5f7d1b6ef553"
+  },
+  "Girdi 2.": {
+    "file": "tr-890492ab76271b38.mp3",
+    "duration": 1.1,
+    "sha256": "a7dd4b232686300fa5b9937f78829dbabb100ec09a3be90eebaa4379a7002f25"
+  },
+  "Önce 4 ekle: 6.": {
+    "file": "tr-c040ce9ca372f56e.mp3",
+    "duration": 1.544125,
+    "sha256": "18b834c5e0ba2c9c402754e6dee49b73b31566d2440897aaba8739eda6df234a"
+  },
+  "Sonra 3 ile çarp: 18.": {
+    "file": "tr-e1da318e5a234778.mp3",
+    "duration": 1.870917,
+    "sha256": "da98a35e75bfad773bf750835aed606569ee6a668fa8065664c726745fc6c8ed"
+  },
+  "İşlem sırası algoritmanın parçasıdır.": {
+    "file": "tr-ca6fbdea6a7bd268.mp3",
+    "duration": 2.089958,
+    "sha256": "a643b5d1fced27c424bbb9e7ee9be900a3d190415dfc981876ccbfd0c5dc6840"
+  },
+  "Yönerge herkes için aynı anlamı taşımalı.": {
+    "file": "tr-b8786577d4f0e6c2.mp3",
+    "duration": 2.542583,
+    "sha256": "3a4677915caefe7878ac6bd272551052afd3f82106839b2df83ae835992f86b8"
+  },
+  "Biraz artır sözü belirsiz.": {
+    "file": "tr-f4253af7283dc8ec.mp3",
+    "duration": 1.554833,
+    "sha256": "428b446665287e25d90c04f4c2a37c65d702059cd338b5f621962b7916014a3f"
+  },
+  "5 ekle sözü açık.": {
+    "file": "tr-a770b0105e37f90b.mp3",
+    "duration": 1.230667,
+    "sha256": "2a51f66aa9c192783b503adad58d62b82788d2c076a5a894845ae035f8cc82be"
+  },
+  "Girdi ve yapılacak işlem belli olsun.": {
+    "file": "tr-824d2ee60a8c1227.mp3",
+    "duration": 1.973708,
+    "sha256": "c2b3ac6b5f807003999818337f0d18e3836bc4e3753cb65e3cda441a81c6dab9"
+  },
+  "Örnek deneme girdisi 3.": {
+    "file": "tr-823a7428b0d2c3a8.mp3",
+    "duration": 1.439667,
+    "sha256": "9defc861047eede43e171303027cebd389493912c99068171f509f702be9d57d"
+  },
+  "3 + 4 = 7.": {
+    "file": "tr-da5648cef5e2d51c.mp3",
+    "duration": 1.706667,
+    "sha256": "0ebb7da56b4367d27faba532106adfdfddf1aa0f5fb6a2c0bafba7a8eb738066"
+  },
+  "7 × 3 = 21.": {
+    "file": "tr-5e72d7a3d8c6c817.mp3",
+    "duration": 1.822792,
+    "sha256": "e50e7eba49cf78e4729722f3dc609e3935d73085547d7284dcf0739d4f272b19"
+  },
+  "Ara sonuçları yazarak hatayı bulabilirsin.": {
+    "file": "tr-72a94ec6cf776865.mp3",
+    "duration": 2.066583,
+    "sha256": "bd90f8dd11c7034dbd49adc63799ff24ee639cb8a826ad64d404f17313072ab9"
+  },
+  "Bölmeden önce böleni kontrol et.": {
+    "file": "tr-e53e265d72bdf00c.mp3",
+    "duration": 1.777958,
+    "sha256": "f3871fa367220f70676fee5d1cf1f65dd6fdf3ee8e678aff0e682fa1b3ddb308"
+  },
+  "Sıfıra bölme yapılamaz.": {
+    "file": "tr-86b0aa9fcddf75fc.mp3",
+    "duration": 1.4745,
+    "sha256": "17730309065e9e554922ed24d31e761f0b75a442ab200bd789b5331d4e547ab8"
+  },
+  "Tekrar varsa durma koşulu belli olmalı.": {
+    "file": "tr-ae19d317e35ebc3b.mp3",
+    "duration": 2.194292,
+    "sha256": "fcdb72b7246785eb6f603d12eb2a917009303c90fa4adf5a277cb7688497dbb4"
+  },
+  "Algoritma sonlu ve açık adımlardan oluşur.": {
+    "file": "tr-2867c413d06d1888.mp3",
+    "duration": 2.227583,
+    "sha256": "8b43fc294b4630b9039077642bd6e1dbb651cb2d0d4277aa5b2f9e4aa6488a0f"
+  },
+  "Girdi 5.": {
+    "file": "tr-ce90cd1140d79b63.mp3",
+    "duration": 1.1,
+    "sha256": "3710f9dbc27a20f31b1af249f05484fd6456a8602de0e875c0c592e52185a5b6"
+  },
+  "İlk işlem 2 ile çarpmak.": {
+    "file": "tr-dde74ca242217101.mp3",
+    "duration": 1.66025,
+    "sha256": "b1d12ee71a61c3bbd91f5e2125fe8592d6e7be5c2d5d18a820686979bb56050a"
+  },
+  "5 × 2 = 10.": {
+    "file": "tr-63c73c65830b93eb.mp3",
+    "duration": 1.55575,
+    "sha256": "0ab0a576b8454d08301e27da2080533505196b8635343a7a5eecfd82e64fe52f"
+  },
+  "10 bir sonraki adımın girdisi.": {
+    "file": "tr-3349fb2219e5afcb.mp3",
+    "duration": 1.846,
+    "sha256": "8df171f352e71b6fe8bfaa56d17c0f55b06bcabcf4b54fb902926ab98ec452cd"
+  },
+  "Önceki sonuç 10.": {
+    "file": "tr-5bd1cb5e50a7a013.mp3",
+    "duration": 1.126167,
+    "sha256": "f86b3c5624cd005a562f0502ffb25eb18baf40f335fcacd17ca65fb6beb47c48"
+  },
+  "6 ekle.": {
+    "file": "tr-8888cf9f5e32baa4.mp3",
+    "duration": 1.1,
+    "sha256": "20e7b42fa614904c23e10af561b98c52b1273e7dd64f4ac14809d6225d3ecad8"
+  },
+  "10 + 6 = 16.": {
+    "file": "tr-0885da2fbacd3671.mp3",
+    "duration": 1.787958,
+    "sha256": "beb42f2e0be132b45581798f6786ec80fe30a12de216af4bcccfbd24e456599e"
+  },
+  "Sonraki adımda 16 kullanılacak.": {
+    "file": "tr-c90c4b0e30a9b476.mp3",
+    "duration": 2.008542,
+    "sha256": "4cd88e1d0cf46c69c9884813c49d38840acfc833238838f00654c453c6e68d42"
+  },
+  "Önceki sonuç 16.": {
+    "file": "tr-64ff3975cabef9df.mp3",
+    "duration": 1.311958,
+    "sha256": "20b1d1ee33f1c23c371da857de567ad87bbaf56cbe53170dfd4abfa8aa132cf2"
+  },
+  "4’e böl.": {
+    "file": "tr-92780740285d6eb6.mp3",
+    "duration": 1.1,
+    "sha256": "79192ac328cbb7c35cb6ba7db7bee04af3a136ccd1c065dcfc7d49ff0b2de3c0"
+  },
+  "16 ÷ 4 = 4.": {
+    "file": "tr-d37310c803a6c382.mp3",
+    "duration": 2.020167,
+    "sha256": "a173e87a70bf5fc380dcad446bd0d774f62c4c802133c446f059743d2c17d5a3"
+  },
+  "Algoritmanın çıktısı 4.": {
+    "file": "tr-06eacb1b4b7c0362.mp3",
+    "duration": 1.590583,
+    "sha256": "41608c1f5ba008a79d6e78820f2365d486163995893e96fd436e29828f7b1d95"
+  },
+  "Girdi 10.": {
+    "file": "tr-523b6fb02d8cd98d.mp3",
+    "duration": 1.1,
+    "sha256": "b6c17455d2fdf8eb7c6289b1b4855d8e9849d7935a3b02b5662c744e396c60e7"
+  },
+  "10, 10’dan büyük değildir.": {
+    "file": "tr-74cf080700265c25.mp3",
+    "duration": 1.602208,
+    "sha256": "e7000b3e8bd08e5f64d4068ba6b24246bbec845690c8c973a5c1806a3f893bde"
+  },
+  "Hayır yolunu seç: 3 ekle.": {
+    "file": "tr-b78c95b6c20d8e22.mp3",
+    "duration": 1.619792,
+    "sha256": "c54e556932f620bc6b46c84e1a37f0d096ecd1a08b1d61d149b069ebd4b5a14b"
+  },
+  "10 + 3 = 13; iki yol birden uygulanmaz.": {
+    "file": "tr-942be645d5d8dbe8.mp3",
+    "duration": 3.065042,
+    "sha256": "79ce7000def2fdae2d4891f8dfef9f3d8a4ea7b9b6374ad5448045e47dfc6733"
+  },
+  "8 çift: 2’ye bölündüğünde kalan 0.": {
+    "file": "tr-bb1ed0e5c585684d.mp3",
+    "duration": 2.425958,
+    "sha256": "23548a469955813343eb9f6a255f4398b2954fccedbcb50ffe7fa09724bbd1d6"
+  },
+  "Çift yolu seçilir.": {
+    "file": "tr-643b8d0322ff5a8a.mp3",
+    "duration": 1.300333,
+    "sha256": "0b2a6ba7a4886de84f0407323d70ffe0f530c329700ab9239aea4a9ba7d5f18a"
+  },
+  "13 tek: kalan 1.": {
+    "file": "tr-80c91008ba542762.mp3",
+    "duration": 1.602208,
+    "sha256": "d70736bb0454ea1a761afc11e79a963ca769ffce0526a1cc9d7ec5c499dfdf43"
+  },
+  "Koşul, uygulanacak yolu belirler.": {
+    "file": "tr-e7a93d187151992c.mp3",
+    "duration": 2.066583,
+    "sha256": "a86d2ea609232e1d1e0c1ad7d46206c340cd660e3fe23a590b13e0c913d01b7b"
+  },
+  "Örnek başlangıç 3.": {
+    "file": "tr-bf0dc148a5998f18.mp3",
+    "duration": 1.346792,
+    "sha256": "dd82b0b7fad921b31701ac435ca6c9170998b2efc2a21c4498b0ea4a3e41ca5e"
+  },
+  "Üç kez 2 ekle: 5, 7, 9.": {
+    "file": "tr-bde88891323df0f0.mp3",
+    "duration": 2.765583,
+    "sha256": "fb63a339aba821b49e9e707cf1780c6358f0c2e54bccf8c001f34d009fc7256e"
+  },
+  "3 işlem yapıldı.": {
+    "file": "tr-bceaaa0b53d5e2ce.mp3",
+    "duration": 1.1,
+    "sha256": "d0256a83bd9e3b9a81bee882637c8f59fe698510371520853f5f03faa4c540e0"
+  },
+  "Başlangıç dahil 4 değer yazıldı.": {
+    "file": "tr-a290bdcfa495b375.mp3",
+    "duration": 1.985333,
+    "sha256": "90055a66104e90ab6dd91c3fc3c5860e612ffe4bb3b3f8b11c146909e3a6828b"
+  },
+  "Deneme girdisi 3 olsun.": {
+    "file": "tr-27d83a47b4d0ed9a.mp3",
+    "duration": 1.462875,
+    "sha256": "4f486393513a7bed62260e1b161223a6606af110aea8002cf883a0edfb91dfbc"
+  },
+  "Adımları beklenen sırayla izle.": {
+    "file": "tr-6a6711a6cc0191ad.mp3",
+    "duration": 1.996917,
+    "sha256": "90cf2788176504f2d2a2e2de9d0cd1b33810922fd8ce64a4130773f875681c12"
+  },
+  "Yanlış sırada ilk ara sonuç değişir.": {
+    "file": "tr-954a8c05affed8db.mp3",
+    "duration": 2.122042,
+    "sha256": "8e0f1989a61cf5cfba40462b15559f35f8c660cf1be1aa9c9c25941830d7e62a"
+  },
+  "Hatanın başladığı adımı bul.": {
+    "file": "tr-050e33f81d2c1bf2.mp3",
+    "duration": 1.613792,
+    "sha256": "91128fc4d80ef3a58d542627f7c2143f4ca1511040351f6857e5b1575f04e1ea"
+  },
+  "13 çift mi? Hayır.": {
+    "file": "tr-494888213fde3960.mp3",
+    "duration": 1.346792,
+    "sha256": "1e4a7c7f1a1c4ecd85cf088a13500f9d05220eec52599b26050896bdfb4a6e84"
+  },
+  "Tek sayıda 1 ekleme yolu uygulanır.": {
+    "file": "tr-15c0691a0f11a29e.mp3",
+    "duration": 2.023042,
+    "sha256": "1baf99349699c3ab1d9171c2da9fc0f6f27e8afa627386dfb0622a2b7926535f"
+  },
+  "13 + 1 = 14.": {
+    "file": "tr-6f68ca246aefaea0.mp3",
+    "duration": 1.822792,
+    "sha256": "793e1549ed97bf98d401022c726ba133f3c2120b1cdf1a2a6d850e79e0230dfd"
+  },
+  "13 için çıktı 14.": {
+    "file": "tr-dcf80190c402f507.mp3",
+    "duration": 1.45125,
+    "sha256": "f17054b335c074533423cdd9613994e93deb7a1d018136c41daf24619d475b05"
+  },
+  "8 çift mi? Evet.": {
+    "file": "tr-4e272db72507d316.mp3",
+    "duration": 1.428042,
+    "sha256": "5cca14dabc0e2caa0426150a2d9846425fc6757d51c592cb1dcf8081e62e1139"
+  },
+  "Çift sayıda yarısını alma yolu uygulanır.": {
+    "file": "tr-1cdb5aa9421376a0.mp3",
+    "duration": 2.207708,
+    "sha256": "6a11e808ceccc49f79c7650f858846e58ddce104007be943ed4715447593e516"
+  },
+  "8 ÷ 2 = 4.": {
+    "file": "tr-55bcc62f5fcceee3.mp3",
+    "duration": 1.822792,
+    "sha256": "7ac0af5a8d7f128b56d305ea152aa4ac08cff154a69ed9e090bcd8e5e6457a73"
+  },
+  "8 için çıktı 4.": {
+    "file": "tr-526746de79a00891.mp3",
+    "duration": 1.462875,
+    "sha256": "a4529454c56e0be2a06926c587b3744a6a1aebb647b64ebff7c4af0342725067"
+  },
+  "Her girdide koşulu yeniden denetle.": {
+    "file": "tr-baa888547bd05d3e.mp3",
+    "duration": 1.962083,
+    "sha256": "3d27bfa9ab11789c46a2dbae3e176dbb8f74cb75fb9d7b2de2259954bb49e4a5"
+  },
+  "13’te yalnız +1 yolu seçildi.": {
+    "file": "tr-479415be40d257b1.mp3",
+    "duration": 2.244333,
+    "sha256": "91d687d4e5d4c4e42636109216c8db4763eedf3150fdb8f13072fa4a5016d9c8"
+  },
+  "8’de yalnız ÷2 yolu seçildi.": {
+    "file": "tr-d6e6f2c3dcc43fa8.mp3",
+    "duration": 2.101417,
+    "sha256": "fbddb7fcebc6984bb843e0169e87a4890cccc19d4b1b4edca74ec42aded0df70"
+  },
+  "İki işlem yolu birlikte uygulanmaz.": {
+    "file": "tr-33e7bca045be696f.mp3",
+    "duration": 2.24075,
+    "sha256": "be6250546f0eaad1d5199f991131a0ef1239b32eebf11093953df392b6fd5ea0"
+  },
+  "Örnek torbada yalnız 4 kırmızı top.": {
+    "file": "tr-efe28330056d8ba2.mp3",
+    "duration": 2.24075,
+    "sha256": "d62336a4297946731760b5050305f20f24682d1508838900f97bfe87a74ee73b"
+  },
+  "Kırmızı çekmek kesin.": {
+    "file": "tr-2f61e7236f8a8e14.mp3",
+    "duration": 1.346792,
+    "sha256": "597ef61a244e3588f288d808a4d29f4a368b9780175eedc85105bb6a751c3ca0"
+  },
+  "Mavi top yok.": {
+    "file": "tr-6ef5b384ac927094.mp3",
+    "duration": 1.1,
+    "sha256": "af3fa442be817aa1c65c63748758df5c434bbc1a64570ec45b59cf9985a5b543"
+  },
+  "Mavi çekmek imkânsız; olasılığı 0.": {
+    "file": "tr-bfcbe5f122a03d55.mp3",
+    "duration": 2.226833,
+    "sha256": "50c8cd504afd3f0591b0c10158ee8d963cdfbd5ffd3c507ee19ebd8e19074505"
+  },
+  "Adil parada iki yüz var.": {
+    "file": "tr-5f82c0c0d9afced9.mp3",
+    "duration": 1.602208,
+    "sha256": "14487b045270f91441e817cf4b69ea9324d52899c126677113c83e4095bfd869"
+  },
+  "Yazı ve tura eşit olası.": {
+    "file": "tr-ee4e27189cd6def6.mp3",
+    "duration": 1.520917,
+    "sha256": "21bff5ef4e90dde80db9ae4e0cf5c68e900202c933cdf3f59c87c79f154d89b1"
+  },
+  "Yine de bir atışın sonucu bilinmez.": {
+    "file": "tr-d9545f561569a052.mp3",
+    "duration": 2.020167,
+    "sha256": "bf7a1c9b410ebaea8e7db307a1fa5ece8fdfc36a817194ea40e9dbbbe39a7e85"
+  },
+  "Daha olası veya eşit olası, kesin demek değil.": {
+    "file": "tr-7d9ef5da42408873.mp3",
+    "duration": 2.728375,
+    "sha256": "6bcf8d564e5860a6f00d1e4ac4a0ced0589763331fa8626fc1f932a1599f201f"
+  },
+  "Tahmin yaparken bilgi kullanırız.": {
+    "file": "tr-61c2cb6b37474949.mp3",
+    "duration": 1.866958,
+    "sha256": "3918633badb5c647e9890d1a389fd4335a857fd3abd12938763ea98abed928e0"
+  },
+  "Bulut, mevsim ve gözlemler birer kanıt olabilir.": {
+    "file": "tr-f81c1567255cb5bf.mp3",
+    "duration": 2.72075,
+    "sha256": "1c65890ae0b39bde4d14f8d8dd5bc5661449042282f77dafe54d9e10261f4556"
+  },
+  "Yeni bilgi beklentiyi değiştirebilir.": {
+    "file": "tr-cfcec7f89caf1500.mp3",
+    "duration": 1.996917,
+    "sha256": "afb5f2ed51f00f8de5868775b28c53ef570de68fef0f9a64cc72f989f9cbe9b0"
+  },
+  "Gerekçeli tahmin, kesin sonuç değildir.": {
+    "file": "tr-24a7fb0992140544.mp3",
+    "duration": 2.403292,
+    "sha256": "21fd35aa6f36552ec04031eeb1f4f7b42ce9353666155a13c17933a156fe5835"
+  },
+  "Önceki atışlarda yazı gelmiş olsun.": {
+    "file": "tr-9a631de30474f092.mp3",
+    "duration": 2.043375,
+    "sha256": "de891ff0ec297386208dea1d1a998cc1376d05372377c893f18f8446c5002f47"
+  },
+  "Bu, sonraki atışın turasını kesin yapmaz.": {
+    "file": "tr-54df3552369e3c03.mp3",
+    "duration": 2.519375,
+    "sha256": "a886ea4532387c609f3acfd83bf630b7b129935797a81a3ae2847c5bdce1f818"
+  },
+  "Adil parada tek deneme yine belirsiz.": {
+    "file": "tr-b96e1363b63c656a.mp3",
+    "duration": 2.137958,
+    "sha256": "48ccbe19774f1a9cc31c129cc553c7aa6a9cc8661115a6b998920b4a5f13ac86"
+  },
+  "Tahminini hangi bilgiye dayandırdığını belirt.": {
+    "file": "tr-4007be0422821bda.mp3",
+    "duration": 2.531,
+    "sha256": "b034af0b673726741a0e19f54eb403df18892ee807f07161e54508afbf65701c"
+  },
+  "Torbada 6 mavi, 2 sarı top.": {
+    "file": "tr-3f238c2f43a8854b.mp3",
+    "duration": 1.938875,
+    "sha256": "bf5f52fd9c9158bacb45fb74272bb8a0d1e03e538cefa59fd69b214aea3aa327"
+  },
+  "Toplar aynı büyüklük ve biçimde.": {
+    "file": "tr-8d20dccb25df1389.mp3",
+    "duration": 1.787958,
+    "sha256": "d424d726b1944ce34d422f800d956547cdbd7eb037599a16bce1e12b3d557d37"
+  },
+  "Her topun seçilme şansı eşit kabul edilir.": {
+    "file": "tr-fc53886b73284655.mp3",
+    "duration": 2.298792,
+    "sha256": "4f33d244e8840b75ad346b2cead23a083948e800eaec13bd1f777c069f250dd1"
+  },
+  "Renk sayılarını karşılaştırabiliriz.": {
+    "file": "tr-f916504c9380813b.mp3",
+    "duration": 1.855083,
+    "sha256": "1c2d51fadc1a6da02e7c1cf6db2ee5b68c781960d8d16e4b2041c22c21255022"
+  },
+  "Mavi 6, sarı 2.": {
+    "file": "tr-2eb51f5cf6dbcbf4.mp3",
+    "duration": 1.578958,
+    "sha256": "caadfe6a219eaae063ddc2f5a0005131c700d52e5cbe1aab7eafaf201485f95d"
+  },
+  "6, 2’den büyük.": {
+    "file": "tr-ad89642f66cc6641.mp3",
+    "duration": 1.393958,
+    "sha256": "c2409ea9ddf0b85c306cb691ef0aeda5377288d6d9994ef421a56c0fb21696d0"
+  },
+  "Mavi çekmek daha olası.": {
+    "file": "tr-1c438787e9d5f716.mp3",
+    "duration": 1.4745,
+    "sha256": "34b1a6da1dd24b76892008317864ccd4c40b198efcce20c2de9239f2464810fc"
+  },
+  "Sarı gelmesi yine de mümkündür.": {
+    "file": "tr-2c157cd4ba00700c.mp3",
+    "duration": 1.787958,
+    "sha256": "130fa33651f9dfcbab1184d1690167d2ae6b192ba638698058b2c173f637a7ab"
+  },
+  "Torbada yeşil top yok.": {
+    "file": "tr-3023deaca882f812.mp3",
+    "duration": 1.381583,
+    "sha256": "cd7ddddfc413bbc1e90dbaeb4fc0a9cdc355a22a06db03d7c44345c64173f056"
+  },
+  "Yeşil çekmek imkânsız.": {
+    "file": "tr-20189e92e8338f19.mp3",
+    "duration": 1.520917,
+    "sha256": "7d122d158380720d2e19c609cadb4b403ae5bdf6f7bb709c84d48d0a744473c3"
+  },
+  "Mavi daha olasıdır.": {
+    "file": "tr-7ef8958a79c602bd.mp3",
+    "duration": 1.288708,
+    "sha256": "15d91a5599ce18f2e8266297787a9eb17fcd5632ac74f3883768dbdd916f662a"
+  },
+  "Ama mavi kesin değildir.": {
+    "file": "tr-a89d18dcf4a6432e.mp3",
+    "duration": 1.509333,
+    "sha256": "eb0a16a7c9ce46ac3673c388b6802e448b33a9df05a8677f18ca140d1ccd274e"
+  },
+  "Örnek: 4 kırmızı, 2 mavi.": {
+    "file": "tr-07569c59797bacbc.mp3",
+    "duration": 2.043375,
+    "sha256": "4c688c8a5d849d4c91853796b142e306ea4a63856940725051758321125e70fb"
+  },
+  "Her top aynı özellikte.": {
+    "file": "tr-a96cc98913c2598f.mp3",
+    "duration": 1.602208,
+    "sha256": "5530b6b39abb696f782a3dbf5d8e2739831e9b30c1e5646558804c337379ee5a"
+  },
+  "Kırmızı sayısı daha fazla.": {
+    "file": "tr-8ae3edff30c21978.mp3",
+    "duration": 1.520917,
+    "sha256": "4f17439af555fa873595b0431bd91357b87cad4127cdffcdb9bece7ca8009d1b"
+  },
+  "Koşullar aynıysa kırmızı daha olası.": {
+    "file": "tr-f511e27f967f4c65.mp3",
+    "duration": 2.043375,
+    "sha256": "d2361187f492e03e47f722e650af6f5ef11914bc3f438ab8f5384f29242edc68"
+  },
+  "Önce çarkın 6 eş bölgesine bak.": {
+    "file": "tr-ac881bf3518fa66b.mp3",
+    "duration": 2.101417,
+    "sha256": "21b6eb3443e5e30d6a6f16bb0c8f106ad0d03567bd8e04d8b6b365b5da054707"
+  },
+  "4 sarı ve 2 mavi eş bölge var.": {
+    "file": "tr-b50ac4d0dd6dd039.mp3",
+    "duration": 2.414875,
+    "sha256": "b6e356c5371216efc7b7d03f93c53b30b67904640e521dd8116d1123df0a36f5"
+  },
+  "Şimdi bölgelerin büyüklükleri farklı.": {
+    "file": "tr-5b2dacd51b2cb87a.mp3",
+    "duration": 2.008542,
+    "sha256": "d791725abb216ba2e36b6b8c9187ad6d1b103ff3ffc6e3ee608a192d8192a9df"
+  },
+  "Eş olmayan bölgeleri yalnız sayarak karşılaştıramazsın.": {
+    "file": "tr-2f69668732bc26d2.mp3",
+    "duration": 2.983792,
+    "sha256": "32735b0ffb54501ca5c0531c0c69983fe5b71f21c34e9be474e4d0f3e083597b"
+  },
+  "Başlangıç: 4 kırmızı, 2 mavi.": {
+    "file": "tr-b59a16f05e39e5ca.mp3",
+    "duration": 2.380042,
+    "sha256": "ecb509731d562315da49849849042df159de0344ebc6727bb0ea148091671238"
+  },
+  "2 mavi eklersek 4 ve 4 olur.": {
+    "file": "tr-32168aa48a7179ea.mp3",
+    "duration": 2.147875,
+    "sha256": "3d01ca44c5e98e680b2d2ad550e7693b0c908dca15332e4fd98559c9df53f8f2"
+  },
+  "İki renk eşit olası hale gelir.": {
+    "file": "tr-e6debbe3efa068d1.mp3",
+    "duration": 1.938875,
+    "sha256": "06f43057cc250dd5ae66b7f5123ae5e11ef481ea70ebbb360c7596164b53d958"
+  },
+  "Farklı durum: kırmızı eklemek mavi şansını sıfırlamaz.": {
+    "file": "tr-14228bc8965d6b94.mp3",
+    "duration": 3.134708,
+    "sha256": "ea29a8c41cd9c8a72c5958b9471416977cc2aa34e8d89d8df0ab860740d2a395"
+  },
+  "Kırmızı daha olası.": {
+    "file": "tr-990951df79af01f5.mp3",
+    "duration": 1.18425,
+    "sha256": "a3bc59bb50e782cbcabf9f8ab0560a573b99dcbafabaac54202f747beab09879"
+  },
+  "Daha az olası mavi de gelebilir.": {
+    "file": "tr-ec359973d76f77af.mp3",
+    "duration": 1.787958,
+    "sha256": "6100d718b065ce47099f8800677e9fd3cec46dc8017a8cb3d50b07f1db715417"
+  },
+  "Tek sonuç önceki karşılaştırmayı geçersiz kılmaz.": {
+    "file": "tr-91c3a432f5b64d6b.mp3",
+    "duration": 3.007,
+    "sha256": "f2759043c3fc650c5fbf05cbd36e4b21bb3f5ce001c853e55cdf626950c45913"
+  },
+  "Daha olası olmak, kesinlik değildir.": {
+    "file": "tr-970df48f277ef370.mp3",
+    "duration": 2.205917,
+    "sha256": "b244203e1239da37abcbe6f7d79b540adaed34e47833145686aae3e815d5eb54"
+  },
+  "Başlangıçta 5 siyah top var.": {
+    "file": "tr-c97e36d6abc08305.mp3",
+    "duration": 1.880833,
+    "sha256": "5cb2c055e7e51109fff8dcfe8b87e1087cc12abc37af1af98ff577f57fdfa48e"
+  },
+  "Yalnız beyaz top eklenecek.": {
+    "file": "tr-dda118f02a84c663.mp3",
+    "duration": 1.846,
+    "sha256": "8d18d260bf2b7fb666e717af770e4343a0004626a8769afbd9adadaea693b1d7"
+  },
+  "Siyah sayısı değişmez.": {
+    "file": "tr-b514aa0e562a47a7.mp3",
+    "duration": 1.369958,
+    "sha256": "991c616b00a5fe176ed7bc21048debfbd85bffaaf725923e78feaa9fcfb3f456"
+  },
+  "Hedef beyaz sayısı da 5 olsun.": {
+    "file": "tr-a220ef3cd198d526.mp3",
+    "duration": 1.880833,
+    "sha256": "ab204c2e2b6cef7a5b2d177013e8bcd6826e06151a6c48674e01cf06c9e70193"
+  },
+  "Beyaz sayısı başlangıçta 2.": {
+    "file": "tr-7d4b6fd86eb884c8.mp3",
+    "duration": 1.869208,
+    "sha256": "bf13c500498a1debc81d612b041538ac4b81446476b362b5118c5a826f7d60f6"
+  },
+  "Bir beyaz ekle: 3.": {
+    "file": "tr-84c8eac1041e6a25.mp3",
+    "duration": 1.45125,
+    "sha256": "ef2a1b24ff4b430eed4886b67a2dcc81ec8dbe07441c12802aa243bc9bb9ac35"
+  },
+  "Bir beyaz daha: 4.": {
+    "file": "tr-139c90915a213696.mp3",
+    "duration": 1.486083,
+    "sha256": "eef80dd6398bc808af0ae7f94e50974fc33fef237d9257603195a6ef4ee93952"
+  },
+  "Bir beyaz daha: 5; sayılar eşitlendi.": {
+    "file": "tr-e57ba5d83defa6aa.mp3",
+    "duration": 2.647083,
+    "sha256": "a0da7c1274d8e733e5ee1665a2d99b696cc06a90651712d4c31c52ef3e3e49a4"
+  },
+  "Hedef 5 beyaz.": {
+    "file": "tr-488641c71846ab5e.mp3",
+    "duration": 1.121458,
+    "sha256": "a3b3f1c583fa13bf3b90fd8492ee73f636c119077e0155b7fd1d71effb312c5d"
+  },
+  "Başlangıçta 2 beyaz vardı.": {
+    "file": "tr-14f25a1bc751e9f8.mp3",
+    "duration": 1.695083,
+    "sha256": "35b0a4c253fe363b0f2e56bf3cdb855a438327d8abcb51f4d1c6e7f0dc99f7b8"
+  },
+  "5 − 2 = 3 beyaz eklendi.": {
+    "file": "tr-c2ec97a82cf4aa32.mp3",
+    "duration": 2.50775,
+    "sha256": "5ce48a0bd57237db5f6427cd2763098f7efb90526402734afd1495bd9f247ede"
+  },
+  "Artık iki renk eşit olası.": {
+    "file": "tr-a108785befd45bca.mp3",
+    "duration": 1.683458,
+    "sha256": "ae5bf69b94bb4084faff9907e6ce4bff5819dc1549460b4e6686ba6c9b68a5be"
+  },
+  "4 582 sayısına bak.": {
+    "file": "tr-e72d42679b5ca69c.mp3",
+    "duration": 2.089958,
+    "sha256": "afd43ac35d7de99a28824cceef6978bc2a5f616c24b5b6f6060d70851c9aaeeb"
+  },
+  "5, yüzler basamağında.": {
+    "file": "tr-dcac626964a3de54.mp3",
+    "duration": 1.648625,
+    "sha256": "aa8eeef3d81000161c8d24abb2e41d7ac1f2846d647cff6bd10b718f80e2003f"
+  },
+  "5 × 100 = 500.": {
+    "file": "tr-1ea66d68f1d52c37.mp3",
+    "duration": 1.869208,
+    "sha256": "956c81efce17edd93d3f3641949408d22f22d8785cbf040724387f5105687cca"
+  },
+  "Sayı 4 582.": {
+    "file": "tr-24d7222aaf164a07.mp3",
+    "duration": 1.619375,
+    "sha256": "4f4dda34341def25fd8025652be5a0665e1b77b75c577c120aead9a62a2bc8de"
+  },
+  "Yüzlerdeki rakam 5.": {
+    "file": "tr-5490e4d58c420899.mp3",
+    "duration": 1.376125,
+    "sha256": "8f189be35b1d26f77a79af3b3818f99ce284526c1b6be704bdc1fef5b7f26081"
+  },
+  "5 × 100.": {
+    "file": "tr-a2a44eb828045613.mp3",
+    "duration": 1.1,
+    "sha256": "bdd74f88c0d287ae97d1e29eccf015b61a68ce8721039fe489bd44136560f27f"
+  },
+  "Basamak değeri 500.": {
+    "file": "tr-b9e29a66098f5fbe.mp3",
+    "duration": 1.265542,
+    "sha256": "721eaf54beda090aec9202d5f7cda605b77389eed6b536e0c81654e091f83cee"
+  },
+  "Nokta bir konumu gösterir; A, B gibi büyük harflerle adlandırılır. Doğru iki yönde sınırsız uzanır. Doğru parçasının iki ucu, ışının ise bir başlangıç noktası vardır.": {
+    "file": "tr-3ca9210453541239.mp3",
+    "duration": 9.0985,
+    "sha256": "bf7dccbae5aed645284d7fec6b23e2da7d77c01dca43ec7c092d8c0c47ba6da7"
+  },
+  "Cetvel, iki nokta arasındaki doğru parçasını çizmeye ve uygun ölçeğiyle uzunluk ölçmeye yarar. Çizgi kalınlığı gerçek geometrik doğrunun bir özelliği değildir.": {
+    "file": "tr-359707ddbe8162c4.mp3",
+    "duration": 8.684292,
+    "sha256": "72b9b5f9a42acb02e62740b08dc6373e8ba37acebee229ec152a2e4e222a497e"
+  },
+  "Pergelde merkez sabit kalırken açıklık korunursa merkeze aynı uzaklıktaki noktalar çizilir. Çember çizerken pergelin açıklığı yarıçaptır.": {
+    "file": "tr-e5b10be35b4f2e5e.mp3",
+    "duration": 7.925917,
+    "sha256": "4193c0754e9fbd896f8e318851fbd7f6b731383134db6ebc568c0a5822956f43"
+  },
+  "Birbirini dik kesen doğruların oluşturduğu açılar 90° olur. Düzlemde birbirinden farklı paralel doğrular uzatılsa da kesişmez. Çizimin görünüşü yerine ölçü veya araçla kurulan koşulunu kontrol et.": {
+    "file": "tr-72322ca0d3deb3b1.mp3",
+    "duration": 10.729958,
+    "sha256": "2c53eb11a51526bb40e2c64116ddf979fdb47cc11b719fea5c1f1ec478e51a8b"
+  },
+  "Cetvelin 0 işareti hizasında A noktasını belirle.": {
+    "file": "tr-ad615eeff3d790a4.mp3",
+    "duration": 3.1115,
+    "sha256": "61a5203178e8ebed0f14c0f2514c0b22400c5138a348996099d5981d421d0aee"
+  },
+  "Aynı kenar üzerinde 6 cm işareti hizasına B noktasını koy.": {
+    "file": "tr-46b55d031990f812.mp3",
+    "duration": 3.889958,
+    "sha256": "daea46890d4e4f91ab1fed004e1973fc89f0dee70e86fb4d294e40fc1903fc13"
+  },
+  "A ve B noktalarını cetvelin düz kenarı boyunca birleştir; iki uç arasını yeniden ölç.": {
+    "file": "tr-79a433b896c1104b.mp3",
+    "duration": 4.886583,
+    "sha256": "24a53cd15cc109505bc6257dcf585212a0fc436b9e0e520e991de8ae2dbc79da"
+  },
+  "Açının ortak başlangıç noktasına köşe denir. Ölçü birimi derecedir ve ° ile gösterilir. 0° ile 90° arasındaki açı dar, 90° açı dik, 90° ile 180° arasındaki açı geniş açıdır.": {
+    "file": "tr-fc94c9decc695af4.mp3",
+    "duration": 13.545917,
+    "sha256": "12c5d7acf9aa2499b3372ca465b1157f1801bbd36095ac1d4bd79a0400e49519"
+  },
+  "Doğru açı 180°, tam açı 360° ölçüsündedir. Bir köşeyi çevreleyen bitişik açıların toplamı bir tam açı olur.": {
+    "file": "tr-3b3c7f550c8c6827.mp3",
+    "duration": 7.302708,
+    "sha256": "a5039f4c02f72fb1b967d681916ee0221d9e5e6b54e8b3849a2a02e64258280b"
+  },
+  "İletkinin merkezini açının köşesine koy. Sıfır çizgisini kollardan biriyle hizala. O koldaki 0° ile başlayan ölçeği izleyip diğer kolun geçtiği değeri oku.": {
+    "file": "tr-0a7abac631202115.mp3",
+    "duration": 8.809958,
+    "sha256": "748aeaf8cdf961d3e3bc018cb1fdf285c88a437abf5c9ffcc26515d1b24e1098"
+  },
+  "Kesişen iki doğrunun karşılıklı, yani ters açıları eşittir. Bir doğru üzerinde yan yana bulunan komşu açıların toplamı 180° olur; bu bilgi ölçümü denetlemeyi sağlar.": {
+    "file": "tr-d1bfb45f9a5a6872.mp3",
+    "duration": 9.603333,
+    "sha256": "3e585ae5da3c1a3c714742f96cfccba3a21553fabe870c1c9c55283bf08674bf"
+  },
+  "Bir doğru açının ölçüsü 180° olur.": {
+    "file": "tr-8decea0d394eb846.mp3",
+    "duration": 2.542583,
+    "sha256": "b31c2933da908498915565451b25d46af2dd5d4248af35e7a63b9b18cb013353"
+  },
+  "İki komşu açının toplamını 180° olarak düşün.": {
+    "file": "tr-549dde9b64b3fce4.mp3",
+    "duration": 2.948958,
+    "sha256": "a9049926aa79141ff80aae42f8878017fdbd31a6010a17633e248ae04e43789f"
+  },
+  "Bilinmeyen açıyı 180 − 65 işlemiyle bul.": {
+    "file": "tr-e3b07b1d0c70deba.mp3",
+    "duration": 2.867667,
+    "sha256": "311ab1dfc38a9d934fedbfb9b9436ac98ff7802f3d20889b056e8267106588b7"
+  },
+  "En az üç doğru parçası uç uca birleşerek kapalı bir sınır oluşturursa çokgen elde edilir. Üçgenin 3, dörtgenin 4, beşgenin 5 kenarı ve aynı sayıda köşesi vardır.": {
+    "file": "tr-ed8ac30eb97554e4.mp3",
+    "duration": 9.926542,
+    "sha256": "ac16786069f7d8d41dcfb5118371ac7d6604b49cab69a21547248e1f411b62f9"
+  },
+  "Çemberin düz kenarı ve köşesi yoktur; bu nedenle çokgen değildir. Açık bir kırık çizgi de kapalı olmadığı için çokgen değildir.": {
+    "file": "tr-d8ef68ff40e6e20f.mp3",
+    "duration": 6.8615,
+    "sha256": "7b01f42781b597d264eaa69d5864125c9fcfccf8b0e6862544c5d9f2a92aa2fd"
+  },
+  "Bir çemberin merkeziyle üzerindeki herhangi bir nokta arasındaki uzaklık yarıçaptır. Merkezden geçen ve çemberde iki ucu olan doğru parçası çaptır; çap yarıçapın iki katıdır.": {
+    "file": "tr-da56b4b12d59aa89.mp3",
+    "duration": 9.717583,
+    "sha256": "276ecd918af943a7a8af5eda64c169949fac0fa96cdea0daa849935e775eb51b"
+  },
+  "İki çemberin merkezleri A ve B, ortak noktalarından biri C olsun. AC ve BC, ilgili çemberlerin yarıçaplarıdır. Yarıçaplar eşitse AC = BC olur ve ABC üçgeni ikizkenardır. Her iki yarıçap AB uzunluğuna da eşitse eşkenar üçgen oluşur.": {
+    "file": "tr-329510fb47f73665.mp3",
+    "duration": 14.201292,
+    "sha256": "e54b065c85d5c56021bd7051884a84ecd915853ba8229ee2f5201742357c3ef4"
+  },
+  "C, A merkezli çember üzerindedir; AC = 4 cm.": {
+    "file": "tr-d759b17378f5b1a1.mp3",
+    "duration": 3.785667,
+    "sha256": "ef975d446cf1b2db8d3325d84a9dcf1be96ca641d8b9068d88f80837d81be0a0"
+  },
+  "C, B merkezli çember üzerindedir; BC = 4 cm.": {
+    "file": "tr-00a1593260dbe77d.mp3",
+    "duration": 3.789958,
+    "sha256": "e3c86b8a4bfe676637aafda106abfaf4ffd0e6f95d7d837f796bb6bf442dd83a"
+  },
+  "AC ve BC eşit olduğundan üçgen ikizkenardır; AB uzunluğu ayrıca verilmemiştir.": {
+    "file": "tr-2452a91b7686d62b.mp3",
+    "duration": 4.729958,
+    "sha256": "32f1f73c83a4e681c470716f2dd32e96ceb2ad6cec56cf345f7f7f7343136864"
+  },
+  "Sağdan başlayarak birler, binler, milyonlar ve milyarlar bölükleri vardır. Her bölük yüzler-onlar-birler düzeniyle okunur.": {
+    "file": "tr-fa425b4021b3ef4d.mp3",
+    "duration": 7.047292,
+    "sha256": "827d1447d019d2df6821bf6825a3062fc6a7bb8f194f04b17bab2e8136855b73"
+  },
+  "12 304 005 sayısı “on iki milyon üç yüz dört bin beş” diye okunur. Tamamı sıfır olan bölük okunmaz ama yazılırken üç sıfırla korunur.": {
+    "file": "tr-558aa2018f5897a7.mp3",
+    "duration": 8.276042,
+    "sha256": "77cd62f7ea22dd066b4eabdcfaf1d6a19d5f89d196203af361266efa53c3bff6"
+  },
+  "Yazıyla verilen sayıyı önce bölüklere ayır. “Sekiz milyon yirmi üç bin kırk” ifadesinde bölükler 8 | 023 | 040 olur; sayı 8 023 040 yazılır.": {
+    "file": "tr-76b7ef54a10fa762.mp3",
+    "duration": 9.298875,
+    "sha256": "bc4ae3bd286b026a0885ace4f1b1cca2c15156c6c29d407d0c9b2ec97395aa54"
+  },
+  "Basamak sayısı ile rakamın değeri farklıdır. Baştaki sıfırlar doğal sayının basamak sayısını artırmaz; sayının içindeki ve sonundaki sıfırlar ise konumu korur.": {
+    "file": "tr-284a3fb4d6aa3e58.mp3",
+    "duration": 8.134125,
+    "sha256": "d1a965b29c06b9ad5e975defc0b0daf5e986cbd9dd3fa3a2bc04383f41288177"
+  },
+  "Milyonlar bölüğü: 306.": {
+    "file": "tr-3b5863ed5a43495f.mp3",
+    "duration": 1.846,
+    "sha256": "fb6bec5a7dad12def57a2510a5afe08569ea4ecba1fde797d489d36cb4cccc90"
+  },
+  "Binler bölüğü: 042; üç haneli yazmak gerekir.": {
+    "file": "tr-8f2932c7bbc0bba3.mp3",
+    "duration": 3.247708,
+    "sha256": "39b197ce4fddf23d58bd923e072799eedb0eccc41ce1d7fc5829caafc0a6bb4a"
+  },
+  "Birler bölüğü: 007. Bölükleri sırayla birleştir.": {
+    "file": "tr-c29396fe91165b64.mp3",
+    "duration": 3.584083,
+    "sha256": "e8c9e6316174084d3a23fac67d97774cd5bed9a3d2f91ba6731d73716a12654d"
+  },
+  "4 rakamının sayı değeri her yerde 4’tür. 4 000 içindeki basamak değeri 4 000, 40 içindeki basamak değeri 40 olur.": {
+    "file": "tr-d50f4f210f1a0260.mp3",
+    "duration": 8.433708,
+    "sha256": "442dbaeda26fb626369eea622d47312dae239bbc84ebe57fccefbaec79475394"
+  },
+  "Sağa doğru her basamakta basamak birimi onda bire iner; sola doğru on katına çıkar. Birler, onlar, yüzler, binler, on binler ve yüz binler diye ilerler.": {
+    "file": "tr-6920a298d77b21ce.mp3",
+    "duration": 9.483083,
+    "sha256": "dd7c31e0d202491faa69e5018404844bb82a74e28059b28cfba4af1f228e8f34"
+  },
+  "305 042 = 300 000 + 5 000 + 40 + 2 olarak çözümlenir. Sıfır bulunan basamakların toplam katkısı sıfırdır; bunları yazmasak da sayıyı oluştururken yerlerini koruruz.": {
+    "file": "tr-567ecd55d8cb6cf2.mp3",
+    "duration": 12.686458,
+    "sha256": "29677e490805d294f926b92174d1c210dcc21e86f77ee7b980efff228d629cbb"
+  },
+  "Çözümleme toplamını yeniden birleştirerek sonucu kontrol et. 7 milyon + 20 bin + 6 ifadesi 7 020 006 eder; boş basamakları atlamak başka bir sayı oluşturur.": {
+    "file": "tr-b699eb915cc12fc9.mp3",
+    "duration": 9.938167,
+    "sha256": "752225f7a35aa4d0d3fe14a514d8a16eee259e0ade7059fe10057123a0ff67a0"
+  },
+  "Sağdan bölükleri ayır: 8 | 306 | 205.": {
+    "file": "tr-dca53521cf6bd92b.mp3",
+    "duration": 2.93125,
+    "sha256": "bea8415dbc969aa5218aa1f606d306234a25f41fe6784f5abcc8e40782186546"
+  },
+  "3, yüz binler basamağındadır: 3 × 100 000.": {
+    "file": "tr-2b3c247d34e1bc61.mp3",
+    "duration": 3.591833,
+    "sha256": "116f9e75eb93d0c99fa12955b909f721eec24500c064bb380100a816f3e15da7"
+  },
+  "2, yüzler basamağındadır: 2 × 100.": {
+    "file": "tr-dbc26ce63a090bc3.mp3",
+    "duration": 2.774,
+    "sha256": "6bed32104dd54e3792099e685f1bb9ccaf8d88a1c2b09679f0f748fb0580280a"
+  },
+  "Bir soruda “fazla” sözcüğünü görmek her zaman toplama yapılacağı anlamına gelmez. Örneğin büyük miktar biliniyor, küçük miktar soruluyorsa farkı çıkarmak gerekir.": {
+    "file": "tr-abf08d7956681ed2.mp3",
+    "duration": 8.451708,
+    "sha256": "4be2d222a62468c5cbb0a2c08561fbda4cd743878d9a460a0e1980d25ca47b39"
+  },
+  "Çözüm planını küçük adımlara ayır; her ara sonucun ne anlama geldiğini birimiyle yaz. Gereksiz bilgileri işleme katma.": {
+    "file": "tr-5531e56ab6e175e7.mp3",
+    "duration": 6.431083,
+    "sha256": "9f38671435c588cbe48ca79dd28edcd743efffac7fb339a39d2c04c51342617f"
+  },
+  "Toplamayı çıkarma, çarpmayı bölme ile denetleyebilirsin. Bölmede bölen × bölüm + kalan = bölünen olmalı; kalan bölenden küçük olmalıdır.": {
+    "file": "tr-ffa951fba3b4ca05.mp3",
+    "duration": 7.778708,
+    "sha256": "260512466ef92963900c302da111387149c5127be9bc1a3d3d290e188fdd8ec4"
+  },
+  "Kalanın yorumu duruma bağlıdır: 73 kişiyi 20 kişilik araçlara yerleştirmek için 4 araç gerekir, çünkü kalan kişiler de bir araca ihtiyaç duyar. Tahmin ederek sonucun büyüklüğünün makul olup olmadığını da incele.": {
+    "file": "tr-d49c7e8ea2a4fa05.mp3",
+    "duration": 11.807083,
+    "sha256": "b1e589dbb968ba6437d5823c160b424780f6b091955d2cf602b6ee836edf1fb4"
+  },
+  "Önce toplam kalemi bul: 8 × 24 = 192.": {
+    "file": "tr-a0bfccad5b60f18c.mp3",
+    "duration": 3.835125,
+    "sha256": "e7c3c50e7823d0a2e6a0010b508683363b912b87fc4902dee7d9a2562af83e30"
+  },
+  "Dağıtılan 57 kalemi toplamdan çıkar: 192 − 57 = 135.": {
+    "file": "tr-441b166c201534f7.mp3",
+    "duration": 5.035208,
+    "sha256": "b7b7402811ea399af409d6e74c222f3edc0da88931d96f9f3b4ec2e9b527a84c"
+  },
+  "Kontrol: 135 + 57 = 192.": {
+    "file": "tr-8d64a1e5e1292115.mp3",
+    "duration": 3.436583,
+    "sha256": "3ee773e29d059414f036b80bf094552061170c0617100ce20c66bf712dfdbaf9"
+  },
+  "Dikdörtgende karşılıklı kenarlar eşittir. Uzun kenara a, kısa kenara b dersek çevre a + b + a + b = 2 × (a + b) olur.": {
+    "file": "tr-5a4b5532f19562a2.mp3",
+    "duration": 8.266042,
+    "sha256": "3f00c35e89c796cf8ce75ae1f53c7a103c5369a55172953fc1a5187795656775"
+  },
+  "Çevre ve bir kenar verilince önce çevreyi ikiye bölerek iki komşu kenarın toplamını bul. Bilinen kenarı çıkarınca öteki kenar elde edilir.": {
+    "file": "tr-749d02dd14ef3d22.mp3",
+    "duration": 7.337542,
+    "sha256": "f7cefc003277fffb84bd263b95c284cad9e4645ea1d6987e505fbea6214407ab"
+  },
+  "Birim kareleri satır ve sütun sayısıyla sayabiliriz: alan = a × b. Kenarlar cm ise çevre cm, alan cm² ile ifade edilir.": {
+    "file": "tr-a34b0dc2a6bdd1bc.mp3",
+    "duration": 8.804917,
+    "sha256": "28768996a078e478532606c53d65c004d69687fd2fd7537a2ed3de2b1c3d1330"
+  },
+  "Alanı 24 cm² olan doğal sayı kenarlı dikdörtgenler 1 × 24, 2 × 12, 3 × 8, 4 × 6 olabilir. Bunların çevreleri aynı değildir. Sonucun hangi büyüklüğü ölçtüğünü mutlaka belirt.": {
+    "file": "tr-51afedf8b5cf6169.mp3",
+    "duration": 12.822042,
+    "sha256": "12ef00d83152bce01af7e6be576bbe027fc8073da0dbf9e564a44646eff45aba"
+  },
+  "İki komşu kenarın toplamı 30 ÷ 2 = 15 cm.": {
+    "file": "tr-eb884a17dd63c742.mp3",
+    "duration": 3.483,
+    "sha256": "a505cb0ef7bdc4d477995185bc74f76d5fd566397f38ba073144c3b78398d0bd"
+  },
+  "Diğer kenar 15 − 9 = 6 cm.": {
+    "file": "tr-8c86260a4f1996dd.mp3",
+    "duration": 2.983792,
+    "sha256": "fa618ae46a68bdbd17085d23ba4031f3401a4babcd93db13493bf10e28cc8a79"
+  },
+  "Alan 9 × 6 = 54 cm²; kontrol için çevre 2 × (9 + 6) = 30 cm.": {
+    "file": "tr-dec1a962678e1b90.mp3",
+    "duration": 7.15175,
+    "sha256": "109dce6b10c5e63165bf3879ed2557e3422e6f1caae697f5192d4d955b90dd92"
+  },
+  "Payda bütünün kaç eş parçaya bölündüğünü, pay bu parçalardan kaçının alındığını gösterir. Eş olmayan parçalarda yalnız parça saymak doğru kesri vermez.": {
+    "file": "tr-2b2ad61720b41256.mp3",
+    "duration": 8.205667,
+    "sha256": "b3c31899e7a4e0ae76a1045091cae7560224a27122478ce4f81ac906ceea31e2"
+  },
+  "3/4, aynı büyüklükte dört parçanın üçünü anlatır. Sayı doğrusunda 0 ile 1 arası dört eş aralığa ayrılır; üçüncü işaret 3/4 olur.": {
+    "file": "tr-6a07d10cb338c426.mp3",
+    "duration": 7.672208,
+    "sha256": "d4d5b32b151da836db0e3519acb1ee640f71e4437d4ea5d8b5e38b422ff49567"
+  },
+  "Pay ve paydayı aynı pozitif sayıyla çarpmak veya ortak bölenle bölmek kesrin değerini değiştirmez. 1/2 = 2/4 = 50/100 olur.": {
+    "file": "tr-7181c6432dc6031a.mp3",
+    "duration": 7.918,
+    "sha256": "45d896d292404388a78ce089904507977a7aacd6090310023ca8bc200e2b7551"
+  },
+  "Paydası 10 veya 100 olan kesirleri ondalık gösterime çevirebiliriz: 7/10 = 0,7; 25/100 = 0,25. Yüzde, yüz eş parçadan kaçını aldığımızı belirtir: 25/100 = %25.": {
+    "file": "tr-c8ce20947f201b52.mp3",
+    "duration": 12.424083,
+    "sha256": "cc2bc395148931447c5d600864c4b79b6801de8b559495299cdbe60ac25b8918"
+  },
+  "Yenilen miktar 6/8 olur.": {
+    "file": "tr-aad6e42aaf16774b.mp3",
+    "duration": 1.869208,
+    "sha256": "c22b3532ea462cfd31c58e7ea053e58e0565955986b4d55612824790337be712"
+  },
+  "Pay ve paydayı 2’ye böl: 6/8 = 3/4.": {
+    "file": "tr-12acc44b13bacee7.mp3",
+    "duration": 3.193958,
+    "sha256": "631c07483d08ea6e77686582678bc72b7d8056c2c43b6996b33fe7f83f5ca1a0"
+  },
+  "Paydayı 100 yap: 3/4 = 75/100; bu da %75’tir.": {
+    "file": "tr-cc3e306075ef80a5.mp3",
+    "duration": 4.388958,
+    "sha256": "3d479ea736f6d0f5e98419e317bd7eae6b63312f802f01f4f1a5fa752ad58f64"
+  },
+  "Paydalar eşitse parçaların büyüklüğü aynıdır; payı büyük olan kesir büyüktür. 5/8 > 3/8 olur.": {
+    "file": "tr-909303d8bc0595eb.mp3",
+    "duration": 5.371792,
+    "sha256": "a1aca08fca6a36363871a54b3184411d629c7b01bd4b5ab9b32581d8388e1df1"
+  },
+  "Paylar eşitse bütün daha az parçaya bölündüğünde her parça daha büyüktür: 2/3 > 2/7. Bu kural aynı bütün için geçerlidir.": {
+    "file": "tr-74be8e2914ab12d5.mp3",
+    "duration": 6.7545,
+    "sha256": "d4026ff117c1eac9d53d4d7da9e11c186b832aff8aae4da1e1be55e003784c3c"
+  },
+  "Paydaları farklı kesirleri denk kesirlere çevirerek karşılaştırabiliriz. 2/3 ile 3/4 için 8/12 ve 9/12 yazılır; 2/3 < 3/4 olur.": {
+    "file": "tr-016fb6c6fcfba1b7.mp3",
+    "duration": 8.368625,
+    "sha256": "5306dff1fbbf1b49ae28485876f0ee72ae0e227b94a5c372bab09ac0f3904e92"
+  },
+  "0, 1/2 ve 1 gibi referansları kullanmak bazen daha kısadır. 3/8 yarımdan küçük, 5/8 yarımdan büyük olduğundan 3/8 < 5/8. Farklı büyüklükteki iki pastanın kesirleri aynı olsa bile yenilen gerçek miktar eşit olmak zorunda değildir.": {
+    "file": "tr-7dca2b3e46fed282.mp3",
+    "duration": 14.076708,
+    "sha256": "c772986fdcd7a46763320d08ffc47a2adfc5e6608cb701524f322a939f45bde4"
+  },
+  "3/5 kesrini paydayı 10 yaparak yaz: 3/5 = 6/10.": {
+    "file": "tr-14868a432f242cd8.mp3",
+    "duration": 3.493083,
+    "sha256": "22726cde5c1211796118ebe9b18f6eabf13f798ed3fa38e29738fbf924b06864"
+  },
+  "6/10 ile 7/10’da parça büyüklüğü aynı olur.": {
+    "file": "tr-925cf2b9ddd45b19.mp3",
+    "duration": 2.705125,
+    "sha256": "2341aa7285b3ce427bd282246f65a5ba0a0482f2560f44764d101be618868bb1"
+  },
+  "6 < 7 olduğundan 6/10 < 7/10.": {
+    "file": "tr-3fcb902074bcfeb7.mp3",
+    "duration": 1.9505,
+    "sha256": "89b1352429ac0f794587b4da2dc7bbe884167f9dabb1ed5cfcd61b0c90867860"
+  },
+  "“Sınıfımızda en çok hangi meyve tercih ediliyor?” sorusu kategorik veriyle cevaplanabilir. Sorunun kimler hakkında olduğu ve herkesin kaç tercih yapacağı açıkça belirtilmelidir.": {
+    "file": "tr-ca769c8b1ec723a3.mp3",
+    "duration": 9.891708,
+    "sha256": "290b57eac515c3d5b2848038e2934493652b62f19334196beb31813d297b220b"
+  },
+  "Tarafsız sorular sor; aynı kişiyi iki kez sayma. Bir kişi tek tercih yapıyorsa sıklıkların toplamı katılımcı sayısını verir. “Boy uzunluğu kaç santimetre?” ise kategorik değil, sayısal veri toplar.": {
+    "file": "tr-f0fd1f3a4caea9c1.mp3",
+    "duration": 11.107667,
+    "sha256": "cc7d0a1d5176f5c786a5cc72e81af660c4456bf87f809c7c9bf3f083a6ff7182"
+  },
+  "Her kategorideki gözlem sayısına sıklık denir. Sütun grafiğinde kategori adları, sayıları gösteren eksen ve ölçek açık olmalıdır.": {
+    "file": "tr-e814da7699e34626.mp3",
+    "duration": 7.616167,
+    "sha256": "93b7014b94bdf10f3beb7e5047aca649b08cf3dfccb8d6ff2a9f87df87cfa7cd"
+  },
+  "Tabloyu yorumlarken en sık ve en az görülen kategoriyi, toplamı ve farkları incele. Yalnız sınıfından topladığın verilerle bütün okulun veya ülkenin tercihini kesin söyleyemezsin.": {
+    "file": "tr-8efb3acb3f749c30.mp3",
+    "duration": 9.649958,
+    "sha256": "77dd6d6794d207c3b962f5ab58c9aeea6bfe28761be75bd793e461ea3417c5f9"
+  },
+  "Toplamı bul: 9 + 6 + 5 = 20.": {
+    "file": "tr-64638d535e12ed31.mp3",
+    "duration": 3.204375,
+    "sha256": "d42e2a948d8f1ed4b22e98397b4c0b5428b26397e206c59bd5964d627b5690a7"
+  },
+  "Sıklıkları karşılaştır: 9 en büyük sayıdır.": {
+    "file": "tr-ad65f9beb261c298.mp3",
+    "duration": 2.885542,
+    "sha256": "4c4405a42245ed2a304999d9b31c58ed8364e0fc89088364f74012b717c928f5"
+  },
+  "Kararı yalnız araştırmaya katılan sınıf için ifade et.": {
+    "file": "tr-74901e846e92a395.mp3",
+    "duration": 2.786417,
+    "sha256": "6c333f2da340f0e93af08994bd72e9426bbd80b595b00ae2745da24ba6834353"
+  },
+  "Başlık araştırmanın konusunu; eksen adları ve ölçek sayıların anlamını açıklar. Eşit aralıkların eşit büyüklükleri göstermesi gerekir. Sıfırdan başlamayan eksen farkları olduğundan büyük gösterebilir.": {
+    "file": "tr-092ec8c1e8206818.mp3",
+    "duration": 10.472208,
+    "sha256": "2d80afa3dca952ca7bec38794ee717060788acf6bb1f37070e068814bf40e9f5"
+  },
+  "Veri kaynağı, katılımcı grubu ve araştırma zamanı verilmezse sonucu sınırlı yorumla. “En çok tercih” ifadesi “herkesin tercihi” demek değildir.": {
+    "file": "tr-3132f0c4c05a1aa2.mp3",
+    "duration": 7.562833,
+    "sha256": "961ee83b86a0016e75cee319c73297549c7794bd3ec2b9692cc8878ed8c76caf"
+  },
+  "Önce iddiayı açıkça yaz, sonra tablodaki sayılarla karşılaştır. Bir kategorinin diğerinden kaç kişi fazla olduğunu fark alarak kontrol et.": {
+    "file": "tr-3b4005a77206228a.mp3",
+    "duration": 7.545833,
+    "sha256": "0715ca6c31b4326f0ac313626c0e6a1b86e10924c62b8b4765dfe6e8056b8275"
+  },
+  "İki ayrı ankette aynı kategori sayısı farklı çıkabilir; katılımcı sayıları ve grupları farklıysa yalnız ham sayılara bakarak bir grubun daha çok sevdiğini söylemek yeterli olmayabilir.": {
+    "file": "tr-a28d78a250cf9de7.mp3",
+    "duration": 9.262292,
+    "sha256": "cd01630bad383590700f50f079c926182385b2d3873b3378f4fddbe4609cd393"
+  },
+  "Herkes sözü 20 kişinin tamamını ifade eder.": {
+    "file": "tr-341c337db94deda2.mp3",
+    "duration": 2.497958,
+    "sha256": "b8fa55c93c9312b20abec1493d2442892bef5e1fa740f500de3cb0bd9093d98c"
+  },
+  "Romanı seçen kişi sayısı 9’dur; 9, 20’ye eşit değildir.": {
+    "file": "tr-2f1a8498c5cc93ab.mp3",
+    "duration": 4.075125,
+    "sha256": "a4a694d481501998272eb9942d0c63c7b29e0ed2436f8c9833d0fe428bda7d62"
+  },
+  "Verinin desteklediği daha dar cümleyi kur.": {
+    "file": "tr-0cc8b36233bb0b82.mp3",
+    "duration": 2.072958,
+    "sha256": "8158db0654b31685246863e52c5b86a87798c07b3504e56d2285a5ca31be8614"
+  },
+  "8 + 4 = 7 + 5 ifadesinde iki tarafın değeri 12’dir. Eşittir işareti yalnız “cevap geliyor” işareti değildir; iki tarafın aynı miktarı anlattığını gösterir.": {
+    "file": "tr-a0dfafa150679b35.mp3",
+    "duration": 9.131792,
+    "sha256": "9dbe649495a182092efbb090d0cad681f8b21237565c83055b8085a01b8df83b"
+  },
+  "Boş kutu veya soru işareti bilinmeyen sayıyı temsil edebilir. Amaç, iki tarafı eşit yapan değeri bulmaktır.": {
+    "file": "tr-39076760392d56b6.mp3",
+    "duration": 5.874667,
+    "sha256": "6f3fe5cc378347d0235edb645f65f2440aa25dece87d55bcfc10cd285653d11b"
+  },
+  "Bir eşitliğin iki tarafına aynı sayı eklenir veya iki taraftan aynı sayı çıkarılırsa eşitlik sürer. İki taraf aynı sayıyla çarpılabilir; sıfırdan farklı aynı sayıya bölünebilir.": {
+    "file": "tr-0c6db2bf904d672a.mp3",
+    "duration": 9.271,
+    "sha256": "df7f6f749fd9a5c7bc2177cd51e06c2696a2a699499ad9f4e5dbb6c5c5a795ac"
+  },
+  "Yalnız bir tarafa işlem yapmak genellikle eşitliği bozar. Bulduğun bilinmeyeni başlangıçtaki kutunun yerine koyup iki tarafı ayrı ayrı hesaplayarak kontrol et.": {
+    "file": "tr-8fe739e70857ba63.mp3",
+    "duration": 8.277917,
+    "sha256": "dfc6df34f5827d6202900a8c743b3462c6dd7d12e4d88f8b4f688f09522e248c"
+  },
+  "Her iki taraftan 7 çıkar: □ + 7 − 7 = 19 − 7.": {
+    "file": "tr-0dc11659d1fe8ef1.mp3",
+    "duration": 4.7485,
+    "sha256": "1de99321eaf80d8868497f619c836bbab8346b58787f7eb45cc97457f92781b2"
+  },
+  "Sol tarafta yalnız □ kalır; sağ taraf 12 olur.": {
+    "file": "tr-fd47525e53a1ecd8.mp3",
+    "duration": 3.102458,
+    "sha256": "95694dd451fe0f9eae319c84c3a18f45a2b389f40dc43759fb13c3055ed04cea"
+  },
+  "Yerine koy: 12 + 7 = 19.": {
+    "file": "tr-76aa624e550d3832.mp3",
+    "duration": 2.602667,
+    "sha256": "ca82a55e924961ff7dcd018e6bd23bdf281e45dc9105af6ea2a3c98500855fe6"
+  },
+  "Toplamada a + b = b + a, çarpmada a × b = b × a olur. Buna değişme özelliği denir. 7 + 12 ile 12 + 7 aynı toplamdır.": {
+    "file": "tr-dacea525924bf5ab.mp3",
+    "duration": 9.125458,
+    "sha256": "fb46f242d73bbae4d16a78b9ea369aedfc223dcb8ecfe2149153db1820df9d10"
+  },
+  "Birleşme özelliği sayıları hangi ikiliden başlayarak gruplayacağımızı değiştirir: (2 + 8) + 5 = 2 + (8 + 5). Sayıların sırası değil, parantezin yeri değişir. Çarpmada da geçerlidir.": {
+    "file": "tr-6cd11adeebcf2d5e.mp3",
+    "duration": 11.602833,
+    "sha256": "bc9335ae9f5865ef284406dc57c01816da31aa6c83b9d612d24659fa2d4dcebb"
+  },
+  "Çarpma toplama üzerine dağılır: 6 × (10 + 3) = 6 × 10 + 6 × 3. Çıkarma için de 6 × (10 − 3) = 6 × 10 − 6 × 3 olur.": {
+    "file": "tr-dabb8fbf39e7609d.mp3",
+    "duration": 10.746042,
+    "sha256": "75c4ce4d33ab0b13adfb9929f5c15885451c8a2e81d756e4abec6e71e72d43c0"
+  },
+  "Çıkarmada 12 − 5 ile 5 − 12 aynı değildir; bölmede de yer değiştirme genelde geçerli değildir. Dağılırken dışarıdaki sayıyı parantezdeki her terimle çarpmayı unutma.": {
+    "file": "tr-08a2f95d297c49ba.mp3",
+    "duration": 9.780792,
+    "sha256": "7807f57b5651c0ea6b61f06541156422f7788b78fb8508f78488c3ac16130885"
+  },
+  "16’yı 4 × 4 biçiminde ayır: 25 × (4 × 4).": {
+    "file": "tr-d77b85e49695a548.mp3",
+    "duration": 4.450125,
+    "sha256": "65f86e2b398f66aada4a86160c18d0adaf9a04ba64841eae3269fef0e77a15cd"
+  },
+  "Birleşme özelliğiyle (25 × 4) × 4 yaz.": {
+    "file": "tr-91af7a7705ea6b1a.mp3",
+    "duration": 3.460708,
+    "sha256": "82ab9cd4c517142c3ec08d076a9c3fa4f804de288947de0d34172247bb8598d0"
+  },
+  "100 × 4 = 400.": {
+    "file": "tr-bfdbb4bba2e2b5a0.mp3",
+    "duration": 2.008542,
+    "sha256": "21e2e2e99e48930d7812d282feebad15649cf1ab3ee72fd42557f10f2048b46b"
+  },
+  "Önce parantez içindeki işlemleri yap. Sonra çarpma ve bölmeleri soldan sağa, son olarak toplama ve çıkarmaları soldan sağa hesapla.": {
+    "file": "tr-3968d9a53625e0e0.mp3",
+    "duration": 7.093708,
+    "sha256": "b1e8f8b72bc2d60841ce22217edd01ee10265dbe06f206c0820148e1ec463b50"
+  },
+  "Çarpma ve bölme aynı önceliktedir; çarpma her zaman bölmeden önce yapılmaz. Aynı şekilde toplama ile çıkarma arasında da üstünlük yoktur.": {
+    "file": "tr-e29ec63a55843600.mp3",
+    "duration": 7.489958,
+    "sha256": "512b3d3bdb111fbdf4f544fb5ffdd4d30d4c75c60ecac06890f54475d292ff5e"
+  },
+  "“3 kutuda 8’er kalem ve masada 5 kalem” için 3 × 8 + 5 yazılır. “3 kutunun her birinde 8 kalem ve 5 boya” için 3 × (8 + 5) yazılır; parantez durumu değiştirir.": {
+    "file": "tr-b928aacd07d6c011.mp3",
+    "duration": 10.867,
+    "sha256": "c2dfa3b7a22e1c8bb1d3482bed6b9a490c86d069c529c5d14e230683a768978d"
+  },
+  "Her ara adımda yaptığın işlemi yerine tek sonuç yazarak ilerle. Parantezi kaldırmadan önce içindeki hesabı tamamla; uzun ifadeyi tek adımda zihinden yapmak yerine iz bırak.": {
+    "file": "tr-f7afd8e2d10e0ea3.mp3",
+    "duration": 9.093083,
+    "sha256": "8b02d8598f66b4f7a525046dc793c2246f57d91a9f80be3c127e4cba9be41698"
+  },
+  "Parantez: 2 + 3 = 5.": {
+    "file": "tr-891bc584f7378439.mp3",
+    "duration": 2.260167,
+    "sha256": "20ac6f5b027a88bb4b102c3fe0a3ce318cb0fe5c19e9d74cbe4fc9893c840774"
+  },
+  "Çarpma: 4 × 5 = 20.": {
+    "file": "tr-30ddcee1d928b2c7.mp3",
+    "duration": 2.205917,
+    "sha256": "06b388c899c2cf72cc06b53d3c8b62bcb9149c6ead3c14fe6ef188176fd49ea7"
+  },
+  "Çıkarma: 30 − 20 = 10.": {
+    "file": "tr-3743b835dc517bf5.mp3",
+    "duration": 2.229125,
+    "sha256": "cafe26c0ff9a2c87553af1f531e2da4baa4b8bfa634d0d1a01907807f3462799"
+  },
+  "4, 7, 10, 13 örüntüsünde her adımda 3 eklenir. 30, 25, 20 örüntüsünde her adımda 5 çıkarılır. Şekiller ise “daire, kare, üçgen” gibi bir tekrar bloğu oluşturabilir.": {
+    "file": "tr-c41d6dead960f08a.mp3",
+    "duration": 11.165667,
+    "sha256": "5a9c3cb77171a37df58630f76091d40cff4e8d74898a240cc30c072891cd0092"
+  },
+  "Ardışık farklar sabit değilse çarpma veya değişen farkları düşün. 2, 4, 8, 16 dizisi iki katına çıkar; “her zaman aynı sayı eklenir” kuralı bu diziyi açıklamaz.": {
+    "file": "tr-b0c996adb0bc5141.mp3",
+    "duration": 9.777667,
+    "sha256": "b1892af8a278a06b7bd7a63d52810322278a45bdb6363387e04e55479a292f3d"
+  },
+  "İlk terimi 5 ve artışı 4 olan örüntünün n. terimi 5 + 4 × (n − 1) ile bulunabilir. Çünkü ilk terime ulaşmak için hiç artış yapılmaz.": {
+    "file": "tr-cda4a192bf8e838c.mp3",
+    "duration": 8.974542,
+    "sha256": "3175a8545979735a4c934b3f6c77be18202448e380f265bebbdf9be53860cfd2"
+  },
+  "Sonlu sayıda terim birden çok kuralla sürdürülebilir. Bu çalışmalarda verilen “her adımda 3 ekle” gibi kuralı veya açıkça belirtilen en basit düzeni kullan; kural olmadan tek mümkün devam varmış gibi düşünme.": {
+    "file": "tr-d489b239e2ff7c01.mp3",
+    "duration": 10.84375,
+    "sha256": "33848d91bd58bee5ed1b4d50e0e923fd9a63e870661a7f1ddf95492b3f4bf41f"
+  },
+  "1. terim 6’dır; 8. terime kadar 7 artış yapılır.": {
+    "file": "tr-422db5744e406b63.mp3",
+    "duration": 3.193958,
+    "sha256": "a246b7e19007e78ea23724533652894c7b2d39e6849fc09d67aeba37a780127e"
+  },
+  "Toplam artış 7 × 5 = 35.": {
+    "file": "tr-d4f3364b52156ec0.mp3",
+    "duration": 2.441542,
+    "sha256": "fcc12dde8cffe478eefb559dd3d4661a858cc194bb5442292c2b9541d8e08ee8"
+  },
+  "Başlangıca ekle: 6 + 35 = 41.": {
+    "file": "tr-ffec2cb43ebae0f7.mp3",
+    "duration": 3.329917,
+    "sha256": "8b7283ad42ac154dd96e6f7e02ad402dce627dba05bb1bad505fbf44124a6a79"
+  },
+  "“Bir sayı al, 4 ekle, sonucu 3 ile çarp, sonucu yaz” bir algoritmadır. Girdi 2 ise önce 6, sonra 18 elde edilir. İşlem sırasını değiştirmek başka bir çıktı verebilir.": {
+    "file": "tr-496862406f3ff299.mp3",
+    "duration": 10.791125,
+    "sha256": "1eca759976f469337567bded8e4d5f0eb9768696ba46f3f4957ac8d18db1590c"
+  },
+  "Adımlar herkesin aynı biçimde anlayacağı kadar açık olmalı. “Biraz artır” yerine “5 ekle” gibi ölçülebilir yönerge kullan.": {
+    "file": "tr-4751605a946f3305.mp3",
+    "duration": 6.698958,
+    "sha256": "8b79372cbcd1883f49bb63b80880e377e3a556fc3f7d44065715e3e49e8321ed"
+  },
+  "Algoritmayı küçük girdilerle adım adım izle; her ara sonucu yaz. Beklenen sonuçla karşılaştırarak hatanın hangi adımda ortaya çıktığını bul.": {
+    "file": "tr-aedf68b152cfeadd.mp3",
+    "duration": 7.3555,
+    "sha256": "498e22ac472325d4aa44ad762cc947318ce54716204cbc338fa287f67dfee741"
+  },
+  "Bölme içeren adımlarda sıfıra bölme gibi tanımsız işlemleri denetle. Bir tekrarlı işlem kullanılıyorsa kaç kez yineleneceği veya ne zaman duracağı belirtilmelidir.": {
+    "file": "tr-34932b8808036860.mp3",
+    "duration": 8.7075,
+    "sha256": "c731466ecbee9c6c40df8098148117962243c59aea81402a23f92168be6511ba"
+  },
+  "“Sayı 10’dan büyükse 3 çıkar; değilse 3 ekle” yönergesi iki yoldan yalnız birini seçer. Girdi 10, “10’dan büyük” koşulunu sağlamaz; eşitlik ile büyüklüğü ayır.": {
+    "file": "tr-1a4aaa7b63203365.mp3",
+    "duration": 8.668625,
+    "sha256": "56bfeabbf343bf36e81ebd980c6a1150fea6a44bb826004edf7b74946a6a154c"
+  },
+  "Bir sayı ikiye bölündüğünde kalan 0 ise çifttir. Böyle bir koşul farklı işlem yolları seçmekte kullanılabilir.": {
+    "file": "tr-73cc3effd35dc3f6.mp3",
+    "duration": 6.02,
+    "sha256": "96c1dbaf41141cb344785b1c770071863e4aea0e72d45a4502131bcb8220a50c"
+  },
+  "Tekrarlanan adımı bir izleme tablosunda gösterebilirsin: başlangıç değeri, 1. adım, 2. adım gibi. Sayılan şeyin işlem sayısı mı yoksa yazılan değer sayısı mı olduğunu ayırt et.": {
+    "file": "tr-71b715c0ab497d00.mp3",
+    "duration": 9.346917,
+    "sha256": "afc63164a7082bbe05f2578f1e31280e329760d892d8d2cb0a491cf50570b5f7"
+  },
+  "Algoritma yanlış sonuç veriyorsa bir deneme girdisi seç ve ilk ayrılma noktasını bul. Sonucun rastlantıyla doğru çıkması bütün girdiler için doğru çalıştığını göstermez.": {
+    "file": "tr-5c0dd79ee30bb9e3.mp3",
+    "duration": 9.113833,
+    "sha256": "7bf33216b94c9091f3bf6fc4d1f771b8085018dee6f3776c50199739dd594481"
+  },
+  "13 tek olduğundan 1 ekleme yolu seçilir: 13 + 1 = 14.": {
+    "file": "tr-634eb4aea563b0bc.mp3",
+    "duration": 4.283833,
+    "sha256": "99c2961d166b21d89d4981e7fc3436902924139e31b49febb0667d0d190b18b1"
+  },
+  "8 çift olduğundan yarısını alma yolu seçilir: 8 ÷ 2 = 4.": {
+    "file": "tr-bd470e0a3128f223.mp3",
+    "duration": 4.099958,
+    "sha256": "5ab861c74e7800d98025e1811b0ace962b22de954faf15051b7331a8b0d9c726"
+  },
+  "Her girdide koşula uygun yalnız bir yol uygulanır.": {
+    "file": "tr-0c7f5ee329ef72ba.mp3",
+    "duration": 2.497958,
+    "sha256": "36ae0b285bf1f61fb52570efe82ef3fef25d13b5e559ce4327dbfa2d788707b0"
+  },
+  "Bir torbada yalnız kırmızı toplar varsa mavi top çekmek imkânsız; kırmızı çekmek kesindir. İmkânsız olasılık 0, kesin olasılık 1 ile gösterilir; diğer olasılıklar bu aralıktadır.": {
+    "file": "tr-7400be69837bc992.mp3",
+    "duration": 9.473083,
+    "sha256": "bce5b5455b8dd8eaffd5834fdceb76a9a92dae9eeee075cc1222d5104d2d4cd3"
+  },
+  "Bir olayın gerçekleşmesi bekleniyor diye kesin olduğunu söyleme. Adil bir madeni parada yazı ve tura eşit olasıdır; yine de tek atışın sonucu önceden bilinmez.": {
+    "file": "tr-e4138c41105a6e10.mp3",
+    "duration": 8.031583,
+    "sha256": "5d33b19ba3ca6a37e38ff60ac2da0dd92d54ee4d2d0f7a0086745840d5b3469c"
+  },
+  "Hava tahmini gibi durumlarda kişilerin beklentileri ellerindeki bilgiye göre değişebilir. Gerekçesiz bir tahmin yerine bulut, mevsim veya güvenilir tahmin bilgisi gibi kanıtlar kullanılır.": {
+    "file": "tr-1d7991a5edb055a5.mp3",
+    "duration": 9.230583,
+    "sha256": "8f655537984dd3f5ad4e1cbd3169df213f3909344032748a7f813cf06ed5ac0c"
+  },
+  "Aynı olay hakkında farklı beklentileri konuşurken hangi bilginin kullanıldığını belirt. Daha önce birkaç kez aynı sonuç çıkması sonraki denemede öteki sonucun kesin geleceği anlamına gelmez.": {
+    "file": "tr-5cdb3d21f5f0607f.mp3",
+    "duration": 9.613208,
+    "sha256": "33d1588b351e9d6f9ec26a93f12b9cf52ea05b2acb538dc8bd601b241d71fe2d"
+  },
+  "Aynı biçim ve büyüklükte toplar için her topun seçilme şansını eşit düşün.": {
+    "file": "tr-6a6ceb48fcbadd58.mp3",
+    "duration": 3.831292,
+    "sha256": "4f414631f838ccce4dd1c831dbf242da86aadc80cafb1fa7fdd2afa8df917299"
+  },
+  "Mavi toplar sarı toplardan daha çoktur; mavi çekmek daha olasıdır.": {
+    "file": "tr-af28e69f903c5d43.mp3",
+    "duration": 3.692,
+    "sha256": "45c4e555e6f97ab599cc0eab2443e326bbec3411bb733e9f10aaecc409632aa7"
+  },
+  "Yeşil top yoktur; yeşil çekmek imkânsızdır.": {
+    "file": "tr-ecc57da5e991a94a.mp3",
+    "duration": 2.494542,
+    "sha256": "a1c7eb810120d86065ce656c276e4a0f69487ab45eab9c479123671a7c9286d6"
+  },
+  "Aynı büyüklükte topların bulunduğu bir torbada bir rengin sayısı arttıkça, diğer koşullar aynı kalırken o rengi çekme beklentimiz artar. İki rengin sayısı eşitse çekilme şansları eşit olur.": {
+    "file": "tr-bfa5aef0be20a537.mp3",
+    "duration": 10.181958,
+    "sha256": "f5b1644a8463213f77e2fe2017c7851ccc5a65609f6e72707533e2e5bf45a313"
+  },
+  "Çarkta eş büyüklükteki bölgeler eşit şanslı kabul edilebilir. Renkli bölgelerin sayısı ancak bölgeler eşit büyüklükteyse doğrudan karşılaştırılır; büyük bir bölgeyi küçük bölgeyle yalnız sayarak karşılaştırma.": {
+    "file": "tr-257f1c02ae39674b.mp3",
+    "duration": 10.923292,
+    "sha256": "c7899f435783f439667fbed28bf95fdb24e15f74d9415814c64993deacd991b5"
+  },
+  "4 kırmızı, 2 mavi toplu torbaya 2 mavi top eklersek iki renk eşit sayıda olur. Kırmızı eklemek ise kırmızıyı daha olası yapar; mavi çekmeyi imkânsız yapmaz.": {
+    "file": "tr-5a7f9617ef5a5d57.mp3",
+    "duration": 9.032208,
+    "sha256": "55510c471817df55a4ddda27bf2be12550c9d090f3c530589dfc553ccb3dd2e2"
+  },
+  "Tahminin gerçekleşmemesi, her zaman kötü bir gerekçe kullandığın anlamına gelmez. Daha az olası olaylar da gerçekleşebilir. Olayın sonucuyla önceden yapılan olasılık karşılaştırmasını ayırt et.": {
+    "file": "tr-a2b98613e7362e3d.mp3",
+    "duration": 10.565625,
+    "sha256": "99f417096a3546191f14ba4633d1d9b720a9d50baf1a2e195f43874e15c35dbd"
+  },
+  "Siyah sayısı 5 olarak kalır.": {
+    "file": "tr-060082a8fcf107bc.mp3",
+    "duration": 1.822792,
+    "sha256": "a6dccbc11b38fccf28704dddf770bcb57b35bf1006942a1df2e19aff0962711c"
+  },
+  "Eşit olasılık için beyaz sayısının da 5 olması gerekir.": {
+    "file": "tr-9b7113e40aa9c0dd.mp3",
+    "duration": 2.843917,
+    "sha256": "878f1af969714956f5500c85ead752fad2e1410dd57ee98161c91824675a31ad"
+  },
+  "Eklenecek beyaz sayısı 5 − 2 = 3.": {
+    "file": "tr-1e90ae46c30cb9fc.mp3",
+    "duration": 2.92575,
+    "sha256": "752f466ae59954a308dde3fdf7094fa67886c2251f24f2f9cd4e24908457a4c7"
+  },
+  "Cetvelde A 2 cm, B 6 cm çizgisinde. AB uzunluğu kaç cm?": {
+    "file": "tr-2415799e42ffd7e6.mp3",
+    "duration": 5.305958,
+    "sha256": "91a3909f2f7eefcae97e2e111433c3ed41840ec13a325ccf679521c29159a0bd"
+  },
+  "İpucu: B noktasının cetvel değerinden A’nın değerini çıkar.": {
+    "file": "tr-f9ca098a7eca4b89.mp3",
+    "duration": 3.204375,
+    "sha256": "91e86af30dd2408c7313296b068245817ea4d854dc41a8c9014abbb04d759da4"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 6 − 2 = 4 cm.": {
+    "file": "tr-72d87ef4ef5749a8.mp3",
+    "duration": 5.000458,
+    "sha256": "1eec0693b76a6ac3ddad726a50836cc92d9313c0f93491e825cb1515b3b6e27f"
+  },
+  "AB = 2 cm, BC = 3 cm. B, A ile C arasında. AC kaç cm?": {
+    "file": "tr-851aac1cae475f22.mp3",
+    "duration": 6.3915,
+    "sha256": "fbf69f4c83e2750db25e85bf88876f38153f9efa476d62c39225588c2f166edb"
+  },
+  "İpucu: A’dan C’ye giderken AB ve BC uzunluklarını birlikte al.": {
+    "file": "tr-c1078232ca664a24.mp3",
+    "duration": 4.0645,
+    "sha256": "1ed6c44c316685a9c3be81828303fb0686ec0f9f0f3b7a4e896ec573c7e499f8"
+  },
+  "Çözümü birlikte inceleyelim. Ardışık uzunluklar toplanır: 2 + 3 = 5.": {
+    "file": "tr-54a1764289b70e59.mp3",
+    "duration": 4.845042,
+    "sha256": "1accb450838d7a137bbe2957eaa52ea42d569b84651e6dc6bef6c4ad72fe9a7d"
+  },
+  "Pergelin açıklığı 2 cm. Çizilen çemberin yarıçapı kaç cm?": {
+    "file": "tr-1c21b7d8f3532475.mp3",
+    "duration": 4.403917,
+    "sha256": "5b8094a1b0b4c827d3ef28e46c2d22a5a72465d0fb45214093033c1ef3f09ea2"
+  },
+  "İpucu: Pergelin uçları arasındaki açıklık, merkezden çembere olan uzaklıktır.": {
+    "file": "tr-e0a93a4dd7c65958.mp3",
+    "duration": 4.585958,
+    "sha256": "776195441724fc973231f32de41ee6c98d79c7901d69cf5c51f70194682ab917"
+  },
+  "Çözümü birlikte inceleyelim. Pergelin sabit açıklığı yarıçaptır.": {
+    "file": "tr-71fd1a66df6775a7.mp3",
+    "duration": 3.5875,
+    "sha256": "cd326d157cceef4d55d6be75ab28f560bc587f68e4c1a2a29c868852b0a81b4e"
+  },
+  "Bir doğru parçası 4 cm. Orta noktadan bir uca uzaklık kaç cm?": {
+    "file": "tr-e9b300e8342c435f.mp3",
+    "duration": 4.621583,
+    "sha256": "e3491c9450d864e30c1a089eca34ef216e0facdf2372342af007617ce0caaee1"
+  },
+  "İpucu: Orta nokta, doğru parçasını iki eş uzunluğa ayırır.": {
+    "file": "tr-e6fd59f87e22684f.mp3",
+    "duration": 4.156375,
+    "sha256": "d841eea7bd55292b5275edf10ce089b8e49b7e4357877cc2a6a4db73e186f018"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 4 ÷ 2 = 2 cm.": {
+    "file": "tr-b2cbcdef9b47e421.mp3",
+    "duration": 5.096792,
+    "sha256": "6528edcebea9e15f235e8d9d8e75dc81235c30cb135ed9219f6bcb90b1b912c3"
+  },
+  "Cetvelde A 3 cm, B 8 cm çizgisinde. AB uzunluğu kaç cm?": {
+    "file": "tr-728b867553227df8.mp3",
+    "duration": 5.549583,
+    "sha256": "9b1e611420d68ba71246f213a4e5ba5e958ce774e3a7d0e465d22a09bab25c09"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 8 − 3 = 5 cm.": {
+    "file": "tr-31420651198da260.mp3",
+    "duration": 5.057708,
+    "sha256": "75c7077625d2f30bc4e052d91a989f4f9f99da89e73c0bda4752e6732168b613"
+  },
+  "AB = 3 cm, BC = 4 cm. B, A ile C arasında. AC kaç cm?": {
+    "file": "tr-1be6b7ab65471ad5.mp3",
+    "duration": 6.499458,
+    "sha256": "58d75235eedb0acd9a4f4480c5abed031a38e9bf134275e79dba00647b6f74a0"
+  },
+  "Çözümü birlikte inceleyelim. Ardışık uzunluklar toplanır: 3 + 4 = 7.": {
+    "file": "tr-01e77232953670c5.mp3",
+    "duration": 4.829708,
+    "sha256": "bc4e7794a072e6a3c0d67550ca7230a0ce03aa194391880bcabb06607a0e9ae3"
+  },
+  "Pergelin açıklığı 3 cm. Çizilen çemberin yarıçapı kaç cm?": {
+    "file": "tr-fc40baea84946b48.mp3",
+    "duration": 4.376458,
+    "sha256": "0b95c5a582f46d5e4207bf51ba049fc71dbe9d81aeac0a462a6589dd50826699"
+  },
+  "Bir doğru parçası 6 cm. Orta noktadan bir uca uzaklık kaç cm?": {
+    "file": "tr-713b52e7c8b0de68.mp3",
+    "duration": 4.771708,
+    "sha256": "58e5e610aacc2bc87bc66f57c2ca63656ae0ef3342831a14a65bb5b1131c8cfd"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 6 ÷ 2 = 3 cm.": {
+    "file": "tr-51a615d4c3356c25.mp3",
+    "duration": 4.759375,
+    "sha256": "ed151b3e49510f4756c3a90ce8d028fb453995087638c2325f51203e3aa86324"
+  },
+  "Cetvelde A 4 cm, B 10 cm çizgisinde. AB uzunluğu kaç cm?": {
+    "file": "tr-9bada43772fa8256.mp3",
+    "duration": 5.344333,
+    "sha256": "6f7bcea9220b211f103e2654179f2847288948417583c1a6ac00d609d7e20c1a"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 10 − 4 = 6 cm.": {
+    "file": "tr-ef64f54f1f50339f.mp3",
+    "duration": 4.969958,
+    "sha256": "693b3efeec3e44006767d7e3ddf52eaa031d1b5e82e8db42ed705eddce4056da"
+  },
+  "AB = 4 cm, BC = 2 cm. B, A ile C arasında. AC kaç cm?": {
+    "file": "tr-baaf4b5f8429b7f3.mp3",
+    "duration": 6.577958,
+    "sha256": "14e0ca1c5f093151080a2e365f5980dc1b4091ee4f6b21bcde886e5eac639d63"
+  },
+  "Çözümü birlikte inceleyelim. Ardışık uzunluklar toplanır: 4 + 2 = 6.": {
+    "file": "tr-84864f8a42217f7a.mp3",
+    "duration": 4.993958,
+    "sha256": "114fd2bcdbcfdbd38bb4094f0d6cf9aa694e6d716eae351c0a0dcd0780ef1f32"
+  },
+  "Pergelin açıklığı 4 cm. Çizilen çemberin yarıçapı kaç cm?": {
+    "file": "tr-e7fefaf72f2c1fea.mp3",
+    "duration": 4.3295,
+    "sha256": "cd17a485d4e1c9c67dd76f42a28ca84acb85babe6cd0d94d2b49b124c4a97f4e"
+  },
+  "Bir doğru parçası 8 cm. Orta noktadan bir uca uzaklık kaç cm?": {
+    "file": "tr-fe58dcdad8e35225.mp3",
+    "duration": 4.922667,
+    "sha256": "517f3e3b16f43f07cbf7d671dc29e817034e7a63e842244ca8710b6d4473cd27"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 8 ÷ 2 = 4 cm.": {
+    "file": "tr-06cbbfc320263e47.mp3",
+    "duration": 5.212875,
+    "sha256": "a5c3fec09e073a7885cfbb5c54305ac2024b5f8408adb210b26daa834bf906b7"
+  },
+  "Cetvelde A 5 cm, B 9 cm çizgisinde. AB uzunluğu kaç cm?": {
+    "file": "tr-ec07e52930abd333.mp3",
+    "duration": 5.518333,
+    "sha256": "d49a5a84b3491335bb178c0acd632b3daeabf89f943c024bca9bf94ca29e008a"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 9 − 5 = 4 cm.": {
+    "file": "tr-f98d3f7ae4dd88d0.mp3",
+    "duration": 4.975417,
+    "sha256": "38e6b9c4b6138b36599e14f10892ec4603e1330abcc486147b8c4d026aacf32a"
+  },
+  "AB = 5 cm, BC = 3 cm. B, A ile C arasında. AC kaç cm?": {
+    "file": "tr-a788925dc6751e2b.mp3",
+    "duration": 6.44825,
+    "sha256": "b86de35a0f9f92edf28f27c25309642a8c6f7570931222e286ac8e3b1f684244"
+  },
+  "Çözümü birlikte inceleyelim. Ardışık uzunluklar toplanır: 5 + 3 = 8.": {
+    "file": "tr-bcd60d4b2bacee69.mp3",
+    "duration": 4.938625,
+    "sha256": "dc5201108be2129db3e0d5ca225b6c911333e9c1f330cca637b75769ce416ea0"
+  },
+  "Pergelin açıklığı 5 cm. Çizilen çemberin yarıçapı kaç cm?": {
+    "file": "tr-1b8213af19f3b134.mp3",
+    "duration": 4.469875,
+    "sha256": "5e5ebe1099dcc254c3f257c4dd184bd4826ed8b9f600d0fc281352732809dd81"
+  },
+  "Bir doğru parçası 10 cm. Orta noktadan bir uca uzaklık kaç cm?": {
+    "file": "tr-937f9477927cb8cb.mp3",
+    "duration": 4.678833,
+    "sha256": "6a3acecf6e4dd0e71a28345a62c2c40f1eae5b93ebb4646d9f61c92afd08d782"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 10 ÷ 2 = 5 cm.": {
+    "file": "tr-b6540cbac89ffb35.mp3",
+    "duration": 4.825958,
+    "sha256": "79365becc574e7db7a9f4420ed8db4cc4565183fe53d444c0a900521250ee6e2"
+  },
+  "Cetvelde A 6 cm, B 11 cm çizgisinde. AB uzunluğu kaç cm?": {
+    "file": "tr-e364a90c6c9286e7.mp3",
+    "duration": 5.477125,
+    "sha256": "5ebc83a17663815d452a709a0ca132497c1de8a875b18a073f9a5759e487abc3"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 11 − 6 = 5 cm.": {
+    "file": "tr-75448587cf51074b.mp3",
+    "duration": 5.024583,
+    "sha256": "0abc5b37e56ac932ec75c5ad80767a1882945d68526460c1ff8c703451e763a8"
+  },
+  "AB = 6 cm, BC = 4 cm. B, A ile C arasında. AC kaç cm?": {
+    "file": "tr-2f8d3a14a25b4920.mp3",
+    "duration": 6.287708,
+    "sha256": "682de0fceb341f70b849e9f184ed4846c38d3151c4241e2aff2d3de05b019bae"
+  },
+  "Çözümü birlikte inceleyelim. Ardışık uzunluklar toplanır: 6 + 4 = 10.": {
+    "file": "tr-ab749ccafb40c059.mp3",
+    "duration": 4.667167,
+    "sha256": "bcf92da8bdba6a714e25d8a0f48b2eb55aec64206d58adf57c8e22109cbd931e"
+  },
+  "Pergelin açıklığı 6 cm. Çizilen çemberin yarıçapı kaç cm?": {
+    "file": "tr-6e6a324023cbbb3f.mp3",
+    "duration": 4.539208,
+    "sha256": "9118833fcbc38d9978abff238cff76f4cd64ce2a0f4868d28f3e4609eecb7d16"
+  },
+  "Bir doğru parçası 12 cm. Orta noktadan bir uca uzaklık kaç cm?": {
+    "file": "tr-ddd9bbc567f06a18.mp3",
+    "duration": 4.598958,
+    "sha256": "10d2032116709b3a84fc3f46be68bcb423f1eaa05d17198541e25cb8853baff5"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 12 ÷ 2 = 6 cm.": {
+    "file": "tr-21488812c3f2d335.mp3",
+    "duration": 4.714375,
+    "sha256": "d304b5ce622ac93b367ede3b0906dfebd1ac68ed69d567240fcd8770dd857cb1"
+  },
+  "Cetvelde A 7 cm, B 13 cm çizgisinde. AB uzunluğu kaç cm?": {
+    "file": "tr-6197965dbd5ff89b.mp3",
+    "duration": 5.31375,
+    "sha256": "5ca2f5cde6751b6f883761cba979b33eff1e4927953e3bf00b923d750af4da94"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 13 − 7 = 6 cm.": {
+    "file": "tr-a1f477e5c92ace3e.mp3",
+    "duration": 4.937083,
+    "sha256": "5e025fee5a9e318406f7e75b0ad0b8e09085a3807d5dc28b01f640654e35918e"
+  },
+  "AB = 7 cm, BC = 2 cm. B, A ile C arasında. AC kaç cm?": {
+    "file": "tr-0792d265407aae7e.mp3",
+    "duration": 6.581417,
+    "sha256": "1e56bec1b05fa3318e71566b774d8bcd42e08c33bef8b30950dd7eb6e4c5be29"
+  },
+  "Çözümü birlikte inceleyelim. Ardışık uzunluklar toplanır: 7 + 2 = 9.": {
+    "file": "tr-bc8a054a799a4618.mp3",
+    "duration": 4.963458,
+    "sha256": "d142b59e810308328cbe41c42db11d5bdc897ab11e2ba1a2ae220ea715c592d8"
+  },
+  "Pergelin açıklığı 7 cm. Çizilen çemberin yarıçapı kaç cm?": {
+    "file": "tr-7406edcc3bfcc09b.mp3",
+    "duration": 4.435042,
+    "sha256": "62934056b5c1af304f4ff8a65e9df1822f1f62f2616277a04d9645ada67bf518"
+  },
+  "Bir doğru parçası 14 cm. Orta noktadan bir uca uzaklık kaç cm?": {
+    "file": "tr-6b624331597c8525.mp3",
+    "duration": 4.708542,
+    "sha256": "7ec8c827717cec646c97b41ee909cb80784e6828f1049166d3522fe0c105e8fd"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 14 ÷ 2 = 7 cm.": {
+    "file": "tr-11077988586c9ed2.mp3",
+    "duration": 5.025292,
+    "sha256": "065b0492e74592f4ad6fe40d5a555ea611b58e0c1fc1f15f0663c4d8307043ff"
+  },
+  "Cetvelde A 8 cm, B 12 cm çizgisinde. AB uzunluğu kaç cm?": {
+    "file": "tr-73f1fd876a5887fc.mp3",
+    "duration": 5.361375,
+    "sha256": "62e9581e73ba7fad5f51d1f640e1e5a228b3a8e3941a7e2eb8d3125fdd9d2e1a"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 12 − 8 = 4 cm.": {
+    "file": "tr-597cac8cffd3d1a1.mp3",
+    "duration": 5.09025,
+    "sha256": "2cfb21387ba110f158c9e0e0aa717612d3e72bc1a155a02e9a0bc0b2605608aa"
+  },
+  "AB = 8 cm, BC = 3 cm. B, A ile C arasında. AC kaç cm?": {
+    "file": "tr-61fe1928f41697bb.mp3",
+    "duration": 6.449125,
+    "sha256": "f0db5483235f59d658a5c2a22cd2645b99c63c4cc9be76b7df3a3a3e89716471"
+  },
+  "Çözümü birlikte inceleyelim. Ardışık uzunluklar toplanır: 8 + 3 = 11.": {
+    "file": "tr-f6fa0d7a1b80869c.mp3",
+    "duration": 4.959208,
+    "sha256": "94471ce8c0dce29d53d4e53d08b6601d1eb587d9fb0ed67c4e7c18df34031fb6"
+  },
+  "Pergelin açıklığı 8 cm. Çizilen çemberin yarıçapı kaç cm?": {
+    "file": "tr-7104123d47eb16b8.mp3",
+    "duration": 4.394583,
+    "sha256": "f82ad4c502bb7e5fb9af7402e212025590b4a9e36921cc45019301d7a99f3def"
+  },
+  "Bir doğru parçası 16 cm. Orta noktadan bir uca uzaklık kaç cm?": {
+    "file": "tr-b996b73608f909f3.mp3",
+    "duration": 4.760125,
+    "sha256": "58cd78caa2e224c22d8063570362a57202305093fbad38ff474049b64a4a55f4"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 16 ÷ 2 = 8 cm.": {
+    "file": "tr-5c8f56d097abe351.mp3",
+    "duration": 4.921958,
+    "sha256": "d3e1578fe3e0d31c31a26409be4e111889a94e6854479eea6a08801fb1c5edc0"
+  },
+  "Cetvelde A 9 cm, B 14 cm çizgisinde. AB uzunluğu kaç cm?": {
+    "file": "tr-12ec298bc5215fa3.mp3",
+    "duration": 5.579875,
+    "sha256": "6e2391e81d2a82b5539084fa293fc3af47da5944e677be8a71c782830679db51"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 14 − 9 = 5 cm.": {
+    "file": "tr-b0b2ce276cd2eaa4.mp3",
+    "duration": 5.071667,
+    "sha256": "d55e27f9ed6c10472c9d48a19dcb35b77b90cf2373fee05d2f9a4d05e86568f7"
+  },
+  "AB = 9 cm, BC = 4 cm. B, A ile C arasında. AC kaç cm?": {
+    "file": "tr-31bca4663b3f58bf.mp3",
+    "duration": 6.417625,
+    "sha256": "e0df38ac9d00348df3761111d05ab489298477f5dc300575bbfc85e545ad456c"
+  },
+  "Çözümü birlikte inceleyelim. Ardışık uzunluklar toplanır: 9 + 4 = 13.": {
+    "file": "tr-338a0be55ac09f8a.mp3",
+    "duration": 4.917792,
+    "sha256": "5d29dc9865ca80edde93c9ae8e5c7d469f87c149886ba68ad4fcd0892ac5b64e"
+  },
+  "Pergelin açıklığı 9 cm. Çizilen çemberin yarıçapı kaç cm?": {
+    "file": "tr-e9b39e3d8e0b50d2.mp3",
+    "duration": 4.609958,
+    "sha256": "5c7a702b1940a80b975502bb76deb51e2e1de4c1d520156e2a55f90f8faf7ae0"
+  },
+  "Bir doğru parçası 18 cm. Orta noktadan bir uca uzaklık kaç cm?": {
+    "file": "tr-3346b76b80257da3.mp3",
+    "duration": 4.957458,
+    "sha256": "02db803b8ef5ec14ce28ec1e0669a3e2074e432e29b0ef998002eebdf9721fe2"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 18 ÷ 2 = 9 cm.": {
+    "file": "tr-bc418b7e57c66feb.mp3",
+    "duration": 5.340625,
+    "sha256": "a6ea7bc0a3294c81350d2c7b15ccb87bbe0f4df5bf4b914b2d8bfc5196a774c0"
+  },
+  "Cetvelde A 10 cm, B 16 cm çizgisinde. AB uzunluğu kaç cm?": {
+    "file": "tr-f9ad8c3258f2d22b.mp3",
+    "duration": 5.553667,
+    "sha256": "18fd742ec00ccde0fa90b51b90ef7d0f7c05e2ff3a1f52a584feadaf6467a116"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 16 − 10 = 6 cm.": {
+    "file": "tr-9406ea06cd7e3dca.mp3",
+    "duration": 5.059958,
+    "sha256": "57bd4a42c1a702fbebc5f5239b8bfa63cc47c0bc78ddc9445fe7b55ab647f670"
+  },
+  "AB = 10 cm, BC = 2 cm. B, A ile C arasında. AC kaç cm?": {
+    "file": "tr-a18c7cceb64adffb.mp3",
+    "duration": 6.435292,
+    "sha256": "d83d59eb46e2d2fed41fd8f1456653a051fd3f56070d24e335d2e4aeb42d024c"
+  },
+  "Çözümü birlikte inceleyelim. Ardışık uzunluklar toplanır: 10 + 2 = 12.": {
+    "file": "tr-10eb235d8c5a3f2c.mp3",
+    "duration": 4.591958,
+    "sha256": "65a8fbac1cb9140d9d280e560b06f6ef65c0010873229887269d81d3e339dcbd"
+  },
+  "Pergelin açıklığı 10 cm. Çizilen çemberin yarıçapı kaç cm?": {
+    "file": "tr-d687c1589895aab3.mp3",
+    "duration": 4.321958,
+    "sha256": "e720a7012d45c38aa7f06113251ba2833f541d100d9f5402cf276e242d15cd4f"
+  },
+  "Bir doğru parçası 20 cm. Orta noktadan bir uca uzaklık kaç cm?": {
+    "file": "tr-776199903fe0f08a.mp3",
+    "duration": 4.736875,
+    "sha256": "34e765ec2da5bdfecf21a95ecc905ccd4c0f04aa966c0c4b751de68f9937c737"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 20 ÷ 2 = 10 cm.": {
+    "file": "tr-6c1dabe7ea47b6c0.mp3",
+    "duration": 4.887833,
+    "sha256": "34a10fe09cd7d6b1084dc4f70cf11a0e21ac2ad159860b0b20b43a461e681d9a"
+  },
+  "Cetvelde A 11 cm, B 15 cm çizgisinde. AB uzunluğu kaç cm?": {
+    "file": "tr-b87609fdb8fa60a3.mp3",
+    "duration": 5.579167,
+    "sha256": "489ee42a1383fa535d4b20699a2fc8d7b74a6f0a7bc4c927143b1ce139544bea"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 15 − 11 = 4 cm.": {
+    "file": "tr-6957a91b529ad5d5.mp3",
+    "duration": 5.205083,
+    "sha256": "9e0a87bf10a9401c9903492a772f3e3fd9fd912503e2ac8a9067dc83569f32bb"
+  },
+  "AB = 11 cm, BC = 3 cm. B, A ile C arasında. AC kaç cm?": {
+    "file": "tr-5504794eede6ddb8.mp3",
+    "duration": 6.697958,
+    "sha256": "135952fa8a6d46e9bd5cba850f1db3fcf11e4272323cc6ab60ccdf82a554ef48"
+  },
+  "Çözümü birlikte inceleyelim. Ardışık uzunluklar toplanır: 11 + 3 = 14.": {
+    "file": "tr-4d44fdfcd781737f.mp3",
+    "duration": 4.8815,
+    "sha256": "805ed9a2b9bca4c292ce48bdf3fcc4885c4d00ba026c41bcdb1dbda96230c567"
+  },
+  "Pergelin açıklığı 11 cm. Çizilen çemberin yarıçapı kaç cm?": {
+    "file": "tr-514c8575152b597f.mp3",
+    "duration": 4.531833,
+    "sha256": "1e6e7220a329eb1d1729e1218887bbfaddc3d44e38a6387d05191d7903b07606"
+  },
+  "Bir doğru parçası 22 cm. Orta noktadan bir uca uzaklık kaç cm?": {
+    "file": "tr-45a07004b8d76596.mp3",
+    "duration": 4.82975,
+    "sha256": "bb7c0b9fae8eae144846e8d49ae6992f01efec41176212689e47a4a09a01e7ed"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 22 ÷ 2 = 11 cm.": {
+    "file": "tr-e3e7aad4691173a1.mp3",
+    "duration": 5.017958,
+    "sha256": "1d554ad05561b52cc84c19d5c6e42d95e35f70f7f7bc4008a6def75ee3933ee7"
+  },
+  "OA ışını sağdaki 0° çizgisinde. Sarı AOB açısı kaç derecedir?": {
+    "file": "tr-b6882f0b8cad0062.mp3",
+    "duration": 4.129958,
+    "sha256": "fde5a59dfdc2cb91c64d1daa209452956925021714c403257edcd2bdf46bb072"
+  },
+  "İpucu: Mavi OA ışınındaki 0’dan başla. Sarı OB ışınının geçtiği çizgiyi oku.": {
+    "file": "tr-8cf49f66c015ade7.mp3",
+    "duration": 4.771708,
+    "sha256": "f8f2c1659fdd30fd3e96a42e89d4bce35c93f9e568f601ddee1c279646922af9"
+  },
+  "Çözümü birlikte inceleyelim. OA ışını sağdaki 0° çizgisinde. Bu 0’dan başlayan ölçekte OB ışını 30° çizgisinden geçiyor. AOB = 30°.": {
+    "file": "tr-f55cbfd90dac2c4a.mp3",
+    "duration": 9.513833,
+    "sha256": "65d1add3aab1ed0ffc287a7df41c1e37f344052a8164e44b32b23e9a720269ea"
+  },
+  "Şekilde AOB açısı 90°. Bu açıya hangi ad verilir?": {
+    "file": "tr-7c14d10dc83362be.mp3",
+    "duration": 3.383042,
+    "sha256": "62948795bbee60b70a1edba2306ae490fb763b7374e2768577a8a507bc7f77dd"
+  },
+  "İpucu: Açıyı 90° ve 180° ile karşılaştır. Dik açı 90°, doğru açı 180° olur.": {
+    "file": "tr-e13098d8d92a7066.mp3",
+    "duration": 7.06475,
+    "sha256": "fca3430bab5f298a1eb19c9ea489c83b33c42791ebb84b45c6cd38312896c3d1"
+  },
+  "Çözümü birlikte inceleyelim. AOB = 90°. Tam bir dik köşe oluşturduğu için bu bir dik açıdır.": {
+    "file": "tr-4c3bbb3209aa011f.mp3",
+    "duration": 6.466792,
+    "sha256": "2003db9491022d6c1896014daa310412331c2c99a1572ef1d84d0bcbbf978103"
+  },
+  "OA ışını 20°, OB ışını 70° çizgisinde. Aralarındaki sarı açı kaç derecedir?": {
+    "file": "tr-a22bea49e0f2e467.mp3",
+    "duration": 5.104542,
+    "sha256": "be668e1a5c7dfb34db4bc1c18ede3b9bb90dbaf38f627bde8f08cb2f163529ee"
+  },
+  "İpucu: Bu kez OA ışını 0’da değil. Büyük ölçümden küçük ölçümü çıkar.": {
+    "file": "tr-e680c2508887b96f.mp3",
+    "duration": 4.585958,
+    "sha256": "63882d88baaa1804622ffc0cd533d492c6c16fd3aa572022bfb0a6bdc26743f7"
+  },
+  "Çözümü birlikte inceleyelim. Açı 20° çizgisinde başlayıp 70° çizgisinde bitiyor. Aradaki açıklık 70 − 20 = 50° olur.": {
+    "file": "tr-9fb0522968d678e9.mp3",
+    "duration": 8.103792,
+    "sha256": "8090be8708de39f230785de47254e74385919d7865e96420bd0bd956c064ef86"
+  },
+  "Büyük AOB açısı 90°. Mavi AOC bölümü 30°. Sarı COB bölümü kaç derecedir?": {
+    "file": "tr-9c04169af48493a5.mp3",
+    "duration": 5.809958,
+    "sha256": "f9529c39b792aa5d2cb1e62096d485d0bc5c2645f620de53bcc838bfe7978bee"
+  },
+  "İpucu: Mavi ve sarı bölümler büyük açıyı oluşturur. Bütünden mavi bölümü çıkar.": {
+    "file": "tr-135964fc8461c91a.mp3",
+    "duration": 4.841375,
+    "sha256": "ea8e4f01c6eaaeba4d4b9d2af19f58fc136c6c29606d01e0c8fc2ec6cbefd94f"
+  },
+  "Çözümü birlikte inceleyelim. Mavi AOC ile sarı COB yan yana gelince 90° olur. Sarı bölüm = 90 − 30 = 60°.": {
+    "file": "tr-f1d7720f485f0316.mp3",
+    "duration": 8.289542,
+    "sha256": "9d8c595b568657a1db74313ea7f16259f577356929968e92a8930721c3eefded"
+  },
+  "Çözümü birlikte inceleyelim. OA ışını sağdaki 0° çizgisinde. Bu 0’dan başlayan ölçekte OB ışını 60° çizgisinden geçiyor. AOB = 60°.": {
+    "file": "tr-0d2d575cf691da92.mp3",
+    "duration": 9.315042,
+    "sha256": "556f315d0247e10f567915010aef4ec3f7f9fbbec329ac66c47ea92bd1c9822c"
+  },
+  "Şekilde AOB açısı 45°. Bu açıya hangi ad verilir?": {
+    "file": "tr-3235a1564bae14d3.mp3",
+    "duration": 3.497167,
+    "sha256": "3dac1beb7a6909cdd0927a373b86d4079d968a2bd6af14e7226ef3e69d812c71"
+  },
+  "Çözümü birlikte inceleyelim. 45°, 90°’den küçüktür. Bu yüzden AOB bir dar açıdır.": {
+    "file": "tr-1769fde0a7257cdf.mp3",
+    "duration": 6.222958,
+    "sha256": "0635e640708a76d187c6c6613000761afa54d9de60d21f23cfde2bc884f6f056"
+  },
+  "OA ışını 30°, OB ışını 90° çizgisinde. Aralarındaki sarı açı kaç derecedir?": {
+    "file": "tr-65f277ef9a470d30.mp3",
+    "duration": 5.369875,
+    "sha256": "02435081838f70d830ea71b206a56302fd9a5027f74ffc369b1df9f19afacb3d"
+  },
+  "Çözümü birlikte inceleyelim. Açı 30° çizgisinde başlayıp 90° çizgisinde bitiyor. Aradaki açıklık 90 − 30 = 60° olur.": {
+    "file": "tr-b23f13bd61752abb.mp3",
+    "duration": 8.533333,
+    "sha256": "f43d81a6c9d8bdc5c6b3fa7ee55bea852d72965b18ce0b8c2f460bde16e3d381"
+  },
+  "Büyük AOB açısı 180°. Mavi AOC bölümü 60°. Sarı COB bölümü kaç derecedir?": {
+    "file": "tr-91dc21d19e1d662d.mp3",
+    "duration": 6.083625,
+    "sha256": "90f7807927efddb33e53b6f40bff05ef89cfcac1f57a4f02e93f639ec3293311"
+  },
+  "Çözümü birlikte inceleyelim. Mavi AOC ile sarı COB yan yana gelince 180° olur. Sarı bölüm = 180 − 60 = 120°.": {
+    "file": "tr-44d1ae9cae9cbafa.mp3",
+    "duration": 8.579792,
+    "sha256": "a7457bff1ad09f03580cbc32bce7a8bdda153b5b9893aa7dd23ad1e871c6de71"
+  },
+  "Çözümü birlikte inceleyelim. OA ışını sağdaki 0° çizgisinde. Bu 0’dan başlayan ölçekte OB ışını 90° çizgisinden geçiyor. AOB = 90°.": {
+    "file": "tr-ebcc101e8b1bf2ff.mp3",
+    "duration": 9.51775,
+    "sha256": "d305bb8b2b66f12b29d04b8e705cbfff15cf0d1c28a780d9927de5225c2250b0"
+  },
+  "Şekilde AOB açısı 120°. Bu açıya hangi ad verilir?": {
+    "file": "tr-0b9001c2a51b19c4.mp3",
+    "duration": 3.761667,
+    "sha256": "5e8d81429d92934e418eb16ed1b7754cffdfcc197d784e55a3ca26d5dc65c907"
+  },
+  "Çözümü birlikte inceleyelim. 120°, 90°’den büyük ve 180°’den küçüktür. Bu yüzden AOB bir geniş açıdır.": {
+    "file": "tr-c23d36642734d288.mp3",
+    "duration": 7.83675,
+    "sha256": "abf5c76b66ca81dbd02cb343cc6b71c57e1e224088a6cbe4823a9f6db9a8a9bc"
+  },
+  "OA ışını 10°, OB ışını 50° çizgisinde. Aralarındaki sarı açı kaç derecedir?": {
+    "file": "tr-7537595eb3217e0a.mp3",
+    "duration": 5.0215,
+    "sha256": "ed0ab7ed01fe9fd1cc47807120b932b165d90f835d0713210a13c1ecd6becdf9"
+  },
+  "Çözümü birlikte inceleyelim. Açı 10° çizgisinde başlayıp 50° çizgisinde bitiyor. Aradaki açıklık 50 − 10 = 40° olur.": {
+    "file": "tr-cb4ee2f3e7c49596.mp3",
+    "duration": 7.952833,
+    "sha256": "d6f692ce0c75ca88489355c3ec4a225416a0b40b627e9be3d7b297621eeaadbd"
+  },
+  "Büyük AOB açısı 90°. Mavi AOC bölümü 45°. Sarı COB bölümü kaç derecedir?": {
+    "file": "tr-1d9087647472156f.mp3",
+    "duration": 5.9095,
+    "sha256": "a9a4190a360013f7fe370f06c5ee25729429368bc56231b2ff7c5298f043b27a"
+  },
+  "Çözümü birlikte inceleyelim. Mavi AOC ile sarı COB yan yana gelince 90° olur. Sarı bölüm = 90 − 45 = 45°.": {
+    "file": "tr-af4d472b01b552b7.mp3",
+    "duration": 8.812,
+    "sha256": "1596aabbb407eb2a357816e7195ed2c0c6822a34d6e69b7e01fb6f57a624b9a1"
+  },
+  "Çözümü birlikte inceleyelim. OA ışını sağdaki 0° çizgisinde. Bu 0’dan başlayan ölçekte OB ışını 120° çizgisinden geçiyor. AOB = 120°.": {
+    "file": "tr-6757084d931ac4e5.mp3",
+    "duration": 9.571333,
+    "sha256": "c69aec35dc14a035ddc3572eb706f451380408101d0fa4eb1b6779b1da876f95"
+  },
+  "Şekilde AOB açısı 180°. Bu açıya hangi ad verilir?": {
+    "file": "tr-72b918f5c83f84bf.mp3",
+    "duration": 3.741333,
+    "sha256": "3fe81cfee0fc25cc1aad371a380d66c961911f2b2d4760b0c93adc04a72fc8ec"
+  },
+  "Çözümü birlikte inceleyelim. AOB = 180°. Işınlar zıt yönlerde tek bir doğru oluşturur; bu bir doğru açıdır.": {
+    "file": "tr-8e8d032f9bbea13b.mp3",
+    "duration": 7.139792,
+    "sha256": "ff04365a37414eb4a053cb36d1dd9326b2c65f138b75cd81bd08af568daee530"
+  },
+  "OA ışını 40°, OB ışını 120° çizgisinde. Aralarındaki sarı açı kaç derecedir?": {
+    "file": "tr-3bc667091122943e.mp3",
+    "duration": 5.205458,
+    "sha256": "e7078ef43d244947b8905d96f9574188561d7de928c554e90911e11b10155f0c"
+  },
+  "Çözümü birlikte inceleyelim. Açı 40° çizgisinde başlayıp 120° çizgisinde bitiyor. Aradaki açıklık 120 − 40 = 80° olur.": {
+    "file": "tr-56bb9c54eedc3f4a.mp3",
+    "duration": 8.626208,
+    "sha256": "a3f5adcbf3f9bc80ae309258cc42920b64ba4eb43f9f25ceaddf3c6922b149a8"
+  },
+  "Büyük AOB açısı 180°. Mavi AOC bölümü 120°. Sarı COB bölümü kaç derecedir?": {
+    "file": "tr-4a32ef5d09bce1aa.mp3",
+    "duration": 6.19975,
+    "sha256": "c62c47bfa8e6ee7b9404c5b002cb860964bc7b33e0e0a782e78b48cea9f31147"
+  },
+  "Çözümü birlikte inceleyelim. Mavi AOC ile sarı COB yan yana gelince 180° olur. Sarı bölüm = 180 − 120 = 60°.": {
+    "file": "tr-1740cc587d9d7a08.mp3",
+    "duration": 8.916458,
+    "sha256": "854e8f2d91505c1716bccf2fd84daceeb20103fdf5788667d9225ca7361389a4"
+  },
+  "Çözümü birlikte inceleyelim. OA ışını sağdaki 0° çizgisinde. Bu 0’dan başlayan ölçekte OB ışını 150° çizgisinden geçiyor. AOB = 150°.": {
+    "file": "tr-2644bcdfb84c83a7.mp3",
+    "duration": 9.714542,
+    "sha256": "d887d0970b4cd0751d699a70d6b63ea84cf81f78962b9d49c46d4570233c4661"
+  },
+  "Şekilde AOB açısı 30°. Bu açıya hangi ad verilir?": {
+    "file": "tr-5e0cb07714d2f2b5.mp3",
+    "duration": 3.575875,
+    "sha256": "f82113756a0226f9431bf2337677e3f411f59d2b7c0d5e86be91d275e4260519"
+  },
+  "Çözümü birlikte inceleyelim. 30°, 90°’den küçüktür. Bu yüzden AOB bir dar açıdır.": {
+    "file": "tr-084c8450954ee653.mp3",
+    "duration": 5.840958,
+    "sha256": "8443bc28714b510b33143e346c793dd596288380750a090d9297b23b9b9e2c77"
+  },
+  "OA ışını 10°, OB ışını 20° çizgisinde. Aralarındaki sarı açı kaç derecedir?": {
+    "file": "tr-f920de50e536f790.mp3",
+    "duration": 5.093625,
+    "sha256": "b5f9b0bc0653cb3921d063e7fcfccd1203d305b03bfd9c4f68ea3556fede3928"
+  },
+  "Çözümü birlikte inceleyelim. Açı 10° çizgisinde başlayıp 20° çizgisinde bitiyor. Aradaki açıklık 20 − 10 = 10° olur.": {
+    "file": "tr-f0f0529a392620cd.mp3",
+    "duration": 7.976083,
+    "sha256": "c28f580d3a0a552112d9185287292bc38edd9652e42b123ed46b687be9d01fe7"
+  },
+  "Büyük AOB açısı 90°. Mavi AOC bölümü 5°. Sarı COB bölümü kaç derecedir?": {
+    "file": "tr-a214358f9a4c5e57.mp3",
+    "duration": 5.642458,
+    "sha256": "2c51e47ab1e1c7cb3d30c4f68e191f9a3521d67f3d4cfd2060ffcbc4106d6663"
+  },
+  "Çözümü birlikte inceleyelim. Mavi AOC ile sarı COB yan yana gelince 90° olur. Sarı bölüm = 90 − 5 = 85°.": {
+    "file": "tr-7467229d03efa839.mp3",
+    "duration": 8.637833,
+    "sha256": "68193ff013a695610926298555c13a5ec97368d94d0b950f6a2c7f1612b506e8"
+  },
+  "Çözümü birlikte inceleyelim. OA ışını sağdaki 0° çizgisinde. Bu 0’dan başlayan ölçekte OB ışını 45° çizgisinden geçiyor. AOB = 45°.": {
+    "file": "tr-5bcee680372362f4.mp3",
+    "duration": 9.761708,
+    "sha256": "53bcaa13545884ea1773e4935f60536a3aa6ec33507873dba482af76acb49f50"
+  },
+  "Şekilde AOB açısı 60°. Bu açıya hangi ad verilir?": {
+    "file": "tr-dac00f141a41cf27.mp3",
+    "duration": 3.448125,
+    "sha256": "872e0441bc9303e6bbdfa83834a678b489750c33e13b738ad1d2f8fdc82d18cd"
+  },
+  "Çözümü birlikte inceleyelim. 60°, 90°’den küçüktür. Bu yüzden AOB bir dar açıdır.": {
+    "file": "tr-7348f1fe610f179d.mp3",
+    "duration": 5.886292,
+    "sha256": "0fad795f9655204f41036d9f0929a92f50e2d0f67da09eb614895b1c0450c23a"
+  },
+  "OA ışını 10°, OB ışını 30° çizgisinde. Aralarındaki sarı açı kaç derecedir?": {
+    "file": "tr-bcc50295d8ca0867.mp3",
+    "duration": 5.113958,
+    "sha256": "f213df06db5d50097f3fd38cfc25702df3a12babddf90f08f074877874845884"
+  },
+  "Çözümü birlikte inceleyelim. Açı 10° çizgisinde başlayıp 30° çizgisinde bitiyor. Aradaki açıklık 30 − 10 = 20° olur.": {
+    "file": "tr-3fb69dd11f82857b.mp3",
+    "duration": 8.04575,
+    "sha256": "9f397cda239e8eba27655752ea28646a5435c4e8c13e40d956c0f8bad686480f"
+  },
+  "Büyük AOB açısı 90°. Mavi AOC bölümü 10°. Sarı COB bölümü kaç derecedir?": {
+    "file": "tr-9569b5ecfe975a2b.mp3",
+    "duration": 5.696042,
+    "sha256": "61d32750099daaa1c710d172d3d24805bdd771b1de4c061ed0d46be5add2ef52"
+  },
+  "Çözümü birlikte inceleyelim. Mavi AOC ile sarı COB yan yana gelince 90° olur. Sarı bölüm = 90 − 10 = 80°.": {
+    "file": "tr-ec47b281fa3ba03e.mp3",
+    "duration": 8.463708,
+    "sha256": "6539cfa90d6126f71ad77c7597988e83d5c2992bc6f547e5912151ddb86ef96f"
+  },
+  "Çözümü birlikte inceleyelim. OA ışını sağdaki 0° çizgisinde. Bu 0’dan başlayan ölçekte OB ışını 75° çizgisinden geçiyor. AOB = 75°.": {
+    "file": "tr-9917422026e7bd8c.mp3",
+    "duration": 9.884917,
+    "sha256": "dcce3a04a1375d2212a6ebc577925539eb10aba73ff460bb55bd7fdbee676e15"
+  },
+  "Şekilde AOB açısı 150°. Bu açıya hangi ad verilir?": {
+    "file": "tr-113ac8d2b378baea.mp3",
+    "duration": 3.488833,
+    "sha256": "f96981a99d4f9685e68fc444e68b81a4b89bebc368262748538ccb4448724452"
+  },
+  "Çözümü birlikte inceleyelim. 150°, 90°’den büyük ve 180°’den küçüktür. Bu yüzden AOB bir geniş açıdır.": {
+    "file": "tr-b7ec418e3d7e27ea.mp3",
+    "duration": 7.849958,
+    "sha256": "047913d27420e9154a7c3f74172e5f61fc54e8769f5c75fc1598cd296e2136a0"
+  },
+  "OA ışını 10°, OB ışını 40° çizgisinde. Aralarındaki sarı açı kaç derecedir?": {
+    "file": "tr-6f681256e9094c36.mp3",
+    "duration": 4.993958,
+    "sha256": "9eb97c4a09abb3d6e911484d54935d893bfae6afea3e88300ae3f2cd097d8412"
+  },
+  "Çözümü birlikte inceleyelim. Açı 10° çizgisinde başlayıp 40° çizgisinde bitiyor. Aradaki açıklık 40 − 10 = 30° olur.": {
+    "file": "tr-abf5d3d3b1761b81.mp3",
+    "duration": 8.127,
+    "sha256": "0f9761a27a275816cc35bc9c882948df784432cb4b349ead863b4f096da37d29"
+  },
+  "Büyük AOB açısı 90°. Mavi AOC bölümü 15°. Sarı COB bölümü kaç derecedir?": {
+    "file": "tr-41a6a6c4b4057e5a.mp3",
+    "duration": 5.758583,
+    "sha256": "410f3803d245fc4848d4060b38b3a1902e914e40abfab4748bb86580d1d3b97b"
+  },
+  "Çözümü birlikte inceleyelim. Mavi AOC ile sarı COB yan yana gelince 90° olur. Sarı bölüm = 90 − 15 = 75°.": {
+    "file": "tr-31863ec8c39c5f3f.mp3",
+    "duration": 9.090625,
+    "sha256": "f3daf050623584895b182f800d0328c11e87bf3e1b300ac8e38563a77c37edf6"
+  },
+  "Çözümü birlikte inceleyelim. OA ışını sağdaki 0° çizgisinde. Bu 0’dan başlayan ölçekte OB ışını 105° çizgisinden geçiyor. AOB = 105°.": {
+    "file": "tr-db088ce587a5e6f0.mp3",
+    "duration": 9.584417,
+    "sha256": "d47fb8a247082e601dba8602f62e62d32c237b6bb228591677b7dbaaef9c63d3"
+  },
+  "Şekilde AOB açısı 75°. Bu açıya hangi ad verilir?": {
+    "file": "tr-50d53c40358b5e0c.mp3",
+    "duration": 3.668958,
+    "sha256": "202d3f5b3ee3a4d5e5db224f2c4a6a5ee03e11132c2f5809e7ca906993c9e2b7"
+  },
+  "Çözümü birlikte inceleyelim. 75°, 90°’den küçüktür. Bu yüzden AOB bir dar açıdır.": {
+    "file": "tr-74b22bcfb60040bf.mp3",
+    "duration": 6.164875,
+    "sha256": "3908dda72080099e993d9efe3beb0130ca22a7b3cfa768147a022e2bc5a5dd2e"
+  },
+  "OA ışını 10°, OB ışını 60° çizgisinde. Aralarındaki sarı açı kaç derecedir?": {
+    "file": "tr-7bbf92f7dba1a02d.mp3",
+    "duration": 5.159458,
+    "sha256": "0ae0f449086d28dd150b48c4dcc6eb91bfe565797c5cf5e5f2e4792edfbd9c3e"
+  },
+  "Çözümü birlikte inceleyelim. Açı 10° çizgisinde başlayıp 60° çizgisinde bitiyor. Aradaki açıklık 60 − 10 = 50° olur.": {
+    "file": "tr-42ca260826eb02a2.mp3",
+    "duration": 8.127,
+    "sha256": "f83691b69f7f12d464e0e11ef4fdf2b32b84165dea910d397e8e87d6bcb35db2"
+  },
+  "Büyük AOB açısı 90°. Mavi AOC bölümü 20°. Sarı COB bölümü kaç derecedir?": {
+    "file": "tr-c154675fcd73ccef.mp3",
+    "duration": 5.584417,
+    "sha256": "40a0c5f88746a634c9874cd53acb0758e4dd9852a78516c071297f1c6ba78c04"
+  },
+  "Çözümü birlikte inceleyelim. Mavi AOC ile sarı COB yan yana gelince 90° olur. Sarı bölüm = 90 − 20 = 70°.": {
+    "file": "tr-4bfdc1edc1414101.mp3",
+    "duration": 8.359208,
+    "sha256": "392b229fb27bf04c2e69fad026902fb63221c6815de8dec28a1d48e1728f059d"
+  },
+  "Çözümü birlikte inceleyelim. OA ışını sağdaki 0° çizgisinde. Bu 0’dan başlayan ölçekte OB ışını 135° çizgisinden geçiyor. AOB = 135°.": {
+    "file": "tr-add42b6f733c6ca1.mp3",
+    "duration": 10.181958,
+    "sha256": "b34eb16df946d82c0b19049398b11800e5b5d5613f31a8d185cb6e87d284496b"
+  },
+  "Şekilde AOB açısı 105°. Bu açıya hangi ad verilir?": {
+    "file": "tr-82690e739c314103.mp3",
+    "duration": 3.703583,
+    "sha256": "506818af1738676ba4e15db2dae8be054208bc3e1b03c214dea032f1327aefdf"
+  },
+  "Çözümü birlikte inceleyelim. 105°, 90°’den büyük ve 180°’den küçüktür. Bu yüzden AOB bir geniş açıdır.": {
+    "file": "tr-eb28e53c117f6b0a.mp3",
+    "duration": 7.790292,
+    "sha256": "2c05a00ac8f36620a0227d47b337cf378c60d5eec9aa8640b654eef06664445d"
+  },
+  "OA ışını 10°, OB ışını 70° çizgisinde. Aralarındaki sarı açı kaç derecedir?": {
+    "file": "tr-4f330cf55ef276d7.mp3",
+    "duration": 5.139667,
+    "sha256": "ae2a0dc28fcbb7ada756ffc77f14da59019089be4e897b7c01c41d3cf622e0ad"
+  },
+  "Çözümü birlikte inceleyelim. Açı 10° çizgisinde başlayıp 70° çizgisinde bitiyor. Aradaki açıklık 70 − 10 = 60° olur.": {
+    "file": "tr-b0272f0f6093999b.mp3",
+    "duration": 8.103792,
+    "sha256": "80c3bf97d6a451734a67b9fab1378ce6235f1569fd1bc2cfd1a1001c611f9cd4"
+  },
+  "Büyük AOB açısı 90°. Mavi AOC bölümü 25°. Sarı COB bölümü kaç derecedir?": {
+    "file": "tr-dd429fd526da8e3a.mp3",
+    "duration": 5.874667,
+    "sha256": "576dc78126062395e750e4d498bdb83750448515ad478f266ccebc8b1f614cff"
+  },
+  "Çözümü birlikte inceleyelim. Mavi AOC ile sarı COB yan yana gelince 90° olur. Sarı bölüm = 90 − 25 = 65°.": {
+    "file": "tr-db0ad2cf792fb425.mp3",
+    "duration": 8.765542,
+    "sha256": "9b052ddb21656680db2385e11e78a43a8880470698ae07eaa6926d21ba3adb2c"
+  },
+  "Çözümü birlikte inceleyelim. OA ışını sağdaki 0° çizgisinde. Bu 0’dan başlayan ölçekte OB ışını 165° çizgisinden geçiyor. AOB = 165°.": {
+    "file": "tr-869b108ec0c0b49c.mp3",
+    "duration": 10.091625,
+    "sha256": "f918954b28228f3780f9e088df702883edd921fd34d0c3d2ee78c02cef8d953a"
+  },
+  "Şekilde AOB açısı 135°. Bu açıya hangi ad verilir?": {
+    "file": "tr-a57a1919c9c058ad.mp3",
+    "duration": 3.933792,
+    "sha256": "5a2c3af8bc27cf8ca2797652c329d7da6825193909160df8742b6b0b41a64b77"
+  },
+  "Çözümü birlikte inceleyelim. 135°, 90°’den büyük ve 180°’den küçüktür. Bu yüzden AOB bir geniş açıdır.": {
+    "file": "tr-4472c0eee3bec760.mp3",
+    "duration": 7.999375,
+    "sha256": "7230b89a816dd44743e98a7ab746e28d4ba691bcbf2c3b10c0bab617d931c85d"
+  },
+  "OA ışını 10°, OB ışını 80° çizgisinde. Aralarındaki sarı açı kaç derecedir?": {
+    "file": "tr-10449e8768b66901.mp3",
+    "duration": 4.873958,
+    "sha256": "c921ef1bbdc52f259a4a01e5931b5b6901f785c4dca82d7e5153df4f3a8e6183"
+  },
+  "Çözümü birlikte inceleyelim. Açı 10° çizgisinde başlayıp 80° çizgisinde bitiyor. Aradaki açıklık 80 − 10 = 70° olur.": {
+    "file": "tr-1877688aa57dc343.mp3",
+    "duration": 8.057333,
+    "sha256": "2ee19c9ec5a1b3dda68825238c6780ce2cb0e710284971013851eeb04118f04a"
+  },
+  "Büyük AOB açısı 90°. Mavi AOC bölümü 35°. Sarı COB bölümü kaç derecedir?": {
+    "file": "tr-dc2f905413c79925.mp3",
+    "duration": 6.025958,
+    "sha256": "8c9094b85782372e9ea68762f1bbb19a5abe4ea5ae745aba3959c36f4e7e22af"
+  },
+  "Çözümü birlikte inceleyelim. Mavi AOC ile sarı COB yan yana gelince 90° olur. Sarı bölüm = 90 − 35 = 55°.": {
+    "file": "tr-da1b5c3d9ef0fd92.mp3",
+    "duration": 8.800375,
+    "sha256": "dfa82ec7f818bc816c2ec477bf0301e8a3db9a0e04a5dd73caab9a3a93454f56"
+  },
+  "Düzgün çokgenin 3 kenarının her biri 2 cm. Çevresi kaç cm?": {
+    "file": "tr-0dd537ecbcbb5ab4.mp3",
+    "duration": 4.510667,
+    "sha256": "5cdb4c6caa521ae114e2245a9f089c75759efc52840775c2918264f321258563"
+  },
+  "İpucu: Sınırdaki bütün eş kenarları topla; kenar sayısı ile bir kenarı çarpabilirsin.": {
+    "file": "tr-f1a93808eab89a0b.mp3",
+    "duration": 4.886208,
+    "sha256": "83e1ec26cbcb83605eb130de5bf3ef8004aa51c2da210fcf467d2a94f55741d9"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 3 × 2 = 6 cm.": {
+    "file": "tr-470d67ff2066722b.mp3",
+    "duration": 4.83475,
+    "sha256": "1e02cb2954d57e5504484fe50e3a2f108b89ee6e8536d794a7308c812f3d8ebe"
+  },
+  "4 kenarlı çokgenin her köşesine 2 yıldız koyulacak. Kaç yıldız gerekir?": {
+    "file": "tr-51de8fb3b6576ed7.mp3",
+    "duration": 4.771708,
+    "sha256": "01734fb874ab14dd9f5e68df384b91e0599adead8825abafdf96ece1a16d9aae"
+  },
+  "İpucu: Her köşedeki yıldız sayısı aynı. Köşe sayısıyla çarp.": {
+    "file": "tr-b1803f19d3b288e5.mp3",
+    "duration": 3.784875,
+    "sha256": "f8bfb9bfd93f9adb21f8ab3519a368e3d34b6e59b3565d7483757dfed5a4b2dd"
+  },
+  "Çözümü birlikte inceleyelim. 4 köşe × 2 yıldız = 8.": {
+    "file": "tr-013fc73f74ec3103.mp3",
+    "duration": 4.002208,
+    "sha256": "e34e4101a646eb17808d0a9b27f65d0089253e01b6c799caa8d679a4c4553204"
+  },
+  "Yarıçapı 2 cm olan çemberin çapı kaç cm?": {
+    "file": "tr-8538d71a318d177a.mp3",
+    "duration": 3.285625,
+    "sha256": "5c4ed0cf1309a31bc3080ee069241bb86de5c07e53705fb3d4bd7c64608d7504"
+  },
+  "İpucu: Çap merkezden geçer ve yan yana iki yarıçaptan oluşur.": {
+    "file": "tr-0a707ab4d734f888.mp3",
+    "duration": 3.842917,
+    "sha256": "53951570d5bb9f3ba9a38f00bfbe1a19a68ed33a6bcc3bc381e39085d682d030"
+  },
+  "Çözümü birlikte inceleyelim. Çap iki yarıçap uzunluğudur: 2 × 2 = 4.": {
+    "file": "tr-d6a260897857a3dc.mp3",
+    "duration": 5.054708,
+    "sha256": "3e033edf44288eda5f3b360fecb4917a718086e1169399a8be64494de1e25172"
+  },
+  "Düzgün çokgenin 6 kenarının her biri 3 cm. Etrafını kaplamak için kaç cm şerit gerekir?": {
+    "file": "tr-8a4fa44255248fe0.mp3",
+    "duration": 5.813875,
+    "sha256": "a3dbdcc0cbd6907855a074bb615a7a8224acf265526e88102894680d8b28667e"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 6 × 3 = 18 cm.": {
+    "file": "tr-0b6397af3de199b8.mp3",
+    "duration": 5.323292,
+    "sha256": "fea0af7e5d0c25698e163794750e928422c1a6b2ae4bef6e035074bcf71527cf"
+  },
+  "Düzgün çokgenin 7 kenarının her biri 3 cm. Çevresi kaç cm?": {
+    "file": "tr-e591c97833f9b90a.mp3",
+    "duration": 4.492625,
+    "sha256": "12c6244cada7cf6826e671cf9d3e4e9e47a8d1cbec1effb7e4ad51369df6bfbb"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 7 × 3 = 21 cm.": {
+    "file": "tr-e86fcafb8105ced7.mp3",
+    "duration": 5.108417,
+    "sha256": "4ca3c4150e6af62f886474e8356f0786b6eb70ebb47ebdd2b160e4a58a3bfbde"
+  },
+  "8 kenarlı çokgenin her köşesine 3 yıldız koyulacak. Kaç yıldız gerekir?": {
+    "file": "tr-371c58aa7b1d9799.mp3",
+    "duration": 4.806542,
+    "sha256": "b9565756a412da296b945abafa7b4425db26e5b680f097ce01620597a790491a"
+  },
+  "Çözümü birlikte inceleyelim. 8 köşe × 3 yıldız = 24.": {
+    "file": "tr-eb71850016098ba9.mp3",
+    "duration": 4.0225,
+    "sha256": "9574a3c947fafcf317eebc52916f8696b3b1c0935bc69fe2ab89a57fd1c34905"
+  },
+  "Yarıçapı 3 cm olan çemberin çapı kaç cm?": {
+    "file": "tr-e85d72a5986eb2f6.mp3",
+    "duration": 3.413333,
+    "sha256": "08e9aeb303ec6fe3267b60e1130523d6b3527061c38df138ac6c62cc0e28bcd7"
+  },
+  "Çözümü birlikte inceleyelim. Çap iki yarıçap uzunluğudur: 2 × 3 = 6.": {
+    "file": "tr-b4ded63c81346268.mp3",
+    "duration": 4.829083,
+    "sha256": "499f0a90a35b2d50007bd0b6054a8c2782bf97176c128e3aaa43d80fd32f9dec"
+  },
+  "Düzgün çokgenin 4 kenarının her biri 4 cm. Etrafını kaplamak için kaç cm şerit gerekir?": {
+    "file": "tr-50ce820658b3e928.mp3",
+    "duration": 5.908167,
+    "sha256": "06171b8514a8e46fa6be297d6da01c39464bebce9f9d8800e3502dedc820414a"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 4 × 4 = 16 cm.": {
+    "file": "tr-432fa111b13ec753.mp3",
+    "duration": 5.49,
+    "sha256": "0cbc506939c1cc0bbb050434d738641c065b9d42c376fa03654152b0da569b3e"
+  },
+  "Düzgün çokgenin 5 kenarının her biri 4 cm. Çevresi kaç cm?": {
+    "file": "tr-61bc8b2ab7f6465e.mp3",
+    "duration": 4.63025,
+    "sha256": "4b350581666722670fefd0b205941858d0a39b43813da316c3edfaaf6dc162fd"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 5 × 4 = 20 cm.": {
+    "file": "tr-e03a4d84ad86484d.mp3",
+    "duration": 5.201292,
+    "sha256": "bb4af5b1fe8d4afbd9ead5e2bd089f2b7fc1848b26fe77cae11e7e1b77c60bf4"
+  },
+  "6 kenarlı çokgenin her köşesine 4 yıldız koyulacak. Kaç yıldız gerekir?": {
+    "file": "tr-e37e1e0500a8e3fe.mp3",
+    "duration": 4.736875,
+    "sha256": "e0baf049b0bd5d62add1bba36d96e32810a936124dcd7a19265042fcfbf05805"
+  },
+  "Çözümü birlikte inceleyelim. 6 köşe × 4 yıldız = 24.": {
+    "file": "tr-8f1a4d669524ce88.mp3",
+    "duration": 4.098333,
+    "sha256": "0bdd0790bdd696ef3255a80216c8d2ad0575308fe09578970ab8e3a1a1eeafb8"
+  },
+  "Yarıçapı 4 cm olan çemberin çapı kaç cm?": {
+    "file": "tr-39b633ec47e74918.mp3",
+    "duration": 3.355292,
+    "sha256": "27d114d7e3380b1ddf0f6faf49186217e06893d11f347242a1795bd0c4e91652"
+  },
+  "Çözümü birlikte inceleyelim. Çap iki yarıçap uzunluğudur: 2 × 4 = 8.": {
+    "file": "tr-bbf39cc107c75ee3.mp3",
+    "duration": 5.012333,
+    "sha256": "b09ff58137997838a21e7de4d91420ed68e3d024f7220299af1f0e8224a6adb7"
+  },
+  "Düzgün çokgenin 8 kenarının her biri 5 cm. Etrafını kaplamak için kaç cm şerit gerekir?": {
+    "file": "tr-2f1bdd548260a195.mp3",
+    "duration": 5.969917,
+    "sha256": "132aed1dd530b8e4a49e1065e8c7dbbc3d5df0edb576a53d09f2a7b8869bb662"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 8 × 5 = 40 cm.": {
+    "file": "tr-70ffe0eb9335e0a9.mp3",
+    "duration": 5.259333,
+    "sha256": "f3a5678328d8c6614e06d9009f84e5f4cdda045a7b1ee736d3e7f0dbc902891e"
+  },
+  "Düzgün çokgenin 3 kenarının her biri 5 cm. Çevresi kaç cm?": {
+    "file": "tr-06b21d738c448149.mp3",
+    "duration": 4.589875,
+    "sha256": "a5c2c54ab1a20183b3393c847f0cc352ad746e412b80da9b3e794bb6af6082b4"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 3 × 5 = 15 cm.": {
+    "file": "tr-18376b8b6ace0c3b.mp3",
+    "duration": 5.2245,
+    "sha256": "59167112376575acc7f231c50d51552c052c36e1a1094b595ddcbffeb2392cf8"
+  },
+  "4 kenarlı çokgenin her köşesine 5 yıldız koyulacak. Kaç yıldız gerekir?": {
+    "file": "tr-5bb85d749378f4c2.mp3",
+    "duration": 4.678833,
+    "sha256": "c11614aeda12535af87f65b88340ca72a88e0d1942f431f9e85c728591fbbe25"
+  },
+  "Çözümü birlikte inceleyelim. 4 köşe × 5 yıldız = 20.": {
+    "file": "tr-144211b9edd9eba4.mp3",
+    "duration": 3.819708,
+    "sha256": "8b209da9bd91a71a9576963f3e424f2c0ee50d6c1a913f1cd72f2285eebb7024"
+  },
+  "Yarıçapı 5 cm olan çemberin çapı kaç cm?": {
+    "file": "tr-1400a3f83be6d9bf.mp3",
+    "duration": 3.436583,
+    "sha256": "3f08624a8bc1bb37b573850ea0be5addcbb9d9273b69e141870111409f852ca5"
+  },
+  "Çözümü birlikte inceleyelim. Çap iki yarıçap uzunluğudur: 2 × 5 = 10.": {
+    "file": "tr-9370cb6dee4cd45a.mp3",
+    "duration": 4.5435,
+    "sha256": "f07b7f40b2ee5dd10b9c74d852ac59dd815a069cb8f677f68a99503f8673638d"
+  },
+  "Düzgün çokgenin 6 kenarının her biri 6 cm. Etrafını kaplamak için kaç cm şerit gerekir?": {
+    "file": "tr-07ddad63528efedb.mp3",
+    "duration": 6.10325,
+    "sha256": "7bc4f906b01756ca66c06b267c681f140331ef78074bd5d9d4a9d2a5fc249bf9"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 6 × 6 = 36 cm.": {
+    "file": "tr-598b909dbca807fb.mp3",
+    "duration": 5.387042,
+    "sha256": "1944ba9892f68c0f86b34ffdf31ce2d46b89d57447080c94b6b93dc958bbd277"
+  },
+  "Düzgün çokgenin 7 kenarının her biri 6 cm. Çevresi kaç cm?": {
+    "file": "tr-469e290fbc0b02e0.mp3",
+    "duration": 4.825958,
+    "sha256": "cdf18220b4d72312c43f56607a8467eaf45beed0bf7dc789cd664d91dfcb49d9"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 7 × 6 = 42 cm.": {
+    "file": "tr-9931e6ae505ce264.mp3",
+    "duration": 5.491542,
+    "sha256": "1823e10ff90439bd59578adde054647af7cf621a8b58b8cbb59078ca127c52a1"
+  },
+  "8 kenarlı çokgenin her köşesine 6 yıldız koyulacak. Kaç yıldız gerekir?": {
+    "file": "tr-0cb7175f07f18bea.mp3",
+    "duration": 4.678833,
+    "sha256": "f393e24ae2a86f83df9920dda724354ef8fe9c371843fcb93c3ca5135090dc68"
+  },
+  "Çözümü birlikte inceleyelim. 8 köşe × 6 yıldız = 48.": {
+    "file": "tr-8179340d18b006f2.mp3",
+    "duration": 4.504667,
+    "sha256": "09135c81551796df004cf87fed2f3f0dfc23eb4f25a6836c36c8e5aad90f0749"
+  },
+  "Yarıçapı 6 cm olan çemberin çapı kaç cm?": {
+    "file": "tr-54ec5f5f06c3d6b7.mp3",
+    "duration": 3.326083,
+    "sha256": "92b82211248b1786e5fb1c5df9cbb42d9939ba1954ce5364dbb43d67e07aa695"
+  },
+  "Çözümü birlikte inceleyelim. Çap iki yarıçap uzunluğudur: 2 × 6 = 12.": {
+    "file": "tr-bb723ef743b47816.mp3",
+    "duration": 4.79625,
+    "sha256": "a9dae4b835e5aadced203c66ad7847c5cdd570d90a1a87110a77a5fd88df054e"
+  },
+  "Düzgün çokgenin 4 kenarının her biri 7 cm. Etrafını kaplamak için kaç cm şerit gerekir?": {
+    "file": "tr-40ea662eb5819d8e.mp3",
+    "duration": 5.859417,
+    "sha256": "6ca0817ee009257d54dcb5810f2e475bad1ada8669b80d643b0417922876fa07"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 4 × 7 = 28 cm.": {
+    "file": "tr-cb04d5219b866db8.mp3",
+    "duration": 5.387042,
+    "sha256": "372d163cb1fa3b3c7d4ceda7f95ea129f25c8201574ae3b9d02a84623056d5fa"
+  },
+  "Düzgün çokgenin 5 kenarının her biri 7 cm. Çevresi kaç cm?": {
+    "file": "tr-9f6c6fba9efbadd1.mp3",
+    "duration": 4.566375,
+    "sha256": "29cd38ff00143b6f805b6bb2822b903d6642b58c0a09f684452e3bdadd32286e"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 5 × 7 = 35 cm.": {
+    "file": "tr-af921170b0fe61a6.mp3",
+    "duration": 5.270583,
+    "sha256": "630ed0470706b545b1169a5476afbe1cee5178bdf0adaac367974d7fa4bb2486"
+  },
+  "6 kenarlı çokgenin her köşesine 7 yıldız koyulacak. Kaç yıldız gerekir?": {
+    "file": "tr-bc3a44a6102d36b9.mp3",
+    "duration": 4.713667,
+    "sha256": "327d6670e240753cfdca4ff3c3bc693b2fd94583847d2f4ca10eeaefc423e2d4"
+  },
+  "Çözümü birlikte inceleyelim. 6 köşe × 7 yıldız = 42.": {
+    "file": "tr-97f411148a59e508.mp3",
+    "duration": 4.156375,
+    "sha256": "44259cce965011d24ef2bb0b15c5158e12b3957801d0fe3b519fe252a6030712"
+  },
+  "Yarıçapı 7 cm olan çemberin çapı kaç cm?": {
+    "file": "tr-aa64ca52573c0f4b.mp3",
+    "duration": 3.40175,
+    "sha256": "e34d634376c649f84761c91868e1dee7ba4e581b1a998e7b5885e457bdb1b3b4"
+  },
+  "Çözümü birlikte inceleyelim. Çap iki yarıçap uzunluğudur: 2 × 7 = 14.": {
+    "file": "tr-1839dfa936249197.mp3",
+    "duration": 5.282542,
+    "sha256": "f1727203825347c809c95af3eb36347b9213a8c5c911793440d66dd32c1e3447"
+  },
+  "Düzgün çokgenin 8 kenarının her biri 8 cm. Etrafını kaplamak için kaç cm şerit gerekir?": {
+    "file": "tr-a61bbdb894a4c49e.mp3",
+    "duration": 6.025958,
+    "sha256": "293cc45618aa0701974bb49c8f4f003828c0ee7ae02d5678ef34128895ac13c5"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 8 × 8 = 64 cm.": {
+    "file": "tr-0bd9967f36439815.mp3",
+    "duration": 5.51475,
+    "sha256": "bc6d534f94b55c371a92cd658f5265f52dc948cae4dc8b2b0fc2182b38aed17a"
+  },
+  "Düzgün çokgenin 3 kenarının her biri 8 cm. Çevresi kaç cm?": {
+    "file": "tr-aa62ca90b9589864.mp3",
+    "duration": 4.533958,
+    "sha256": "bd9d34d6fdd0875729e8f6cafbe0b1c740ac11e64ff2c0b968063a585bd04497"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 3 × 8 = 24 cm.": {
+    "file": "tr-135fca259099ef65.mp3",
+    "duration": 5.240542,
+    "sha256": "6deb4f2b684fd60f95636070070e472f9819cdd8149e3a85e5880f9abaa4d8a4"
+  },
+  "4 kenarlı çokgenin her köşesine 8 yıldız koyulacak. Kaç yıldız gerekir?": {
+    "file": "tr-1fb172b076e3fb84.mp3",
+    "duration": 4.818167,
+    "sha256": "f404ccb375951f008a025dfd20429ddf617cc309893979f1580b854875b716f8"
+  },
+  "Çözümü birlikte inceleyelim. 4 köşe × 8 yıldız = 32.": {
+    "file": "tr-9375f27e6db76703.mp3",
+    "duration": 4.149125,
+    "sha256": "61a2b239f24ff76ef9dd758be1431e91aa642aa735297b0577b9e008a4fca816"
+  },
+  "Yarıçapı 8 cm olan çemberin çapı kaç cm?": {
+    "file": "tr-dd0d7cb58e210a36.mp3",
+    "duration": 3.3315,
+    "sha256": "459b2fc8f25c961f54ee52256c146f68490391f0bb21a50b87d2a0a95a631004"
+  },
+  "Çözümü birlikte inceleyelim. Çap iki yarıçap uzunluğudur: 2 × 8 = 16.": {
+    "file": "tr-e29f66c80fa0a573.mp3",
+    "duration": 4.948917,
+    "sha256": "8a382d0cee1d62efc8d93cadf7fe8ba5ca130936432b9b7d0e4fe30699beba36"
+  },
+  "Düzgün çokgenin 6 kenarının her biri 9 cm. Etrafını kaplamak için kaç cm şerit gerekir?": {
+    "file": "tr-6271ffa71d111cce.mp3",
+    "duration": 6.148875,
+    "sha256": "9baf9caf84338adfc0fe4c1bc913d9b2f241271bbcf98533ab31e71efd284c84"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 6 × 9 = 54 cm.": {
+    "file": "tr-f34b6b976a69ef9e.mp3",
+    "duration": 5.326208,
+    "sha256": "14e8e74d957808b5b728093ac27baf5c8b29aa824522c14e77d45f3c63b592a7"
+  },
+  "Düzgün çokgenin 7 kenarının her biri 9 cm. Çevresi kaç cm?": {
+    "file": "tr-83bcbf85a6537b87.mp3",
+    "duration": 4.685375,
+    "sha256": "dfe9863a1d05dc3abef965fcaa64201fdf01ad4a576a5809256fd00641a4e40c"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 7 × 9 = 63 cm.": {
+    "file": "tr-f73c06fe8a551777.mp3",
+    "duration": 5.097708,
+    "sha256": "cb7377fe3306575f01439118f1ee034983e3f06413ad1cafd3a73f3aaca658be"
+  },
+  "8 kenarlı çokgenin her köşesine 9 yıldız koyulacak. Kaç yıldız gerekir?": {
+    "file": "tr-a6200ced97876508.mp3",
+    "duration": 4.93425,
+    "sha256": "235726c75724d350b4fbbfffebe84cef78a91e07bc2b25343d4faba50646f580"
+  },
+  "Çözümü birlikte inceleyelim. 8 köşe × 9 yıldız = 72.": {
+    "file": "tr-767ff4ba234a5640.mp3",
+    "duration": 4.295708,
+    "sha256": "96d8fe34f8710d3b8a0bb584891358ed158a68057748401d69fccc6134cf85f2"
+  },
+  "Yarıçapı 9 cm olan çemberin çapı kaç cm?": {
+    "file": "tr-929fb375d3b1e559.mp3",
+    "duration": 3.338375,
+    "sha256": "e6c97e806ea68a5b405726676d658a3ac9bc13544343e74e86d7d69e83c45c50"
+  },
+  "Çözümü birlikte inceleyelim. Çap iki yarıçap uzunluğudur: 2 × 9 = 18.": {
+    "file": "tr-8e7b41a9e91f3db2.mp3",
+    "duration": 5.138625,
+    "sha256": "abcc54440aa1a1e0d4abb08b2c3215d06c3dcaed019bb127f9e3406bb81614a6"
+  },
+  "Düzgün çokgenin 4 kenarının her biri 10 cm. Etrafını kaplamak için kaç cm şerit gerekir?": {
+    "file": "tr-299e959e77a777a4.mp3",
+    "duration": 5.896417,
+    "sha256": "a2e034b94a0185394891f21db7015eebf70875ad6dfdb0fef27088d6b579034e"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 4 × 10 = 40 cm.": {
+    "file": "tr-dce2037a687c8a3e.mp3",
+    "duration": 5.050375,
+    "sha256": "60770876296269b7dcddff3abac57538de29b5267391e124e0def0ecfeec1eee"
+  },
+  "Düzgün çokgenin 5 kenarının her biri 10 cm. Çevresi kaç cm?": {
+    "file": "tr-ee035503ff9a97d3.mp3",
+    "duration": 4.851208,
+    "sha256": "74c362fe6e04fa976eef9aefad46924685764dfbc750fd7c980c916af89a0296"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 5 × 10 = 50 cm.": {
+    "file": "tr-8df8473acf1856e2.mp3",
+    "duration": 5.178083,
+    "sha256": "2eeab7a691ba2173d1ed12f3c59d326eb35a7b8eb7855c4fa38412b1e7d72920"
+  },
+  "6 kenarlı çokgenin her köşesine 10 yıldız koyulacak. Kaç yıldız gerekir?": {
+    "file": "tr-6edbbd0e039f3ea3.mp3",
+    "duration": 4.644,
+    "sha256": "a827bfdff8606e7b42e256f4996ac88d0aa6c7e3bf9deab9da1bb4478b65cbd7"
+  },
+  "Çözümü birlikte inceleyelim. 6 köşe × 10 yıldız = 60.": {
+    "file": "tr-280dabf754c5295c.mp3",
+    "duration": 3.808083,
+    "sha256": "78e2821038cb6574c8201b4f2e76eda197801d36ebf42caebc01ad3c2ab29b84"
+  },
+  "Yarıçapı 10 cm olan çemberin çapı kaç cm?": {
+    "file": "tr-e2e7e8c98282b463.mp3",
+    "duration": 3.436583,
+    "sha256": "b1829f88fc4a743662932ae4c9e6693c14252e4924c186c4ba36437e97f32b74"
+  },
+  "Çözümü birlikte inceleyelim. Çap iki yarıçap uzunluğudur: 2 × 10 = 20.": {
+    "file": "tr-b8aa35752b5f046a.mp3",
+    "duration": 4.484375,
+    "sha256": "437ede04aaf820badd440b5754503e7601c7ad7c815bab13c499ae002b424870"
+  },
+  "Düzgün çokgenin 8 kenarının her biri 11 cm. Etrafını kaplamak için kaç cm şerit gerekir?": {
+    "file": "tr-b537631add6599bf.mp3",
+    "duration": 6.150667,
+    "sha256": "f535320182f2b5d70a9e0af01165de12a8287e83526e1d8dcf677ecccf507441"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 8 × 11 = 88 cm.": {
+    "file": "tr-e597508700beff00.mp3",
+    "duration": 5.735333,
+    "sha256": "56050771b4e7072586853cc5583eb5fdca8e78327d54c17a33892490d9be82d6"
+  },
+  "Düzgün çokgenin 3 kenarının her biri 11 cm. Çevresi kaç cm?": {
+    "file": "tr-4f6bb53f0bd68936.mp3",
+    "duration": 4.737417,
+    "sha256": "41e74d8dc47e733998db3f02ab46005955a532d1287f3b2f0171ed4f0c475511"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 3 × 11 = 33 cm.": {
+    "file": "tr-c802f731e3cc42f7.mp3",
+    "duration": 5.165,
+    "sha256": "ad8e3906a4b16c21df48df25b7d29cac50ad140c82e68909296c3e3b38704005"
+  },
+  "4 kenarlı çokgenin her köşesine 11 yıldız koyulacak. Kaç yıldız gerekir?": {
+    "file": "tr-ed89432ad81b4b44.mp3",
+    "duration": 4.634333,
+    "sha256": "b5fffc72b6776757a378534706276b11c2b8b5b5dbf8c310a7af490db6f033b5"
+  },
+  "Çözümü birlikte inceleyelim. 4 köşe × 11 yıldız = 44.": {
+    "file": "tr-363adf41f14bc9ef.mp3",
+    "duration": 4.203792,
+    "sha256": "ace01c4e1bf0dd027baf927d5345ba74c58adb556917aa7669e378050d5cd12e"
+  },
+  "Yarıçapı 11 cm olan çemberin çapı kaç cm?": {
+    "file": "tr-84d9e921266fdca7.mp3",
+    "duration": 3.459792,
+    "sha256": "a5ffb490b116ade8c193e31f0bbcca762ca311b418ca1aa4892ee0412d0f159f"
+  },
+  "Çözümü birlikte inceleyelim. Çap iki yarıçap uzunluğudur: 2 × 11 = 22.": {
+    "file": "tr-b9666e484b1cbab8.mp3",
+    "duration": 5.058875,
+    "sha256": "9375529516daf47a4f0b53a63570d9413d1c51d3d06c94b259c669061dc7a2be"
+  },
+  "Düzgün çokgenin 6 kenarının her biri 12 cm. Etrafını kaplamak için kaç cm şerit gerekir?": {
+    "file": "tr-1643acc24ab156eb.mp3",
+    "duration": 6.039333,
+    "sha256": "3f6376de612e5a9af38c286804a7b4111a78a2e29398d7ce1dc81ec382b4ff73"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 6 × 12 = 72 cm.": {
+    "file": "tr-ce636a449932213a.mp3",
+    "duration": 5.332292,
+    "sha256": "f863fd4e3e374c4e276f3e89c4d2a8fedf78d9580ce74e8d30f030e74d11e845"
+  },
+  "2.002.215 sayısının milyonlar bölüğünde hangi sayı var?": {
+    "file": "tr-d1667f2fd3089986.mp3",
+    "duration": 3.900958,
+    "sha256": "1c1759a1164efceb8c5295723769450e4b6f8d2f1e9a6e43cdbec8202ea198bf"
+  },
+  "İpucu: Sağdan üçerli bölükleri izle; milyonlar bölüğünü seç.": {
+    "file": "tr-9fe2daec200f3935.mp3",
+    "duration": 3.834375,
+    "sha256": "99f511cde8230a3ac79ba4a9a13b6563e125e42fd9a0002472b063d8b0dab92c"
+  },
+  "Çözümü birlikte inceleyelim. Sağdan üçerli gruplandır: birler, binler, milyonlar.": {
+    "file": "tr-0c3b05b7370635fb.mp3",
+    "duration": 5.12,
+    "sha256": "ccbf0063f9111fef0cdc6aac1df690aaadef9f4072bbf4838be09a03d4e5a17e"
+  },
+  "2 milyon + 3 bin + 215 biçimindeki çözümlemede milyonların değeri kaçtır?": {
+    "file": "tr-c9976f965c62b46b.mp3",
+    "duration": 4.439875,
+    "sha256": "9207120e421624b73100474788e8d328d6fb987e6ea4828194e79cdeaf769977"
+  },
+  "İpucu: Seçilen bölükteki sayıyı o bölüğün birim değeriyle çarp.": {
+    "file": "tr-061081cc176f9462.mp3",
+    "duration": 3.320458,
+    "sha256": "d6799a296548988ff25474880a690aacb338edf558362a469835ce7911b484cb"
+  },
+  "Çözümü birlikte inceleyelim. 2 × 1 000 000 = 2000000.": {
+    "file": "tr-d6ac679985af0468.mp3",
+    "duration": 5.282542,
+    "sha256": "d2bcd0d40d80b2bffafde09c62ccd88f2321b8662f325b03ae8b0a7a64a5894e"
+  },
+  "2 382 sayısında yüzler basamağındaki 3 rakamının değeri kaçtır?": {
+    "file": "tr-a3e18748ed5c29da.mp3",
+    "duration": 4.097125,
+    "sha256": "2cf00ff3c7be36d61e63c9ba21e6c262a266217d657edddda2511a60278021ef"
+  },
+  "İpucu: Rakamın sağındaki basamakları say. Rakamı basamağın birimiyle çarp.": {
+    "file": "tr-41617d0089212889.mp3",
+    "duration": 4.307333,
+    "sha256": "f9c955c5c1852c7ce8368f1230374fbced2e8644fb449d4f0386109070418dcf"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 3 × 100 = 300.": {
+    "file": "tr-f3725497cd703e4e.mp3",
+    "duration": 4.470667,
+    "sha256": "4ff89c80f4ce9bb1d2b24f6fa13b710c7500e13408a7f0e866d246c8951aa4d2"
+  },
+  "4 482 sayısının binler basamağındaki rakamın değeri kaçtır?": {
+    "file": "tr-e33e9a78185d6d6c.mp3",
+    "duration": 3.928375,
+    "sha256": "84768e922f2c53169309d4d5b2c7a313f5ca11d9f9c972dff51ab9e58fb6e5b4"
+  },
+  "Çözümü birlikte inceleyelim. 4 × 1 000 = 4000.": {
+    "file": "tr-a5eef1eb1ac312ff.mp3",
+    "duration": 4.214417,
+    "sha256": "008a143347f46e492c6c94cb03221bb1a1d1be998df9b41c45ca70d307f97571"
+  },
+  "3.003.215 sayısının milyonlar bölüğünde hangi sayı var?": {
+    "file": "tr-19bb3fb7e03f5bfd.mp3",
+    "duration": 3.87775,
+    "sha256": "1ceca7011ff60a968ecaf7fb770afffe14314ea7134771402379c7e7df3f4cc1"
+  },
+  "3 milyon + 4 bin + 215 biçimindeki çözümlemede milyonların değeri kaçtır?": {
+    "file": "tr-90bc37fe544669a7.mp3",
+    "duration": 4.627667,
+    "sha256": "8ae25bdc28d0d0a3e16bf849680c0b1642ebf0c4a4f5c34053d481e310d9c414"
+  },
+  "Çözümü birlikte inceleyelim. 3 × 1 000 000 = 3000000.": {
+    "file": "tr-62f726ae1f33792b.mp3",
+    "duration": 5.607625,
+    "sha256": "c9d2e00106b9c6b01b87ed49c7166ed1228ac5cd0eb710e6a79f46d96368f26b"
+  },
+  "3 782 sayısında yüzler basamağındaki 7 rakamının değeri kaçtır?": {
+    "file": "tr-036400528581fd87.mp3",
+    "duration": 4.040333,
+    "sha256": "e5462e92eacf04890c9b15cf100a1f66d9460f8b87bdb278437657cb98a83318"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 7 × 100 = 700.": {
+    "file": "tr-06fd9524a799a505.mp3",
+    "duration": 4.365583,
+    "sha256": "08ef2f8bea6f9867d8fe2369b8a62a06070053e8eeb240fbcd01c83a6c006ef6"
+  },
+  "8 482 sayısının binler basamağındaki rakamın değeri kaçtır?": {
+    "file": "tr-c84067804d5fae91.mp3",
+    "duration": 3.831333,
+    "sha256": "2a96d48a2b3f61a5a2b054b403ce188203f168ce165efa2c632f4c3f668ad55f"
+  },
+  "Çözümü birlikte inceleyelim. 8 × 1 000 = 8000.": {
+    "file": "tr-6920d40cd6a360f3.mp3",
+    "duration": 4.365375,
+    "sha256": "9f1c1d33dc7f94f0988b26183344843f1a813a0dcd244300f075e41051476852"
+  },
+  "4.004.215 sayısının milyonlar bölüğünde hangi sayı var?": {
+    "file": "tr-903fc99565331811.mp3",
+    "duration": 4.226042,
+    "sha256": "e8399d81bee221d81331713004dbc8d33ecddda1ef451b43386970f32863fd08"
+  },
+  "4 milyon + 2 bin + 215 biçimindeki çözümlemede milyonların değeri kaçtır?": {
+    "file": "tr-c56349f08a137b83.mp3",
+    "duration": 4.469917,
+    "sha256": "f1f4746719c11ec0d34400ed1f04f75d95fd6ef17c2928b0ee26e05a9c3c8152"
+  },
+  "Çözümü birlikte inceleyelim. 4 × 1 000 000 = 4000000.": {
+    "file": "tr-38de8cb5a22a1013.mp3",
+    "duration": 5.444375,
+    "sha256": "9b24e87e8224a3dd6c5171362e5e557a06348fe7681ed5a69795eb67a775c95e"
+  },
+  "4 282 sayısında yüzler basamağındaki 2 rakamının değeri kaçtır?": {
+    "file": "tr-3dab08c8caf48326.mp3",
+    "duration": 4.086833,
+    "sha256": "288847f96a62ea6f80fc55d76174ffd2f22875c88d6f7a3fb1c4ae54a67e4f6a"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 2 × 100 = 200.": {
+    "file": "tr-e76c8a77c0feb537.mp3",
+    "duration": 4.516292,
+    "sha256": "98c67477a6a42bb294e40ab26ec5ad4f72b7a80bbcab0a13a12eddf0841d56f5"
+  },
+  "3 482 sayısının binler basamağındaki rakamın değeri kaçtır?": {
+    "file": "tr-58828cf7123c5199.mp3",
+    "duration": 3.745958,
+    "sha256": "8cff716772a04e29484741f0f8bfff664db21ee286c0c22d0530a6f7c3b5f611"
+  },
+  "Çözümü birlikte inceleyelim. 3 × 1 000 = 3000.": {
+    "file": "tr-9a794fc2edc3a9e9.mp3",
+    "duration": 4.376958,
+    "sha256": "7b1a46bca6eb623ecf594884a706bf3b952c852d6637a5897f15d4aa27d1f17b"
+  },
+  "5.002.215 sayısının milyonlar bölüğünde hangi sayı var?": {
+    "file": "tr-0c34e5001b263955.mp3",
+    "duration": 3.913958,
+    "sha256": "2dcc6438e1437e3840c46c5b53fc036461a04636a2fc0ff265f31eaec736e740"
+  },
+  "5 milyon + 3 bin + 215 biçimindeki çözümlemede milyonların değeri kaçtır?": {
+    "file": "tr-aec51e36ed6b636f.mp3",
+    "duration": 4.408125,
+    "sha256": "cae66a4d644c9f92cdb3b3c3bdf1d8b317239f66abea22149531c8de40751708"
+  },
+  "Çözümü birlikte inceleyelim. 5 × 1 000 000 = 5000000.": {
+    "file": "tr-282fba8a47e9c369.mp3",
+    "duration": 5.282542,
+    "sha256": "f0e160f5834dd709b3336a3de997067a87d6c9df56c5baea0697d23100bf329e"
+  },
+  "5 682 sayısında yüzler basamağındaki 6 rakamının değeri kaçtır?": {
+    "file": "tr-5937841ec76726d4.mp3",
+    "duration": 4.310542,
+    "sha256": "c3cdf8cb80b8082996a0ba00ec48222a9586d79523d3f9ad87079b4fdca572ca"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 6 × 100 = 600.": {
+    "file": "tr-990c6e800c13ff0b.mp3",
+    "duration": 4.609958,
+    "sha256": "96da8d599ceb197881f117c72a418bcb67174e5a0f583eefd16b0887d7d3a086"
+  },
+  "7 482 sayısının binler basamağındaki rakamın değeri kaçtır?": {
+    "file": "tr-0b3eff351e245b57.mp3",
+    "duration": 3.863583,
+    "sha256": "4f6ed85b63c67116014521ec397e8fe1c6213f913a60bcebb49c1899d5b1ff88"
+  },
+  "Çözümü birlikte inceleyelim. 7 × 1 000 = 7000.": {
+    "file": "tr-43c8af24f3d4cb75.mp3",
+    "duration": 4.028667,
+    "sha256": "40671e79d1387608c631fc2916d4f49b0772e83edc0525a65e1158223b4d136a"
+  },
+  "6.003.215 sayısının milyonlar bölüğünde hangi sayı var?": {
+    "file": "tr-7df4fe75c0f8c155.mp3",
+    "duration": 3.889958,
+    "sha256": "886e69de5b85a56def94759542937aa92c6355f3c3412c4511ba9aade0767cfc"
+  },
+  "6 milyon + 4 bin + 215 biçimindeki çözümlemede milyonların değeri kaçtır?": {
+    "file": "tr-d566c0dbb8808a7d.mp3",
+    "duration": 4.702375,
+    "sha256": "fa1d4870a66decbe00d8e3a6780e693fb41afd3321459c41527aaae5112c3cb2"
+  },
+  "Çözümü birlikte inceleyelim. 6 × 1 000 000 = 6000000.": {
+    "file": "tr-880cd2d6e64c5973.mp3",
+    "duration": 5.294167,
+    "sha256": "3499c0314b220d477fd5a827c62b1b91e63c8e16c7d837ff3df806b6a3edde64"
+  },
+  "6 182 sayısında yüzler basamağındaki 1 rakamının değeri kaçtır?": {
+    "file": "tr-d321f6b94b25ea64.mp3",
+    "duration": 3.88775,
+    "sha256": "c8f527d132d734522dc755c4bf21dc0eabafebed572d67eebb0b55159ee783a4"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 1 × 100 = 100.": {
+    "file": "tr-53e64c83b362e4ef.mp3",
+    "duration": 4.443042,
+    "sha256": "66358f5cc8d34db087798bda10acca99d4b60e92e87ef341a70a610e9a7376d4"
+  },
+  "2 482 sayısının binler basamağındaki rakamın değeri kaçtır?": {
+    "file": "tr-c97fe48b62b14df4.mp3",
+    "duration": 3.726,
+    "sha256": "0cb0bd6f7cf6011c1583957788a7d20b51ea86af2e81ed923bd13f899ce5e15e"
+  },
+  "Çözümü birlikte inceleyelim. 2 × 1 000 = 2000.": {
+    "file": "tr-1b9e5008233aa9c0.mp3",
+    "duration": 4.040292,
+    "sha256": "83c5a3e643e4d5905ab49f8c4e47fa1a2d581712de8faef895a0a3a8db91283e"
+  },
+  "7.004.215 sayısının milyonlar bölüğünde hangi sayı var?": {
+    "file": "tr-781c5a8463556182.mp3",
+    "duration": 3.993833,
+    "sha256": "3531a93bbd85d4db61d886e20b2cb8ff6d9d828029c60a0c8b3c8918a6d840e9"
+  },
+  "7 milyon + 2 bin + 215 biçimindeki çözümlemede milyonların değeri kaçtır?": {
+    "file": "tr-986f4b608b9f4146.mp3",
+    "duration": 4.527333,
+    "sha256": "e72fe23578ec45ee4fe47cc511a4a129173189c95c7c3e3ea25620c5cdccd0a4"
+  },
+  "Çözümü birlikte inceleyelim. 7 × 1 000 000 = 7000000.": {
+    "file": "tr-85eb12a1e5fb00bc.mp3",
+    "duration": 5.085167,
+    "sha256": "fa8abccbf4794f69cf558247602718044ac9bfd08538fb9729f5f52cb11ce356"
+  },
+  "7 582 sayısında yüzler basamağındaki 5 rakamının değeri kaçtır?": {
+    "file": "tr-32879b5c42281499.mp3",
+    "duration": 4.120833,
+    "sha256": "f257714276f93f94bbe4e75c13e5cd80d50bc8a8893b1d88e1c57b620b124f2d"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 5 × 100 = 500.": {
+    "file": "tr-c52c550cba166f7e.mp3",
+    "duration": 4.44575,
+    "sha256": "27c75d8bbf6cb16751b6c6e49b848939b43d1810a66bc0a72a4aeea05d047f7b"
+  },
+  "6 482 sayısının binler basamağındaki rakamın değeri kaçtır?": {
+    "file": "tr-5e8e4231aa934661.mp3",
+    "duration": 3.841958,
+    "sha256": "b28c5a10fe114d628a5982f73ef76b6de0cce91c648a55b5b3277d436df6c2af"
+  },
+  "Çözümü birlikte inceleyelim. 6 × 1 000 = 6000.": {
+    "file": "tr-7b4c523705c96888.mp3",
+    "duration": 4.028667,
+    "sha256": "2d18337f2e166e7fc95750361faf71bd3498e46ea159518815c349c9bba20686"
+  },
+  "8.002.215 sayısının milyonlar bölüğünde hangi sayı var?": {
+    "file": "tr-2a9af760d67f69d4.mp3",
+    "duration": 4.0635,
+    "sha256": "818051255def79832c48b1c00eaeb6845e7e81f98431ef9dfe3a2d6e183bcf82"
+  },
+  "8 milyon + 3 bin + 215 biçimindeki çözümlemede milyonların değeri kaçtır?": {
+    "file": "tr-68f2ff2bcd2e4d5b.mp3",
+    "duration": 4.546375,
+    "sha256": "faab4033f7ca5fd86e1345b942ccc79386e5a46ec66065374f78737bee22cfd2"
+  },
+  "Çözümü birlikte inceleyelim. 8 × 1 000 000 = 8000000.": {
+    "file": "tr-6043cf904094590b.mp3",
+    "duration": 5.561208,
+    "sha256": "3bcc77bf7be43252ff260187641b2b4c9a62ec5ce07887ffa2af11822302c2d1"
+  },
+  "8 982 sayısında yüzler basamağındaki 9 rakamının değeri kaçtır?": {
+    "file": "tr-19d9a22dc45eaa22.mp3",
+    "duration": 4.379333,
+    "sha256": "6ff3f3b8ad9c384d7fb665d887b350fac78552bc62feac5022c732453034bef0"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 9 × 100 = 900.": {
+    "file": "tr-f1bc0b7e3d7067c5.mp3",
+    "duration": 4.799083,
+    "sha256": "f43fb3d39e4c90a2691f9d4f487a95b310e6cf9d1bceb591adc4c135c2371526"
+  },
+  "1 482 sayısının binler basamağındaki rakamın değeri kaçtır?": {
+    "file": "tr-9bc552069e59a692.mp3",
+    "duration": 3.838292,
+    "sha256": "54b0f67ebd43ca347a5cb02f2b248f9f014eb80706fd38222a04b5c61643cfa6"
+  },
+  "Çözümü birlikte inceleyelim. 1 × 1 000 = 1000.": {
+    "file": "tr-61c325b6b9641701.mp3",
+    "duration": 4.017083,
+    "sha256": "064cb7ba38f55cd061842f4983627fd629e794b2d255f3397fc3740c57130201"
+  },
+  "9.003.215 sayısının milyonlar bölüğünde hangi sayı var?": {
+    "file": "tr-9d38aca2555af6f6.mp3",
+    "duration": 4.144792,
+    "sha256": "6327b592e0f3526ddf101a811a3aceb60675a11c5a37fd182d32764ce263d6ae"
+  },
+  "9 milyon + 4 bin + 215 biçimindeki çözümlemede milyonların değeri kaçtır?": {
+    "file": "tr-683d5ac031f9b573.mp3",
+    "duration": 4.755083,
+    "sha256": "fd2b7e28031235bf59265c9b7a049cb76b7d436fd076da6ff9bdc9f05456786b"
+  },
+  "Çözümü birlikte inceleyelim. 9 × 1 000 000 = 9000000.": {
+    "file": "tr-f7edf453ee51dcc3.mp3",
+    "duration": 5.677292,
+    "sha256": "6689a69869b10208bcbfca3cfb3da35a62b6cf08bdcc94d541f25a683abb7640"
+  },
+  "9 482 sayısında yüzler basamağındaki 4 rakamının değeri kaçtır?": {
+    "file": "tr-f1ebf3d1dfab3834.mp3",
+    "duration": 4.538667,
+    "sha256": "a747a95e7a3aa5e459274aa827898d8d68c2d9f169c7cd50c7a770cf429a8512"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 4 × 100 = 400.": {
+    "file": "tr-9cff7adead20ee15.mp3",
+    "duration": 4.984417,
+    "sha256": "271e657ae06274d68b612031dfcf8eb0e256d73517a4ee144e919c7342a1e0c3"
+  },
+  "5 482 sayısının binler basamağındaki rakamın değeri kaçtır?": {
+    "file": "tr-27ad3632f79b9790.mp3",
+    "duration": 3.914333,
+    "sha256": "0daa00679fbaad38fad4e1817b86280f990de1acb3ffa4ef9d869020a15af756"
+  },
+  "Çözümü birlikte inceleyelim. 5 × 1 000 = 5000.": {
+    "file": "tr-2d16365194aa1450.mp3",
+    "duration": 4.226042,
+    "sha256": "7664717f316edd60c0ed2247475ed40225f3106c0f7ae25ee7c759188336c9a8"
+  },
+  "10.004.215 sayısının milyonlar bölüğünde hangi sayı var?": {
+    "file": "tr-6fe3bdcf6428cfcf.mp3",
+    "duration": 4.005458,
+    "sha256": "7e076afd78abd51f8ffeb90c998e64ef1f19bb3f90759bbab276cc2798e17201"
+  },
+  "10 milyon + 2 bin + 215 biçimindeki çözümlemede milyonların değeri kaçtır?": {
+    "file": "tr-85da5bd710e93693.mp3",
+    "duration": 4.49125,
+    "sha256": "fc8f3498fb5e8cb5b0d7dc4a88552015973542e250c491d824c91425a6a59b23"
+  },
+  "Çözümü birlikte inceleyelim. 10 × 1 000 000 = 10000000.": {
+    "file": "tr-0b5f41c7e5f8de92.mp3",
+    "duration": 5.154833,
+    "sha256": "33ea75e0b2afd190880e75c98e7f51423d53504706e2e68656d71778dfa3b51a"
+  },
+  "10 882 sayısında yüzler basamağındaki 8 rakamının değeri kaçtır?": {
+    "file": "tr-ffb1d789bf562fcd.mp3",
+    "duration": 4.107875,
+    "sha256": "1cf9a93b27fa30a06aefa83d885ac9ee91589d72707cb711498fedb834c998db"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 8 × 100 = 800.": {
+    "file": "tr-56f34dcd5944f772.mp3",
+    "duration": 4.610167,
+    "sha256": "4757825ffb3ee104a1cccdbe905c248bcddfb13b1d449916b9fdcfc0ad2170ad"
+  },
+  "9 482 sayısının binler basamağındaki rakamın değeri kaçtır?": {
+    "file": "tr-f367840ec62f3a03.mp3",
+    "duration": 4.005083,
+    "sha256": "f4d5417d830a39b3af0787f5c54527028ed676484339e63c7217a8c8b2257ac3"
+  },
+  "Çözümü birlikte inceleyelim. 9 × 1 000 = 9000.": {
+    "file": "tr-6eacf8a892622b55.mp3",
+    "duration": 4.446625,
+    "sha256": "0d475bf5f94918ba4c5db602292d7e19f0c7012ce782c1305c9d258865ed657c"
+  },
+  "11.002.215 sayısının milyonlar bölüğünde hangi sayı var?": {
+    "file": "tr-4c310b16c25463d7.mp3",
+    "duration": 4.005458,
+    "sha256": "d809dc71c85a9612c5f5f3028b3cc04a124bcce9540f5a2cec5bbc91c7adbdb4"
+  },
+  "11 milyon + 3 bin + 215 biçimindeki çözümlemede milyonların değeri kaçtır?": {
+    "file": "tr-d85c04344d5ee9a0.mp3",
+    "duration": 4.521958,
+    "sha256": "78780882d98bd72015dcd700b1890789d24c71a241a119469ad878f1e1367bd1"
+  },
+  "Çözümü birlikte inceleyelim. 11 × 1 000 000 = 11000000.": {
+    "file": "tr-e992723c8b6a3830.mp3",
+    "duration": 5.491542,
+    "sha256": "191b5fdcc16ea18c285f9594d6709dfbe195083718f1334c80a4f16258308357"
+  },
+  "11 382 sayısında yüzler basamağındaki 3 rakamının değeri kaçtır?": {
+    "file": "tr-0467e8d448cff295.mp3",
+    "duration": 4.237833,
+    "sha256": "221f3cb97210e44ee0e8f057916944f7ef32bae058eaecd0a9100a15e49488b9"
+  },
+  "12.003.215 sayısının milyonlar bölüğünde hangi sayı var?": {
+    "file": "tr-071f34daeb4b70d2.mp3",
+    "duration": 4.109958,
+    "sha256": "8740f294de8d851b9a2c52f4ba3ef1dc9577b4cea885dc12bfdb6106a36f91df"
+  },
+  "2 kutunun her birinde 2 kalem var. Toplam kaç kalem var?": {
+    "file": "tr-33a30fe63fa633de.mp3",
+    "duration": 3.413333,
+    "sha256": "77a6287f649069e5555298ac3044bc40a9814690fd650db16e8f6d1dec532ba0"
+  },
+  "İpucu: Her kutudaki miktar aynı; kutu sayısıyla çarp.": {
+    "file": "tr-3f517ff07933446e.mp3",
+    "duration": 3.231833,
+    "sha256": "e20fab93888c6951250a6032ea4a5910f55aa0fb2d0ece884a305e93d4f37249"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 2 × 2 = 4.": {
+    "file": "tr-7d26370809679f8d.mp3",
+    "duration": 4.56275,
+    "sha256": "2dc1119b20c797b6680ddce3fd813bcaadfc4673c14ce5487e760e8e5784374f"
+  },
+  "6 kitap 3 rafa eşit paylaştırıldı. Her rafta kaç kitap var?": {
+    "file": "tr-cbdb2cc6705d8f21.mp3",
+    "duration": 3.796458,
+    "sha256": "cf2d56820ee0e327d0ec93be6ffb44a0d01597e6bb4bb6e6ab029d9eb11611a4"
+  },
+  "İpucu: Toplam kitabı eş raf sayısına böl.": {
+    "file": "tr-d926bead27883267.mp3",
+    "duration": 2.554208,
+    "sha256": "ddc05c85c526fe35a9c0272f17d18c191941a69f17c97c4ca55fd9b4ebfb92f3"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 6 ÷ 3 = 2.": {
+    "file": "tr-e1b29828a1504025.mp3",
+    "duration": 4.242917,
+    "sha256": "d7f0b17f8fa9c7958b9491e2c1e42424302900863d03b927fe35d1f8a74584a1"
+  },
+  "Kütüphanede 20 kitap vardı. 12 kitap ödünç verildi. Kaç kitap kaldı?": {
+    "file": "tr-821b04b27ec0c48c.mp3",
+    "duration": 4.376958,
+    "sha256": "9c49d4eafbe6a6a610ede45823b52b228de953f4a79fdef443b6cd98d51d3866"
+  },
+  "İpucu: Başlangıçtaki miktardan ayrılan miktarı çıkar.": {
+    "file": "tr-eda5bb7bf3ce8871.mp3",
+    "duration": 3.129708,
+    "sha256": "a72c6876155f20adac25a41a661fae76ae9e538e25201dc42183ecb7ae4026d6"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 20 − 12 = 8.": {
+    "file": "tr-0bc0bda7eee08351.mp3",
+    "duration": 4.5265,
+    "sha256": "31598b1bc02c828b9fb6d5e81402bb99571a63c65d5bdbffeb06deba256604d3"
+  },
+  "Bir grupta 2 öğrenci, diğerinde 2 öğrenci var. Her birine 2 kart verilirse toplam kaç kart gerekir?": {
+    "file": "tr-afda03dd1b630e64.mp3",
+    "duration": 6.025958,
+    "sha256": "b39d899b051c6a046363976d63354fab4e35933b7e64051d90e6de69f47f181e"
+  },
+  "İpucu: Önce iki öğrenci grubunu birleştir; sonra kişi başına kart sayısıyla çarp.": {
+    "file": "tr-7e847b11eefd0eee.mp3",
+    "duration": 4.851583,
+    "sha256": "95186d981a616125fc97e6198d60f9e1f590620313c589040fd0c5fdce392afc"
+  },
+  "Çözümü birlikte inceleyelim. Önce topla, sonra çarp: (2+2) × 2 = 8.": {
+    "file": "tr-97ef121c8b19271e.mp3",
+    "duration": 5.526375,
+    "sha256": "c8d6a581d5da928b3055f6847a2a0b447cf7cfcf36109dcd167b9cc9522e18d1"
+  },
+  "3 kutunun her birinde 3 kalem var. Toplam kaç kalem var?": {
+    "file": "tr-36479206602bbf43.mp3",
+    "duration": 3.424958,
+    "sha256": "6e6bc4364e8ff7e8a095e531b909a7d73de19e3d37ffd5211359127a37502e03"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 3 × 3 = 9.": {
+    "file": "tr-aa347512a30f395a.mp3",
+    "duration": 4.341083,
+    "sha256": "f1d64825d0bf14352a2da6e6ed2384758016b80559f37401289a24468cd5b3fb"
+  },
+  "12 kitap 4 rafa eşit paylaştırıldı. Her rafta kaç kitap var?": {
+    "file": "tr-7c91d6c49052010f.mp3",
+    "duration": 3.84825,
+    "sha256": "37e9c3af70b4de97db651dd40eb0dd402299e8bf4302d7d7d7291b06111c8023"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 12 ÷ 4 = 3.": {
+    "file": "tr-2fc6322da27976e4.mp3",
+    "duration": 4.498333,
+    "sha256": "e8221317308ec94a42d7249388cad41437ea11a063df6e970631a0ecbb2cc064"
+  },
+  "Kütüphanede 30 kitap vardı. 6 kitap ödünç verildi. Kaç kitap kaldı?": {
+    "file": "tr-d2b36962ddf93b20.mp3",
+    "duration": 4.249958,
+    "sha256": "08c94ef1be843315849017e804b010220f69210d8137fbe16d465ff724dc4a60"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 30 − 6 = 24.": {
+    "file": "tr-2440f15a8604f9ca.mp3",
+    "duration": 4.792833,
+    "sha256": "5f797732fa33f85ef588fcfcd23d4f2cb9b9331b19220db2b176b4056911c436"
+  },
+  "Bir grupta 3 öğrenci, diğerinde 3 öğrenci var. Her birine 2 kart verilirse toplam kaç kart gerekir?": {
+    "file": "tr-7225450612b29223.mp3",
+    "duration": 5.967542,
+    "sha256": "88c0cb3f8112d71fedd26a348e3cec6bcbab74b381602c7bf3ecdae4c9618842"
+  },
+  "Çözümü birlikte inceleyelim. Önce topla, sonra çarp: (3+3) × 2 = 12.": {
+    "file": "tr-842e96d9123d158d.mp3",
+    "duration": 5.456708,
+    "sha256": "a373900808a14c5f939c9d21dcdee2e7f1a443c038ed2b2161677562b8b6ede1"
+  },
+  "4 kutunun her birinde 4 kalem var. Toplam kaç kalem var?": {
+    "file": "tr-0c7490678f55446f.mp3",
+    "duration": 3.483,
+    "sha256": "927bec5c01a8fced8983b57fe2671dfbfef81ebc76a802158f4684ed3cfa19ff"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 4 × 4 = 16.": {
+    "file": "tr-712ecb763c2e899a.mp3",
+    "duration": 4.911042,
+    "sha256": "bb9c0dbf7cc4f90a6c2ea99e7c97164c641e2a87a389be547603f3ec8ece5553"
+  },
+  "8 kitap 2 rafa eşit paylaştırıldı. Her rafta kaç kitap var?": {
+    "file": "tr-82da53930070048e.mp3",
+    "duration": 3.889958,
+    "sha256": "9d466c3dd317edd51d3dc6a0ba62e3e24b7e406a8952a795d370465b9357dc03"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 8 ÷ 2 = 4.": {
+    "file": "tr-be20ea4e5401c16f.mp3",
+    "duration": 4.633958,
+    "sha256": "b2a0be6e6ebdf5779a9bbd1e883a0ccb77c24c7e2f2c1cf3c21b79205340c1f8"
+  },
+  "Kütüphanede 40 kitap vardı. 9 kitap ödünç verildi. Kaç kitap kaldı?": {
+    "file": "tr-45a1bee3905574b0.mp3",
+    "duration": 4.702042,
+    "sha256": "947c82017e741e720cc649e553c8d5ee45c436f3911c361aee27ce6c5772cea6"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 40 − 9 = 31.": {
+    "file": "tr-9b7cb2302761bb3a.mp3",
+    "duration": 4.550042,
+    "sha256": "1ce8b17e8b46ed5d40d970fec711bb33d1ed0ef442a44053c77efafa0507a5f9"
+  },
+  "Bir grupta 4 öğrenci, diğerinde 4 öğrenci var. Her birine 2 kart verilirse toplam kaç kart gerekir?": {
+    "file": "tr-df270672b85b8db2.mp3",
+    "duration": 6.001958,
+    "sha256": "971df27c5f0c7af50daceb8406bbc69ab3c37e0dc90a8431767a493c1de44932"
+  },
+  "Çözümü birlikte inceleyelim. Önce topla, sonra çarp: (4+4) × 2 = 16.": {
+    "file": "tr-0214b2ce02452958.mp3",
+    "duration": 5.607625,
+    "sha256": "57edad708bf2dc7974b528e8b16253f6e6d573411ca065b0c0159ed416dc82ac"
+  },
+  "5 kutunun her birinde 2 kalem var. Toplam kaç kalem var?": {
+    "file": "tr-93d61d8f58b6966f.mp3",
+    "duration": 3.390125,
+    "sha256": "b3e615f3bdb428bd0341647f8208888cd54e6d7cfe22b1382b8bf29907e64571"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 5 × 2 = 10.": {
+    "file": "tr-bffbffe96de14e3a.mp3",
+    "duration": 4.35375,
+    "sha256": "6d60e58efbcdcf478d069580d6b18c3adaae0957c9fb4593317505e79aa5a811"
+  },
+  "15 kitap 3 rafa eşit paylaştırıldı. Her rafta kaç kitap var?": {
+    "file": "tr-7cca455740364033.mp3",
+    "duration": 3.889958,
+    "sha256": "62b6b76b3bba36bb5480b4b7ebec398f33d20159c35778782d9a23383e197e20"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 15 ÷ 3 = 5.": {
+    "file": "tr-bad2a65846cc4245.mp3",
+    "duration": 4.540292,
+    "sha256": "f7eb721ff0fd14b54c6ab6d180d0cb89cf9917aa8876f524bbff10d11bb118e8"
+  },
+  "Kütüphanede 50 kitap vardı. 12 kitap ödünç verildi. Kaç kitap kaldı?": {
+    "file": "tr-036bce6ef76038ce.mp3",
+    "duration": 4.273958,
+    "sha256": "7b3a40cfdc3607e77474a01f3233295b0759303e904c52204c0bd01fa325f0d8"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 50 − 12 = 38.": {
+    "file": "tr-d45ab692d9fa8a6d.mp3",
+    "duration": 4.591917,
+    "sha256": "1886699708f51c75883a7e34bb00b4a42e6482cec6b97a1ca877cfb6abe011d7"
+  },
+  "Bir grupta 5 öğrenci, diğerinde 2 öğrenci var. Her birine 2 kart verilirse toplam kaç kart gerekir?": {
+    "file": "tr-40143b08def6a2bf.mp3",
+    "duration": 5.606167,
+    "sha256": "3b0d01cfb3a417618dec8779d3f48d28e25068a9675840b40dea64878b13a4e9"
+  },
+  "Çözümü birlikte inceleyelim. Önce topla, sonra çarp: (5+2) × 2 = 14.": {
+    "file": "tr-f9cb03daa7a03ce6.mp3",
+    "duration": 5.503125,
+    "sha256": "2394f06ad2e6d74ae4979565b02cb57e2b0438a3e55864094a9ea82737afd5eb"
+  },
+  "6 kutunun her birinde 3 kalem var. Toplam kaç kalem var?": {
+    "file": "tr-9c130abad9ac0e55.mp3",
+    "duration": 3.575875,
+    "sha256": "70022e01def2ccf64cd1e306f1dda74145a1d66e8d2d2aa999f03b98317fcba8"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 6 × 3 = 18.": {
+    "file": "tr-691b639c527ae55e.mp3",
+    "duration": 4.570958,
+    "sha256": "d8aeaa7f756029bc2da520faa14b88c802402feb5fec071cad371faa7521721d"
+  },
+  "24 kitap 4 rafa eşit paylaştırıldı. Her rafta kaç kitap var?": {
+    "file": "tr-8e6ba2dc4f36b257.mp3",
+    "duration": 3.970625,
+    "sha256": "ad056331b76669e9e8e9fa4e6ad1e698229d6f1d4ba7e67b48561b109c5b6afc"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 24 ÷ 4 = 6.": {
+    "file": "tr-b428253e41c5a791.mp3",
+    "duration": 4.736875,
+    "sha256": "2ef96f371fcfbecaed08a2186850ab3af1373195d2f4f0f8b38a0fb0db8ac521"
+  },
+  "Kütüphanede 60 kitap vardı. 6 kitap ödünç verildi. Kaç kitap kaldı?": {
+    "file": "tr-26928eff0225ccbd.mp3",
+    "duration": 4.551125,
+    "sha256": "cb055c872ae7c1f000de211c7970f8881ebf0e49e65570df057f3c8f4878d1e6"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 60 − 6 = 54.": {
+    "file": "tr-3d6d67f375f8724a.mp3",
+    "duration": 4.954875,
+    "sha256": "2e7529ffa7310c769d343d1655e8c3abe38a2fa8d1c9c70142fb62a4c1e57e22"
+  },
+  "Bir grupta 6 öğrenci, diğerinde 3 öğrenci var. Her birine 2 kart verilirse toplam kaç kart gerekir?": {
+    "file": "tr-e662f5cedbf01675.mp3",
+    "duration": 5.955917,
+    "sha256": "46bd1d600828d9b85c27a80b6bdcb1bca4fb99ef22bfe6414414287329a7979b"
+  },
+  "Çözümü birlikte inceleyelim. Önce topla, sonra çarp: (6+3) × 2 = 18.": {
+    "file": "tr-b99b9879ccfa9423.mp3",
+    "duration": 5.642458,
+    "sha256": "53267fe2ea494c8850c4f958119f6cd8cb6e3968dd9e5f17a775d0991c21cdf0"
+  },
+  "7 kutunun her birinde 4 kalem var. Toplam kaç kalem var?": {
+    "file": "tr-30afc16c44e622ae.mp3",
+    "duration": 3.622333,
+    "sha256": "cacaf59575ff97fbf2dcc5e6dcf1a5fb4b0e5f5a8ec25f59223577c57bbecbc8"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 7 × 4 = 28.": {
+    "file": "tr-ff192c4a1aa77df2.mp3",
+    "duration": 4.3915,
+    "sha256": "8120f85eb4cbca65332e0757520bc52e737e5f88f79fb2e764e65dc57e22117f"
+  },
+  "14 kitap 2 rafa eşit paylaştırıldı. Her rafta kaç kitap var?": {
+    "file": "tr-57e87f37b88addb6.mp3",
+    "duration": 3.995417,
+    "sha256": "a16f759a6ce1e5f501f6e6ee1f3254b5b3902a75b120344fd44aebdb65120b1c"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 14 ÷ 2 = 7.": {
+    "file": "tr-e0df724e75c63dc8.mp3",
+    "duration": 4.513958,
+    "sha256": "bd97d8a01c66d0bcedb2224ecf90904cadab75bd3f9a760b229586eae4ef7afc"
+  },
+  "Kütüphanede 70 kitap vardı. 9 kitap ödünç verildi. Kaç kitap kaldı?": {
+    "file": "tr-3ec83527670c5893.mp3",
+    "duration": 4.45825,
+    "sha256": "34d3916dbb2bb8d8509bc5f6094910c9dade53a2aab91cd678fb7f822341f9e6"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 70 − 9 = 61.": {
+    "file": "tr-2531771aa80f9a43.mp3",
+    "duration": 4.713667,
+    "sha256": "25f30e45614bc85760e972d094123755bdc7819aece6fc042377a8e17a9983a5"
+  },
+  "Bir grupta 7 öğrenci, diğerinde 4 öğrenci var. Her birine 2 kart verilirse toplam kaç kart gerekir?": {
+    "file": "tr-7afe98aa6ed0a2a2.mp3",
+    "duration": 5.9095,
+    "sha256": "f096fca9cb572e7566313eba53eaadffee5569e00954282f2f6f5cce872f3f50"
+  },
+  "Çözümü birlikte inceleyelim. Önce topla, sonra çarp: (7+4) × 2 = 22.": {
+    "file": "tr-f8803c4f35a71fbd.mp3",
+    "duration": 5.572792,
+    "sha256": "a8815074241e4297108f8a03c1a0fc0b2874ae92929f653603f1c22356092771"
+  },
+  "8 kutunun her birinde 2 kalem var. Toplam kaç kalem var?": {
+    "file": "tr-72f93038dcee79cc.mp3",
+    "duration": 3.390125,
+    "sha256": "7ae25c9a42ecc3f42dd8b2263005177b2acc43809770f660573ba19f330d34c4"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 8 × 2 = 16.": {
+    "file": "tr-e9faa8b2a71db840.mp3",
+    "duration": 4.644,
+    "sha256": "9737fc03cb018d9cb403f8569c539ff3da29e83b8a8e05f929a4f069e4b6345e"
+  },
+  "24 kitap 3 rafa eşit paylaştırıldı. Her rafta kaç kitap var?": {
+    "file": "tr-ccf70c7b168c6e14.mp3",
+    "duration": 4.051917,
+    "sha256": "5dc0c3daf5d09d15a95fe8ef3c4e28890405e4ca100fdbb72a1562e0ef5b4e2b"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 24 ÷ 3 = 8.": {
+    "file": "tr-66b35d4dc8c08b98.mp3",
+    "duration": 4.731958,
+    "sha256": "1c615b5fe932518550484e7b5364dec0b3cfb8dc5203d3660b251eab727b60d0"
+  },
+  "Kütüphanede 80 kitap vardı. 12 kitap ödünç verildi. Kaç kitap kaldı?": {
+    "file": "tr-4536b46ea11bfedb.mp3",
+    "duration": 4.597583,
+    "sha256": "6b7fdb1847401650bdd7868ba69ac621abc06c38c864b653945fdff7726d0d0b"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 80 − 12 = 68.": {
+    "file": "tr-4e429ed8f0237798.mp3",
+    "duration": 4.873958,
+    "sha256": "d37a078ab95ece0ffa6fec0923df608d76de6aaf0dc9d1c50bb0fb22950970c1"
+  },
+  "Bir grupta 8 öğrenci, diğerinde 2 öğrenci var. Her birine 2 kart verilirse toplam kaç kart gerekir?": {
+    "file": "tr-1e0e5b58d826ae69.mp3",
+    "duration": 6.106875,
+    "sha256": "494a9a8ad8655487d358e3b6a7e8f3d22cfde114b013733858bf0ce91e70d5dc"
+  },
+  "Çözümü birlikte inceleyelim. Önce topla, sonra çarp: (8+2) × 2 = 20.": {
+    "file": "tr-a1a85e99a1a29481.mp3",
+    "duration": 5.353958,
+    "sha256": "a0c56d0e804f142fce5f84d06ff784f05a28610c3b5ef3eba3629977f97ff7aa"
+  },
+  "9 kutunun her birinde 3 kalem var. Toplam kaç kalem var?": {
+    "file": "tr-6208e57ac24c7279.mp3",
+    "duration": 3.597208,
+    "sha256": "7220f7d9dc8bb9670a11ddebf957a405f107d566fad54d75e539859c2db06698"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 9 × 3 = 27.": {
+    "file": "tr-5f34ee86d428bbd3.mp3",
+    "duration": 4.853,
+    "sha256": "9832c3d9d0b176ee993b776b368836018073bac47dcb977e680c9d9a2441bf21"
+  },
+  "36 kitap 4 rafa eşit paylaştırıldı. Her rafta kaç kitap var?": {
+    "file": "tr-bf66831cc40e32e2.mp3",
+    "duration": 3.993833,
+    "sha256": "acd2629599529c3e4a41558006e494ceccffe097a07ef93fd72a1c385ae9139a"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 36 ÷ 4 = 9.": {
+    "file": "tr-4f180ab46016e181.mp3",
+    "duration": 4.832833,
+    "sha256": "9fce86726d9c4f2cf4a6715702ea1ba88d36711a16ee0ffce712a8d12574cdb4"
+  },
+  "Kütüphanede 90 kitap vardı. 6 kitap ödünç verildi. Kaç kitap kaldı?": {
+    "file": "tr-c5aacc9c74cf71e7.mp3",
+    "duration": 4.45825,
+    "sha256": "f545fe84dd54f78588fe019cbb5ed0b18c4cf0fe1eb54b4e6cfc27bbd2ce50c6"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 90 − 6 = 84.": {
+    "file": "tr-d121267d6ad61081.mp3",
+    "duration": 5.201292,
+    "sha256": "e3159a63bec24cebf5bfb56f3d82564ba8cd463f4030d44184510397154ab197"
+  },
+  "Bir grupta 9 öğrenci, diğerinde 3 öğrenci var. Her birine 2 kart verilirse toplam kaç kart gerekir?": {
+    "file": "tr-f8f66f56b0e00357.mp3",
+    "duration": 6.153292,
+    "sha256": "1f3be1522b8d1f2ce6611ed130fd4b69dba1d903e2ce4df226d86340b6d22ea4"
+  },
+  "Çözümü birlikte inceleyelim. Önce topla, sonra çarp: (9+3) × 2 = 24.": {
+    "file": "tr-b528d067c1c9f01b.mp3",
+    "duration": 5.713958,
+    "sha256": "8c3f3c832168ba829609a4abbc5bc91d0a25d6b9c132384d2a10f18fb2e2ec0d"
+  },
+  "10 kutunun her birinde 4 kalem var. Toplam kaç kalem var?": {
+    "file": "tr-14506827b1cd4a39.mp3",
+    "duration": 3.529958,
+    "sha256": "de1e7af64a546f051c0d02ff392dbb4c74c6548bcff4c2e62945c9fb9516bb8e"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 10 × 4 = 40.": {
+    "file": "tr-0565b0f68eb3f5ed.mp3",
+    "duration": 4.458875,
+    "sha256": "9ff706183fbeba24cbf6a8c6ad3e1844a247ff1a8aa30eb1961eb2aba31ecf3f"
+  },
+  "20 kitap 2 rafa eşit paylaştırıldı. Her rafta kaç kitap var?": {
+    "file": "tr-6fc358897a59110f.mp3",
+    "duration": 3.726833,
+    "sha256": "38eb4403976c96dbcca5dcca8529424781045a6af30ed802b011eb4e7e991f07"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 20 ÷ 2 = 10.": {
+    "file": "tr-781799d21b7567ba.mp3",
+    "duration": 4.249958,
+    "sha256": "47504f986c9fce17ed498585c25ec9430a2d68aeb4979bef50f774f3f60149e9"
+  },
+  "Kütüphanede 100 kitap vardı. 9 kitap ödünç verildi. Kaç kitap kaldı?": {
+    "file": "tr-7645762a23bdae35.mp3",
+    "duration": 4.423417,
+    "sha256": "9854a5b9780afa9b99c349352be3f5b797001d8859c5b86003d5966bc9c75b03"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 100 − 9 = 91.": {
+    "file": "tr-cd0fc7be52e31fcb.mp3",
+    "duration": 4.82975,
+    "sha256": "060cb0ee2d13ae57b62c075b932c05e6ee0fabad6f5934ffe0cb7d5ebed67a57"
+  },
+  "Bir grupta 10 öğrenci, diğerinde 4 öğrenci var. Her birine 2 kart verilirse toplam kaç kart gerekir?": {
+    "file": "tr-06fc456c300ca3b2.mp3",
+    "duration": 5.9995,
+    "sha256": "93cf2309448f57c733f261f0ed609cb0f423b61de44fb8ae94646f1df12b4228"
+  },
+  "Çözümü birlikte inceleyelim. Önce topla, sonra çarp: (10+4) × 2 = 28.": {
+    "file": "tr-3f879c37afdf12b1.mp3",
+    "duration": 5.61925,
+    "sha256": "d8cd84234cfa1778565fe09936d10034c3608357dcb66ce8dbb58a7238b66f0a"
+  },
+  "11 kutunun her birinde 2 kalem var. Toplam kaç kalem var?": {
+    "file": "tr-ff72102033241379.mp3",
+    "duration": 3.448167,
+    "sha256": "dc6c4226b487d3d00389e911c14bc840c4f238eb6183cb47cee5d0df3436cdb2"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 11 × 2 = 22.": {
+    "file": "tr-967a1acdd79fd930.mp3",
+    "duration": 4.713667,
+    "sha256": "cfc6a724a17fedbde8abe0ccd1ff64731128ad28b95d10789cac4c2f2dc0318d"
+  },
+  "33 kitap 3 rafa eşit paylaştırıldı. Her rafta kaç kitap var?": {
+    "file": "tr-94589d86d68b386e.mp3",
+    "duration": 3.935792,
+    "sha256": "f35b912394caf6b5f2576fadc50efb18cd004689b331b0b4f7dbba6193016452"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 33 ÷ 3 = 11.": {
+    "file": "tr-14e66531bb6d408f.mp3",
+    "duration": 4.522333,
+    "sha256": "05822a4512ccfaeb797245c7949bb58c72cf2a084c023d921cf5f0f61386b7b1"
+  },
+  "Kütüphanede 110 kitap vardı. 12 kitap ödünç verildi. Kaç kitap kaldı?": {
+    "file": "tr-9d11cea77915e8bb.mp3",
+    "duration": 4.504667,
+    "sha256": "7c6426138733f59fc006bd97f8e81f7c5a1b3d2330af0be76dd9909ff09133b7"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 110 − 12 = 98.": {
+    "file": "tr-71ac2f30226f6612.mp3",
+    "duration": 4.977708,
+    "sha256": "4dcd171de75d2336c8027c064a54bd528692be7e853498e729fed9377cb1e7ed"
+  },
+  "Bir grupta 11 öğrenci, diğerinde 2 öğrenci var. Her birine 2 kart verilirse toplam kaç kart gerekir?": {
+    "file": "tr-6bd78da388d4f18d.mp3",
+    "duration": 6.257792,
+    "sha256": "24d72a1858e93cd7b8be601d97c0652d17403fe2f50f505f4ab97ebae559cde6"
+  },
+  "Çözümü birlikte inceleyelim. Önce topla, sonra çarp: (11+2) × 2 = 26.": {
+    "file": "tr-2bae9bbe2c7ecf9e.mp3",
+    "duration": 5.584417,
+    "sha256": "dad1808a89da805221c8f4de0bd817038b34df408cd1e7c207a5ebf202b1ab01"
+  },
+  "Dikdörtgenin kenarları 2 cm ve 2 cm. Alanı kaç cm²?": {
+    "file": "tr-4053a0e007a8ec18.mp3",
+    "duration": 4.794917,
+    "sha256": "180f06361d8ffbff95793991a23eef3d5b32cb667b488694a2fb7c4269b0c235"
+  },
+  "İpucu: Birim kareler satır ve sütun oluşturur; iki kenarı çarp.": {
+    "file": "tr-c2705041c58c5a11.mp3",
+    "duration": 3.569,
+    "sha256": "dbad5ed32f4b81ae4be5e9d9c7c840744fd31647ebe0b8ba41c9a21a52388ad6"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 2 × 2 = 4 cm².": {
+    "file": "tr-54e2574703268336.mp3",
+    "duration": 5.108417,
+    "sha256": "76bb28f395fa7ae2809d2e3b6b34a6af39258b89f60ade9521b7949db169f2b5"
+  },
+  "2 cm ve 3 cm kenarlı kartın çevresi kaç cm?": {
+    "file": "tr-699e6108e2836b26.mp3",
+    "duration": 4.040292,
+    "sha256": "53ebdca00a784cf139bc7af7a9645706a6a128447916e06228ee3e6b175118d3"
+  },
+  "İpucu: Çerçevenin dört kenarını takip et. Karşılıklı kenarlar eşittir.": {
+    "file": "tr-a64ac20a26b8c79e.mp3",
+    "duration": 4.330542,
+    "sha256": "cfb25ffa6f9f7bf977765a03f45ff4526eadf19ada1fadc56f05f74c5e1c3997"
+  },
+  "Çözümü birlikte inceleyelim. 2 × (2+3) = 10 cm.": {
+    "file": "tr-931cb18d1bfb7eb8.mp3",
+    "duration": 4.273958,
+    "sha256": "50e2f09cbe550975841acc00e08970de177008302edec793d1277a4288f106cf"
+  },
+  "Bahçenin alanı 8 m², bir kenarı 4 m. Diğer kenarı kaç m?": {
+    "file": "tr-71ebca40bcc9cef0.mp3",
+    "duration": 4.330542,
+    "sha256": "bb3d644802934026cbd86781a3565f1670134767b4f5ccc48f163935574b593a"
+  },
+  "İpucu: Alanı bilinen kenara böl; diğer kenarı bul.": {
+    "file": "tr-17be2c1c6c96128e.mp3",
+    "duration": 2.833958,
+    "sha256": "3a0362a110a44c63b6b8222988f75c9fa8eded20b1547ce75059fb73e52e9053"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 8 ÷ 4 = 2 m.": {
+    "file": "tr-7e24d92890765c1d.mp3",
+    "duration": 4.702042,
+    "sha256": "1f14b09235c7873bcc7de5c20c4feff2450ab2c23adc8b188b7d0549c0774f62"
+  },
+  "2 cm ve 2 cm kenarlı dikdörtgenin bir kenarı 1 cm artırılıyor. Yeni alan kaç cm²?": {
+    "file": "tr-f8b5cf83375c555d.mp3",
+    "duration": 7.035667,
+    "sha256": "4dbd2f3db7c0e385bcfc80550013325240a1bd04c9d3f36ffddd740c76e17706"
+  },
+  "İpucu: Uzatılan kenara 1 ekle; yeni kenarları çarp.": {
+    "file": "tr-6607208508b4c8be.mp3",
+    "duration": 3.471417,
+    "sha256": "d6b67276aea6a20858d69771276867e3d83a6ff890a9d3b6160ed5b891f39a37"
+  },
+  "Çözümü birlikte inceleyelim. Bir kenara 1 ekle: (2+1) × 2 = 6.": {
+    "file": "tr-f662b596227bb090.mp3",
+    "duration": 4.767583,
+    "sha256": "7afb5df97e865aaea5440f3bd1515960e6f6619946fc3d9d72597d84dc32de75"
+  },
+  "Dikdörtgenin kenarları 3 cm ve 3 cm. Alanı kaç cm²?": {
+    "file": "tr-006d7806a8bc883e.mp3",
+    "duration": 4.93425,
+    "sha256": "cedcd2e20d4268ddaa2403ec16e0ecbd111c765a9e01f51ba62f061c4951af9b"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 3 × 3 = 9 cm².": {
+    "file": "tr-f986455c676fb256.mp3",
+    "duration": 4.945958,
+    "sha256": "9afc5aa079ff572f714c59a1b13574a7428e380b39b4125aa35d176b72bc1f05"
+  },
+  "3 cm ve 4 cm kenarlı kartın çevresi kaç cm?": {
+    "file": "tr-53f013da93c8669a.mp3",
+    "duration": 4.094667,
+    "sha256": "be1f5d48294af8dfbc66ffb044448ba59ba373dd3a79cd4f852aa64ea9ce0b55"
+  },
+  "Çözümü birlikte inceleyelim. 2 × (3+4) = 14 cm.": {
+    "file": "tr-b9a49e1037a3a649.mp3",
+    "duration": 4.678833,
+    "sha256": "6217738d2e0f022199870f76a812bf183345af4c116261e53cccd0a24b5a33a5"
+  },
+  "Bahçenin alanı 6 m², bir kenarı 2 m. Diğer kenarı kaç m?": {
+    "file": "tr-e0f91951d4a690c0.mp3",
+    "duration": 4.284083,
+    "sha256": "593988164e13d062b8543346a63ec439ee274ae559ff740cebecc784dd9c4646"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 6 ÷ 2 = 3 m.": {
+    "file": "tr-06ac9513ffc99c63.mp3",
+    "duration": 4.467833,
+    "sha256": "33260f7021f269e642e606106c806a7e9b58c0b0100e154e9d93e9a66b45278c"
+  },
+  "3 cm ve 3 cm kenarlı dikdörtgenin bir kenarı 1 cm artırılıyor. Yeni alan kaç cm²?": {
+    "file": "tr-5b9358f45a1a2d68.mp3",
+    "duration": 7.267875,
+    "sha256": "4a1db19e0c10ede7557bfef2fbaaef25f8d414bc48c4df8b309286bca5e1d052"
+  },
+  "Çözümü birlikte inceleyelim. Bir kenara 1 ekle: (3+1) × 3 = 12.": {
+    "file": "tr-6b60a56a1f05de98.mp3",
+    "duration": 4.928833,
+    "sha256": "404844ba52296c180c9f8bd5ab2c5d56cc1a5fba03679310041dd18331e063ec"
+  },
+  "Dikdörtgenin kenarları 4 cm ve 4 cm. Alanı kaç cm²?": {
+    "file": "tr-e3c1b8302fe82ea3.mp3",
+    "duration": 5.073583,
+    "sha256": "0f6148030cc399a774240204bcb0d91b269117df2fc1ca1f836f2e5a31928bc5"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 4 × 4 = 16 cm².": {
+    "file": "tr-51bffdb82cb5f4a9.mp3",
+    "duration": 5.697583,
+    "sha256": "fcc4de7cc64053d9a40a1e3fc84fa4c859ac7068c94fb9a837272193c4d63bee"
+  },
+  "4 cm ve 2 cm kenarlı kartın çevresi kaç cm?": {
+    "file": "tr-c76dad4518973f4c.mp3",
+    "duration": 4.098333,
+    "sha256": "90bb38e5a0a0791830f9d686d662543046e0e87676749a6a2ad842ab25dbaa41"
+  },
+  "Çözümü birlikte inceleyelim. 2 × (4+2) = 12 cm.": {
+    "file": "tr-14b66c085a5cf09b.mp3",
+    "duration": 4.446625,
+    "sha256": "da3357414d2be1844e30f1c656165b69791e4efdd0fe1f249adf7a8ce3c626c5"
+  },
+  "Bahçenin alanı 12 m², bir kenarı 3 m. Diğer kenarı kaç m?": {
+    "file": "tr-2cd5605f251eab9e.mp3",
+    "duration": 4.318917,
+    "sha256": "442d46541f5d6b63416eb565992575b6d885ec2c056f02990cfa839da799d831"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 12 ÷ 3 = 4 m.": {
+    "file": "tr-22849b0595ffeb29.mp3",
+    "duration": 4.551125,
+    "sha256": "50157441cc31a355888a9de556a216cc7259758ccda81f0c05e40bab62c327ce"
+  },
+  "4 cm ve 4 cm kenarlı dikdörtgenin bir kenarı 1 cm artırılıyor. Yeni alan kaç cm²?": {
+    "file": "tr-82ab1e2b083362c6.mp3",
+    "duration": 7.523292,
+    "sha256": "9f335e12d78e6be9157323bdda2d7cd7f87b9c0b4f14d49daf21b5ae96357bb3"
+  },
+  "Çözümü birlikte inceleyelim. Bir kenara 1 ekle: (4+1) × 4 = 20.": {
+    "file": "tr-5ed84b1acab101f6.mp3",
+    "duration": 5.201292,
+    "sha256": "2774f28f857558bd931c304e7b262ae60b6857eaf7118cc1465c26f7e5648599"
+  },
+  "Dikdörtgenin kenarları 5 cm ve 2 cm. Alanı kaç cm²?": {
+    "file": "tr-71d37e6788acb7b5.mp3",
+    "duration": 4.922667,
+    "sha256": "9b51b9525a848b8ba41de7a96b9e49e05555bc05fe45f96d189f217d0a5ee4be"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 5 × 2 = 10 cm².": {
+    "file": "tr-2f46caa074781ba4.mp3",
+    "duration": 5.282542,
+    "sha256": "5081f9c4e0265e3f21d521f10202fa4aee83c357c6ad99eb913bee93950ac174"
+  },
+  "5 cm ve 3 cm kenarlı kartın çevresi kaç cm?": {
+    "file": "tr-b8ce1210f4c8345d.mp3",
+    "duration": 4.260875,
+    "sha256": "cb23c7a66b0c008f59b2824301800f1b58bb0d2f2ac8d263e1b7f1b7fa7c5dbf"
+  },
+  "Çözümü birlikte inceleyelim. 2 × (5+3) = 16 cm.": {
+    "file": "tr-77eec22d4aed0513.mp3",
+    "duration": 4.493083,
+    "sha256": "45cb51dddccb94e55288a81a847fd6ff744994bac7d336f9d6aecc10a98c12c3"
+  },
+  "Bahçenin alanı 20 m², bir kenarı 4 m. Diğer kenarı kaç m?": {
+    "file": "tr-ac4896bae2ce6b4a.mp3",
+    "duration": 4.318917,
+    "sha256": "2f9857a9711121d0d9db7dfa8ff07de860c1cb162363b1b15cee616f5a075ff3"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 20 ÷ 4 = 5 m.": {
+    "file": "tr-63bd1c91bf691f8b.mp3",
+    "duration": 4.655625,
+    "sha256": "ac6c795e563793e1d42d0b3239c2276df12adbabd4fad2b7b65be89467c32202"
+  },
+  "5 cm ve 2 cm kenarlı dikdörtgenin uzun kenarı 1 cm artırılıyor. Yeni alan kaç cm²?": {
+    "file": "tr-4f4716aece892a8e.mp3",
+    "duration": 7.325917,
+    "sha256": "2bf8e62945aa045a9dd8a25c3276e93b4f87f259874a179c94b9354f6610e2f2"
+  },
+  "Çözümü birlikte inceleyelim. Uzun kenara 1 ekle: (5+1) × 2 = 12.": {
+    "file": "tr-b77b9013ba98ec07.mp3",
+    "duration": 5.039958,
+    "sha256": "cc649bcd89974fa9b08be9d8187e78a1a07a246327c6af4c4afa0b2dce1b61fa"
+  },
+  "Dikdörtgenin kenarları 6 cm ve 3 cm. Alanı kaç cm²?": {
+    "file": "tr-3c82193e640b6e12.mp3",
+    "duration": 4.93425,
+    "sha256": "f1e7d022c38908063a3f0d1d0555bf26fa8a58a1068a7d25b56b468b274c2cfc"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 6 × 3 = 18 cm².": {
+    "file": "tr-df64a5d6b4753cb7.mp3",
+    "duration": 5.316458,
+    "sha256": "71fddaca7bda58e361b892baaae71332dfa81c07c04032926f5a536a0af73453"
+  },
+  "6 cm ve 4 cm kenarlı kartın çevresi kaç cm?": {
+    "file": "tr-2d5c9769ed163d85.mp3",
+    "duration": 4.134833,
+    "sha256": "20ba7e69922a9ca40f464485918e0488cb4f9206e2613a0e86511701b5560852"
+  },
+  "Çözümü birlikte inceleyelim. 2 × (6+4) = 20 cm.": {
+    "file": "tr-54b00e418ca20da7.mp3",
+    "duration": 4.5395,
+    "sha256": "e455d3208c62e9950fc65f4f38d011fc9519c73122ea22935eace70839280d8a"
+  },
+  "Bahçenin alanı 12 m², bir kenarı 2 m. Diğer kenarı kaç m?": {
+    "file": "tr-247614b88e0b06fb.mp3",
+    "duration": 4.388583,
+    "sha256": "24368695fb86144e48fd6322a92006f7bcb694f4e0e237332cbc42806b8e8ad4"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 12 ÷ 2 = 6 m.": {
+    "file": "tr-0d5af752a24cace8.mp3",
+    "duration": 4.574333,
+    "sha256": "404081035e393816f069f6ca6a1e3ff3d6fb2643f752a37484ae0ebf55f5b146"
+  },
+  "6 cm ve 3 cm kenarlı dikdörtgenin uzun kenarı 1 cm artırılıyor. Yeni alan kaç cm²?": {
+    "file": "tr-faad4520fdefe57b.mp3",
+    "duration": 7.558125,
+    "sha256": "ef4e94cfeab57d628970f2743721052ee321465b35f304abbbe2de407e668957"
+  },
+  "Çözümü birlikte inceleyelim. Uzun kenara 1 ekle: (6+1) × 3 = 21.": {
+    "file": "tr-6b13c68f7ba489af.mp3",
+    "duration": 5.3865,
+    "sha256": "5234ef7bb39e29652152d304e0eb194af9bd5ef93d1c3233d426c2ffa764b302"
+  },
+  "Dikdörtgenin kenarları 7 cm ve 4 cm. Alanı kaç cm²?": {
+    "file": "tr-37460e1bb52cc1ec.mp3",
+    "duration": 4.945958,
+    "sha256": "5c9018a63737f99033887be8612aa0b9810371a489da3efcc38b2fcb5cda8cc8"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 7 × 4 = 28 cm².": {
+    "file": "tr-6c7871adb104ac8d.mp3",
+    "duration": 5.427125,
+    "sha256": "4e023cbb5092c37587680d0d307275fb29e7706fb91ec5b2d7a1f88ba0a24462"
+  },
+  "7 cm ve 2 cm kenarlı kartın çevresi kaç cm?": {
+    "file": "tr-c96048201f74cbe7.mp3",
+    "duration": 4.133167,
+    "sha256": "c99b1733abd04dffde90e01a5f16563fa0e0d805faafdfe74b67984c5d008f43"
+  },
+  "Çözümü birlikte inceleyelim. 2 × (7+2) = 18 cm.": {
+    "file": "tr-956be6ccc5259f00.mp3",
+    "duration": 4.388583,
+    "sha256": "e09aeb844132040383c709f2c3036895271ea5d86f1d6ff2409a4f11009666cc"
+  },
+  "Bahçenin alanı 21 m², bir kenarı 3 m. Diğer kenarı kaç m?": {
+    "file": "tr-298e2c7a2fef70fc.mp3",
+    "duration": 4.620792,
+    "sha256": "69552a0efd6764a50a884b77c7d0a6ebf2521f4757e4a94aefc58c639022ac44"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 21 ÷ 3 = 7 m.": {
+    "file": "tr-f1221693ac373b06.mp3",
+    "duration": 4.644,
+    "sha256": "f8400ff13e21a21b69d27abdeccff7d718be3242a3357a4403f7b98d5dc0b220"
+  },
+  "7 cm ve 4 cm kenarlı dikdörtgenin uzun kenarı 1 cm artırılıyor. Yeni alan kaç cm²?": {
+    "file": "tr-c13d1dedb5710362.mp3",
+    "duration": 7.767083,
+    "sha256": "400f1ec256b7ba9ee84faac4a7dff3c0902ff5382ada0ee574703ab117b84970"
+  },
+  "Çözümü birlikte inceleyelim. Uzun kenara 1 ekle: (7+1) × 4 = 32.": {
+    "file": "tr-a52ab2e2812ba5f2.mp3",
+    "duration": 5.370042,
+    "sha256": "1ab38011b3c693a9fa1fdbebc9e49a800d50d1e9faf29ca12489ee18b2c97aa4"
+  },
+  "Dikdörtgenin kenarları 8 cm ve 2 cm. Alanı kaç cm²?": {
+    "file": "tr-cfcc486c8388d0c5.mp3",
+    "duration": 4.980708,
+    "sha256": "e17bb76157c117da09a442941289599ab5489e2afa38a7b521f67bff8e031794"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 8 × 2 = 16 cm².": {
+    "file": "tr-e6a64d830ca6202c.mp3",
+    "duration": 5.445083,
+    "sha256": "880fd4d347017be86be332d7ff8324e0ec1e0e59e0ee289c3564ea325f36cd2f"
+  },
+  "8 cm ve 3 cm kenarlı kartın çevresi kaç cm?": {
+    "file": "tr-7ddacb3181dcb78b.mp3",
+    "duration": 4.206667,
+    "sha256": "7c8915fa5d4f858b9f10f37cee4f619582b55a3c20dad9d1ff42c3799fd881f6"
+  },
+  "Çözümü birlikte inceleyelim. 2 × (8+3) = 22 cm.": {
+    "file": "tr-2d2ec6fc12b4aaa3.mp3",
+    "duration": 4.527917,
+    "sha256": "99098b8b9945c93d100be1fcc3e07b0d8421454ae7a86f027346e80e26c320be"
+  },
+  "Bahçenin alanı 32 m², bir kenarı 4 m. Diğer kenarı kaç m?": {
+    "file": "tr-fb9e8d9fc763c9c9.mp3",
+    "duration": 4.376958,
+    "sha256": "8a7e441192fe96cefd6fef0c2e6fb41f4874c04b12ac39bfeebcf83d35b9077a"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 32 ÷ 4 = 8 m.": {
+    "file": "tr-62e898d10be6e27d.mp3",
+    "duration": 4.756875,
+    "sha256": "98404d7871020ecd0f1def32118e854bcacd0461f88d7f3dabb16e00e5ea36d8"
+  },
+  "8 cm ve 2 cm kenarlı dikdörtgenin uzun kenarı 1 cm artırılıyor. Yeni alan kaç cm²?": {
+    "file": "tr-02a80f7bfd9550e3.mp3",
+    "duration": 7.5465,
+    "sha256": "c4f4ae6fb2ad5151acee7a2028fae694f03411bb9cbee7afcde647b68211987c"
+  },
+  "Çözümü birlikte inceleyelim. Uzun kenara 1 ekle: (8+1) × 2 = 18.": {
+    "file": "tr-291e6a9fb68382cb.mp3",
+    "duration": 5.458708,
+    "sha256": "37d21f140a79e5c7e7f9962975cb0e7d452dbd8e900d55d88701ef81fac68a63"
+  },
+  "Dikdörtgenin kenarları 9 cm ve 3 cm. Alanı kaç cm²?": {
+    "file": "tr-2a0a3893758cb62b.mp3",
+    "duration": 5.073583,
+    "sha256": "97143b5b9f2895ef70da1541ade315c783884e1b4b896f94a37701063b4d5b8a"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 9 × 3 = 27 cm².": {
+    "file": "tr-22644f423a1736fb.mp3",
+    "duration": 5.353958,
+    "sha256": "a0112bd44a2392b4224652ac7ff702486da6f4736397291478b4cf9c68727392"
+  },
+  "9 cm ve 4 cm kenarlı kartın çevresi kaç cm?": {
+    "file": "tr-9d43cfbd97f510a9.mp3",
+    "duration": 4.329208,
+    "sha256": "0e3db9dafb2543349115fd1575134ac49e11dda2be8b0c6bf4cb86577fdeb3d2"
+  },
+  "Çözümü birlikte inceleyelim. 2 × (9+4) = 26 cm.": {
+    "file": "tr-fc05afac18ceb01b.mp3",
+    "duration": 4.82975,
+    "sha256": "b9107663be8a92b190fc1d6fff405c4bd43fba1d930c3a875ec91408fdcb6ff7"
+  },
+  "Bahçenin alanı 18 m², bir kenarı 2 m. Diğer kenarı kaç m?": {
+    "file": "tr-40e21b05ae32e5ec.mp3",
+    "duration": 4.253167,
+    "sha256": "d0fb7c3bf05c327ca99d22244addf53be2888f79741f9e0943d8af488d33f9e7"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 18 ÷ 2 = 9 m.": {
+    "file": "tr-45d0faf08c4a2b4c.mp3",
+    "duration": 4.887833,
+    "sha256": "e377e7f7579846566d5bd621f4f71c8b0cac222b9769acf1cf9439e4443d36d8"
+  },
+  "9 cm ve 3 cm kenarlı dikdörtgenin uzun kenarı 1 cm artırılıyor. Yeni alan kaç cm²?": {
+    "file": "tr-8884a45e5a30addf.mp3",
+    "duration": 7.767083,
+    "sha256": "2025cb5c60141bdcfc905da7fba243b8824f9e1e871b7f1cfdb89e7f16c3b21b"
+  },
+  "Çözümü birlikte inceleyelim. Uzun kenara 1 ekle: (9+1) × 3 = 30.": {
+    "file": "tr-fb5e7c57ada252b1.mp3",
+    "duration": 5.336708,
+    "sha256": "5e9c5ea3e1c8d77a5849551c393cd71f141d87019ae118236664f2ee73616aeb"
+  },
+  "Dikdörtgenin kenarları 10 cm ve 4 cm. Alanı kaç cm²?": {
+    "file": "tr-7d88bdcfe6114470.mp3",
+    "duration": 5.050375,
+    "sha256": "8af7b04ed92c07ecd922e9a8f05a893abe2f967b3273df264a52117ff0d0ce49"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 10 × 4 = 40 cm².": {
+    "file": "tr-f64f54345c736172.mp3",
+    "duration": 5.170667,
+    "sha256": "d3b5a1f2fbce642e2d7ecc3c108562ac70011633269722f231bf1353e1f756ef"
+  },
+  "10 cm ve 2 cm kenarlı kartın çevresi kaç cm?": {
+    "file": "tr-e8e0752c0a21fd74.mp3",
+    "duration": 4.191208,
+    "sha256": "4c4c4c64b790e8b45acee9dccfffa976bcc9fab8fe2ddf82b2574d093cac21bd"
+  },
+  "Çözümü birlikte inceleyelim. 2 × (10+2) = 24 cm.": {
+    "file": "tr-f281e6492d3e2ecf.mp3",
+    "duration": 4.446625,
+    "sha256": "2225ffe960dc554a27b5f1c4e4e6b8276da9b366d6a46518696cfc3f99db2163"
+  },
+  "Bahçenin alanı 30 m², bir kenarı 3 m. Diğer kenarı kaç m?": {
+    "file": "tr-22384f33c59bc60f.mp3",
+    "duration": 4.330542,
+    "sha256": "498c8baefdc978ad27205ef2690508905f451d9950d5b876dae38478c591359b"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 30 ÷ 3 = 10 m.": {
+    "file": "tr-7f2f465ce28dc6c9.mp3",
+    "duration": 4.459167,
+    "sha256": "119df3fb4384b19cac0e0e8f04c6b8b917d3c3e88d0822fd5dd8147584abeb13"
+  },
+  "10 cm ve 4 cm kenarlı dikdörtgenin uzun kenarı 1 cm artırılıyor. Yeni alan kaç cm²?": {
+    "file": "tr-02d5edc43f061cdb.mp3",
+    "duration": 7.558125,
+    "sha256": "c59da7df01dead522566d7db682d3cee8fda7356eeab697b9f5feaa7014052b4"
+  },
+  "Çözümü birlikte inceleyelim. Uzun kenara 1 ekle: (10+1) × 4 = 44.": {
+    "file": "tr-baa254c81a23461f.mp3",
+    "duration": 5.310958,
+    "sha256": "14c2ffe16dddac25afc52063593870e8c9c835dfa09f028452f7491f9c745a05"
+  },
+  "Dikdörtgenin kenarları 11 cm ve 2 cm. Alanı kaç cm²?": {
+    "file": "tr-8be3e3b1e88251f9.mp3",
+    "duration": 5.270958,
+    "sha256": "2a070712be180f81bd7bb6951d1069504931059d4738d096719b8f72d18a24bc"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 11 × 2 = 22 cm².": {
+    "file": "tr-76e7725c0fad821b.mp3",
+    "duration": 5.340708,
+    "sha256": "5b94b121b3e7839adc132534f7d165d0f2c5c46922df0ce46629e8b3612d4ffa"
+  },
+  "11 cm ve 3 cm kenarlı kartın çevresi kaç cm?": {
+    "file": "tr-087ee97dd922b0a5.mp3",
+    "duration": 4.318917,
+    "sha256": "1ae244b58c763c53bf5255185db455a21c3e935ba4233e94f2707323f494ab92"
+  },
+  "Çözümü birlikte inceleyelim. 2 × (11+3) = 28 cm.": {
+    "file": "tr-e9b9365b00c4af25.mp3",
+    "duration": 4.82975,
+    "sha256": "f14c715571cfa4ef93ec35e4b7fd4178056472b8a6e0e071f319f6c0ed492601"
+  },
+  "Bahçenin alanı 44 m², bir kenarı 4 m. Diğer kenarı kaç m?": {
+    "file": "tr-c6719d1b65eacebf.mp3",
+    "duration": 4.574333,
+    "sha256": "aa877dababdc8d167e5d87fa8433a4092ad66437a5e4ff94a54c1e20d3cd1ae7"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 44 ÷ 4 = 11 m.": {
+    "file": "tr-b0b2818139474e2d.mp3",
+    "duration": 4.761,
+    "sha256": "6fb2a07dcc9bad44d79c1e3724c06a76be05ca318be45fc69f9b195110fffd65"
+  },
+  "11 cm ve 2 cm kenarlı dikdörtgenin uzun kenarı 1 cm artırılıyor. Yeni alan kaç cm²?": {
+    "file": "tr-ff4a5d6a22ec7c08.mp3",
+    "duration": 7.569708,
+    "sha256": "797646ca2a7751b10779a553467f861e382d45e25bd4f4b00ac21605d16f2f72"
+  },
+  "Çözümü birlikte inceleyelim. Uzun kenara 1 ekle: (11+1) × 2 = 24.": {
+    "file": "tr-a8ec378e5ab70403.mp3",
+    "duration": 5.248083,
+    "sha256": "6d7ac55f7004738e42b7e0e6ec94d368226d5c5f423449e8e5e494c22158b732"
+  },
+  "Her biri 4 eş parçalı 2 bütünün her birinde 1 parça boyalı. Toplam kaç eş parça boyalı?": {
+    "file": "tr-e901ae07c7a2da3b.mp3",
+    "duration": 5.305958,
+    "sha256": "8ecd3f564ee8b86729b1182d86761692c14e2b8b2a9cfe993703e82805742358"
+  },
+  "İpucu: Bir bütündeki boyalı parça sayısını bütün sayısıyla çarp.": {
+    "file": "tr-4696379499917ce4.mp3",
+    "duration": 3.483,
+    "sha256": "aa10719eb58e0d6bb12d4aceeb418975e4e12cc801e3926af2896f07e7701b66"
+  },
+  "Çözümü birlikte inceleyelim. 2 × 1 = 2 eş parça.": {
+    "file": "tr-31cfcd13ab6893b0.mp3",
+    "duration": 3.599125,
+    "sha256": "6de31525b9a5583b4630ca70d98fd55df805767c030cbd69387cffdec24b912b"
+  },
+  "5 eş parçanın 2 tanesi boyalı. Kesrin paydası kaçtır?": {
+    "file": "tr-b4fbde3b0a1befa8.mp3",
+    "duration": 3.726833,
+    "sha256": "51f05e0229244c0bb72b586cb7286977206c51933cbbe7af2f8c6c94c228e451"
+  },
+  "İpucu: Payda, bir bütünün eş parça sayısıdır; yalnız boyalıları sayma.": {
+    "file": "tr-f3145df70d91329d.mp3",
+    "duration": 4.498292,
+    "sha256": "25e70976ddd1260b75ca01f06bea25fea55dd63f134201f0189fc71c8cf08ccb"
+  },
+  "Çözümü birlikte inceleyelim. Payda bütünün ayrıldığı eş parça sayısıdır.": {
+    "file": "tr-9daa755d7b50b5c1.mp3",
+    "duration": 4.144792,
+    "sha256": "f4b560b33e807445968b8a1c4103230326aa3e1e24f2657beadb1f54e1bb7a21"
+  },
+  "3/8 kesrinin yüzde gösteriminde yüzde işaretinin yanına hangi sayı gelir?": {
+    "file": "tr-649d69d732b8bc05.mp3",
+    "duration": 3.822792,
+    "sha256": "558a1ed32a919095d85a02257dc9541a5599176c5d7f3aa355082002e005bb93"
+  },
+  "İpucu: Bir bütün yüzde 100’dür; payı paydaya bölüp 100 ile çarp.": {
+    "file": "tr-e77bb55120230ecc.mp3",
+    "duration": 3.715208,
+    "sha256": "9822241cc9f77003a3c594b183bd2583da9197f6134e7f3c371363b5f6eee749"
+  },
+  "Çözümü birlikte inceleyelim. 3 ÷ 8 × 100 = 37.5.": {
+    "file": "tr-4169aeff5ff1f57f.mp3",
+    "duration": 4.806542,
+    "sha256": "b1602f4bdc0e0cb4c03a42ed2f20e27ffc69de9166e2a26e661648feb9e0a5e7"
+  },
+  "Her biri 10 eş parçalı 2 bütünün her birinde 4 parça boyalı. Toplam kaç eş parça boyasız?": {
+    "file": "tr-9d91eae24ba7512f.mp3",
+    "duration": 5.305958,
+    "sha256": "a042dd0a7a83b0f36d387bee451ec85aac8634f90f956ba237b28b0382cb8457"
+  },
+  "İpucu: Bir bütünde boyasız parçaları bul; bütün sayısıyla çarp.": {
+    "file": "tr-6550dca01d09c384.mp3",
+    "duration": 3.645542,
+    "sha256": "4deaace64cc5087d596c29f06cb88bf6193e9fc6762d69cd814f96e59d6e3e1b"
+  },
+  "Çözümü birlikte inceleyelim. 2 × (10 − 4) = 12.": {
+    "file": "tr-07455f5300472dea.mp3",
+    "duration": 3.541042,
+    "sha256": "fa082643272926f6d598f8c80e335895fb7444608fb15126179ef4e8b50fd9de"
+  },
+  "Her biri 20 eş parçalı 3 bütünün her birinde 5 parça boyalı. Toplam kaç eş parça boyalı?": {
+    "file": "tr-c765ed82d6f5534e.mp3",
+    "duration": 5.375417,
+    "sha256": "82ad61bbd437ce2415a4cb0e9b5542f4f8c2712cf93de71b335afa7761b84ab2"
+  },
+  "Çözümü birlikte inceleyelim. 3 × 5 = 15 eş parça.": {
+    "file": "tr-e1af0d6718b9a63d.mp3",
+    "duration": 3.924583,
+    "sha256": "bdeaf15dc9d92a5e648982134e5f4ab4d05383fb9580e0cd5ffe1ff98dd1495a"
+  },
+  "4 eş parçanın 3 tanesi boyalı. Kesrin paydası kaçtır?": {
+    "file": "tr-f2214db353b5a422.mp3",
+    "duration": 3.831292,
+    "sha256": "2ff9b384ef7c1994bfc793a35707ecdfba33a62b6263320a3263102ad4220d35"
+  },
+  "15 TL bütçenin 3/5 kadarı harcandı. Kaç TL harcandı?": {
+    "file": "tr-18865490813deafb.mp3",
+    "duration": 3.998,
+    "sha256": "a40915d2884a2034a7d985aba90a664fc14e3a52ab705fc8b5fc1bb1170c189f"
+  },
+  "İpucu: Önce bütçeyi eş parçalara böl; sonra seçilen parça sayısını al.": {
+    "file": "tr-2f3e8eace09972a0.mp3",
+    "duration": 4.376958,
+    "sha256": "1ecc187c11c9f20c23c682df254b8f11505cf954ab678bd888063077cd81a079"
+  },
+  "Çözümü birlikte inceleyelim. 15 ÷ 5 × 3 = 9 TL.": {
+    "file": "tr-a5c61e41f4b6b849.mp3",
+    "duration": 4.365375,
+    "sha256": "4ed61b395c2d97aa0ad7b0502be7312312e7e1a61f224fc449778b6ce41a5544"
+  },
+  "Her biri 8 eş parçalı 3 bütünün her birinde 1 parça boyalı. Toplam kaç eş parça boyasız?": {
+    "file": "tr-bb38009aa31706ee.mp3",
+    "duration": 5.4335,
+    "sha256": "3c04ed50fd765d3e5e96e393d2c27608287ea47acdaf89d4b6163e062d52dff0"
+  },
+  "Çözümü birlikte inceleyelim. 3 × (8 − 1) = 21.": {
+    "file": "tr-796009e93e11b556.mp3",
+    "duration": 3.970625,
+    "sha256": "69093d0bdf323d379e9b49447fccd2d83e76c79d027522423c8e51c178edbd75"
+  },
+  "Her biri 10 eş parçalı 4 bütünün her birinde 9 parça boyalı. Toplam kaç eş parça boyalı?": {
+    "file": "tr-e21d50ee0d820402.mp3",
+    "duration": 5.305958,
+    "sha256": "57aff7d085563e81a31ca38ac082d0c2441583f78b5cdcfd0a19ea08afc25ff1"
+  },
+  "Çözümü birlikte inceleyelim. 4 × 9 = 36 eş parça.": {
+    "file": "tr-c1ae088b9993a9a0.mp3",
+    "duration": 4.168,
+    "sha256": "ff9f491bb50c0312f03898a66113b00146280811a8cca846060fc862859ec1a2"
+  },
+  "20 eş parçanın 10 tanesi boyalı. Kesrin paydası kaçtır?": {
+    "file": "tr-d73d3e2a14de9481.mp3",
+    "duration": 3.819,
+    "sha256": "fccdf3d50b5630e4ec399dc8af39cada5b794ec1ffd275192d4ae3d2215725cf"
+  },
+  "2/4 kesrinin yüzde gösteriminde yüzde işaretinin yanına hangi sayı gelir?": {
+    "file": "tr-f05528bdf14b93e8.mp3",
+    "duration": 3.993833,
+    "sha256": "23c9cdc72ae6b85b49f3ec0925e9d2e12b1f2fc588112b586b519348c0039d9f"
+  },
+  "Çözümü birlikte inceleyelim. 2 ÷ 4 × 100 = 50.": {
+    "file": "tr-a1efc4b7f4cba446.mp3",
+    "duration": 3.738417,
+    "sha256": "f134a20ccc118a1babf6752bd4a7f165cc23c370db7e7d32f8b984e23ffc6aa6"
+  },
+  "Her biri 5 eş parçalı 4 bütünün her birinde 4 parça boyalı. Toplam kaç eş parça boyasız?": {
+    "file": "tr-7c918d8c646a80ea.mp3",
+    "duration": 5.317375,
+    "sha256": "929c0c2b44d2f0994782fc6e8e1a19dd6fc59eb342b7afc41d2d1a717fbcb4eb"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 4 × (5 − 4) = 4.": {
+    "file": "tr-13f1c525436369de.mp3",
+    "duration": 5.036625,
+    "sha256": "394bbc10f3e6f6ed24fc75d860bb7cf5225f8ca4fac19c3b0ff2e67fc61be75c"
+  },
+  "Her biri 8 eş parçalı 5 bütünün her birinde 6 parça boyalı. Toplam kaç eş parça boyalı?": {
+    "file": "tr-fc176a557f124449.mp3",
+    "duration": 5.387042,
+    "sha256": "0c71df2fba086b55517bbac1edaaf088d2a8f4d00594ad7809dd957a3a5327fe"
+  },
+  "Çözümü birlikte inceleyelim. 5 × 6 = 30 eş parça.": {
+    "file": "tr-0909845049b527ee.mp3",
+    "duration": 3.761667,
+    "sha256": "23c31140c575313f7fc526ef350d4851fe9beb0377df0a8cb61475ec42486921"
+  },
+  "10 eş parçanın 5 tanesi boyalı. Kesrin paydası kaçtır?": {
+    "file": "tr-6e7aec0f46d4601b.mp3",
+    "duration": 3.759708,
+    "sha256": "cb6f90df5f6a65aec4c4223027501bfdfb2460f1c39ff54f2e4d7dada8816e7f"
+  },
+  "100 TL bütçenin 15/20 kadarı harcandı. Kaç TL harcandı?": {
+    "file": "tr-f0593f2077e16d7a.mp3",
+    "duration": 4.040292,
+    "sha256": "2c185f791a1f188050f3ce6f06444b2c413133f55433260f6d509766040eeb8a"
+  },
+  "Çözümü birlikte inceleyelim. 100 ÷ 20 × 15 = 75 TL.": {
+    "file": "tr-72290beacf81d5b5.mp3",
+    "duration": 4.400208,
+    "sha256": "e7135ebc185cc1278ef5e7a40b146179f91579e2349d9b76c1d7a182f01b1ecf"
+  },
+  "Her biri 4 eş parçalı 5 bütünün her birinde 1 parça boyalı. Toplam kaç eş parça boyasız?": {
+    "file": "tr-65d8650b2f613496.mp3",
+    "duration": 5.353958,
+    "sha256": "972566efc7e5f452b7a462d7f58280840e4ce9893b6df45564cb8c4900c6ae37"
+  },
+  "Çözümü birlikte inceleyelim. 5 × (4 − 1) = 15.": {
+    "file": "tr-471f3d32bb88cd25.mp3",
+    "duration": 3.959,
+    "sha256": "e15378ae8de4741a288c88ba8eb7a19e15f4ab1c78bf15c2be04099ca599eb6f"
+  },
+  "Her biri 5 eş parçalı 6 bütünün her birinde 1 parça boyalı. Toplam kaç eş parça boyalı?": {
+    "file": "tr-cc334c6d36e62e56.mp3",
+    "duration": 5.166458,
+    "sha256": "8e38d8223d4762e922b17a19761a2996ed0c6d35c7ce7d4d0b19b153a599124a"
+  },
+  "Çözümü birlikte inceleyelim. 6 × 1 = 6 eş parça.": {
+    "file": "tr-11e9200295e9e8b2.mp3",
+    "duration": 3.77325,
+    "sha256": "2d79a2bab633df448b206b108ecc88538bda2c2b92f13bf6037affca4e96f9e0"
+  },
+  "8 eş parçanın 4 tanesi boyalı. Kesrin paydası kaçtır?": {
+    "file": "tr-b70cdf151b8ec429.mp3",
+    "duration": 3.728167,
+    "sha256": "40d80268b6653f683fb98052923836e64186a9eb81b8b15e94bd90b318737eff"
+  },
+  "1/10 kesrinin yüzde gösteriminde yüzde işaretinin yanına hangi sayı gelir?": {
+    "file": "tr-05f3502c52b5a943.mp3",
+    "duration": 3.739542,
+    "sha256": "fa4544c3c5afd400d76425989415086b9f1b82178496597e6b8159b05b0ac7b6"
+  },
+  "Çözümü birlikte inceleyelim. 1 ÷ 10 × 100 = 10.": {
+    "file": "tr-9220095e13d6d116.mp3",
+    "duration": 3.471417,
+    "sha256": "2e3adb05bed52454d4db64d617f99563aaae4bd6d4608c190775b9fb2262e36d"
+  },
+  "Her biri 20 eş parçalı 6 bütünün her birinde 1 parça boyalı. Toplam kaç eş parça boyasız?": {
+    "file": "tr-18ff8f153bc74a7e.mp3",
+    "duration": 5.445083,
+    "sha256": "98334b664b6cf442aa5fcf76516d107186bdaca7819a79963f92f9f7338e10c1"
+  },
+  "Çözümü birlikte inceleyelim. 6 × (20 − 1) = 114.": {
+    "file": "tr-e6e7a2990997328d.mp3",
+    "duration": 4.109958,
+    "sha256": "d7c610ebd60a4c997805ec51ae536a16466bc58e3ce56af59fdbe1a1cafb5999"
+  },
+  "Her biri 4 eş parçalı 7 bütünün her birinde 3 parça boyalı. Toplam kaç eş parça boyalı?": {
+    "file": "tr-188d817209240eff.mp3",
+    "duration": 5.537958,
+    "sha256": "f44e6b117a6357814dc6ed7bfd8ea63075c87e2952933de87125e9f661c4d0eb"
+  },
+  "Çözümü birlikte inceleyelim. 7 × 3 = 21 eş parça.": {
+    "file": "tr-feaee5d5e6c9ae02.mp3",
+    "duration": 3.913958,
+    "sha256": "74738d051dfd4b091a83fc70b417aa19d8fb5da10e8e34471076841993151576"
+  },
+  "56 TL bütçenin 2/8 kadarı harcandı. Kaç TL harcandı?": {
+    "file": "tr-4bef3d30912b148f.mp3",
+    "duration": 4.098333,
+    "sha256": "e6c87286984f3e1eaccf3b94bbd97426f32f1e1f8742f05ce4166adf0b4b8ea4"
+  },
+  "Çözümü birlikte inceleyelim. 56 ÷ 8 × 2 = 14 TL.": {
+    "file": "tr-46ab0426be948c1a.mp3",
+    "duration": 4.144792,
+    "sha256": "6dc403a751eb83e983e6498abfab46e44767b98176cb00c75d5aaba0c5ab03b5"
+  },
+  "Her biri 10 eş parçalı 7 bütünün her birinde 6 parça boyalı. Toplam kaç eş parça boyasız?": {
+    "file": "tr-ddec6302086f2c43.mp3",
+    "duration": 5.154833,
+    "sha256": "edc62865d582feb617ad161c2412c035d5e91b6071626ef3cdbd8500b839736b"
+  },
+  "Çözümü birlikte inceleyelim. 7 × (10 − 6) = 28.": {
+    "file": "tr-b7e6569fca10d50b.mp3",
+    "duration": 3.913958,
+    "sha256": "f0b6bc4a0fe1298f6da2f2c386b7de6afa2e36885be6db69bf7d203b449ddba5"
+  },
+  "Her biri 20 eş parçalı 8 bütünün her birinde 6 parça boyalı. Toplam kaç eş parça boyalı?": {
+    "file": "tr-fa77c2508b50d399.mp3",
+    "duration": 5.421875,
+    "sha256": "dad6d2603a65c4c0a0699fb261e4d22c42c968da09480884518618b8f82667a8"
+  },
+  "Çözümü birlikte inceleyelim. 8 × 6 = 48 eş parça.": {
+    "file": "tr-14cb76044d14b511.mp3",
+    "duration": 4.075125,
+    "sha256": "d04c8bf6b189ee838b5b2d5eff7742ba4872f81a3f5835696cb3560cdc5bed7d"
+  },
+  "4 eş parçanın 2 tanesi boyalı. Kesrin paydası kaçtır?": {
+    "file": "tr-af6dc8436c22b6a1.mp3",
+    "duration": 3.656667,
+    "sha256": "028f8efb088fc57a0a538502c1faf09c0c74670a64921d74e114bcadca192105"
+  },
+  "3/5 kesrinin yüzde gösteriminde yüzde işaretinin yanına hangi sayı gelir?": {
+    "file": "tr-d9dc0617cc82d10e.mp3",
+    "duration": 3.850708,
+    "sha256": "9f0d31bfb61af80d183052fd2984a9747c14b11b00debbc31377ddf78a995592"
+  },
+  "Çözümü birlikte inceleyelim. 3 ÷ 5 × 100 = 60.": {
+    "file": "tr-2b4cc7e228110cef.mp3",
+    "duration": 3.842917,
+    "sha256": "a194ab79f26ebc4d70f81108f351e5e0d14fddebf4207991991121eb1c8e4daf"
+  },
+  "Her biri 8 eş parçalı 8 bütünün her birinde 7 parça boyalı. Toplam kaç eş parça boyasız?": {
+    "file": "tr-414aef9f384e63a2.mp3",
+    "duration": 5.369542,
+    "sha256": "5784d4a6aafc7348d2841e21aa05dbcf547c32b05e18dea621ce1d156fbb1b1f"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 8 × (8 − 7) = 8.": {
+    "file": "tr-d06cc3e80fcc7f83.mp3",
+    "duration": 5.2245,
+    "sha256": "c8a35479327b07e538285cac911f90da88611522c2abecdced7a9a4c860465a7"
+  },
+  "Her biri 10 eş parçalı 9 bütünün her birinde 2 parça boyalı. Toplam kaç eş parça boyalı?": {
+    "file": "tr-278f06455a17b4e3.mp3",
+    "duration": 5.387042,
+    "sha256": "574d32d3f3c5bfa0938c8e59e9aeebb0d2b021263f67c5a75f88f3812f356dad"
+  },
+  "Çözümü birlikte inceleyelim. 9 × 2 = 18 eş parça.": {
+    "file": "tr-858dbe5c2ec008d2.mp3",
+    "duration": 4.086708,
+    "sha256": "26733db24c912e8d0fd62ccb79e3bc00ae90fc3ae1e4895387daff73d97e8c77"
+  },
+  "20 eş parçanın 11 tanesi boyalı. Kesrin paydası kaçtır?": {
+    "file": "tr-1ad1f2e1dd14b39d.mp3",
+    "duration": 3.842917,
+    "sha256": "38c0a438fe4192a140dade2ad6749a4bb87a94b1f99bddca604f7f6fb899262c"
+  },
+  "36 TL bütçenin 1/4 kadarı harcandı. Kaç TL harcandı?": {
+    "file": "tr-7c56536d9998046f.mp3",
+    "duration": 4.214417,
+    "sha256": "d1b508d5544b766bd69c565f414a38ed58011c58120a8834830185dcd962e7f5"
+  },
+  "Çözümü birlikte inceleyelim. 36 ÷ 4 × 1 = 9 TL.": {
+    "file": "tr-6702f496340fd920.mp3",
+    "duration": 4.109958,
+    "sha256": "c33f226b9008ac7219e26fe47fdd597d4c6f15f92c056527644013fbb0accda4"
+  },
+  "Her biri 5 eş parçalı 9 bütünün her birinde 4 parça boyalı. Toplam kaç eş parça boyasız?": {
+    "file": "tr-915c3cefd54cac77.mp3",
+    "duration": 5.421875,
+    "sha256": "5845c382906e0e099e469f093597890ea02cc140b0272b0508ca13de75758e3a"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 9 × (5 − 4) = 9.": {
+    "file": "tr-5a232705d76372ec.mp3",
+    "duration": 5.179792,
+    "sha256": "17f4b7af817407cda2a203856d96c3b1cd0c23d86877722fa30236519d9e14a0"
+  },
+  "Her biri 8 eş parçalı 10 bütünün her birinde 5 parça boyalı. Toplam kaç eş parça boyalı?": {
+    "file": "tr-5250cbb0dc94575d.mp3",
+    "duration": 5.363833,
+    "sha256": "85a86cebd710a4ef769e55aea5a7e82e117a5f125ff08228267f92a91d010eab"
+  },
+  "Çözümü birlikte inceleyelim. 10 × 5 = 50 eş parça.": {
+    "file": "tr-57e89dec35ce5869.mp3",
+    "duration": 3.633958,
+    "sha256": "a2188305d4ff9e399ba3b0397f9b5b28ddfc7c32b7e542a1eb5378b9af765193"
+  },
+  "10 eş parçanın 7 tanesi boyalı. Kesrin paydası kaçtır?": {
+    "file": "tr-e55cb7e03a653887.mp3",
+    "duration": 3.572333,
+    "sha256": "a1f3d4a8faad6a313e58d78b7d675e82b84668ab76b5b4981fea4f256176d275"
+  },
+  "16/20 kesrinin yüzde gösteriminde yüzde işaretinin yanına hangi sayı gelir?": {
+    "file": "tr-508b6ff2e93c3af4.mp3",
+    "duration": 4.130458,
+    "sha256": "ef57a84e3c3f0aeed75cfefd6e5afe1fb0396f7ca5e386f73def243b0fa85778"
+  },
+  "Çözümü birlikte inceleyelim. 16 ÷ 20 × 100 = 80.": {
+    "file": "tr-510e64d47d3be623.mp3",
+    "duration": 3.98225,
+    "sha256": "f39b2fe0e6ce3235d8557accfe43a133d4ecb753681d9245d34222470f6ab360"
+  },
+  "Her biri 4 eş parçalı 10 bütünün her birinde 3 parça boyalı. Toplam kaç eş parça boyasız?": {
+    "file": "tr-b4120af09569fc85.mp3",
+    "duration": 5.607625,
+    "sha256": "8f3860cbd3c7192c3ec156016986d36ee5be5003fbc7919c2ec811385028a186"
+  },
+  "Çözümü birlikte inceleyelim. 10 × (4 − 3) = 10.": {
+    "file": "tr-bad2f5830f3410b6.mp3",
+    "duration": 3.645542,
+    "sha256": "7d1faf627535838e9e78a1bcc8083d8a67a2a0fd9820d99905ab9133cb726d85"
+  },
+  "Her biri 5 eş parçalı 11 bütünün her birinde 1 parça boyalı. Toplam kaç eş parça boyalı?": {
+    "file": "tr-2a39a96512c87f61.mp3",
+    "duration": 5.329958,
+    "sha256": "c5b39c05ebb715b463785d2b76606239d0019dd20790b563acfa6c132671d102"
+  },
+  "Çözümü birlikte inceleyelim. 11 × 1 = 11 eş parça.": {
+    "file": "tr-6ecfee70f33df1a9.mp3",
+    "duration": 3.935792,
+    "sha256": "e827e840e82bd052f4b52b8ec18ac7db0d03724aceaa3c1293930e26d6bb5eff"
+  },
+  "8 eş parçanın 3 tanesi boyalı. Kesrin paydası kaçtır?": {
+    "file": "tr-e8f6c106a9733a91.mp3",
+    "duration": 3.831292,
+    "sha256": "313caaff1671d359080a6ddd5ebb663cb9d559829fa182296df09271949c2ad5"
+  },
+  "110 TL bütçenin 3/10 kadarı harcandı. Kaç TL harcandı?": {
+    "file": "tr-d3125ff920436a30.mp3",
+    "duration": 3.831292,
+    "sha256": "e24b34b3f1811a2a86884ac0c021326130adf10b52c54d8dfa964d6cff4f9dbb"
+  },
+  "Çözümü birlikte inceleyelim. 110 ÷ 10 × 3 = 33 TL.": {
+    "file": "tr-ec76133df0f56fbb.mp3",
+    "duration": 4.273958,
+    "sha256": "0d39eb76c0d38066dd1d038213b31f75191d4f71918da6400531c5d9daf64940"
+  },
+  "Her biri 20 eş parçalı 11 bütünün her birinde 2 parça boyalı. Toplam kaç eş parça boyasız?": {
+    "file": "tr-719abe1361bcf907.mp3",
+    "duration": 5.572792,
+    "sha256": "f1f6ca7fad594261ec2b19dfa37d3bf4d67d2f83bde76633c60af3fffe531242"
+  },
+  "Çözümü birlikte inceleyelim. 11 × (20 − 2) = 198.": {
+    "file": "tr-e7955068930b86dd.mp3",
+    "duration": 4.45825,
+    "sha256": "282f0f370caaee4c3db582f9312ee60b9d383a7a5c0366753d34eb6dea530568"
+  },
+  "Her biri 4 eş parçalı 12 bütünün her birinde 2 parça boyalı. Toplam kaç eş parça boyalı?": {
+    "file": "tr-7291ccb27e5b6b7c.mp3",
+    "duration": 5.421875,
+    "sha256": "393f10755f2b14c0927267f967a0b4dc3a485988ef80ae731e5175f8c7904fe1"
+  },
+  "Çözümü birlikte inceleyelim. 12 × 2 = 24 eş parça.": {
+    "file": "tr-5662d01981063a57.mp3",
+    "duration": 4.017083,
+    "sha256": "4b6d7c0c7215bad1eb0fc3715b7fb84bc15a2dec3463812f09a4896fe734d1fa"
+  },
+  "4 eş parçalı iki bütünde birincinin 2, ikincinin 1 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-22bdb6bbec256e8a.mp3",
+    "duration": 5.294167,
+    "sha256": "7d272d0029cba07682216b754b85365fe8dfba40ea4703699c5def03d66d671a"
+  },
+  "İpucu: Bütünler ve parça büyüklükleri eşit. Boyalı parça sayılarını karşılaştır.": {
+    "file": "tr-a1147bb77e29ba6e.mp3",
+    "duration": 4.707292,
+    "sha256": "b8ba9eab317065e66edfddb788ed21ab903203d7a70e9216ba985d24f1373cf4"
+  },
+  "Çözümü birlikte inceleyelim. Paydalar eşit; payları karşılaştır: 2 > 1.": {
+    "file": "tr-ff49e1222a712633.mp3",
+    "duration": 4.14125,
+    "sha256": "112eb2293c44e773a2ea9587fc8d220458de06ff0b25242b4cce7b6ecb2e1ff6"
+  },
+  "4 eş parçalı iki bütünde birincinin 2, ikincinin 3 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-22428e22a054ba69.mp3",
+    "duration": 5.353958,
+    "sha256": "e9b745c7fa2b4edd91ac140c22f419d26ec2fac5c5ce1d1a04fb59c3ff2a55a5"
+  },
+  "Çözümü birlikte inceleyelim. Paydalar eşit; payları karşılaştır: 2 < 3.": {
+    "file": "tr-e713c4a05a1faa95.mp3",
+    "duration": 4.435917,
+    "sha256": "66135d78a9320e0c3df38c98f978ac34e8eea2352aa9e6a1a93e71d2b1abbc3e"
+  },
+  "4 eş parçalı iki bütünde birincinin 3, ikincinin 3 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-2d75daae0fe45335.mp3",
+    "duration": 5.445083,
+    "sha256": "b1a1e9a9ca5ccbe1ec40a83b1059475c7f80ec24752d6836464076bcc39538fc"
+  },
+  "Çözümü birlikte inceleyelim. Paydalar eşit; payları karşılaştır: 3 = 3.": {
+    "file": "tr-e5aef1c00d9a53df.mp3",
+    "duration": 4.617417,
+    "sha256": "811d661bd53864d068015a7891b609725fe541ded9aa6b798189607a19889b9d"
+  },
+  "5 eş parçalı iki bütünde birincinin 1, ikincinin 2 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-0fd0cf8d9a578bd9.mp3",
+    "duration": 5.148125,
+    "sha256": "8ba544edf6c1bdcff29211281a8fe2a71396d29a6a08149357b91154284b1e13"
+  },
+  "Çözümü birlikte inceleyelim. Paydalar eşit; payları karşılaştır: 1 < 2.": {
+    "file": "tr-fdbb5a0fdf808c88.mp3",
+    "duration": 4.295708,
+    "sha256": "1bfd646c08b3b98877ee6d097f1cfeea4facd8190515ad7e8b807664bf360e04"
+  },
+  "5 eş parçalı iki bütünde birincinin 2, ikincinin 2 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-1631e9313c65a81e.mp3",
+    "duration": 5.329958,
+    "sha256": "9172a2f9705a6ec64936b4c5946f136de002edea50f7a5fd4aa155f3f51ac18f"
+  },
+  "Çözümü birlikte inceleyelim. Paydalar eşit; payları karşılaştır: 2 = 2.": {
+    "file": "tr-eb87e0ac67340fb8.mp3",
+    "duration": 4.817542,
+    "sha256": "7b55a34b05285f39aa18ea8400f29053c3d4f603fe5265750e606894859ca9bc"
+  },
+  "5 eş parçalı iki bütünde birincinin 4, ikincinin 3 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-2eac3bd1e0839c07.mp3",
+    "duration": 5.445083,
+    "sha256": "e5dcb906dff05bfe1bc567d3aa87f4c285192f2e14276c8a183085c4f401ea6f"
+  },
+  "Çözümü birlikte inceleyelim. Paydalar eşit; payları karşılaştır: 4 > 3.": {
+    "file": "tr-a5907007b63fef04.mp3",
+    "duration": 4.365375,
+    "sha256": "c2696c2bf50a8f414e4d1db4692016cccc8ac8a47a4d470ec9c3ee8dbf961de1"
+  },
+  "5 eş parçalı iki bütünde birincinin 4, ikincinin 5 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-25009c3fd85a5ee6.mp3",
+    "duration": 5.270958,
+    "sha256": "7d7af4629277c463943a71bc71c048f656e053fa8df55b3689658cb41fbba7be"
+  },
+  "Çözümü birlikte inceleyelim. Paydalar eşit; payları karşılaştır: 4 < 5.": {
+    "file": "tr-fed4d38ea3caa72a.mp3",
+    "duration": 4.504667,
+    "sha256": "3f1a7f5c8fe037ef572173f1f3dd5ca25e0a8851649a76328b329090bdfb4dc8"
+  },
+  "6 eş parçalı iki bütünde birincinin 4, ikincinin 4 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-3e0ed2a8f7a51b19.mp3",
+    "duration": 5.282542,
+    "sha256": "18f9ff7adfe0db8762b11c4927eed47fc2853acdd4beee6c2cb23cd30d45ec70"
+  },
+  "Çözümü birlikte inceleyelim. Paydalar eşit; payları karşılaştır: 4 = 4.": {
+    "file": "tr-abec9b1e40618551.mp3",
+    "duration": 5.061958,
+    "sha256": "38d0c376ba1555049859525ecfabdcb9de92c79da86619f6b24f88a0d3edc489"
+  },
+  "6 eş parçalı iki bütünde birincinin 6, ikincinin 5 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-f0a2ee612e538312.mp3",
+    "duration": 5.41025,
+    "sha256": "a74312a23bc1c6d6b68655a1240b63df07fc28a50792ab3453a25d0cc49f919e"
+  },
+  "Çözümü birlikte inceleyelim. Paydalar eşit; payları karşılaştır: 6 > 5.": {
+    "file": "tr-156349dca9e9bbbe.mp3",
+    "duration": 4.441958,
+    "sha256": "e97c3b05db7c016f67a610cde06a56db77f591f4c1025c0ae85f5e6595bf4479"
+  },
+  "6 eş parçalı iki bütünde birincinin 1, ikincinin 2 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-15c68eec05392ed8.mp3",
+    "duration": 5.294167,
+    "sha256": "dcf474b5b7310e8dcd4d9e4f4d4cb8eaf9171ba248a1d1275bd0edf488da60b5"
+  },
+  "6 eş parçalı iki bütünde birincinin 2, ikincinin 2 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-b7feb1bbf21ffc8b.mp3",
+    "duration": 5.340625,
+    "sha256": "43ed1f1de2fc8eeec8ff37c87b5462140a97791b488a64346b2eb6b6367f4f18"
+  },
+  "7 eş parçalı iki bütünde birincinin 2, ikincinin 1 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-09315a3bdf8ca69e.mp3",
+    "duration": 5.340625,
+    "sha256": "e677b42114d7f2af202ed9a485b8e27b56ab7a96873625d986ea54e94a65347b"
+  },
+  "7 eş parçalı iki bütünde birincinin 2, ikincinin 3 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-bbca30133041bc91.mp3",
+    "duration": 5.340625,
+    "sha256": "8c01457a706c599630e5c01d61d2cc747fea50b6f33801f7432ab512516bbdbd"
+  },
+  "7 eş parçalı iki bütünde birincinin 3, ikincinin 3 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-89a4133a6dacf5ee.mp3",
+    "duration": 5.41025,
+    "sha256": "4f0084de78f7970239e51fb59f5dc57cc9923b687335a2bb8183fedbd512a9cc"
+  },
+  "7 eş parçalı iki bütünde birincinin 5, ikincinin 4 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-fe032970b9cd81d8.mp3",
+    "duration": 5.084917,
+    "sha256": "7def60e336df9ce57192fff562f846464b73fe1053616fd5f54baddcc91e3b5b"
+  },
+  "Çözümü birlikte inceleyelim. Paydalar eşit; payları karşılaştır: 5 > 4.": {
+    "file": "tr-f95b95dc711c13b3.mp3",
+    "duration": 4.527917,
+    "sha256": "9870644da030687f9eefec3b4554bc5c6b57b977c1dd7ed68b6fafdac741bf2f"
+  },
+  "8 eş parçalı iki bütünde birincinin 3, ikincinin 4 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-e8b49655a964e30e.mp3",
+    "duration": 5.51475,
+    "sha256": "22520698503fc9bbe0d1fdd9f365a733b50769e722c6ecca59caf0690e8a6750"
+  },
+  "Çözümü birlikte inceleyelim. Paydalar eşit; payları karşılaştır: 3 < 4.": {
+    "file": "tr-084149ccdf9511aa.mp3",
+    "duration": 4.295,
+    "sha256": "604006cd41a107468ef8308bbe3d82c7e910dfa4222108a4d95d00e4ef39520f"
+  },
+  "8 eş parçalı iki bütünde birincinin 4, ikincinin 4 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-a8aefbb9a10024ee.mp3",
+    "duration": 5.445083,
+    "sha256": "62e99a1440a1ac6fca05f9cbcf1e3091791cca67517a6d892aab700f8d2a223c"
+  },
+  "8 eş parçalı iki bütünde birincinin 6, ikincinin 5 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-3bb4909644fc282c.mp3",
+    "duration": 5.549583,
+    "sha256": "9ae29c4dd003d6b97e4a11f15dcb59c9d2d72bae8981931a7d5a6ecbc6c01c68"
+  },
+  "8 eş parçalı iki bütünde birincinin 6, ikincinin 7 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-c999abbc6fa1eab5.mp3",
+    "duration": 5.246292,
+    "sha256": "9f6056a8680236e7889533bc60c2f2ad9864218078942e8753287cb476746208"
+  },
+  "Çözümü birlikte inceleyelim. Paydalar eşit; payları karşılaştır: 6 < 7.": {
+    "file": "tr-aaf726f81dddd09b.mp3",
+    "duration": 4.439083,
+    "sha256": "74b5f7802fd46d57e7fadc3fd17e3204fa3208e6eac35d6a92b89e95a0b1bf49"
+  },
+  "9 eş parçalı iki bütünde birincinin 5, ikincinin 5 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-ec28c3b277b50c6a.mp3",
+    "duration": 5.468333,
+    "sha256": "dd502702a2cfce6b5637ded14627fb114419c32e627558148009237155bce7f3"
+  },
+  "Çözümü birlikte inceleyelim. Paydalar eşit; payları karşılaştır: 5 = 5.": {
+    "file": "tr-472887fe75eaa3c7.mp3",
+    "duration": 4.827,
+    "sha256": "b12d6f2ebdf15853c5020155a235b5e7762427ee1d853c30f334fbb022583cc6"
+  },
+  "9 eş parçalı iki bütünde birincinin 7, ikincinin 6 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-b8221ad90847e31f.mp3",
+    "duration": 5.549583,
+    "sha256": "d78c3e80903e1e8662f59c5ae8645fde8936f1de72eb968c8d580c4d095a14ed"
+  },
+  "Çözümü birlikte inceleyelim. Paydalar eşit; payları karşılaştır: 7 > 6.": {
+    "file": "tr-9c03030bc3cd43b6.mp3",
+    "duration": 4.469875,
+    "sha256": "3b05a31b40a32b72e83a95717615796ecd3e4ee0f4e5c56c8324568602a309c5"
+  },
+  "9 eş parçalı iki bütünde birincinin 7, ikincinin 8 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-37870c181861218a.mp3",
+    "duration": 5.491542,
+    "sha256": "7d5ddd63039e20cb0e5cb38af76e328b3b7e72caeca48145ee49bce03f160137"
+  },
+  "Çözümü birlikte inceleyelim. Paydalar eşit; payları karşılaştır: 7 < 8.": {
+    "file": "tr-be1493100b560fd1.mp3",
+    "duration": 4.494667,
+    "sha256": "146ffc1a878035dc1cbb8aa33d30efe18b03a7648c71946a1036ddf911ba1a52"
+  },
+  "9 eş parçalı iki bütünde birincinin 8, ikincinin 8 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-33da2419ca2d0b7d.mp3",
+    "duration": 5.746958,
+    "sha256": "a705f773f0b6fec764ab76bcf1b062fadc496d0fe7c89b0b7e7b8bb4fcbeb449"
+  },
+  "Çözümü birlikte inceleyelim. Paydalar eşit; payları karşılaştır: 8 = 8.": {
+    "file": "tr-920e480c797b330b.mp3",
+    "duration": 5.077042,
+    "sha256": "215a8fe95ae753e77367d46b39b26beb4a23ec8432781d39681e028c60246d77"
+  },
+  "10 eş parçalı iki bütünde birincinin 8, ikincinin 7 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-144d56e33a3df9c7.mp3",
+    "duration": 5.13475,
+    "sha256": "03152cdcdfd0e3620a80e5032d82574ebec124bfb1ab3b2e1fa858673e3e215e"
+  },
+  "Çözümü birlikte inceleyelim. Paydalar eşit; payları karşılaştır: 8 > 7.": {
+    "file": "tr-e3b75dc64269d437.mp3",
+    "duration": 4.678833,
+    "sha256": "7ad2aaa51fa8b794b87ffda3a1d6418c5dc73c444f5cc5e303eebda4a5483910"
+  },
+  "10 eş parçalı iki bütünde birincinin 8, ikincinin 9 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-27245f836ea02a37.mp3",
+    "duration": 5.317375,
+    "sha256": "c3ba5c22d373282610aaa2202fd716591ede424cb5132328a074d7444b1eaad3"
+  },
+  "Çözümü birlikte inceleyelim. Paydalar eşit; payları karşılaştır: 8 < 9.": {
+    "file": "tr-cc761f3ca2305fcf.mp3",
+    "duration": 4.523417,
+    "sha256": "065de68573627fa55122842296e52797d12d831417b8800e84d6e1cee48f2b49"
+  },
+  "10 eş parçalı iki bütünde birincinin 9, ikincinin 9 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-48178f1281a29747.mp3",
+    "duration": 5.212875,
+    "sha256": "58a492dbefa32c3354a3f158df66b909a6bae6d1b9aa352fac45f268615e0767"
+  },
+  "Çözümü birlikte inceleyelim. Paydalar eşit; payları karşılaştır: 9 = 9.": {
+    "file": "tr-4916d6711ed7ccde.mp3",
+    "duration": 4.904125,
+    "sha256": "effad302c4f48df74cad18c741289af93c04aa197e4980bd6ac62b86a7925599"
+  },
+  "10 eş parçalı iki bütünde birincinin 2, ikincinin 1 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-ff59e841054d0f93.mp3",
+    "duration": 5.189667,
+    "sha256": "02185a8cbd2a26680d38db747ed4a6618f77b388181b154c636be6abb6a599f8"
+  },
+  "11 eş parçalı iki bütünde birincinin 9, ikincinin 10 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-6c4e5485db3e1aeb.mp3",
+    "duration": 5.387042,
+    "sha256": "7ee1baaa1938042a9a0ea4273eb8ddff7fdeee6cf407716362e432b1b7efe6b0"
+  },
+  "Çözümü birlikte inceleyelim. Paydalar eşit; payları karşılaştır: 9 < 10.": {
+    "file": "tr-66ac5878afc7a175.mp3",
+    "duration": 4.388583,
+    "sha256": "cdad3636eb72b19b93edb7ddd140bf7bf1c21f8facc402f0de3152b561a8cf57"
+  },
+  "11 eş parçalı iki bütünde birincinin 10, ikincinin 10 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-357401f2d0db1c73.mp3",
+    "duration": 5.270958,
+    "sha256": "fa6410b4f38e1f7b2a3a0172376652d25a1025bdf68579e679c7e4389b3d554e"
+  },
+  "Çözümü birlikte inceleyelim. Paydalar eşit; payları karşılaştır: 10 = 10.": {
+    "file": "tr-1ffe997ae0904568.mp3",
+    "duration": 4.655625,
+    "sha256": "a31ec75371513c402af17e7d19d9374fab3f258c8264ed90f9610dcd8d2a66ab"
+  },
+  "11 eş parçalı iki bütünde birincinin 2, ikincinin 1 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-fd9c842c0c6c35be.mp3",
+    "duration": 5.329958,
+    "sha256": "876ad65ae4fc2cb849a35d88dfddcced0e48c37633bdb05a81efbbc601b3ed7d"
+  },
+  "11 eş parçalı iki bütünde birincinin 2, ikincinin 3 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-462dcee941d8d0f3.mp3",
+    "duration": 5.51475,
+    "sha256": "ea2bb45f42d2751426e9c44ac3111560ea4d461a4a306f58c2b1f8b7f81d572c"
+  },
+  "12 eş parçalı iki bütünde birincinin 11, ikincinin 11 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-eac85eecf35529ed.mp3",
+    "duration": 5.526375,
+    "sha256": "7c082dab9b8d0ad13073b00ac9cfe201ea73524a09cb83146aced0ebcb4c68ce"
+  },
+  "Çözümü birlikte inceleyelim. Paydalar eşit; payları karşılaştır: 11 = 11.": {
+    "file": "tr-7026d7445b84a9ad.mp3",
+    "duration": 4.737042,
+    "sha256": "f3a0a8b039582aca9a467ea139cdf866ba20280e9ab0637d2c255e3ecfc15e6f"
+  },
+  "12 eş parçalı iki bütünde birincinin 2, ikincinin 1 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-d209d4a4f77a309a.mp3",
+    "duration": 5.445083,
+    "sha256": "f1c0f50badf65f7767aeb0b2fa7a23c2f08306a907e0418ca717cc1057a66a08"
+  },
+  "12 eş parçalı iki bütünde birincinin 2, ikincinin 3 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-5529b1d20d833335.mp3",
+    "duration": 5.456708,
+    "sha256": "15268969e3c3114a71d5c7cf920909966ce61ad53d67d9c7af12b4061baaa9fc"
+  },
+  "12 eş parçalı iki bütünde birincinin 3, ikincinin 3 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-bc3d25f5f2dad1fd.mp3",
+    "duration": 5.398667,
+    "sha256": "790c9a21eb6a621e13725db9121010a7c75a595a368e5cf90d9f05ff7928c1ae"
+  },
+  "13 eş parçalı iki bütünde birincinin 2, ikincinin 1 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-c31b3cb500bab616.mp3",
+    "duration": 5.2245,
+    "sha256": "8a6b409206668b8e4b9ebf6ad0829cd9fc1a3fe14f91314d1d92427c9d25560c"
+  },
+  "13 eş parçalı iki bütünde birincinin 2, ikincinin 3 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-0e83cf33a12380d4.mp3",
+    "duration": 5.491542,
+    "sha256": "4cf83f14f2e47e73ef65452c62c80e64d20bca01cf5f642cedfec9288b782a84"
+  },
+  "13 eş parçalı iki bütünde birincinin 3, ikincinin 3 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-79ff17738f517fba.mp3",
+    "duration": 5.353958,
+    "sha256": "fe7b20204998e446c85fa16463199f6ff91f0e503ed59cef4e7e1687e291b7cc"
+  },
+  "13 eş parçalı iki bütünde birincinin 5, ikincinin 4 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-389e9319ddc837b9.mp3",
+    "duration": 5.305958,
+    "sha256": "838d89dc858d51cc2dd65ec42a9403bd7d76b42c8d4d6dde53b087f9d6cdfd9f"
+  },
+  "14 eş parçalı iki bütünde birincinin 2, ikincinin 3 parçası boyalı. Hangisi daha büyük?": {
+    "file": "tr-19e23dd545981abe.mp3",
+    "duration": 5.561208,
+    "sha256": "d0a10404afc51659a5b62f3be82924c454360de839c6e6eb7162315494fe8f6c"
+  },
+  "Elma 2, armut 2, muz 4 oy aldı. Toplam kaç oy var?": {
+    "file": "tr-7d8c2b15c3621ba0.mp3",
+    "duration": 3.866125,
+    "sha256": "ab8175f229eba426d72fcb5e929e020d6ca87cc9fd9389612e0905b289b614f9"
+  },
+  "İpucu: Her kategorideki kişi sayısını bir kez topla.": {
+    "file": "tr-bade4901a3c9340e.mp3",
+    "duration": 3.041833,
+    "sha256": "585b1cdb57c7adbd368a10608d5b8989c73ef5727aa87995ab95d1e0974a0bf0"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 2+2+4 = 8.": {
+    "file": "tr-6bc8626d81e4e780.mp3",
+    "duration": 5.060333,
+    "sha256": "4a649ccfbbff0d9a8149a46f482346c2f4319332a7bfdd06976015aef6515c57"
+  },
+  "Elma 2, armut 3, muz 4 oy aldı. Muz ile elma arasındaki fark kaçtır?": {
+    "file": "tr-f7501bb5d58ba7f7.mp3",
+    "duration": 4.509208,
+    "sha256": "04dbb2cc008c8e91de3b103e44bd55ecd57613f76f583f2b0a908fc1ca2e1f56"
+  },
+  "İpucu: Muz sütunu ile elma sütununun yükseklik farkını bul.": {
+    "file": "tr-71eb733182836537.mp3",
+    "duration": 3.355292,
+    "sha256": "502b74a788eea65cb3cc30dd7c63453260e3aa23cfeeefbfda85033a6d015f7f"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 4 − 2 = 2.": {
+    "file": "tr-ea37d550829e88e3.mp3",
+    "duration": 4.3125,
+    "sha256": "0bfaae4fcfebea5edae790f40a925d8d4e7fc77559b1b1c546e340d082860c23"
+  },
+  "Grafikte armut 4 oy aldı. 3 yeni oy eklenirse kaç olur?": {
+    "file": "tr-5e6ac4915a343512.mp3",
+    "duration": 3.819708,
+    "sha256": "6500984c610a85905ca0f9a965f23e40318499b6a6c8caf08e804708aadada70"
+  },
+  "İpucu: Armutun mevcut oyuna yeni oyları ekle.": {
+    "file": "tr-a9945a18ee3a0a7a.mp3",
+    "duration": 2.890917,
+    "sha256": "e2bbf7c23e18a6bc29f49a97bdfe7181e861af74828550fb4e45207428e4834c"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 4+3 = 7.": {
+    "file": "tr-7623a5d346bd9bd9.mp3",
+    "duration": 4.342417,
+    "sha256": "a9b24f0f753339c4884c27cafd73c653323d1a874eebc91e90eed60fa8cf9f11"
+  },
+  "Grafikte elma 2, armut 2, muz 4 oy aldı. Elma ve armut toplamı kaçtır?": {
+    "file": "tr-d70595fa838e9998.mp3",
+    "duration": 5.131458,
+    "sha256": "abe0eecca9811c5573974ff90eacf3215fe6ffd4091008bf9a8436780e265e8c"
+  },
+  "İpucu: Yalnız elma ve armut oylarını birleştir.": {
+    "file": "tr-7aca9e239a1c767a.mp3",
+    "duration": 3.022208,
+    "sha256": "2c0af9e5a3ee523a50afb65d4fc0f4e70fe4b88eb5bfe241d6587ace0ea43866"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 2+2 = 4.": {
+    "file": "tr-7ff8551b58587c77.mp3",
+    "duration": 4.435042,
+    "sha256": "d674150b734768951abd0d96c971ecb02e90393d481249d63225cdad45142fcf"
+  },
+  "Elma 3, armut 3, muz 5 oy aldı. Toplam kaç oy var?": {
+    "file": "tr-7df8c924fad62245.mp3",
+    "duration": 3.819708,
+    "sha256": "9b8e086ec81ab27510ad9dfca137885ec37ba3fa4c06a2812c7ae636c6edbed5"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 3+3+5 = 11.": {
+    "file": "tr-1602b71d0b93014b.mp3",
+    "duration": 4.946583,
+    "sha256": "0957dede3b7376d8a907d9034990f5eec45a6889f5abad8b168f428a19d7c2e7"
+  },
+  "Elma 3, armut 4, muz 5 oy aldı. Muz ile elma arasındaki fark kaçtır?": {
+    "file": "tr-ad1eb16971ad2b09.mp3",
+    "duration": 4.561958,
+    "sha256": "0bc7b12ea3bf2d6ea546cfb1cddab4f702f31912f8624d4d5449b7a249db6839"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 5 − 3 = 2.": {
+    "file": "tr-224867998974e3b8.mp3",
+    "duration": 4.435042,
+    "sha256": "2aa4f606933a1fffa6a6854b28b1bf7dc882847edb4cfe2c3385f0ba34c9338c"
+  },
+  "Grafikte armut 2 oy aldı. 3 yeni oy eklenirse kaç olur?": {
+    "file": "tr-281f9531c6233a8f.mp3",
+    "duration": 3.50925,
+    "sha256": "7c06c950623b777dc8a4b85095bb9aa337e00271028919da081e7ac08942d3e7"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 2+3 = 5.": {
+    "file": "tr-dc8933d29d63b3c7.mp3",
+    "duration": 4.26125,
+    "sha256": "240e36f35c1abdb085d495543cde823e1e7d5c66113fa39f7ca581d12e59b028"
+  },
+  "Grafikte elma 3, armut 3, muz 5 oy aldı. Elma ve armut toplamı kaçtır?": {
+    "file": "tr-6308e558a5b87a27.mp3",
+    "duration": 4.761875,
+    "sha256": "b2730970f67bce15a1512dd66e3b6423f36c64d6b2ab05d05f2b66dbda335127"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 3+3 = 6.": {
+    "file": "tr-7961dfeac4b23a31.mp3",
+    "duration": 4.21175,
+    "sha256": "a32501969506ad506088d61bc848505ceb169a62a27dfce1fcc737d512421e18"
+  },
+  "Elma 4, armut 4, muz 6 oy aldı. Toplam kaç oy var?": {
+    "file": "tr-66d4ed4a3696aa03.mp3",
+    "duration": 3.924208,
+    "sha256": "83ee26f1f6135229ddff37a4460ff4a1f1a1154cd3975759da2eb6043f22f36f"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 4+4+6 = 14.": {
+    "file": "tr-d62b986a33ea7846.mp3",
+    "duration": 5.561208,
+    "sha256": "92a658abe92012259f808c4305698b170bfa9be9acb214082728e161180ccd7c"
+  },
+  "Elma 4, armut 2, muz 6 oy aldı. Muz ile elma arasındaki fark kaçtır?": {
+    "file": "tr-dc5cd97f057c5505.mp3",
+    "duration": 4.572208,
+    "sha256": "2c50a4bf024af75d8698bb92764362c61e77cd9ef2f223bc184ef6f1be0d6e74"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 6 − 4 = 2.": {
+    "file": "tr-1a591b730b1c1c16.mp3",
+    "duration": 4.503833,
+    "sha256": "23b02625779332c51a460d4720744107339ad8d78459949f6e3e4c91d52ffde3"
+  },
+  "Grafikte armut 3 oy aldı. 3 yeni oy eklenirse kaç olur?": {
+    "file": "tr-b0ff7d45ef265acf.mp3",
+    "duration": 3.703583,
+    "sha256": "86b18b9378f86b420188c0dd3938cb13de258b5637f55346f9866d149747405b"
+  },
+  "Grafikte elma 4, armut 4, muz 6 oy aldı. Elma ve armut toplamı kaçtır?": {
+    "file": "tr-15979b28e195d39e.mp3",
+    "duration": 5.163125,
+    "sha256": "6c3110a739b0fc2fec539ce3baf16308bec63fcf426aef8ceddf2fffd4ca9071"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 4+4 = 8.": {
+    "file": "tr-0f4ee934259d796b.mp3",
+    "duration": 4.775542,
+    "sha256": "1c88fbf92d14b94558914009fa7be8795dd896ec7b5ee41d7e9fa780a6da81af"
+  },
+  "Elma 5, armut 2, muz 7 oy aldı. Toplam kaç oy var?": {
+    "file": "tr-ac5769c5d17130a1.mp3",
+    "duration": 3.738417,
+    "sha256": "60d9b82cb467d259ec3a83f069b1457c791fc6fcea7192cdeb15d69bb057fddf"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 5+2+7 = 14.": {
+    "file": "tr-bce614a5cfd74324.mp3",
+    "duration": 5.03875,
+    "sha256": "cee9e5b6dcdf4f7dce76328a455e6f581c7613b479504460d894e38083d296d6"
+  },
+  "Elma 5, armut 3, muz 7 oy aldı. Muz ile elma arasındaki fark kaçtır?": {
+    "file": "tr-f6d41c0c942f7b85.mp3",
+    "duration": 4.420958,
+    "sha256": "b1b10d521401bcf940b94ed792e63b88f13228edee93a1d7999c0e82694cf5c6"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 7 − 5 = 2.": {
+    "file": "tr-71e240dbeae4a8a0.mp3",
+    "duration": 4.493083,
+    "sha256": "30297705b268d29f75f418f18fb4eb5e834f2a5040ba0a82721e105300a6c5e2"
+  },
+  "Grafikte elma 5, armut 2, muz 7 oy aldı. Elma ve armut toplamı kaçtır?": {
+    "file": "tr-7683749c63b563db.mp3",
+    "duration": 5.159542,
+    "sha256": "117ab8a48dafaaaa2d5028433afd4739923469fc1d6c19119d021c58b5156b79"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 5+2 = 7.": {
+    "file": "tr-29482f79c6aae1d1.mp3",
+    "duration": 4.342167,
+    "sha256": "4437b64be309e1130e35be45ae88bb801f28713da5133af5b07028f245045e57"
+  },
+  "Elma 6, armut 3, muz 8 oy aldı. Toplam kaç oy var?": {
+    "file": "tr-728d6fc90c5b0ca2.mp3",
+    "duration": 3.935792,
+    "sha256": "20726a9caee0cabc1ba4ff0d4d3b61bb66db90b320526444234c90dc96749c81"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 6+3+8 = 17.": {
+    "file": "tr-36d73d707f5651d6.mp3",
+    "duration": 5.091167,
+    "sha256": "cfb9799b0b1e6c7f2fd2b0e03e1b3341764058f540a99ddb78f73d28bff6e806"
+  },
+  "Elma 6, armut 4, muz 8 oy aldı. Muz ile elma arasındaki fark kaçtır?": {
+    "file": "tr-2ddb734e09793005.mp3",
+    "duration": 4.733292,
+    "sha256": "e674d45f917f808f92857f6bffe7df050d07137e663e1623908b8b09249fbc39"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 8 − 6 = 2.": {
+    "file": "tr-53890db9814f99d9.mp3",
+    "duration": 4.5395,
+    "sha256": "ec862c6a209d980c5b50521e72b23f78155060b5ecce101bb55fb7f814b72587"
+  },
+  "Grafikte elma 6, armut 3, muz 8 oy aldı. Elma ve armut toplamı kaçtır?": {
+    "file": "tr-0669c5753f103113.mp3",
+    "duration": 5.076708,
+    "sha256": "07f4a09466101f8b16146eca9397d473d437b6d3b9e4fee4569cbeeec6e224f0"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 6+3 = 9.": {
+    "file": "tr-8e78946e1b59b4ba.mp3",
+    "duration": 4.40475,
+    "sha256": "e15d49375862ea3bfe3bd9ab9ae34431415ca2ac776054758ce035450f24c8d7"
+  },
+  "Elma 7, armut 4, muz 9 oy aldı. Toplam kaç oy var?": {
+    "file": "tr-343a42e99f6442b6.mp3",
+    "duration": 3.87775,
+    "sha256": "f02b23c617dc054f128358fe8e916c51de9eb4fa6a718ebb42d865bf3268039c"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 7+4+9 = 20.": {
+    "file": "tr-ddc668eeb796ab3b.mp3",
+    "duration": 5.212875,
+    "sha256": "c690cb90d1f6cc3ece07d7ae6059f675aaaa489fb17f3a296c1d6c47380da1cf"
+  },
+  "Elma 7, armut 2, muz 9 oy aldı. Muz ile elma arasındaki fark kaçtır?": {
+    "file": "tr-00d0bf128c5c7eee.mp3",
+    "duration": 4.83,
+    "sha256": "b9103a3fc4f7219be3c37db78fb7adbd8b03474f3cf45a8a94c65ccf3b28e535"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 9 − 7 = 2.": {
+    "file": "tr-648d64eaeafc2cad.mp3",
+    "duration": 4.516292,
+    "sha256": "051d7c1958d1d7a6dd4535ede01e1ea05356503f234c4cbc144bffa6b21bdc61"
+  },
+  "Grafikte elma 7, armut 4, muz 9 oy aldı. Elma ve armut toplamı kaçtır?": {
+    "file": "tr-c40cb1db37414339.mp3",
+    "duration": 5.198125,
+    "sha256": "0e60edc28e9a6d041296cc1478f2820c45710d354ba1dda1a901db683ce8c1c2"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 7+4 = 11.": {
+    "file": "tr-2418f48964af72e4.mp3",
+    "duration": 4.760125,
+    "sha256": "7b6352700eba17b4b38650a8cf06bedb4802d9460a1f919001c3c42f246e0ba4"
+  },
+  "Elma 8, armut 2, muz 10 oy aldı. Toplam kaç oy var?": {
+    "file": "tr-08260a407ac42569.mp3",
+    "duration": 3.819708,
+    "sha256": "0acbe2271e1bae00ee9e6a927692c84aaf585b62d9516de8f8bd85bd3f938917"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 8+2+10 = 20.": {
+    "file": "tr-7fd2ba997e111f43.mp3",
+    "duration": 4.876208,
+    "sha256": "023b8395dd0dbbc7015c8528f81720fc5b683af0ed08f012b61c65a257d69732"
+  },
+  "Elma 8, armut 3, muz 10 oy aldı. Muz ile elma arasındaki fark kaçtır?": {
+    "file": "tr-8d12548831bcebd7.mp3",
+    "duration": 4.794917,
+    "sha256": "61899310275d53f9c40eab57f43631a5452bbc4e50ec5f38ea661d93c0b83151"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 10 − 8 = 2.": {
+    "file": "tr-e60b6919da43124e.mp3",
+    "duration": 4.5395,
+    "sha256": "1803e1c4a69e3c46cd8267f9f3c5d11014e58fc0cb8149b3b54d8a9797e033ee"
+  },
+  "Grafikte elma 8, armut 2, muz 10 oy aldı. Elma ve armut toplamı kaçtır?": {
+    "file": "tr-933b9599c290701c.mp3",
+    "duration": 4.982917,
+    "sha256": "8392ef5f3971dc6134013f5f7fd7c0d5dd8b20c28b735d0699d183f3adeeb1c9"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 8+2 = 10.": {
+    "file": "tr-6444fa5ab29e344a.mp3",
+    "duration": 4.271792,
+    "sha256": "61fcc607a84da820107853bea715ec37b72295d95e05ada8539aa5c8953ac8dd"
+  },
+  "Elma 9, armut 3, muz 11 oy aldı. Toplam kaç oy var?": {
+    "file": "tr-9dc23174f741ecee.mp3",
+    "duration": 3.970625,
+    "sha256": "5eb81f87bd4d4696a5fd25366839ab61bba2878c4c0f7b316db8c7bca7cc7394"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 9+3+11 = 23.": {
+    "file": "tr-5058410efd1dcdf4.mp3",
+    "duration": 5.1015,
+    "sha256": "26a718c3dd951ce7b8a6007b180f4568c82a9b99cbbb61917ba29c29f7119e7f"
+  },
+  "Elma 9, armut 4, muz 11 oy aldı. Muz ile elma arasındaki fark kaçtır?": {
+    "file": "tr-b0186ec76efd5c18.mp3",
+    "duration": 4.8325,
+    "sha256": "b969f4167ca885471e12699392746993581da1d2a1e12db24bb1f75cbf193ef0"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 11 − 9 = 2.": {
+    "file": "tr-5fa6b4064fc2faf5.mp3",
+    "duration": 4.5395,
+    "sha256": "e853d3765d276900bbac4f7024650071b57cc7ea12d8a067cd760e451a76e338"
+  },
+  "Grafikte elma 9, armut 3, muz 11 oy aldı. Elma ve armut toplamı kaçtır?": {
+    "file": "tr-ffb303598b77329e.mp3",
+    "duration": 5.16375,
+    "sha256": "bcc6ffd527eb9dbcb743d874755f920d86b04bd1eb9214cfaa574b0d3f91330f"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 9+3 = 12.": {
+    "file": "tr-216e41c012ea1c67.mp3",
+    "duration": 4.667208,
+    "sha256": "be87dab15122503de18a6f5cc31db1e5257cce942e3df0d0a1fad890c62c2bef"
+  },
+  "Elma 10, armut 4, muz 12 oy aldı. Toplam kaç oy var?": {
+    "file": "tr-8fa87fce49eb23b0.mp3",
+    "duration": 3.842917,
+    "sha256": "b05dc85942fa2e415ea453a59fd443b1aa923c2d99db9317e3bd3409fff5bb3e"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 10+4+12 = 26.": {
+    "file": "tr-7c1eb37b0377ff3a.mp3",
+    "duration": 5.048833,
+    "sha256": "64da4fdee02d4b74e1b0ec3a50ad4358eb275f578f2c225091c25140ce9e7c1b"
+  },
+  "Elma 10, armut 2, muz 12 oy aldı. Muz ile elma arasındaki fark kaçtır?": {
+    "file": "tr-714e9ff657faf7bb.mp3",
+    "duration": 4.643292,
+    "sha256": "b9f678c0de3677c0e621fd86fba60b06c3a10f6ce9dbd566889cc4e99068b6e8"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 12 − 10 = 2.": {
+    "file": "tr-527abce3b1b664af.mp3",
+    "duration": 4.305583,
+    "sha256": "45b5f32ed56f373f06a74b50521127503af17cb02c3345ae7aff9caf788209b1"
+  },
+  "Grafikte elma 10, armut 4, muz 12 oy aldı. Elma ve armut toplamı kaçtır?": {
+    "file": "tr-2542c89f1572febb.mp3",
+    "duration": 5.036958,
+    "sha256": "1e6452f853f75145fc835ba3bdf2da96722817051a651ffa3cacc307ed29999e"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 10+4 = 14.": {
+    "file": "tr-085b048bacc0ae50.mp3",
+    "duration": 4.55575,
+    "sha256": "a948d8d87e8cd1b318a00a9634f7378fd2bbd31b65107c26ee3286235b393b59"
+  },
+  "Elma 11, armut 2, muz 13 oy aldı. Toplam kaç oy var?": {
+    "file": "tr-3049dd9c4a3ddb48.mp3",
+    "duration": 3.87775,
+    "sha256": "ed066f1517099d099b82da6d2fe2e68b74ae0411bec84a8003e8f0d430921aa6"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 11+2+13 = 26.": {
+    "file": "tr-acb93ab9d656acee.mp3",
+    "duration": 5.001875,
+    "sha256": "ea12f384aa95173d0876de98c7b8910ad081cc32ccdc0f3ac31f1260a571c245"
+  },
+  "Elma 11, armut 3, muz 13 oy aldı. Muz ile elma arasındaki fark kaçtır?": {
+    "file": "tr-731a5d265476a057.mp3",
+    "duration": 4.787875,
+    "sha256": "d1419dccf15fc2bfa034a3132873eaf0715b91b594edd4a4c8a6652e90436507"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 13 − 11 = 2.": {
+    "file": "tr-04def72b8e72bb71.mp3",
+    "duration": 4.425333,
+    "sha256": "57af8b7f9e89d04fb2fe465f2cbc3f29026e57cb118debccb29f096a3f3bdc81"
+  },
+  "Grafikte elma 11, armut 2, muz 13 oy aldı. Elma ve armut toplamı kaçtır?": {
+    "file": "tr-baf3a71c0856140a.mp3",
+    "duration": 5.294167,
+    "sha256": "87214ee331d0b2cb792760d159b0b3cead42a9925cd7fdb78a6976e98eef7e89"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 11+2 = 13.": {
+    "file": "tr-d8af18cee0c4b90d.mp3",
+    "duration": 4.366542,
+    "sha256": "348657c0e2f5c1753c96672805c15284ae54a69da90f55175e41e0722e768fd7"
+  },
+  "Elma 12, armut 3, muz 14 oy aldı. Toplam kaç oy var?": {
+    "file": "tr-93b48226d68a4fa8.mp3",
+    "duration": 4.051917,
+    "sha256": "2f36dcae9d833e82fbe6e627ccb878725bcfc55db5d8cc1ff3e6bb0bd3e032d2"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 12+3+14 = 29.": {
+    "file": "tr-3d3bd7c602e44ac6.mp3",
+    "duration": 5.58775,
+    "sha256": "494d4463d1f26206e1e2ccd53d3423d2c6e7d1d227d1e25cd52a261a44cb3e9b"
+  },
+  "Elma 12, armut 4, muz 14 oy aldı. Muz ile elma arasındaki fark kaçtır?": {
+    "file": "tr-a8a81948ca4bdaba.mp3",
+    "duration": 5.046917,
+    "sha256": "a9ceda18aab0c7244bddb74e3bbe0eea8c1120dcc58a74f2f69ddbd45ff66886"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 14 − 12 = 2.": {
+    "file": "tr-c64fc0acb851ea80.mp3",
+    "duration": 4.573875,
+    "sha256": "4534f8ca2a3a7c2cbcfd09739f73ad8954fca0a41e0268f23fd6cba05296b0de"
+  },
+  "Grafikte elma 12, armut 3, muz 14 oy aldı. Elma ve armut toplamı kaçtır?": {
+    "file": "tr-a20b3ccae6eafe4b.mp3",
+    "duration": 5.305958,
+    "sha256": "033f49cc51e279c92ee1ac3e1c7ea2cb8d365856aaf691be198bca0b379d3ab7"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 12+3 = 15.": {
+    "file": "tr-55be9ee66f259e8a.mp3",
+    "duration": 4.649583,
+    "sha256": "4a4a8f77266f8220e98f9d1c2ffd63e4751b33d32dd4f9159237cb0f978d8daa"
+  },
+  "Elma 13, armut 4, muz 15 oy aldı. Toplam kaç oy var?": {
+    "file": "tr-82f7a803ca13241f.mp3",
+    "duration": 3.933958,
+    "sha256": "05d62839dba51e1e438ac1c552de9fdecc9db292bd494a0414879ec3cd04b5c5"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 13+4+15 = 32.": {
+    "file": "tr-f2583038a1678739.mp3",
+    "duration": 5.593958,
+    "sha256": "53f8d8fbae431c075cf760990cef57e6ec48720c934bf02037359e0399c4fad5"
+  },
+  "Elma 13, armut 2, muz 15 oy aldı. Muz ile elma arasındaki fark kaçtır?": {
+    "file": "tr-ce9f37f0d259dd44.mp3",
+    "duration": 4.810083,
+    "sha256": "465e71416f14bf4508014908a3b445ecde8297ab98389808f3b679a6c40d5ec5"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 15 − 13 = 2.": {
+    "file": "tr-f9ad298e827f61f8.mp3",
+    "duration": 4.726292,
+    "sha256": "cb800003748af959a5c877dfdaf45d6d21e0688c9a472b73cfdc68de4da81ee1"
+  },
+  "Grafikte elma 13, armut 4, muz 15 oy aldı. Elma ve armut toplamı kaçtır?": {
+    "file": "tr-52205d340e0df1ff.mp3",
+    "duration": 5.16325,
+    "sha256": "54ad554bbae404dced9240a5fd40a42995ca2eff153bbe4981701d23989fe75d"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 13+4 = 17.": {
+    "file": "tr-5b3532604653c501.mp3",
+    "duration": 4.812958,
+    "sha256": "2aa2b3f38f98337aa9c11627be3ffc7d0b48095b615546d9fc36cb938170cdbe"
+  },
+  "Elma 14, armut 2, muz 16 oy aldı. Toplam kaç oy var?": {
+    "file": "tr-ff270f3ec4875fb9.mp3",
+    "duration": 4.075125,
+    "sha256": "36e408b2e193b2bc6cc077a8fab48447e5d2adc5b33db01a82bb4c7dd76f878d"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 14+2+16 = 32.": {
+    "file": "tr-5805dfd017ff0cae.mp3",
+    "duration": 5.29675,
+    "sha256": "908acc8d594c76a6431f8f14fb366a8a1d01ecf1191bfdeedfdbe26982c213e4"
+  },
+  "2 + □ = 4. Eşitliği sağlayan sayı kaç?": {
+    "file": "tr-84f11b10adb7c377.mp3",
+    "duration": 3.442458,
+    "sha256": "4181a88f63996d7ed2570512f2dbda51e3c4338502bfb9a0f8dc769f71a296c7"
+  },
+  "İpucu: Sağdaki değerden bilinen toplananı çıkar.": {
+    "file": "tr-b95d4bda9a571dbf.mp3",
+    "duration": 2.890917,
+    "sha256": "f422205d00c093834206186e2d822fe449cffa47d16fc6921fb0d70bc30a7046"
+  },
+  "5 = 5. İki tarafa da 3 ekleniyor. Her tarafın yeni değeri kaç?": {
+    "file": "tr-dd924742a11aacbf.mp3",
+    "duration": 4.330542,
+    "sha256": "303df35d4d3228faeeb2004fb0dce42af188dfba1955b82bc77ac613c20554fb"
+  },
+  "İpucu: Aynı işlemi iki tarafta da uygula; dengedeki değerleri izle.": {
+    "file": "tr-f7d9064cac5b54b5.mp3",
+    "duration": 4.087833,
+    "sha256": "2850c4b1f6c8e6915f8af9d081a04da11a1bebc71201dee194fd76682bbce33e"
+  },
+  "Çözümü birlikte inceleyelim. İki tarafa aynı işlem: 5+3 = 8.": {
+    "file": "tr-d2c18588c71f6be3.mp3",
+    "duration": 4.652292,
+    "sha256": "c042befe73e8c9fb106467e9a61188e6c94dcb695e0e09603050e197ca5a96bb"
+  },
+  "8 = 8. İki taraf 4 ile bölünüyor. Yeni değer kaç?": {
+    "file": "tr-bc9ad7b79ff60c9e.mp3",
+    "duration": 3.85225,
+    "sha256": "36beb562e9038e2177c460c1c5bdf491a3a676cc3cfae510ecc5cc02b5f227b7"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 8 ÷ 4 = 2.": {
+    "file": "tr-3d18588dded1ec6d.mp3",
+    "duration": 4.574333,
+    "sha256": "5da3cc37ac33d75992b20017e1b371e6ff01f03d7f53e8b018f1c0a0ffb14eeb"
+  },
+  "□ − 2 = 2. Kutudaki sayı kaçtır?": {
+    "file": "tr-9f91cdb1502db726.mp3",
+    "duration": 3.191167,
+    "sha256": "a0c4d2e982783902b734e03729851d7f2583fc8e2ef6b32877164ef80c075290"
+  },
+  "İpucu: Çıkarılan miktarı sağdaki değere geri ekle.": {
+    "file": "tr-cc7651dcfde62da8.mp3",
+    "duration": 2.948958,
+    "sha256": "50853cade720be3971eb40b459aa33411427f62cb287c85b2818af10306fd61f"
+  },
+  "Çözümü birlikte inceleyelim. Çıkarılanı geri ekle: 2+2 = 4.": {
+    "file": "tr-86124930d604a114.mp3",
+    "duration": 4.242042,
+    "sha256": "1981cddda528ff23870fd0a135245415e897f27b6b0b6f5c17058bbc4c878cf4"
+  },
+  "3 + □ = 6. Eşitliği sağlayan sayı kaç?": {
+    "file": "tr-ac3dd9a58ca5ab19.mp3",
+    "duration": 3.575875,
+    "sha256": "a13e2700c576cf3192b2cae49089424ce6b66b3a0d05e5b891d24ca86cc35fbf"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 6 − 3 = 3.": {
+    "file": "tr-3c469367e325dfac.mp3",
+    "duration": 4.354125,
+    "sha256": "945d1d7205ed913221a7b9d5d7a5d2c72d7a940e37b4c7175360c1d204c9771e"
+  },
+  "7 = 7. İki tarafa da 4 ekleniyor. Her tarafın yeni değeri kaç?": {
+    "file": "tr-e430f44c776e3f19.mp3",
+    "duration": 4.295708,
+    "sha256": "c684772e3a5a7d869a23cca615b2a6a72830b301c91bdd442bdb865e9e361ef2"
+  },
+  "Çözümü birlikte inceleyelim. İki tarafa aynı işlem: 7+4 = 11.": {
+    "file": "tr-55578296480f5487.mp3",
+    "duration": 4.736875,
+    "sha256": "2da0b1c0434d60f755536492aaae08991c5cd9fcd27f2ddc6d0e917f6ea4dae3"
+  },
+  "6 = 6. İki taraf 2 ile bölünüyor. Yeni değer kaç?": {
+    "file": "tr-d53e9fcf65d7606e.mp3",
+    "duration": 3.5875,
+    "sha256": "75998789fcae8a8c48a2ad2bfd681e58dbf5c7acb98c07dcb67869f27a492cd2"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 6 ÷ 2 = 3.": {
+    "file": "tr-d6514652ffffff4f.mp3",
+    "duration": 4.085,
+    "sha256": "82599b7bd13220ed71da4c1751ca8163b44c3c2e1e4b5a4d66622088f21f9395"
+  },
+  "□ − 3 = 3. Kutudaki sayı kaçtır?": {
+    "file": "tr-967d0e78632902c3.mp3",
+    "duration": 3.052,
+    "sha256": "959dccb12e94b4d16469e9bd4c2808c002d5f1df8b9be855e839a5bc049e1dcb"
+  },
+  "Çözümü birlikte inceleyelim. Çıkarılanı geri ekle: 3+3 = 6.": {
+    "file": "tr-de2a26ef05bad59b.mp3",
+    "duration": 4.030292,
+    "sha256": "3321c88e4f090fa302dd10bef2737fa01d08db05f5884a2cd6ae188d6e2e2420"
+  },
+  "4 + □ = 8. Eşitliği sağlayan sayı kaç?": {
+    "file": "tr-759bb23fb3aef4d4.mp3",
+    "duration": 3.854542,
+    "sha256": "7367f3767f62fea6adfa639b5acc834a12659ac275cc92a789a5476e1289bbb9"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 8 − 4 = 4.": {
+    "file": "tr-9b80c99d2391a780.mp3",
+    "duration": 4.657958,
+    "sha256": "690417f37bb28eb6416e5b4b64dbe525746aaf9c79be5c01ba48db5d602b295c"
+  },
+  "6 = 6. İki tarafa da 2 ekleniyor. Her tarafın yeni değeri kaç?": {
+    "file": "tr-d0937e18e8295408.mp3",
+    "duration": 4.144792,
+    "sha256": "0f5c3be70e66fee6d7c30d84f180d2a3a9548156ed7ad0585ea9c49d4e8847cd"
+  },
+  "Çözümü birlikte inceleyelim. İki tarafa aynı işlem: 6+2 = 8.": {
+    "file": "tr-8250a8137ca0352d.mp3",
+    "duration": 4.453542,
+    "sha256": "306908a44620359522cbe20f19ab3fa64a76655eaa1221e4baf7575aa711a1d4"
+  },
+  "12 = 12. İki taraf 3 ile bölünüyor. Yeni değer kaç?": {
+    "file": "tr-77538970beadf231.mp3",
+    "duration": 3.889958,
+    "sha256": "c454960ff060865f8286c5e7077600402801cbe9e77de1d0ce9d55c877a2a4db"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 12 ÷ 3 = 4.": {
+    "file": "tr-665d51399c607548.mp3",
+    "duration": 4.736875,
+    "sha256": "aaf6b5d4154a9825246c3c2a9cdecbdad3682f15d0804693d71f9272d81e55e9"
+  },
+  "□ − 4 = 4. Kutudaki sayı kaçtır?": {
+    "file": "tr-6eed224036584f8d.mp3",
+    "duration": 3.308042,
+    "sha256": "cf66066e3008eb716ebfa9a6bde24c022c0182783aa757e6e09bdf82c41bd2d3"
+  },
+  "Çözümü birlikte inceleyelim. Çıkarılanı geri ekle: 4+4 = 8.": {
+    "file": "tr-b11c4427d78a3bf6.mp3",
+    "duration": 4.439167,
+    "sha256": "4a6bf0bc945ce6eaddc2265cb5c3e56db624105e0e1707ef84f2adfeef582c84"
+  },
+  "5 + □ = 7. Eşitliği sağlayan sayı kaç?": {
+    "file": "tr-b9da4eb96c8a5eda.mp3",
+    "duration": 3.448167,
+    "sha256": "c3e07ada5b297f64ff402bdaa3abed5b379290a1aa64d40555631c4e85bb9eba"
+  },
+  "8 = 8. İki tarafa da 3 ekleniyor. Her tarafın yeni değeri kaç?": {
+    "file": "tr-850f580ceb3ba45e.mp3",
+    "duration": 4.503583,
+    "sha256": "27065e7b9d54aadc68a0061e5bb8dff3c1aa6874c2a448cedbce549c930b7f28"
+  },
+  "Çözümü birlikte inceleyelim. İki tarafa aynı işlem: 8+3 = 11.": {
+    "file": "tr-040c241c1880e2f7.mp3",
+    "duration": 4.760125,
+    "sha256": "2b8e9ee208998a799a7198ae075a46019fe330d69d54dc7b98ed03a23b1e5ff7"
+  },
+  "20 = 20. İki taraf 4 ile bölünüyor. Yeni değer kaç?": {
+    "file": "tr-8c0490a5922ed4e0.mp3",
+    "duration": 3.784875,
+    "sha256": "bef4ba533861a95193dfa799f7a4a41d3a84cb4991a7830a9c0585881ef3f680"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 20 ÷ 4 = 5.": {
+    "file": "tr-c8bd553cd200bf0e.mp3",
+    "duration": 4.597583,
+    "sha256": "e94753f6c4b9ccafdfcae4115eec7e1390a9f9f03833a71510bc44da978d3cbf"
+  },
+  "□ − 2 = 5. Kutudaki sayı kaçtır?": {
+    "file": "tr-1c2e98e2dbeb2ad7.mp3",
+    "duration": 3.311958,
+    "sha256": "a239bc0609d0498141a257b266d938fb5bb37a3e0c53466b88a86f83eeaa2cdf"
+  },
+  "Çözümü birlikte inceleyelim. Çıkarılanı geri ekle: 5+2 = 7.": {
+    "file": "tr-f8a736a5332ce654.mp3",
+    "duration": 4.14525,
+    "sha256": "d58e1e5e1dac66a8f2201976021a0eb789e2b83326b4275cccca6395f5146599"
+  },
+  "6 + □ = 9. Eşitliği sağlayan sayı kaç?": {
+    "file": "tr-f98b49b3bfeb6ef7.mp3",
+    "duration": 3.738417,
+    "sha256": "104bd87ee4dbae82f2b005d602f68d884e459f1799b2416ab070e03fddb5bbce"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 9 − 6 = 3.": {
+    "file": "tr-b3d269b51be611a6.mp3",
+    "duration": 4.806542,
+    "sha256": "1b2c3dbe30b83e31f1595610cbab63edaaa652b6bda12200354cb7648d472dc5"
+  },
+  "10 = 10. İki tarafa da 4 ekleniyor. Her tarafın yeni değeri kaç?": {
+    "file": "tr-9796f90f20e98feb.mp3",
+    "duration": 4.146583,
+    "sha256": "d205ea12a74695cc6beebd48d40291d49b544be4164c3eacb2b3bae6f0815257"
+  },
+  "Çözümü birlikte inceleyelim. İki tarafa aynı işlem: 10+4 = 14.": {
+    "file": "tr-4dd25b47b28423d5.mp3",
+    "duration": 4.759708,
+    "sha256": "b8f273ac0fbf2f8153f5ee9f34b35cdae663f0f85eb4d0f863d40bc8a9461fb6"
+  },
+  "12 = 12. İki taraf 2 ile bölünüyor. Yeni değer kaç?": {
+    "file": "tr-63141ace4910ec3a.mp3",
+    "duration": 3.784875,
+    "sha256": "aa6c43af98dd031ce26878e4e636a8c7198e8a86a327fbf85d3f641e015097fb"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 12 ÷ 2 = 6.": {
+    "file": "tr-c62be7968da9f2f0.mp3",
+    "duration": 4.431583,
+    "sha256": "43ea43f02299e245b1e4b39204ed3d590273293416a041bd0ae66585ca87c2ac"
+  },
+  "□ − 3 = 6. Kutudaki sayı kaçtır?": {
+    "file": "tr-c65d71508e86b420.mp3",
+    "duration": 3.088042,
+    "sha256": "91c6659f4c1feea386771287ed640acc832073bf4a72fd5dfe6e6b09c7723444"
+  },
+  "Çözümü birlikte inceleyelim. Çıkarılanı geri ekle: 6+3 = 9.": {
+    "file": "tr-429227884dc28d86.mp3",
+    "duration": 4.515083,
+    "sha256": "ac5cd0463796a11a7ac3188801270284eb6b983fa68b93f45522f75492ba62ad"
+  },
+  "7 + □ = 11. Eşitliği sağlayan sayı kaç?": {
+    "file": "tr-4176c52bebb3afc9.mp3",
+    "duration": 3.703583,
+    "sha256": "169bab9b93622986a086da2c956d55ee4c1fc4661b34b013977cff0b530938e6"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 11 − 7 = 4.": {
+    "file": "tr-12a1833c4302ab7e.mp3",
+    "duration": 4.345958,
+    "sha256": "1565c87c2aa95f994935ce95a61253d38cb361eda8b1e77f2af103caf867c7a3"
+  },
+  "9 = 9. İki tarafa da 2 ekleniyor. Her tarafın yeni değeri kaç?": {
+    "file": "tr-baf15de973c29bd9.mp3",
+    "duration": 4.736875,
+    "sha256": "6feee37fb9bd5c3a6315d7b3cf943572f7e8f74597a085af900e22a049495f8c"
+  },
+  "Çözümü birlikte inceleyelim. İki tarafa aynı işlem: 9+2 = 11.": {
+    "file": "tr-4b1bdf61ebacb400.mp3",
+    "duration": 4.911042,
+    "sha256": "dc459a3c274a5e99bcbd3040435052dd1d6431c7051a560e37097c8256aa0847"
+  },
+  "21 = 21. İki taraf 3 ile bölünüyor. Yeni değer kaç?": {
+    "file": "tr-3b057517545c0b9f.mp3",
+    "duration": 3.828625,
+    "sha256": "98d9367dc48c9f8570d8b84988ad2372781a272a8c7986e9ddc87e9775bbdad0"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 21 ÷ 3 = 7.": {
+    "file": "tr-345122332b918537.mp3",
+    "duration": 4.388583,
+    "sha256": "cc795fd5ac7985d69b68a3699d44cb9569c9bac03ba49ad3c12367de883e2cf7"
+  },
+  "□ − 4 = 7. Kutudaki sayı kaçtır?": {
+    "file": "tr-a4ee09d0e5cc411b.mp3",
+    "duration": 3.277458,
+    "sha256": "f83551431193f293210b5bac4a741b55604b60efedc93fbefefa1197d46a10ec"
+  },
+  "Çözümü birlikte inceleyelim. Çıkarılanı geri ekle: 7+4 = 11.": {
+    "file": "tr-48bd816f37841611.mp3",
+    "duration": 4.356292,
+    "sha256": "a9440aef862653f5dc8b902cc1c6f33c29ddff628160177ff047f86bae2a5bc8"
+  },
+  "8 + □ = 10. Eşitliği sağlayan sayı kaç?": {
+    "file": "tr-b8ae9000ac772408.mp3",
+    "duration": 3.517833,
+    "sha256": "793097b52c4f36b74bf6819e3e479d5367a0d58b2cbd9d8805997e2b859438be"
+  },
+  "11 = 11. İki tarafa da 3 ekleniyor. Her tarafın yeni değeri kaç?": {
+    "file": "tr-646027f01139acc2.mp3",
+    "duration": 4.291417,
+    "sha256": "0211971a8d85d41a10d590d3cf00e30b8b36d1af83dfdba181eb8c662e6237e4"
+  },
+  "Çözümü birlikte inceleyelim. İki tarafa aynı işlem: 11+3 = 14.": {
+    "file": "tr-549f895db2549e2a.mp3",
+    "duration": 4.662833,
+    "sha256": "ae5bd5d2ecbc03f31014d3e2fe49342394cebe758b9159754b6a78dc0b1129d4"
+  },
+  "32 = 32. İki taraf 4 ile bölünüyor. Yeni değer kaç?": {
+    "file": "tr-5a2074877f391562.mp3",
+    "duration": 4.168,
+    "sha256": "02f10da0f8b1310d5f9bfe807cb3a5c04eacbef292db6847f0fb92e4e5caf80c"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 32 ÷ 4 = 8.": {
+    "file": "tr-55afefcff02e5fe1.mp3",
+    "duration": 4.6715,
+    "sha256": "b45c792bd3f096a234b8d624c228aa7597d5094f9f08938ed51f5c9ff5a12299"
+  },
+  "□ − 2 = 8. Kutudaki sayı kaçtır?": {
+    "file": "tr-5ad70beecace6e18.mp3",
+    "duration": 3.263208,
+    "sha256": "d5f2f35f5cc5685350e169e5dcc7aa32fd7ebc0eb0cfbfc7e36054dd1050a99f"
+  },
+  "Çözümü birlikte inceleyelim. Çıkarılanı geri ekle: 8+2 = 10.": {
+    "file": "tr-61a71f74965ab1de.mp3",
+    "duration": 4.226042,
+    "sha256": "b6f8de673fec35cfafcd1ff6d34424fed99126590edb66bd97c3f47b75fdc6ae"
+  },
+  "9 + □ = 12. Eşitliği sağlayan sayı kaç?": {
+    "file": "tr-6ed7611cccee00ab.mp3",
+    "duration": 3.854542,
+    "sha256": "2afdb8c3e7e31232cfc4b19687f7022a6b1cab8c6edbd0b28a8f0a8659a109c6"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 12 − 9 = 3.": {
+    "file": "tr-3da51550ade79e1d.mp3",
+    "duration": 4.609958,
+    "sha256": "8c091b69c11fc2ed312d4eeb4f989d93eae3c172ac8af88cff31e122416402f3"
+  },
+  "13 = 13. İki tarafa da 4 ekleniyor. Her tarafın yeni değeri kaç?": {
+    "file": "tr-5c9888168b9a8da9.mp3",
+    "duration": 4.4225,
+    "sha256": "6500d40337c47cdbc15df49a5ffd4fc69363aa81f976ea248c5ea2cf562d4e9b"
+  },
+  "Çözümü birlikte inceleyelim. İki tarafa aynı işlem: 13+4 = 17.": {
+    "file": "tr-0ff81fd33d118a5c.mp3",
+    "duration": 4.750708,
+    "sha256": "d22179b4c369f7bf848a7e5396aa8307d433203185cedc8a63f57e4a4bb5f614"
+  },
+  "18 = 18. İki taraf 2 ile bölünüyor. Yeni değer kaç?": {
+    "file": "tr-306cea88e1126f1d.mp3",
+    "duration": 4.342167,
+    "sha256": "d3620b043984945aa0b093588c0bd018d11a159a896a7c159e5865fec1751442"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 18 ÷ 2 = 9.": {
+    "file": "tr-8de324ff3cd226a5.mp3",
+    "duration": 4.558375,
+    "sha256": "01f450d84ef8ff58f99c7cfb2ec5a7ea76c42744ae3727588a473b4c1c2c9fc7"
+  },
+  "□ − 3 = 9. Kutudaki sayı kaçtır?": {
+    "file": "tr-07fed4d008f2f1f8.mp3",
+    "duration": 3.241958,
+    "sha256": "031bc1a170884a5a06c4d3c805f0f85a33127559faf9e5d1d3300d43e3f5d61d"
+  },
+  "Çözümü birlikte inceleyelim. Çıkarılanı geri ekle: 9+3 = 12.": {
+    "file": "tr-f798eefb3c588cc9.mp3",
+    "duration": 4.302333,
+    "sha256": "976acf3b7397e9702e4f3185b85150d24af2855be91353a817a2e181b4a34c2d"
+  },
+  "10 + □ = 14. Eşitliği sağlayan sayı kaç?": {
+    "file": "tr-d2afb4fc5df594c1.mp3",
+    "duration": 3.442333,
+    "sha256": "ff8419f62bf2297815d3bcfda0adb0be38c748e4583071d1b770b5eb17bd7e67"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 14 − 10 = 4.": {
+    "file": "tr-e6b1d82a153d38dc.mp3",
+    "duration": 4.540625,
+    "sha256": "38327442f6437f74da1a1b9b3dd3198d3b77583e84c54df8002746ccec873c8d"
+  },
+  "12 = 12. İki tarafa da 2 ekleniyor. Her tarafın yeni değeri kaç?": {
+    "file": "tr-26edcf79b529d01f.mp3",
+    "duration": 4.326708,
+    "sha256": "e5184fc04c70887dc77383a48c2394aaa7b1eea17ee005ec82a0b465f57e6282"
+  },
+  "Çözümü birlikte inceleyelim. İki tarafa aynı işlem: 12+2 = 14.": {
+    "file": "tr-f86506ad51adaaa0.mp3",
+    "duration": 4.713667,
+    "sha256": "1509ba78f464e0bcbd8c326499140b580fd93a9388525fa61c1dba03c107e5a2"
+  },
+  "30 = 30. İki taraf 3 ile bölünüyor. Yeni değer kaç?": {
+    "file": "tr-ee9e83fecab4fab0.mp3",
+    "duration": 3.784875,
+    "sha256": "4c550617f97761d35661896cd20bfa24662b3e0a0439100cee0bfac5f435c144"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 30 ÷ 3 = 10.": {
+    "file": "tr-60882850f1218b96.mp3",
+    "duration": 4.180625,
+    "sha256": "047e4ea0777b5719c9be5ef219fdc665c41b444835158e671703a4adffde6b95"
+  },
+  "□ − 4 = 10. Kutudaki sayı kaçtır?": {
+    "file": "tr-c86fc0c2bc55dafc.mp3",
+    "duration": 3.059208,
+    "sha256": "b62f6bd7fd4f87426da0b5da3e7f5e1c716346ac9a8e3daaf3846b81a4db950c"
+  },
+  "Çözümü birlikte inceleyelim. Çıkarılanı geri ekle: 10+4 = 14.": {
+    "file": "tr-08c0ba8a1feca087.mp3",
+    "duration": 4.481458,
+    "sha256": "476e39bbcbf7f934f477652e02d77bb36b23e2d6b9c8ea4ada1f31776a207644"
+  },
+  "11 + □ = 13. Eşitliği sağlayan sayı kaç?": {
+    "file": "tr-fb6a47a1daf30c88.mp3",
+    "duration": 3.424958,
+    "sha256": "7ddf7d467490ebb7bc21ef6fe96bb58b406dc80a027428f49639706d3f8fef1b"
+  },
+  "14 = 14. İki tarafa da 3 ekleniyor. Her tarafın yeni değeri kaç?": {
+    "file": "tr-9b646df3eb002f91.mp3",
+    "duration": 4.394083,
+    "sha256": "5287172f36e2a07ae45cd1b0f71d1170763d58f8954b750a140df6d785228686"
+  },
+  "Çözümü birlikte inceleyelim. İki tarafa aynı işlem: 14+3 = 17.": {
+    "file": "tr-f264e2d33fd259c2.mp3",
+    "duration": 4.676708,
+    "sha256": "a752c39337989d4a2617bba00c2021ed48899db7c994354df5edb6d815fb5908"
+  },
+  "44 = 44. İki taraf 4 ile bölünüyor. Yeni değer kaç?": {
+    "file": "tr-99c4d94381d063a1.mp3",
+    "duration": 4.144792,
+    "sha256": "b74775afe863c3efff1a8457c8bee1a928b945c8a6d3ff4256a02569379679c7"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 44 ÷ 4 = 11.": {
+    "file": "tr-de0f159769c3e374.mp3",
+    "duration": 4.67475,
+    "sha256": "35fcdd36b2dac69137f3e1c880ce0a7057b1a4f25792ac3a01b2af8d37d7ab57"
+  },
+  "□ − 2 = 11. Kutudaki sayı kaçtır?": {
+    "file": "tr-1229b712b7be0c9d.mp3",
+    "duration": 3.203375,
+    "sha256": "5ff1386ddfcc3c98ac2bed4d272ef0e20252388e0b7471e0ed2dcedd0b0365b7"
+  },
+  "Çözümü birlikte inceleyelim. Çıkarılanı geri ekle: 11+2 = 13.": {
+    "file": "tr-defc62c7e757523d.mp3",
+    "duration": 4.206292,
+    "sha256": "41cb8739b5dd56bd9ae50a79b6fb6caff3ad7b940f657b020188eabcea51ac22"
+  },
+  "2 × (2 + 2) işleminin sonucu kaçtır?": {
+    "file": "tr-06a1fa33c11aac76.mp3",
+    "duration": 2.71675,
+    "sha256": "310b905618d3bd8369727abf94a645559745b2d1ac4834180599239f2b2847f3"
+  },
+  "İpucu: Renkli parçaların her birini ayrı hesaplayıp birleştir.": {
+    "file": "tr-c3666008fa405c82.mp3",
+    "duration": 3.507292,
+    "sha256": "f9e24402cf7268f933f5191ca593a8d136a44fd4e6d3292a2ffc92c92f64c28b"
+  },
+  "Çözümü birlikte inceleyelim. 2×2 + 2×2 = 4+4 = 8.": {
+    "file": "tr-b37b2b0a0b5ad730.mp3",
+    "duration": 5.665958,
+    "sha256": "12180b11785aeb75d337c02cd8ba17dba95adfa782a86bfba3ff446d6e4f183e"
+  },
+  "2 × 3 = 3 × □. Kutuda hangi sayı olmalı?": {
+    "file": "tr-a6ef9515db081f6c.mp3",
+    "duration": 3.970625,
+    "sha256": "f177c623a67dc47861a1d4e94a2966ecd4a816225472f08a312444859ab0e439"
+  },
+  "İpucu: Çarpanlar yer değiştiriyor; eksik çarpanı ilk işlemden bul.": {
+    "file": "tr-68f34972f4dcf444.mp3",
+    "duration": 3.900958,
+    "sha256": "bc2b643eadbb2b79f395df2640da02085f50b5d88e76c123b59c016f4cd62dd3"
+  },
+  "Çözümü birlikte inceleyelim. Çarpanların yeri değişse de çarpım korunur.": {
+    "file": "tr-bf6f1fb4a3e51fad.mp3",
+    "duration": 3.77325,
+    "sha256": "e8ddbfce77c705088605eed09537bb46676c95c10f42618ad399122cc9f5f292"
+  },
+  "(2 × 2) × 4 işleminin sonucu kaçtır?": {
+    "file": "tr-cefb644bdb02d7a2.mp3",
+    "duration": 2.689958,
+    "sha256": "3e4a5752b54a7b42c85ba7f7ec008ff2c4d34fcf537abe9f19301e33f92cc172"
+  },
+  "İpucu: Çarpanlar aynı kalır; yalnız hangi grubun önce hesaplandığı değişir.": {
+    "file": "tr-21ced1056bf53a6a.mp3",
+    "duration": 4.31925,
+    "sha256": "a7d2ced8f0aa44a7c82a3eb26aace4b756d566d77d3a1eb25296ad530e6eff13"
+  },
+  "Çözümü birlikte inceleyelim. Gruplama değişebilir: 2 × (2×4) = 16.": {
+    "file": "tr-5a3da351f7772a51.mp3",
+    "duration": 5.006292,
+    "sha256": "d0359ab8726dfcfa12eb6b252f4dce0fe779005153b931076f36aead3ed150d4"
+  },
+  "2 × 2 + 2 × 1 toplamı kaçtır?": {
+    "file": "tr-aa6998ae74578bf4.mp3",
+    "duration": 2.563708,
+    "sha256": "c569261479e22bba5d68b012ee9976f6846256b866ba882420fb0491b1bca344"
+  },
+  "Çözümü birlikte inceleyelim. Ortak çarpanla: 2 × (2+1) = 6.": {
+    "file": "tr-5f897fced5d3292c.mp3",
+    "duration": 4.644,
+    "sha256": "019c7098559ca0825d1b88235f7a140b5accea9e74f818975bca1c64684d06bd"
+  },
+  "3 × (3 + 2) işleminin sonucu kaçtır?": {
+    "file": "tr-4e363d23055a4e95.mp3",
+    "duration": 2.798917,
+    "sha256": "cb7b9a140f8eabfedb4eceae90cdd6b32621b87ce24cc07196569a26a4786f55"
+  },
+  "Çözümü birlikte inceleyelim. 3×3 + 3×2 = 9+6 = 15.": {
+    "file": "tr-5ad05ad176255713.mp3",
+    "duration": 5.967542,
+    "sha256": "2d3020dd430a6202d37d6db34c92378b77131146ac057a9af23458a6b8e7a157"
+  },
+  "3 × 4 = 4 × □. Kutuda hangi sayı olmalı?": {
+    "file": "tr-51db0b4abd2b5e8d.mp3",
+    "duration": 4.15125,
+    "sha256": "9a0cdb161a050065761027581bcfa7f8777f31a809dd82a88fa4879302308144"
+  },
+  "(3 × 2) × 2 işleminin sonucu kaçtır?": {
+    "file": "tr-e6e21137f3229f4f.mp3",
+    "duration": 2.750875,
+    "sha256": "acd1bf5e5ca92844c738e9104aba9d8d9ce79a5334e669a70efa19af543f8058"
+  },
+  "Çözümü birlikte inceleyelim. Gruplama değişebilir: 3 × (2×2) = 12.": {
+    "file": "tr-2d88fa87834fdaa2.mp3",
+    "duration": 4.969958,
+    "sha256": "5106025ccf8f4bb01b099379502208258ec89f5f94542b962e47d1a8328cc69c"
+  },
+  "3 × 3 + 3 × 1 toplamı kaçtır?": {
+    "file": "tr-64c6211e2ed2b0ea.mp3",
+    "duration": 2.910458,
+    "sha256": "862435caa730ff65570022d6b95a7efca2c76dbb4ae93297939e576752031acc"
+  },
+  "Çözümü birlikte inceleyelim. Ortak çarpanla: 3 × (3+1) = 12.": {
+    "file": "tr-ee34aa2e4ae3903f.mp3",
+    "duration": 4.794917,
+    "sha256": "247a054146cd7d1a6b8c27637ce2d5a1befe8be12fd88e47b136ed564bcec4ce"
+  },
+  "4 × (4 + 2) işleminin sonucu kaçtır?": {
+    "file": "tr-12bceb2ecaffa7e0.mp3",
+    "duration": 2.960542,
+    "sha256": "c167a841f610012be4ad680a38d0b49eaa2e31289ad50780eed8465aaf439543"
+  },
+  "Çözümü birlikte inceleyelim. 4×4 + 4×2 = 16+8 = 24.": {
+    "file": "tr-57101794e25dc0e0.mp3",
+    "duration": 6.025958,
+    "sha256": "55bcd40c7a1644246702697111be6df776f89a59f8fb3d218f746829c51b1950"
+  },
+  "4 × 2 = 2 × □. Kutuda hangi sayı olmalı?": {
+    "file": "tr-87079f7c8bf5b5be.mp3",
+    "duration": 3.964458,
+    "sha256": "23309e72d0b586e73d998014a3f940b2a5f96fea284632d40ca13d986bf6a668"
+  },
+  "(4 × 2) × 3 işleminin sonucu kaçtır?": {
+    "file": "tr-cbb3afc65d6b16a4.mp3",
+    "duration": 2.796333,
+    "sha256": "d289e86bab23fb50cf7528aa42f6e66b1944410373216fc2dda5adfd7913f025"
+  },
+  "Çözümü birlikte inceleyelim. Gruplama değişebilir: 4 × (2×3) = 24.": {
+    "file": "tr-673f8e3cac333d5e.mp3",
+    "duration": 5.276458,
+    "sha256": "d50bbe48450cc73001b59756bd01b709999b560b8c3eaca91edeb503e87ac02d"
+  },
+  "4 × 4 + 4 × 1 toplamı kaçtır?": {
+    "file": "tr-1a6b941f3f5a36e9.mp3",
+    "duration": 3.007,
+    "sha256": "57cbbd8095db29c97944d2eaf3341373f7a15db252be24dc5c3a727069c94fa6"
+  },
+  "Çözümü birlikte inceleyelim. Ortak çarpanla: 4 × (4+1) = 20.": {
+    "file": "tr-19a4592bf794a843.mp3",
+    "duration": 4.993958,
+    "sha256": "472eb86c516201310c7cb989fea17e3a2a4e6528b3d239801506568135eb228b"
+  },
+  "5 × (2 + 2) işleminin sonucu kaçtır?": {
+    "file": "tr-62b4c077ea5cd350.mp3",
+    "duration": 2.637458,
+    "sha256": "e851e0d6fb8008382bc3e67d386f190599e37ead8e6b812e7af3f1cb394b09bc"
+  },
+  "Çözümü birlikte inceleyelim. 5×2 + 5×2 = 10+10 = 20.": {
+    "file": "tr-6d54c1f6b1701b85.mp3",
+    "duration": 5.282542,
+    "sha256": "82c455399313f4223826c539087506504069e331a0061b24b1b93c52c24a6ff7"
+  },
+  "5 × 3 = 3 × □. Kutuda hangi sayı olmalı?": {
+    "file": "tr-aed7ffc18783a7ef.mp3",
+    "duration": 3.88075,
+    "sha256": "8d3a815690d0e2177c2795fbff85acc47775333b7c0ea3e887e8b619565b5134"
+  },
+  "(5 × 2) × 4 işleminin sonucu kaçtır?": {
+    "file": "tr-9b7553b85f48cf9d.mp3",
+    "duration": 2.747292,
+    "sha256": "e16058e4c26ef1045e8a934182ffacc7ba9e1d70310f8a19365c96271ace6dec"
+  },
+  "Çözümü birlikte inceleyelim. Gruplama değişebilir: 5 × (2×4) = 40.": {
+    "file": "tr-866f2bb064f1ab7c.mp3",
+    "duration": 5.148917,
+    "sha256": "b8243e98f8e88def9704c36db407db92f666d14ce001d74911716bf02b54580c"
+  },
+  "5 × 2 + 5 × 1 toplamı kaçtır?": {
+    "file": "tr-0dedf42a60d41a70.mp3",
+    "duration": 2.701583,
+    "sha256": "28bb8c7e3e3516890a0d0b48fbf7c826848f1f5249570fe03c813b9814d053fa"
+  },
+  "Çözümü birlikte inceleyelim. Ortak çarpanla: 5 × (2+1) = 15.": {
+    "file": "tr-cd9438b1a825d3b9.mp3",
+    "duration": 4.911042,
+    "sha256": "750045993af37ee73eae685b09802f1e1a35f658af3336643ede5df27f76477e"
+  },
+  "6 × (3 + 2) işleminin sonucu kaçtır?": {
+    "file": "tr-6cde9f8799744e9d.mp3",
+    "duration": 2.739917,
+    "sha256": "69f20f72cbaf82bea674d81368f89f504ee76e7b519f250db538eaefbb9e9c51"
+  },
+  "Çözümü birlikte inceleyelim. 6×3 + 6×2 = 18+12 = 30.": {
+    "file": "tr-24f0bb16fd1edb65.mp3",
+    "duration": 5.967542,
+    "sha256": "93cacad703b50bd23afcd5710abe4d5fe73fedba6a79b34c6660043fd54878a8"
+  },
+  "6 × 4 = 4 × □. Kutuda hangi sayı olmalı?": {
+    "file": "tr-f01f4b8bdf2068f7.mp3",
+    "duration": 4.156375,
+    "sha256": "51e4d0ab7c68f0da2d725830b6f1d7c58da5ba019d6d4d00036a948d6482bcce"
+  },
+  "(6 × 2) × 2 işleminin sonucu kaçtır?": {
+    "file": "tr-e286415cecbe492a.mp3",
+    "duration": 2.756667,
+    "sha256": "b2750681c6351472aaf1b6b6f11a5a75a9a848b8fc1f352704efac42ad26ac50"
+  },
+  "Çözümü birlikte inceleyelim. Gruplama değişebilir: 6 × (2×2) = 24.": {
+    "file": "tr-09e9633c48c67e13.mp3",
+    "duration": 5.313958,
+    "sha256": "36a6225e71be26bc3c427ec673222cd525149b09b6238364422b81946e676bf9"
+  },
+  "6 × 3 + 6 × 1 toplamı kaçtır?": {
+    "file": "tr-40cd22ef5233e5dd.mp3",
+    "duration": 2.896875,
+    "sha256": "7665bea2e840d51039a2fa95c9349965c1bb6e7de8b85691c18600ffd78ee1f2"
+  },
+  "Çözümü birlikte inceleyelim. Ortak çarpanla: 6 × (3+1) = 24.": {
+    "file": "tr-a79993308907f9d1.mp3",
+    "duration": 5.14325,
+    "sha256": "59ecec7f86e9bdfc8183dc9732fcb6c49e4fcc681cb838b08a20a5db830fedfb"
+  },
+  "7 × (4 + 2) işleminin sonucu kaçtır?": {
+    "file": "tr-9a9f304a1fc94278.mp3",
+    "duration": 2.615833,
+    "sha256": "65a499358e98468ba903db8aa5af2c128658b63cc4eb464a7a5619ea3855d76a"
+  },
+  "Çözümü birlikte inceleyelim. 7×4 + 7×2 = 28+14 = 42.": {
+    "file": "tr-554aff6a7e0ccb27.mp3",
+    "duration": 6.09525,
+    "sha256": "b05ce64f5fb9773e625d63d006c0ee4f743d54958527dba561ba573da68351bc"
+  },
+  "7 × 2 = 2 × □. Kutuda hangi sayı olmalı?": {
+    "file": "tr-e1799ddf88607b5a.mp3",
+    "duration": 4.010375,
+    "sha256": "0f9ecbcd93832276916d5119bd7fc19438cda6712cfff518d7ad1910fea60cbc"
+  },
+  "(7 × 2) × 3 işleminin sonucu kaçtır?": {
+    "file": "tr-be2ef66bbba9878b.mp3",
+    "duration": 2.725042,
+    "sha256": "c16cb8872660de231c0fa748170b96ace79a494a59f2dbcdf93cd5878bf71278"
+  },
+  "Çözümü birlikte inceleyelim. Gruplama değişebilir: 7 × (2×3) = 42.": {
+    "file": "tr-ef6a2b01c7b4d8d1.mp3",
+    "duration": 5.007042,
+    "sha256": "eedf6bdb9cce0bd05bcc765239609a53f184f66312d9bdf12271a6ee5e2f9c9a"
+  },
+  "7 × 4 + 7 × 1 toplamı kaçtır?": {
+    "file": "tr-6147239a32efc3b7.mp3",
+    "duration": 2.610167,
+    "sha256": "4d23cbbe5be4be7aa0eb715a73a63d638996949f9fc462d4543e1cb07e2f7990"
+  },
+  "Çözümü birlikte inceleyelim. Ortak çarpanla: 7 × (4+1) = 35.": {
+    "file": "tr-ed8823834be9287a.mp3",
+    "duration": 5.139792,
+    "sha256": "6cdd137c508d3290b11dd05d7d23f967aac138d06976708e02d56419c55498dd"
+  },
+  "8 × (2 + 2) işleminin sonucu kaçtır?": {
+    "file": "tr-ae3dc242d8b30a36.mp3",
+    "duration": 2.844458,
+    "sha256": "f37892b95834ed0ddcd626199ea0b51cda45fbbfe67a34dd480782c1c483d37c"
+  },
+  "Çözümü birlikte inceleyelim. 8×2 + 8×2 = 16+16 = 32.": {
+    "file": "tr-34cb275105f0aed3.mp3",
+    "duration": 6.09525,
+    "sha256": "ced4056a12b99dc4ff903935c3ab1a884197f2c30032a333c8350c33c9d7ddbe"
+  },
+  "8 × 3 = 3 × □. Kutuda hangi sayı olmalı?": {
+    "file": "tr-8b7c8f259a0688a6.mp3",
+    "duration": 3.991167,
+    "sha256": "e3d76d9299877d01fd9fdd323818d1ebe7aabcb3396ef5e9a6ce24ae46ef7171"
+  },
+  "(8 × 2) × 4 işleminin sonucu kaçtır?": {
+    "file": "tr-d8fed55c6eec0115.mp3",
+    "duration": 2.806542,
+    "sha256": "c3a305d4c282e9b9350f2291146ccc8d52db0a208e3fae7c554e25c9582a4cf1"
+  },
+  "Çözümü birlikte inceleyelim. Gruplama değişebilir: 8 × (2×4) = 64.": {
+    "file": "tr-4aff38b71da85674.mp3",
+    "duration": 5.361083,
+    "sha256": "f995dbe7b01382a0c141f0fddc139b248fca78df58b32589c75656e44237312d"
+  },
+  "8 × 2 + 8 × 1 toplamı kaçtır?": {
+    "file": "tr-e643afd0bb672268.mp3",
+    "duration": 2.874125,
+    "sha256": "e10a68e7124339924f5ee2a339674e1e87b16a2a6588000f51bdd94e5951e243"
+  },
+  "Çözümü birlikte inceleyelim. Ortak çarpanla: 8 × (2+1) = 24.": {
+    "file": "tr-4ea108a3513776da.mp3",
+    "duration": 4.987042,
+    "sha256": "ddafcdc2410e8e5f1d73da129982e7d774eb420ceebfe31ebf91fdd45ff48274"
+  },
+  "9 × (3 + 2) işleminin sonucu kaçtır?": {
+    "file": "tr-813e66a4bca1d930.mp3",
+    "duration": 3.019792,
+    "sha256": "a293b656a7facc05addb4d6101bd10bd8e60d39e7e0d6a89fa250d574bfcd3b5"
+  },
+  "Çözümü birlikte inceleyelim. 9×3 + 9×2 = 27+18 = 45.": {
+    "file": "tr-8a109a6ef732cfc6.mp3",
+    "duration": 6.610458,
+    "sha256": "c6d8c755175018ac2c190b67658558edb59064c3b8e3c73cbce07419d15e2a79"
+  },
+  "9 × 4 = 4 × □. Kutuda hangi sayı olmalı?": {
+    "file": "tr-c6eb9d4721446334.mp3",
+    "duration": 4.340792,
+    "sha256": "bd5f2c67c4e4ef031b1c8ea3a170fe1c6e82644512e5db16372fb8413553dbad"
+  },
+  "(9 × 2) × 2 işleminin sonucu kaçtır?": {
+    "file": "tr-4d8f9e2b902769fe.mp3",
+    "duration": 2.873583,
+    "sha256": "efc7c1d5b4aff93a73ef5d41a471aedd5036731e16fe87149847e4ac1c6ee841"
+  },
+  "Çözümü birlikte inceleyelim. Gruplama değişebilir: 9 × (2×2) = 36.": {
+    "file": "tr-0da48767b84a54c1.mp3",
+    "duration": 5.259333,
+    "sha256": "8a5b826230cd545d3f454e8d29bbf390a192541f7d257f0f2ae3397d20a5238f"
+  },
+  "9 × 3 + 9 × 1 toplamı kaçtır?": {
+    "file": "tr-c6508bfe5ea01c46.mp3",
+    "duration": 3.021875,
+    "sha256": "dafdd2739b80ef34a1534926c2b4cabfb478ba973f8bae8a88fbf72928743f0d"
+  },
+  "Çözümü birlikte inceleyelim. Ortak çarpanla: 9 × (3+1) = 36.": {
+    "file": "tr-30c31bc57e398497.mp3",
+    "duration": 5.096792,
+    "sha256": "514ae1deb5f6f5ad5ce4a5c9cb97b136747c200940d40c026417fe32243e51cc"
+  },
+  "10 × (4 + 2) işleminin sonucu kaçtır?": {
+    "file": "tr-a1bd9d29dd50e445.mp3",
+    "duration": 2.844458,
+    "sha256": "19a78a3cff880b92d38c20280d45707329c3f14dd7504da696a20af9d81d70b4"
+  },
+  "Çözümü birlikte inceleyelim. 10×4 + 10×2 = 40+20 = 60.": {
+    "file": "tr-c30e2b5acaae5d49.mp3",
+    "duration": 5.479917,
+    "sha256": "f53d033455c7aae015ecd75217b17406cb490fd988c70b88d4661555d9300871"
+  },
+  "10 × 2 = 2 × □. Kutuda hangi sayı olmalı?": {
+    "file": "tr-b02b3df0da0f1f67.mp3",
+    "duration": 3.844375,
+    "sha256": "9994dbf709c8118033800d017fdec135cf441f8b631c4b0534c23a4b8878ac31"
+  },
+  "(10 × 2) × 3 işleminin sonucu kaçtır?": {
+    "file": "tr-4698bb7592c051e3.mp3",
+    "duration": 2.638667,
+    "sha256": "ab0b7f666be6d1e0a23b3b86380e7f3925236f19f2d359769d219200a6b906b2"
+  },
+  "Çözümü birlikte inceleyelim. Gruplama değişebilir: 10 × (2×3) = 60.": {
+    "file": "tr-76975230f7eb8880.mp3",
+    "duration": 4.950583,
+    "sha256": "fa313a8b8ad5d8f550e24fa138a2b0bda4a343e6630e5ac1c5c409a2b4223855"
+  },
+  "10 × 4 + 10 × 1 toplamı kaçtır?": {
+    "file": "tr-04ae8e29a34944ea.mp3",
+    "duration": 2.611167,
+    "sha256": "9fb2d9a5578a50d3ebf2cc32500b240dd363ba6a3f267232b8a47ae48a58b2f8"
+  },
+  "Çözümü birlikte inceleyelim. Ortak çarpanla: 10 × (4+1) = 50.": {
+    "file": "tr-479bc4608851f0a4.mp3",
+    "duration": 4.702042,
+    "sha256": "25b11fdf7f7ee40f628b5b47e7e3cf3ef581a7c0c014bf3500817ed06d023fba"
+  },
+  "11 × (2 + 2) işleminin sonucu kaçtır?": {
+    "file": "tr-5bdb1d5fe5e196c1.mp3",
+    "duration": 2.731417,
+    "sha256": "064ea58087a47f2d5d2ad573c8e26c086d40c52172e83d106919ffc88324ae24"
+  },
+  "Çözümü birlikte inceleyelim. 11×2 + 11×2 = 22+22 = 44.": {
+    "file": "tr-5e84d311b3a96f37.mp3",
+    "duration": 6.09525,
+    "sha256": "3526f777dc4a35fbb995431217e1b4b939dc8522f1cbb693674deb1f75e1d228"
+  },
+  "11 × 3 = 3 × □. Kutuda hangi sayı olmalı?": {
+    "file": "tr-0a436766b19a5f83.mp3",
+    "duration": 4.112125,
+    "sha256": "d1f48cd88318d38f7ec02f31633c27bc3f17922c2807a45e741e108c37de22ab"
+  },
+  "(11 × 2) × 4 işleminin sonucu kaçtır?": {
+    "file": "tr-bbae124455a3f2c6.mp3",
+    "duration": 2.899625,
+    "sha256": "065d7f863129a469d5d0540f158bd65511c652a351e5ff3766a7418ba7812476"
+  },
+  "Çözümü birlikte inceleyelim. Gruplama değişebilir: 11 × (2×4) = 88.": {
+    "file": "tr-183f1d25a6978f93.mp3",
+    "duration": 5.373875,
+    "sha256": "82f3d51ef18faf5ecc859f570b235ede089a594935a4be7b1008d7daf1931a2c"
+  },
+  "11 × 2 + 11 × 1 toplamı kaçtır?": {
+    "file": "tr-1405e1cf331ba4a7.mp3",
+    "duration": 2.684125,
+    "sha256": "bc2b401080b374311c021aa8cd461f154ed1a035a9683662eef7732455cc70d4"
+  },
+  "Çözümü birlikte inceleyelim. Ortak çarpanla: 11 × (2+1) = 33.": {
+    "file": "tr-c2feaf806c97be96.mp3",
+    "duration": 4.856792,
+    "sha256": "fccbbe128d554d732c2df99d9aa43d41313ae0a91f874135aec09c66e0d177b7"
+  },
+  "2 + 3 × 2 işleminin sonucu kaçtır?": {
+    "file": "tr-6eedb8bc124535b2.mp3",
+    "duration": 2.809958,
+    "sha256": "fd6a3b8dd30b590b555e9569e7c262e183b7d4e388cc40671606e0d2323a14fe"
+  },
+  "İpucu: Önce parantez; sonra çarpma/bölme; sonra toplama/çıkarma. Aynı öncelikte soldan sağa.": {
+    "file": "tr-d992cb0b80cfb9dc.mp3",
+    "duration": 5.877833,
+    "sha256": "1d593e9c5af30d8829f04eb01380d281bd4368bbb48e9aab9cee4fd0cc435efb"
+  },
+  "Çözümü birlikte inceleyelim. Önce çarp: 3×2=6; sonra 2 ekle.": {
+    "file": "tr-4260ba6219238096.mp3",
+    "duration": 4.969958,
+    "sha256": "43fc8bb09a18b32ed98a4c502e41e529f54dc6c9ad2507a45d0d8aa175a1a898"
+  },
+  "(2 + 3) × 3 işleminin sonucu kaçtır?": {
+    "file": "tr-ed061abdd23256b0.mp3",
+    "duration": 2.9025,
+    "sha256": "907232dc9a8548dbca456c85bd4daed9ea10ca27901bce6a4804d61de4e2d2fa"
+  },
+  "Çözümü birlikte inceleyelim. Önce parantez: 2+3=5; sonra çarp.": {
+    "file": "tr-550dbca6f617287f.mp3",
+    "duration": 4.818875,
+    "sha256": "7ce55df77d8566cb25f79becbbd41a488b28395a79a6d99e61fd00f7e65ea4e1"
+  },
+  "8 ÷ 4 + 4 işleminin sonucu kaçtır?": {
+    "file": "tr-efacde3d8dd36bc4.mp3",
+    "duration": 2.692333,
+    "sha256": "76f0ef7d113e187b16026310a547a1a3393f69bd6edf285fd417117f64107046"
+  },
+  "Çözümü birlikte inceleyelim. Önce bölme: 8÷4=2; sonra 4 ekle.": {
+    "file": "tr-664c926518f65789.mp3",
+    "duration": 5.2635,
+    "sha256": "87adf1146efca32d74703fde9e23568be0a61a0de62540ebc40d81ba8f4671cb"
+  },
+  "4 − 2 + 1 işleminin sonucu kaçtır?": {
+    "file": "tr-2e484dff589871a8.mp3",
+    "duration": 2.572833,
+    "sha256": "c481a5cd05c54ab519884af812c3b4c337cb9e8ef494645dbed50801bb7e91b7"
+  },
+  "Çözümü birlikte inceleyelim. Aynı öncelikte soldan sağa: 4−2=2; +1=3.": {
+    "file": "tr-61ce139b233ea8a5.mp3",
+    "duration": 5.898125,
+    "sha256": "2a97f941bf7aae93483d29ee30becc77e2ff53f58ce7d624fa863c3e23361a87"
+  },
+  "3 + 3 × 3 işleminin sonucu kaçtır?": {
+    "file": "tr-29eea2cec6a43df7.mp3",
+    "duration": 2.890917,
+    "sha256": "2ca807ef63e618a0bf17296880aea16dd26519a15aef87f5b2cff94062014c35"
+  },
+  "Çözümü birlikte inceleyelim. Önce çarp: 3×3=9; sonra 3 ekle.": {
+    "file": "tr-665a0b2c95a9f0d9.mp3",
+    "duration": 5.270958,
+    "sha256": "eba983b3f898df8355033d1667e229d8ad855768f456984a6f3907becbe8094d"
+  },
+  "(3 + 3) × 4 işleminin sonucu kaçtır?": {
+    "file": "tr-ecc14eba4f7f0185.mp3",
+    "duration": 2.879292,
+    "sha256": "6e1166f2286d2fe6f2ba895bb13bec9deffe4aea71d8a0dca898252d12662108"
+  },
+  "Çözümü birlikte inceleyelim. Önce parantez: 3+3=6; sonra çarp.": {
+    "file": "tr-126443fb70aea515.mp3",
+    "duration": 4.782958,
+    "sha256": "7aa2c90db855f2e99626c3d88154564b3ae81484cebd54ced461623fc214e909"
+  },
+  "6 ÷ 2 + 4 işleminin sonucu kaçtır?": {
+    "file": "tr-5dab9db3fb2e3f8d.mp3",
+    "duration": 2.457792,
+    "sha256": "cd8fe963ee68d32850e59ca99b0e76f1719d8281007b957fec2c89eed8eb2241"
+  },
+  "Çözümü birlikte inceleyelim. Önce bölme: 6÷2=3; sonra 4 ekle.": {
+    "file": "tr-147c9b4a9aabd434.mp3",
+    "duration": 5.059375,
+    "sha256": "d88b20928962fec4a11e723e90ee4bcccfe08d8232354a2f9d2452ae1dda160a"
+  },
+  "6 − 3 + 1 işleminin sonucu kaçtır?": {
+    "file": "tr-82bfa45d6558c73a.mp3",
+    "duration": 2.74,
+    "sha256": "39d7e4208cb6d580e49506edab9732c4ccc67d0a2360e642e34d8d6c08e11161"
+  },
+  "Çözümü birlikte inceleyelim. Aynı öncelikte soldan sağa: 6−3=3; +1=4.": {
+    "file": "tr-71678194d66f05f2.mp3",
+    "duration": 6.027583,
+    "sha256": "b05b9a9d3eec783ae6535c9f0c2726f67d4e36f96cdc65d6d09277e576718204"
+  },
+  "4 + 3 × 4 işleminin sonucu kaçtır?": {
+    "file": "tr-5b4480dfb5dc329f.mp3",
+    "duration": 2.7155,
+    "sha256": "d80c6bc265697a7a5e325c4cd7ed4ec8badc75d58fc78bf02e187d329b9cb561"
+  },
+  "Çözümü birlikte inceleyelim. Önce çarp: 3×4=12; sonra 4 ekle.": {
+    "file": "tr-38fd676412eee320.mp3",
+    "duration": 5.161958,
+    "sha256": "9a2234af853f2a3fff05db6006d4b4b5e36dc7d416b0c3d8436cbac42aea5d68"
+  },
+  "(4 + 3) × 2 işleminin sonucu kaçtır?": {
+    "file": "tr-c1dbded0dd87642b.mp3",
+    "duration": 2.63225,
+    "sha256": "fafc4bbe6634d302286d9f574c137696a01d52321eb56f4075ba53f3ea98d8f5"
+  },
+  "Çözümü birlikte inceleyelim. Önce parantez: 4+3=7; sonra çarp.": {
+    "file": "tr-a3035bbb165bdfc7.mp3",
+    "duration": 4.743708,
+    "sha256": "84e111e3cadc77bac6a443fd9343bdb1de3af0a3efe9aa52e9d50ffbcef0aeb3"
+  },
+  "12 ÷ 3 + 4 işleminin sonucu kaçtır?": {
+    "file": "tr-4b04537e57f7ff28.mp3",
+    "duration": 2.747125,
+    "sha256": "0f3f96222b54c3e79a436e4f9889c5e4e0bed0e488667c486f7900c3090e634c"
+  },
+  "Çözümü birlikte inceleyelim. Önce bölme: 12÷3=4; sonra 4 ekle.": {
+    "file": "tr-59226135891132d1.mp3",
+    "duration": 5.320333,
+    "sha256": "a38e8498b1604189ccc32f982f81b03026de251ab5254202194bbb0a08f90b13"
+  },
+  "8 − 4 + 1 işleminin sonucu kaçtır?": {
+    "file": "tr-8623d4cbfee7c185.mp3",
+    "duration": 2.610167,
+    "sha256": "8d987b1619a0cf2c4241b50febfeea89f1e86bb06728ef38ec45ea69b1c055a6"
+  },
+  "Çözümü birlikte inceleyelim. Aynı öncelikte soldan sağa: 8−4=4; +1=5.": {
+    "file": "tr-c567d6d8ee0cd3e4.mp3",
+    "duration": 6.001958,
+    "sha256": "e621d5800b7a539264434b2505cbc8a98cd836568f9aabebce2fb51d59ba68f0"
+  },
+  "5 + 3 × 2 işleminin sonucu kaçtır?": {
+    "file": "tr-571db4390fb47a04.mp3",
+    "duration": 2.706125,
+    "sha256": "ed7f9345ebefb8ad1a83ce03ceb400776b187cd22cb56818bfbc110819ac50fb"
+  },
+  "Çözümü birlikte inceleyelim. Önce çarp: 3×2=6; sonra 5 ekle.": {
+    "file": "tr-cc42ad60f7a29f20.mp3",
+    "duration": 5.027125,
+    "sha256": "b2338a06037f9966d89c981b93994ca96d27d17ec349dbfde306fc4c4de7a093"
+  },
+  "(5 + 3) × 3 işleminin sonucu kaçtır?": {
+    "file": "tr-5e6e021db1618108.mp3",
+    "duration": 2.630708,
+    "sha256": "ba63d8505a2f710c1e3fc06b2c7e5d34fef19ea057034e7f48da69dc5e8f2a47"
+  },
+  "Çözümü birlikte inceleyelim. Önce parantez: 5+3=8; sonra çarp.": {
+    "file": "tr-469eb5a95076402d.mp3",
+    "duration": 4.926792,
+    "sha256": "82ee8d6c932b318b3a7395114b42336f5916307660b2a91bc7435f983ed5a8ec"
+  },
+  "20 ÷ 4 + 4 işleminin sonucu kaçtır?": {
+    "file": "tr-c6871bd7fff79545.mp3",
+    "duration": 2.797917,
+    "sha256": "6d844c721deb91c2137b481d7dcb5759fcfaf5c95548ea9dd5b615ecc9caadda"
+  },
+  "Çözümü birlikte inceleyelim. Önce bölme: 20÷4=5; sonra 4 ekle.": {
+    "file": "tr-443b37f9744926c3.mp3",
+    "duration": 5.0385,
+    "sha256": "a7795c53afd0cd4d8325ffeb9b67bc4172bd7260f3ae7566b38cb04a87e8446b"
+  },
+  "10 − 2 + 1 işleminin sonucu kaçtır?": {
+    "file": "tr-e115ce26bae11222.mp3",
+    "duration": 2.384583,
+    "sha256": "8f7db3ef27e98b1b643017f6bfa438709c90993e92197ed6afa067e8c8273ad8"
+  },
+  "Çözümü birlikte inceleyelim. Aynı öncelikte soldan sağa: 10−2=8; +1=9.": {
+    "file": "tr-2a186fb4683d6506.mp3",
+    "duration": 5.956292,
+    "sha256": "c31a1ddacbb694d223ed05b7487e1f2d76960942fcb0adcabd7eaa0ac4bc7d8a"
+  },
+  "6 + 3 × 3 işleminin sonucu kaçtır?": {
+    "file": "tr-998f50d8982236aa.mp3",
+    "duration": 2.713958,
+    "sha256": "9b7c015b40d89282a89ba3aee75eb5efd7fae7729561f156c371fbeb947995e5"
+  },
+  "Çözümü birlikte inceleyelim. Önce çarp: 3×3=9; sonra 6 ekle.": {
+    "file": "tr-b4627a08c6f649f4.mp3",
+    "duration": 5.166458,
+    "sha256": "c4e0c6fb832bf5a6eadb7a64579bad95f57f1b59b862b6e4300676e74c998a32"
+  },
+  "(6 + 3) × 4 işleminin sonucu kaçtır?": {
+    "file": "tr-ad98a9769d3641c8.mp3",
+    "duration": 2.751625,
+    "sha256": "27ee22bd2419219bbea9f6e7185030f6e3dabc0b9ef38916919b519bdf976f92"
+  },
+  "Çözümü birlikte inceleyelim. Önce parantez: 6+3=9; sonra çarp.": {
+    "file": "tr-2c1cdfee1507ebac.mp3",
+    "duration": 4.97725,
+    "sha256": "0cc4f8c68afe49d9bf768fbfe11f1c123d9a758473c3bdba53e1287e728cf51a"
+  },
+  "12 ÷ 2 + 4 işleminin sonucu kaçtır?": {
+    "file": "tr-e1f56db72e45e021.mp3",
+    "duration": 2.623,
+    "sha256": "c763a863d1b3921ee738e576a93a00b8498a81f1f6cafeed66529fc2848cd5fa"
+  },
+  "Çözümü birlikte inceleyelim. Önce bölme: 12÷2=6; sonra 4 ekle.": {
+    "file": "tr-cc9ec5138a3846bf.mp3",
+    "duration": 4.921958,
+    "sha256": "1d81666d9bfb9196433c14c8055552c9cf3113b94472713ac6486ce323a7a9a5"
+  },
+  "12 − 3 + 1 işleminin sonucu kaçtır?": {
+    "file": "tr-0ff8743bf9c3d685.mp3",
+    "duration": 2.632083,
+    "sha256": "0eccc1e90d03e889c0df77cb0cbcde0e539b47909271be8132bd0cf21f00f8f3"
+  },
+  "Çözümü birlikte inceleyelim. Aynı öncelikte soldan sağa: 12−3=9; +1=10.": {
+    "file": "tr-7ddaf29b1dff2dec.mp3",
+    "duration": 5.828167,
+    "sha256": "061f215cb8408daf77882c42278eb78969e65be6f0c46cec9657d0205014dc26"
+  },
+  "7 + 3 × 4 işleminin sonucu kaçtır?": {
+    "file": "tr-3b2cf01391fcc7e5.mp3",
+    "duration": 2.61575,
+    "sha256": "951b2f637e3c241dadb773e2b6d0e717fb95b16ee3f3630707d3069c563d089b"
+  },
+  "Çözümü birlikte inceleyelim. Önce çarp: 3×4=12; sonra 7 ekle.": {
+    "file": "tr-cdfc84907ec36ff6.mp3",
+    "duration": 4.969958,
+    "sha256": "0433ec6b67ffc2a4f41548cd88146a705cc8bf8146451dd414526d3a4f1e691d"
+  },
+  "(7 + 3) × 2 işleminin sonucu kaçtır?": {
+    "file": "tr-7262196f2794d459.mp3",
+    "duration": 2.713958,
+    "sha256": "f809668edf4d8f0af480a9b443f9be3a215833e77e2774895cbe3f36854ad912"
+  },
+  "Çözümü birlikte inceleyelim. Önce parantez: 7+3=10; sonra çarp.": {
+    "file": "tr-cb358661732832e4.mp3",
+    "duration": 4.694667,
+    "sha256": "a5f53e05b66e7faf297ebeedbfe3aa872f63f5769853339aa4892a992fcde70b"
+  },
+  "21 ÷ 3 + 4 işleminin sonucu kaçtır?": {
+    "file": "tr-0899f1a594a3c2f9.mp3",
+    "duration": 3.007,
+    "sha256": "d1ed08a5361929dbfcd4d5dca934e632e2d902455728f043e54653e863fec3ae"
+  },
+  "Çözümü birlikte inceleyelim. Önce bölme: 21÷3=7; sonra 4 ekle.": {
+    "file": "tr-42cd524bd0c9f02a.mp3",
+    "duration": 5.146917,
+    "sha256": "5446ba48861b4ab479d54bcf3e9b0be5cd8303b19b4d68ae7bdd94d324afe55b"
+  },
+  "14 − 4 + 1 işleminin sonucu kaçtır?": {
+    "file": "tr-de7ac80ec2e53e4c.mp3",
+    "duration": 2.753958,
+    "sha256": "b8d17be6e660533e23cbf8f08d8a02cf99b4be18b62f136c9a3807c6b8f1cb5b"
+  },
+  "Çözümü birlikte inceleyelim. Aynı öncelikte soldan sağa: 14−4=10; +1=11.": {
+    "file": "tr-503fd17c04ab770a.mp3",
+    "duration": 6.148125,
+    "sha256": "ed41d3800adf7da48f8104850741accce33afefa39a496ba208133cdc13abdc3"
+  },
+  "8 + 3 × 2 işleminin sonucu kaçtır?": {
+    "file": "tr-234c5609bbee3f96.mp3",
+    "duration": 2.9025,
+    "sha256": "1946c445098ddd4f44b1fb76778181ca4541c8b2f309c4405f7476207deae8a3"
+  },
+  "Çözümü birlikte inceleyelim. Önce çarp: 3×2=6; sonra 8 ekle.": {
+    "file": "tr-31beb342f4cd6b7c.mp3",
+    "duration": 5.154833,
+    "sha256": "d4b5ef18361b4ee30f2781d26fe8c9439b8fde0cc93dedd60b6d0ca7767a0159"
+  },
+  "(8 + 3) × 3 işleminin sonucu kaçtır?": {
+    "file": "tr-8637c01d86284bf1.mp3",
+    "duration": 2.730708,
+    "sha256": "7fc5d161ae6d1582828143835f718ef4a99d0678fc5f95072079f051f7e53059"
+  },
+  "Çözümü birlikte inceleyelim. Önce parantez: 8+3=11; sonra çarp.": {
+    "file": "tr-4e0cb8423dad102e.mp3",
+    "duration": 5.061958,
+    "sha256": "46049f7de535845629f20defdd419bace8277d7f770c36176f0a16fb9ad91a28"
+  },
+  "32 ÷ 4 + 4 işleminin sonucu kaçtır?": {
+    "file": "tr-275a434f58cc9de5.mp3",
+    "duration": 2.849,
+    "sha256": "6e6f8e7a2dbb35b2016164682438e7ffe2c546f3abb1a43f4aa05dd1cf828e1f"
+  },
+  "Çözümü birlikte inceleyelim. Önce bölme: 32÷4=8; sonra 4 ekle.": {
+    "file": "tr-3c8df66429deec75.mp3",
+    "duration": 5.372083,
+    "sha256": "962c53f70b5b22c6389dce006509772a63c76eeaffd3fa15adaf2b3890eb9874"
+  },
+  "16 − 2 + 1 işleminin sonucu kaçtır?": {
+    "file": "tr-f43f86773347ee3f.mp3",
+    "duration": 2.528917,
+    "sha256": "5a0a59d4f7a659d2c88141f88ef41d8e58556fabeb07351741e97e8bd813f85b"
+  },
+  "Çözümü birlikte inceleyelim. Aynı öncelikte soldan sağa: 16−2=14; +1=15.": {
+    "file": "tr-a534bf89e5d1aaa8.mp3",
+    "duration": 5.972458,
+    "sha256": "4a30f3f080be0266c23f115a80c9ec2affe429c1e1cb894d9675682176381788"
+  },
+  "9 + 3 × 3 işleminin sonucu kaçtır?": {
+    "file": "tr-bbb1c1dce4f3a03d.mp3",
+    "duration": 2.838375,
+    "sha256": "8cedb4bdd5e329434656f041b78d21061bd006c9f39385f80edb994b42f3b999"
+  },
+  "Çözümü birlikte inceleyelim. Önce çarp: 3×3=9; sonra 9 ekle.": {
+    "file": "tr-ece66ea0970becc3.mp3",
+    "duration": 5.294167,
+    "sha256": "412261250c9563cda4c374ce32d495b87ca5634ff17285a0450786bdc36389c5"
+  },
+  "(9 + 3) × 4 işleminin sonucu kaçtır?": {
+    "file": "tr-5b84dee741848416.mp3",
+    "duration": 2.836958,
+    "sha256": "fea422a7c49a0a7c61ec19a783dc878672e70ec8154909d0b50bb3dd89386bdc"
+  },
+  "Çözümü birlikte inceleyelim. Önce parantez: 9+3=12; sonra çarp.": {
+    "file": "tr-a7dc9d29dbe43e34.mp3",
+    "duration": 4.95175,
+    "sha256": "6c5fd790c9e118654020e1cfe9ccfe69e40ffa7ffbf375068f58568d24ee48d5"
+  },
+  "18 ÷ 2 + 4 işleminin sonucu kaçtır?": {
+    "file": "tr-a166bf1b6f98e34b.mp3",
+    "duration": 2.713958,
+    "sha256": "9e4dda80c332f9aeeb89d5e2f8f75a03a248ff160d1f94ac16b90ecc2c608f52"
+  },
+  "Çözümü birlikte inceleyelim. Önce bölme: 18÷2=9; sonra 4 ekle.": {
+    "file": "tr-b6a46d93bef711ef.mp3",
+    "duration": 5.549583,
+    "sha256": "8baf8d4ee895901942c5147bf26c10c73214e0d473ff177207c39f26c60b7444"
+  },
+  "18 − 3 + 1 işleminin sonucu kaçtır?": {
+    "file": "tr-64339774e4201f38.mp3",
+    "duration": 2.927625,
+    "sha256": "18ff01c787f2ae133dc9eadc05a05e50dac8c8b215310e38b1343c2a69558abd"
+  },
+  "Çözümü birlikte inceleyelim. Aynı öncelikte soldan sağa: 18−3=15; +1=16.": {
+    "file": "tr-a30a2dee7e7d4268.mp3",
+    "duration": 6.198833,
+    "sha256": "07c2a733080d99b294f6c5ac6531ef6b28f5cd639134ad0ee343ceea542c23f5"
+  },
+  "10 + 3 × 4 işleminin sonucu kaçtır?": {
+    "file": "tr-5952a5971319f2aa.mp3",
+    "duration": 2.71625,
+    "sha256": "c147ce921afa046a0281fd2fc2b8b2624b59ca07b117745a456fbce28c75ce35"
+  },
+  "Çözümü birlikte inceleyelim. Önce çarp: 3×4=12; sonra 10 ekle.": {
+    "file": "tr-b4d75caa755db579.mp3",
+    "duration": 4.969958,
+    "sha256": "576ac077c457312dae7a2a8f1546744a57a898ddcc89cda01d3f99bd6617719c"
+  },
+  "(10 + 3) × 2 işleminin sonucu kaçtır?": {
+    "file": "tr-a95f98425a03f759.mp3",
+    "duration": 2.665958,
+    "sha256": "e1e69888086dff3682c45e389b21371ea53878913d3189b23571c3b27f5c8d95"
+  },
+  "Çözümü birlikte inceleyelim. Önce parantez: 10+3=13; sonra çarp.": {
+    "file": "tr-bdf88f06981d8fc5.mp3",
+    "duration": 4.801958,
+    "sha256": "1d31ece92fb886964657a1749d3b40582e7e9f1b995710299bf2d2939eed2928"
+  },
+  "30 ÷ 3 + 4 işleminin sonucu kaçtır?": {
+    "file": "tr-41b66c7bb831edec.mp3",
+    "duration": 2.72175,
+    "sha256": "d6a723fbbc66383d9095dda926febdefd4058e602fb55770be73e731283ae5a1"
+  },
+  "Çözümü birlikte inceleyelim. Önce bölme: 30÷3=10; sonra 4 ekle.": {
+    "file": "tr-e360447071ac3095.mp3",
+    "duration": 5.053208,
+    "sha256": "88fc978705e8d0f1aae0f333ea5101f303bf30c7aa6d63b0b39e16919bd8fc68"
+  },
+  "20 − 4 + 1 işleminin sonucu kaçtır?": {
+    "file": "tr-52196767a7338955.mp3",
+    "duration": 2.574542,
+    "sha256": "0247aeb74b0b853b179c35c807535917817a93969326236bd96b7f1df6e1e3cc"
+  },
+  "Çözümü birlikte inceleyelim. Aynı öncelikte soldan sağa: 20−4=16; +1=17.": {
+    "file": "tr-5e9cce316e9258aa.mp3",
+    "duration": 6.058833,
+    "sha256": "dd2674084cf17060c0334a81c0894ad46c94f45e07cb99ce03437e4812f2ceb5"
+  },
+  "11 + 3 × 2 işleminin sonucu kaçtır?": {
+    "file": "tr-d00bafb589bb960b.mp3",
+    "duration": 2.643917,
+    "sha256": "75949a84e03d50fce4b3ccfe7361f437f2507edbfc75052ddab6afe06377d898"
+  },
+  "Çözümü birlikte inceleyelim. Önce çarp: 3×2=6; sonra 11 ekle.": {
+    "file": "tr-dc70afea782dd126.mp3",
+    "duration": 5.085167,
+    "sha256": "b59a01935e53a8de25d6d0063d92ffebb53d6dc4fa8097bcbae5842d868a942b"
+  },
+  "(11 + 3) × 3 işleminin sonucu kaçtır?": {
+    "file": "tr-aa26f20595afc7e6.mp3",
+    "duration": 2.641958,
+    "sha256": "909224a5597674a40ea0df8de6c6a38d59e9c08182063845189a348a7a3b9064"
+  },
+  "Çözümü birlikte inceleyelim. Önce parantez: 11+3=14; sonra çarp.": {
+    "file": "tr-fd56f4ee65f78338.mp3",
+    "duration": 5.047333,
+    "sha256": "595d1a4bb28cce2f5e23b821339eb3df413c3b24672a4f0224a17f567e29d069"
+  },
+  "44 ÷ 4 + 4 işleminin sonucu kaçtır?": {
+    "file": "tr-1ad121b9bd53ced2.mp3",
+    "duration": 2.853667,
+    "sha256": "37fee84cf05db073f66cf1fed4e7452010b5d0a3c52c28cc87ae9fe1221a1f28"
+  },
+  "Çözümü birlikte inceleyelim. Önce bölme: 44÷4=11; sonra 4 ekle.": {
+    "file": "tr-f3218ad948675d35.mp3",
+    "duration": 5.565833,
+    "sha256": "6df3592088e8581d1f8fdc68f04201bf8e56e8d440401cb02e6f8fe0c1811b67"
+  },
+  "22 − 2 + 1 işleminin sonucu kaçtır?": {
+    "file": "tr-be6b9b401fe8df95.mp3",
+    "duration": 2.809958,
+    "sha256": "103aaa64fb36d02cf9116b840d55857ef1346be8e5876030a28c3f7e920fb568"
+  },
+  "Çözümü birlikte inceleyelim. Aynı öncelikte soldan sağa: 22−2=20; +1=21.": {
+    "file": "tr-082b8f1a53c854c2.mp3",
+    "duration": 6.30425,
+    "sha256": "7b7abd19e92afbc7da5640917c51d9566f2cf87aab5c0967a1340293acf724a4"
+  },
+  "2, 4, 6, 8, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-2195ee26a52f2b99.mp3",
+    "duration": 3.822375,
+    "sha256": "626e712c669be5cef94f6a295df597bf2de27be7b9626dec05ef7d0ebcaf30de"
+  },
+  "İpucu: Ardışık iki terim arasındaki artışı bul; aynı kuralı bir sonraki adıma uygula.": {
+    "file": "tr-dbe28777f4ed0aec.mp3",
+    "duration": 4.5145,
+    "sha256": "e749d0dfc39de8ac16eeae2fd60d026fc8554428223b9f6c26905b80b23e785b"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 2 ekleniyor. 8+2=10.": {
+    "file": "tr-9825d5bbc958d926.mp3",
+    "duration": 4.56275,
+    "sha256": "495fc5cf5e5f6f25d7bf63cf993dd52e9f9617b1840b41cc52c8e09ba0ceeff9"
+  },
+  "2, 5, 8, 11, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-953db043a344e292.mp3",
+    "duration": 3.886667,
+    "sha256": "6db26d8e0a04c2848ebb4527b8051049dfac7a4743606b4a6798801c97d048d5"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 3 ekleniyor. 11+3=14.": {
+    "file": "tr-fddad04e3cf68d64.mp3",
+    "duration": 4.725292,
+    "sha256": "7ff2d9b5c7c4081cd19fa8f392c0d1d29d84976d3ae482d8db0b9c7556d682b4"
+  },
+  "2, 6, 10, 14, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-4f686c30ac7f5fa3.mp3",
+    "duration": 3.573708,
+    "sha256": "9e74ca811568e3290e03ac0ed33dc7d2c253aa833c68b95ec62113e22151b391"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 4 ekleniyor. 14+4=18.": {
+    "file": "tr-f56ac2b592df9fc3.mp3",
+    "duration": 5.166458,
+    "sha256": "2a5c218ff3d735920d3f10fae6bedb7469f3e94d8b5dc0a8064bdfe8bf02c866"
+  },
+  "3, 6, 9, 12, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-e7a0258d99ad520d.mp3",
+    "duration": 3.631208,
+    "sha256": "9f1b097ceda50e43f8dac18c3bde23ef11702ea0f8273ee431f704715142bace"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 3 ekleniyor. 12+3=15.": {
+    "file": "tr-069430e68ce174ad.mp3",
+    "duration": 4.736875,
+    "sha256": "ed71252cac8f21ca26ea7a32819881fb5b5ee3cc65d07b911b180077b97c998d"
+  },
+  "3, 7, 11, 15, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-e82ca5c12a25fe51.mp3",
+    "duration": 3.583958,
+    "sha256": "9619cca8331a22831a8f4314fd4e2bfb30883a208e10dc4bca8515a0ab68e5e4"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 4 ekleniyor. 15+4=19.": {
+    "file": "tr-e2b6808646faccef.mp3",
+    "duration": 5.050375,
+    "sha256": "60ab9533c03832c1a0ca9312a6719dbbe369ea87b400984a3a14603761ac3547"
+  },
+  "3, 5, 7, 9, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-3aab0d1b49ad9220.mp3",
+    "duration": 3.787167,
+    "sha256": "1988eeee957407fbe5de447f6dfc0a86c8d3f3adf14cc4fc76ad34fba05d3c45"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 2 ekleniyor. 9+2=11.": {
+    "file": "tr-41937f19923d55e4.mp3",
+    "duration": 4.864583,
+    "sha256": "fa8810d7395aa4e54ea0324932455dcdb0fe50d194b975b0d1e6b6e4a2a6da67"
+  },
+  "4, 8, 12, 16, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-6062292845ec1c23.mp3",
+    "duration": 4.168625,
+    "sha256": "ef84a3739156985e9e3d4620b3fd58c393b69e94b4c78f4d8cb131f486377818"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 4 ekleniyor. 16+4=20.": {
+    "file": "tr-5a54504ff5449ae9.mp3",
+    "duration": 4.969958,
+    "sha256": "f6d31b6aedb894964c0d714525092766ca54d8bc782ddae4e722af5f075ca7ac"
+  },
+  "4, 6, 8, 10, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-6b3c802eb9f89b24.mp3",
+    "duration": 3.948167,
+    "sha256": "e089f6f8149add6237b5031a3f44f8a831c858fb5296c4cd030dc807642eeffc"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 2 ekleniyor. 10+2=12.": {
+    "file": "tr-a24efa81610fde93.mp3",
+    "duration": 4.7485,
+    "sha256": "cf5accbc220bf755670cac132157074e1681c8afe366b35bfff1d00d97f33feb"
+  },
+  "4, 7, 10, 13, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-37d1f2c3aa6ce1ad.mp3",
+    "duration": 3.592708,
+    "sha256": "5547d85d7cf629311f1ae93d0f68c83c342ea67ed39e6bfe766e414282e9faf8"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 3 ekleniyor. 13+3=16.": {
+    "file": "tr-9a2d160c25609331.mp3",
+    "duration": 4.915625,
+    "sha256": "9eceeb61a8f7d3e10a9b58407195ab0432256ed4f99d6439e406b7447bfe3f98"
+  },
+  "5, 7, 9, 11, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-cf8934d9f53deff3.mp3",
+    "duration": 4.009958,
+    "sha256": "322ab4d03c2107972f6b0ebf2d471fd825d0ac97d2ede283273b5c773b713a0a"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 2 ekleniyor. 11+2=13.": {
+    "file": "tr-6979da6f3ebfd638.mp3",
+    "duration": 4.678833,
+    "sha256": "4589399224488f9a81dbfaef9ba9f2614e15659c78afd8f1201595fb4d5b91bd"
+  },
+  "5, 8, 11, 14, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-9c6b14607c8cc276.mp3",
+    "duration": 3.825083,
+    "sha256": "adb8df6a6c9700c238c4d31889f01d1215a0bbd9cd9db1baa141973176194d43"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 3 ekleniyor. 14+3=17.": {
+    "file": "tr-e40804f74f393d7a.mp3",
+    "duration": 4.841375,
+    "sha256": "97535eccf143534ef825dedf4a5ba7d83a78d48d67965db3241548ee424e66ad"
+  },
+  "5, 9, 13, 17, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-7cd0d4a63c102752.mp3",
+    "duration": 3.993083,
+    "sha256": "d7a8cae5db33239ee7dcd60bbcb02180d2b10b0dfb55e7190abb5a66fc5f8a88"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 4 ekleniyor. 17+4=21.": {
+    "file": "tr-c581764f4de2b4dc.mp3",
+    "duration": 5.178083,
+    "sha256": "2621f7dd833bdb324d2f57a9cfd21983289958f7709f1ef3a71af2ffdf0bfff7"
+  },
+  "6, 9, 12, 15, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-cdeccb9155cff0cd.mp3",
+    "duration": 4.169042,
+    "sha256": "bbc1012fb54bb0f8b3eeca6554830c38e2be5c013ef85c37ede6b9b4ea335f2d"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 3 ekleniyor. 15+3=18.": {
+    "file": "tr-6d683f0373df2e63.mp3",
+    "duration": 5.179958,
+    "sha256": "1b06e8a9aa943af937ef58b545ce816121fcdfe215d99ef8392fb408b64b5144"
+  },
+  "6, 10, 14, 18, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-523f3c204ee0b0e6.mp3",
+    "duration": 4.073167,
+    "sha256": "ce11b72991a7fd7c595307b6efceb9cac5b83f14073e861a42850e7f28d143e8"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 4 ekleniyor. 18+4=22.": {
+    "file": "tr-e5b941a7013337ad.mp3",
+    "duration": 5.41025,
+    "sha256": "a66f2d2a5bcabd87197493ef36eeb0d6a3ac84c0219726032ad9960afdc49441"
+  },
+  "6, 8, 10, 12, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-faca607d5f71711c.mp3",
+    "duration": 3.638208,
+    "sha256": "e111a052b59aa2c321c8edf14b8fe4a5a1105b543f1c23bd2008643007fddd0e"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 2 ekleniyor. 12+2=14.": {
+    "file": "tr-6b14154af5ada917.mp3",
+    "duration": 5.003917,
+    "sha256": "0af9f22cb87e435065c69c52dae2b66d54d2bc2b3107fa2a662a71f4518dda1c"
+  },
+  "7, 11, 15, 19, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-9cd3a4b4bac2ab8e.mp3",
+    "duration": 4.047542,
+    "sha256": "85deae3f34e7e3c13b854c175a024ed52000da459e226edd2487b21568f23845"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 4 ekleniyor. 19+4=23.": {
+    "file": "tr-4f3163e1f0a9ed1e.mp3",
+    "duration": 5.043583,
+    "sha256": "9b934ba1ba7b00c74a36e2a8769f3981919ccfa61260aaf1a7f194f33a59b9d2"
+  },
+  "7, 9, 11, 13, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-b0fb923a7385748b.mp3",
+    "duration": 4.043292,
+    "sha256": "3c05e6f43e93e6a1780157aa3f92631fe0486d6a0b9d4c3a570d0b2c2c4c664d"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 2 ekleniyor. 13+2=15.": {
+    "file": "tr-36574fd307f2639c.mp3",
+    "duration": 4.76375,
+    "sha256": "25f81b096bb16d0c67724809ddd4f9eb96a696ddfd74d98b902f0a351d0eca0d"
+  },
+  "7, 10, 13, 16, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-7d31a56ddbf48ea4.mp3",
+    "duration": 3.833833,
+    "sha256": "324baff37212c851cb0283e6314c93468efe2f96f6332b838cd24c3821563761"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 3 ekleniyor. 16+3=19.": {
+    "file": "tr-91b6186eda0a4567.mp3",
+    "duration": 5.045667,
+    "sha256": "4bc1f0c241842a3e6de2a681403dfbcd7fc4242f43a13a073d84c3275136be81"
+  },
+  "8, 10, 12, 14, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-8c70427d33120d63.mp3",
+    "duration": 3.791917,
+    "sha256": "d384a46b79df6bfe788ecc3b2bbe6be462ecff7cc44632e9bf495f78e3e32c7f"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 2 ekleniyor. 14+2=16.": {
+    "file": "tr-331d8f0625cf85fb.mp3",
+    "duration": 4.818167,
+    "sha256": "365c342779b41db2b57c78ce165c77dbe292e91fd033a3c15e04d91c8b50e9c4"
+  },
+  "8, 11, 14, 17, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-9c2d114579be2029.mp3",
+    "duration": 3.971542,
+    "sha256": "ed0e9203e61070349466a3c2637532e44c55e15bd8c3b283b374ffe30dfe3dc2"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 3 ekleniyor. 17+3=20.": {
+    "file": "tr-084fb010f8fa2a16.mp3",
+    "duration": 4.760125,
+    "sha256": "30a0babca8663dbd31c61260562aebf33822de3f795371b423b680ba64d65b87"
+  },
+  "8, 12, 16, 20, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-a51409b4806561e4.mp3",
+    "duration": 4.003292,
+    "sha256": "4c34278312f5409910a49b053c79aa1a41a18951ff463b07520bd7241c8092d2"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 4 ekleniyor. 20+4=24.": {
+    "file": "tr-a764bc2801f86c0c.mp3",
+    "duration": 4.803375,
+    "sha256": "a499f6b95319469d3c37b10bc581cb23a137ca0a2a3d04aec0e66476df346df2"
+  },
+  "9, 12, 15, 18, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-b15d34f432002ad3.mp3",
+    "duration": 4.153958,
+    "sha256": "cfd4b823edf2f256bd9429d9855c04c59d971d1773aa2b14b25bdbd74c1c4d7b"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 3 ekleniyor. 18+3=21.": {
+    "file": "tr-ed1581be3496a9ba.mp3",
+    "duration": 5.236125,
+    "sha256": "1b0fc4e4d9449a43a7d06e599896575e21dd171ec0fe37a558fe79e3435d8942"
+  },
+  "9, 13, 17, 21, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-c5b5eabe17a7175e.mp3",
+    "duration": 4.2025,
+    "sha256": "b5b1185bd73c0066eeaacded3c9babfe9b96f046bc35daec5aea10f3cb170b04"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 4 ekleniyor. 21+4=25.": {
+    "file": "tr-fb41633f7a4102cf.mp3",
+    "duration": 5.003917,
+    "sha256": "04ef22aa957f171227cc00bdf1819fc6e4132075cbd2482812b2892a762e48c4"
+  },
+  "9, 11, 13, 15, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-4b0661df1e3cbd4c.mp3",
+    "duration": 4.013583,
+    "sha256": "f4e1195686074b0d652b27be792c1c333f4888adfa43d854f9fdb798bbf1bf5f"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 2 ekleniyor. 15+2=17.": {
+    "file": "tr-837bd724241f004b.mp3",
+    "duration": 4.922667,
+    "sha256": "339535d5699bef06ac7b305c0686f4523b6f02cac4c72e3e002f4c03983283a9"
+  },
+  "10, 14, 18, 22, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-f2a36c249d6046aa.mp3",
+    "duration": 4.400417,
+    "sha256": "9f1fe1895d740a485247a56842ecda560780221715d74a35086646be08291fc0"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 4 ekleniyor. 22+4=26.": {
+    "file": "tr-b9f7828db2e60b9e.mp3",
+    "duration": 4.969958,
+    "sha256": "213956f6b903103d9beaa55ef665e909aad5be271658221ff32b03ea8131408f"
+  },
+  "10, 12, 14, 16, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-620fc530074664d9.mp3",
+    "duration": 3.781333,
+    "sha256": "a180e1a305e884e5d104106220c96a340c1c992978cf9d8968c354c9bb8d5dd0"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 2 ekleniyor. 16+2=18.": {
+    "file": "tr-18dea56aba846bb5.mp3",
+    "duration": 4.901458,
+    "sha256": "2c0069750700f80ce293dc29bd3f69a430aee9d8edfa043ff6564302d16d0d6d"
+  },
+  "10, 13, 16, 19, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-5d8b08b0aba3bbae.mp3",
+    "duration": 4.069,
+    "sha256": "75ce4892fa4d6bad586b454f506395c329ea2953b3b9fb29df3c4ebaa4a5325b"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 3 ekleniyor. 19+3=22.": {
+    "file": "tr-5c6cb870680ef3e5.mp3",
+    "duration": 4.928917,
+    "sha256": "75514f07f4b546f07d4eb999f38f4c5bd79c4d8054c5c502e7d97e1db098f578"
+  },
+  "11, 13, 15, 17, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-d57e185d871bb22b.mp3",
+    "duration": 3.993833,
+    "sha256": "a48b979e9b751dc3fec4dca90f3129a4d050be20563c7a87f3bf4655fb549a89"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 2 ekleniyor. 17+2=19.": {
+    "file": "tr-3c4bff3798dc6559.mp3",
+    "duration": 5.178083,
+    "sha256": "6226ea559ab7b74c93acec6afc4fda2848975cd3e569633c265134d2e89d314e"
+  },
+  "11, 14, 17, 20, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-46fd7879c410167a.mp3",
+    "duration": 4.12,
+    "sha256": "2bcb5b14dd9042bc06d80e4d137a1d0b6dac6189ddca38d91a8899e13d21b8c6"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 3 ekleniyor. 20+3=23.": {
+    "file": "tr-6e793afd9ec757f3.mp3",
+    "duration": 4.911042,
+    "sha256": "d5a706ef13bdb9caf22944e83936312125983204df2ff603b0358820fd7dea83"
+  },
+  "11, 15, 19, 23, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-8016da20df1a0f50.mp3",
+    "duration": 4.084542,
+    "sha256": "f3773dcd69d3902f5be19c6813a0af746ff1fc855b66ea95b221ed3f59997479"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 4 ekleniyor. 23+4=27.": {
+    "file": "tr-5327ebbbeaf95a9e.mp3",
+    "duration": 5.189667,
+    "sha256": "f61abd3ffa4d468edd0d1a58dbd3f445be593fad589b345235ac3c72c3b3a11c"
+  },
+  "12, 15, 18, 21, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-c006e04e25f4c275.mp3",
+    "duration": 4.393958,
+    "sha256": "bfdf2549c673fedd6b2d10c7fff73c104411876d127e90b8c8f741498d56b660"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 3 ekleniyor. 21+3=24.": {
+    "file": "tr-fe9a75f8d9d52fcc.mp3",
+    "duration": 4.922667,
+    "sha256": "698e151a6d771e7491fb87af5e02ff883844455ba2a67064797c6a953d30362a"
+  },
+  "12, 16, 20, 24, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-1c9e064e9a3d8793.mp3",
+    "duration": 4.441958,
+    "sha256": "9856ebdc490f22b840a610430f95fe11185bba12a66fdc2c836db9bd613f6404"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 4 ekleniyor. 24+4=28.": {
+    "file": "tr-93bc4b6a23950b30.mp3",
+    "duration": 5.421875,
+    "sha256": "c14ebcf1f390a95a2f17bfa114049c436a02ae54822fd38b11197e11b31c0a91"
+  },
+  "12, 14, 16, 18, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-75f9ad85f8c14a61.mp3",
+    "duration": 4.270917,
+    "sha256": "b89d5285d14ae3b4c449f24293b5f01d0be0ef67836c12acbb283444be42cb3a"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 2 ekleniyor. 18+2=20.": {
+    "file": "tr-1fbb6aaa25a11d39.mp3",
+    "duration": 5.050375,
+    "sha256": "2fa20de3d7988cd14795d6f0b34950cdecb8096f08aaf0e748b6b9b9279f47e2"
+  },
+  "13, 17, 21, 25, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-eb016facfb85dc7d.mp3",
+    "duration": 4.237958,
+    "sha256": "e1602c5439780126af6854f3201fe186c4eb1e1c25cf11662ab64600ebb82584"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 4 ekleniyor. 25+4=29.": {
+    "file": "tr-382551373004a799.mp3",
+    "duration": 5.398667,
+    "sha256": "3b3fd6996e4f26ff82201e28fb45709045c981010a6bd3fbd709387e469d9958"
+  },
+  "13, 15, 17, 19, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-395ff3a3635fc151.mp3",
+    "duration": 3.930375,
+    "sha256": "f42f5bc9ee5740d3ce311492e9a204e15fc753e7d15eb525d489b580c7386b9f"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 2 ekleniyor. 19+2=21.": {
+    "file": "tr-233e44339b7475f8.mp3",
+    "duration": 5.131625,
+    "sha256": "32842a9a9b018ad132babeadbf1d820c0640713f60d956ff1fd16c02841bdfde"
+  },
+  "13, 16, 19, 22, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-cd184099db3e340f.mp3",
+    "duration": 4.16225,
+    "sha256": "9f46f72805844e85d0fa670ab168c58735dbf2c273f307532881374d21922d5b"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 3 ekleniyor. 22+3=25.": {
+    "file": "tr-bdb769223a3c24b3.mp3",
+    "duration": 5.12,
+    "sha256": "08d4023d2eac3ae2b11a06c266bc2fa8ad5990e61b9cc28048929826dc1a1013"
+  },
+  "14, 16, 18, 20, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-e713b2aaa458a8be.mp3",
+    "duration": 4.500875,
+    "sha256": "f03df7e514c949192f751c069e241658d628e42efea0ae8695c9bfee6a09611b"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 2 ekleniyor. 20+2=22.": {
+    "file": "tr-82f070c9c3590dbb.mp3",
+    "duration": 4.806542,
+    "sha256": "75bd82d113ba213c0f9d78a6ba42533fd51cff6ff362e0fe14f4c30823921db4"
+  },
+  "14, 17, 20, 23, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-138585864d51c421.mp3",
+    "duration": 4.377625,
+    "sha256": "d72386f89f652a99412ffab761f9646ce1e0771a4fb2db82af5c4aa95dbbe22c"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 3 ekleniyor. 23+3=26.": {
+    "file": "tr-f94fbd4571883b64.mp3",
+    "duration": 5.305958,
+    "sha256": "609c8b1308d23f40d0bef89ac111fab74bfdc9c1cb7f5815b21dcc07303bbb6f"
+  },
+  "14, 18, 22, 26, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-c57d28da255c5953.mp3",
+    "duration": 4.427667,
+    "sha256": "3c24000de61fbc009809693cd8eef33c271cfb5c53d2aca76417746ec3ffb2b6"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 4 ekleniyor. 26+4=30.": {
+    "file": "tr-cbe037d5c959a696.mp3",
+    "duration": 5.027125,
+    "sha256": "c843f1c089141834d6a768b12d8bc56e487c51ad785fe4c1ba83449e2f0fc4e7"
+  },
+  "15, 18, 21, 24, … örüntüsünün sonraki terimi kaçtır?": {
+    "file": "tr-1ef7b5f717b13d12.mp3",
+    "duration": 4.495292,
+    "sha256": "6ea337499c02b1acba14fc93f77b794e3322f07a1538a080e1f2f075e36c1f5c"
+  },
+  "Çözümü birlikte inceleyelim. Her adımda 3 ekleniyor. 24+3=27.": {
+    "file": "tr-ad7c47ea2b8e0f95.mp3",
+    "duration": 5.027125,
+    "sha256": "5162191badb6a1027bba9d82e7198ac6d1a31cea1fc95bab8fe47bb25b8dcdf7"
+  },
+  "Robot 2 sayısına önce 2 ekliyor, sonra sonucu 2 ile çarpıyor. Çıktı kaçtır?": {
+    "file": "tr-cc6df8296e0e4bfd.mp3",
+    "duration": 5.065958,
+    "sha256": "fd8ca61b93f334671169f0366baf4b0abf457f93dfb5b85cfc193e3a72fd78ff"
+  },
+  "İpucu: Robotun oklarını sırayla izle; bir adımın çıktısı sonraki adımın girdisidir.": {
+    "file": "tr-6a29b1751daeed8a.mp3",
+    "duration": 4.690458,
+    "sha256": "b9e6e1221e9b14255d9f7eae6ac1951cc01b1ba97c3d7832f1f7ab675837339e"
+  },
+  "Çözümü birlikte inceleyelim. Sırayla: 2+2=4; 4×2=8.": {
+    "file": "tr-bc2503d1d8c6c8da.mp3",
+    "duration": 5.364542,
+    "sha256": "337a435c73c0a4e8140b3b747f6530041b0ef8320d164eac4604d726cab33d07"
+  },
+  "Robot 7 TL ile 3 TL'lik defterlerden alıyor. En çok kaç defter alabilir?": {
+    "file": "tr-bca308003930d875.mp3",
+    "duration": 4.615042,
+    "sha256": "8ede5bee8402b5a25f9561ceabfc9d2a7af0ad09e1031e66c2f859d320a7ebc8"
+  },
+  "İpucu: Bütçeyi bir defterin fiyatına böl; yalnız tam defterleri say.": {
+    "file": "tr-8f84176520da4a0a.mp3",
+    "duration": 4.086708,
+    "sha256": "9a37a3d68c63f7477efec003151452ac99c263da840713c2b6e622628a9de374"
+  },
+  "Çözümü birlikte inceleyelim. Tam bölümü al: 7÷3 işleminin tam bölümü 2.": {
+    "file": "tr-74e79fd527558009.mp3",
+    "duration": 4.841375,
+    "sha256": "f71af95d74540aaf43d7b81164a7820711d479f7311eaa0bae28681f3df36520"
+  },
+  "Başlangıç 4. Önce 2'ye böl, sonra 4 ekle. Sonuç kaçtır?": {
+    "file": "tr-8d409b9be44c6161.mp3",
+    "duration": 4.253708,
+    "sha256": "602d4baefa1fb7082048f3b2241324fd20f7c0e2fe8d02c2246957dcf66f5a2c"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 4÷2=2; 2+4=6.": {
+    "file": "tr-7812abc38f2ce84d.mp3",
+    "duration": 5.8235,
+    "sha256": "ce8420ac8917a76e894a3cdffa06e602e968dd10ea552c9a2f4cc6975c8d12a1"
+  },
+  "Robot 2 adım ileri, sonra 2 adım daha ileri gidiyor. Toplam kaç adım atar?": {
+    "file": "tr-c1d07a4d07c7d05f.mp3",
+    "duration": 4.435042,
+    "sha256": "da625626a078d5cb510842c140fcfb9f3a15cfe9b032255a5a5ade1bbd8ed9f3"
+  },
+  "İpucu: İki hareket aynı yönde. Adım sayılarını birleştir.": {
+    "file": "tr-fae47f1aa267ba8f.mp3",
+    "duration": 3.307292,
+    "sha256": "48f97775d3b1b511c2386f80ef24a048ee912878b3015f61a433429de23752e0"
+  },
+  "Çözümü birlikte inceleyelim. Aynı yöndeki adımları topla: 2+2=4.": {
+    "file": "tr-03c260982c54f112.mp3",
+    "duration": 4.650542,
+    "sha256": "a71a0a1133d3f0e551708ef64010b519854ea104cec8d87e2858f442e2974e20"
+  },
+  "Robot 3 sayısına önce 3 ekliyor, sonra sonucu 2 ile çarpıyor. Çıktı kaçtır?": {
+    "file": "tr-99319abe5f1275ef.mp3",
+    "duration": 5.317375,
+    "sha256": "3abd72b5e8b27dc87c41731f96af348a8fa4f33c12ea9d0a3b8e678cc08b2dc3"
+  },
+  "Çözümü birlikte inceleyelim. Sırayla: 3+3=6; 6×2=12.": {
+    "file": "tr-e3951af02bb1dfe2.mp3",
+    "duration": 5.245042,
+    "sha256": "92365ea14da2d7f68f8b5cb852412d647151e4c6b8ff447bc56d22bc8775c65f"
+  },
+  "Robot 13 TL ile 4 TL'lik defterlerden alıyor. En çok kaç defter alabilir?": {
+    "file": "tr-311559bb99fd681f.mp3",
+    "duration": 4.678458,
+    "sha256": "6b1447520d0683152980dcf424ff925be4f54b784e2996fbcddce3f15ed5e19b"
+  },
+  "Çözümü birlikte inceleyelim. Tam bölümü al: 13÷4 işleminin tam bölümü 3.": {
+    "file": "tr-cc1f3d35ee26833d.mp3",
+    "duration": 4.597583,
+    "sha256": "7e9e4391038cdac2718199185e3fd7d00c6c6d163d3e2f913c29e5d5f92f782f"
+  },
+  "Başlangıç 6. Önce 2'ye böl, sonra 2 ekle. Sonuç kaçtır?": {
+    "file": "tr-d4e8f4b695e75dd7.mp3",
+    "duration": 4.09625,
+    "sha256": "318693a15ba2b565092438d0217025a850bda8752bff8d5a5629b537189ebfc0"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 6÷2=3; 3+2=5.": {
+    "file": "tr-3bfd25b292b6775a.mp3",
+    "duration": 5.701,
+    "sha256": "ec93258e946eed921c28ba159ee1ee686fc746ad318497eaabf68f85c00a5f68"
+  },
+  "Robot 3 adım ileri, sonra 3 adım daha ileri gidiyor. Toplam kaç adım atar?": {
+    "file": "tr-1c71c5e2022b1a85.mp3",
+    "duration": 4.35375,
+    "sha256": "991b75b17390fd5edad157a77a8cc300801ceea578639e0932392f43da030085"
+  },
+  "Çözümü birlikte inceleyelim. Aynı yöndeki adımları topla: 3+3=6.": {
+    "file": "tr-336614ef999357ba.mp3",
+    "duration": 4.566042,
+    "sha256": "7d54c9029d1a646cdb43a30b756c6989bfdfa6f339528e510d9d685f150db0b1"
+  },
+  "Robot 4 sayısına önce 4 ekliyor, sonra sonucu 2 ile çarpıyor. Çıktı kaçtır?": {
+    "file": "tr-2ef6f0e325073a0a.mp3",
+    "duration": 5.278083,
+    "sha256": "51315475b08ef8edfb5e0fb4e6144fbf4f00fd5aa40b1ae6ed6f25770bdbb100"
+  },
+  "Çözümü birlikte inceleyelim. Sırayla: 4+4=8; 8×2=16.": {
+    "file": "tr-184f94d5a513207e.mp3",
+    "duration": 5.747375,
+    "sha256": "67f9619968f2ecf9c85f4f88d74f5355468bec634291c9cd808d37252adda50d"
+  },
+  "Robot 9 TL ile 2 TL'lik defterlerden alıyor. En çok kaç defter alabilir?": {
+    "file": "tr-280880b4d2729791.mp3",
+    "duration": 4.841375,
+    "sha256": "330cb1259a654ed5d5e030cc8050f77069b8d7238ec86458bd7756558ce73764"
+  },
+  "Çözümü birlikte inceleyelim. Tam bölümü al: 9÷2 işleminin tam bölümü 4.": {
+    "file": "tr-054c358b7ba79aaa.mp3",
+    "duration": 4.773167,
+    "sha256": "be8fbc33183ed964db6367c26e2ec8fd48e0260dd8a282575a3f0a2e22dcbb8c"
+  },
+  "Başlangıç 8. Önce 2'ye böl, sonra 3 ekle. Sonuç kaçtır?": {
+    "file": "tr-77f9c2a283e9c9a8.mp3",
+    "duration": 4.348583,
+    "sha256": "b00316255f6730fc5942dec9cf51adab7b769ab95d66b303f742e7b2175437a1"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 8÷2=4; 4+3=7.": {
+    "file": "tr-c2988f39f2e24ff7.mp3",
+    "duration": 5.967542,
+    "sha256": "c5dea33f120f05fbb2a59d81b2a9a060d3d36c8310df651f39556941714ef036"
+  },
+  "Robot 4 adım ileri, sonra 4 adım daha ileri gidiyor. Toplam kaç adım atar?": {
+    "file": "tr-a9a69e598e3eabb5.mp3",
+    "duration": 4.655625,
+    "sha256": "05ee4bb3e491e8b4103c8bf1533cedcca82e6b6ee5cce8f2a3f862978b19337e"
+  },
+  "Çözümü birlikte inceleyelim. Aynı yöndeki adımları topla: 4+4=8.": {
+    "file": "tr-0e4b9c99416322d7.mp3",
+    "duration": 5.166458,
+    "sha256": "037755c47d9acbd1bf481e50d4b2e5f2a86d727d04a1a072770080ae67ba5748"
+  },
+  "Robot 5 sayısına önce 2 ekliyor, sonra sonucu 2 ile çarpıyor. Çıktı kaçtır?": {
+    "file": "tr-141b7578d333db51.mp3",
+    "duration": 4.987208,
+    "sha256": "f17e8953b9ebd7a882180a1a47fa5ddccd2dc364fa02391249e31729e610897a"
+  },
+  "Çözümü birlikte inceleyelim. Sırayla: 5+2=7; 7×2=14.": {
+    "file": "tr-15374fb9175c6734.mp3",
+    "duration": 5.561208,
+    "sha256": "c8e73e2e0e0f250ec293f1847602b6d88842914e8785d806e09fdb3c10afd29c"
+  },
+  "Robot 16 TL ile 3 TL'lik defterlerden alıyor. En çok kaç defter alabilir?": {
+    "file": "tr-c1940e7a28e47d30.mp3",
+    "duration": 4.669583,
+    "sha256": "705b35912d46d5d3f18e202eac5cd155eb424083705ceddd6537d39c48744717"
+  },
+  "Çözümü birlikte inceleyelim. Tam bölümü al: 16÷3 işleminin tam bölümü 5.": {
+    "file": "tr-ce0e704c576867ad.mp3",
+    "duration": 4.723792,
+    "sha256": "913a45899fed1b83d87535b27b17775aeb9e0b6238b82c4e96a79993a46cbfc2"
+  },
+  "Başlangıç 10. Önce 2'ye böl, sonra 4 ekle. Sonuç kaçtır?": {
+    "file": "tr-230f035ffd3a20ac.mp3",
+    "duration": 4.28175,
+    "sha256": "2105d653cd05a7656920bc36ddf10325d8f73f71fa04b6d276d49ee32fff1e24"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 10÷2=5; 5+4=9.": {
+    "file": "tr-d4c9520f2485b485.mp3",
+    "duration": 5.84825,
+    "sha256": "41a750fcbc424e230ddd135ff1508c01f2df42cac97db98e29c52f35aaed64fd"
+  },
+  "Robot 5 adım ileri, sonra 2 adım daha ileri gidiyor. Toplam kaç adım atar?": {
+    "file": "tr-8addf78a5a52d915.mp3",
+    "duration": 4.5395,
+    "sha256": "affc25bc1cd1b4c773596684a2eca97cc109c92a4a52e3cdf1bc2fbe7075cf5e"
+  },
+  "Çözümü birlikte inceleyelim. Aynı yöndeki adımları topla: 5+2=7.": {
+    "file": "tr-39ed98e2b13bf861.mp3",
+    "duration": 4.841375,
+    "sha256": "d1836bb20940d983bc3d12476a083af2b45a59a61aaf4437e4273cf41a1621e5"
+  },
+  "Robot 6 sayısına önce 3 ekliyor, sonra sonucu 2 ile çarpıyor. Çıktı kaçtır?": {
+    "file": "tr-767c790bbfdbddf4.mp3",
+    "duration": 5.220333,
+    "sha256": "d5bf5e61cd25c5f2a2baccb469942e46d7958c52a57c2953732f35049b561240"
+  },
+  "Çözümü birlikte inceleyelim. Sırayla: 6+3=9; 9×2=18.": {
+    "file": "tr-037db5a5c1546078.mp3",
+    "duration": 5.84275,
+    "sha256": "a9ee5a4f41750945a3cdd0a6bf209250dc30b01448121af9edd28f73c17e0432"
+  },
+  "Robot 25 TL ile 4 TL'lik defterlerden alıyor. En çok kaç defter alabilir?": {
+    "file": "tr-a2cf657e03314772.mp3",
+    "duration": 5.085167,
+    "sha256": "68014eca12b4784d7b225165195869e60bcefcb568311957902996cc4e79f89a"
+  },
+  "Çözümü birlikte inceleyelim. Tam bölümü al: 25÷4 işleminin tam bölümü 6.": {
+    "file": "tr-6e7262b24501e0ac.mp3",
+    "duration": 5.131625,
+    "sha256": "df4d800e1a0e818e8dd9682fd4cf53a998cc4408ec3eedd8953b39dae34e5298"
+  },
+  "Başlangıç 12. Önce 2'ye böl, sonra 2 ekle. Sonuç kaçtır?": {
+    "file": "tr-67d4236ce9bff02d.mp3",
+    "duration": 4.226042,
+    "sha256": "e6250da9d6e6a3b216a411321c06f1c3f24a55536385ee39160edc7f7dd54a72"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 12÷2=6; 6+2=8.": {
+    "file": "tr-ccbf1d80e702bb6c.mp3",
+    "duration": 5.957292,
+    "sha256": "450b9c737ef6b019cf1986d1902d8b80967aea44d5e5b5ecdcede8120ea08c7d"
+  },
+  "Robot 6 adım ileri, sonra 3 adım daha ileri gidiyor. Toplam kaç adım atar?": {
+    "file": "tr-9d187d3ccaaaf248.mp3",
+    "duration": 4.469875,
+    "sha256": "4c4cd8fec537bf72f3e7a737e85021a69dd9a7ec8079db010eaa276a6cd6efbb"
+  },
+  "Çözümü birlikte inceleyelim. Aynı yöndeki adımları topla: 6+3=9.": {
+    "file": "tr-ca13fc408d94e6c7.mp3",
+    "duration": 4.809708,
+    "sha256": "ffcbdcb896e5297a255a0aeceb4526377117fb4d5512019d7833ed9fa885ff50"
+  },
+  "Robot 7 sayısına önce 4 ekliyor, sonra sonucu 2 ile çarpıyor. Çıktı kaçtır?": {
+    "file": "tr-4f0c200606662eff.mp3",
+    "duration": 5.109917,
+    "sha256": "20051b1781913158039ea1e021bfe10ef99e7551d349c47924bd1958e20e1c08"
+  },
+  "Çözümü birlikte inceleyelim. Sırayla: 7+4=11; 11×2=22.": {
+    "file": "tr-e3ec874c0c65197e.mp3",
+    "duration": 5.571,
+    "sha256": "eef98fcf39990b16043977a2656f769fb0755498d67a6f9192407ddbcffe5743"
+  },
+  "Robot 15 TL ile 2 TL'lik defterlerden alıyor. En çok kaç defter alabilir?": {
+    "file": "tr-7d3846f33f10392b.mp3",
+    "duration": 4.609958,
+    "sha256": "958bf7ba2293e56984b2139705bd91836af79bbb9107ddb304ca5173012a62d0"
+  },
+  "Çözümü birlikte inceleyelim. Tam bölümü al: 15÷2 işleminin tam bölümü 7.": {
+    "file": "tr-5ee558e36de5238f.mp3",
+    "duration": 4.797458,
+    "sha256": "a365ab7dda4f83b91ae07edbfaa783a23a887012b6278462198a4b78bcd94a86"
+  },
+  "Başlangıç 14. Önce 2'ye böl, sonra 3 ekle. Sonuç kaçtır?": {
+    "file": "tr-25697b4ab514158a.mp3",
+    "duration": 4.389125,
+    "sha256": "225940fe1eb2e202374fff0a8620ec8dd3b341194fad9d191ac4a6d4d5828c51"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 14÷2=7; 7+3=10.": {
+    "file": "tr-7dd236e284965e5f.mp3",
+    "duration": 5.80275,
+    "sha256": "2d807286e5ae4c1ce38576c59e8ea74ee08c0ca3a39421b02c18753a3f39fd74"
+  },
+  "Robot 7 adım ileri, sonra 4 adım daha ileri gidiyor. Toplam kaç adım atar?": {
+    "file": "tr-8e20c755845e4c98.mp3",
+    "duration": 4.551125,
+    "sha256": "778a8ca075a7f71f32870cd202b00822b66b63322e280b95c056f4c2bb4f96a0"
+  },
+  "Çözümü birlikte inceleyelim. Aynı yöndeki adımları topla: 7+4=11.": {
+    "file": "tr-e5f12cce6d7b103b.mp3",
+    "duration": 4.890292,
+    "sha256": "340662a0a6a8195dfeb4bd5c6e608acc33f253290e643a4e8664ff08e290058d"
+  },
+  "Robot 8 sayısına önce 2 ekliyor, sonra sonucu 2 ile çarpıyor. Çıktı kaçtır?": {
+    "file": "tr-6b441808bf92f339.mp3",
+    "duration": 5.084833,
+    "sha256": "dfa4770fe64940d0d40113ddf833d9b490c61050d32d66ca9ad942a7f81fcef1"
+  },
+  "Çözümü birlikte inceleyelim. Sırayla: 8+2=10; 10×2=20.": {
+    "file": "tr-bfac66b65c9c938f.mp3",
+    "duration": 5.212875,
+    "sha256": "deb0eba4f9e13f2aadb1b2ef4a42f593875bceeda9e93a1c56f931bdd7dde5c8"
+  },
+  "Robot 25 TL ile 3 TL'lik defterlerden alıyor. En çok kaç defter alabilir?": {
+    "file": "tr-d730130182b8bf38.mp3",
+    "duration": 4.870208,
+    "sha256": "79a299605f9550dda850065396baa7171bb9b9898c47b4f7dfd6743aa8789c7d"
+  },
+  "Çözümü birlikte inceleyelim. Tam bölümü al: 25÷3 işleminin tam bölümü 8.": {
+    "file": "tr-15a8c71a8dc0d592.mp3",
+    "duration": 5.03875,
+    "sha256": "6fa991fc0ed09f526d2b61a3e066875243f6f7492e6d9ba9f401ce1bb64d403a"
+  },
+  "Başlangıç 16. Önce 2'ye böl, sonra 4 ekle. Sonuç kaçtır?": {
+    "file": "tr-1ce3ed0870ab3f6b.mp3",
+    "duration": 4.551125,
+    "sha256": "f92a6a5dad84569619abefb9ee36ba5b6c5d9636688fdf83850b8b249fb58f2d"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 16÷2=8; 8+4=12.": {
+    "file": "tr-39ad4b50c062110b.mp3",
+    "duration": 5.981,
+    "sha256": "24c20af116e042c9b7090c42701afaed82d26c74ec9a14c91e3d417f05438b3b"
+  },
+  "Robot 8 adım ileri, sonra 2 adım daha ileri gidiyor. Toplam kaç adım atar?": {
+    "file": "tr-5a27d3e7117bfe2a.mp3",
+    "duration": 4.401375,
+    "sha256": "2a188cce2308983642e62b9bf6505ea7cfcda360887c6389cc2d49114b153837"
+  },
+  "Çözümü birlikte inceleyelim. Aynı yöndeki adımları topla: 8+2=10.": {
+    "file": "tr-a25ae721396146a4.mp3",
+    "duration": 4.690458,
+    "sha256": "bfb8bd3568f3e809bcc079ff9fc8cd047a9caa9f29c320b754b4f28de01ecf0f"
+  },
+  "Robot 9 sayısına önce 3 ekliyor, sonra sonucu 2 ile çarpıyor. Çıktı kaçtır?": {
+    "file": "tr-0d5d72bdeeada7f8.mp3",
+    "duration": 5.180417,
+    "sha256": "c3e35473a265d94644ced7fc3faf46fec3440855009fc8995dc290aea7484916"
+  },
+  "Çözümü birlikte inceleyelim. Sırayla: 9+3=12; 12×2=24.": {
+    "file": "tr-65fd12ea7677f189.mp3",
+    "duration": 5.862708,
+    "sha256": "fd6d5f59606adf22b1ef68cd56c8c64135be0c711ac546614f72e948ff3fe52b"
+  },
+  "Robot 37 TL ile 4 TL'lik defterlerden alıyor. En çok kaç defter alabilir?": {
+    "file": "tr-c4efdbc59539b448.mp3",
+    "duration": 5.073583,
+    "sha256": "98d0a11cf60d748898a7d874ea215504ad9dfa240f44fb9474fcb10d879099ae"
+  },
+  "Çözümü birlikte inceleyelim. Tam bölümü al: 37÷4 işleminin tam bölümü 9.": {
+    "file": "tr-0902e7d28f5c65da.mp3",
+    "duration": 5.294167,
+    "sha256": "cbf5c764f4d19101c03f226626e704a9c99eb69890fb16c382ae54a6b5eb7456"
+  },
+  "Başlangıç 18. Önce 2'ye böl, sonra 2 ekle. Sonuç kaçtır?": {
+    "file": "tr-e87080fb087f5732.mp3",
+    "duration": 4.347333,
+    "sha256": "0ba276a3223dac406868be57f1e34cff46d454d19e0b06e6e59b0fe9f1ebe526"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 18÷2=9; 9+2=11.": {
+    "file": "tr-2ff1b83729cddac6.mp3",
+    "duration": 6.4015,
+    "sha256": "37e5d53a442b64c10745698cbfd765f29a78aa54dea5fb4b642d935c2db1be78"
+  },
+  "Robot 9 adım ileri, sonra 3 adım daha ileri gidiyor. Toplam kaç adım atar?": {
+    "file": "tr-61aa36b779631b31.mp3",
+    "duration": 4.47325,
+    "sha256": "788122ead3a5ae2506deaaed845e6232e3477042ce81a0507b8fa157181d3e40"
+  },
+  "Çözümü birlikte inceleyelim. Aynı yöndeki adımları topla: 9+3=12.": {
+    "file": "tr-ea1628db999cc0b3.mp3",
+    "duration": 4.922667,
+    "sha256": "3287f7ae11bc9ed9fd57209818f4359d0548e8aae49f0407da268d47fe7cb6bf"
+  },
+  "Robot 10 sayısına önce 4 ekliyor, sonra sonucu 2 ile çarpıyor. Çıktı kaçtır?": {
+    "file": "tr-56da30a635425a7e.mp3",
+    "duration": 5.103375,
+    "sha256": "91447cd55270c650acf37fe9e7705cb4f52dc9d2d86ee6f4bca312a979bea62a"
+  },
+  "Çözümü birlikte inceleyelim. Sırayla: 10+4=14; 14×2=28.": {
+    "file": "tr-dc07390e35da71a9.mp3",
+    "duration": 5.68525,
+    "sha256": "2fe622d6577ed3596b3d6def36feb1f45d836ad746df56125e1d570068d80e03"
+  },
+  "Robot 21 TL ile 2 TL'lik defterlerden alıyor. En çok kaç defter alabilir?": {
+    "file": "tr-1358f61e3f815de8.mp3",
+    "duration": 4.880167,
+    "sha256": "95edc5ee046c692be76c75588992eaf69785e55d36f0dbb7060cfe95abcdbc28"
+  },
+  "Çözümü birlikte inceleyelim. Tam bölümü al: 21÷2 işleminin tam bölümü 10.": {
+    "file": "tr-3862dab96624f4e4.mp3",
+    "duration": 4.841375,
+    "sha256": "0623aa4b5cf3262cbda37482c64caf90555babfd258ce3bb86b92c7a44e24f6a"
+  },
+  "Başlangıç 20. Önce 2'ye böl, sonra 3 ekle. Sonuç kaçtır?": {
+    "file": "tr-1a90498ea661a360.mp3",
+    "duration": 4.145083,
+    "sha256": "20fcfac7845ac34a551f3a97c2726bfb020c79c440e7a68ebfed9d7db269ac48"
+  },
+  "Çözümü birlikte inceleyelim. 20÷2=10; 10+3=13.": {
+    "file": "tr-591c182b01fc2330.mp3",
+    "duration": 4.493083,
+    "sha256": "475e824183c39e8efe1c351393df6037961f76a01d5140adafd740b2a891d49e"
+  },
+  "Robot 10 adım ileri, sonra 4 adım daha ileri gidiyor. Toplam kaç adım atar?": {
+    "file": "tr-23eaf09292e757b6.mp3",
+    "duration": 4.114208,
+    "sha256": "705d25d7befb0baacd845e93a4dcdeaa6b525063b35e1af190c64d7cfb6067a0"
+  },
+  "Çözümü birlikte inceleyelim. Aynı yöndeki adımları topla: 10+4=14.": {
+    "file": "tr-e93b6eb14e93851e.mp3",
+    "duration": 4.911042,
+    "sha256": "75dea586fa4a234e84f4c3aae46fd4a159490e05788ff3fa8d5d0d35fd3d98e2"
+  },
+  "Robot 11 sayısına önce 2 ekliyor, sonra sonucu 2 ile çarpıyor. Çıktı kaçtır?": {
+    "file": "tr-fa32b1a096cb0609.mp3",
+    "duration": 5.199208,
+    "sha256": "4a402ae077bca3f2cd71824465c38cc607eb391b17e0ddaf219d0974b531fa8f"
+  },
+  "Çözümü birlikte inceleyelim. Sırayla: 11+2=13; 13×2=26.": {
+    "file": "tr-36e2e47405a83226.mp3",
+    "duration": 5.527625,
+    "sha256": "addd56b3c926135cf8fc34653c05af8728369b50983fe6af11ad01b61fc441fd"
+  },
+  "Robot 34 TL ile 3 TL'lik defterlerden alıyor. En çok kaç defter alabilir?": {
+    "file": "tr-2c8ddebcf6ee3e22.mp3",
+    "duration": 4.864583,
+    "sha256": "615697aeb4ffc68874a0561cc11aa21b58736d2ed6210461ef07a7a9f65366c8"
+  },
+  "Çözümü birlikte inceleyelim. Tam bölümü al: 34÷3 işleminin tam bölümü 11.": {
+    "file": "tr-74ea2caf23b1c2b5.mp3",
+    "duration": 5.050375,
+    "sha256": "ee20c8a189cadcaf68ce9e0f9c2cea18c75a4d57e8b734866ba429677eb301f5"
+  },
+  "Başlangıç 22. Önce 2'ye böl, sonra 4 ekle. Sonuç kaçtır?": {
+    "file": "tr-204ee0a1ef5c667f.mp3",
+    "duration": 4.551125,
+    "sha256": "09a2e26843361e1acb05ab0c2fa52d556b09289c1073e952339d7629fd093c38"
+  },
+  "Çözümü birlikte inceleyelim. 22÷2=11; 11+4=15.": {
+    "file": "tr-a5d29e3eed86d848.mp3",
+    "duration": 5.166375,
+    "sha256": "e955ba27f22a12a667a081f233a77ee4faacf093bfec0849beb6e5fd613c4ead"
+  },
+  "Robot 11 adım ileri, sonra 2 adım daha ileri gidiyor. Toplam kaç adım atar?": {
+    "file": "tr-151ef2a77684f713.mp3",
+    "duration": 4.409625,
+    "sha256": "3cb583009c016929a9d20849fb761d64b8afd78390693b073cf6903830c4daf3"
+  },
+  "Çözümü birlikte inceleyelim. Aynı yöndeki adımları topla: 11+2=13.": {
+    "file": "tr-802e1e7e1cd6a8ff.mp3",
+    "duration": 4.651458,
+    "sha256": "27215c98e58f86c7d798a421f9d4cc118c53708916ac1a92d4381f9865c5cd19"
+  },
+  "Aynı özellikte 2 sarı ve 1 mor taş iyi karıştırıldı. Hangisinin çekilmesi daha olası?": {
+    "file": "tr-0da0f7a7ec170d58.mp3",
+    "duration": 4.853,
+    "sha256": "39557f9a64450e14e919fbfce642023e356771baa418a28f9b3501849b4633bb"
+  },
+  "İpucu: Aynı özellikteki taşlarda renk sayılarını karşılaştır; daha olası olmak kesin olmak değildir.": {
+    "file": "tr-5cfc0ae64db0e0e0.mp3",
+    "duration": 5.70375,
+    "sha256": "c5cd8e6f9eb9bb42c7b84b0840b7028639f094a1606d41d3ed2a9ff8bd8cce51"
+  },
+  "Çözümü birlikte inceleyelim. Sayıca fazla renk daha olasıdır; tek çekilişin sonucunu garanti etmez.": {
+    "file": "tr-bb434c4945d3297e.mp3",
+    "duration": 5.61925,
+    "sha256": "29c0848ff6640cf3e8af0f0e22dbb6581c2186b3aa50f99acce677e435163371"
+  },
+  "Çantada 2 sarı ve 3 mor taş var. Hangi ifade doğru?": {
+    "file": "tr-84b7aec1a4248228.mp3",
+    "duration": 3.633958,
+    "sha256": "63c0698a5f26f3c66274133ddd619cec069dfe80c0dc28e5f355f021cc4ce440"
+  },
+  "İpucu: Torbada hangi renklerden en az bir taş bulunduğuna bak.": {
+    "file": "tr-39d0ed9983cefb8a.mp3",
+    "duration": 3.761667,
+    "sha256": "a672ca26e4cfe6c79bb679078ec61d1916d7cc2db8b408e9c8ca715d152a2a61"
+  },
+  "Çözümü birlikte inceleyelim. İki renkten de taş olduğu için her ikisi de mümkündür.": {
+    "file": "tr-f95cd635bcf67984.mp3",
+    "duration": 4.365375,
+    "sha256": "60ee233989b9b85af6ed987bbe375c9749c1750a2fab3f4ef9b40bd9c655ae3c"
+  },
+  "Çantada 2 sarı ve 2 mor taş var. Renkler için hangi tahmin uygundur?": {
+    "file": "tr-8ea002b2e3846b1e.mp3",
+    "duration": 4.481458,
+    "sha256": "97a6bdb4c2010ab585552c42c887c9cbc09c8190bc5e3a75e0051e7f0c85ad4a"
+  },
+  "Çözümü birlikte inceleyelim. Aynı özellikte taşlardan eşit sayıda varsa renkler eşit olasıdır.": {
+    "file": "tr-b2a407fb7d1ffa77.mp3",
+    "duration": 5.236125,
+    "sha256": "eb596e3eb37c05e4ba5c554ec9c59a82bcd596b51570843fba545ad9444863dc"
+  },
+  "Çantada 2 sarı ve 2 mor taş var. Toplam kaç taş var?": {
+    "file": "tr-d34d23ffaa0bfe34.mp3",
+    "duration": 3.501875,
+    "sha256": "28ecea70d8ce0d0dab9b02eb1f57a9e0add7c16e42b56bae958f6c618f5e2a4d"
+  },
+  "İpucu: İki renk grubundaki taş sayılarını birleştir.": {
+    "file": "tr-ba52a139adaa3064.mp3",
+    "duration": 3.0655,
+    "sha256": "25af472f579f07b55c51c2eaf77878451ae5e8d90fbd008be1406a7e37e339c8"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 2+2=4.": {
+    "file": "tr-9fa487e16963fd28.mp3",
+    "duration": 4.56275,
+    "sha256": "0f749d48f5b96fe5920226d39713d62693d274fd4c6cc7bdbc1de2b01cfc73b3"
+  },
+  "Aynı özellikte 3 sarı ve 6 mor taş iyi karıştırıldı. Hangisinin çekilmesi daha olası?": {
+    "file": "tr-54c78e07dc99d24d.mp3",
+    "duration": 4.899417,
+    "sha256": "416c35ee6b8be430444b0cabad615f1fd0303ef8db1245847ca5a34f44c95f81"
+  },
+  "Çantada 3 sarı ve 4 mor taş var. Hangi ifade doğru?": {
+    "file": "tr-383ae6da45996519.mp3",
+    "duration": 3.645542,
+    "sha256": "e6e1661ecf8d6df8ecf8e8ef4dfd93e7da7d458daea726b3f290a1f96e56f0c2"
+  },
+  "Çantada 3 sarı ve 3 mor taş var. Renkler için hangi tahmin uygundur?": {
+    "file": "tr-2308af2a3d21b371.mp3",
+    "duration": 4.158875,
+    "sha256": "51fd036ee7176260927743ea4a520155c69a5e8f466bec529b33536efa5c5262"
+  },
+  "Çantada 3 sarı ve 3 mor taş var. Toplam kaç taş var?": {
+    "file": "tr-5bd36c42a72988df.mp3",
+    "duration": 3.726833,
+    "sha256": "de816163e60a48693a68715e16afd757d0e372a3e2dcbe3757f336a9b14f87a5"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 3+3=6.": {
+    "file": "tr-ada5700e7f0aed43.mp3",
+    "duration": 4.2215,
+    "sha256": "c2bd75e0fd0d42a2e077ca58bd3096e67fc99ed4b4a09c68121cbd86a8747bc4"
+  },
+  "Aynı özellikte 4 sarı ve 4 mor taş iyi karıştırıldı. Hangisinin çekilmesi daha olası?": {
+    "file": "tr-f7d4c96be541efc6.mp3",
+    "duration": 4.945958,
+    "sha256": "58c6d7bed21236fb5a90931a5fe2ea98a226e519215c64fce2fee90343fc9d4c"
+  },
+  "Çantada 4 sarı ve 2 mor taş var. Hangi ifade doğru?": {
+    "file": "tr-aa5aa9b8aaff8ed6.mp3",
+    "duration": 3.541042,
+    "sha256": "23264725fb4589cb38ab59c2d8626a1050fed24b168159fee7b304e57f3913c8"
+  },
+  "Çantada 4 sarı ve 4 mor taş var. Renkler için hangi tahmin uygundur?": {
+    "file": "tr-fa95c546c67bee7c.mp3",
+    "duration": 4.5395,
+    "sha256": "fd1a22e7f3dd4acd049b111ebd5386ff8997dbd758f0bafe96c678c0fadab9d7"
+  },
+  "Çantada 4 sarı ve 4 mor taş var. Toplam kaç taş var?": {
+    "file": "tr-21e51ed89af45520.mp3",
+    "duration": 3.5465,
+    "sha256": "6efe725ec6a11171dce31c6f71b05694fa09895bc623f7132789ebc366d285d8"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 4+4=8.": {
+    "file": "tr-9dbe97c88e79f864.mp3",
+    "duration": 4.604792,
+    "sha256": "021e772de24d27b345539b05eb5fa994061204f3640be13b9d663af0c198b0f2"
+  },
+  "Aynı özellikte 5 sarı ve 3 mor taş iyi karıştırıldı. Hangisinin çekilmesi daha olası?": {
+    "file": "tr-1b73df85d0bc6a05.mp3",
+    "duration": 4.818167,
+    "sha256": "6a9284fb8a095141f86f1212085a2ddde06886bf55ba221215db56604ffcc5a3"
+  },
+  "Çantada 5 sarı ve 3 mor taş var. Hangi ifade doğru?": {
+    "file": "tr-c037041e0320dd25.mp3",
+    "duration": 3.457958,
+    "sha256": "4dfebcfb7074cdc33ad851cc9844ddc8a25dd6c3d0c156e45199172c77aba4fd"
+  },
+  "Çantada 5 sarı ve 5 mor taş var. Renkler için hangi tahmin uygundur?": {
+    "file": "tr-c7d4970e7165443f.mp3",
+    "duration": 4.273958,
+    "sha256": "0ecba8fda0039a699443d8249b1fa3efc33eaefa6f1df384eaaf8f8df6575cfd"
+  },
+  "Çantada 5 sarı ve 2 mor taş var. Toplam kaç taş var?": {
+    "file": "tr-e6e2cc1f7d609eeb.mp3",
+    "duration": 3.646167,
+    "sha256": "5910f12d74e0a2509c0e0f3606c6a40ee33288ba468e13fd145f8bf6a024305b"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 5+2=7.": {
+    "file": "tr-83e98e440f58f613.mp3",
+    "duration": 4.234875,
+    "sha256": "f5c3130037df4c39a5900a94d59fefcf6eb175715ef3f598f6a7f6ebc9e39459"
+  },
+  "Aynı özellikte 6 sarı ve 9 mor taş iyi karıştırıldı. Hangisinin çekilmesi daha olası?": {
+    "file": "tr-91bfe1cca77d51e7.mp3",
+    "duration": 5.050375,
+    "sha256": "372dfc98ed941b489d18f4dcbfc4597cdae4d17612730c3d2c3ef8a79a6c4dcc"
+  },
+  "Çantada 6 sarı ve 4 mor taş var. Hangi ifade doğru?": {
+    "file": "tr-9f02a8a40a09925c.mp3",
+    "duration": 3.66875,
+    "sha256": "6cab75c5f9dad1ecba9b92cdb691ec2baf61ce36373ea04e89bea7c8ed28953d"
+  },
+  "Çantada 6 sarı ve 6 mor taş var. Renkler için hangi tahmin uygundur?": {
+    "file": "tr-fd494745ca2b0307.mp3",
+    "duration": 4.435042,
+    "sha256": "fc5b5491d11ef42a88994226be2071a1adeda1c28e3be52f76a75dcf7a8d55ca"
+  },
+  "Çantada 6 sarı ve 3 mor taş var. Toplam kaç taş var?": {
+    "file": "tr-9fc984eb9689d2ff.mp3",
+    "duration": 3.633958,
+    "sha256": "3a315bf078a809391a97487ef1cd1530a177513183c86c49bf221ea9be757fc8"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 6+3=9.": {
+    "file": "tr-ee0d0fce48f6b9ab.mp3",
+    "duration": 4.448083,
+    "sha256": "ba731a279be62380a9c0582616dbb9760ee16c99adf08a3d423a03b3c5351873"
+  },
+  "Aynı özellikte 7 sarı ve 7 mor taş iyi karıştırıldı. Hangisinin çekilmesi daha olası?": {
+    "file": "tr-52a65825206d84f7.mp3",
+    "duration": 4.818167,
+    "sha256": "b214add7afd7377b03d60dfed91c85920502e54535a67d65dac2c286ca7e811e"
+  },
+  "Çantada 7 sarı ve 2 mor taş var. Hangi ifade doğru?": {
+    "file": "tr-d599bd2a46343243.mp3",
+    "duration": 3.564292,
+    "sha256": "b252286eeeb24eb22995160f1826119b32a38eba09459a853488e26d59781af4"
+  },
+  "Çantada 7 sarı ve 7 mor taş var. Renkler için hangi tahmin uygundur?": {
+    "file": "tr-39053a4be54f1d76.mp3",
+    "duration": 4.273958,
+    "sha256": "147ac3420b807dbde416bcdd744a4ad01558bc8227d760cdc9681ceecfdcdc14"
+  },
+  "Çantada 7 sarı ve 4 mor taş var. Toplam kaç taş var?": {
+    "file": "tr-d73439755e9dca09.mp3",
+    "duration": 3.58075,
+    "sha256": "a052d857f6043c0211c9b8b13659a81fe263747d59394b98e57235e17aa9543f"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 7+4=11.": {
+    "file": "tr-af03b71d866039fb.mp3",
+    "duration": 4.633958,
+    "sha256": "ba8018eee0c2f60680e24653bdaf6ea065e89b3d57ef9e81b29cdfa9f21de7c5"
+  },
+  "Aynı özellikte 8 sarı ve 6 mor taş iyi karıştırıldı. Hangisinin çekilmesi daha olası?": {
+    "file": "tr-b31336f8b55cfca6.mp3",
+    "duration": 4.899417,
+    "sha256": "3772fffba650d6c02549f23118caa34f4e4cf9b7ab3469336b0373bd037080c6"
+  },
+  "Çantada 8 sarı ve 3 mor taş var. Hangi ifade doğru?": {
+    "file": "tr-9348fc701982a182.mp3",
+    "duration": 3.715208,
+    "sha256": "8bdd45aeb8f0881cac5c944db711dadc942a44c75169115d82c0030ad5c6b415"
+  },
+  "Çantada 8 sarı ve 8 mor taş var. Renkler için hangi tahmin uygundur?": {
+    "file": "tr-b1abaa728ed521a7.mp3",
+    "duration": 4.493083,
+    "sha256": "b9898075da6c90e85f6dc4a2f2071539551f49defc24e70efb29e5af9ab1b8b5"
+  },
+  "Çantada 8 sarı ve 2 mor taş var. Toplam kaç taş var?": {
+    "file": "tr-7fbc6123c2849c56.mp3",
+    "duration": 3.626792,
+    "sha256": "ff5e1f86c24e9b5b4b1606da382f0d5c0b6b7cd97ac5b0c47697b8d50ab904f7"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 8+2=10.": {
+    "file": "tr-9dcdb7ae475c479e.mp3",
+    "duration": 4.365375,
+    "sha256": "2fa995be517f2eac199ef44477512c621ad93ff1b9c9f5b972932748d9b7e212"
+  },
+  "Aynı özellikte 9 sarı ve 12 mor taş iyi karıştırıldı. Hangisinin çekilmesi daha olası?": {
+    "file": "tr-2f44b0106e38d0b8.mp3",
+    "duration": 5.085167,
+    "sha256": "8834a2533068fe5d369bc98e63333c7f439cffea9de08e7e00df2caa7f763ee3"
+  },
+  "Çantada 9 sarı ve 4 mor taş var. Hangi ifade doğru?": {
+    "file": "tr-f6927b60d1838c21.mp3",
+    "duration": 3.77325,
+    "sha256": "f0bebcb01884bb7d91264375d8377e017dad1dda5a67ddeda27a71d1898c98f9"
+  },
+  "Çantada 9 sarı ve 9 mor taş var. Renkler için hangi tahmin uygundur?": {
+    "file": "tr-d5ce7c38223cc4eb.mp3",
+    "duration": 4.45825,
+    "sha256": "830d003b9b6258b2c75f0be6fb4a1440f55a85c8cbecb17320a25777f3cbbf28"
+  },
+  "Çantada 9 sarı ve 3 mor taş var. Toplam kaç taş var?": {
+    "file": "tr-ab9dc4f7d44fecb3.mp3",
+    "duration": 3.66875,
+    "sha256": "718cbb2f56e063431d084940f0df266cb730c13bbf4cde3060fa6327a9188831"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 9+3=12.": {
+    "file": "tr-00503e4c6f9ded6a.mp3",
+    "duration": 4.516292,
+    "sha256": "b4f7f87eb0ae3a7ca7a3980e4883502d0368a444a9269691ac8edc957ecaa962"
+  },
+  "Aynı özellikte 10 sarı ve 10 mor taş iyi karıştırıldı. Hangisinin çekilmesi daha olası?": {
+    "file": "tr-9dbf23cc97a6550a.mp3",
+    "duration": 4.993958,
+    "sha256": "570337a0861a7194f677aef06696bd8053bd5069a14560ea04fcfc7cf83df08f"
+  },
+  "Çantada 10 sarı ve 2 mor taş var. Hangi ifade doğru?": {
+    "file": "tr-1cf0c833b4294406.mp3",
+    "duration": 3.494625,
+    "sha256": "776d732380f8ec84432ebf79d76ee9f018d9e7d9bf7a27075a9ba84d509cdb43"
+  },
+  "Çantada 10 sarı ve 10 mor taş var. Renkler için hangi tahmin uygundur?": {
+    "file": "tr-0e4edab849ecc4be.mp3",
+    "duration": 4.342167,
+    "sha256": "e75955ac608158e8d1a534172a040e3a07733f627d71c5563ee1208d79603193"
+  },
+  "Çantada 10 sarı ve 4 mor taş var. Toplam kaç taş var?": {
+    "file": "tr-1ab111bb61030b39.mp3",
+    "duration": 3.601958,
+    "sha256": "2e34845b4926cf96edd3f036fed7b0e9ae888c7746e984a161c7f4e59adef866"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 10+4=14.": {
+    "file": "tr-7a3ee4a52e25aab6.mp3",
+    "duration": 4.594375,
+    "sha256": "5176bd8b9acf7a73dd171c3cf1533fecfa40cec279a92c707d47afec16d5a623"
+  },
+  "Aynı özellikte 11 sarı ve 9 mor taş iyi karıştırıldı. Hangisinin çekilmesi daha olası?": {
+    "file": "tr-28b635993786fbc7.mp3",
+    "duration": 5.03875,
+    "sha256": "ed7fc784d04ad210ba291c4e93db47f1d1f3a0f04cc2183e50d2bda6abe68eff"
+  },
+  "Çantada 11 sarı ve 3 mor taş var. Hangi ifade doğru?": {
+    "file": "tr-e31fd432e2fe0697.mp3",
+    "duration": 3.657167,
+    "sha256": "094ad955eb30dce22027bb29060ff0faae25111e7ce341b0561b8daa1b99b498"
+  },
+  "Çantada 11 sarı ve 11 mor taş var. Renkler için hangi tahmin uygundur?": {
+    "file": "tr-56af3de83dbda18d.mp3",
+    "duration": 4.7485,
+    "sha256": "1387d74b5e7e319ed47bc7d84a98bf785bf9117aca896d7201221077b33eb05d"
+  },
+  "Çantada 11 sarı ve 2 mor taş var. Toplam kaç taş var?": {
+    "file": "tr-94c017ea190cf276.mp3",
+    "duration": 3.761667,
+    "sha256": "9a07b0fca34dff30fcaf3d40af9db58d3a6412b34b7ac99def066aeef68cac17"
+  },
+  "Çözümü birlikte inceleyelim. Verilenleri kullanalım: 11+2=13.": {
+    "file": "tr-b0a0b90720e98487.mp3",
+    "duration": 4.281833,
+    "sha256": "83712e08a25d7a4de1e5081ebeef894d78269e0c23c4acb256fe04dd88543cc5"
+  },
+  "Bir rakamın değeri bulunduğu basamağa bağlıdır. Birler, onlar, yüzler ve binler basamaklarında değer sırasıyla 1, 10, 100 ve 1000 ile çarpılır.": {
+    "file": "tr-9eff62c74ceb1b79.mp3",
+    "duration": 8.829583,
+    "sha256": "7f4bbdcdb78c2081f8371bceb47ab2399f472eaf6b6c11599419823a41f98372"
+  },
+  "4 582 sayısında 5 yüzler basamağındadır: 5 × 100 = 500.": {
+    "file": "tr-2b6361e6e9e7898f.mp3",
+    "duration": 5.164292,
+    "sha256": "8128758705ec402cceb91853bbf713d19cd7d40bd090ff10bf289dffbbae2a30"
+  },
   "Renkli Fener. Mina, okul konseri için kâğıttan bir fener yaptı. Rüzgâr çıkınca fenerin ince sapı koptu. Eylül, sapı daha kalın bir iple bağlamayı önerdi. İkisi birlikte çalışınca fener yeniden sahneye asıldı. Mina, dayanıklı bir şeyin kolayca bozulmadığını o gün öğrendi.": {
     "file": "tr-050f66b19a403d62.mp3",
     "duration": 15.292708,

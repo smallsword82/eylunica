@@ -1,6 +1,8 @@
-# Türkçe konuşmalı seslendirme — 0.4.0
+# Türkçe konuşmalı seslendirme
 
-Genel yönergeler ve geri bildirimler için sekiz, açı rehberi için sekiz, mevcut altı özgün hikâye için altı Türkçe kayıt uygulamaya gömülüdür. Toplam yaklaşık 2 MB MP3; cihazda TTS modeli veya Türkçe ses paketi gerekmez. Sentetik anlatıcı karakterlerden birini veya gerçek bir kişiyi canlandırmaz. Özel karakter adı ve çocuk verileri ses üretimine gönderilmez.
+Genel yönergeler, mevcut altı özgün hikâye ve 5. sınıf matematik keşif yolunun konuya özel kayıtları uygulamaya gömülüdür. Matematikte keşif görevleri, bütün animasyon kareleri, tam açıklama/örnek metinleri ve 800 alıştırma kaydının soru, ipucu ve çözümü seslendirilir. Konu testi ve yazılıda çalışma yönergesi girişte okunur; sınav devam ederken ipucu veya doğru yanıt seslendirilmez. Matematik kapsamı ve doğrulama raporu: [MATH-GUIDED-NARRATION.md](MATH-GUIDED-NARRATION.md).
+
+Cihazda TTS modeli veya Türkçe ses paketi gerekmez. Sentetik anlatıcı gerçek bir kişiyi canlandırmaz. Özel karakter adı ve çocuk verileri ses üretimine gönderilmez.
 
 ## Kullanım
 
@@ -9,10 +11,10 @@ Genel yönergeler ve geri bildirimler için sekiz, açı rehberi için sekiz, me
 - Matematik ve etkinlik ekranlarında **Yönergeyi dinle**.
 - Okuma etkinliklerinde **Hikâyeyi dinle**. Otomatik başlamaz. Dinleme isteği aynı hikâye oturumundaki sonraki sorularda da destek sayılır; yıldız eksiltmez. Önceki yanıtların kayıtlarını değiştirmez. Metindeki kanıt seçimi hâlâ gereklidir.
 - Ebeveyn köşesinde **Otomatik konuşmalı geri bildirim**. Varsayılan kapalı; açılınca doğru yanıt, yeniden deneme ve tamamlama mesajı çalar. Tercih `ritma-narration-v1` anahtarında cihazda saklanır. Manuel Dinle düğmeleri bundan bağımsızdır.
-- **Dinlemeyi durdur** veya **Tüm konuşmayı durdur** ile kesilebilir. Yeni ses eskisini durdurur. Otomatik konuşma varsa kısa efektin yerine geçer. Görev/ekran geçişinde, mola penceresinde, web odağı kaybolduğunda, görünürlük değiştiğinde ve Android AppState arka plan sinyalinde durur. Dönüşte kendiliğinden yeniden başlamaz.
+- **Dinlemeyi durdur** veya **Tüm konuşmayı durdur** ile kesilebilir. Yeni ses eskisini durdurur. Otomatik konuşma varsa kısa efektin yerine geçer. Görev/ekran geçişinde, mola penceresinde, web odağı kaybolduğunda, görünürlük değiştiğinde ve Android AppState arka plan sinyalinde durur. Genel hikâye oynatımı kendiliğinden yeniden başlamaz; matematik dersinde otomatik konuşma açıksa dönüşte mevcut yönerge baştan okunur.
 - Ses açılamazsa açıklama gösterilir; oyun ve kayıt devam eder. Konuşmanın metinsel karşılıkları arayüzde kalır.
 
-Hikâyeler baştan tekrar dinlenebilir; bu sürümde duraklatıp aynı saniyeden sürdürme veya cümle eşzamanlama yoktur. Rastgele üretilen matematik sorularının sayıları, yanıt seçenekleri ve konser metinleri seslendirilmez; ortak yönergeler ve geri bildirimler seslendirilir.
+Hikâyeler baştan tekrar dinlenebilir; bu sürümde duraklatıp aynı saniyeden sürdürme veya cümle eşzamanlama yoktur. 5. sınıf matematik keşif yolundaki alıştırmaların mevcut parametreli soru havuzu sayılarıyla birlikte okunur. Diğer akademilerin rastgele üretilen soruları, yanıt seçenekleri ve konser metinleri bu kapsama dahil değildir.
 
 ## Üretim kaynağı
 
@@ -27,14 +29,14 @@ Sesler derleme öncesinde yerel CPU üzerinde `sherpa-onnx 1.12.35`, Piper Türk
 Yeniden üretmek için Python sanal ortamında `pip install -r scripts/narration-requirements.txt`, FFmpeg ve Node 22+ gerekir. Süreler PyAV ile okunur; FFmpeg yolu `--ffmpeg` ile belirtilebilir. Arşivin SHA256 değerini kontrol edip çalışma alanında açtıktan sonra:
 
 ```sh
-python scripts/generate-narration.py --model-dir /path/to/vits-piper-tr_TR-fahrettin-medium
+python scripts/generate-narration.py --workers 3 --model-dir /path/to/vits-piper-tr_TR-fahrettin-medium
 ```
 
-Mevcut metne ait dosyalar yeniden kullanılabilir; tümünü yeniden üretmek için önce `public/narration/tr-*.mp3` dosyalarını kaldırın. Script, mevcut yönerge ve hikâye metinlerinden içerik anahtarlı dosyalar ve `narration-manifest.ts` üretir, eski dosyaları temizler. Normal web/Android derlemesi bu üretimi veya model indirmesini yapmaz. Ses dosyaları ve manifest Git deposunda tutulur. Metin değiştiğinde seslerin güncellenmesini bütünlük testi zorunlu kılar.
+Mevcut metne ait dosyalar yeniden kullanılabilir; tümünü yeniden üretmek için önce `public/narration/tr-*.mp3` dosyalarını kaldırın. Script, mevcut yönerge, matematik ve hikâye metinlerinden içerik anahtarlı dosyalar ve `narration-manifest.ts` üretir, eski dosyaları temizler. Normal web/Android derlemesi bu üretimi veya model indirmesini yapmaz. Ses dosyaları ve manifest Git deposunda tutulur. Metin değiştiğinde seslerin güncellenmesini bütünlük testi zorunlu kılar.
 
 ## Çevrimdışı çalışma ve doğrulama sınırı
 
-PWA önbelleğine 22 MP3 de dahildir; ilk yüklemede service worker kurulumu ve dosyaların indirilmesi tamamlanmalıdır. Android hepsini APK içinde taşır. Kayıtlar yalnızca metne göre yerel dosyadan seçilir; tarayıcı speechSynthesis veya işletim sistemi TTS hizmetine başvurulmaz.
+PWA önbelleğine manifestteki bütün MP3 dosyaları dahildir; ilk yüklemede service worker kurulumu ve dosyaların indirilmesi tamamlanmalıdır. Android hepsini APK içinde taşır. Kayıtlar yalnızca metne göre yerel dosyadan seçilir; tarayıcı speechSynthesis veya işletim sistemi TTS hizmetine başvurulmaz.
 
 Otomatik testler dosya bütünlüğünü, çevrimdışı ses çözümlemeyi ve oynatma zamanının ilerlediğini kontrol eder. Gerçek Android hoparlörü, kulaklık, telefon çağrısı gibi ses kesintileri ve çocuklarla dinleme/anlaşılabilirlik değerlendirmesi yapılmadı. Bunlar doğrulanmış gibi sunulmaz.
 

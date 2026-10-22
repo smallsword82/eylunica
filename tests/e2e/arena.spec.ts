@@ -1,3 +1,4 @@
+import {enterAcademies} from "./local-test";
 import { test, expect, type Page, openSoundSettings } from "./local-test";
 import { fresh, completeArena, recordArena } from "../../src/storage";
 import { freshArena, makeDeck, observation, specs } from "../../src/arena-engine";
@@ -23,7 +24,7 @@ async function clock(page: Page) {
   await page.clock.pauseAt(new Date(startTime.getTime() + 1000));
 }
 async function open(page: Page) {
-  await page.getByRole("button", { name: /eylunica Hız Arenası/ }).click();
+  await enterAcademies(page);await page.getByRole("button", { name: /eylunica Hız Arenası/ }).click();
   await page.getByRole("combobox", { name: "İşlem", exact: true }).selectOption("multiply");
 }
 async function value(page: Page) {
@@ -102,7 +103,7 @@ test("kişisel rekor, sınırlı ödül, ebeveyn grafikleri, Manifest sesleri ve
   await expect(page.getByLabel("10 yıldız", { exact: true })).toBeVisible();
   await expect.poll(() => page.evaluate(() => (window as any).arenaVoices)).toBeGreaterThan(0);
   await page.getByRole("button", { name: "Öğrenme haritasına dön" }).click();
-  await expect(page.locator(".stage")).toHaveClass(/arena-lit/);
+  await enterAcademies(page);await expect(page.locator(".stage")).toHaveClass(/arena-lit/);
   await page.getByRole("button", { name: "Ebeveyn köşesi →" }).click();
   await page.getByRole("combobox", { name: "Grafik işlemi" }).selectOption("multiply");
   await expect(page.locator(".arena-chart")).toHaveCount(2);

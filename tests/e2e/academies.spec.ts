@@ -1,3 +1,4 @@
+import {enterAcademies} from "./local-test";
 import { test, expect, type Page } from "./local-test";
 import { stories } from "../../src/reading-engine";
 import { decode } from "../../src/storage";
@@ -52,7 +53,7 @@ test("okuma: eski kayıt korunur, altı beceri tamamlanır ve çevrimdışı ger
   await page.evaluate(value => localStorage.setItem("ritma-progress-v1", JSON.stringify(value)), migrated);
   await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await context.setOffline(true);
-  await readingButton(page).click();
+  await enterAcademies(page);await readingButton(page).click();
   await page.evaluate(() => { (window as any).sectionClips = []; });
   await page.getByRole("button", { name: /Kısa metinler/ }).click();
   for (const [i, q] of stories[0].questions.entries()) {
@@ -108,7 +109,7 @@ test("okuma: eski kayıt korunur, altı beceri tamamlanır ve çevrimdışı ger
   expect(p.academies.reading.level).toBe(2);
   expect(p.academies.attention.attempts).toBe(0);
   expect(Object.keys(p.academies.reading.bySkill)).toHaveLength(6);
-  await readingButton(page).click();
+  await enterAcademies(page);await readingButton(page).click();
   await expect(
     page.getByRole("button", { name: /DÜZEY 2 · SANA ÖNERİLEN/ }),
   ).toBeVisible();
@@ -131,7 +132,7 @@ test("dikkat: altı görev türü çevrimdışı oynanır, ekran küçükken ta�
     "Ayrıntıyı yakala",
   ];
   for (const name of kinds) {
-    await attentionButton(page).click();
+    await enterAcademies(page);await attentionButton(page).click();
     await page.getByRole("button", { name: new RegExp(name) }).click();
     const choices = page.getByRole("group", { name: "Yanıt seçenekleri" });
     if (name === "Farklı olanı bul") {
@@ -205,7 +206,7 @@ test("konser: metin kanıtı, işaret sırası ve matematik aynı görevde; çif
   page,
 }) => {
   await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
-  await page.getByRole("button", { name: "Büyük Konser Görevi →" }).click();
+  await enterAcademies(page);await page.getByRole("button", { name: "Büyük Konser Görevi →" }).click();
   await page
     .getByRole("button", { name: "Konser hazırlığına başla →" })
     .click();
@@ -240,7 +241,7 @@ test("yeni akademiler: tablet düzeni ve erişilebilirlik kontrolleri", async ({
   const { default: AxeBuilder } = await import("@axe-core/playwright");
   await page.setViewportSize({ width: 768, height: 1024 });
   await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
-  await readingButton(page).click();
+  await enterAcademies(page);await readingButton(page).click();
   for (const title of ["Paragraf keşfi", "Derin okuma"]) {
     await page.getByRole("button", { name: new RegExp(title) }).click();
     await expect(
@@ -261,10 +262,10 @@ test("yeni akademiler: tablet düzeni ve erişilebilirlik kontrolleri", async ({
       ),
     ).toBe(true);
     await back(page);
-    await readingButton(page).click();
+    await enterAcademies(page);await readingButton(page).click();
   }
   await back(page);
-  await attentionButton(page).click();
+  await enterAcademies(page);await attentionButton(page).click();
   await page.getByRole("button", { name: /Görsel hafıza/ }).click();
   await page.screenshot({
     path: "test-results/attention-tablet.png",

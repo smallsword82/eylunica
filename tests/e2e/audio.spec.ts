@@ -1,3 +1,4 @@
+import {enterAcademies} from "./local-test";
 import { test, expect, openMathWorld, openSoundSettings } from "./local-test";
 
 test("yanlış ve doğru cevap ayrı kısa seslerle hemen duyulur", async ({ page }) => {
@@ -124,10 +125,10 @@ test("soru geçişlerinde sözlü fon başlamaz; Sessiz modu konuşmayı da kapa
   await page.getByRole("button", { name: "Yönergeyi dinle" }).waitFor({ state: "visible" });
   expect(await page.getByRole("button", { name: "Yönergeyi dinle" }).isEnabled()).toBe(true);
   await page.getByRole("button", { name: "eylunica ana sayfa" }).click();
-  await page.getByRole("button", { name: /^Okuduğunu Anlama Akademisi/ }).click();
+  await enterAcademies(page);await page.getByRole("button", { name: /^Okuduğunu Anlama Akademisi/ }).click();
   await page.getByRole("button", { name: /Kısa metinler/ }).click();
   await page.getByRole("button", { name: "eylunica ana sayfa" }).click();
-  await page.getByRole("button", { name: /^Dikkat ve Odaklanma Akademisi/ }).click();
+  await enterAcademies(page);await page.getByRole("button", { name: /^Dikkat ve Odaklanma Akademisi/ }).click();
   await page.getByRole("button", { name: /Farklı olanı bul/ }).click();
   await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 1000)));
   expect(await page.evaluate(() => (window as any).idleSynthCalls)).toBe(0);

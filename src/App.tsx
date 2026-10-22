@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import {DiscoveryCover} from "./ui/DiscoveryCover";
 const GradeFive = lazy(() => import("./ui/GradeFive").then(m => ({ default: m.GradeFive })));
 import { Arena } from "./ui/Arena";
 import { ArenaProgress } from "./ui/ArenaProgress";
@@ -54,6 +55,7 @@ type Screen =
   | "music"
   | "collection"
   | "home"
+  | "academies"
   | "math"
   | "characters"
   | "play"
@@ -340,15 +342,25 @@ export default function App() {
           {screen === "league" && (onlineEnabled ? <StarLeague onBack={() => setScreen("home")} /> : <main className="subpage"><button className="text-button" onClick={() => setScreen("home")}>← Haritaya dön</button><h1>eylunica Yıldız Tablosu</h1><h2>{progress.learnerName || "Eylül"} · {progress.stars} yıldız</h2><p>Bu cihazdaki yıldızların ve kartların korunuyor. Şimdilik hesap girişi ve kişiler arası çevrimiçi sıralama kapalı.</p><button className="primary" onClick={() => setScreen("collection")}>Kart koleksiyonunu gör →</button></main>)}
           {screen === "collection" && <CardCollection progress={progress} onBack={() => setScreen("home")} />}
           {screen === "music" && <MusicLounge learnerName={progress.learnerName || "Eylül"} paused={!!wellbeing.notice} onBack={() => setScreen("home")} onEnableMusic={() => audio.changeMode("music")} />}
-          {screen === "home" && <main className="subpage academy-selection">
-            <div className="eyebrow muted">2 · BÖLÜMÜNÜ SEÇ</div>
+          {screen === "home" && <main className="subpage academy-selection entry-selection">
+            <div className="eyebrow muted">EYLUNICA · İKİ AYRI KEŞİF</div>
             <h1>Bugün nerede buluşalım?</h1>
+            <p>Okul derslerini mi keşfedelim, akademilerde becerilerini mi geliştirelim?</p>
+            <nav className="entry-portals" aria-label="Okul ve akademiler">
+              <button className="academy-tile entry-portal" aria-label="5. Sınıf Derslerim — Okul" onClick={() => setScreen("grade5")}><DiscoveryCover scene="library"/><strong>5. Sınıf Derslerim</strong><span className="entry-kind">OKUL</span><span>Yedi dersin kitaplığı, konular, alıştırmalar ve yazılılar. Okula gir →</span></button>
+              <button className="academy-tile entry-portal" aria-label="Akademiler — Beceri keşifleri" onClick={() => setScreen("academies")}><DiscoveryCover scene="math"/><strong>Akademiler</strong><span className="entry-kind">BECERİ KEŞİFLERİ</span><span>Matematik, okuma, dikkat ve konser maceraları. Akademileri keşfet →</span></button>
+            </nav>
+            <section className="companion"><Avatar name={progress.character} costume={progress.rewards.includes("arena-costume")} /><div><h2>{progress.character} yanında.</h2><p>{progress.stars} yıldızın ve kayıtlı ilerlemen burada seni bekliyor.</p></div><button className="secondary" onClick={() => setScreen("characters")}>Arkadaşını seç →</button></section>
+          </main>}
+          {screen === "academies" && <main className="subpage academy-selection">
+            <button className="text-button" onClick={() => setScreen("home")}>← Okul ve akademi seçimine dön</button>
+            <div className="eyebrow muted">BECERİ AKADEMİLERİ</div>
+            <h1>Akademilerde keşfe çık.</h1>
             <p>{progress.learnerName || "Eylül"}, {progress.character} sana eşlik ediyor. Bir akademi seç; ilk ziyaretinde önce o alandaki seviyeni keşfedeceğiz.</p>
-            <nav className="academy-hub" aria-label="Akademiler ve dersler">
-              <button className="academy-tile reading-tile" onClick={() => setScreen("grade5")}><span className="academy-symbol" aria-hidden="true">5</span><strong>5. Sınıf Derslerim</strong><span>Örnek dersler, alıştırmalar ve tekrarlar →</span></button>
-              <button className="academy-tile math-tile" onClick={() => !progress.calibrationDone ? start("mixed", true) : setScreen("math")}><span className="academy-symbol" aria-hidden="true">+</span><strong>Matematik Akademisi</strong><span>{progress.calibrationDone ? "Kayıtlı seviyenle devam et →" : "Önce 12 soruluk seviye tespiti →"}</span></button>
-              <button className="academy-tile reading-tile" onClick={() => wellbeing.transition(() => setScreen("reading"), !progress.academies.reading.placementDone)}><span className="academy-symbol" aria-hidden="true">Aa</span><strong>Okuduğunu Anlama Akademisi</strong><span>{progress.academies.reading.placementDone ? `Düzey ${progress.academies.reading.level} ile devam et →` : "Önce 6 soruluk seviye tespiti →"}</span></button>
-              <button className="academy-tile focus-tile" onClick={() => wellbeing.transition(() => setScreen("attention"), !progress.academies.attention.placementDone)}><span className="academy-symbol" aria-hidden="true">◎</span><strong>Dikkat ve Odaklanma Akademisi</strong><span>{progress.academies.attention.placementDone ? `Düzey ${progress.academies.attention.level} ile devam et →` : "Önce 6 soruluk seviye tespiti →"}</span></button>
+            <nav className="academy-hub" aria-label="Beceri akademileri">
+              <button className="academy-tile math-tile" onClick={() => !progress.calibrationDone ? start("mixed", true) : setScreen("math")}><DiscoveryCover scene="math"/><strong>Matematik Akademisi</strong><span>{progress.calibrationDone ? "Kayıtlı seviyenle devam et →" : "Önce 12 soruluk seviye tespiti →"}</span></button>
+              <button className="academy-tile reading-tile" onClick={() => wellbeing.transition(() => setScreen("reading"), !progress.academies.reading.placementDone)}><DiscoveryCover scene="reading"/><strong>Okuduğunu Anlama Akademisi</strong><span>{progress.academies.reading.placementDone ? `Düzey ${progress.academies.reading.level} ile devam et →` : "Önce 6 soruluk seviye tespiti →"}</span></button>
+              <button className="academy-tile focus-tile" onClick={() => wellbeing.transition(() => setScreen("attention"), !progress.academies.attention.placementDone)}><DiscoveryCover scene="attention"/><strong>Dikkat ve Odaklanma Akademisi</strong><span>{progress.academies.attention.placementDone ? `Düzey ${progress.academies.attention.level} ile devam et →` : "Önce 6 soruluk seviye tespiti →"}</span></button>
             </nav>
             <section className="selection-extras" aria-label="Diğer keşifler"><h2>Diğer keşiflerin</h2><button className="secondary" onClick={() => setScreen("concert")}>Büyük Konser Görevi →</button><button className="secondary" onClick={() => setScreen("arena")}>eylunica Hız Arenası →</button><button className="secondary" onClick={() => setScreen("music")}>Manifest müzik odası →</button><button className="secondary" onClick={() => setScreen("collection")}>Kazandığın kartları gör →</button></section>
             <section className="companion"><Avatar name={progress.character} costume={progress.rewards.includes("arena-costume")} /><div><h2>{progress.character} yanında.</h2><p>{progress.stars} yıldızın ve kart koleksiyonun bu cihazda korunuyor.</p></div><button className="secondary" onClick={() => setScreen("characters")}>Arkadaşını seç →</button></section>
@@ -356,19 +368,19 @@ export default function App() {
           </main>}
           {screen === "grade5" && <Suspense fallback={<main className="subpage" role="status">Dersler yükleniyor…</main>}><GradeFive paused={!!wellbeing.notice} onBack={() => setScreen("home")} onTransition={wellbeing.transition} guide={characters.find(c => c.name === progress.character)?.name || "Eğitmenin"} /></Suspense>}
           {screen === "math" && <main className="subpage math-selection">
-            <button className="text-button" onClick={() => setScreen("home")}>← Akademilere dön</button>
+            <button className="text-button" onClick={() => setScreen("academies")}>← Akademilere dön</button>
             <div className="eyebrow muted">MATEMATİK · SEVİYENE UYGUN ALIŞTIRMALAR</div><h1>Matematik Akademisi</h1>
-            <p>Başlangıç düzeyin seviye tespitinden gelir. Yeni yanıtlarınla zorluk sana göre ayarlanır; geçmişin silinmez.</p>
-            <div className="world-grid">{worlds.map((world, index) => <button key={world.operation} className="world-card" style={{ "--world": world.color } as React.CSSProperties} onClick={() => start(world.operation)}><div className="card-top"><span className="world-number">0{index + 1}</span><span className="world-tag">{world.character} ile</span><span aria-hidden="true">{world.symbol}</span></div><div className="world-info"><h2>{world.title}</h2><p>{world.sub}</p><p>Bölüm {(progress.mathSections?.[world.operation] ?? 0) + 1} · {index < 4 ? `Seviye ${progress.skills[world.operation as Operation].level}` : "Birlikte düşünelim"}</p><strong>Başla →</strong></div></button>)}</div>
+            <p>Bir dünya seç. Küçük bir merakla maceraya başla.</p>
+            <div className="world-grid">{worlds.map((world, index) => <button key={world.operation} className="world-card" style={{ "--world": world.color } as React.CSSProperties} onClick={() => start(world.operation)}><DiscoveryCover scene={world.operation}/><div className="card-top"><span className="world-number">0{index + 1}</span><span className="world-tag">{world.character} ile</span><span aria-hidden="true">{world.symbol}</span></div><div className="world-info"><h2>{world.title}</h2><p>{world.sub}</p><p>Bölüm {(progress.mathSections?.[world.operation] ?? 0) + 1} · {index < 4 ? `Seviye ${progress.skills[world.operation as Operation].level}` : "Birlikte düşünelim"}</p><strong>Başla →</strong></div></button>)}</div>
             <section className="checkin"><div><h2>Seviyeni yeniden keşfet</h2><p>İstersen 12 soruluk değerlendirmeyi yeniden yapabilirsin. Yıldızların ve tamamlanan bölümlerin korunur.</p></div><button className="secondary" onClick={() => start("mixed", true)}>Birlikte keşfedelim →</button></section>
           </main>}
-          {screen === "arena" && <Arena progress={progress} onSave={persist} onBack={() => setScreen("home")} onPractice={op => start(op)} onTransition={wellbeing.transition} onActivity={wellbeing.setContext} paused={!!wellbeing.notice} />}
+          {screen === "arena" && <Arena progress={progress} onSave={persist} onBack={() => setScreen("academies")} onPractice={op => start(op)} onTransition={wellbeing.transition} onActivity={wellbeing.setContext} paused={!!wellbeing.notice} />}
           {screen === "reading" && (
             <ReadingAcademy
               progress={progress}
               onSave={persist}
               onBack={() =>
-                wellbeing.transition(() => setScreen("home"), false)
+                wellbeing.transition(() => setScreen("academies"), false)
               }
               onTransition={wellbeing.transition}
               onActivity={wellbeing.setContext}
@@ -379,7 +391,7 @@ export default function App() {
               progress={progress}
               onSave={persist}
               onBack={() =>
-                wellbeing.transition(() => setScreen("home"), false)
+                wellbeing.transition(() => setScreen("academies"), false)
               }
               onTransition={wellbeing.transition}
               onActivity={wellbeing.setContext}
@@ -390,7 +402,7 @@ export default function App() {
               progress={progress}
               onSave={persist}
               onBack={() =>
-                wellbeing.transition(() => setScreen("home"), false)
+                wellbeing.transition(() => setScreen("academies"), false)
               }
               onTransition={wellbeing.transition}
               onActivity={wellbeing.setContext}
@@ -654,7 +666,7 @@ export default function App() {
                     ? "✦ Sahnenin renkli ışıkları açıldı!"
                     : `İlk sahne dekoruna ${Math.max(0, 5 - progress.stars)} yıldız kaldı.`}
               </div>
-              <button className="secondary" onClick={() => setScreen("home")}>
+              <button className="secondary" onClick={() => setScreen("academies")}>
                 Macera haritana dön →
               </button>
               <p className="small">

@@ -1,3 +1,4 @@
+import {enterAcademies} from "./local-test";
 import { test, expect, openMathWorld } from "./local-test";
 import { fresh } from "../../src/storage";
 import { stories } from "../../src/reading-engine";
@@ -37,7 +38,7 @@ test("yarım okuma oturumu yeni sorudan sürer; tamamlanan kütüphane başa sar
   await page.addInitScript(value => { if (!localStorage.getItem("ritma-progress-v1")) localStorage.setItem("ritma-progress-v1", JSON.stringify(value)); }, progress);
   await page.goto("/");
   await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
-  await page.getByRole("button", { name: /^Okuduğunu Anlama Akademisi/ }).click();
+  await enterAcademies(page);await page.getByRole("button", { name: /^Okuduğunu Anlama Akademisi/ }).click();
   await page.getByRole("button", { name: /Sıradaki yeni hikâye/ }).click();
   await expect(page.getByRole("heading", { name: stories[0].questions[1].prompt, exact: true })).toBeVisible();
   await expect(page.getByRole("heading", { name: question.prompt, exact: true })).toHaveCount(0);
@@ -49,7 +50,7 @@ test("yarım okuma oturumu yeni sorudan sürer; tamamlanan kütüphane başa sar
   }, allSeen);
   await page.reload();
   await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
-  await page.getByRole("button", { name: /^Okuduğunu Anlama Akademisi/ }).click();
+  await enterAcademies(page);await page.getByRole("button", { name: /^Okuduğunu Anlama Akademisi/ }).click();
   await page.getByRole("button", { name: /Sıradaki yeni hikâye/ }).click();
   await expect(page.getByRole("heading", { name: "Tüm hikâyeleri keşfettin!" })).toBeVisible();
   await expect(page.getByRole("button", { name: "Yanıtımı kontrol et →" })).toHaveCount(0);
@@ -61,7 +62,7 @@ test("yarım konserin matematik adımı doğru akademiye kaydedilir", async ({ p
   await page.addInitScript(value => localStorage.setItem("ritma-progress-v1", JSON.stringify(value)), progress);
   await page.goto("/");
   await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
-  await page.getByRole("button", { name: "Büyük Konser Görevi →" }).click();
+  await enterAcademies(page);await page.getByRole("button", { name: "Büyük Konser Görevi →" }).click();
   await page.getByRole("button", { name: "Konser hazırlığına başla →" }).click();
   await expect(page.getByRole("heading", { name: "Konser notu" })).toBeVisible();
   await page.getByRole("button", { name: "15", exact: true }).click();

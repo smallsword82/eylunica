@@ -1,3 +1,4 @@
+import {enterAcademies} from "./local-test";
 import { test, expect, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { stories } from "../../src/reading-engine";
@@ -92,7 +93,7 @@ test("normal matematik ve okumadan puan; kanıt eksikse kayıt yok; ayrı lig g�
   await page.getByRole("button", { name: "15", exact: true }).click();
   await expect.poll(() => submitted).toBe(1);
   await page.getByRole("button", { name: "← Haritaya dön" }).click();
-  await page.getByRole("button", { name: /^Okuduğunu Anlama Akademisi/ }).click();
+  await enterAcademies(page);await page.getByRole("button", { name: /^Okuduğunu Anlama Akademisi/ }).click();
   await page.getByRole("button", { name: /DÜZEY 1/ }).click();
   const question = stories[0].questions[0];
   await page.getByRole("button", { name: question.choices[question.answer], exact: true }).click();

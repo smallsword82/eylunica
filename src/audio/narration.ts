@@ -37,11 +37,18 @@ export function stopNarration() {
   publish(idle);
 }
 export async function playNarration(text: string): Promise<boolean> {
+ return playNarrationSequence([text]);
+}
+/** A short instruction can precede the question without overlapping voices. */
+export async function playNarrationSequence(texts: string[]): Promise<boolean> {
   stopNarration();
-  if (!hasNarration(text) || document.hidden || getSoundMode() === "silent") return false;
+  if (!texts.length||texts.some(text=>!hasNarration(text)) || document.hidden || getSoundMode() === "silent") return false;
   stopEffects();
   const ticket = generation;
-  try {
+  async function start(index:number):Promise<boolean>{
+   const text=texts[index];
+   if(ticket!==generation)return false;
+   try {
     const audio = new Audio(`${import.meta.env.BASE_URL}narration/${narrationManifest[text].file}`);
     current = audio;
     audio.volume = 0.8;
@@ -50,7 +57,7 @@ export async function playNarration(text: string): Promise<boolean> {
       stopNarration();
       publish({ text, playing: false, error: "Ses açılamadı. Metni okuyabilir veya yeniden dinlemeyi deneyebilirsin." });
     };
-    audio.onended = () => { if (ticket === generation) stopNarration(); };
+    audio.onended = () => { if (ticket === generation){if(index+1<texts.length)void start(index+1);else stopNarration();} };
     audio.onerror = fail;
     publish({ text, playing: true, error: "" });
     await audio.play();
@@ -62,7 +69,9 @@ export async function playNarration(text: string): Promise<boolean> {
       publish({ text, playing: false, error: "Ses açılamadı. Metni okuyabilir veya yeniden dinlemeyi deneyebilirsin." });
     }
     return false;
+   }
   }
+  return start(0);
 }
 export function setAutomaticNarration(value: boolean) {
   automatic = value;

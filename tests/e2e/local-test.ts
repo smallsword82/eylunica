@@ -22,8 +22,12 @@ export const test = base.extend({
 });
 export async function openMathWorld(page: Page, name: RegExp) {
   const world = page.getByRole("button", { name });
-  if (!await world.isVisible()) await page.getByRole("button", { name: /^Matematik Akademisi/ }).click();
+  if (!await world.isVisible()) { await enterAcademies(page);await page.getByRole("button", { name: /^Matematik Akademisi/ }).click(); }
   await world.click();
+}
+export async function enterAcademies(page:Page){
+ const entry=page.getByRole('button',{name:/^Akademiler/});
+ if(await entry.isVisible())await entry.click();
 }
 export async function openSoundSettings(page: Page) {
   if (!await page.getByRole("combobox", { name: "Ses modu" }).isVisible()) await page.getByRole("button", { name: "Ses ve müzik ayarları", exact: true }).click();

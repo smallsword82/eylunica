@@ -1,3 +1,4 @@
+import {enterAcademies} from "./local-test";
 import { test, expect } from "@playwright/test";
 import { fresh, type Progress } from "../../src/storage";
 import { placementTask } from "../../src/lesson-engine/placement";
@@ -15,7 +16,7 @@ for (const academy of ["reading", "attention"] as const) for (const support of [
     await page.goto("/");
     await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
     const entry = academy === "reading" ? /^Okuduğunu Anlama Akademisi/ : /^Dikkat ve Odaklanma Akademisi/;
-    await page.getByRole("button", { name: entry }).click();
+    await enterAcademies(page);await page.getByRole("button", { name: entry }).click();
     await expect(page.getByRole("region", { name: "Seviye tespiti" })).toBeVisible();
     for (let index = 0; index < 6; index++) {
       const saved: Progress = await page.evaluate(() => JSON.parse(localStorage.getItem("ritma-progress-v1")!));
@@ -47,7 +48,7 @@ for (const academy of ["reading", "attention"] as const) for (const support of [
     await expect(page.locator(".activity-panel")).toBeVisible();
     await page.reload();
     await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
-    await page.getByRole("button", { name: entry }).click();
+    await enterAcademies(page);await page.getByRole("button", { name: entry }).click();
     await expect(page.getByRole("region", { name: "Seviye tespiti" })).toHaveCount(0);
     if (academy === "reading") await expect(page.getByRole("button", { name: new RegExp(`Sıradaki yeni hikâye · Düzey ${support ? 1 : 3}`) })).toBeVisible();
   });

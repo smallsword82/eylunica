@@ -3,7 +3,7 @@ import { beforeEach, afterEach, it, expect, vi } from "vitest";
 import { Capacitor } from "@capacitor/core";
 import { Preferences } from "@capacitor/preferences";
 import { narrationTexts } from "./narration-texts";
-import { getNarration, playNarration, stopNarration, setAutomaticNarration, narrateFeedback, loadNarrationPreference, saveNarrationPreference, NARRATION_KEY } from "./narration";
+import { getNarration, playNarration, playNarrationSequence, stopNarration, setAutomaticNarration, narrateFeedback, loadNarrationPreference, saveNarrationPreference, NARRATION_KEY } from "./narration";
 vi.mock("@capacitor/preferences", () => ({ Preferences: { get: vi.fn(), set: vi.fn() } }));
 class MockAudio {
   static instances: MockAudio[] = [];
@@ -107,4 +107,12 @@ it("Sessiz modu manuel konuşmayı ve otomatik konuşmayı susturur", async () =
 });
 it('lesson guidance defaults on but honors an explicit off without rewriting the preference',async()=>{
  const {loadLessonNarrationPreference}=await import('./narration');localStorage.removeItem(NARRATION_KEY);expect(await loadLessonNarrationPreference()).toBe(true);localStorage.setItem(NARRATION_KEY,'off');expect(await loadLessonNarrationPreference()).toBe(false);localStorage.setItem(NARRATION_KEY,'on');expect(await loadLessonNarrationPreference()).toBe(true);localStorage.removeItem(NARRATION_KEY);
+});
+it('finishes the instruction before reading the question and cancels the whole queue on navigation',async()=>{
+ await playNarrationSequence([narrationTexts.math,narrationTexts.reading]);
+ expect(MockAudio.instances).toHaveLength(1);const endInstruction=MockAudio.instances[0].onended!;
+ endInstruction();await Promise.resolve();expect(MockAudio.instances).toHaveLength(2);expect(getNarration().text).toBe(narrationTexts.reading);
+ const staleEnd=MockAudio.instances[1].onended!;stopNarration();staleEnd();await Promise.resolve();expect(MockAudio.instances).toHaveLength(2);expect(getNarration().playing).toBe(false);
+ await playNarrationSequence([narrationTexts.math,narrationTexts.reading]);const staleInstructionEnd=MockAudio.instances[2].onended!;
+ await playNarration(narrationTexts.math);staleInstructionEnd();await Promise.resolve();expect(MockAudio.instances).toHaveLength(4);expect(getNarration().text).toBe(narrationTexts.math);
 });

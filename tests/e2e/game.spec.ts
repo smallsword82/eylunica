@@ -1,3 +1,4 @@
+import {enterAcademies} from "./local-test";
 import { test, expect, openMathWorld } from "./local-test";
 test("telefon: görev, kayıt, yeniden açılış ve çevrimdışı oyun", async ({
   page,
@@ -134,5 +135,5 @@ test("beş soruluk görev tamamlanır, yıldız ve sahne dekoru kalıcıdır", a
   await expect(page.getByRole("progressbar", { name: "Görev ilerlemesi" })).toHaveAttribute("aria-valuenow", "1");
   await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await expect(page.getByLabel("5 yıldız", { exact: true })).toBeVisible();
-  await expect(page.locator(".stage")).toHaveClass(/lit/);
+  await enterAcademies(page);await expect(page.locator(".stage")).toHaveClass(/lit/);
 });

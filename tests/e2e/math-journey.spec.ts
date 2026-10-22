@@ -1,3 +1,4 @@
+import {finishAngleCoach} from './angle-coach-helpers';
 import {test,expect,type Page} from './local-test';
 import {mathJourneyQuestions} from '../../src/grade5/math-journey-bank';
 import AxeBuilder from '@axe-core/playwright';
@@ -11,7 +12,7 @@ test('telefon, tablet, masaüstü ve yatay ekranda tek sahne; kapı yalnız tama
   await page.setViewportSize(size);await fits(page);
   await page.locator('[data-topic-id="topic-a0155915387c7658"]').click();
   await expect(page.locator('.journey-action-slot .journey-portal')).toHaveCount(0);
-  await page.getByRole('button',{name:'Modeli kendin değiştir',exact:true}).click();await page.getByRole('button',{name:'90°',exact:true}).click();
+  await finishAngleCoach(page);
   await expect(page.locator('.journey-action-slot .journey-portal')).toBeVisible();await fits(page);
   await page.locator('.journey-action-slot .journey-portal').click();
   await expect(page.locator('.journey-action-slot .journey-portal')).toHaveCount(0);

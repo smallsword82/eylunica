@@ -24,7 +24,8 @@ texts = json.loads(subprocess.check_output([
     "node", "--experimental-strip-types", "--input-type=module", "-e",
     'import {stories} from "./src/reading-engine/index.ts"; '
     'import {narrationTexts,storyNarrationText} from "./src/audio/narration-texts.ts"; '
-    'console.log(JSON.stringify([...Object.values(narrationTexts),...stories.map(s=>storyNarrationText(s.title,s.sentences))]));',
+    'import {angleCoachTexts} from "./src/grade5/angle-coach.ts"; '
+    'console.log(JSON.stringify([...Object.values(narrationTexts),...Object.values(angleCoachTexts),...stories.map(s=>storyNarrationText(s.title,s.sentences))]));',
 ], cwd=root, text=True))
 config = sherpa_onnx.OfflineTtsConfig(
     model=sherpa_onnx.OfflineTtsModelConfig(

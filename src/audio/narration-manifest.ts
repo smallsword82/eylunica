@@ -40,6 +40,46 @@ export const narrationManifest: Record<string, {file: string; duration: number; 
     "duration": 6.489583,
     "sha256": "69adcd55dafaba23b3f4b77a816fbeedb236cc21d0348ba26d26d0aa40d94675"
   },
+  "İki ışın aynı noktadan başlıyor. Bu noktaya köşe diyoruz. Mavi ışın sabit kalıyor.": {
+    "file": "tr-1b6de98f32712854.mp3",
+    "duration": 4.899417,
+    "sha256": "35d458d1f47ae21c2413a319775fa82e2770c20b5955a358cfcedf392736c8b4"
+  },
+  "Şimdi altın renkli ışını izle. Işın açılırken aradaki renkli açıklık büyüyor. Bu açıklığa açı diyoruz.": {
+    "file": "tr-1e2da18414a04e34.mp3",
+    "duration": 5.897875,
+    "sha256": "07de7a25599f56a03cc676b1daba354937941cd8489e7be8f7bd485525c06076"
+  },
+  "Şimdi birlikte yapalım. Altın tutamaca dokun ve yukarı taşı. Renkli açıklığı büyüt.": {
+    "file": "tr-2512e48f48042ebe.mp3",
+    "duration": 4.655625,
+    "sha256": "72cffaa903a681aab4ec9d75fecaacf4fb7a12756224017750a1b68444b4f891"
+  },
+  "Altın halkayı yukarı doğru taşı. İstersen Aç düğmesine birkaç kez dokunabilirsin.": {
+    "file": "tr-28c099ef9d0b1bfc.mp3",
+    "duration": 4.713667,
+    "sha256": "4215e2937686517d8186cf0d71039dc9dd818a462d37d3028634949454141b75"
+  },
+  "Evet, açıklık büyüdü. Mavi ışın yerinde kaldı, altın ışın hareket etti. Şimdi sen dene.": {
+    "file": "tr-6a3fb5c16c406c71.mp3",
+    "duration": 5.166458,
+    "sha256": "288c55d170fa3b34fb6378121e767223ac53553ccfd8da24b9c031fa07698bc9"
+  },
+  "Şimdi sen dene. Altın tutamacı aşağıya taşı ve renkli açıklığı küçült.": {
+    "file": "tr-0c29033e98d5edd5.mp3",
+    "duration": 3.942833,
+    "sha256": "56c1d95f07ab6fc21a28dbc0f9de442df20138e4452e8c426f38adacbaa68811"
+  },
+  "Bu kez ışınları birbirine yaklaştır. Altın halkayı aşağı taşı veya Kapat düğmesine dokun.": {
+    "file": "tr-1c5a679b12305de8.mp3",
+    "duration": 5.199625,
+    "sha256": "99e30f81222b4dc10444ab8fbe3c05c7a154b09148fd90f2927594e3cf39c6d6"
+  },
+  "Başardın! Açıklığı hem büyüttün hem küçülttün. Şimdi devam kapısından açılarla ilgili yeni bilgilere geçebilirsin.": {
+    "file": "tr-da54c9450a61e317.mp3",
+    "duration": 6.339083,
+    "sha256": "60ecc66fb8572ee53f5e394e1f407dad7eb6ba14665b464ea379527e13b16d16"
+  },
   "Renkli Fener. Mina, okul konseri için kâğıttan bir fener yaptı. Rüzgâr çıkınca fenerin ince sapı koptu. Eylül, sapı daha kalın bir iple bağlamayı önerdi. İkisi birlikte çalışınca fener yeniden sahneye asıldı. Mina, dayanıklı bir şeyin kolayca bozulmadığını o gün öğrendi.": {
     "file": "tr-050f66b19a403d62.mp3",
     "duration": 15.292708,

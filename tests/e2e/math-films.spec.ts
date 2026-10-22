@@ -1,3 +1,4 @@
+import {finishAngleCoach} from './angle-coach-helpers';
 import {test,expect,type Page} from './local-test';
 import {mathFilms} from '../../src/grade5/math-films';
 import {mathJourneyQuestions} from '../../src/grade5/math-journey-bank';
@@ -9,8 +10,8 @@ test('twenty topics use their own filmed explanations and actual worked examples
   const ids=await page.locator('[data-topic-id]').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('data-topic-id')!));
   for(const id of ids){count++;await page.locator(`[data-topic-id="${id}"]`).click();await page.getByRole('button',{name:'Hareketi durdur',exact:true}).click();
    for(const size of [{width:320,height:568},{width:844,height:390}]){await page.setViewportSize(size);await fits(page);}
-   for(let f=0;f<3;f++)await page.getByRole('button',{name:'Sonraki animasyon karesi',exact:true}).click();await expect(page.locator('.journey-portal')).toBeVisible();await page.locator('.journey-portal').click();
-   for(const [kind,scenes] of [['explain',mathFilms[id].explain.slice(1)],['example',mathFilms[id].example]] as const){for(let i=0;i<scenes.length;i++){
+   if(id==='topic-a0155915387c7658')await finishAngleCoach(page);else for(let f=0;f<3;f++)await page.getByRole('button',{name:'Sonraki animasyon karesi',exact:true}).click();await expect(page.locator('.journey-portal')).toBeVisible();await page.locator('.journey-portal').click();
+   for(const [kind,scenes] of [['explain',id==='topic-a0155915387c7658'?mathFilms[id].explain:mathFilms[id].explain.slice(1)],['example',mathFilms[id].example]] as const){for(let i=0;i<scenes.length;i++){
     await expect(page.locator('.math-film')).toHaveAttribute('data-scene',scenes[i].id);await expect(page.locator('.math-film-caption')).toHaveText(scenes[i].captions[0]);
     for(const size of [{width:320,height:568},{width:844,height:390}]){await page.setViewportSize(size);await fits(page);}
     for(let f=0;f<3;f++)await page.getByRole('button',{name:'Sonraki animasyon karesi',exact:true}).click();await expect(page.locator('.math-film-caption')).toHaveText(scenes[i].captions[3]);

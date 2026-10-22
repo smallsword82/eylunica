@@ -16,3 +16,6 @@ it('uses original oscillator tones, stops Manifest and stops the looping music o
 it('respects silent and effects-only settings without adding music controls',async()=>{
  const sound=await import('./math-sound');prefs.mode='silent';await sound.startMathMusic();await sound.mathChime();expect(oscillators).toHaveLength(0);prefs.mode='effects';await sound.startMathMusic();expect(oscillators).toHaveLength(0);await sound.mathChime(false);expect(oscillators).toHaveLength(2);
 });
+it('ducks the current music gain for narration and restores the saved level afterwards',async()=>{
+ const create=vi.spyOn(FakeContext.prototype,'createGain');const sound=await import('./math-sound');await sound.startMathMusic();const master=create.mock.results[0].value;expect(master.gain.value).toBeCloseTo(.12*.35);sound.duckMathMusic(true);expect(master.gain.value).toBeCloseTo(.12*.35*.15);sound.setMathVolume(.2);expect(master.gain.value).toBeCloseTo(.2*.35*.15);sound.duckMathMusic(false);expect(master.gain.value).toBeCloseTo(.2*.35);
+});

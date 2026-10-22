@@ -1,3 +1,5 @@
+Açıyı tanıma için sesli/dokunmatik üç aşamalı giriş: [ANGLE-COACH.md](ANGLE-COACH.md).
+
 Güncel kitaplık, yol haritası, otomatik test geçişi ve Sosyal Bilgiler başlangıcı: [LEARNING-ROAD.md](LEARNING-ROAD.md).
 
 İçeriğe bağlı yeni anlatım/soru animasyonları: [MATH-CONTENT-FILMS.md](MATH-CONTENT-FILMS.md).

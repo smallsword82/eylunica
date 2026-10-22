@@ -1,3 +1,4 @@
+import {angleCoachTexts} from '../grade5/angle-coach';
 import { it, expect } from "vitest";
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
@@ -6,7 +7,7 @@ import { narrationTexts, storyNarrationText } from "./narration-texts";
 import { narrationManifest } from "./narration-manifest";
 
 it("bütün yönerge ve hikâyeler güncel metinle, sağlam gömülü ses dosyasıyla eşleşir", () => {
-  const texts = [...Object.values(narrationTexts), ...stories.map(s => storyNarrationText(s.title, s.sentences))];
+  const texts = [...Object.values(narrationTexts), ...Object.values(angleCoachTexts), ...stories.map(s => storyNarrationText(s.title, s.sentences))];
   expect(Object.keys(narrationManifest).sort()).toEqual([...texts].sort());
   for (const text of texts) {
     const asset = narrationManifest[text];

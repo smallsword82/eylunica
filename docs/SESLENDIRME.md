@@ -1,6 +1,6 @@
 # Türkçe konuşmalı seslendirme — 0.4.0
 
-Yönergeler ve geri bildirimler için sekiz, mevcut altı özgün hikâye için altı Türkçe kayıt uygulamaya gömülüdür. Toplam yaklaşık 2 MB MP3; cihazda TTS modeli veya Türkçe ses paketi gerekmez. Sentetik anlatıcı karakterlerden birini veya gerçek bir kişiyi canlandırmaz. Özel karakter adı ve çocuk verileri ses üretimine gönderilmez.
+Genel yönergeler ve geri bildirimler için sekiz, açı rehberi için sekiz, mevcut altı özgün hikâye için altı Türkçe kayıt uygulamaya gömülüdür. Toplam yaklaşık 2 MB MP3; cihazda TTS modeli veya Türkçe ses paketi gerekmez. Sentetik anlatıcı karakterlerden birini veya gerçek bir kişiyi canlandırmaz. Özel karakter adı ve çocuk verileri ses üretimine gönderilmez.
 
 ## Kullanım
 
@@ -34,6 +34,8 @@ Mevcut metne ait dosyalar yeniden kullanılabilir; tümünü yeniden üretmek i�
 
 ## Çevrimdışı çalışma ve doğrulama sınırı
 
-PWA önbelleğine 14 MP3 de dahildir; ilk yüklemede service worker kurulumu ve dosyaların indirilmesi tamamlanmalıdır. Android hepsini APK içinde taşır. Kayıtlar yalnızca metne göre yerel dosyadan seçilir; tarayıcı speechSynthesis veya işletim sistemi TTS hizmetine başvurulmaz.
+PWA önbelleğine 22 MP3 de dahildir; ilk yüklemede service worker kurulumu ve dosyaların indirilmesi tamamlanmalıdır. Android hepsini APK içinde taşır. Kayıtlar yalnızca metne göre yerel dosyadan seçilir; tarayıcı speechSynthesis veya işletim sistemi TTS hizmetine başvurulmaz.
 
 Otomatik testler dosya bütünlüğünü, çevrimdışı ses çözümlemeyi ve oynatma zamanının ilerlediğini kontrol eder. Gerçek Android hoparlörü, kulaklık, telefon çağrısı gibi ses kesintileri ve çocuklarla dinleme/anlaşılabilirlik değerlendirmesi yapılmadı. Bunlar doğrulanmış gibi sunulmaz.
+
+Açıyı tanıma rehberinin sesli/dokunmatik akışı ve doğrulama kapsamı: [ANGLE-COACH.md](ANGLE-COACH.md).

@@ -105,3 +105,6 @@ it("Sessiz modu manuel konuşmayı ve otomatik konuşmayı susturur", async () =
   await Promise.resolve();
   expect(MockAudio.instances).toHaveLength(0);
 });
+it('lesson guidance defaults on but honors an explicit off without rewriting the preference',async()=>{
+ const {loadLessonNarrationPreference}=await import('./narration');localStorage.removeItem(NARRATION_KEY);expect(await loadLessonNarrationPreference()).toBe(true);localStorage.setItem(NARRATION_KEY,'off');expect(await loadLessonNarrationPreference()).toBe(false);localStorage.setItem(NARRATION_KEY,'on');expect(await loadLessonNarrationPreference()).toBe(true);localStorage.removeItem(NARRATION_KEY);
+});

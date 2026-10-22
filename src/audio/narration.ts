@@ -89,3 +89,9 @@ export async function saveNarrationPreference(value: boolean) {
     await Preferences.set({ key: NARRATION_KEY, value: value ? "on" : "off" });
   else localStorage.setItem(NARRATION_KEY, value ? "on" : "off");
 }
+
+/** Lesson guidance is spoken by default, while an explicit off preference is honored. */
+export async function loadLessonNarrationPreference(): Promise<boolean> {
+ const value=Capacitor.isNativePlatform()?(await Preferences.get({key:NARRATION_KEY})).value:localStorage.getItem(NARRATION_KEY);
+ return value!=="off";
+}

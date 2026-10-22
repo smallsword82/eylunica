@@ -2211,3 +2211,9 @@ footer button,
   box-shadow: none;
 }
 .math-selection .world-card .world-info > .card-top .world-tag { font-size: 11px; }
+
+/* Compact character portraits in math-world card metadata. */
+.math-selection .world-mentor { display: inline-flex; align-items: center; gap: 7px; min-width: 0; }
+.math-selection .world-mentor .avatar { width: 28px; height: 28px; flex: 0 0 28px; border-radius: 50%; overflow: hidden; }
+.math-selection .world-mentor .avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.math-selection .world-mentor .world-tag { white-space: nowrap; }

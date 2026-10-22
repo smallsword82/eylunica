@@ -17,6 +17,7 @@ import { playAnswerEffect, answerSoundSeconds, playCompletionEffect, completionS
 import { createPortal } from "react-dom";
 import { useWellbeing } from "./wellbeing/useWellbeing";
 import { ParentTimePanel, TimeNotice } from "./ui/Wellbeing";
+import { OfflineBanner } from "./ui/OfflineBanner";
 import {
   ReadingAcademy,
   AttentionAcademy,
@@ -274,6 +275,7 @@ export default function App() {
   const guide = calibration ? "Zeynep" : currentWorld.character;
   return (
     <div className={`app-shell ${screen === "welcome" || screen === "characters" ? "character-selection-active" : ""}`} inert={!!wellbeing.notice}>
+      <OfflineBanner />
       <header className="topbar">
         <button
           className="brand"
@@ -418,7 +420,8 @@ export default function App() {
               </button>}
               <div className="eyebrow muted">{screen === "welcome" ? "eylunica’YA HOŞ GELDİN" : "BİRLİKTE DAHA GÜZEL"}</div>
               <h1>{screen === "welcome" ? `${progress.learnerName || "Eylül"}, sahne senin.` : "Manifest eğitmenini seç."}</h1>
-              {!onlineEnabled && screen === "welcome" && <div className="name-entry"><label htmlFor="learner-name">Adın</label><input id="learner-name" name="nickname" autoComplete="nickname" maxLength={24} value={learnerDraft} onChange={event => setLearnerDraft(event.target.value)} onKeyDown={event => { if (event.key === "Enter") { event.preventDefault(); enterAdventure(); } }} /><p className="small">Sadece ismini yazıp başlayabilirsin. Şifre veya hesap gerekmez; ilerlemen bu cihazda saklanır.</p></div>}
+              {!onlineEnabled && screen === "welcome" && <div className="name-entry"><label htmlFor="learner-name">Adın</label><input id="learner-name" name="nickname" autoComplete="nickname" maxLength={24} value={learnerDraft} onChange={event => setLearnerDraft(event.target.value)} onKeyDown={event => { if (event.key === "Enter") { event.preventDefault(); enterAdventure(); } }} /><p className="small">Sadece ismini yazıp başlayabilirsin. Şifre veya hesap gerekmez; ilerlemen bu cihazda saklanır.</p>
+              <p className="small" style={{marginTop: "0.4rem", opacity: 0.85}}>İpucu: İsim ve eğitmeni seçtikten sonra “eylunica’ya devam et” ile haritaya geçebilirsin. Her akademinin ilk ziyaretinde kısa bir seviye tespiti yapılır.</p></div>}
               <p className="intro">
                 Başrol sensin. Manifest üyeleri de öğrenme yolculuğunda eğitmenlerin. İlk adımda sana kim eşlik etsin?
               </p>
@@ -707,28 +710,36 @@ export default function App() {
                 başına ilk yanıttan kaydedilir. İpucu kullanımı ayrıca izlenir.
               </p>
               <div className="table-scroll">
-                <table>
+                <table className="parent-progress-table">
                   <caption>İşlem bazında yerel gelişim</caption>
                   <thead>
                     <tr>
                       <th>İşlem</th>
                       <th>Seviye</th>
                       <th>Doğru / deneme</th>
+                      <th>İlerleme</th>
                       <th>İpucu</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {ops.map((op, i) => (
-                      <tr key={op}>
-                        <th>{worlds[i].title}</th>
-                        <td>{progress.skills[op].level}</td>
-                        <td>
-                          {progress.skills[op].correct} /{" "}
-                          {progress.skills[op].attempts}
-                        </td>
-                        <td>{progress.skills[op].hints}</td>
-                      </tr>
-                    ))}
+                    {ops.map((op, i) => {
+                      const skill = progress.skills[op];
+                      const pct = skill.attempts ? Math.round((skill.correct / skill.attempts) * 100) : 0;
+                      return (
+                        <tr key={op}>
+                          <th>{worlds[i].title}</th>
+                          <td>{skill.level}</td>
+                          <td>{skill.correct} / {skill.attempts}</td>
+                          <td>
+                            <div className="progress-bar" aria-label={`${pct}% doğruluk`}>
+                              <div className="progress-bar-fill" style={{ width: `${pct}%` }} />
+                              <span className="progress-bar-label">{pct}%</span>
+                            </div>
+                          </td>
+                          <td>{skill.hints}</td>
+                        </tr>
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>
@@ -821,3 +832,4 @@ export default function App() {
     </div>
   );
 }
+

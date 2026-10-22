@@ -180,12 +180,14 @@ export function ReadingAcademy({
   const state = progress.academies.reading;
   const [placing, setPlacing] = useState(false);
   const [levelMenu, setLevelMenu] = useState(true);
+  const [selectedLevel, setSelectedLevel] = useState(1);
   const nextLevel = state.placementDone ? state.level : readingStep(state.seen);
   const [libraryDone, setLibraryDone] = useState(false);
   useEffect(() => {
     if (!placing) onActivity?.(session && !done ? "reading" : "other", !!session && !done);
   }, [onActivity, !!session, done, placing]);
   function start(level: number) {
+    setSelectedLevel(level);
     onTransition(() => {
       const story = nextStory(level, state.seen);
       if (!story) { setLibraryDone(true); return; }
@@ -219,7 +221,7 @@ export function ReadingAcademy({
               onTransition(
                 () =>
                   session.index === session.story.questions.length - 1
-                    ? (onSave(awardCard({ ...progress, academyUnlocked: { math: progress.academyUnlocked?.math ?? 1, reading: Math.min(3, Math.max(progress.academyUnlocked?.reading ?? 1, session.story.grade.includes("5.") ? 3 : session.story.grade.includes("4.") ? 2 : 1) + 1), attention: progress.academyUnlocked?.attention ?? 1 } }, `reading:${session.story.id}`, session.story.title)), setDone(true))
+                    ? (onSave(awardCard({ ...progress, academyUnlocked: { math: progress.academyUnlocked?.math ?? 1, reading: Math.min(3, Math.max(progress.academyUnlocked?.reading ?? 1, selectedLevel) + 1), attention: progress.academyUnlocked?.attention ?? 1 } }, `reading:${session.story.id}`, session.story.title)), setDone(true))
                     : setSession({ ...session, index: session.index + 1 }),
                 session.index < session.story.questions.length - 1,
               )

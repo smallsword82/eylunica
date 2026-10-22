@@ -19,7 +19,7 @@ import { lessonByTopic } from '../grade5/content';
 import { GradeFiveExam } from './GradeFiveExam';
 import { QuestionSourceNote } from './QuestionSourceNote';
 type Stage = 'summary' | 'video' | 'example' | 'practice' | 'test' | 'review';
-export function GradeFive({ onBack, onTransition, guide, paused }: { onBack: () => void; onTransition: (action: () => void, startsTask?: boolean) => void; guide: string; paused: boolean }) {
+export function GradeFive({ onBack, onTransition, guide, paused, audioMode, onAudioMode }: { onBack: () => void; onTransition: (action: () => void, startsTask?: boolean) => void; guide: string; paused: boolean; audioMode: "silent" | "effects" | "music"; onAudioMode: (mode: "silent" | "effects" | "music") => void }) {
   const [courseId, setCourse] = useState<string | null>(null);
   const [topic, setTopic] = useState<Topic | null>(null);
   const [roadPage,setRoadPage]=useState(0);
@@ -68,7 +68,7 @@ export function GradeFive({ onBack, onTransition, guide, paused }: { onBack: () 
   const courseQuestions = courseId ? (questionsByCourse.get(courseId) || []).filter(q => courseTopics.some(t => t.id === q.topicId)) : [];
   const topicQuestions = topic ? questionsByTopic.get(topic.id) || [] : [];
   const filteredTopics = courseTopics.filter(t => (!unitFilter || t.unit === unitFilter) && t.title.toLocaleLowerCase('tr').includes(topicFilter.toLocaleLowerCase('tr')));
-  if (!courseId) return <GradeFiveDiscovery paused={paused} onTransition={onTransition} onBack={onBack} onCourse={id => { setCourse(id);setRoadPage(0); setUnitFilter(''); setTopicFilter(''); setVisibleCount(24); if (id === 'course-6') setTerm('unknown'); else setTerm('first'); }} />;
+  if (!courseId) return <GradeFiveDiscovery audioMode={audioMode} onAudioMode={onAudioMode} paused={paused} onTransition={onTransition} onBack={onBack} onCourse={id => { setCourse(id);setRoadPage(0); setUnitFilter(''); setTopicFilter(''); setVisibleCount(24); if (id === 'course-6') setTerm('unknown'); else setTerm('first'); }} />;
   if (examOpen && course) return <GradeFiveExam initialTerm={term} courseId={course.id} onBack={() => setExamOpen(false)} onTransition={onTransition} paused={paused} guide={guide} onComplete={recordExam} />;
   if (courseId === 'course-1') return <MathJourney onBack={() => setCourse(null)} onExam={value => {setTerm(value);setExamOpen(true);}} paused={paused} onTransition={onTransition} onRecord={(id, value, hinted) => { const q=questionById.get(id); if(!q)return; setLearning(current => { const next=recordAttempt(current,q,value,hinted); try{localStorage.setItem(learningKey,JSON.stringify(next));}catch{setStorageError('İlerleme kaydedilemedi.');}return next; }); }} />;
   if((courseId==='course-3'||courseId==='course-2')&&!topic)return <CourseRoad courseId={courseId} page={roadPage} onPage={setRoadPage} topics={courseTopics} term={term} onTerm={setTerm} onTopic={t=>onTransition(()=>{setTopic(t);setStage('summary');},true)} onBack={()=>setCourse(null)} onExam={()=>onTransition(()=>setExamOpen(true))}/>;

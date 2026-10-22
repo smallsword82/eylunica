@@ -47,3 +47,9 @@ it("okuma yarım hikâyenin yalnız yeni sorularıyla devam eder; tümü bitince
   const allSeen = Object.fromEntries(stories.flatMap(story => story.questions.map(question => [question.id, 1])));
   expect(nextStory(1, allSeen)).toBeNull();
 });
+it('selected reading levels never borrow a story from a locked or different level', () => {
+  const seen = Object.fromEntries(stories.filter(story => story.level === 1).flatMap(story => story.questions.map(question => [question.id, 1])));
+  expect(nextStory(1, seen, true)).toBeNull();
+  expect(nextStory(2, seen, true)?.level).toBe(2);
+  expect(nextStory(1, {}, true)?.level).toBe(1);
+});

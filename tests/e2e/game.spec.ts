@@ -10,10 +10,10 @@ test("telefon: görev, kayıt, yeniden açılış ve çevrimdışı oyun", async
   await page.reload(); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await openMathWorld(page, /Zihin Atölyesi/);
   await page.getByRole("button", { name: "14", exact: true }).click();
-  await expect(page.getByRole("status")).toContainText("Henüz olmadı");
+  await expect(page.locator("#math-feedback")).toContainText("Henüz olmadı");
   await expect(page.getByText("Onluğa tamamla")).toBeVisible();
   await page.getByRole("button", { name: "15", exact: true }).click();
-  await expect(page.getByRole("status")).toContainText("Harika");
+  await expect(page.locator("#math-feedback")).toContainText("Harika");
   await page.getByRole("button", { name: "← Haritaya dön" }).click();
   await page.getByRole("button", { name: "Arkadaşını seç →" }).click();
   await page.getByRole("button", { name: /Esin Birlikte paylaş/ }).click();
@@ -38,7 +38,7 @@ test("telefon: görev, kayıt, yeniden açılış ve çevrimdışı oyun", async
     .getByLabel("Yanıtın", { exact: true })
     .fill(String(numbers[0] + numbers[1]));
   await page.getByRole("button", { name: "Kontrol edelim →" }).click();
-  await expect(page.getByRole("status")).toContainText("Harika");
+  await expect(page.locator("#math-feedback")).toContainText("Harika");
   await page.getByRole("button", { name: "← Haritaya dön" }).click();
   await expect
     .poll(() =>
@@ -112,7 +112,7 @@ test("beş soruluk görev tamamlanır, yıldız ve sahne dekoru kalıcıdır", a
     await page
       .getByRole("button", { name: String(value), exact: true })
       .click();
-    await expect(page.getByRole("status")).toContainText("Harika");
+    await expect(page.locator("#math-feedback")).toContainText("Harika");
     await page
       .getByRole("button", {
         name: i === 4 ? "Sahnedeki ışıklarını gör →" : "Sıradaki keşif →",

@@ -65,8 +65,8 @@ export function freshAttention(kind: AttentionKind, level: number, seen: Record<
   const candidates = available.length ? available : novel.length ? novel : pool;
   return candidates[Math.floor(Math.max(0, Math.min(.999999, rng())) * candidates.length)];
 }
-export function nextStory(level: number, seen: Record<string, number>): Story | null {
-  const remaining = stories.filter(story => story.questions.some(question => !seen[question.id]));
+export function nextStory(level: number, seen: Record<string, number>, exactLevel = false): Story | null {
+  const remaining = stories.filter(story => (!exactLevel || story.level === level) && story.questions.some(question => !seen[question.id]));
   const selected = remaining.find(story => story.level >= level) ?? remaining[0];
   return selected ? { ...selected, questions: selected.questions.filter(question => !seen[question.id]) } : null;
 }

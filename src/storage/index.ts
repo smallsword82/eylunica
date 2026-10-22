@@ -12,6 +12,7 @@ import { Capacitor } from "@capacitor/core";
 import { Preferences } from "@capacitor/preferences";
 import type { Operation, Question } from "../math-engine";
 import { validCardProgress } from "./cards";
+import { stories } from '../reading-engine';
 export type Skill = {
   level: number;
   correct: number;
@@ -111,12 +112,17 @@ export function decode(raw: string | null): Progress {
       )
         return fresh();
     }
-    if (p.mathCompleted !== undefined && (typeof p.mathCompleted !== "object" || !p.mathCompleted || Array.isArray(p.mathCompleted))) delete p.mathCompleted;
+    if (p.mathCompleted !== undefined) {
+      p.mathCompleted = p.mathCompleted && typeof p.mathCompleted === 'object' && !Array.isArray(p.mathCompleted)
+        ? Object.fromEntries(Object.entries(p.mathCompleted).filter(([key, value]) => /^[1-5]:(add|subtract|multiply|divide|mixed|strategy)$/.test(key) && value === true))
+        : {};
+    }
     if (p.academyUnlocked !== undefined) {
+      const level = (value: unknown, max: number) => typeof value === 'number' && Number.isFinite(value) ? Math.min(max, Math.max(1, Math.floor(value))) : 1;
       p.academyUnlocked = {
-        math: Math.min(5, Math.max(1, Math.floor(p.academyUnlocked?.math || 1))),
-        reading: Math.min(3, Math.max(1, Math.floor(p.academyUnlocked?.reading || 1))),
-        attention: Math.min(3, Math.max(1, Math.floor(p.academyUnlocked?.attention || 1))),
+        math: level(p.academyUnlocked?.math, 5),
+        reading: level(p.academyUnlocked?.reading, 3),
+        attention: level(p.academyUnlocked?.attention, 3),
       };
     }
     p.character = normalizeCharacter(p.character);
@@ -150,6 +156,13 @@ export function decode(raw: string | null): Progress {
       )
     )
       return fresh();
+    // Older releases awarded completed stories before sequential levels existed.
+    // A saved completion reward lets those readers continue without repeating questions.
+    const completedReading = stories.filter(story => p.cards?.grants.includes(`reading:${story.id}`));
+    const readingUnlocked = Math.min(3, Math.max(1, ...completedReading.map(story => story.level + 1)));
+    if (readingUnlocked > (p.academyUnlocked?.reading ?? 1)) {
+      p.academyUnlocked = { math: 1, attention: 1, ...p.academyUnlocked, reading: readingUnlocked };
+    }
     return p;
   } catch {
     return fresh();

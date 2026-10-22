@@ -39,7 +39,7 @@ test("yarım okuma oturumu yeni sorudan sürer; tamamlanan kütüphane başa sar
   await page.goto("/");
   await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await enterAcademies(page);await page.getByRole("button", { name: /^Okuduğunu Anlama Akademisi/ }).click();
-  await page.getByRole("button", { name: /Sıradaki yeni hikâye/ }).click();
+  await page.getByRole("button", { name: /Kısa metinler/ }).click();
   await expect(page.getByRole("heading", { name: stories[0].questions[1].prompt, exact: true })).toBeVisible();
   await expect(page.getByRole("heading", { name: question.prompt, exact: true })).toHaveCount(0);
   const allSeen = Object.fromEntries(stories.flatMap(story => story.questions.map(question => [question.id, 1])));
@@ -51,8 +51,8 @@ test("yarım okuma oturumu yeni sorudan sürer; tamamlanan kütüphane başa sar
   await page.reload();
   await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await enterAcademies(page);await page.getByRole("button", { name: /^Okuduğunu Anlama Akademisi/ }).click();
-  await page.getByRole("button", { name: /Sıradaki yeni hikâye/ }).click();
-  await expect(page.getByRole("heading", { name: "Tüm hikâyeleri keşfettin!" })).toBeVisible();
+  await page.getByRole("button", { name: /Kısa metinler/ }).click();
+  await expect(page.getByRole("heading", { name: "Bu düzeydeki hikâyeleri keşfettin!" })).toBeVisible();
   await expect(page.getByRole("button", { name: "Yanıtımı kontrol et →" })).toHaveCount(0);
 });
 

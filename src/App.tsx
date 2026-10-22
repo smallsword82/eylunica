@@ -359,7 +359,7 @@ export default function App() {
             <button className="text-button" onClick={() => setScreen("home")}>← Okul ve akademi seçimine dön</button>
             <div className="eyebrow muted">BECERİ AKADEMİLERİ</div>
             <h1>Akademilerde keşfe çık.</h1>
-            <p>{progress.learnerName || "Eylül"}, {progress.character} sana eşlik ediyor. Bir akademi seç; ilk ziyaretinde önce o alandaki seviyeni keşfedeceğiz.</p>
+            <p>{progress.learnerName || "Eylül"}, {progress.character} sana eşlik ediyor. Bir akademi seç; ilk düzeyden başla, tamamladıkça yeni düzeyleri keşfet.</p>
             <nav className="academy-hub" aria-label="Beceri akademileri">
               <button className="academy-tile math-tile" onClick={() => (setMathSelectedLevel(progress.academyUnlocked?.math ?? 1), setScreen("math"))}><DiscoveryCover scene="math"/><strong>Matematik Akademisi</strong><span>{"Düzeylerini keşfet →"}</span></button>
               <button className="academy-tile reading-tile" onClick={() => wellbeing.transition(() => setScreen("reading"), false)}><DiscoveryCover scene="reading"/><strong>Okuduğunu Anlama Akademisi</strong><span>{"Düzeylerini keşfet →"}</span></button>
@@ -421,7 +421,7 @@ export default function App() {
               <div className="eyebrow muted">{screen === "welcome" ? "eylunica’YA HOŞ GELDİN" : "BİRLİKTE DAHA GÜZEL"}</div>
               <h1>{screen === "welcome" ? `${progress.learnerName || "Eylül"}, sahne senin.` : "Manifest eğitmenini seç."}</h1>
               {!onlineEnabled && screen === "welcome" && <div className="name-entry"><label htmlFor="learner-name">Adın</label><input id="learner-name" name="nickname" autoComplete="nickname" maxLength={24} value={learnerDraft} onChange={event => setLearnerDraft(event.target.value)} onKeyDown={event => { if (event.key === "Enter") { event.preventDefault(); enterAdventure(); } }} /><p className="small">Sadece ismini yazıp başlayabilirsin. Şifre veya hesap gerekmez; ilerlemen bu cihazda saklanır.</p>
-              <p className="small" style={{marginTop: "0.4rem", opacity: 0.85}}>İpucu: İsim ve eğitmeni seçtikten sonra “eylunica’ya devam et” ile haritaya geçebilirsin. Her akademinin ilk ziyaretinde kısa bir seviye tespiti yapılır.</p></div>}
+              <p className="small" style={{marginTop: "0.4rem", opacity: 0.85}}>İpucu: İsim ve eğitmeni seçtikten sonra “eylunica’ya devam et” ile okul veya akademi seçimine geçebilirsin. Akademilerde tamamladığın maceralar yeni düzeylerin kapısını açar.</p></div>}
               <p className="intro">
                 Başrol sensin. Manifest üyeleri de öğrenme yolculuğunda eğitmenlerin. İlk adımda sana kim eşlik etsin?
               </p>

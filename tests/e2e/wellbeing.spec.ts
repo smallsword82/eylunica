@@ -134,7 +134,8 @@ test("ebeveyn sınırı açık soruyu bitirtir, yenisini durdurur; ayarlar çevr
       await enterAcademies(page);await page
         .getByRole("button", { name: /^Dikkat ve Odaklanma Akademisi/ })
         .click();
-      await page.getByRole("button", { name: /Farklı olanı bul/ }).click();
+      await page.getByRole("button", { name: /DÜZEY 1/ }).click();
+  await page.getByRole("button", { name: /Farklı olanı bul/ }).click();
     } else {
       await enterAcademies(page);await page.getByRole("button", { name: "Büyük Konser Görevi →" }).click();
       await page
@@ -182,6 +183,7 @@ test("ön plan, bölümler ve ebeveyn raporu; arka plan sinyali ve ebeveyn süre
   await enterAcademies(page);await page
     .getByRole("button", { name: /^Dikkat ve Odaklanma Akademisi/ })
     .click();
+  await page.getByRole("button", { name: /DÜZEY 1/ }).click();
   await page.getByRole("button", { name: /Farklı olanı bul/ }).click();
   await page.clock.fastForward(3 * minute);
   await settings(page);

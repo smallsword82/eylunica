@@ -15,7 +15,6 @@ test('resmî fen konusu, plan haftaları ve öğrenme çıktıları açılır', 
  await page.getByRole('button',{name:/5. Sınıf Derslerim/}).click();
  await selectGradeCourse(page,/^Fen Bilimleri /);
   await page.getByLabel('Çalışma dönemi').selectOption('all');
- await page.getByLabel('Konu ara').fill('Gökyüzündeki Komşumuz: Güneş');
  await page.getByRole('button',{name:/Gökyüzündeki Komşumuz: Güneş/}).click();
  await expect(page.getByRole('heading',{name:'Gökyüzündeki Komşumuz: Güneş',exact:true})).toBeVisible();
  await expect(page.getByRole('link',{name:'Resmî program kaynağı',exact:true})).toHaveAttribute('href',/fen-bilimleri.*zip/);

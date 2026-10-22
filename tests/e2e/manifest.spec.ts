@@ -50,7 +50,7 @@ test("Eylül başrolde; gerçek eğitmen fotoğrafları ve kısa müzikler video
   await enterAcademies(page);await page.getByRole("button", { name: "Manifest müzik odası →" }).click();
   await page.getByLabel("Ritim sorusunun yanıtı").fill("8");
   await page.getByRole("button", { name: "Birlikte kontrol edelim →" }).click();
-  await expect(page.getByRole("status")).toContainText("Harika, Eylül!");
+  await expect(page.locator(".music-lounge").getByRole("status")).toContainText("Harika, Eylül!");
   await expect(page.locator("video, iframe")).toHaveCount(0);
   await page.getByRole("button", { name: "← Haritaya dön" }).click();
   await page.screenshot({ path: "test-results/manifest-home-mobile.png", fullPage: true });

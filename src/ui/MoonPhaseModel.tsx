@@ -4,7 +4,7 @@ import {useState} from 'react';
 export function MoonPhaseModel(){
  const [day,setDay]=useState(0);
  const phases=['Yeni ay','Büyüyen hilal','İlk dördün','Büyüyen şişkin ay','Dolunay','Küçülen şişkin ay','Son dördün','Küçülen hilal'];
- const index=Math.floor(day/3.6875)%8;
+ const index=Math.round(day/3.6875)%8;
  const phase=phases[index];
  const phaseAngle=2*Math.PI*day/29.5;
  const x=140+Math.cos(phaseAngle)*88,y=115-Math.sin(phaseAngle)*78;
@@ -13,9 +13,9 @@ export function MoonPhaseModel(){
  const waxing=day<14.75;
  const r=38;
  const terminatorX=r*Math.abs(2*litFraction-1);
- const litPath=litFraction<0.5
- ? `M 0 ${-r} A ${terminatorX} ${r} 0 0 ${waxing?1:0} 0 ${r} A ${r} ${r} 0 0 ${waxing?1:0} 0 ${-r} Z`
- : `M 0 ${-r} A ${terminatorX} ${r} 0 0 ${waxing?0:1} 0 ${r} A ${r} ${r} 0 0 ${waxing?1:0} 0 ${-r} Z`;
+ // Start with the illuminated half, then add/remove an ellipse at the terminator.
+ // Two same-direction arcs produced a crescent for both crescents AND gibbous moons.
+ const litPath=`M 0 ${-r} A ${r} ${r} 0 0 ${waxing?1:0} 0 ${r} Z`;
  return <section className="lesson-reading" aria-label="Ay evreleri keşif modeli">
   <h2>Ay'ın evrelerini keşfet</h2>
   <p>Ay'ın Dünya çevresindeki konumunu değiştir. Güneş ışığı sağdan gelir. Evreler, Ay'ın aydınlık yarısının Dünya'dan görülen bölümünün değişmesidir; Dünya'nın gölgesi değildir.</p>
@@ -31,13 +31,13 @@ export function MoonPhaseModel(){
   <div style={{textAlign:'center'}}>
    <svg viewBox="-44 -44 88 88" role="img" aria-label={`Dünya'dan görülen yaklaşık ${phase} görünümü`} style={{width:100,height:100}}>
     <circle r={r} fill="#343446" stroke="#9d9daa"/>
-    {litFraction>0.005 && <path d={litPath} fill="#f1e8cb"/>}
-    {litFraction>0.995 && <circle r={r} fill="#f1e8cb"/>}
+    <path d={litPath} fill="#f1e8cb"/>
+    {terminatorX>0.001 && <ellipse rx={terminatorX} ry={r} fill={litFraction<0.5?'#343446':'#f1e8cb'}/>}
    </svg>
    <p><strong>{phase}</strong> · Yaklaşık {Math.round(litFraction*100)}% aydınlık görünüm</p>
   </div>
   <label>Örnek ay döngüsünün günü: {day}
-   <input type="range" min="0" max="29" step="1" value={day} onChange={e=>setDay(Number(e.target.value))} style={{width:'100%'}}/>
+   <input type="range" min="0" max="29.5" step="0.5" value={day} onChange={e=>setDay(Number(e.target.value))} style={{width:'100%'}}/>
   </label>
   <button type="button" onClick={()=>setDay(0)}>Yeni aya dön</button>
   <p>Bu şema öğretim amaçlıdır. Gerçek Ay evrelerinin tarihini, görünüm açısını ve yörünge eğimini hesaplamaz.</p>

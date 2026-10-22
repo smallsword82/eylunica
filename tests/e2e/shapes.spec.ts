@@ -6,11 +6,13 @@ import AxeBuilder from "@axe-core/playwright";
 test("dikkat kartları renkli, dolu/boş ve yazısızdır; seçim ve puan korunur", async ({ page }, testInfo) => {
   const progress = fresh();
   progress.academies.attention.level = 2;
+  progress.academyUnlocked = { math:1, reading:1, attention:2 };
   progress.stars = 9;
   await page.addInitScript(value => { if (!localStorage.getItem("ritma-progress-v1")) localStorage.setItem("ritma-progress-v1", JSON.stringify(value)); }, progress);
   await page.goto("/");
   await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await enterAcademies(page);await page.getByRole("button", { name: /^Dikkat ve Odaklanma Akademisi/ }).click();
+  await page.getByRole("button", { name: /DÜZEY 2/ }).click();
   await page.getByRole("button", { name: /Şekil eşleştir/ }).click();
   const choices = page.getByRole("group", { name: "Yanıt seçenekleri" });
   const buttons = choices.getByRole("button");
@@ -37,6 +39,7 @@ test("telefon boyutunda hafıza sıraları ve yönergeler de şekille gösterili
   await page.goto("/");
   await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
   await enterAcademies(page);await page.getByRole("button", { name: /^Dikkat ve Odaklanma Akademisi/ }).click();
+  await page.getByRole("button", { name: /DÜZEY 1/ }).click();
   await page.getByRole("button", { name: /Görsel hafıza/ }).click();
   const sequence = await page.locator(".shape-strip > span").evaluateAll(cards => cards.map(card => card.getAttribute("aria-label")!));
   expect(await page.locator(".shape-strip").innerText()).toBe("");
@@ -46,6 +49,7 @@ test("telefon boyutunda hafıza sıraları ve yönergeler de şekille gösterili
   await expect(page.getByRole("status")).toContainText("Harika");
   await page.getByRole("button", { name: "← Akademilere dön" }).click();
   await enterAcademies(page);await page.getByRole("button", { name: /^Dikkat ve Odaklanma Akademisi/ }).click();
+  await page.getByRole("button", { name: /DÜZEY 1/ }).click();
   await page.getByRole("button", { name: /Sıralı yönergeler/ }).click();
   expect(await page.locator(".activity-prompt").innerText()).not.toMatch(/Daire|Kare|Üçgen|Baklava|içi|Mavi|Mor/);
   await expect(page.locator(".activity-prompt svg")).toHaveCount(2);

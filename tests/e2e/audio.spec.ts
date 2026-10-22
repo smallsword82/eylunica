@@ -129,6 +129,7 @@ test("soru geçişlerinde sözlü fon başlamaz; Sessiz modu konuşmayı da kapa
   await page.getByRole("button", { name: /Kısa metinler/ }).click();
   await page.getByRole("button", { name: "eylunica ana sayfa" }).click();
   await enterAcademies(page);await page.getByRole("button", { name: /^Dikkat ve Odaklanma Akademisi/ }).click();
+  await page.getByRole("button", { name: /DÜZEY 1/ }).click();
   await page.getByRole("button", { name: /Farklı olanı bul/ }).click();
   await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 1000)));
   expect(await page.evaluate(() => (window as any).idleSynthCalls)).toBe(0);

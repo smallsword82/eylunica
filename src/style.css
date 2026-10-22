@@ -2234,3 +2234,44 @@ footer button,
 .math-level-strip button[aria-pressed="true"] { background:#f1c98f; border-color:#f1c98f; color:#2b183a; }
 .math-level-strip button:disabled { opacity:.42; cursor:not-allowed; }
 .math-level-status { margin:5px 0 16px; font-size:13px; color:#dfcde9; }
+
+/* Level controls and mentor portraits share the available screen with all six worlds. */
+.math-selection .math-level-strip { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:4px; margin:8px 0; }
+.math-selection .math-level-strip button { min-width:0; min-height:44px; padding:5px 2px; font-size:12px; }
+.academy-level-card:has(.academy-cover-art) { overflow:hidden; padding:0 0 12px; gap:8px; }
+.academy-level-card > .academy-cover-art { height:120px; flex:none; }
+.academy-level-card > span:not(.academy-cover-art) { font-size:11px; padding-inline:8px; }
+.academy-level-card > strong, .academy-level-card > small { padding-inline:8px; }
+@media(max-width:600px) {
+  .math-selection .world-mentor { gap:3px; }
+  .math-selection .world-mentor .avatar { width:20px; height:20px; flex-basis:20px; }
+  .math-selection .world-card .world-info > .card-top { gap:3px; margin-bottom:5px; }
+  .math-selection .world-card .world-info > .card-top .world-tag { font-size:9px; }
+  .subpage.math-selection > .eyebrow, .subpage.math-selection > p:not(.math-level-status) { display:none; }
+  .subpage.math-selection .academy-cover-art { height:50px; }
+  .subpage.math-selection .world-info p:first-of-type { display:none; }
+  .math-selection .math-level-strip button { white-space:nowrap; font-size:11px; }
+  .academy-level-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+  .academy-level-grid.level-cards:has(>.academy-choice) { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .academy-level-grid.level-cards > .academy-choice:last-child { grid-column:auto; }
+  .academy-level-card > .academy-cover-art { height:100px; }
+  .academy-level-card strong { font-size:14px; }
+  .academy-level-card small { font-size:10px; }
+  .discovery > .discovery-toolbar { flex-wrap:nowrap; gap:4px; }
+  .discovery .discovery-back { padding:8px 6px; font-size:11px; }
+  .discovery .discovery-sound { padding:3px; gap:0; }
+  .discovery .discovery-sound button { padding:6px 4px; font-size:10px; }
+}
+@media(max-width:600px) and (max-height:650px) {
+  .app-shell:has(.math-selection) > .topbar { display:none; }
+  .subpage.math-selection .academy-cover-art { height:56px; }
+}
+@media(orientation:landscape) and (max-height:500px) {
+  .app-shell:has(.math-selection) > .topbar { display:none; }
+  .math-selection .math-level-strip { max-width:440px; margin:5px 0; }
+  .subpage.math-selection .academy-cover-art { height:55px; }
+  .math-selection .world-mentor .avatar { width:16px; height:16px; flex-basis:16px; }
+  .math-selection .world-mentor { gap:3px; }
+  .math-selection .world-card .world-info > .card-top { gap:3px; margin-bottom:4px; }
+  .math-selection .world-card .world-info > .card-top .world-tag { font-size:9px; }
+}

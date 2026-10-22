@@ -29,7 +29,7 @@ export default defineConfig({
         theme_color: "#1b1238",
         background_color: "#1b1238",
         display: "standalone",
-        orientation: "portrait",
+        orientation: "any",
         start_url: "./",
         scope: "./",
         categories: ["education", "kids"],

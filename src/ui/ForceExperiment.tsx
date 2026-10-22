@@ -2,11 +2,12 @@ import {useEffect,useRef,useState} from 'react';
 import {advanceMotion,type MotionState} from '../grade5/force-physics';
 
 const initial=():MotionState=>({x:0,v:0,t:0});
-export function ForceExperiment({frictionOnly=false}:{frictionOnly?:boolean}){
+export function ForceExperiment({frictionOnly=false,paused=false}:{frictionOnly?:boolean;paused?:boolean}){
  const [force,setForce]=useState(8);
  const [mass,setMass]=useState(2);
  const [surface,setSurface]=useState<'smooth'|'rough'>('smooth');
  const [running,setRunning]=useState(false);
+ const [visible,setVisible]=useState(()=>document.visibilityState!=='hidden');
  const [motion,setMotion]=useState<MotionState>(initial);
  const motionRef=useRef(motion);
  const paramsRef=useRef({mass,force,muStatic:0.15,muKinetic:0.1});
@@ -14,7 +15,12 @@ export function ForceExperiment({frictionOnly=false}:{frictionOnly?:boolean}){
  const muKinetic=surface==='smooth'?0.1:0.35;
  paramsRef.current={mass,force,muStatic,muKinetic};
  useEffect(()=>{
-  if(!running)return;
+  const hide=()=>setVisible(false),show=()=>setVisible(document.visibilityState!=='hidden');
+  window.addEventListener('blur',hide);window.addEventListener('focus',show);document.addEventListener('visibilitychange',show);
+  return()=>{window.removeEventListener('blur',hide);window.removeEventListener('focus',show);document.removeEventListener('visibilitychange',show);};
+ },[]);
+ useEffect(()=>{
+  if(!running||paused||!visible)return;
   let frame=0,last=0,accumulator=0;
   const tick=(now:number)=>{
    if(!last)last=now;
@@ -28,7 +34,7 @@ export function ForceExperiment({frictionOnly=false}:{frictionOnly?:boolean}){
   };
   frame=requestAnimationFrame(tick);
   return()=>cancelAnimationFrame(frame);
- },[running]);
+ },[running,paused,visible]);
  const reset=()=>{setRunning(false);motionRef.current=initial();setMotion(initial());};
  const viewX=36+Math.min(motion.x,10)*27;
  return <section className="lesson-reading" aria-label="Kuvvet ve sürtünme fizik simülasyonu">

@@ -133,6 +133,7 @@ test("dikkat: altı görev türü çevrimdışı oynanır, ekran küçükken ta�
   ];
   for (const name of kinds) {
     await enterAcademies(page);await attentionButton(page).click();
+    await page.getByRole("button", { name: /DÜZEY 1/ }).click();
     await page.getByRole("button", { name: new RegExp(name) }).click();
     const choices = page.getByRole("group", { name: "Yanıt seçenekleri" });
     if (name === "Farklı olanı bul") {
@@ -241,6 +242,8 @@ test("yeni akademiler: tablet düzeni ve erişilebilirlik kontrolleri", async ({
   const { default: AxeBuilder } = await import("@axe-core/playwright");
   await page.setViewportSize({ width: 768, height: 1024 });
   await page.goto("/"); await page.getByRole("button", { name: "eylunica’ya devam et →" }).click();
+  await page.evaluate(() => { const p=JSON.parse(localStorage.getItem('ritma-progress-v1')!);p.academyUnlocked={math:1,reading:3,attention:1};localStorage.setItem('ritma-progress-v1',JSON.stringify(p)); });
+  await page.reload();await page.getByRole('button',{name:'eylunica’ya devam et →'}).click();
   await enterAcademies(page);await readingButton(page).click();
   for (const title of ["Paragraf keşfi", "Derin okuma"]) {
     await page.getByRole("button", { name: new RegExp(title) }).click();
@@ -266,6 +269,7 @@ test("yeni akademiler: tablet düzeni ve erişilebilirlik kontrolleri", async ({
   }
   await back(page);
   await enterAcademies(page);await attentionButton(page).click();
+    await page.getByRole("button", { name: /DÜZEY 1/ }).click();
   await page.getByRole("button", { name: /Görsel hafıza/ }).click();
   await page.screenshot({
     path: "test-results/attention-tablet.png",

@@ -93,7 +93,7 @@ test("otomatik konuşma tercihi kalıcıdır; görev sesi ve ekran geçişi çev
   await page.getByRole("button", { name: "Yönergeyi dinle" }).click();
   await expect.poll(() => isPlaying(page)).toBe(true);
   await page.getByRole("button", { name: "15", exact: true }).click();
-  await expect(page.getByRole("status")).toContainText("Harika");
+  await expect(page.locator("#math-feedback")).toContainText("Harika");
   await expect.poll(() => isPlaying(page)).toBe(true);
   expect(await page.evaluate(() => {
     const all = (window as unknown as { narrator: HTMLMediaElement[] }).narrator;

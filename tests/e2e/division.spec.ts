@@ -26,14 +26,14 @@ for (const level of [1, 3, 5]) for (const keyboard of [false, true]) {
           const choices = page.locator(".answer-options button");
           for (const choice of await choices.all()) if (Number(await choice.innerText()) !== correct) { await choice.click(); break; }
         }
-        await expect(page.getByRole("status")).toContainText("Henüz olmadı");
+        await expect(page.locator("#math-feedback")).toContainText("Henüz olmadı");
         await expect(page.getByRole("progressbar")).toHaveAttribute("aria-valuenow", "1");
       }
       if (keyboard) {
         await page.getByLabel("Yanıtın", { exact: true }).fill(String(correct));
         await page.getByRole("button", { name: "Kontrol edelim →" }).click();
       } else await page.locator(".answer-options").getByRole("button", { name: String(correct), exact: true }).click();
-      await expect(page.getByRole("status")).toContainText("Harika");
+      await expect(page.locator("#math-feedback")).toContainText("Harika");
       const next = page.getByRole("button", { name: index === 4 ? "Sahnedeki ışıklarını gör →" : "Sıradaki keşif →" });
       await expect(next).toBeFocused();
       const bounds = (await next.boundingBox())!;

@@ -12,6 +12,8 @@ import {
 import { generate } from "../math-engine";
 import { completeArena } from "./index";
 import { getLane, makeDeck, observation, observe, specs, finishSession, freshArena } from "../arena-engine";
+import { awardCard } from './cards';
+import { stories } from '../reading-engine';
 it("ilk cihaz kaydı seviye tespitine yönlenir; mevcut kayıt ve bölüm sayaçları korunur", async () => {
   localStorage.removeItem(KEY);
   expect((await loadProgress()).assessmentPending).toBe(true);
@@ -25,6 +27,21 @@ it("yerel kayıt tekrar okunur", async () => {
   p.stars = 12;
   await saveProgress(p);
   expect(await loadProgress()).toEqual(p);
+});
+it('invalid optional level records cannot unlock content or erase existing progress', () => {
+  const previous = { ...fresh(), stars: 23, academyUnlocked: { math: 'broken', reading: 99, attention: null }, mathCompleted: { '1:add': true, '1:divide': 'true', '99:mixed': true } };
+  const decoded = decode(JSON.stringify(previous));
+  expect(decoded.stars).toBe(23);
+  expect(decoded.academyUnlocked).toEqual({ math: 1, reading: 3, attention: 1 });
+  expect(decoded.mathCompleted).toEqual({ '1:add': true });
+});
+it('completed reading rewards from before level locks keep the next level accessible', () => {
+  const story = stories.find(story => story.level === 1)!;
+  const old = awardCard(fresh(), `reading:${story.id}`, story.title);
+  const restored = decode(JSON.stringify(old));
+  expect(restored.academyUnlocked).toEqual({math:1, reading:2, attention:1});
+  expect(restored.cards).toEqual(old.cards);
+  expect(restored.stars).toBe(old.stars);
 });
 
 it("Arena eklenmemiş veya bozulmuş olsa da eski öğrenme ve ödüller korunur", () => {

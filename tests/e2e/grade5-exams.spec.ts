@@ -18,7 +18,6 @@ test('resmî konuya eklenen anlatım, adımlı çözüm ve alıştırma çevrimd
  await openGradeFive(page);
  await selectGradeCourse(page,/^Fen Bilimleri /);
   await page.getByLabel('Çalışma dönemi').selectOption('all');
- await page.getByLabel('Konu ara').fill('Gökyüzündeki Komşumuz: Güneş');
  await page.getByRole('button',{name:/Gökyüzündeki Komşumuz: Güneş/}).click();
  expect(await page.locator('.lesson-reading > section').count()).toBeGreaterThanOrEqual(2);
  await expect(page.getByText('Bu konu için bağımsız ders anlatımı henüz hazırlanmadı.',{exact:false})).toHaveCount(0);
@@ -50,7 +49,7 @@ for (const [course, title] of [
   await expect(page.getByRole('button',{name:'Yazılı testleri',exact:true})).toBeEnabled();
   if(course==='Matematik'){await page.locator('[data-topic-id="topic-a0155915387c7658"]').click();await finishAngleCoach(page);await page.locator('.journey-action-slot .journey-portal').click();while(await page.locator('.phase-explain').count()){for(let frame=0;frame<3;frame++)await page.getByRole('button',{name:'Sonraki animasyon karesi',exact:true}).click();await page.locator('.journey-action-slot .journey-portal').click();}while(await page.locator('.phase-example').count()){for(let frame=0;frame<3;frame++)await page.getByRole('button',{name:'Sonraki animasyon karesi',exact:true}).click();await page.locator('.journey-action-slot .journey-portal').click();}await expect(page.locator('.phase-practice')).toBeVisible();return;}
   if(course==='Sosyal Bilgiler'){await page.locator('[data-topic-id="topic-f31f5d0c12bc3e58"]').click();await expect(page.getByRole('region',{name:'Sosyal bilgiler görselli anlatım'})).toBeVisible();for(let i=0;i<3;i++)await page.getByRole('button',{name:'Sonraki adım →',exact:true}).click();await page.getByRole('button',{name:'✦ Örnek çözüm',exact:true}).click();await expect(page.getByRole('heading',{name:/Deniz evde/})).toBeVisible();await page.getByRole('button',{name:'Alıştırmalar',exact:true}).click();await expect(page.getByRole('region',{name:'Soru çalışması'})).toBeVisible();return;}
-  await page.getByLabel('Konu ara').fill(title);
+  if(course!=='Fen Bilimleri') await page.getByLabel('Konu ara').fill(title);
   await page.getByRole('button',{name:new RegExp(escape(title))}).first().click();
   if(course==='Matematik') await expect(page.getByRole('region',{name:'Görselli açı anlatımı'})).toBeVisible();
   else expect(await page.locator('.lesson-reading > section').count()).toBeGreaterThanOrEqual(2);

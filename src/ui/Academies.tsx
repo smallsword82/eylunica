@@ -24,6 +24,7 @@ import { Avatar } from "./Avatar";
 import { ContinueCard } from "./ContinueCard";
 import { CardReward } from "./CollectibleCards";
 import { awardCard } from "../storage/cards";
+import { completeAcademyLevel } from "../storage/academy-levels";
 const names: Record<Academy, string> = {
   reading: "Okuduğunu Anlama Akademisi",
   attention: "Dikkat ve Odaklanma Akademisi",
@@ -61,14 +62,15 @@ function Header({
     </>
   );
 }
-function LevelCards({ unlocked, max, onSelect }: { unlocked: number; max: number; onSelect: (level: number) => void }) {
+function LevelCards({ unlocked, max, onSelect, reading = false }: { unlocked: number; max: number; onSelect: (level: number) => void; reading?: boolean }) {
   return <section className="academy-levels" aria-label="Akademi düzeyleri">
     <h2>Düzeyini seç</h2><p>İlk düzeyden başla. Tamamladıkça yeni düzeylerin kilidi açılır.</p>
-    <div className="academy-level-grid">{Array.from({ length: max }, (_, i) => {
+    <div className={`academy-level-grid ${reading ? 'level-cards' : ''}`}>{Array.from({ length: max }, (_, i) => {
       const level = i + 1, locked = level > unlocked;
-      return <button key={level} className={`academy-level-card ${locked ? "is-locked" : ""}`} disabled={locked} onClick={() => onSelect(level)}>
-        <span aria-hidden="true">{locked ? "🔒" : level < unlocked ? "✓" : "✦"}</span>
-        <strong>Düzey {level}</strong>
+      return <button key={level} className={`academy-level-card ${reading ? 'academy-choice' : ''} ${locked ? "is-locked" : ""}`} disabled={locked} onClick={() => onSelect(level)}>
+        <DiscoveryCover scene={reading ? (['shortReading','paragraphReading','deepReading'] as DiscoveryScene[])[i] : (['attention','pattern','instructions'] as DiscoveryScene[])[i]}/>
+        <span>DÜZEY {level}{level === unlocked ? ' · SANA ÖNERİLEN' : ''}</span>
+        <strong>{reading ? ['Kısa metinler','Paragraf keşfi','Derin okuma'][i] : `Düzey ${level}`}</strong>
         <small>{locked ? "Önceki düzeyi tamamla" : level < unlocked ? "Tamamlandı · Tekrar oyna" : "Başla →"}</small>
       </button>;
     })}</div>
@@ -187,11 +189,13 @@ export function ReadingAcademy({
     if (!placing) onActivity?.(session && !done ? "reading" : "other", !!session && !done);
   }, [onActivity, !!session, done, placing]);
   function start(level: number) {
+    if (level > (progress.academyUnlocked?.reading ?? 1)) return;
     setSelectedLevel(level);
     onTransition(() => {
-      const story = nextStory(level, state.seen);
-      if (!story) { setLibraryDone(true); return; }
       setLevelMenu(false);
+      const story = nextStory(level, state.seen, true);
+      setLibraryDone(!story);
+      if (!story) { setSession(null); return; }
       setSession({ story, index: 0 });
       setDone(false);
     });
@@ -200,12 +204,12 @@ export function ReadingAcademy({
   return (
     <main className="subpage academy-page">
       <Header academy="reading" onBack={onBack} character="Zeynep" />
-      {levelMenu ? <LevelCards unlocked={progress.academyUnlocked?.reading ?? 1} max={3} onSelect={start} /> : libraryDone ? <section className="lesson-complete"><h2>Tüm hikâyeleri keşfettin!</h2><p>Şimdilik yeni okuma sorusu kalmadı. Aynı soruları yeniden sormak yerine diğer akademilerde devam edelim.</p><button className="primary" onClick={onBack}>Diğer akademilere geç →</button></section> : done ? (
+      {levelMenu ? <LevelCards reading unlocked={progress.academyUnlocked?.reading ?? 1} max={3} onSelect={start} /> : libraryDone ? <section className="lesson-complete"><h2>Bu düzeydeki hikâyeleri keşfettin!</h2><p>Yanıtladığın sorular korunuyor. Açılmış başka bir düzey seçebilir veya diğer akademileri keşfedebilirsin.</p><button className="primary" onClick={() => setLevelMenu(true)}>Okuma düzeylerine dön →</button><button className="secondary" onClick={onBack}>Diğer akademilere geç →</button></section> : done ? (
         <Completion
           progress={progress}
           onBack={onBack}
-          nextTitle="Yeni bir okuma keşfi"
-          onAgain={() => start(nextLevel)}
+          nextTitle="Okuma düzeylerini keşfet"
+          onAgain={() => setLevelMenu(true)}
         />
       ) : session ? (
         <>
@@ -221,7 +225,7 @@ export function ReadingAcademy({
               onTransition(
                 () =>
                   session.index === session.story.questions.length - 1
-                    ? (onSave(awardCard({ ...progress, academyUnlocked: { math: progress.academyUnlocked?.math ?? 1, reading: Math.min(3, Math.max(progress.academyUnlocked?.reading ?? 1, selectedLevel) + 1), attention: progress.academyUnlocked?.attention ?? 1 } }, `reading:${session.story.id}`, session.story.title)), setDone(true))
+                    ? (onSave(awardCard(completeAcademyLevel(progress, 'reading', selectedLevel), `reading:${session.story.id}`, session.story.title)), setDone(true))
                     : setSession({ ...session, index: session.index + 1 }),
                 session.index < session.story.questions.length - 1,
               )
@@ -309,7 +313,7 @@ export function AttentionAcademy({
   }
   function next() {
     if (index === 3) {
-      onSave(awardCard({ ...progress, academyUnlocked: { math: progress.academyUnlocked?.math ?? 1, reading: progress.academyUnlocked?.reading ?? 1, attention: Math.min(3, Math.max(progress.academyUnlocked?.attention ?? 1, selectedLevel + 1)) } }, `attention:${rewardKey.current}`, names.attention));
+      onSave(awardCard(completeAcademyLevel(progress, 'attention', selectedLevel), `attention:${rewardKey.current}`, names.attention));
       setDone(true);
       return;
     }

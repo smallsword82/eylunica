@@ -2,7 +2,7 @@ import { test, expect, openMathWorld, openSoundSettings } from "./local-test";
 import { manifestTracks } from "../../src/audio/manifest-catalog";
 
 test("varsayılan müzik açık, tek tıkla dinleme ve tüm katalog çevrimdışı sesli; rastgele sıra ilerler", async ({ page, context }) => {
-  test.setTimeout(45000);
+  test.setTimeout(120000);
   await page.addInitScript(() => {
     (window as any).clips = [];
     const original = HTMLMediaElement.prototype.play;

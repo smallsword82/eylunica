@@ -15,7 +15,7 @@ test('telefon, tablet, masaüstü ve yatay ekranda tek sahne; kapı yalnız tama
   await expect(page.locator('.journey-action-slot .journey-portal')).toBeVisible();await fits(page);
   await page.locator('.journey-action-slot .journey-portal').click();
   await expect(page.locator('.journey-action-slot .journey-portal')).toHaveCount(0);
-  await page.getByRole('button',{name:'✦ Bu adımı anladım',exact:true}).click();await fits(page);
+  for(let frame=0;frame<3;frame++)await page.getByRole('button',{name:'Sonraki animasyon karesi',exact:true}).click();await expect(page.locator('.journey-action-slot .journey-portal')).toBeVisible();await fits(page);
   await page.getByRole('button',{name:'Konu testi · 20',exact:true}).click();
   await expect(page.locator('input[type=text]')).toHaveCount(0);await fits(page);
   await answer(page);await fits(page);

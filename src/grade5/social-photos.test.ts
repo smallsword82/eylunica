@@ -1,0 +1,6 @@
+import {expect,it} from 'vitest';
+import {validSocialPhoto,socialPhotos,type SocialPhoto} from './social-photos';
+const photo:SocialPhoto={id:'fixture',topicId:'topic-f31f5d0c12bc3e58',role:'family',src:'/media/social/fixture.webp',alt:'Test fixture',caption:'Test fixture',author:'Fixture author',sourceUrl:'https://commons.wikimedia.org/wiki/File:Fixture.jpg',originalUrl:'https://upload.wikimedia.org/fixture.jpg',license:'CC BY-SA 4.0',licenseUrl:'https://creativecommons.org/licenses/by-sa/4.0/',sha256:'a'.repeat(64),reviewed:true,frames:[0],context:'explanation'};
+it('requires a reviewed, local photo with verified reusable license and credits',()=>{expect(validSocialPhoto(photo)).toBe(true);for(const broken of [{reviewed:false},{author:''},{license:'unknown'},{src:'https://example.com/photo.jpg'},{sha256:''},{frames:[7]}])expect(validSocialPhoto({...photo,...broken} as Partial<SocialPhoto>)).toBe(false);});
+it('does not substitute a choir photo for the fictional chess worked example',()=>{expect(validSocialPhoto({...photo,role:'choir',context:'example'})).toBe(false);});
+it('student photos all have credits; an empty catalogue never invents external image links',()=>{expect(socialPhotos.every(validSocialPhoto)).toBe(true);});

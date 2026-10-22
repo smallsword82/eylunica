@@ -47,6 +47,7 @@ export type Progress = {
   arena: ArenaState;
   mathSections?: Record<string, number>;
   academyUnlocked?: { math: number; reading: number; attention: number };
+  mathCompleted?: Record<string, boolean>;
   assessmentPending?: boolean;
   cards?: { counts: Record<string, number>; variants?: Record<string, number>; grants: string[]; last: { character: string; source: string; cardId?: string; collectionComplete?: boolean } };
 };
@@ -111,6 +112,7 @@ export function decode(raw: string | null): Progress {
       )
         return fresh();
     }
+    p.mathCompleted = p.mathCompleted && typeof p.mathCompleted === "object" && !Array.isArray(p.mathCompleted) ? p.mathCompleted : {};
     p.academyUnlocked = {
       math: Math.min(5, Math.max(1, Math.floor(p.academyUnlocked?.math || 1))),
       reading: Math.min(3, Math.max(1, Math.floor(p.academyUnlocked?.reading || 1))),

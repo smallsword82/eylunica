@@ -38,4 +38,4 @@ Devir notundaki ilk görev (mevcut durumu doğrulamak) için yapılan kontroller
 1. Sosyal Bilgiler: 10 konuda görselli anlatım var (`src/grade5/social-visuals.ts`), ancak Fen'deki gibi keşif görevi + ayrı 8/20 soru bankası + yolculuk kaydı yok. Öncelik sırasına göre sıradaki iş.
 2. ~~Canlı yayındaki sürümün doğrulanması~~ (tamamlandı).
 3. Eski iki özellik dalının temizlenmesi (silme kararı depo sahibine ait).
-4. Video taramasına devam kararı ve kanal kısıtı.
+4. ~~Video taraması~~ (23.10: 7 ders tarandı, yalnız tonguç kanalı; adaylar insan incelemesi bekliyor, bkz. `VIDEO-RESEARCH-REPORT.md`).

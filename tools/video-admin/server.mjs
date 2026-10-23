@@ -10,7 +10,7 @@ import { restoreQuotaSchedule, researchPauseUntil, recordResearchFailure } from 
 import { courses, topics } from '../../src/grade5/catalog.ts';
 const researchTopics = topics.map(t => ({ topicId: t.id, topicTitle: t.title, course: courses.find(c => c.id === t.courseId)?.name || t.courseId }));
 const root = fileURLToPath(new URL('../../', import.meta.url));
-const directory = process.env.EYLUNICA_VIDEO_ADMIN_DATA_DIR || path.join(root, '.tools/video-admin');
+const directory = process.env.EYLUNICA_VIDEO_ADMIN_DATA_DIR || path.join(root, 'data/video-research');
 const catalogPath = process.env.EYLUNICA_VIDEO_CATALOG_PATH || path.join(root, 'src/grade5/video-catalog.json');
 const stateFile = path.join(directory, 'state.json');
 await mkdir(directory, { recursive: true });

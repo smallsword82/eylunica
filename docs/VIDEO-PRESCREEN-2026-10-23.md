@@ -2,7 +2,7 @@
 
 Kaynak: yalnız `tonguç 5. SINIF` kanalı, 2025–2026 yayınları. İnceleme başlık, açıklama, yayın tarihi, kanal kimliği ve yayıncının YouTube’daki **çocuklara özel** beyanıyla yapıldı; videolar baştan sona izlenmedi. Kararların makine okunur hali: `data/video-research/prescreen.json`.
 
-**Durum:** kullanıcı onayı bekliyor. Onaylanınca bu videolar mevcut 36 videoluk kataloğa eklenir (konu başına en fazla 2).
+**Durum:** kullanıcı 23.10.2026’da onayladı. 51 konu–video eşleşmesi `src/grade5/video-catalog.json` dosyasına eklendi; katalog 36 → 87 kayıt. Önceki 36 kaydın tamamı korundu.
 
 Not: Türkçe programında aynı başlıklı konu (ör. "Yazım kuralları") her ünitede ayrı kayıt olarak bulunur; aynı video bu kayıtların her birine bağlanır.
 

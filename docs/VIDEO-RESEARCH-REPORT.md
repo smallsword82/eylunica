@@ -13,9 +13,9 @@ Kullanıcı isteğiyle tarama **baştan** yapıldı (önceki `.tools/video-admin
 | Benzersiz aday video (2026 / 2025) | 44 (36 / 8) |
 | Konu–video eşleşmesi | 97 |
 | Aday bulunan ders | 6 (Almanca'da yok) |
-| Onaylı video | 0 |
+| Onaylanan konu–video eşleşmesi (ön eleme + kullanıcı onayı) | 51 |
 
-Adaylar `pending` durumundadır. Konu eşleştirmesi başlık sözcüklerine dayanır ve hatalı eşleşmeler içerir (ör. "Güneş" konusuna "Ay" videosu). Öğrenci uygulamasına yalnız müfredat ve çocuk güvenliği incelemesinden geçen videolar aktarılır; mevcut 36 videoluk katalog değiştirilmedi.
+Ön eleme ve kullanıcı onayıyla 51 eşleşme kataloğa eklendi (bkz. `VIDEO-PRESCREEN-2026-10-23.md`); katalog 36 → 87 kayıt. Dışa aktarım artık mevcut kataloğu korur (`mergeCatalog`). Konu eşleştirmesi başlık sözcüklerine dayanır ve hatalı eşleşmeler içerir (ör. "Güneş" konusuna "Ay" videosu). Öğrenci uygulamasına yalnız inceleme ve onaydan geçen videolar aktarılır.
 
 ---
 

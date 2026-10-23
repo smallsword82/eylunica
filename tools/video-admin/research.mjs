@@ -52,6 +52,21 @@ export function publishable(state) {
   return output;
 }
 
+// Leaves valid published entries untouched (including hand-curated extras) unless the
+// research state explicitly rejects them, so exporting after a fresh scan never drops
+// the existing catalog. New approvals fill topics up to two videos.
+export function mergeCatalog(existing, state) {
+  const identity = v => v.identity || v.topicId + ':' + v.id;
+  const rejected = new Set(state.videos.filter(v => v.status === 'rejected').map(identity));
+  const output = existing.filter(v => !videoRejection(v) && v.status === 'approved' && !rejected.has(identity(v)));
+  const published = new Set(output.map(identity));
+  for (const v of publishable({ videos: state.videos.filter(v => !published.has(identity(v))) })) {
+    const count = output.filter(other => other.topicId === v.topicId).length;
+    if (count < 2) output.push({ ...v, role: count === 0 ? 'primary' : 'alternative' });
+  }
+  return output;
+}
+
 export function applyPublicationPolicy(state) {
   return { ...state, videos: state.videos.map(v => {
     const reason = videoRejection(v);

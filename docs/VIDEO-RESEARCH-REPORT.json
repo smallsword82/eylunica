@@ -15,12 +15,14 @@
   "videos2025": 8,
   "uniqueCandidates": 44,
   "topicVideoPairs": 97,
-  "approvedVideos": 0,
+  "approvedVideos": 29,
   "totalTopics": 207,
   "fullySearchedTopics": 207,
   "topicsWithoutCandidates": 147,
   "topicsAwaitingSearch": 0,
   "rejectedByDatePolicy": 0,
   "pausedByUser": false,
-  "note": "Önceki .tools/video-admin/state.json bulunamadığı için tarama baştan yapıldı. Adaylar 'pending' durumundadır; yayımlanmak için insan incelemesi gerekir."
+  "note": "Önceki .tools/video-admin/state.json bulunamadığı için tarama baştan yapıldı. 51 eşleşme ön eleme ve kullanıcı onayıyla kataloğa eklendi.",
+  "approvedTopicVideoPairs": 51,
+  "catalogEntries": 87
 }

@@ -29,7 +29,7 @@ Devir notundaki ilk görev (mevcut durumu doğrulamak) için yapılan kontroller
 
 - Son kayıtlı rapor (`VIDEO-RESEARCH-REPORT.json`, 21.10.2026): 724 konu; 94'ü taranmış, 80'inde aday yok, 630'u bekliyor; 8 aday (5'i 2026, 3'ü 2025), onaylı 0. Durum: `quota-blocked` ve **kullanıcı isteğiyle duraklatılmış** (`pausedByUser: true`).
 - Tarama ilerlemesi `.tools/video-admin/state.json` dosyasında tutulur; bu klasör `.gitignore` ile depoya alınmaz, yani yalnızca taramanın yapıldığı bilgisayarda bulunur. Kaldığı yerden devam için yönetim sunucusu o bilgisayarda çalıştırılmalıdır.
-- Uygulamadaki onaylı katalog (`src/grade5/video-catalog.json`): 36 video.
+- Uygulamadaki onaylı katalog (`src/grade5/video-catalog.json`): 36 kayıt (23.10 güncellemesiyle 87).
 - API anahtarı kaynakta yok; yalnız `YOUTUBE_API_KEY` ortam değişkeniyle sunucu tarafında kullanılıyor.
 - Arama önce 2026'yı, sonra 2025'i tarar; tarih filtresi YouTube API meta verisiyle doğrulanır. **Not:** arama tek kanalla sınırlı (`tonguç 5. SINIF`). Bu, devir notundaki "sabit listeye bağlı kalmama" hedefiyle tam örtüşmüyor; kanal kısıtının bilinçli bir güvenlik kararı olup olmadığı netleştirilmeli.
 
@@ -38,4 +38,4 @@ Devir notundaki ilk görev (mevcut durumu doğrulamak) için yapılan kontroller
 1. Sosyal Bilgiler: 10 konuda görselli anlatım var (`src/grade5/social-visuals.ts`), ancak Fen'deki gibi keşif görevi + ayrı 8/20 soru bankası + yolculuk kaydı yok. Öncelik sırasına göre sıradaki iş.
 2. ~~Canlı yayındaki sürümün doğrulanması~~ (tamamlandı).
 3. Eski iki özellik dalının temizlenmesi (silme kararı depo sahibine ait).
-4. ~~Video taraması~~ (23.10: 7 ders tarandı, yalnız tonguç kanalı; adaylar insan incelemesi bekliyor, bkz. `VIDEO-RESEARCH-REPORT.md`).
+4. ~~Video taraması~~ (23.10: 7 ders tarandı, yalnız tonguç kanalı; 51 eşleşme onaylanıp kataloğa eklendi: 36 → 87; bkz. `VIDEO-PRESCREEN-2026-10-23.md`).

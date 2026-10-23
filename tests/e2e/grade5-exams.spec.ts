@@ -19,7 +19,7 @@ test('resmî konuya eklenen anlatım, adımlı çözüm ve alıştırma çevrimd
  await selectGradeCourse(page,/^Fen Bilimleri /);
   await page.getByLabel('Çalışma dönemi').selectOption('all');
  await page.getByRole('button',{name:/Gökyüzündeki Komşumuz: Güneş/}).click();await page.getByRole('button',{name:'Konu kaynakları ve ayrıntılar'}).click();
- expect(await page.locator('.lesson-reading > section').count()).toBeGreaterThanOrEqual(2);
+ await expect(page.getByRole('navigation',{name:'Sayfa yönlendirmesi'})).toContainText(/^.*1\/([2-9]|\d\d)/);
  await expect(page.getByText('Bu konu için bağımsız ders anlatımı henüz hazırlanmadı.',{exact:false})).toHaveCount(0);
  await page.getByRole('button',{name:'Örnek çözüm',exact:true}).click();
  await expect(page.locator('.lesson-reading ol li').first()).toBeVisible();
@@ -53,7 +53,7 @@ for (const [course, title] of [
   await page.getByRole('button',{name:new RegExp(escape(title))}).first().click();
   if(course==='Fen Bilimleri')await page.getByRole('button',{name:'Konu kaynakları ve ayrıntılar'}).click();
   if(course==='Matematik') await expect(page.getByRole('region',{name:'Görselli açı anlatımı'})).toBeVisible();
-  else expect(await page.locator('.lesson-reading > section').count()).toBeGreaterThanOrEqual(2);
+  else await expect(page.getByRole('navigation',{name:'Sayfa yönlendirmesi'})).toContainText(/^.*1\/([2-9]|\d\d)/);
   await page.getByRole('button',{name:'Örnek çözüm',exact:true}).click();
   await expect(page.locator('.lesson-reading ol li').first()).toBeVisible();
   await page.getByRole('button',{name:'Alıştırmalar',exact:true}).click();

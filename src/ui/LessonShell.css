@@ -1,0 +1,72 @@
+.ey-lesson {
+  --ey-bg: #2a1747; --ey-bg2: #160c2b; --ey-card: rgba(196, 150, 230, .22); --ey-line: rgba(255, 255, 255, .28);
+  --ey-ink: #fff; --ey-soft: #d9c8f2; --ey-gold: #ffcf5a; --ey-gold2: #f39c2b; --ey-btn: rgba(255, 255, 255, .1);
+  position: fixed; inset: 0; z-index: 5; overflow: hidden; color: var(--ey-ink);
+  background: radial-gradient(ellipse at 70% 10%, #4b2a78 0%, var(--ey-bg) 45%, var(--ey-bg2) 100%);
+  display: grid; grid-template: auto 1fr auto / minmax(150px, 22vw) 1fr; gap: 1.2vh 2vw;
+  padding: 2vh 2.5vw 1.5vh; font-family: 'Baloo 2', 'Nunito', system-ui, sans-serif;
+}
+.ey-stars { position: absolute; inset: 0; pointer-events: none; opacity: .7;
+  background-image: radial-gradient(1.5px 1.5px at 12% 18%, #fff 50%, transparent), radial-gradient(1px 1px at 82% 12%, #fff 50%, transparent),
+    radial-gradient(2px 2px at 64% 78%, #fff 50%, transparent), radial-gradient(1px 1px at 30% 70%, #fff 50%, transparent), radial-gradient(1.5px 1.5px at 92% 52%, #fff 50%, transparent);
+  animation: ey-twinkle 6s ease-in-out infinite alternate; }
+@keyframes ey-twinkle { to { opacity: .35; } }
+.ey-head { grid-column: 1 / -1; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 2vw; position: relative; }
+.ey-head > div { text-align: center; }
+.ey-head::after { content: ''; width: clamp(120px, 14vw, 220px); }
+.ey-crumb { margin: 0; color: var(--ey-soft); font-size: clamp(.75rem, 1.6vh, 1rem); font-weight: 600; }
+.ey-head h1 { margin: .2vh 0 0; font-size: clamp(1.4rem, 6vh, 3.4rem); line-height: 1.05; font-weight: 900; letter-spacing: -.01em; text-shadow: 0 3px 0 rgba(0, 0, 0, .25); }
+.ey-lesson button { font: inherit; color: var(--ey-ink); cursor: pointer; border: 1px solid var(--ey-line); background: var(--ey-btn);
+  border-radius: 999px; padding: .7em 1.2em; font-weight: 700; transition: transform .18s, background .18s, box-shadow .18s; }
+.ey-lesson button:hover:not(:disabled), .ey-lesson button:focus-visible { transform: translateY(-2px) scale(1.03); background: rgba(255, 255, 255, .2); box-shadow: 0 6px 18px rgba(0, 0, 0, .3); }
+.ey-lesson button:active:not(:disabled) { transform: scale(.97); }
+.ey-lesson button:disabled { opacity: .45; cursor: default; }
+.ey-lesson button:focus-visible { outline: 3px solid var(--ey-gold); outline-offset: 2px; }
+.ey-back { justify-self: start; font-size: clamp(.85rem, 2vh, 1.1rem); min-width: clamp(120px, 14vw, 220px); }
+.ey-steps { display: flex; flex-direction: column; gap: 1.2vh; justify-content: center; position: relative; }
+.ey-steps button { display: flex; align-items: center; gap: .7em; text-align: left; font-size: clamp(.8rem, 2.2vh, 1.15rem); padding: 1.1vh 1em; }
+.ey-icon { display: grid; place-items: center; width: 1.9em; height: 1.9em; border-radius: 50%; background: rgba(255, 255, 255, .16); flex: none; }
+.ey-steps button.done .ey-icon { background: rgba(255, 207, 90, .35); }
+.ey-steps button[aria-pressed=true], .ey-steps button[aria-pressed=true]:hover:not(:disabled) { color: #3b2207; border-color: #fff3c4; background: linear-gradient(180deg, #ffe7a0, var(--ey-gold) 55%, var(--ey-gold2));
+  box-shadow: 0 0 0 3px rgba(255, 207, 90, .35), 0 0 22px rgba(255, 190, 70, .7); animation: ey-glow 2.4s ease-in-out infinite; }
+.ey-steps button[aria-pressed=true] .ey-icon { background: rgba(255, 255, 255, .6); }
+@keyframes ey-glow { 50% { box-shadow: 0 0 0 5px rgba(255, 207, 90, .25), 0 0 30px rgba(255, 190, 70, .9); } }
+.ey-card { position: relative; min-height: 0; overflow: auto; overscroll-behavior: contain; border-radius: 28px; padding: 2.5vh 2.5vw;
+  background: linear-gradient(160deg, rgba(220, 180, 250, .32), var(--ey-card)); border: 1px solid rgba(255, 255, 255, .35);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .4), 0 20px 50px rgba(10, 0, 30, .45); backdrop-filter: blur(10px);
+  display: flex; flex-direction: column; font-size: clamp(.9rem, 2.4vh, 1.25rem); animation: ey-in .35s ease both; }
+@keyframes ey-in { from { opacity: 0; transform: translateY(8px) scale(.99); } }
+.ey-card h2 { margin: 0 0 1vh; font-size: 1.35em; }
+.ey-card h3 { margin: 1vh 0 .5vh; font-size: 1.1em; color: #fff3c4; }
+.ey-card p, .ey-card li { line-height: 1.45; margin: .5vh 0; }
+.ey-card a { color: #ffe7a0; }
+.ey-card .ey-body { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.ey-card .primary:not(:disabled), .ey-next, .ey-actions .primary { color: #3b2207 !important; border-color: #fff3c4 !important; background: linear-gradient(180deg, #ffe7a0, var(--ey-gold) 55%, var(--ey-gold2)) !important; }
+.ey-choices { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14em), 1fr)); gap: 1vh 1vw; margin: 1vh 0; }
+.ey-choices button[aria-pressed=true] { background: rgba(255, 207, 90, .4); border-color: var(--ey-gold); }
+.ey-card input, .ey-card select { font: inherit; padding: .5em .8em; border-radius: 12px; border: 1px solid var(--ey-line); }
+.ey-card iframe { width: 100%; aspect-ratio: 16 / 9; max-height: 45vh; border: 0; border-radius: 16px; }
+.ey-row { display: flex; flex-wrap: wrap; gap: 1vh 1vw; align-items: center; margin-top: 1vh; }
+.ey-pager { display: flex; align-items: center; justify-content: space-between; gap: 1vw; margin-top: auto; padding-top: 1vh; }
+.ey-path { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 2vw; position: relative; }
+.ey-path ol { list-style: none; display: flex; align-items: center; margin: 0 auto; padding: 0; gap: 0; }
+.ey-path li { display: flex; align-items: center; }
+.ey-path li + li::before { content: ''; width: clamp(24px, 5vw, 80px); border-top: 4px dotted rgba(255, 220, 140, .6); margin: 0 .6vw; }
+.ey-path li span { display: grid; place-items: center; width: clamp(30px, 6vh, 52px); aspect-ratio: 1; border-radius: 50%; font-weight: 800;
+  background: rgba(255, 255, 255, .14); border: 2px solid rgba(255, 255, 255, .3); font-size: clamp(.8rem, 2.2vh, 1.2rem); transition: transform .3s; }
+.ey-path li.done span { background: rgba(255, 207, 90, .4); border-color: var(--ey-gold); }
+.ey-path li.now span { color: #3b2207; background: var(--ey-gold); border: 0; clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  width: clamp(44px, 9vh, 76px); animation: ey-bob 1.8s ease-in-out infinite; }
+@keyframes ey-bob { 50% { transform: translateY(-4px) rotate(6deg); } }
+.ey-actions { display: flex; gap: 1vw; }
+.ey-actions:empty { display: none; }
+.ey-status { position: absolute; left: 0; bottom: 0; margin: 0; font-size: clamp(.7rem, 1.8vh, .95rem); color: var(--ey-soft); }
+@media (orientation: portrait) {
+  .ey-lesson { grid-template: auto auto 1fr auto / 1fr; padding: 1.5vh 3vw; }
+  .ey-head { grid-template-columns: auto 1fr; } .ey-head::after { display: none; } .ey-head > div { text-align: left; }
+  .ey-head h1 { font-size: clamp(1.2rem, 4vh, 2rem); }
+  .ey-steps { flex-direction: row; overflow-x: auto; gap: 2vw; justify-content: flex-start; scrollbar-width: none; }
+  .ey-steps button { flex: none; font-size: .85rem; }
+  .ey-path li + li::before { width: 3vw; }
+}
+@media (prefers-reduced-motion: reduce) { .ey-lesson *, .ey-lesson { animation: none !important; transition: none !important; } }

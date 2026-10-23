@@ -1,3 +1,4 @@
+import { LessonShell, Pager } from './LessonShell';
 import {ScienceJourney} from './ScienceJourney';
 import {CourseRoad} from './CourseRoad';
 import {ScienceOrbitModel} from './ScienceOrbitModel';
@@ -12,7 +13,7 @@ import { mathModels } from './math-visual-models';
 import { GradeFiveDiscovery } from './GradeFiveDiscovery';
 import { matchesTerm, termLabels, type StudyTerm } from '../grade5/terms';
 import './GradeFive.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import { courses, questionsByTopic, topicsByCourse, questionsByCourse, questionById, timetable, type Topic, type Question } from '../grade5/catalog';
 import { readLearning, learningKey, nextQuestion, recordAttempt, isCorrect, latestAttempts } from '../grade5/engine';
 import { approvedVideos, videoUrl } from '../grade5/videos';
@@ -20,6 +21,10 @@ import { lessonByTopic } from '../grade5/content';
 import { GradeFiveExam } from './GradeFiveExam';
 import { QuestionSourceNote } from './QuestionSourceNote';
 type Stage = 'summary' | 'video' | 'example' | 'practice' | 'test' | 'review';
+const stages: { id: Stage; label: string; icon: string }[] = [
+  { id: 'summary', label: 'Konu anlatımı', icon: '⭐' }, { id: 'video', label: 'Video', icon: '▶' }, { id: 'example', label: 'Örnek çözüm', icon: '✎' },
+  { id: 'practice', label: 'Alıştırmalar', icon: '✦' }, { id: 'test', label: 'Konu testi', icon: '☰' }, { id: 'review', label: 'Yanlışları tekrar et', icon: '↻' },
+];
 export function GradeFive({ onBack, onTransition, guide, paused, audioMode, onAudioMode }: { onBack: () => void; onTransition: (action: () => void, startsTask?: boolean) => void; guide: string; paused: boolean; audioMode: "silent" | "effects" | "music"; onAudioMode: (mode: "silent" | "effects" | "music") => void }) {
   const [courseId, setCourse] = useState<string | null>(null);
   const [topic, setTopic] = useState<Topic | null>(null);
@@ -29,6 +34,8 @@ export function GradeFive({ onBack, onTransition, guide, paused, audioMode, onAu
   const [topicFilter, setTopicFilter] = useState('');
   const [visibleCount, setVisibleCount] = useState(24);
   const [stage, setStage] = useState<Stage>('summary');
+  const [page, setPage] = useState(0);
+  const [visited, setVisited] = useState<Set<string>>(new Set());
   const [storageError, setStorageError] = useState('');
   const [learning, setLearning] = useState(() => { try { return readLearning(localStorage.getItem(learningKey)); } catch { return readLearning(null); } });
   const [question, setQuestion] = useState<Question>();
@@ -40,9 +47,10 @@ export function GradeFive({ onBack, onTransition, guide, paused, audioMode, onAu
   const [videoConsent, setVideoConsent] = useState(false);
   const [examOpen, setExamOpen] = useState(false);
   useEffect(() => { if (paused) setPlayingVideo(null); }, [paused]);
+  useEffect(() => { setPage(0); setVisited(new Set()); }, [topic?.id]);
   useEffect(() => { const hide = () => { if (document.hidden) setPlayingVideo(null); }; document.addEventListener('visibilitychange', hide); return () => document.removeEventListener('visibilitychange', hide); }, []);
   function selectStage(next: Stage) { onTransition(() => {
-    setPlayingVideo(null); setVideoConsent(false); setStage(next); setSeen([]); setAnswer(''); setFeedback(null); setHint(false);
+    setPlayingVideo(null); setVideoConsent(false); setVisited(v => new Set([...v, stage])); setStage(next); setPage(0); setSeen([]); setAnswer(''); setFeedback(null); setHint(false);
     setQuestion(topic ? nextQuestion(topic.id, learning, next === 'review') : undefined);
   }, ['practice', 'test', 'review'].includes(next)); }
   function submit() {
@@ -75,10 +83,44 @@ export function GradeFive({ onBack, onTransition, guide, paused, audioMode, onAu
   if(courseId==='course-2'&&!topic)return <ScienceJourney paused={paused} onBack={()=>setCourse(null)} onLegacyTopic={t=>onTransition(()=>{setTopic(t);setStage('summary');},true)} onLegacyExam={value=>{setTerm(value);setExamOpen(true);}} onTransition={onTransition} onRecord={(id,value,hinted)=>{const q=questionById.get(id);if(!q)return;setLearning(current=>{const next=recordAttempt(current,q,value,hinted);try{localStorage.setItem(learningKey,JSON.stringify(next));}catch{setStorageError('İlerleme kaydedilemedi.');}return next;});}}/>;
   if((courseId==='course-3'||courseId==='course-2')&&!topic)return <CourseRoad courseId={courseId} page={roadPage} onPage={setRoadPage} topics={courseTopics} term={term} onTerm={setTerm} onTopic={t=>onTransition(()=>{setTopic(t);setStage('summary');},true)} onBack={()=>setCourse(null)} onExam={()=>onTransition(()=>setExamOpen(true))}/>;
   if(courseId==='course-3'&&topic&&socialVisualTopics[topic.id]&&['summary','example'].includes(stage))return <SocialLesson key={`${topic.id}-${stage}`} topic={topic} example={stage==='example'} paused={paused} onBack={()=>setTopic(null)} onPractice={()=>selectStage('practice')} onExample={()=>selectStage('example')}/>;
+  if (topic) {
+    const stageIndex = stages.findIndex(s => s.id === stage);
+    const following = stages[stageIndex + 1];
+    const nextStep = following ? <button className="ey-next" disabled={paused} onClick={() => selectStage(following.id)}>Sıradaki: {following.label} <span aria-hidden="true">→</span></button> : <button className="ey-next" onClick={() => { setTopic(null); setPlayingVideo(null); }}>Konuyu bitir <span aria-hidden="true">✓</span></button>;
+    const reading: { title: string; body: ReactNode }[] = [
+      { title: 'Birlikte keşfedelim', body: <>{!lesson && topic.source.status === 'verified' && <p>Bu konu için bağımsız ders anlatımı henüz hazırlanmadı. Kaynak programın hedefleri gösteriliyor.</p>}{topic.summary && <p>{topic.summary}</p>}
+        {course?.id === 'course-2' && ['topic-deb6379d1b9f00ce','topic-cb9c84d286b6327c'].includes(topic.id) && <ForceExperiment paused={paused} frictionOnly={topic.id==='topic-cb9c84d286b6327c'} />}
+        {course?.id === 'course-2' && topic.id === 'topic-55b0812fbc9fd348' && <MoonPhaseModel />}
+        {course?.id === 'course-2' && ['topic-7e5324bf5f149562','topic-55b0812fbc9fd348','topic-7e58bf568a744020'].includes(topic.id) && <ScienceOrbitModel />}
+        {attempts.slice(-3).filter(a => !a.correct).length >= 2 && <p>Bu konuyu birlikte yeniden okuyalım; sonra örnek çözüme bakabilirsin.</p>}</> },
+      ...(lesson?.sections || []).map(part => ({ title: part.title, body: <>{part.body.map((paragraph, i) => <p key={i}>{paragraph}</p>)}</> })),
+      ...(lesson?.activity ? [{ title: lesson.activity.title, body: <aside className="lesson-activity"><ol>{lesson.activity.instructions.map((step, i) => <li key={i}>{step}</li>)}</ol><p>{lesson.activity.reflection}</p></aside> }] : []),
+      ...(topic.outcomes.length ? [{ title: topic.outcomeScope === 'week' ? 'Bu haftalara ait öğrenme çıktıları' : 'Ünite öğrenme çıktıları', body: <><p>Kaynak programın kapsamını gösterir; her sorunun bu çıktılara tek tek eşleştirildiği anlamına gelmez.</p><ul>{topic.outcomes.map(o => <li key={o.code}>{o.code} · {o.text}</li>)}</ul>{topic.weeks.length > 0 && <p>Taslak plan haftaları: {topic.weeks.join(', ')}</p>}<p><a href={topic.source.url} target="_blank" rel="noreferrer">Resmî program kaynağı</a> · {topic.source.note}</p></> }] : []),
+    ];
+    const current = reading[Math.min(page, reading.length - 1)];
+    return <LessonShell crumb={`${course?.name || ''} · ${topic.unit}`} title={topic.title} steps={stages} current={stage} done={visited} onStep={id => selectStage(id as Stage)} backLabel="Konulara dön" onBack={() => { setTopic(null); setPlayingVideo(null); }}
+      footer={stage === 'summary' ? undefined : nextStep}
+      status={['practice', 'test', 'review'].includes(stage) ? `${attempts.length} yanıt · doğruluk %${attempts.length ? Math.round(attempts.filter(a => a.correct).length / attempts.length * 100) : 0} · ${topicQuestions.filter(q => latest.get(q.id)?.correct === false).length} tekrar sorusu` : undefined}>
+      {storageError && <p role="alert">{storageError}</p>}
+      {stage === 'summary' && (course?.id === 'course-1' && mathModels[topic.id] ? <>{mathModels[topic.id] === 'angle' ? <AngleLesson key={topic.id} paused={paused} onTransition={onTransition} onPractice={() => selectStage('practice')} /> : <MathVisualLesson key={topic.id} topic={topic} paused={paused} onTransition={onTransition} onPractice={() => selectStage('practice')} />}<details><summary>Kaynak programın öğrenme çıktıları</summary><ul>{topic.outcomes.map(o => <li key={o.code}>{o.code} · {o.text}</li>)}</ul><p>Taslak plan haftaları: {topic.weeks.join(', ') || 'Belirtilmedi'}</p></details></> : <section className="lesson-reading ey-body" key={page}><h2>{current.title}</h2>{current.body}<Pager page={Math.min(page, reading.length - 1)} pages={reading.length} onPage={setPage} last={nextStep} /></section>)}
+      {stage === 'example' && <section className="lesson-reading"><h2>Örnek çözüm</h2>{lesson ? <><h3>{lesson.workedExample.prompt}</h3><ol>{lesson.workedExample.steps.map((step,i) => <li key={i}>{step}</li>)}</ol><p><strong>Sonuç: </strong>{lesson.workedExample.answer}</p></> : <p>{topic.example || 'Bu konu için örnek çözüm henüz eklenmedi.'}</p>}</section>}
+      {stage === 'video' && <section><h2>Eğitim videosu</h2><p>Video için internet ve ebeveyn onayı gerekir. Oynatıcı açıldığında YouTube’a bağlantı kurulur ve platformun veri/gizlilik kuralları geçerlidir. İlerlemen YouTube’a gönderilmez. Videolar indirilmez; metin ve alıştırmalar çevrimdışı çalışır.</p>{!approvedVideos.some(v => v.topicId === topic.id) && <p>Bu konu için incelenip onaylanmış video henüz yok.</p>}{approvedVideos.filter(v => v.topicId === topic.id).map(v => <article key={v.id}><p>{v.role === 'primary' ? 'Ana video' : 'Alternatif video'} · {v.title || 'Başlık doğrulanmadı'} · {v.channel || 'Kanal bilgisi yok'} · {v.publishedAt?.slice(0, 10) || 'Yayın tarihi bilinmiyor'}</p><label><input type="checkbox" checked={videoConsent} onChange={e => setVideoConsent(e.target.checked)} /> Ebeveynimle birlikte dış video bağlantısını açmayı kabul ediyorum</label><button disabled={!videoConsent} onClick={() => setPlayingVideo(v.id)}>Videoyu aç</button></article>)}{playingVideo && videoConsent && <iframe title="Onaylı eğitim videosu" src={videoUrl(playingVideo)} referrerPolicy="no-referrer" allowFullScreen />}</section>}
+      {['practice', 'test', 'review'].includes(stage) && <section aria-label="Soru çalışması">
+        {!question ? <p>{stage === 'review' ? 'Tekrar bekleyen yanlış yanıt kalmadı.' : !seen.length ? 'Bu konu için henüz soru eklenmedi.' : topic.source.status === 'pending' ? 'Bu oturumdaki örnek sorular tamamlandı. Soru havuzu henüz 50 soruya ulaşmadı.' : 'Bu oturumdaki sorular tamamlandı. Yeni bir çalışma başlatabilir veya yazılı testine geçebilirsin.'}</p> : <>
+          <h2>{question.prompt}</h2><p>Zorluk {question.difficulty}/4</p>
+          {question.image && <img style={{ maxWidth: "100%", height: "auto" }} src={question.image.src} alt={question.image.alt} />}
+          {['choice', 'boolean', 'visual'].includes(question.kind) && question.choices ? <div className="ey-choices">{question.choices.map(choice => <button key={choice} disabled={paused || feedback !== null} aria-pressed={answer === choice} onClick={() => setAnswer(choice)}>{choice}</button>)}</div> : <><p>{question.choices?.join(' · ')}</p><label>Yanıtın <input value={answer} disabled={paused || feedback !== null} onChange={e => setAnswer(e.target.value)} /></label></>}
+          {stage !== 'test' && <button onClick={() => setHint(true)} disabled={paused || feedback !== null}>İpucu</button>}{hint && <p>{question.hints.join(' ')}</p>}
+          <button className="primary" disabled={paused || !answer.trim() || feedback !== null} onClick={submit}>Yanıtı kontrol et</button>
+          {feedback !== null && <><p role="status">{feedback}</p><QuestionSourceNote question={question} /><button disabled={paused} onClick={() => onTransition(() => { const done = [...seen, question.id]; setSeen(done); setQuestion(nextQuestion(topic.id, learning, stage === 'review', done)); setAnswer(''); setFeedback(null); setHint(false); }, true)}>Sonraki soru</button></>}
+        </>}
+      </section>}
+    </LessonShell>;
+  }
   return <main className="subpage grade-five">
     <button className="text-button" onClick={() => { if (topic) { setTopic(null); setPlayingVideo(null); } else if (course) setCourse(null); else onBack(); }}>← {topic ? 'Konulara dön' : course ? 'Derslere dön' : 'Akademilere dön'}</button>
     <div className="eyebrow muted">5. SINIF · 2026–2027</div>
-    <h1>{topic?.title || course?.name || 'Derslerim'}</h1>
+    <h1>{course?.name || 'Derslerim'}</h1>
     <p>{guide} ile adım adım öğren. {course?.id === 'course-1' ? 'Değiştir, gözlemle, keşfet; sonra alıştırmalarla pekiştir.' : 'Anlatımı oku, örnekleri incele ve alıştırmalarla pekiştir.'}</p>
     {!topic && <details><summary>İçerik ve program kaynakları</summary><p>Anlatım ve sorular Eylunica tarafından hazırlanmıştır; resmî MEB sorusu değildir. Plan haftaları okuluna göre değişebilir.</p><a href={timetable.url} target="_blank" rel="noreferrer">Resmî haftalık ders çizelgesi</a></details>}
     {!topic && <><label>Çalışma dönemi <select value={term} onChange={e => { setTerm(e.target.value as StudyTerm); setUnitFilter(''); setVisibleCount(24); }}>{Object.entries(termLabels).map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label><p>İlk dönem kapsamı yıllık plandaki 1–18. haftalardır. İki döneme yayılan konular her iki kapsamda görünür. Haftası belirtilmeyen kayıtlar ayrı tutulur.</p></>}
@@ -94,28 +136,6 @@ export function GradeFive({ onBack, onTransition, guide, paused, audioMode, onAu
       <div className={`academy-grid ${course.id === 'course-1' ? 'math-topic-grid' : ''}`}>{filteredTopics.slice(0,visibleCount).map(t => <button key={t.id} data-topic-id={t.id} className="academy-tile" onClick={() => onTransition(() => { setTopic(t); setStage('summary'); }, course.id === 'course-1')} >{course.id === 'course-1' && <MathTopicArt topicId={t.id} />}<strong>{t.unit} · {t.title}</strong><span>{lessonByTopic.has(t.id) || t.source.status === 'pending' && t.summary ? 'Anlatım hazır' : 'Anlatım hazırlanıyor'} · {questionsByTopic.get(t.id)?.length || 0} soru · {t.weeks.length ? `Hafta ${t.weeks.join(', ')}` : 'Hafta planı belirtilmedi'} · {t.source.status === 'verified' ? 'MEB konu kaydı' : 'Örnek çalışma'}</span>{questionsByTopic.has(t.id) && <span>Doğru çözdüğün: {questionsByTopic.get(t.id)!.filter(q => latest.get(q.id)?.correct).length}/{questionsByTopic.get(t.id)!.length}</span>}</button>)}</div>
       {filteredTopics.length > visibleCount && <button onClick={() => setVisibleCount(n => n+24)}>Diğer konuları göster</button>}
       {!filteredTopics.length && <p>Bu dönem ve filtre için konu bulunamadı. Haftası belirtilmeyen kayıtları görmek için çalışma dönemi seçimini değiştirebilirsin.</p>}
-    </>}
-    {topic && <>
-      {course?.id === 'course-1' ? <details><summary>Program kaynağı</summary><p><a href={topic.source.url} target="_blank" rel="noreferrer">Resmî program kaynağı</a> · {topic.source.note}</p></details> : <p><a href={topic.source.url} target="_blank" rel="noreferrer">Resmî program kaynağı</a> · {topic.source.note}</p>}
-      <nav aria-label="Öğrenme adımları">{(['summary', 'video', 'example', 'practice', 'test', 'review'] as Stage[]).map((s, i) => <button key={s} aria-pressed={s === stage} onClick={() => selectStage(s)}>{['Konu anlatımı', 'Video', 'Örnek çözüm', 'Alıştırmalar', 'Konu testi', 'Yanlışları tekrar et'][i]}</button>)}</nav>
-      <p role="status">{attempts.length} yanıt · doğruluk %{attempts.length ? Math.round(attempts.filter(a => a.correct).length / attempts.length * 100) : 0} · {topicQuestions.filter(q => latest.get(q.id)?.correct === false).length} tekrar sorusu</p>
-      {stage === 'summary' && course?.id === 'course-1' && mathModels[topic.id] && <>{mathModels[topic.id] === 'angle' ? <AngleLesson key={topic.id} paused={paused} onTransition={onTransition} onPractice={() => selectStage('practice')} /> : <MathVisualLesson key={topic.id} topic={topic} paused={paused} onTransition={onTransition} onPractice={() => selectStage('practice')} />}<details><summary>Kaynak programın öğrenme çıktıları</summary><ul>{topic.outcomes.map(o => <li key={o.code}>{o.code} · {o.text}</li>)}</ul><p>Taslak plan haftaları: {topic.weeks.join(', ') || 'Belirtilmedi'}</p></details></>}
-      {stage === 'summary' && course?.id === 'course-2' && ['topic-deb6379d1b9f00ce','topic-cb9c84d286b6327c'].includes(topic.id) && <ForceExperiment paused={paused} frictionOnly={topic.id==='topic-cb9c84d286b6327c'} />}
-      {stage === 'summary' && course?.id === 'course-2' && topic.id === 'topic-55b0812fbc9fd348' && <MoonPhaseModel />}
-      {stage === 'summary' && course?.id === 'course-2' && ['topic-7e5324bf5f149562','topic-55b0812fbc9fd348','topic-7e58bf568a744020'].includes(topic.id) && <ScienceOrbitModel />}
-      {stage === 'summary' && !(course?.id === 'course-1' && mathModels[topic.id]) && <section className="lesson-reading"><h2>Konu anlatımı</h2>{!lesson && topic.source.status === 'verified' && <p>Bu konu için bağımsız ders anlatımı henüz hazırlanmadı. Aşağıda kaynak programın hedefleri gösteriliyor.</p>}{topic.summary && <p>{topic.summary}</p>}{lesson?.sections.map((part,index) => <section key={index}><h3>{part.title}</h3>{part.body.map((paragraph,i) => <p key={i}>{paragraph}</p>)}</section>)}{lesson?.activity && <aside className="lesson-activity"><h3>{lesson.activity.title}</h3><ol>{lesson.activity.instructions.map((step,i) => <li key={i}>{step}</li>)}</ol><p>{lesson.activity.reflection}</p></aside>}{topic.outcomes.length > 0 && <details><summary>{topic.outcomeScope === 'week' ? 'Bu haftalara ait öğrenme çıktıları' : 'Ünite öğrenme çıktıları'}</summary><p>Kaynak programın kapsamını gösterir; her sorunun bu çıktılara tek tek eşleştirildiği anlamına gelmez.</p><ul>{topic.outcomes.map(o => <li key={o.code}>{o.code} · {o.text}</li>)}</ul></details>}{topic.weeks.length > 0 && <p>Taslak plan haftaları: {topic.weeks.join(', ')}</p>}{attempts.slice(-3).filter(a => !a.correct).length >= 2 && <p>Bu konuyu birlikte yeniden okuyalım; sonra örnek çözüme bakabilirsin.</p>}</section>}
-      {stage === 'example' && <section className="lesson-reading"><h2>Örnek çözüm</h2>{lesson ? <><h3>{lesson.workedExample.prompt}</h3><ol>{lesson.workedExample.steps.map((step,i) => <li key={i}>{step}</li>)}</ol><p><strong>Sonuç: </strong>{lesson.workedExample.answer}</p></> : <p>{topic.example || 'Bu konu için örnek çözüm henüz eklenmedi.'}</p>}</section>}
-      {stage === 'video' && <section><h2>Eğitim videosu</h2><p>Video için internet ve ebeveyn onayı gerekir. Oynatıcı açıldığında YouTube’a bağlantı kurulur ve platformun veri/gizlilik kuralları geçerlidir. İlerlemen YouTube’a gönderilmez. Videolar indirilmez; metin ve alıştırmalar çevrimdışı çalışır.</p>{!approvedVideos.some(v => v.topicId === topic.id) && <p>Bu konu için incelenip onaylanmış video henüz yok.</p>}{approvedVideos.filter(v => v.topicId === topic.id).map(v => <article key={v.id}><p>{v.role === 'primary' ? 'Ana video' : 'Alternatif video'} · {v.title || 'Başlık doğrulanmadı'} · {v.channel || 'Kanal bilgisi yok'} · {v.publishedAt?.slice(0, 10) || 'Yayın tarihi bilinmiyor'}</p><label><input type="checkbox" checked={videoConsent} onChange={e => setVideoConsent(e.target.checked)} /> Ebeveynimle birlikte dış video bağlantısını açmayı kabul ediyorum</label><button disabled={!videoConsent} onClick={() => setPlayingVideo(v.id)}>Videoyu aç</button></article>)}{playingVideo && videoConsent && <iframe title="Onaylı eğitim videosu" src={videoUrl(playingVideo)} referrerPolicy="no-referrer" allowFullScreen />}</section>}
-      {['practice', 'test', 'review'].includes(stage) && <section aria-label="Soru çalışması">
-        {!question ? <p>{stage === 'review' ? 'Tekrar bekleyen yanlış yanıt kalmadı.' : !seen.length ? 'Bu konu için henüz soru eklenmedi.' : topic.source.status === 'pending' ? 'Bu oturumdaki örnek sorular tamamlandı. Soru havuzu henüz 50 soruya ulaşmadı.' : 'Bu oturumdaki sorular tamamlandı. Yeni bir çalışma başlatabilir veya yazılı testine geçebilirsin.'}</p> : <>
-          <h2>{question.prompt}</h2><p>Zorluk {question.difficulty}/4</p>
-          {question.image && <img style={{ maxWidth: "100%", height: "auto" }} src={question.image.src} alt={question.image.alt} />}
-          {['choice', 'boolean', 'visual'].includes(question.kind) && question.choices ? question.choices.map(choice => <button key={choice} disabled={paused || feedback !== null} aria-pressed={answer === choice} onClick={() => setAnswer(choice)}>{choice}</button>) : <><p>{question.choices?.join(' · ')}</p><label>Yanıtın <input value={answer} disabled={paused || feedback !== null} onChange={e => setAnswer(e.target.value)} /></label></>}
-          {stage !== 'test' && <button onClick={() => setHint(true)} disabled={paused || feedback !== null}>İpucu</button>}{hint && <p>{question.hints.join(' ')}</p>}
-          <button className="primary" disabled={paused || !answer.trim() || feedback !== null} onClick={submit}>Yanıtı kontrol et</button>
-          {feedback !== null && <><p role="status">{feedback}</p><QuestionSourceNote question={question} /><button disabled={paused} onClick={() => onTransition(() => { const done = [...seen, question.id]; setSeen(done); setQuestion(nextQuestion(topic.id, learning, stage === 'review', done)); setAnswer(''); setFeedback(null); setHint(false); }, true)}>Sonraki soru</button></>}
-        </>}
-      </section>}
     </>}
   </main>;
 }

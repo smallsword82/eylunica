@@ -1,0 +1,16 @@
+/* One visual language for every page: rounded type, pill buttons that react to touch. */
+:root { --ey-gold: #ffcf5a; --ey-gold2: #f39c2b; }
+body, button, input, select { font-family: 'Baloo 2', 'Nunito', system-ui, sans-serif; }
+h1, h2, .discovery-header h1 { font-weight: 800; letter-spacing: -.01em; }
+.discovery-back, .journey-top button, .journey-map-nav button, .journey-map-bottom button, .text-button {
+  border-radius: 999px !important; font-weight: 700; transition: transform .18s, box-shadow .18s, background .18s;
+}
+.discovery-back:hover, .journey-top button:hover, .journey-map-nav button:hover:not(:disabled), .journey-map-bottom button:hover,
+.discovery-book:hover { transform: scale(1.04); box-shadow: 0 8px 22px rgba(0, 0, 0, .35); }
+.discovery-back:active, .journey-top button:active, .journey-map-nav button:active:not(:disabled), .journey-map-bottom button:active { transform: scale(.97); }
+.journey-map-nav button:last-of-type:not(:disabled), .journey-map-bottom button {
+  color: #3b2207 !important; border-color: #fff3c4 !important; background: linear-gradient(180deg, #ffe7a0, var(--ey-gold) 55%, var(--ey-gold2)) !important;
+  box-shadow: 0 0 18px rgba(255, 190, 70, .45);
+}
+.discovery-book { transition: transform .2s, box-shadow .2s; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }

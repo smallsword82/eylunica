@@ -1,8 +1,4 @@
 import type { ReactNode } from 'react';
-import '@fontsource/baloo-2/latin-600.css';
-import '@fontsource/baloo-2/latin-ext-600.css';
-import '@fontsource/baloo-2/latin-800.css';
-import '@fontsource/baloo-2/latin-ext-800.css';
 import './LessonShell.css';
 
 export type LessonStep = { id: string; label: string; icon: string };

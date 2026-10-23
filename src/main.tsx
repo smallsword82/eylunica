@@ -4,6 +4,11 @@ import { Capacitor } from "@capacitor/core";
 import App from "./App";
 import "./style.css";
 import "./improvements.css";
+import "@fontsource/baloo-2/latin-600.css";
+import "@fontsource/baloo-2/latin-ext-600.css";
+import "@fontsource/baloo-2/latin-800.css";
+import "@fontsource/baloo-2/latin-ext-800.css";
+import "./theme.css";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />

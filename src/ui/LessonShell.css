@@ -18,7 +18,7 @@
 .ey-head h1 { margin: .2vh 0 0; font-size: clamp(1.4rem, 6vh, 3.4rem); line-height: 1.05; font-weight: 900; letter-spacing: -.01em; text-shadow: 0 3px 0 rgba(0, 0, 0, .25); }
 .ey-lesson button { font: inherit; color: var(--ey-ink); cursor: pointer; border: 1px solid var(--ey-line); background: var(--ey-btn);
   border-radius: 999px; padding: .7em 1.2em; font-weight: 700; transition: transform .18s, background .18s, box-shadow .18s; }
-.ey-lesson button:hover:not(:disabled), .ey-lesson button:focus-visible { transform: translateY(-2px) scale(1.03); background: rgba(255, 255, 255, .2); box-shadow: 0 6px 18px rgba(0, 0, 0, .3); }
+.ey-lesson button:hover:not(:disabled), .ey-lesson button:focus-visible { transform: scale(1.04); background: rgba(255, 255, 255, .2); box-shadow: 0 6px 18px rgba(0, 0, 0, .3); }
 .ey-lesson button:active:not(:disabled) { transform: scale(.97); }
 .ey-lesson button:disabled { opacity: .45; cursor: default; }
 .ey-lesson button:focus-visible { outline: 3px solid var(--ey-gold); outline-offset: 2px; }

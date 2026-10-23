@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { parseYouTubeUrl, addManual, review, publishable, newest } from './research.mjs';
+import { parseYouTubeUrl, addManual, review, publishable, mergeCatalog, newest } from './research.mjs';
 const initial = { version: 1, videos: [] };
 // Synthetic IDs are isolated test fixtures, never shipped in the student catalog.
 const input = { topicId: 'place-value', url: 'https://youtu.be/abcdefghijk' };
@@ -45,4 +45,19 @@ test('2024 ve doğrulanmamış tarih yüksek puanla bile onaylanmaz veya dışa 
 test('kanal adı aynı olsa da başka kanal veya bilinmeyen kimlik onaylanmaz',()=>{
  const good={...addManual(initial,input).videos[0],...approval,publishedAt:'2026-10-01',metadataStatus:'api-provided',metadataSource:'YouTube Data API v3',fetchedAt:'2026-10-20T00:00:00Z'};
  for(const channelId of [undefined,'UCm3vDH7Uvz_qwql5Qih4yGw']){const v={...good,channel:'tonguç 5. SINIF',channelId};assert.throws(()=>review(v,approval),/kanal/);assert.deepEqual(publishable({videos:[v]}),[]);}
+});
+test('baştan taramadan sonra dışa aktarım yayımlanmış kataloğu korur; durumda reddedilen kayıt çıkarılır', () => {
+ const verified={channelId:'UCb-0JQ4tI03T5rHdFe2GVoA',metadataStatus:'api-provided',metadataSource:'YouTube Data API v3',fetchedAt:'2026-10-20T00:00:00Z',publishedAt:'2026-10-01'};
+ const make=(topicId,i)=>review({...addManual(initial,{topicId,url:`https://youtu.be/abcdefghij${i}`}).videos[0],...verified},approval);
+ const published=[make('old-topic',1),make('dropped-topic',2)].map(({identity,...v})=>({...v,role:'primary'}));
+ const state={videos:[make('new-topic',3),{...make('dropped-topic',2),status:'rejected'}]};
+ assert.deepEqual(mergeCatalog(published,state).map(v=>v.topicId).sort(),['new-topic','old-topic']);
+ assert.deepEqual(mergeCatalog(published,{videos:[]}).length,2);
+});
+test('elle eklenmiş üçüncü video ve bekleyen durum kaydı yayımlanmış katalogdan düşmez', () => {
+ const verified={channelId:'UCb-0JQ4tI03T5rHdFe2GVoA',metadataStatus:'api-provided',metadataSource:'YouTube Data API v3',fetchedAt:'2026-10-20T00:00:00Z',publishedAt:'2026-10-01'};
+ const make=i=>review({...addManual(initial,{topicId:'busy',url:`https://youtu.be/abcdefghij${i}`}).videos[0],...verified},approval);
+ const published=[1,2,3].map(i=>({...make(i),role:i===1?'primary':'alternative'}));
+ const state={videos:[{...make(1),status:'pending'},make(4)]};
+ assert.deepEqual(mergeCatalog(published,state).map(v=>v.id),published.map(v=>v.id));
 });

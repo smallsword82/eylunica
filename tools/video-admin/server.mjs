@@ -3,14 +3,14 @@ import http from 'node:http';
 import { readFile, writeFile, mkdir, rename } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
-import { review, publishable, applyPublicationPolicy } from './research.mjs';
+import { review, publishable, mergeCatalog, applyPublicationPolicy } from './research.mjs';
 import { searchVideos } from './youtube.mjs';
 import { researchAll, researchReport, matchVideo } from './batch.mjs';
 import { restoreQuotaSchedule, researchPauseUntil, recordResearchFailure } from './scheduling.mjs';
 import { courses, topics } from '../../src/grade5/catalog.ts';
 const researchTopics = topics.map(t => ({ topicId: t.id, topicTitle: t.title, course: courses.find(c => c.id === t.courseId)?.name || t.courseId }));
 const root = fileURLToPath(new URL('../../', import.meta.url));
-const directory = process.env.EYLUNICA_VIDEO_ADMIN_DATA_DIR || path.join(root, '.tools/video-admin');
+const directory = process.env.EYLUNICA_VIDEO_ADMIN_DATA_DIR || path.join(root, 'data/video-research');
 const catalogPath = process.env.EYLUNICA_VIDEO_CATALOG_PATH || path.join(root, 'src/grade5/video-catalog.json');
 const stateFile = path.join(directory, 'state.json');
 await mkdir(directory, { recursive: true });
@@ -20,7 +20,7 @@ const save = async () => { await writeFile(stateFile + '.tmp', JSON.stringify(st
 state = restoreQuotaSchedule(applyPublicationPolicy(state));
 state.videos = state.videos.map(v => {const topic = topics.find(t=>t.id===v.topicId);if(!topic || (v.status!=='pending' && v.rejectionReason!=='topic-or-grade-mismatch'))return v;const match=matchVideo({...v,description:state.videoMetadata?.[v.id]?.description},topic);if(!match.eligible)return {...v,status:'rejected',rejectionReason:'topic-or-grade-mismatch'};if(v.rejectionReason==='topic-or-grade-mismatch'){const recovered={...v,status:'pending'};delete recovered.rejectionReason;return recovered;}return v;});
 await save();
-try { const old = JSON.parse(await readFile(catalogPath,'utf8')); const filtered = publishable({ videos: old.videos || [] }); if(filtered.length !== old.videos?.length){ await writeFile(catalogPath+'.tmp',JSON.stringify({version:1,videos:filtered},null,2)+'\n');await rename(catalogPath+'.tmp',catalogPath); } } catch(e){if(e.code!=='ENOENT')throw e;}
+try { const old = JSON.parse(await readFile(catalogPath,'utf8')); const filtered = mergeCatalog(old.videos || [], { videos: [] }); if(filtered.length !== old.videos?.length){ await writeFile(catalogPath+'.tmp',JSON.stringify({version:1,videos:filtered},null,2)+'\n');await rename(catalogPath+'.tmp',catalogPath); } } catch(e){if(e.code!=='ENOENT')throw e;}
 const port = Number(process.env.EYLUNICA_VIDEO_ADMIN_PORT || 4180);
 let busy = false;
 function startResearch() {
@@ -72,7 +72,9 @@ const server = http.createServer(async (req, res) => {
         if (index < 0) throw Error('Video bulunamadı');
         state.videos[index] = review(state.videos[index], input); await save();
       } else {
-        const videos = publishable(state);
+        let existing = [];
+        try { existing = JSON.parse(await readFile(catalogPath, 'utf8')).videos || []; } catch (e) { if (e.code !== 'ENOENT') throw e; }
+        const videos = mergeCatalog(existing, state);
         await writeFile(catalogPath + '.tmp', JSON.stringify({ version: 1, videos }, null, 2) + '\n');
         await rename(catalogPath + '.tmp', catalogPath);
       }

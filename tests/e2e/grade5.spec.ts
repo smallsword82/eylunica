@@ -21,6 +21,8 @@ test('resmî fen konusu, plan haftaları ve öğrenme çıktıları açılır', 
  await page.locator('summary').filter({hasText:'öğrenme çıktıları'}).click();
  await expect(page.getByText(/FB.5.1.1/).first()).toBeVisible();
  await page.getByRole('button',{name:'Video',exact:true}).click();
- await expect(page.getByText('Bu konu için incelenip onaylanmış video henüz yok.')).toBeVisible();
+ await expect(page.getByText(/^Ana video · CANLI 🔴 Gökyüzündeki Komşumuz Güneş .* · tonguç 5\. SINIF · 2026-09-15$/)).toBeVisible();
+ await expect(page.getByText('Bu konu için incelenip onaylanmış video henüz yok.')).toHaveCount(0);
+ await expect(page.getByRole('button',{name:'Videoyu aç',exact:true})).toBeDisabled();
  await expect(page.locator('iframe')).toHaveCount(0);
 });

@@ -1,4 +1,25 @@
-# Video taraması · 21 Ekim 2026
+# Video taraması · 23 Ekim 2026
+
+Kullanıcı isteğiyle tarama **baştan** yapıldı (önceki `.tools/video-admin/state.json` bulunamadı). Kanal kısıtı korundu: yalnız `tonguç 5. SINIF` (`UCb-0JQ4tI03T5rHdFe2GVoA`). Kapsam, öğrenci kitaplığındaki 7 ders (`course-0` … `course-6`); kota tek günde yetti.
+
+Çalıştırma: `node --experimental-strip-types tools/video-admin/run-research.mjs` (`YOUTUBE_API_KEY` gerekli). İlerleme her aramadan sonra depodaki `data/video-research/state.json` dosyasına yazılır; kota dolarsa bir sonraki çalıştırma kaldığı yerden sürer. Yönetim sunucusu (`tools/video-admin/server.mjs`) da varsayılan olarak bu dosyayı kullanır.
+
+| Ölçüm | Sonuç |
+| --- | ---: |
+| Arama sorgusu | 83 |
+| Taranan konu | 207 / 207 |
+| Aday bulunan konu | 60 |
+| Aday bulunmayan konu | 147 |
+| Benzersiz aday video (2026 / 2025) | 44 (36 / 8) |
+| Konu–video eşleşmesi | 97 |
+| Aday bulunan ders | 6 (Almanca'da yok) |
+| Onaylanan konu–video eşleşmesi (ön eleme + kullanıcı onayı) | 51 |
+
+Ön eleme ve kullanıcı onayıyla 51 eşleşme kataloğa eklendi (bkz. `VIDEO-PRESCREEN-2026-10-23.md`); katalog 36 → 87 kayıt. Dışa aktarım artık mevcut kataloğu korur (`mergeCatalog`). Konu eşleştirmesi başlık sözcüklerine dayanır ve hatalı eşleşmeler içerir (ör. "Güneş" konusuna "Ay" videosu). Öğrenci uygulamasına yalnız inceleme ve onaydan geçen videolar aktarılır.
+
+---
+
+## Önceki tarama · 21 Ekim 2026
 
 **Güncel tercih:** Video araştırması kullanıcı isteğiyle duraklatıldı. Kaydedilmiş kota zamanı artık otomatik devamı başlatmaz; önce ders anlatımları, alıştırmalar ve yazılılar üzerinde çalışılır. Önceki sonuçlar korunur.
 

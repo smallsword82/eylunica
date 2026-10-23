@@ -19,10 +19,11 @@ Devir notundaki ilk görev (mevcut durumu doğrulamak) için yapılan kontroller
 - Kitaplıkta görünür geri dönüş düğmesi ve doğrudan ses seçimleri mevcut (`1ac6345`, `90b1d60`).
 - Fen Bilimleri: ilk dönemin 9 konusu dokunmatik keşif, sesli anlatım, çözümlü örnek, 8 alıştırma ve 20 soruluk test ile çalışıyor; Güneş–Dünya–Ay, Ay evreleri ve kuvvet/sürtünme simülasyonları kaynakta ve testlerde (`tests/e2e/science-journey.spec.ts`).
 
-## Doğrulanamayanlar
+## Canlı site
 
-- **Canlı site** (`eylunica.smallsword82.workers.dev`): bu bulut ortamının ağ politikası erişime izin vermedi. Hangi commit'in yayında olduğu buradan doğrulanamadı.
-- Depoda `wrangler` yapılandırması yok; yayın, Cloudflare Workers Builds'in GitHub bağlantısı üzerinden yapılıyor gibi görünüyor (bkz. `GITHUB-REVIEW-2026-10-22.md`). Cloudflare panelinde son derlemenin `a355779` olup olmadığı kontrol edilmeli.
+- `eylunica.smallsword82.workers.dev` HTTP 200 veriyor. Yayındaki `index-Jab4uK0-.js` ve `index-BXUN1gd-.css` dosyaları, `a355779` commit'inden alınan yerel derlemeyle birebir aynı; yani **yayındaki sürüm `main` ile aynı**.
+- Depoda `wrangler` yapılandırması yok; yayın, Cloudflare Workers Builds'in GitHub bağlantısı üzerinden yapılıyor gibi görünüyor (bkz. `GITHUB-REVIEW-2026-10-22.md`).
+- YouTube Data API anahtarı bulut ortamında tanımlı ve çalışıyor (1 birimlik `channels.list` sorgusu başarılı).
 
 ## YouTube video sistemi
 
@@ -35,6 +36,6 @@ Devir notundaki ilk görev (mevcut durumu doğrulamak) için yapılan kontroller
 ## Öncelikli eksikler
 
 1. Sosyal Bilgiler: 10 konuda görselli anlatım var (`src/grade5/social-visuals.ts`), ancak Fen'deki gibi keşif görevi + ayrı 8/20 soru bankası + yolculuk kaydı yok. Öncelik sırasına göre sıradaki iş.
-2. Canlı yayındaki sürümün Cloudflare panelinden doğrulanması.
+2. ~~Canlı yayındaki sürümün doğrulanması~~ (tamamlandı).
 3. Eski iki özellik dalının temizlenmesi (silme kararı depo sahibine ait).
 4. Video taramasına devam kararı ve kanal kısıtı.

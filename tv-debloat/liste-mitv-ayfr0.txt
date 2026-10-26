@@ -1,0 +1,58 @@
+# Sizin stick'iniz için uyarlanmış liste. Kaynak: cleanyourtv examples/xiaomi-mitv-ayfr0
+# (Xiaomi TV Stick 4K, MiTV-AYFR0, Android TV 14). Önce TV'de modeli doğrulayın:
+#   Ayarlar > Cihaz Tercihleri > Hakkında > Model  ->  MiTV-AYFR0 yazmalı.
+# Bu model Google TV değil, Android TV: eski ana ekran com.google.android.tvlauncher.
+# setupwraith burada ana ekranı almıyor ve Wi-Fi ağının sahibi: KAPATILMAYACAK.
+# '#' ile başlayan satırlar kapatılmaz. 7. kural maddeleri onayınızı bekliyor.
+
+## PARTİ 1 — telemetri ve reklam takibi (8 paket)
+com.miui.tv.analytics                      # Xiaomi kullanım analitiği
+com.xiaomi.statistic                       # Xiaomi istatistik gönderici
+com.google.android.feedback                # Google hata/geri bildirim gönderici
+com.android.tv.feedbackconsent             # geri bildirim onay ekranı
+com.google.android.partnersetup            # üretici-Google ortaklık/atıf takibi
+com.android.adservices.api                 # Privacy Sandbox reklam API'si
+com.android.ondevicepersonalization.services  # cihaz üstü reklam kişiselleştirme
+com.android.federatedcompute.services      # reklam modeli için federated learning
+
+## PARTİ 2 — Xiaomi reklam/içerik servisleri (7 paket)
+com.mitv.tvhome.atv                        # PatchWall içerik şeritleri
+com.mitv.tvhome.michannel                  # Mi kanal önerileri
+com.mitv.tvhome.mitvplus                   # Mi TV+ reklamlı canlı kanallar
+com.xm.webcontent                          # Xiaomi web içerik/promosyon
+android.autoinstalls.config.soc.amlogic    # izinsiz uygulama otomatik kurulumu
+android.autoinstalls.config.xiaomi.mibox3  # izinsiz uygulama otomatik kurulumu
+android.autoinstalls.config.xioami.mibox3  # aynısı, firmware'deki yazım hatalı kopya
+
+## PARTİ 3 — gereksiz arka plan servisleri (5 paket)
+com.android.healthconnect.controller       # Health Connect, stick'te kullanılmaz
+com.android.health.connect.backuprestore   # Health Connect yedeği
+com.google.android.syncadapters.calendar   # takvim eşitleme
+com.android.printspooler                   # yazıcı servisi
+com.google.android.backdrop                # Ambient ekran koruyucu (Mi ekran koruyucu kalır)
+# com.android.providers.contacts           # kişiler deposu: bazı uygulamalar sorar, şimdilik açık
+
+## PARTİ 4 — önceden yüklenmiş uygulamalar (5 paket)
+com.google.android.youtube.tvmusic         # YouTube Music
+com.google.android.play.games              # Play Games
+com.google.android.marvin.talkback         # ekran okuyucu
+com.mitv.videoplayer                       # Mi video oynatıcı
+com.xiaomi.mimusic2                        # Mi müzik
+
+## 7. KURAL — SİZ İŞARETLEMEDEN KAPATILMAZ
+# com.netflix.ninja                        # Netflix
+# com.netflix.tokenmanager                 # Netflix oturum yardımcısı
+# com.amazon.amazonvideo.livingroom        # Prime Video
+# com.xiaomi.mitv.updateservice            # sistem güncellemesi (kapatmanızı önermem)
+# com.google.android.katniss               # Google Asistan / sesli arama
+# com.google.android.apps.mediashell       # Chromecast
+# com.xiaomi.mitv.smartshare, com.droidlogic.wfdsinkhelperservice  # Miracast ekran yansıtma
+
+## ANA EKRAN — yalnız FLauncher varsayılan olduktan sonra
+# com.google.android.tvlauncher
+
+## DOKUNULMAZ
+# com.xiaomi.tvqs.overseas (hızlı ayarlar paneli), com.xiaomi.android.tvsetup.partnercustomizer,
+# com.google.android.tungsten.setupwraith, com.google.android.tv.remote.service, com.android.vending,
+# com.google.android.gms, com.google.android.gsf, com.android.location.fused, Gboard, Bluetooth, com.droidlogic.*
+# Not: com.google.android.tvrecommendations her açılışta com.droidlogic tarafından geri açılıyor, listede yok.

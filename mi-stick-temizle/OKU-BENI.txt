@@ -1,0 +1,6 @@
+Xiaomi TV Stick 4K (MiTV-AYFR0) temizleme - Windows
+1. Stick'te: Ayarlar > Cihaz Tercihleri > Hakkında > "Android TV OS derlemesi"ne 7 kez basın.
+   Sonra Geliştirici seçenekleri > USB hata ayıklama: AÇIK. (Kablosuz hata ayıklama varsa onu da açın.)
+2. Bu klasörde temizle.bat'a çift tıklayın, stick'in IP adresini yazın, TV'deki izin kutusunu onaylayın.
+3. Script her partiden sonra ekran görüntüsü alıp sorar. Sorun görürseniz "h" deyin, o parti geri açılır.
+Hiçbir şey silinmez. Her şeyi geri almak: geri-yukle.bat
